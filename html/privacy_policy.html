@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+<!-- Meta -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="Anil z" name="author">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- SITE TITLE -->
+<title>Tiara</title>
+<!-- Favicon Icon -->
+<link rel="shortcut icon" type="image/x-icon" href="assets\images\logo2 (1).png">
+<!-- Animation CSS -->
+<link rel="stylesheet" href="assets/css/animate.css">
+<!-- Latest Bootstrap min CSS -->
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"> -->
+
+<!-- Icon Font CSS -->
+<link rel="stylesheet" href="assets/css/all.min.css">
+<link rel="stylesheet" href="assets/css/ionicons.min.css">
+<link rel="stylesheet" href="assets/css/themify-icons.css">
+<link rel="stylesheet" href="assets/css/linearicons.css">
+<link rel="stylesheet" href="assets/css/flaticon.css">
+<link rel="stylesheet" href="assets/css/simple-line-icons.css">
+<!--- owl carousel CSS-->
+<link rel="stylesheet" href="assets/owlcarousel/css/owl.carousel.min.css">
+<link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.css">
+<link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.default.min.css">
+<!-- Magnific Popup CSS -->
+<link rel="stylesheet" href="assets/css/magnific-popup.css">
+<!-- Slick CSS -->
+<link rel="stylesheet" href="assets/css/slick.css">
+<link rel="stylesheet" href="assets/css/slick-theme.css">
+<!-- Style CSS -->
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+
+
+</head>
+
+<style>
+@media (max-width:991px){
+    .ktm{
+        display:none;
+    }
+}
+   .input-field {
+  position: relative;
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+}
+.mylabel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #000;
+  transition: 0.2s all;
+  cursor: text;
+}
+.myinput {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #000;
+  box-shadow: none;
+  color: #000;
+  text-align: center;
+}
+.mylabel
+{
+   font-size: 18px;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+}
+.myinput:invalid {
+  outline: 0;
+
+}
+.myinput:focus,
+.myinput:valid {
+  border-color: #ccc;
+}
+
+.myinput:focus~.mylabel,
+.myinput:valid~.mylabel {
+  font-size: 14px;
+  top: -24px;
+  color: #ccc;
+}
+.myinput:focus~#submit
+{
+    display: block;
+    border-bottom: 2px solid #ccc;
+    color: #ff324d;
+}
+.btnn
+{
+    background: transparent;
+    border: none;
+    display: none;
+}
+
+
+
+/* Vertical Slider 100% Height */
+.vertical .carousel-item {
+  /* height: 100vh; */
+  /* min-height: 350px; */
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Vertical Slider Animation */
+.vertical .carousel-item-next.carousel-item-left,
+.vertical .carousel-item-prev.carousel-item-right {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.vertical .carousel-item-next,
+.vertical .active.carousel-item-right {
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100% 0);
+}
+
+.vertical .carousel-item-prev,
+.vertical .active.carousel-item-left {
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+
+/* Vertical Ccarousel Indicators on Right */
+.carousel-indicators {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 20px;
+  right: 10px;
+  left: auto;
+  width: auto;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.carousel-indicators > li {
+  display: block;
+  border-radius: 12px;
+  width: 12px;
+  height: 12px;
+  border: 0;
+}
+
+.carousel-indicators li.active {
+  margin-bottom: 5px;
+  background: #fff;
+}
+
+/* Vertical Carousel Controls on Right */
+.carousel.vertical .carousel-control-prev,
+.carousel.vertical .carousel-control-next {
+  left: auto;
+  right: 13.5px;
+  width: 50px;
+}
+.carousel.vertical .carousel-control-prev.up {
+  top:  32%;
+  bottom: 50%;
+  position: absolute !important;
+}
+.carousel.vertical .carousel-control-next.down {
+  top: 61%;
+  bottom: 0;
+}
+.carousel.vertical .carousel-control-prev.up i,
+.carousel.vertical .carousel-control-next.down i {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-block;
+  font-size: 2em;
+  background-color: transparent !important;
+}
+.carousel.vertical .carousel-control-prev.up i {
+  left: 50%;
+  margin-left: -10px;
+  top: 50%;
+  margin-top: -10px;
+  background-color: transparent !important;
+}
+.carousel.vertical .carousel-control-next.down i {
+  left: 50%;
+  margin-left: -10px;
+  top: 50%;
+  margin-top: -10px;
+}
+
+/* Vertical Carousel Captions Size */
+.carousel-caption {
+  max-width: 100%;
+  width: 100%;
+  height: 85%;
+  left: 0;
+}
+
+@media (max-width:991px) {
+    .mob2 {
+        position:absolute;
+    }
+}
+
+@media (max-width:702px){
+    .carousel.vertical .carousel-control-prev.up {
+  top:  32%;
+  bottom: 50%;
+}
+.carousel.vertical .carousel-control-next.down {
+  top: 61%;
+  bottom: 0;
+}
+}
+</style>
+
+<body>
+
+
+
+
+<!-- login Popup Section -->
+<div class="modal fade subscribe_popup" id="onload-popup1" tabindex="-1" role="dialog" aria-hidden="true" style="margin-top: 95px;">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content" >
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="ion-ios-close-empty"></i></span>
+                </button>
+                <div class="row no-gutters">
+                     <div class="col-sm-5">
+                    	<div class="background_bg h-100" data-img-src="assets/images/popup_img.jpg"></div>
+                    </div>
+                     <div class="col-sm-12">
+                        <div class="popup_content">
+                            <div class="row text-center">
+                                <div class="col-sm-12">
+                                    <img src="assets\images\logo2 (1).png" alt="" width="15%">
+                                </div>
+                            </div>
+                            <div class="popup-text">
+                                <div class="heading_s1">
+                                    <h4 style="font-size:20px;margin-top:10px;">LOG IN TO CONTINUE</h4>
+                                </div>
+
+                            </div>
+                            <form method="post">
+                                <div class="form-group">
+                                	<input name="number" required type="text" inputmode="numeric"class="form-control rounded-0" placeholder="Enter Your Number">
+                                </div>
+                                <div class="form-group">
+                                	<input name="OTP" required type="text" class="form-control rounded-0" placeholder="Enter OTP">
+                                </div>
+                                <div class="form-group">
+                                	<button class="btn btn-fill-out btn-block text-uppercase rounded-0"  type="submit">Submit</button>
+                                </div>
+                                <div class="text-center"><span class="mt-3">New Here?<a href="#" data-target="#onload-popup2" data-toggle="modal" data-dismiss="modal" style="color:#ff324d;">&nbsp;Sign Up</a></span>
+                                </div>
+                                <p style="margin-bottom: 0px;">Or</p>
+                                <div class="text-center"><span class="mt-3"><a href="reseller_register.html"  style="color:#ff324d;">Sign up as a Reseller</a></span>
+                                </div>
+                            </form>
+                            <!-- <div class="chek-form">
+                                <div class="custome-checkbox">
+                                    <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox3" value="">
+                                    <label class="form-check-label" for="exampleCheckbox3"><span>Don't show this popup again!</span></label>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+    	</div>
+    </div>
+</div>
+<!-- End Screen Load Popup Section -->
+<!-- sign up Popup Section -->
+ <div class="modal fade subscribe_popup" id="onload-popup2" tabindex="-1" role="dialog" aria-hidden="true" style="margin-top: 95px;">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content" >
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="ion-ios-close-empty"></i></span>
+                </button>
+                <div class="row no-gutters">
+                    <!-- <div class="col-sm-5">
+                    	<div class="background_bg h-100" data-img-src="assets/images/popup_img.jpg"></div>
+                    </div> -->
+                     <div class="col-sm-12">
+                        <div class="popup_content">
+                            <div class="row text-center">
+                                <div class="col-sm-12">
+                                    <img src="assets\images\logo2 (1).png" alt="" width="15%">
+                                </div>
+                            </div>
+                            <div class="popup-text">
+                                <div class="heading_s1">
+                                    <h4 style="font-size:20px;margin-top:10px;">SIGN UP TO CONTINUE</h4>
+                                </div>
+
+                            </div>
+                            <form method="post">
+                            <div class="row">
+                                <div class="form-group col-lg-6">
+                                	<input name="" required type="text" class="form-control rounded-0" placeholder="First Name">
+                                </div>
+                                <div class="form-group col-lg-6">
+                                	<input name="" required type="text" class="form-control rounded-0" placeholder="Last Name">
+                                </div>
+                            </div>
+                                <div class="form-group">
+                                	<input name="" required type="text" class="form-control rounded-0" placeholder="Enter Phone Number">
+                                </div>
+                                <div class="form-group">
+                                	<input name="" required type="text" class="form-control rounded-0" placeholder="Enter OTP">
+                                </div>
+                                <div class="form-group">
+                                	<button class="btn btn-fill-out btn-block text-uppercase rounded-0"  type="submit">Submit</button>
+                                </div>
+                                <div class="text-center"><span class="mt-3">Already have an Account?<a href="#" data-target="#onload-popup1" data-toggle="modal" data-dismiss="modal" style="color:#ed6f36;">&nbsp;Log In</a></span>
+                                </div>
+                                <p style="margin-bottom: 0px;">Or</p>
+                                <div class="text-center"><span class="mt-3"><a href="reseller_register.html"  style="color:#ff324d;">Sign up as a Reseller</a></span>
+                                </div>
+                            </form>
+                            <!-- <div class="chek-form">
+                                <div class="custome-checkbox">
+                                    <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox3" value="">
+                                    <label class="form-check-label" for="exampleCheckbox3"><span>Don't show this popup again!</span></label>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+    	</div>
+    </div>
+</div>
+<!-- End Sign up Load Popup Section -->
+
+
+
+<!-- START HEADER -->
+<header class="header_wrap" style="position: sticky; top: 0; z-index: 99999;">
+    <div class="middle-header dark_skin">
+    	<div class="container-fluid">
+            <button class="navbar-toggler side_navbar_toggler" type="button" data-toggle="collapse" data-target="#navbarSidetoggle" aria-expanded="false" style="float: left;">
+                <span class="ion-android-menu"></span>
+            </button>
+            <div class="nav_block ">
+              <a class="desktoplogo" href="index.html" style="margin-left:30px;">
+                   <img class="logo_light d-block " src="assets\images\logo2 (1).png" alt="logo" width="40%">
+              </a>
+              <a class="mobilelogo" href="index.html" style="margin-left:100px;">
+                   <img class="logo_light d-block" src="assets\images\tiara_logo.png" alt="logo" width="40%">
+              </a>
+                <div class="product_search_form radius_input search_form_btn" style="margin-left:-100px;">
+                    <form>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="Search Product..." required="" type="text" style="height: 35px;">
+                            <button type="submit" class="search_btn3" style="padding-top: 8px;"><i class="linearicons-magnifier" style="color:grey; font-size: 25px;"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="text-center ktm">
+                    <a style="padding:4px 14px"class="btn btn-fill-out rounded-0 " href="#" data-animation="slideInLeft" data-animation-delay="1.5s">TRACK ORDER</a>
+                </div>
+                <ul class="navbar-nav attr-nav align-items-center">
+                    <li style="font-size: 12px;padding: 0px 10px;" class="topicon"><a href="#onload-popup1" data-toggle="modal"
+                        data-target="#onload-popup1" class="nav-link" style="padding:0px 10px;"><i class="linearicons-user"></i></a>Log In</li>
+                        <li class="dropdown cart_dropdown topicon" style="display: none;"><a href="#" class="nav-link cart_trigger" data-toggle="dropdown"><i class="linearicons-user"></i></a>
+
+                            <div class="cart_box cart_right dropdown-menu dropdown-menu-right" style="width: 40%;min-width: 150px;">
+
+                        <ul class="cart_list">
+
+                            <li> <a href="my-account.html">My Account </a> </li>
+
+                            <li> <a href="index.html">Log Out </a> </li>
+
+                        </ul>
+
+                        </div>
+
+                        </li>
+                        <li style="font-size: 12px;" class="searchshow onclick"><a href="#" class="nav-link" style="padding:0px 10px;"><i class="linearicons-magnifier" style="font-size: 17px;"></i></a>Search</li>
+                    <li style="font-size: 12px;padding: 0px 10px;" class="topicon"><a href="wishlist.html" class="nav-link" style="padding:0px 10px;"><i class="linearicons-heart"></i><span class="wishlist_count">2</span></a>Wishlist</li>
+                    <li class="dropdown cart_dropdown topicon" style="position:inherit;font-size: 12px;"><a class="nav-link cart_trigger" href="#" data-toggle="dropdown"  style="padding:0px; padding-left: 3px;"><i class="linearicons-bag2"></i><span class="cart_count">2</span></a> Bag
+                    <div class="cart_box cart_right dropdown-menu dropdown-menu-right">
+                        <ul class="cart_list">
+                            <li>
+                                <a href="#" class="item_remove"><i class="ion-close"></i></a>
+                                <a href="#"><img src="assets/images/cart_thamb1.jpg" alt="cart_thumb1">Variable product 001</a>
+                                <span class="cart_quantity"> 1 x <span class="cart_amount"> <span class="price_symbole">₹</span></span>78.00</span>
+                            </li>
+                            <li>
+                                <a href="#" class="item_remove"><i class="ion-close"></i></a>
+                                <a href="#"><img src="assets/images/cart_thamb2.jpg" alt="cart_thumb2">Ornare sed consequat</a>
+                                <span class="cart_quantity"> 1 x <span class="cart_amount"> <span class="price_symbole">₹</span></span>81.00</span>
+                            </li>
+                        </ul>
+                        <div class="cart_footer">
+                            <p class="cart_total"><strong>Subtotal:</strong> <span class="cart_price"> <span class="price_symbole">₹</span></span>159.00</p>
+                            <p class="cart_buttons"><a href="shop-cart.html" class="btn btn-fill-line view-cart"> View Bag</i></a></p>
+                        </div>
+                    </div>
+                    </li>
+                    <!-- <li class="dropdown cart_dropdown" style="position:inherit;font-size: 12px;padding: 0px 10px;"><a class="nav-link cart_trigger" href="#" data-toggle="dropdown"  style="padding:0px; padding-left: 8px;"><i class="linearicons-truck" style="font-size :22px!important;"></i></a> Track</li> -->
+                    <!-- <li class="dropdown cart_dropdown"style="position:inherit;font-size: 12px;padding: 0px 10px;"><a href="#" class="nav-link" style="padding:0px"><i class="linearicons-truck" ></i></a>Track Order</li> -->
+                        <div class="cart_box cart_right dropdown-menu dropdown-menu-right">
+                            <ul class="cart_list">
+                                <li>
+                                    <a href="#" class="item_remove"><i class="ion-close"></i></a>
+                                    <a href="#"><img src="assets/images/cart_thamb1.jpg" alt="cart_thumb1">Variable product 001</a>
+                                    <span class="cart_quantity"> 1 x <span class="cart_amount"> <span class="price_symbole">₹</span></span>78.00</span>
+                                </li>
+                                <li>
+                                    <a href="#" class="item_remove"><i class="ion-close"></i></a>
+                                    <a href="#"><img src="assets/images/cart_thamb2.jpg" alt="cart_thumb2">Ornare sed consequat</a>
+                                    <span class="cart_quantity"> 1 x <span class="cart_amount"> <span class="price_symbole">₹</span></span>81.00</span>
+                                </li>
+                            </ul>
+                            <div class="cart_footer">
+                                <p class="cart_total"><strong>Subtotal:</strong> <span class="cart_price"> <span class="price_symbole">₹</span></span>159.00</p>
+                                <p class="cart_buttons"><a href="#" class="btn btn-fill-line view-cart">View Cart</a><a href="#" class="btn btn-fill-out checkout">Checkout</a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- <li style="margin-top: -5px;"><a href="#" class="nav-link" style="padding:0px 10px;"><i class="linearicons-truck" ></i></a>Track Order</li> -->
+
+                </ul>
+            </div>
+        </div>
+        <div class="container-fluid mobiledisplay">
+            <div class="input-group">
+            <input class="form-control" placeholder="Search Product..." required="" type="text" style="height: 35px;">
+            <button type="submit" class="search_btn3"><i class="linearicons-magnifier" style="color:grey;"></i></button>
+        </div>
+        </div>
+
+
+
+    </div>
+    <div class="bottom_header dark_skin main_menu_uppercase  mob2">
+    	<div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-lg-12 col-md-8 col-sm-6 col-9">
+                	<nav class="navbar navbar-expand-lg" style="height:40px;">
+
+                        <!-- <div class="pr_search_icon">
+                            <a href="javascript:void(0);" class="nav-link pr_search_trigger"><i class="linearicons-magnifier"></i></a>
+                        </div>  -->
+                        <div class="collapse navbar-collapse mobile_side_menu" id="navbarSidetoggle">
+                            <ul class="navbar-nav navv" style="margin-left:100px;">
+                                <li style="padding:10px 10px; display: none;">User Name</li>
+                                <li class="dropdown mobdrop" style="padding-left:50px;">
+                                    <a  class="nav-link  active" href="#">Home</a>
+
+                                </li>
+                                <li class="dropdown dropdown-mega-menu mobdrop" style="padding-left:50px;">
+                                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Designers</a>
+                                    <div class="dropdown-menu">
+                                        <ul class="mega-menu d-lg-flex">
+                                            <li class="mega-menu-col col-lg-9">
+                                                <ul class="d-lg-flex">
+                                                    <li class="mega-menu-col col-lg-4">
+                                                        <ul>
+                                                            <!-- <li class="dropdown-header">Featured</li> -->
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Sabyasachi </a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Tarun Tahiliani</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Manish Malhotra</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Anita Dongre</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Shantanu &amp; Nikhil- Men</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Pankaj &amp; Nidhi</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="mega-menu-col col-lg-4">
+                                                        <ul>
+                                                            <!-- <li class="dropdown-header">Trendings</li> -->
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Earrings</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#l">Necklaces</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Jewellery Sets</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Bangles</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Maangtikkas</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Passas</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="mega-menu-col col-lg-4">
+                                                        <ul>
+                                                            <!-- <li class="dropdown-header">On Sale</li> -->
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Footwear</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Handbags</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Hairbands</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Stoles &amp; Scarves</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="mega-menu-col col-lg-3">
+                                                <div class="header_banner">
+                                                    <div class="header_banner_content">
+                                                        <div class="shop_banner">
+                                                            <div class="banner_img ">
+                                                                <img src="assets/images/modal5.avif" alt="shop_banner2"/>
+                                                            </div>
+                                                            <!-- <div class="shop_bn_content">
+                                                                <h6 class="text-uppercase shop_subtitle">New Collection</h6>
+                                                                <h5 class="text-uppercase shop_title">Sale 30% Off</h5>
+                                                                <a href="#" class="btn btn-white rounded-0 btn-xs text-uppercase">Shop Now</a>
+                                                            </div> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="dropdown dropdown-mega-menu mobdrop" style="padding-left:50px;">
+                                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Jewllary</a>
+                                    <div class="dropdown-menu">
+                                        <ul class="mega-menu d-lg-flex">
+                                            <li class="mega-menu-col col-lg-9">
+                                                <ul class="d-lg-flex">
+                                                    <li class="mega-menu-col col-lg-4">
+                                                        <ul>
+                                                            <!-- <li class="dropdown-header">Featured</li> -->
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Sabyasachi </a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Tarun Tahiliani</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Manish Malhotra</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Anita Dongre</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Shantanu &amp; Nikhil- Men</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Pankaj &amp; Nidhi</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="mega-menu-col col-lg-4">
+                                                        <ul>
+                                                            <!-- <li class="dropdown-header">Trendings</li> -->
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Earrings</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#l">Necklaces</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Jewellery Sets</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Bangles</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Maangtikkas</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Passas</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="mega-menu-col col-lg-4">
+                                                        <ul>
+                                                            <!-- <li class="dropdown-header">On Sale</li> -->
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Footwear</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Handbags</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Hairbands</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Stoles &amp; Scarves</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="mega-menu-col col-lg-3">
+                                                <div class="header_banner">
+                                                    <div class="header_banner_content">
+                                                        <div class="shop_banner">
+                                                            <div class="banner_img ">
+                                                                <img src="assets/images/modal3.avif" alt="shop_banner2"/>
+                                                            </div>
+                                                            <!-- <div class="shop_bn_content">
+                                                                <h6 class="text-uppercase shop_subtitle">New Collection</h6>
+                                                                <h5 class="text-uppercase shop_title">Sale 30% Off</h5>
+                                                                <a href="#" class="btn btn-white rounded-0 btn-xs text-uppercase">Shop Now</a>
+                                                            </div> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="dropdown mobdrop" style="padding-left:50px;">
+                                    <a class="nav-link" href="blog-four-columns.html">Blog</a>
+
+                                </li>
+                                <li class="dropdown dropdown-mega-menu mobdrop" style="padding-left:50px;">
+                                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Accessories</a>
+                                    <div class="dropdown-menu">
+                                        <ul class="mega-menu d-lg-flex">
+                                            <li class="mega-menu-col col-lg-9">
+                                                <ul class="d-lg-flex">
+                                                    <li class="mega-menu-col col-lg-4">
+                                                        <ul>
+                                                            <!-- <li class="dropdown-header">Featured</li> -->
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Sabyasachi </a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Tarun Tahiliani</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Manish Malhotra</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Anita Dongre</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Shantanu &amp; Nikhil- Men</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Pankaj &amp; Nidhi</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="mega-menu-col col-lg-4">
+                                                        <ul>
+                                                            <!-- <li class="dropdown-header">Trendings</li> -->
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Earrings</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#l">Necklaces</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Jewellery Sets</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Bangles</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Maangtikkas</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Passas</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="mega-menu-col col-lg-4">
+                                                        <ul>
+                                                            <!-- <li class="dropdown-header">On Sale</li> -->
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Footwear</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Handbags</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Hairbands</a></li>
+                                                            <li><a class="dropdown-item nav-link nav_item" href="#">Stoles &amp; Scarves</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="mega-menu-col col-lg-3">
+                                                <div class="header_banner">
+                                                    <div class="header_banner_content">
+                                                        <div class="shop_banner">
+                                                            <div class="banner_img ">
+                                                                <img src="assets/images/modal2.avif" alt="shop_banner2"/>
+                                                            </div>
+                                                            <!-- <div class="shop_bn_content">
+                                                                <h6 class="text-uppercase shop_subtitle">New Collection</h6>
+                                                                <h5 class="text-uppercase shop_title">Sale 30% Off</h5>
+                                                                <a href="#" class="btn btn-white rounded-0 btn-xs text-uppercase">Shop Now</a>
+                                                            </div> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class=" mobdrop" style="padding-left:50px;"><a class="nav-link nav_item" href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <!-- <div class="contact_phone contact_support">
+                            <i class="linearicons-phone-wave"></i>
+                            <span>123-456-7689</span>
+                        </div> -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- END HEADER -->
+<!-- START SECTION BREADCRUMB -->
+<div class="breadcrumb_section bg_gray page-title-mini">
+    <div class="container"><!-- STRART CONTAINER -->
+        <div class="row align-items-center">
+
+            <div class="col-md-12">
+                <ol class="breadcrumb justify-content-md-start">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item active">Privacy Policy</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- END CONTAINER-->
+</div>
+<!-- END SECTION BREADCRUMB -->
+
+<!-- START MAIN CONTENT -->
+<div class="main_content">
+
+<!-- STAT SECTION FAQ -->
+<div class="section">
+	<div class="container">
+    	<div class="row">
+        	<div class="col-12">
+            	<div class="term_conditions">
+
+                    <h4>Privacy Policy</h4>
+                    <p>We take privacy and security concerns seriously. At the same time, we would like to give you the best possible experience when visiting our websites. Please read the following policy to understand how your personal information will be treated as you make full use of our Site. If you visit us at https://tiarastore.co.in (Website) you accept these terms and conditions:</p>
+                    <hr>
+                    <h6>1) Your Privacy</h6>
+                    <p>We are extremely proud of our commitment to protect your privacy. We value the trust you place on us. We will work hard to earn your confidence so that you can enthusiastically use our services. Protecting your privacy is very important to us. We have accordingly developed this Privacy Policy to protect your personal information and keep it confidential. We endeavor to comply with laws of other countries but cannot and do not warrant that we do. We do everything we reasonably can to protect your rights of privacy on systems and the Website controlled by us, but we are not liable for any unauthorized or unlawful disclosures of your personal and confidential information made by third parties who are not subject to our control, for example advertisers and websites that have links to our Website. You should take note that the information and privacy practices of our business partners, advertisers, sponsors or other sites to which we provide hyperlinks, may be different from ours. Our privacy policy is subject to change at any time without notice. To make sure you are aware of any changes, please review this policy periodically.</p> <hr>
+
+                   <h6>2) Privacy Assurance</h6>
+                   <p>We will not share or rent your information with third parties except our agents and alliance partners. We use personal information to provide the services you request. Any third party with whom we share the information shall maintain reasonable level of confidentiality and data security as required under law.</p> <hr>
+
+                   <h6>3) Electronic Communication</h6>
+                   <p>When you visit our site or send e-mails to us or give us your feedback, you are communicating with us electronically. You consent to receive communications from us electronically. You agree that all agreements, notices, disclosures and other communications that we provide to you electronically satisfy any legal requirement that such communications be in writing</p> <hr>
+
+                   <h6>4) Payment and Account Information</h6>
+                   <p>Your account history with us including all billing information and communications, payment history etc. We maintain this in encrypted form on secure servers.</p> <hr>
+
+                   <h6>5) Transactional Information</h6>
+                   <p>Transactional history (other than banking details) about your e-commerce activities.</p> <hr>
+
+                   <h6>6) Service Usage</h6>
+                   <p>Information about your navigation using our Services, for example the URLs of websites, which you visit and from which you shop.</p> <hr>
+
+                   <h6>7) Deletion</h6>
+                   <p>We will process and store your personal data for as long as it is necessary and permitted under applicable data protection law.</p> <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END SECTION FAQ -->
+
+
+
+
+
+<!-- START FOOTER -->
+<footer class="footer" style="background-color:#fff1f1;">
+	<div class="footer_top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                	<div class="widget text-center">
+                        <div class="footer_logo">
+                            <a href="index.html"><img src="assets\images\logo2 (1).png" alt="logo" style="width:40%;"></a>
+                        </div>
+                        <ul class="widget_links mt-3">
+                            <li><a href="about.html">About Us</a></li>
+                        </ul>
+                    </div>
+
+        		</div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                	<div class="widget">
+                        <h6 class="widget_title mob_title">BUYING GUIDE</h6>
+                        <ul class="widget_links">
+                            <li><a href="#">Returns, Replace & Exchanges</a></li>
+                            <li><a href="#">Shipping & Delivery</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                	<div class="widget">
+                        <h6 class="widget_title mob_title">ACCOUNT</h6>
+                        <ul class="widget_links">
+                            <li><a href="#">Orders & Returns</a></li>
+                            <li><a href="my-account.html">Account Details</a></li>
+                            <li><a href="#onload-popup1" data-toggle="modal"
+                                data-target="#onload-popup1">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                	<div class="widget">
+                        <h6 class="widget_title mob_title">POLICIES</h6>
+                        <ul class="widget_links">
+                            <li><a href="term-condition.html">Terms & Conditions</a></li>
+                            <li><a href="privacy_policy.html">Privacy & Policy</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="widget gta">
+                        <ul class="social_icons social_white">
+                            <li style="width:40px;background: #1b74e4; text-align: center;border-radius: 50%;padding: 3px 0px 0px 1px;  margin-right: 3px;"><a href="#"><i class="ion-social-facebook"></i></a></li>
+                            <li style="width:40px;background: #1da1f2; text-align: center;border-radius: 50%;padding: 3px 0px 0px 1px; margin-right: 3px;"><a href="#"><i class="ion-social-twitter"></i></a></li>
+                            <li style="width:40px;background:  #dd4d42; text-align: center;border-radius: 50%;padding: 3px 0px 0px 1px; margin-right: 3px;"><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                            <li style="width:40px;background: #d33d87; text-align: center;border-radius: 50%;padding: 3px 0px 0px 1px; margin-right: 3px;"><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                	<div class="widget">
+                        <h6 class="widget_title mob_title">CONTACT US</h6>
+                        <ul class="contact_info contact_info_light widget_links">
+                            <li>
+                                <i class="ti-location-pin"></i>
+                                <p>19 Kalyanpuri New Sanganer Road Sodala Jaipur Rajasthan India 302019</p>
+                            </li>
+                            <li>
+                                <i class="ti-email"></i>
+                                <a href="mailto:info@sitename.com">info@tiara.com</a>
+                            </li>
+                            <li>
+                                <i class="ti-mobile"></i>
+                                <p>91-8824930146</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="widget gta1 text-center d-lg-none">
+                        <ul class="social_icons social_white">
+                            <li style="width:40px;background: #1b74e4; text-align: center;border-radius: 50%;padding: 3px 0px 0px 1px;  margin-right: 3px;"><a href="#"><i class="ion-social-facebook"></i></a></li>
+                            <li style="width:40px;background: #1da1f2; text-align: center;border-radius: 50%;padding: 3px 0px 0px 1px; margin-right: 3px;"><a href="#"><i class="ion-social-twitter"></i></a></li>
+                            <li style="width:40px;background:  #dd4d42; text-align: center;border-radius: 50%;padding: 3px 0px 0px 1px; margin-right: 3px;"><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                            <li style="width:40px;background: #d33d87; text-align: center;border-radius: 50%;padding: 3px 0px 0px 1px; margin-right: 3px;"><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom_footer border-top-tran">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-md-0 text-center text-md-left">© 2022 All Rights Reserved by Tiara</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!-- END FOOTER -->
+<style>
+    .button-fixed-right{
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    border-radius: 50% !important;
+    padding: 7px 9px !important;
+    z-index: 999;
+}
+
+@media (min-width:991px) {
+    .widget_links{
+        display:block;
+    }
+}
+@media (max-width:991px) {
+    .widget_links{
+        display:none;
+    }
+    .gta1 {
+       display: block;
+       align-items: center;
+    }
+ }
+
+@media (max-width:991px) {
+    .gta {
+       display: none;
+    }
+ }
+@media (max-width:991px) {
+    .mob_title {
+        text-align: center;
+    }
+ }
+ @media (max-width:991px) {
+    .widget_links {
+        text-align: center;
+    }
+    .scrollup
+    {
+        display: none !important;
+    }
+ }
+@media (min-width: 991px)
+{
+    .mobilebottom
+    {
+        display: none;
+    }
+}
+
+
+</style>
+
+
+ <div class="container-fluid mobilebottom" style="position:sticky; bottom: 0;background:#fff;z-index: 9999;">
+    <div class="row" style="justify-content: space-between;">
+
+     <div class="col-2 text-center mt-2 p-0"><a href="index.html"><i class="linearicons-home" style="font-size: 20px;"></i></a> <h6>Home</h6> </div>
+     <div class="col-2 text-center mt-2 p-0"><a href="my-account.html"><i class="linearicons-user" style="font-size: 20px;"></i></a> <h6>Profile</h6> </div>
+     <div class="col-2 text-center mt-2 p-0"><a href="wishlist.html"><i class="linearicons-heart" style="font-size: 20px;"></i><span class="wishlist_count">2</span></a> <h6>Wishlist</h6> </div>
+     <div class="col-2 text-center mt-2 p-0"><a href="shop-cart.html">&nbsp;<i class="linearicons-bag2" style="font-size: 20px;"></i><span class="cart_count">2</span></a> <h6>Bag</h6> </div>
+    <div class="col-2 text-center mt-2 p-0"><a href="#"> <i class="icon ion-social-whatsapp" style="font-size:17px;color:green;"></i></a> <h6 style="margin-left:-10px;">Connect</h6></div>
+    </div>
+ </div>
+<a href="#" class="btn btn-success white btn-lg mt-3 button-fixed-right green  desktopwhatsapp ">
+ <i class="icon ion-social-whatsapp" style="font-size:30px;"></i>
+ </a>
+
+<!-- Latest jQuery -->
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<script>
+$(".mob_title").click(function(){
+    if (window.matchMedia('(max-width: 991px)').matches) {
+  $(this).next("ul").slideToggle()();
+    }
+});
+
+$(".searchshow").click(function(){
+  $('.mobiledisplay').slideToggle()();
+});
+
+
+
+  function pro_change(obj) {
+    //   var id = $(obj).attr("id");
+      var img2 = $(obj).attr("img2");
+      $(obj).attr("src", img2);
+    // document.getElementById(id).src = img2;
+    // alert(document.getElementById(id).getAttribute("src"));
+  }
+
+
+  function pro_default(obj) {
+    // var id = $(obj).attr("id");
+    var img = $(obj).attr("img");
+    $(obj).attr("src", img);
+
+  }
+
+  $(".carousel").carousel({
+  interval: 3000
+});
+
+//scroll slides on swipe for touch enabled devices
+$(".carousel").on("touchstart", function(event) {
+  var yClick = event.originalEvent.touches[0].pageY;
+  $(this).one("touchmove", function(event) {
+    var yMove = event.originalEvent.touches[0].pageY;
+    if (Math.floor(yClick - yMove) > 1) {
+      $(".carousel").carousel("next");
+    } else if (Math.floor(yClick - yMove) < -1) {
+      $(".carousel").carousel("prev");
+    }
+  });
+  $(".carousel").on("touchend", function() {
+    $(this).off("touchmove");
+  });
+});
+
+</script>
+
+<a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i> </a>
+
+
+
+<!-- popper min js -->
+<script src="assets/js/popper.min.js"></script>
+<!-- Latest compiled and minified Bootstrap -->
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- owl-carousel min js  -->
+<script src="assets/owlcarousel/js/owl.carousel.min.js"></script>
+<!-- magnific-popup min js  -->
+<script src="assets/js/magnific-popup.min.js"></script>
+<!-- waypoints min js  -->
+<script src="assets/js/waypoints.min.js"></script>
+<!-- parallax js  -->
+<script src="assets/js/parallax.js"></script>
+<!-- countdown js  -->
+<script src="assets/js/jquery.countdown.min.js"></script>
+<!-- imagesloaded js -->
+<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<!-- isotope min js -->
+<script src="assets/js/isotope.min.js"></script>
+<!-- jquery.dd.min js -->
+<script src="assets/js/jquery.dd.min.js"></script>
+<!-- slick js -->
+<script src="assets/js/slick.min.js"></script>
+<!-- elevatezoom js -->
+<script src="assets/js/jquery.elevatezoom.js"></script>
+<!-- scripts js -->
+<script src="assets/js/scripts.js"></script>
+
+</body>
+</html>
