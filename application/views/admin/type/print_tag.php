@@ -80,7 +80,7 @@
   </div>
   <input type="hidden" name="name" id="name" value="<?=$p_data->name?>-<?=$type_data->t_code?>">
   <div class="col-md-12 text-center mt-5">
-    <a id="btn_convert1" onclick="getPDF();"  href="javascript:void(0)"><button class="btn btn-primary" style="background-color:#ff9b98;border:none">Download</button></a>
+    <a id="btn_convert1" onclick="getPDF();"  href="javascript:void(0)"><button class="btn btn-primary" style="background-color:#e3c4c5;border:none">Download</button></a>
   </div>
   </div><br>
   </div>

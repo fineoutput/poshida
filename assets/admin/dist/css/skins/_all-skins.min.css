@@ -1354,7 +1354,7 @@ span.badge {
 }
 
 .btn-info {
-    background-color: #ff9b98;
+    background-color: #e3c4c5;
     border-color: #cde5cf;
     transition: all 0.3s ease-in-out;
 
@@ -1364,8 +1364,8 @@ span.badge {
 .btn-info:active,
 .btn-info.hover {
     background-color: transparent;
-    color: #ff9b98;
-    border-color: #ff9b9800;
+    color: #e3c4c5;
+    border-color: #e3c4c500;
     transition: all 0.3s ease-in-out;
 
 
@@ -1373,7 +1373,7 @@ span.badge {
 
 .user-panel {
     padding: 10px;
-    background: #ff9b98;
+    background: #e3c4c5;
     display: flex;
 }
 
@@ -1389,7 +1389,7 @@ ul.sidebar-menu {
 }
 
 ul.sidebar-menu::-webkit-scrollbar-thumb {
-    background: #ff9b98;
+    background: #e3c4c5;
     border-radius: 20px;
 }
 
@@ -1401,12 +1401,12 @@ ul.sidebar-menu::-webkit-scrollbar {
 }
 
 .skin-blue .main-header .navbar .sidebar-toggle:hover {
-    background-color: #b5dd9b8c;
+    background-color: #ffffff;
 }
 
 
 ::-webkit-scrollbar-thumb {
-    background: #ff9b98;
+    background: #e3c4c5;
     border-radius: 20px;
 }
 
@@ -1418,7 +1418,7 @@ ul.sidebar-menu::-webkit-scrollbar {
 }
 
 .panel-body::-webkit-scrollbar-thumb {
-    background: #ff9b98;
+    background: #e3c4c5;
     border-radius: 20px;
 }
 
@@ -1430,7 +1430,7 @@ ul.sidebar-menu::-webkit-scrollbar {
 }
 
 .panel-heading::-webkit-scrollbar-thumb {
-    background: #ff9b98;
+    background: #e3c4c5;
     border-radius: 20px;
 }
 
@@ -1459,7 +1459,7 @@ ul.sidebar-menu::-webkit-scrollbar {
 }
 
 .btn-info {
-    background-color: #ff9b98;
+    background-color: #e3c4c5;
     border-color: #cde5cf00;
     transition: all 0.3s ease-in-out;
     padding: 8px 11px;
@@ -1482,15 +1482,15 @@ ul.sidebar-menu::-webkit-scrollbar {
     z-index: 2;
     color: #fff;
     cursor: default;
-    background-color: #ff9b98;
-    border-color: #ff9b98;
+    background-color: #e3c4c5;
+    border-color: #e3c4c5;
 }
 
 .pagination>li>a:focus,
 .pagination>li>a:hover,
 .pagination>li>span:focus,
 .pagination>li>span:hover {
-    color: #ff9b98;
+    color: #e3c4c5;
     background-color: #eee;
     border-color: #ddd;
 }
@@ -1507,7 +1507,7 @@ ul.sidebar-menu::-webkit-scrollbar {
 }
 
 .btn-success {
-    background-color: #ff9b98;
+    background-color: #e3c4c5;
     border-color: #cde5cf00;
     transition: all 0.3s ease-in-out;
     padding: 8px 11px;
@@ -1518,13 +1518,13 @@ ul.sidebar-menu::-webkit-scrollbar {
 .btn-success:active,
 .btn-success.hover {
     background-color: #008d4b00;
-    color: #ff9b98;
-    border-color: #ff9b98;
+    color: #e3c4c5;
+    border-color: #e3c4c5;
 }
 
 
 li.user-footer .pull-left a.btn.btn-default.btn-flat {
-    background-color: #ff9b98;
+    background-color: #e3c4c5;
     border-color: #cde5cf00;
     transition: all 0.3s ease-in-out;
     padding: 8px 20px;
@@ -1533,13 +1533,13 @@ li.user-footer .pull-left a.btn.btn-default.btn-flat {
 }
 
 li.user-footer .pull-left a.btn.btn-default.btn-flat:hover {
-    background-color: #ff9b9800 !important;
+    background-color: #e3c4c500 !important;
 
-    color: #ff9b98 !important;
+    color: #e3c4c5 !important;
 }
 
 .pull-right a.btn.btn-default.btn-flat {
-    background-color: #ff9b98;
+    background-color: #e3c4c5;
     border-color: #cde5cf00;
     transition: all 0.3s ease-in-out;
     padding: 8px 20px;
@@ -1548,8 +1548,8 @@ li.user-footer .pull-left a.btn.btn-default.btn-flat:hover {
 }
 
 .pull-right a.btn.btn-default.btn-flat:hover {
-    background-color: #ff9b9800 !important;
-    color: #ff9b98 !important;
+    background-color: #e3c4c500 !important;
+    color: #e3c4c5 !important;
 }
 
 .bg-green,
@@ -1557,12 +1557,12 @@ li.user-footer .pull-left a.btn.btn-default.btn-flat:hover {
 .alert-success,
 .label-success,
 .modal-success .modal-body {
-    background-color: #ff9b98 !important;
+    background-color: #00a65a !important;
 }
 
 .btn-primary {
-    background-color: #ff9b98 !important;
-    border-color: #ff9b98;
+    background-color: #e3c4c5 !important;
+    border-color: #e3c4c5;
 }
 
 .content-header>h1 {
@@ -1581,7 +1581,7 @@ tr {
 }
 
 input.btn.custom_btn {
-    background-color: #ff9b98;
+    background-color: #e3c4c5;
     border-color: #cde5cf00;
     transition: all 0.3s ease-in-out;
     padding: 8px 20px;
@@ -1590,9 +1590,9 @@ input.btn.custom_btn {
 }
 
 input.btn.custom_btn:hover {
-    background-color: #ff9b9800 !important;
+    background-color: #e3c4c500 !important;
 
-    color: #ff9b98 !important;
+    color: #e3c4c5 !important;
 }
 
 .fa-money {
@@ -1676,7 +1676,7 @@ tbody {
     }
 
     .skin-blue .main-header .logo {
-        background-color: #ff9b98;
+        background-color: #e3c4c5;
         color: #fff;
         border-bottom: 0 solid transparent;
         text-align: center;

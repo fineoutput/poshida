@@ -7670,8 +7670,7 @@ span.statcounter {
 	font-size: 25px;
 }
 .bg-green {
-	background-color: #73e080;
-}
+	background-color: #00a65a !important;}
 .bg-red {
 	background-color: #f94551;
 }

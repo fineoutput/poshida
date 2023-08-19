@@ -13,7 +13,7 @@
 
 
   <!-- icon   -->
-  <!-- <link rel="shortcut icon" href="<?= base_url() ?>assets/logo.png" type="image/x-icon" /> -->
+  <link rel="shortcut icon" href="<?= base_url() ?>assets/logo.png" type="image/x-icon" />
   <!-- icon   -->
 
 
@@ -36,7 +36,7 @@
     /* ==============================Custom theme=========================================== */
     .custom_btn {
       color: white;
-      background-color: #ff9b98 !important;
+      background-color: #e3c4c5 !important;
     }
 
     .custom_btn:hover {
@@ -46,7 +46,7 @@
 
     .custom_header {
       color: white;
-      background-color: #ff9b98 !important;
+      background-color: #e3c4c5 !important;
     }
 
     .custom_sidebar {
@@ -54,11 +54,11 @@
       background-color: white !important;
     }
 
-    .custom_header>a:hover {
+    /* .custom_header>a:hover {
       color: black;
       background: white !important;
       border-left-color: white;
-    }
+    } */
 
     .custom_header>li>a:hover {
       color: #fff;
@@ -68,7 +68,7 @@
 
     .active>a {
       color: #fff;
-      background: #ff9b98 !important;
+      background: #e3c4c5 !important;
       border-color: #f9cdcc !important;
     }
 
@@ -82,12 +82,12 @@
     }
 
     .skin-blue .treeview-menu>li>a:hover {
-      color: #ff9b98;
+      color: #e3c4c5;
     }
 
     .skin-blue .sidebar-menu>li>a:hover {
       color: black;
-      background: #ff9b98 !important;
+      background: #e3c4c5 !important;
       border-left-color: black;
     }
 
@@ -104,18 +104,18 @@
       color: #84c34d;
     }
 
-    .skin-blue .main-header .logo:hover {
+    /* .skin-blue .main-header .logo:hover {
       background-color: #fff !important;
-      color: #ff9b98 !important;
+      color: #e3c4c5 !important;
       border-bottom: 0 solid #1e0c0c00;
-    }
+    } */
 
     .skin-blue .main-header .logo {
       color: white !important;
     }
 
     .main-header .sidebar-toggle:hover {
-      color: #ff9b98 !important;
+      color: #e3c4c5 !important;
     }
 
     .main-header .sidebar-toggle {
@@ -123,7 +123,7 @@
     }
 
     .navbar-nav>.user-menu>.dropdown-menu>.user-footer .btn-default {
-      color: #ff9b98;
+      color: #e3c4c5;
     }
 
     label {
@@ -263,7 +263,7 @@
     }
 
     .skin-blue .main-header .navbar .nav>li>a:hover {
-      color: #ff9b98 !important;
+      color: #e3c4c5 !important;
     }
 
     .skin-blue .main-header .navbar .nav>li>a {
@@ -303,15 +303,17 @@
 
     <header class="main-header custom_header">
       <!-- Logo -->
-      <!-- <a href="<?= base_url() ?>dcadmin/home" class="logo custom_header" style="background-color:white !important;"><img src="<? echo base_url() ?>assets/logo2.png"></a> -->
-      <h4 class="logo custom_header" style="background-color:white !important;  color: #ff9b98 !important;
-">Poshida</h4>
+      <a href="<?= base_url() ?>dcadmin/home" class="logo custom_header" style=" background: white !important;"><img src="<? echo base_url() ?>assets/admin/team/logo.jpg"  style="width:37%;
+      " alt="User Image" /></a>
+      <!-- <h4 class="logo custom_header" style="background-color:white !important;  color: #e3c4c5 !important;
+">Poshida</h4> -->
       <!-- Header Navbar: style can be found in header.less -->
       <nav class="navbar navbar-static-top custom_header" role="navigation">
         <!-- Sidebar toggle button-->
         <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
           <span class="sr-only">Toggle navigation</span>
         </a>
+
         
         <!-- Navbar Right Menu -->
         <div class="navbar-custom-menu">
@@ -455,7 +457,7 @@
 
                             echo base_url() . ADMIN_URL . "/" . $sd['url'] . '">'; ?>
             <span style=" <?php if ($currentURL == $urls) {
-                              echo "color: #ff9b98;";
+                              echo "color: #e3c4c5;";
                             } ?>"><i class="fa fa-circle"></i></span>&nbsp;
                   <span><? echo $sd['name'] ?></span>
                   <span class="label label-primary pull-right"></span>
@@ -493,7 +495,7 @@
                             if ($nam == $sd['name']) {
                               // echo $m_id;
                               // if($contr_nam == $b){}
-                              echo ''; ?>#"> <span style="color: #ff9b98;"><i class="fa fa-circle"></i></span> &nbsp;
+                              echo ''; ?>#"> <span style="color: #e3c4c5;"><i class="fa fa-circle"></i></span> &nbsp;
               <span><?= $sd['name'] ?></span>
 
               <span class="label label-primary pull-right"></span>
@@ -532,7 +534,7 @@
 
 
                   <li><a href="<? echo base_url() . ADMIN_URL ?>/<? echo $data->url; ?>"><span style="<?php if ($currentURL == $urlss) {
-            echo "color: #ff9b98;";      
+            echo "color: #e3c4c5;";      
                 } ?>"><i class="fa fa-circle-o"></i></span>&nbsp;<?php echo $data->name; ?></a></li>
                 <?
                             }
