@@ -120,8 +120,8 @@ $(function() {
         });
     }
 
-    if ($(".main-banner, .testimonial-slider").length > 0) {
-        $(".main-banner, .testimonial-slider").owlCarousel({
+    if ($(".main-baner ").length > 0) {
+        $(".main-baner ").owlCarousel({
             //loop: true,
             autoplay: false,
             dots: true,
@@ -136,6 +136,24 @@ $(function() {
             }
         });
     }
+    
+    if ($(".main-banner, .fv").length > 0) {
+      $(".main-banner, .fv").owlCarousel({
+          loop: true,
+          autoplay: false,
+          dots: true,
+          nav: false,
+          items: 2,
+          responsiveClass: true,
+          responsive: {
+              767: {
+                  dots: false,
+                  nav: true,
+              },
+          }
+      });
+  }
+
 
     if ($(".product-slider").length > 0) {
         $(".product-slider").owlCarousel({
