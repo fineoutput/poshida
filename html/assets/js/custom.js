@@ -143,16 +143,97 @@ $(function() {
           autoplay: false,
           dots: true,
           nav: false,
-          items: 2,
+          items: 1,
           responsiveClass: true,
-          responsive: {
-              767: {
-                  dots: false,
-                  nav: true,
-              },
+         
+          responsive:{
+            
+            767: {
+              dots: false,
+              nav: true,
+              items: 2
           }
+   
+        }
       });
   }
+
+
+
+
+
+
+
+
+
+
+  if ($(".main-banner, .fvsx").length > 0) {
+    $(".main-banner, .fvsx").owlCarousel({
+        loop: true,
+        autoplay: false,
+        dots: true,
+        nav: false,
+        items: 1,
+        responsiveClass: true,
+       
+        responsive:{
+          
+          767: {
+            dots: false,
+            nav: true,
+            items: 3
+        }
+ 
+      }
+    });
+}
+
+
+
+
+
+      if ($(".main-banner, .fvv").length > 0) {
+      $(".main-banner, .fvv").owlCarousel({
+          loop: true,
+          autoplay: false,
+          dots: true,
+          nav: true,
+          items: 2,
+          responsiveClass: true,
+         
+          responsive:{
+            
+            767: {
+              dots: true,
+              nav: true,
+              items: 3
+          }
+   
+        }
+      });
+  }
+
+  
+  if ($(".main-banner, .catrty").length > 0) {
+    $(".main-banner, .catrty").owlCarousel({
+        loop: true,
+        autoplay: true,
+        dots: false,
+        nav: false,
+        items: 2,
+        responsiveClass: true,
+       
+        responsive:{
+          
+          767: {
+            dots: false,
+            nav: false,
+            items: 6
+        }
+ 
+      }
+    });
+}
 
 
     if ($(".product-slider").length > 0) {

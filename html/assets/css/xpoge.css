@@ -1419,10 +1419,10 @@ header.header-fixed {
 _______________________________________________________*/
 
 /* - Banner Style  //---------------- */
-.banner {
-	height: 100%;
-	position: relative;
-	margin-top: 93px;
+.banner-21 {
+    height: 100%;
+    position: relative;
+    margin-top: 173px;
 }
 
 .banner-detail {
@@ -3387,9 +3387,7 @@ footer .social-media ul {
 	display: flex;
 }
 
-.megamenu.mobile-sub-menu {
-	margin-top: 51px;
-}
+
 
 .ptb-92000 {
 	padding-top: 40px;
@@ -3405,7 +3403,7 @@ i.bi.bi-heart {
 	justify-content: end;
 }
 
-.col-lg-4.col-md-6.col-4.p-0.position-initial.icon-bar-center {
+.col-lg-4.col-md-6.col-6.p-0.position-initial.icon-bar-center{
 	text-align: center;
 }
 
@@ -3493,7 +3491,65 @@ h2.main_title {
 	border: 1px solid gray;
 	width: 60% !important;
 }
+div#footerCount .row .col-2.text-center.mt-2.p-0 a img {
+    width: 20px;
+}
+div#footerCount .row .col-2.text-center.mt-2.p-0 {
+    padding: 6px !important;
+}
+a.btn.btn-color.small.btn-filter.mb-20 {
+    margin-top: 19px;
+}
 
+
+.ann{
+	bottom: 0px;
+    position: absolute;
+	width: 111px;
+    left: -22px;
+    /* top: 49px; */
+    animation: hello 1.9s linear infinite alternate;
+}
+.ann2{
+	position: absolute;
+	width: 111px;
+    right: -28px;
+    bottom: 0;
+	animation:  hello 1.9s linear infinite alternate;
+}
+
+
+.footer-am{
+	display: flex;
+	justify-content: space-around;
+}
+
+/* 
+@keyframes hello {
+	to{
+		transform: translate(-10px);
+	}
+} */
+.blog-image1{
+	width: 100% !important;
+}
+
+.fb{
+	height: 345px !important;
+}
+
+.sty{
+	width: 70%;
+}
+
+.form-group.m-0.sty input[type="search"] {
+	width: 100%;
+    margin: 10px;
+    border: none;
+    border: 1px solid #c5c5c5;
+    /* font-size: 17px; */
+    padding: 7px;
+}
 
 
 @media(max-width:992px) {
@@ -3508,6 +3564,17 @@ h2.main_title {
 
 	.heig {
 		display: none !important;
+	}
+	.footer-logo{
+		height: auto;
+		max-width: 47%;
+	}
+	
+}
+
+@media(max-width:758px) {
+	.price-box span.price {
+		font-size: 15px;
 	}
 }
 
@@ -3525,11 +3592,38 @@ h2.main_title {
 
 @media(max-width:425px) {
 	.logo-imah-1 {
-		width: 81%;
+		width: 65%;
 	}
 }
+
+@media(max-width:375px) {
+	h2.main_title{
+		font-size: 19px !important;
+	}
+	}
+
+@media(max-width:320px) {
+	
+	.banner-21 {
+		margin-top: 88px !important;
+	}
+}
+
 
 
 .nl-popup-main {
 	display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

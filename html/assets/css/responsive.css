@@ -325,7 +325,7 @@
 	}
 
 	.banner {
-	    margin-top: 60px;
+		margin-top: 96px;
 	}
 
 	.inner-banner {
@@ -661,7 +661,7 @@
 		border-bottom: 1px solid #e1e1e1;
 	}
 	.footer-static-block .head-three {
-		font-size: 20px;
+		font-size: 14px;
 	}
 	.footer-static-block .footer-block-contant {
 		display: none;
@@ -673,7 +673,7 @@
 	}
 
 	.footer-static-block span.opener {
-		background: url(../images/sprite.png) no-repeat scroll 0 0;
+		background: url(../img/sprite2.png) no-repeat scroll 0 0;
 		height: 30px;
 		width: 30px;
 		display: inline-block;
