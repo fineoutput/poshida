@@ -643,8 +643,8 @@
 	}
 
 	.owl-carousel .owl-nav button[class*="owl-"], .owl-carousel .owl-nav button[class*="owl-"].disabled:hover {
-		height: 40px;
-		width: 40px;
+		height: 33px;
+		width: 33px;
 	}
 
 	.heading-part.text-center h2.main_title::after, .heading-part.text-center h2.main_title::before {

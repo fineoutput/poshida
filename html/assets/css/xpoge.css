@@ -3426,6 +3426,7 @@ i.bi.bi-heart {
 .btn--1 {
 	padding: 10px 26px;
 	border-radius: 0px !important;
+
 }
 
 .ivo-ho {
@@ -3534,17 +3535,14 @@ a.btn.btn-color.small.btn-filter.mb-20 {
 	width: 100% !important;
 }
 
-.fb{
-	height: 345px !important;
-}
 
-.sty{
-	width: 70%;
-}
 
+.sty {
+    width: 92%;
+}
 .form-group.m-0.sty input[type="search"] {
-	width: 100%;
-    margin: 10px;
+    width: 100%;
+    margin: 10px 0px;
     border: none;
     border: 1px solid #c5c5c5;
     /* font-size: 17px; */
