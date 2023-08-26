@@ -122,7 +122,7 @@ $(function() {
 
     if ($(".main-baner ").length > 0) {
         $(".main-baner ").owlCarousel({
-            //loop: true,
+            loop: true,
             autoplay: false,
             dots: true,
             nav: false,
@@ -216,29 +216,33 @@ $(function() {
   
   if ($(".main-banner, .catrty").length > 0) {
     $(".main-banner, .catrty").owlCarousel({
-        loop: true,
-        autoplay: true,
-        dots: false,
-        nav: false,
-        items: 2,
-        responsiveClass: true,
-       
-        responsive:{
-          
-          767: {
+      loop: true,
+            autoplay: false,
             dots: false,
-            nav: false,
-            items: 6
-        }
- 
-      }
-    });
+            nav: true,
+            loop: true,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 2,
+                },
+                420: {
+                    items: 2,
+                },
+                767: {
+                    items: 5,
+                },
+                991: {
+                    items: 6,
+                },
+            }
+        });
 }
 
 
     if ($(".product-slider").length > 0) {
         $(".product-slider").owlCarousel({
-            //loop: true,
+            loop: true,
             autoplay: false,
             dots: false,
             nav: true,

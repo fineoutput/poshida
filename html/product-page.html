@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<!-- Basic Page Needs -->
+	<meta charset="utf-8">
+	<title>Poshida</title>
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link type="image/x-icon" href="assets/img/Poshida Logo (2)_page-0001.jpg" rel="icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/xpoge.css">
+
+
+	<link rel="stylesheet" href="assets/css/responsive.css">
+	<link rel="stylesheet" href="assets/css/ionicons.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<style>
+	
+	
+
+	
+		
+		.spanpadding span {
+			width: 40px !important;
+			height: 40px !important;
+			line-height: 32px !important;
+		}
+
+		.product_size_switch span {
+			cursor: pointer;
+			text-transform: uppercase;
+			width: 32px;
+			display: inline-block;
+			border: 2px solid #ddd;
+			text-align: center;
+			height: 32px;
+			line-height: 28px;
+			font-size: 14px;
+			margin-bottom: 3px;
+			border-radius: 21%;
+		}
+
+		.product_size_switch span.active {
+			border-color: #c68fa6 ;
+			background-color: #c68fa6 ;
+			color: #fff;
+		}
+
+		.product_size_switch .spananim {
+			pointer-events: none;
+			opacity: 0.3;
+			position: relative;
+		}
+
+		.product_size_switch .spananim:after {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			height: 1px;
+			background: rgb(80, 80, 80);
+			content: "";
+			width: 100%;
+			display: block;
+			transform: rotate(140deg);
+		}
+	</style>
+
+
+
+</head>
+
+<body>
+	<!-- Start preloader -->
+	<div id="preloader"></div>
+	<!-- End preloader -->
+
+	<!-- Search Screen start -->
+	<!-- <div class="sidebar-search-wrap">
+		    <div class="sidebar-table-container">
+			    <div class="sidebar-align-container">
+			        <div class="search-closer right-side"></div>
+			        <div class="search-container">
+			          <form method="get" id="search-form">
+			            <input type="text" id="s" class="search-input" name="s" placeholder="Start Searching">
+			          </form>
+			          <span>Search and Press Enter</span>
+			        </div>
+			    </div>
+		    </div>
+		</div> -->
+	<!-- Search Screen end -->
+
+	<div class="main">
+		<!-- Header start -->
+		<header id="header " style="    padding-bottom: 10px !important; ">
+
+			<div class="container position-r pb-3">
+				<div class="row m-0">
+					<div class="col-lg-4 col-md-3 col-3 p-0 " style="display: flex;
+						align-items: center;">
+						<div class="newsletter-input-1 newsletter-input mob  " style="width: 70%;">
+							<form>
+								<div class="form-group m-0">
+									<input type="email" placeholder="Search Products  .. " required="">
+								</div>
+								<button type="submit" class="btn  btn--1"> <i class="bi bi-search"
+										style="color: #c68fa6;"></i></button>
+							</form>
+						</div>
+
+						<button data-target=".navbar-collapse" data-toggle="collapse"
+							class="navbar-toggle d-block d-lg-none d-xl-none" type="button"><i class="fa fa-bars"></i>
+						</button>
+					</div>
+					<div class="col-lg-4 col-md-6 col-6 p-0 position-initial icon-bar-center">
+						<div class="right-side">
+							<div class="navbar-header">
+								<a class="navbar-brand page-scroll" href="index.html">
+									<img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg"
+										class="logo-imah-1">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-3 col-3 p-0 icon-bar" style="display: flex;
+						align-items: center;">
+						<div class="header-right-link">
+							<ul>
+
+
+
+
+
+								<li class="search-box  search_box " onclick="hello()">
+									<a href="#"><span></span></a>
+								</li>
+
+
+
+
+								<li class="account-icon heig">
+									<a href="#"><span></span></a>
+									<div class="header-link-dropdown account-link-dropdown">
+										<ul class="link-dropdown-list">
+											<li> <span class="dropdown-title">Default welcome msg!</span>
+												<ul>
+													<li><a href="#">Sign
+															In</a></li>
+													<li><a href=#>Create
+															an Account</a></li>
+												</ul>
+											</li>
+											<li> <span class="dropdown-title">Language :</span>
+												<ul>
+													<li><a class="active" href="#">English</a></li>
+													<li><a href="#">French</a></li>
+													<li><a href="#">German</a></li>
+												</ul>
+											</li>
+											<li> <span class="dropdown-title">Currency :</span>
+												<ul>
+													<li><a class="active" href="#">USD</a></li>
+													<li><a href="#">AUD</a></li>
+													<li><a href="#">EUR</a></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</li>
+
+
+
+
+
+
+
+
+
+
+
+								<li class="cart-icon heig ">
+									<a href="#"> <span> <small class="cart-notification">2</small> </span> </a>
+									<div class="cart-dropdown header-link-dropdown">
+										<ul class="cart-list link-dropdown-list">
+											<li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
+												<figure> <a href="#" class="pull-left"> <img alt="Xpoge"
+															src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/1.jpg"></a>
+													<figcaption> <span><a href="#">Men's
+																Full Sleeves Collar Shirt</a></span>
+														<p class="cart-price">₹14.99</p>
+														<div class="product-qty">
+															<label>Qty:</label>
+															<div class="custom-qty">
+																<input type="text" name="qty" maxlength="8" value="1"
+																	title="Qty" class="input-text qty">
+															</div>
+														</div>
+													</figcaption>
+												</figure>
+											</li>
+											<li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
+												<figure> <a href="#" class="pull-left"> <img alt="Xpoge"
+															src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/2.jpg"></a>
+													<figcaption> <span><a href="#">Women's
+																Cape Jacket</a></span>
+														<p class="cart-price">₹14.99</p>
+														<div class="product-qty">
+															<label>Qty:</label>
+															<div class="custom-qty">
+																<input type="text" name="qty" maxlength="8" value="1"
+																	title="Qty" class="input-text qty">
+															</div>
+														</div>
+													</figcaption>
+												</figure>
+											</li>
+										</ul>
+										<p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span
+												class="pull-right"><strong class="price-box">₹29.98</strong></span> </p>
+										<div class="clearfix"></div>
+										<div class="mt-20"> <a href="#" class="btn-color btn">Cart</a> <a
+												href="checkout.html" class="btn-color btn right-side">Checkout</a>
+										</div>
+									</div>
+								</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								<li class="cart-icon  heig dx">
+									<a href="#"> <span> <small class="cart-notification">2</small> </span> </a>
+
+								</li>
+
+
+
+							</ul>
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				</div>
+			</div>
+
+
+
+
+			<div id="toggle" class="no ">
+				<form action="" class="toggil_form">
+					<div class="form-group m-0 sty">
+						<input type="search" placeholder="Search Products  .. " required="">
+					</div>
+					<button type="submit" class="btn " style="position: absolute;
+						right: 38px;     padding: 18px 3px;"> <i class="bi bi-search"></i></button>
+				</form>
+
+
+
+				<!-- <div class="newsletter-input-1 newsletter-input mob  " style="width: 70%;">
+						<form  class="toggil_form">
+						
+						</form>
+					</div> -->
+			</div>
+
+
+
+			<div class="container position-r animate__animated animate__bounce">
+				<div class="row m-0">
+
+				</div>
+				<div class="col-lg-12 col-md-8 col-8 p-0 position-initial" style="justify-content: center;
+					display: flex;">
+					<div class="right-side">
+						<!-- <button data-target=".navbar-collapse" data-toggle="collapse"
+								class="navbar-toggle d-block d-lg-none d-xl-none" type="button"><i class="fa fa-bars"></i>
+							</button> -->
+						<div class="overlay"></div>
+						<div id="menu" class="navbar-collapse collapse">
+							<ul class="nav navbar-nav">
+								<li class="level">
+									<a href="#" class="nav-link">Home</a>
+								</li>
+
+
+								<li class="level dropdown">
+									<span class="opener plus"><i class="bi bi-chevron-down"
+											style="color:white"></i></span>
+									<a href="#" class="nav-link">Women</a>
+									<div class="megamenu full mobile-sub-menu">
+										<div class="megamenu-inner-top">
+											<div class="row sub-menu-level1">
+												<div class="col-lg-3 level2 ">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="#"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="#"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="#"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="#"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="#"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="#"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="#"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="#"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+
+
+
+												<div class="col-lg-6 mt-30 d-none d-lg-block">
+													<div class="sub-menu-img">
+														<a href="#">
+															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+																alt="Xpoge">
+														</a>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								<li class="level dropdown">
+									<span class="opener plus"><i class="bi bi-chevron-down"
+											style="color:white"></i></span>
+									<a href="#" class="nav-link">Men</a>
+									<div class="megamenu full mobile-sub-menu">
+										<div class="megamenu-inner-top">
+											<div class="row sub-menu-level1">
+												<div class="col-lg-3 level2 ">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="#"><span>■</span>Navy
+																Blazer</a></li>
+														<li class="level3"><a href="#"><span>■</span>Sport
+																Jeans</a></li>
+														<li class="level3"><a href="#"><span>■</span>Sleeveless
+																Shirt</a></li>
+														<li class="level3"><a href="#"><span>■</span>Trousers</a>
+														</li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2 ">
+														<li class="level3"><a href="#"><span>■</span>Purse</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Sport
+																Shoes</a></li>
+														<li class="level3"><a href="#"><span>■</span>Wallets</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Belt</a>
+														</li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2 ">
+														<li class="level3"><a href="#"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="#"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Tops
+																& Shirts</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2 ">
+														<li class="level3"><a href="#"><span>■</span>Sunglasses</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Pocket
+																Watch</a></li>
+														<li class="level3"><a href="#"><span>■</span>Gloves</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Socks</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-6 mt-30 d-none d-lg-block">
+													<div class="sub-menu-img">
+														<a href="#">
+															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+																alt="Xpoge">
+														</a>
+													</div>
+												</div>
+												<div class="col-lg-6 mt-30 d-none d-lg-block">
+													<div class="sub-menu-img">
+														<a href="#">
+															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner2.jpg"
+																alt="Xpoge">
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="level">
+									<a href="#" class="nav-link">Juniors</a>
+								</li>
+
+
+
+
+								<li class="level dropdown">
+									<span class="opener plus"><i class="bi bi-chevron-down"
+											style="color:white"></i></span>
+									<a href="#" class="nav-link">Combos</a>
+									<div class="megamenu full mobile-sub-menu">
+										<div class="megamenu-inner-top">
+											<div class="row sub-menu-level1">
+												<div class="col-lg-3 level2 ">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="#"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="#"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="#"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="#"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="#"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="#"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="#"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="#"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+
+
+
+												<div class="col-lg-6 mt-30 d-none d-lg-block">
+													<div class="sub-menu-img">
+														<a href="#">
+															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+																alt="Xpoge">
+														</a>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</li>
+
+
+
+
+
+								<li class="level dropdown">
+									<span class="opener plus"><i class="bi bi-chevron-down"
+											style="color:white"></i></span>
+									<a href="#" class="nav-link">Bottoms</a>
+									<div class="megamenu full mobile-sub-menu">
+										<div class="megamenu-inner-top">
+											<div class="row sub-menu-level1">
+												<div class="col-lg-3 level2 ">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="#"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="#"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="#"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="#"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="#"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="#"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="#"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="#"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+
+
+
+												<div class="col-lg-6 mt-30 d-none d-lg-block">
+													<div class="sub-menu-img">
+														<a href="#">
+															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+																alt="Xpoge">
+														</a>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</li>
+
+
+
+
+								<li class="level dropdown">
+									<span class="opener plus"><i class="bi bi-chevron-down"
+											style="color:white"></i></span>
+									<a href="#" class="nav-link">HANDBAGS</a>
+									<div class="megamenu full mobile-sub-menu">
+										<div class="megamenu-inner-top">
+											<div class="row sub-menu-level1">
+												<div class="col-lg-3 level2 ">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="#"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="#"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="#"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="#"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="#"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="#"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="#"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="#"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+
+
+
+												<div class="col-lg-6 mt-30 d-none d-lg-block">
+													<div class="sub-menu-img">
+														<a href="#">
+															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+																alt="Xpoge">
+														</a>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</li>
+
+
+
+								<li class="level dropdown">
+									<span class="opener plus"><i class="bi bi-chevron-down"
+											style="color:white"></i></span>
+									<a href="#" class="nav-link">HANDBAGS</a>
+									<div class="megamenu full mobile-sub-menu">
+										<div class="megamenu-inner-top">
+											<div class="row sub-menu-level1">
+												<div class="col-lg-3 level2 ">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="#"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="#"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="#"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="#"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="#"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="#"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="#"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="#"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="#"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+
+
+
+												<div class="col-lg-6 mt-30 d-none d-lg-block">
+													<div class="sub-menu-img">
+														<a href="#">
+															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+																alt="Xpoge">
+														</a>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								<!-- <li class="level">
+										<a href="contact.html"
+											class="nav-link"> Contact Us</a>
+									</li> -->
+								<!-- <li class="level dropdown">
+										<span class="opener plus"><i class="bi bi-chevron-down"
+												style="color:white"></i></span>
+	
+										<a
+											href="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/blog-left-col.html">Blog</a>
+										<div class="megamenu mobile-sub-menu">
+											<div class="megamenu-inner-top">
+												<ul class="sub-menu-level1">
+													<li class="level2 ">
+														<ul class="sub-menu-level2">
+															<li class="level3"><a
+																	href="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/blog-left-col.html"><span>■</span>Blog
+																	Left-Sidebar</a></li>
+															<li class="level3"><a
+																	href="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/blog-right-col.html"><span>■</span>Blog
+																	Right-Sidebar</a></li>
+															<li class="level3"><a
+																	href="#"><span>■</span>Singal
+																	Blog</a></li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</li> -->
+								<!-- <li class="level dropdown">
+										<span class="opener plus"><i class="bi bi-chevron-down"
+												style="color:white"></i></span>
+	
+										<a href="#" class="nav-link">Pages</a>
+										<div class="megamenu mobile-sub-menu">
+											<div class="megamenu-inner-top">
+												<ul class="sub-menu-level1">
+													<li class="level2 ">
+														<ul class="sub-menu-level2">
+															<li class="level3"><a
+																	href="contact.html"><span>■</span>Contact</a></li>
+															<li class="level3"><a
+																	href="checkout.html"><span>■</span>Checkout</a></li>
+															<li class="level3"><a
+																	href="wishlist.html"><span>■</span>Wishlist</a></li>
+															<li class="level3"><a
+																	href="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/404.html"><span>■</span>404</a>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</li> -->
+							</ul>
+
+
+							<div class="newsletter-input-1 newsletter-input  destop  mt-3 " style="width: 100%;">
+								<form>
+									<div class="form-group m-0">
+										<input type="email" placeholder="Search Products  .. " required=" ">
+									</div>
+									<button type="submit" class="btn  btn--1"> <i class="bi bi-search"
+											style="color: #c68fa6;"></i></button>
+								</form>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+		</header>
+		<!-- Header end -->
+
+		<!-- Product detail contant start -->
+		<div class="contant">
+			<div id="banner-part" class="banner inner-banner">
+				<div class="container">
+					<div class="bread-crumb-main">
+						<h1 class="banner-title">Shop</h1>
+						<div class="breadcrumb">
+							<ul class="inline">
+								<li><a
+										href="#">Home</a>
+								</li>
+								<li><a
+										href="#">Shop</a>
+								</li>
+								<li>Shop Detail</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ptb-100 product-irme-m">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-5 col-md-6 col-12">
+							<div class="align-center mb-md-30">
+								<ul id="glasscase" class="gc-start">
+									<li><img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/1.jpg"
+											alt="Xpoge" /></li>
+									<li><img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/2.jpg"
+											alt="Xpoge" /></li>
+									<li><img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/3.jpg"
+											alt="Xpoge" /></li>
+									<li><img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/4.jpg"
+											alt="Xpoge" data-gc-caption="Your caption text" /></li>
+									<li><img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/5.jpg"
+											alt="Xpoge" /></li>
+									<li><img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/6.jpg"
+											alt="Xpoge" /></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-7 col-md-6 col-12">
+							<div class="product-detail-main">
+								<div class="product-item-details">
+									<h1 class="product-item-name">Men's Full Sleeves Collar Shirt</h1>
+									<div class="price-box"> <span class="price">₹80.00</span>
+										<del class="price old-price">₹120.00</del>
+									</div>
+									<div class="rating-main">
+										<div class="rating-summary-block">
+											<div title="53%" class="rating-result"> <span style="width:53%"></span>
+											</div>
+										</div>
+										<span>1 Review (s)</span>
+									</div>
+									<div class="product-des">
+										<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco aboris nisi ut
+											aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+											oluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+									</div>
+									<ul class="product-list">
+										<li><i class="fa fa-check"></i> Satisfaction 100% Guaranteed</li>
+										<li><i class="fa fa-check"></i> Free shipping on orders over ₹99</li>
+										<li><i class="fa fa-check"></i> 14 day easy Return</li>
+									</ul>
+									<hr class="mb-20">
+									<div class="row">
+										<div class="col-12">
+											<div class="table-listing qty mb-20">
+												<div class="row">
+													<div class="col-xl-2 col-md-3 col-sm-12">
+														<span>Qty:</span>
+													</div>
+													<div class="col-xl-10 col-md-9 col-sm-12">
+														<div class="custom-qty">
+															<button
+																
+																class="reduced items" type="button"> <i
+																	class="fa fa-minus"></i> </button>
+															<input type="text" class="input-text qty" title="Qty"
+																value="1" maxlength="8" id="qty1" name="qty">
+															<button
+															
+																class="increase items" type="button"> <i
+																	class="fa fa-plus"></i> </button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="table-listing product-size select-arrow mb-20">
+												<div class="row">
+													<div class="col-xl-2 col-md-3 col-sm-12">
+														<span>Size:</span>
+													</div>
+													<div class="col-xl-10 col-md-9 col-sm-12">
+														<div class="product_size_switch spanpadding" id="size_div">
+															<a
+																href="https://www.tiarastore.co.in/Home/product_detail/Tiara-Attractive-Night-Suit?type=NDM4MQ=="><span
+																	class="active">S</span></a>
+															<a
+																href="https://www.tiarastore.co.in/Home/product_detail/Tiara-Attractive-Night-Suit?type=NDM4Mg=="><span
+																	class="spananim">M</span></a>
+															<a
+																href="https://www.tiarastore.co.in/Home/product_detail/Tiara-Attractive-Night-Suit?type=NDM4Mw=="><span
+																	class="spananim">L</span></a>
+															<a
+																href="https://www.tiarastore.co.in/Home/product_detail/Tiara-Attractive-Night-Suit?type=NDM4NA=="><span
+																	class="spananim">XL</span></a>
+															<a
+																href="https://www.tiarastore.co.in/Home/product_detail/Tiara-Attractive-Night-Suit?type=NDM4NQ=="><span
+																	class="spananim">XXL</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="table-listing product-color select-arrow mb-20">
+												<div class="row">
+													<div class="col-xl-2 col-md-3 col-12">
+														<span>Color:</span>
+													</div>
+													<div class="col-xl-10 col-md-9 col-12">
+														<div class="product_color_switch mb-3">
+															<span class="active" data-color="#f8f7f7" color_id="11" product_id="878"href="#" style="background-color: rgb(248, 247, 247);"></span>
+															<span class="active" data-color="#f8f7f7" color_id="11" product_id="878"href="#" style="background-color: rgb(219, 130, 130);"></span>
+															<span class="active" data-color="#f8f7f7" color_id="11" product_id="878"href="#" style="background-color: rgb(82, 10, 10);"></span>
+															<span class="active" data-color="#f8f7f7" color_id="11" product_id="878"href="#" style="background-color: rgb(36, 230, 88);"></span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<hr class="mb-20">
+									<div class="product-details-btn">
+										<!-- detail-page-btn  -->
+										<ul>
+											<li class="icon cart-icon">
+												<a href="#"
+													class="btn btn-color"><span></span>Add to cart</a>
+											</li>
+											<li class="icon wishlist-icon">
+												<a href="#"
+													class="btn btn-transparent"><span></span></a>
+											</li>
+											<li class="icon compare-icon">
+												<a href="#" class="btn btn-transparent"><span></span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Product detail contant end -->
+
+		<section class="product-tab-part position-r pb-100">
+			<div class="container">
+				<div class="product-tab-inner">
+					<div class="row">
+						<div class="col-12">
+							<div id="tabs">
+								<ul class="nav nav-tabs">
+									<li><a class="tab-Description selected" title="Description">Description</a></li>
+									<!-- <li><a class="tab-Tags" title="Tags">Product Tags</a></li> -->
+									<li><a class="tab-Review" title="Review">Review</a></li>
+								</ul>
+							</div>
+							<div id="items">
+								<div class="tab_content">
+									<ul>
+										<li>
+											<div class="items-Description selected">
+												Pellentesque habitant morbi tristique senectus et netus et malesuada
+												fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+												ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+												egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend
+												leo. Pellentesque habitant morbi tristique senectus et netus et
+												malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat
+												vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet
+												quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+												eleifend leo.
+											</div>
+										</li>
+										<!-- <li>
+											<div class="items-Tags">
+												<p>Mauris felis neque, hendrerit id velit a, sollicitudin gravida nunc
+													in velit lectus, varius quis pretium fermentum, faucibus vel ante
+													etiam justo nulla, condimentum sit amet urna eget, rutrum auctor
+													massa suspendisse sit amet odio et dui lobortis iaculis phasellus
+													sagittis interdum neque, fermentum gravida ante maximus sed nunc
+													lobortis bibendum elementum integer rhoncus et libero ut suscipit
+													aliquam non ligula id dui consequat viverra a ut sem pellentesque et
+													sapien eget lorem viverra dignissim.</p>
+											</div>
+										</li> -->
+										<li>
+											<div class="items-Review">
+												<div class="comment-part">
+													<h3 class="head-three">Add a Review</h3>
+													<div class="course-overview-card pt-4">
+														<form method="post" >
+															<input type="hidden" name="_token" value="z9hC2nxJkBaEMdYQ09AHco0EEOWgSnzT9T7PSAeG">
+															<div class="leave-rating-wrap pb-4">
+																<div class="leave-rating leave--rating">
+																	<input type="hidden" name="institute_id" value="45">
+																	<input type="radio" name="rating" value="5" id="star5">
+																	<label for="star5"></label>
+																	<input type="radio" name="rating" value="4" id="star4" data-gtm-form-interact-field-id="0">
+																	<label for="star4"></label>
+																	<input type="radio" name="rating" value="3" id="star3">
+																	<label for="star3"></label>
+																	<input type="radio" name="rating" value="2" id="star2">
+																	<label for="star2"></label>
+																	<input type="radio" name="rating" value="1" id="star1">
+																	<label for="star1"></label>
+																</div><!-- end leave-rating -->
+															</div>
+
+														</form>
+													</div>
+												</div>
+												<div class="leave-comment-part " style="padding-top: 20px;"> 
+													<h3 class="head-three">Leave A Comment</h3>
+													<form class="main-form">
+														<div class="row">
+															<div class="col-md-4">
+																<div class="form-group mb-30">
+																	<input type="text" placeholder="Name" required="">
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="form-group mb-30">
+																	<input type="text" placeholder="Subject"
+																		required="">
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="form-group mb-30">
+																	<input type="text" placeholder="Email" required="">
+																</div>
+															</div>
+															<div class="col-12">
+																<div class="form-group mb-30">
+																	<textarea placeholder="Message" rows="5"
+																		required=""></textarea>
+																</div>
+															</div>
+															<div class="col-12">
+																<button type="submit" class="btn-color">Post
+																	Comment</button>
+															</div>
+														</div>
+													</form>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- Buy With Us start -->
+
+
+		<section class="product-section pb-100">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="heading-part text-center mb-30 mb-sm-20">
+							<h2 class="main_title">Buy With Us</h2>
+						</div>
+					</div>
+				</div>
+				<div class="position-r">
+					<div class="row">
+						<div class="product-slider owl-carousel position-initial">
+							<div class="item">
+								<div class="product-item">
+									<div class="product-image">
+										<div class="sale-label"><span>Sale</span></div>
+										<a href="shop.html">
+											<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/1.jpg"
+												alt="Xpoge">
+										</a>
+									</div>
+									<div class="product-details-outer">
+										<div class="product-details">
+											<div class="product-title">
+												<a href="#">Men's
+													Full Sleeves Collar Shirt</a>
+											</div>
+											<div class="price-box">
+												<span class="price">₹95.50</span>
+												<del class="price old-price">₹100.00</del>
+												<span class="on-sic"> 95% off </span>
+	
+											</div>
+										</div>
+										<div class="product-details-btn">
+											<ul>
+												<li class="icon  cart-icon">
+													<a href="#">XL</a>
+												</li> |
+												<li class="icon ivo-ho wishlist-icon">
+													<a href="#">M</a>
+												</li> |
+												<li class="icon ivo-ho compare-icon">
+													<a href="#">L</a>
+												</li> |
+	
+												<li class="icon ivo-ho compare-icon">
+													<a href="#"> +6</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="product-item">
+									<div class="product-image">
+										<a href="shop.html">
+											<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/2.jpg"
+												alt="Xpoge">
+										</a>
+									</div>
+									<div class="product-details-outer">
+										<div class="product-details">
+											<div class="product-title">
+												<a href="#">Women's
+													Cape Jacket</a>
+											</div>
+											<div class="price-box">
+												<span class="price">₹95.50</span>
+												<del class="price old-price">₹100.00</del>
+												<span class="on-sic"> 95% off </span>
+	
+											</div>
+										</div>
+										<div class="product-details-btn">
+											<ul>
+												<li class="icon  cart-icon">
+													<a href="#">XL</a>
+												</li> |
+												<li class="icon ivo-ho wishlist-icon">
+													<a href="#">M</a>
+												</li> |
+												<li class="icon ivo-ho compare-icon">
+													<a href="#">L</a>
+												</li> |
+	
+												<li class="icon ivo-ho compare-icon">
+													<a href="#"> +6</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="product-item">
+									<div class="product-image">
+										<div class="new-label"><span>New</span></div>
+										<a href="shop.html">
+											<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/3.jpg"
+												alt="Xpoge">
+										</a>
+									</div>
+									<div class="product-details-outer">
+										<div class="product-details">
+											<div class="product-title">
+												<a href="#">Men's
+													Regular Fit T-Shirt</a>
+											</div>
+											<div class="price-box">
+												<span class="price">₹95.50</span>
+												<del class="price old-price">₹100.00</del>
+												<span class="on-sic"> 95% off </span>
+	
+											</div>
+										</div>
+										<div class="product-details-btn">
+											<ul>
+												<li class="icon  cart-icon">
+													<a href="#">XL</a>
+												</li> |
+												<li class="icon ivo-ho wishlist-icon">
+													<a href="#">M</a>
+												</li> |
+												<li class="icon ivo-ho compare-icon">
+													<a href="#">L</a>
+												</li> |
+	
+												<li class="icon ivo-ho compare-icon">
+													<a href="#"> +6</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="product-item">
+									<div class="product-image">
+										<a href="shop.html">
+											<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/4.jpg"
+												alt="Xpoge">
+										</a>
+									</div>
+									<div class="product-details-outer">
+										<div class="product-details">
+											<div class="product-title">
+												<a href="#">Women's
+													Cotton Plain T-Shirts</a>
+											</div>
+											<div class="price-box">
+												<span class="price">₹95.50</span>
+												<del class="price old-price">₹100.00</del>
+												<span class="on-sic"> 95% off </span>
+	
+											</div>
+										</div>
+										<div class="product-details-btn">
+											<ul>
+												<li class="icon  cart-icon">
+													<a href="#">XL</a>
+												</li> |
+												<li class="icon ivo-ho wishlist-icon">
+													<a href="#">M</a>
+												</li> |
+												<li class="icon ivo-ho compare-icon">
+													<a href="#">L</a>
+												</li> |
+	
+												<li class="icon ivo-ho compare-icon">
+													<a href="#"> +6</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="product-item">
+									<div class="product-image">
+										<a href="shop.html">
+											<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/5.jpg"
+												alt="Xpoge">
+										</a>
+									</div>
+									<div class="product-details-outer">
+										<div class="product-details">
+											<div class="product-title">
+												<a href="#">Men's
+													Printed Regular Shirt</a>
+											</div>
+											<div class="price-box">
+												<span class="price">₹95.50</span>
+												<del class="price old-price">₹100.00</del>
+												<span class="on-sic"> 95% off </span>
+	
+											</div>
+										</div>
+										<div class="product-details-btn">
+											<ul>
+												<li class="icon  cart-icon">
+													<a href="#">XL</a>
+												</li> |
+												<li class="icon ivo-ho wishlist-icon">
+													<a href="#">M</a>
+												</li> |
+												<li class="icon ivo-ho compare-icon">
+													<a href="#">L</a>
+												</li> |
+	
+												<li class="icon ivo-ho compare-icon">
+													<a href="#"> +6</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="product-item">
+									<div class="product-image">
+										<div class="sale-label"><span>Sale</span></div>
+										<div class="new-label"><span>New</span></div>
+										<a href="shop.html">
+											<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/6.jpg"
+												alt="Xpoge">
+										</a>
+									</div>
+									<div class="product-details-outer">
+										<div class="product-details">
+											<div class="product-title">
+												<a href="#">Polyester
+													Printed T-Shirts</a>
+											</div>
+											<div class="price-box">
+												<span class="price">₹95.50</span>
+												<del class="price old-price">₹100.00</del>
+												<span class="on-sic"> 95% off </span>
+	
+											</div>
+										</div>
+										<div class="product-details-btn">
+											<ul>
+												<li class="icon  cart-icon">
+													<a href="#">XL</a>
+												</li> |
+												<li class="icon ivo-ho wishlist-icon">
+													<a href="#">M</a>
+												</li> |
+												<li class="icon ivo-ho compare-icon">
+													<a href="#">L</a>
+												</li> |
+	
+												<li class="icon ivo-ho compare-icon">
+													<a href="#"> +6</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Related buy with us Section end -->
+
+
+
+		<!-- Related Product Section Start -->
+		<section class="product-section pb-100">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="heading-part text-center mb-30 mb-sm-20">
+							<h2 class="main_title">Related Product</h2>
+						</div>
+					</div>
+				</div>
+				<div class="position-r">
+					<div class="row">
+						<div class="product-slider owl-carousel position-initial">
+							<div class="item">
+								<div class="product-item">
+									<div class="product-image">
+										<div class="sale-label"><span>Sale</span></div>
+										<a href="shop.html">
+											<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/1.jpg"
+												alt="Xpoge">
+										</a>
+									</div>
+									<div class="product-details-outer">
+										<div class="product-details">
+											<div class="product-title">
+												<a href="#">Men's
+													Full Sleeves Collar Shirt</a>
+											</div>
+											<div class="price-box">
+												<span class="price">₹95.50</span>
+												<del class="price old-price">₹100.00</del>
+												<span class="on-sic"> 95% off </span>
+	
+											</div>
+										</div>
+										<div class="product-details-btn">
+											<ul>
+												<li class="icon  cart-icon">
+													<a href="#">XL</a>
+												</li> |
+												<li class="icon ivo-ho wishlist-icon">
+													<a href="#">M</a>
+												</li> |
+												<li class="icon ivo-ho compare-icon">
+													<a href="#">L</a>
+												</li> |
+	
+												<li class="icon ivo-ho compare-icon">
+													<a href="#"> +6</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="product-item">
+									<div class="product-image">
+										<a href="shop.html">
+											<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/2.jpg"
+												alt="Xpoge">
+										</a>
+									</div>
+									<div class="product-details-outer">
+										<div class="product-details">
+											<div class="product-title">
+												<a href="#">Women's
+													Cape Jacket</a>
+											</div>
+											<div class="price-box">
+												<span class="price">₹95.50</span>
+												<del class="price old-price">₹100.00</del>
+												<span class="on-sic"> 95% off </span>
+	
+											</div>
+										</div>
+										<div class="product-details-btn">
+											<ul>
+												<li class="icon  cart-icon">
+													<a href="#">XL</a>
+												</li> |
+												<li class="icon ivo-ho wishlist-icon">
+													<a href="#">M</a>
+												</li> |
+												<li class="icon ivo-ho compare-icon">
+													<a href="#">L</a>
+												</li> |
+	
+												<li class="icon ivo-ho compare-icon">
+													<a href="#"> +6</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="product-item">
+									<div class="product-image">
+										<div class="new-label"><span>New</span></div>
+										<a href="shop.html">
+											<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/3.jpg"
+												alt="Xpoge">
+										</a>
+									</div>
+									<div class="product-details-outer">
+										<div class="product-details">
+											<div class="product-title">
+												<a href="#">Men's
+													Regular Fit T-Shirt</a>
+											</div>
+											<div class="price-box">
+												<span class="price">₹95.50</span>
+												<del class="price old-price">₹100.00</del>
+												<span class="on-sic"> 95% off </span>
+	
+											</div>
+										</div>
+										<div class="product-details-btn">
+											<ul>
+												<li class="icon  cart-icon">
+													<a href="#">XL</a>
+												</li> |
+												<li class="icon ivo-ho wishlist-icon">
+													<a href="#">M</a>
+												</li> |
+												<li class="icon ivo-ho compare-icon">
+													<a href="#">L</a>
+												</li> |
+	
+												<li class="icon ivo-ho compare-icon">
+													<a href="#"> +6</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="product-item">
+									<div class="product-image">
+										<a href="shop.html">
+											<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/4.jpg"
+												alt="Xpoge">
+										</a>
+									</div>
+									<div class="product-details-outer">
+										<div class="product-details">
+											<div class="product-title">
+												<a href="#">Women's
+													Cotton Plain T-Shirts</a>
+											</div>
+											<div class="price-box">
+												<span class="price">₹95.50</span>
+												<del class="price old-price">₹100.00</del>
+												<span class="on-sic"> 95% off </span>
+	
+											</div>
+										</div>
+										<div class="product-details-btn">
+											<ul>
+												<li class="icon  cart-icon">
+													<a href="#">XL</a>
+												</li> |
+												<li class="icon ivo-ho wishlist-icon">
+													<a href="#">M</a>
+												</li> |
+												<li class="icon ivo-ho compare-icon">
+													<a href="#">L</a>
+												</li> |
+	
+												<li class="icon ivo-ho compare-icon">
+													<a href="#"> +6</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="product-item">
+									<div class="product-image">
+										<a href="shop.html">
+											<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/5.jpg"
+												alt="Xpoge">
+										</a>
+									</div>
+									<div class="product-details-outer">
+										<div class="product-details">
+											<div class="product-title">
+												<a href="#">Men's
+													Printed Regular Shirt</a>
+											</div>
+											<div class="price-box">
+												<span class="price">₹95.50</span>
+												<del class="price old-price">₹100.00</del>
+												<span class="on-sic"> 95% off </span>
+	
+											</div>
+										</div>
+										<div class="product-details-btn">
+											<ul>
+												<li class="icon  cart-icon">
+													<a href="#">XL</a>
+												</li> |
+												<li class="icon ivo-ho wishlist-icon">
+													<a href="#">M</a>
+												</li> |
+												<li class="icon ivo-ho compare-icon">
+													<a href="#">L</a>
+												</li> |
+	
+												<li class="icon ivo-ho compare-icon">
+													<a href="#"> +6</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="product-item">
+									<div class="product-image">
+										<div class="sale-label"><span>Sale</span></div>
+										<div class="new-label"><span>New</span></div>
+										<a href="shop.html">
+											<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/6.jpg"
+												alt="Xpoge">
+										</a>
+									</div>
+									<div class="product-details-outer">
+										<div class="product-details">
+											<div class="product-title">
+												<a href="#">Polyester
+													Printed T-Shirts</a>
+											</div>
+											<div class="price-box">
+												<span class="price">₹95.50</span>
+												<del class="price old-price">₹100.00</del>
+												<span class="on-sic"> 95% off </span>
+	
+											</div>
+										</div>
+										<div class="product-details-btn">
+											<ul>
+												<li class="icon  cart-icon">
+													<a href="#">XL</a>
+												</li> |
+												<li class="icon ivo-ho wishlist-icon">
+													<a href="#">M</a>
+												</li> |
+												<li class="icon ivo-ho compare-icon">
+													<a href="#">L</a>
+												</li> |
+	
+												<li class="icon ivo-ho compare-icon">
+													<a href="#"> +6</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Related Product Section End -->
+
+		<!-- Newslatter section start -->
+		<section class="newsletter-section align-center ptb-100">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-xl-7 col-lg-9 col-12">
+						<div class="newsletter-title">
+							<h2 class="main_title">Sign up for Newsletter </h2>
+							<p>Wants to get latest updates! sign up for Free </p>
+						</div>
+						<div class="newsletter-input">
+							<form>
+								<div class="form-group m-0">
+									<input type="email" placeholder="Your email address" required="">
+								</div>
+								<button type="submit" class="btn btn-color"><span
+										class="d-none d-sm-block">Subscribe</span> <i
+										class="fa fa-send d-block d-sm-none"></i></button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Newslatter section end -->
+
+		<!-- Footer section start -->
+		<footer class="footer-part">
+			<div class="container">
+				<div class="footer-top ptb-100">
+					<div class="mb_-30">
+						<div class="row">
+							<div class="col-12 col-lg-3 col-md-6">
+								<div class="footer-about mb-sm-30">
+									<div class="footer-logo">
+										<a href="index.html">
+											<img src="assets/img/Poshida Logo (2)_page-0001.jpg" alt="logo">
+										</a>
+									</div>
+									<p class="footer-p">Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed
+										fringilla mauris sit amet nibh mauris sit amet nibh. Donec sodales sagittis</p>
+								</div>
+							</div>
+							<div class="col-12 col-lg-3 col-md-6">
+								<div class="footer-static-block">
+									<span class="opener plus"></span>
+									<h3 class="head-three">Information</h3>
+									<ul class="footer-menu footer-block-contant">
+										<li><a href="#">Contact
+												Us</a></li>
+										<li><a href="javascript:void(0)">Brands</a></li>
+										<li><a href="#">Blog</a>
+										</li>
+										<li><a href="javascript:void(0)">Returns</a></li>
+										<li><a href="javascript:void(0)">Privacy Policy</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-12 col-lg-3 col-md-6">
+								<div class="footer-static-block">
+									<span class="opener plus"></span>
+									<h3 class="head-three">My Account</h3>
+									<ul class="footer-menu footer-block-contant">
+										<li><a href="javascript:void(0)">Order History</a></li>
+										<li><a href="#">Wish
+												List</a></li>
+										<li><a href="javascript:void(0)">Newsletter</a></li>
+										<li><a href="javascript:void(0)">Specials</a></li>
+										<li><a href="javascript:void(0)">Gift Certificates</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-12 col-lg-3 col-md-6">
+								<div class="footer-static-block">
+									<span class="opener plus"></span>
+									<h3 class="head-three">Contact us</h3>
+									<div class="contact-box footer-block-contant">
+										<ul>
+											<li>
+												<div class="contact-thumb">
+													<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/address-icon.svg"
+														alt="xpoge">
+												</div>
+												<div class="contact-box-detail">
+													<p>869 Lexington Ave, New York, NY 10065, USA</p>
+												</div>
+											</li>
+											<li>
+												<div class="contact-thumb">
+													<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/phone-icon.svg"
+														alt="xpoge">
+												</div>
+												<div class="contact-box-detail">
+													<p>+91 123 456 789 0</p>
+												</div>
+											</li>
+											<li>
+												<div class="contact-thumb">
+													<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/mail-icon.svg"
+														alt="xpoge">
+												</div>
+												<div class="contact-box-detail">
+													<p>xpoge@hi123.com</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom align-center">
+					<div class="row">
+						<div class="col-12">
+							<div class="w-100">
+								<p class="mb-0"><a href="https://templatescoder.com/" target="_blank"
+										title="TemplatesCoder"></a></p>
+								<!-- <p class="mb-0">© Xpoge all Rights Reserverd theme by <a href="https://templatescoder.com/"
+											target="_blank" title="TemplatesCoder">TemplatesCoder</a></p> -->
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="social-media">
+								<ul>
+									<li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="javascript:void(0)"><i class="fa fa-instagram"></i></a></li>
+									<li><a href="javascript:void(0)"><i class="fa fa-youtube"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 
+		
+				<div class="footer-am">
+			
+		
+				<div><img src="assets/img/Untitled-8-removebg-preview.png" alt=""></div>
+				<div><img src="assets/img/Untitled-9-removebg-preview (1).png" alt=""></div>
+				<div><img src="assets/img/Untitled-10-removebg-preview (1).png" alt=""></div>
+				<div><img src="assets/img/Untitled-11-removebg-preview.png" alt=""></div>
+						
+			</div> -->
+
+		</footer>
+		<!-- Footer section end -->
+	</div>
+	<script src="assets/js/jquery-3.4.1.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+		<script src="assets/js/modernizr.js"></script>
+		<script src="assets/js/custom.js"></script>
+		<script>
+	        $(document).ready( function () {
+	            //If your <ul> has the id "glasscase"
+	            $('#glasscase').glassCase({ 
+	            	'thumbsPosition': 'bottom', 
+	            	'widthDisplayPerc' : 100,
+	            	isDownloadEnabled: false,
+	            });
+	        });
+	    </script>
+	
+</body>
+
+
+</html>

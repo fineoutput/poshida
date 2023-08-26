@@ -537,8 +537,12 @@
 		text-align: center;
 	}
 	.inner-banner .banner-title{
-		float: none;
-		margin-bottom: 10px;
+	    float: none;
+    margin-bottom: 6px;
+    font-size: 16px;
+	}
+	ul.inline li {
+		font-size: 15px;
 	}
 	.breadcrumb {
 	    float: none;
