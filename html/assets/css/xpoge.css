@@ -2995,6 +2995,14 @@ ul#glasscase li {
 	-o-transform: translateY(-50%);
 }
 
+
+
+.cart-dropdown.header-link-dropdown .mt-20.d-flex.justify-content-center a.btn-color.btn {
+	padding: 14px 13px  !important;
+	font-size: 14px;
+}
+
+
 .blog-detail-inner span {
 	color: #c68fa6;
 	font-weight: 500;
@@ -3729,13 +3737,20 @@ a.btn.btn-color.small.btn-filter.me-3.mb-20 {
 .p-c {
 	color: #c68fa6;
 }
-
+.dfghddgd{
+		display: none;
+}
 
 
 @media (max-width:980px) {
 	.contant {
 		margin-top: 100px !important;
 	}
+	.dfghddgd{
+		display: block;
+		padding: 20px;
+}
+	
 }
 
 
