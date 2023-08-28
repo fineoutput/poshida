@@ -1001,9 +1001,9 @@ header.header-fixed {
 
 
 
-.header-right-link ul li.account-icon>a span {
+/* .header-right-link ul li.account-icon>a span {
 	background-position: -11px -235px;
-}
+} */
 
 
 
@@ -1095,7 +1095,7 @@ header.header-fixed {
 	position: absolute;
 	width: 320px;
 	display: inline-block;
-	right: 0;
+	right: -102px;
 	top: 100%;
 	padding: 25px;
 	opacity: 0;
@@ -3891,6 +3891,9 @@ a.btn.btn-color.small.btn-filter.me-3.mb-20 {
 	td.margin-respon.icone-red {
 		margin-left: 250px !important;
 	}
+	td.margin-respon.icone-red.text-center.ewfsf {
+		margin-left: 227px !important;
+	}
 
 }
 
@@ -3950,4 +3953,11 @@ a.btn.btn-color.small.btn-filter.me-3.mb-20 {
 	td.margin-respon.rger {
 		padding: 3px 0px 0px 67px !important;
 	}
+	td.margin-respon.icone-red.text-center.ewfsf {
+		margin-left: 117px !important;
+	}
 }
+/* 
+.row.no-gutters .col-sm-12 .popup_content form#applyFilteronMobile .row .col-lg-3.col-md-4.list-group-tabs ul.nav.nav-tabs.visitedcolor div a {
+    color: white !important;
+} */
