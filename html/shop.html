@@ -21,6 +21,9 @@
 
 
 	<style>
+		.modal-content{
+			border: 0px ;
+		}
 		.sidebar .sidebar-default {
 			background: #f5f5f5;
 			padding: 10px;
@@ -503,7 +506,7 @@
 						<div class="newsletter-input-1 newsletter-input mob  " style="width: 70%;">
 							<form>
 								<div class="form-group m-0">
-									<input type="email" placeholder="Search Products  .. " required="">
+									<input type="search" placeholder="Search Products  .. " required="">
 								</div>
 								<button type="submit" class="btn  btn--1"> <i class="bi bi-search"
 										style="color: #c68fa6;"></i></button>
@@ -544,11 +547,13 @@
 									<div class="header-link-dropdown account-link-dropdown">
 										<ul class="link-dropdown-list">
 											<!-- <li> <span class="dropdown-title">Default welcome msg!</span> -->
-											<ul class="hrb">
-												<li><a href="my_profile.html" data-toggle="modal"
-														data-target="#login_Signin">My Account </a></li>
-												<li><a href="my_order.html">My Orders </a></li>
-												<li><a href="#">Log Out </a></li>
+											<ul class="hrb" >
+												<li><a href="my_profile.html" class="p-1">My Account </a></li>
+												<li><a href="my_order.html" class="p-1">My Orders </a></li>
+												
+												<li><a href="my_order.html"  class="p-1" data-toggle="modal" data-target="#exampleModalCenter">Log In </a></li>
+												<li><a href="my_order.html"  class="p-1" data-toggle="modal" data-target="#exampleModalCenter2"> Register </a></li>
+												<!-- <li><a href="#" class="p-1">Log Out </a></li> -->
 
 
 											</ul>
@@ -572,7 +577,7 @@
 							<a href="#"> <span> <small class="cart-notification">2</small> </span> </a>
 							<div class="cart-dropdown header-link-dropdown">
 								<ul class="cart-list link-dropdown-list">
-									<li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
+									<!-- <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
 										<figure> <a href="#" class="pull-left"> <img alt="Xpoge"
 													src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/1.jpg"></a>
 											<figcaption> <span><a href="#">Men's
@@ -581,24 +586,24 @@
 												<div class="product-qty">
 													<label>Qty:</label>
 													<div class="custom-qty">
-														<input type="text" name="qty" maxlength="8" value="1"
-															title="Qty" class="input-text qty">
+														<p>2</p>
 													</div>
 												</div>
 											</figcaption>
 										</figure>
-									</li>
+									</li> -->
 									<li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
 										<figure> <a href="#" class="pull-left"> <img alt="Xpoge"
 													src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/2.jpg"></a>
 											<figcaption> <span><a href="#">Women's
 														Cape Jacket</a></span>
-												<p class="cart-price">₹14.99</p>
+												<p class="cart-price m-0">₹14.99</p>
+												<p class="m-0">Blue : Colour</p>
+												<p class="m-0">Size : XXL</p>
 												<div class="product-qty">
 													<label>Qty:</label>
 													<div class="custom-qty">
-														<input type="text" name="qty" maxlength="8" value="1"
-															title="Qty" class="input-text qty">
+														<p class="m-0">2</p>
 													</div>
 												</div>
 											</figcaption>
@@ -608,8 +613,9 @@
 								<p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span
 										class="pull-right"><strong class="price-box">₹29.98</strong></span> </p>
 								<div class="clearfix"></div>
-								<div class="mt-20"> <a href="#" class="btn-color btn">Cart</a> <a href="checkout.html"
-										class="btn-color btn right-side">Checkout</a>
+								<div class="mt-20 d-flex justify-content-center" > <a href="cart.html" class="btn-color btn"> View Cart</a>
+									<!-- <a href="checkout.html"
+										class="btn-color btn right-side">Checkout</a> -->
 								</div>
 							</div>
 						</li>
@@ -621,406 +627,356 @@
 					</div>
 				</div>
 			</div>
-   
 
 
 
 
-	<div id="toggle" class="no ">
-		<form action="" class="toggil_form">
-			<div class="form-group m-0 sty">
-				<input type="search" placeholder="Search Products  .. " required="">
-			</div>
-			<button type="submit" class="btn " style="position: absolute;
+
+			<div id="toggle" class="no ">
+				<form action="" class="toggil_form">
+					<div class="form-group m-0 sty">
+						<input type="search" placeholder="Search Products  .. " required="">
+					</div>
+					<button type="submit" class="btn " style="position: absolute;
 						right: 38px;     padding: 18px 3px;"> <i class="bi bi-search"></i></button>
-		</form>
-	</div>
+				</form>
+			</div>
 
 
-	<div class="container position-r animate__animated animate__bounce">
-		<div class="row m-0">
+			<div class="container position-r animate__animated animate__bounce">
+				<div class="row m-0">
 
-		</div>
-		<div class="col-lg-12 col-md-8 col-8 p-0 position-initial" style="justify-content: center;
+				</div>
+				<div class="col-lg-12 col-md-8 col-8 p-0 position-initial" style="justify-content: center;
 					display: flex;">
-			<div class="right-side">
-				<!-- <button data-target=".navbar-collapse" data-toggle="collapse"
+					<div class="right-side">
+						<!-- <button data-target=".navbar-collapse" data-toggle="collapse"
 								class="navbar-toggle d-block d-lg-none d-xl-none" type="button"><i class="fa fa-bars"></i>
 							</button> -->
-				<div class="overlay"></div>
-				<div id="menu" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li class="level">
-							<a href="index.html" class="nav-link">Home</a>
-						</li>
+						<div class="overlay"></div>
+						<div id="menu" class="navbar-collapse collapse">
+							<ul class="nav navbar-nav">
+								<li class="level">
+									<a href="index.html" class="nav-link">Home</a>
+								</li>
 
 
-						<li class="level dropdown">
-							<span class="opener plus"><i class="bi bi-chevron-down" style="color:white"></i></span>
-							<a href="#" class="nav-link">Women</a>
-							<div class="megamenu full mobile-sub-menu">
-								<div class="megamenu-inner-top">
-									<div class="row sub-menu-level1">
-										<div class="col-lg-3 level2 ">
-											<ul class="sub-menu-level2">
-												<li class="level3"><a href="shop.html"><span>■</span>Jeans
-														& Jeggings</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Tops
-														& Shirts</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Winter
-														Wear</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Jeans
-														& Jeggings</a></li>
-											</ul>
-										</div>
-										<div class="col-lg-3 level2">
-											<ul class="sub-menu-level2">
-												<li class="level3"><a href="shop.html"><span>■</span>Jeans
-														& Jeggings</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Tops
-														& Shirts</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Winter
-														Wear</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Jeans
-														& Jeggings</a></li>
-											</ul>
-										</div>
+								<li class="level dropdown">
+									<span class="opener plus"><i class="bi bi-chevron-down"
+											style="color:white"></i></span>
+									<a href="#" class="nav-link">Women</a>
+									<div class="megamenu full mobile-sub-menu">
+										<div class="megamenu-inner-top">
+											<div class="row sub-menu-level1">
+												<div class="col-lg-3 level2 ">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
 
 
 
-										<div class="col-lg-6 mt-30 d-none d-lg-block">
-											<div class="sub-menu-img">
-												<a href="shop.html">
-													<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
-														alt="Xpoge">
-												</a>
-											</div>
-										</div>
+												<div class="col-lg-6 mt-30 d-none d-lg-block">
+													<div class="sub-menu-img">
+														<a href="shop.html">
+															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+																alt="Xpoge">
+														</a>
+													</div>
+												</div>
 
-									</div>
-								</div>
-							</div>
-						</li>
-
-						<li class="level dropdown">
-							<span class="opener plus"><i class="bi bi-chevron-down" style="color:white"></i></span>
-							<a href="#" class="nav-link">Men</a>
-							<div class="megamenu full mobile-sub-menu">
-								<div class="megamenu-inner-top">
-									<div class="row sub-menu-level1">
-										<div class="col-lg-3 level2 ">
-											<ul class="sub-menu-level2">
-												<li class="level3"><a href="shop.html"><span>■</span>Navy
-														Blazer</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Sport
-														Jeans</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Sleeveless
-														Shirt</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Trousers</a>
-												</li>
-											</ul>
-										</div>
-										<div class="col-lg-3 level2">
-											<ul class="sub-menu-level2 ">
-												<li class="level3"><a href="shop.html"><span>■</span>Purse</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Sport
-														Shoes</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Wallets</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Belt</a>
-												</li>
-											</ul>
-										</div>
-										<div class="col-lg-3 level2">
-											<ul class="sub-menu-level2 ">
-												<li class="level3"><a href="shop.html"><span>■</span>Jeans
-														& Jeggings</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Tops
-														& Shirts</a></li>
-											</ul>
-										</div>
-										<div class="col-lg-3 level2">
-											<ul class="sub-menu-level2 ">
-												<li class="level3"><a href="shop.html"><span>■</span>Sunglasses</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Pocket
-														Watch</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Gloves</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Socks</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-lg-6 mt-30 d-none d-lg-block">
-											<div class="sub-menu-img">
-												<a href="#">
-													<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
-														alt="Xpoge">
-												</a>
-											</div>
-										</div>
-										<div class="col-lg-6 mt-30 d-none d-lg-block">
-											<div class="sub-menu-img">
-												<a href="#">
-													<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner2.jpg"
-														alt="Xpoge">
-												</a>
 											</div>
 										</div>
 									</div>
-								</div>
-							</div>
-						</li>
-						<li class="level">
-							<a href="#" class="nav-link">Juniors</a>
-						</li>
+								</li>
 
-
-
-
-						<li class="level dropdown">
-							<span class="opener plus"><i class="bi bi-chevron-down" style="color:white"></i></span>
-							<a href="#" class="nav-link">Combos</a>
-							<div class="megamenu full mobile-sub-menu">
-								<div class="megamenu-inner-top">
-									<div class="row sub-menu-level1">
-										<div class="col-lg-3 level2 ">
-											<ul class="sub-menu-level2">
-												<li class="level3"><a href="shop.html"><span>■</span>Jeans
-														& Jeggings</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Tops
-														& Shirts</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Winter
-														Wear</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Jeans
-														& Jeggings</a></li>
-											</ul>
-										</div>
-										<div class="col-lg-3 level2">
-											<ul class="sub-menu-level2">
-												<li class="level3"><a href="shop.html"><span>■</span>Jeans
-														& Jeggings</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Tops
-														& Shirts</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Winter
-														Wear</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Jeans
-														& Jeggings</a></li>
-											</ul>
-										</div>
-
-
-
-										<div class="col-lg-6 mt-30 d-none d-lg-block">
-											<div class="sub-menu-img">
-												<a href="#">
-													<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
-														alt="Xpoge">
-												</a>
+								<li class="level dropdown">
+									<span class="opener plus"><i class="bi bi-chevron-down"
+											style="color:white"></i></span>
+									<a href="#" class="nav-link">Men</a>
+									<div class="megamenu full mobile-sub-menu">
+										<div class="megamenu-inner-top">
+											<div class="row sub-menu-level1">
+												<div class="col-lg-3 level2 ">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Navy
+																Blazer</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Sport
+																Jeans</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Sleeveless
+																Shirt</a></li>
+														<li class="level3"><a
+																href="shop.html"><span>■</span>Trousers</a>
+														</li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2 ">
+														<li class="level3"><a href="shop.html"><span>■</span>Purse</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Sport
+																Shoes</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Wallets</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Belt</a>
+														</li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2 ">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2 ">
+														<li class="level3"><a
+																href="shop.html"><span>■</span>Sunglasses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Pocket
+																Watch</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Gloves</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Socks</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-6 mt-30 d-none d-lg-block">
+													<div class="sub-menu-img">
+														<a href="#">
+															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+																alt="Xpoge">
+														</a>
+													</div>
+												</div>
+												<div class="col-lg-6 mt-30 d-none d-lg-block">
+													<div class="sub-menu-img">
+														<a href="#">
+															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner2.jpg"
+																alt="Xpoge">
+														</a>
+													</div>
+												</div>
 											</div>
 										</div>
-
 									</div>
-								</div>
-							</div>
-						</li>
+								</li>
+								<li class="level">
+									<a href="#" class="nav-link">Juniors</a>
+								</li>
 
 
 
 
+								<li class="level dropdown">
+									<span class="opener plus"><i class="bi bi-chevron-down"
+											style="color:white"></i></span>
+									<a href="#" class="nav-link">Combos</a>
+									<div class="megamenu full mobile-sub-menu">
+										<div class="megamenu-inner-top">
+											<div class="row sub-menu-level1">
+												<div class="col-lg-3 level2 ">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
 
-						<li class="level dropdown">
-							<span class="opener plus"><i class="bi bi-chevron-down" style="color:white"></i></span>
-							<a href="#" class="nav-link">Bottoms</a>
-							<div class="megamenu full mobile-sub-menu">
-								<div class="megamenu-inner-top">
-									<div class="row sub-menu-level1">
-										<div class="col-lg-3 level2 ">
-											<ul class="sub-menu-level2">
-												<li class="level3"><a href="shop.html"><span>■</span>Jeans
-														& Jeggings</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Tops
-														& Shirts</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Winter
-														Wear</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Jeans
-														& Jeggings</a></li>
-											</ul>
-										</div>
-										<div class="col-lg-3 level2">
-											<ul class="sub-menu-level2">
-												<li class="level3"><a href="shop.html"><span>■</span>Jeans
-														& Jeggings</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Tops
-														& Shirts</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Winter
-														Wear</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Jeans
-														& Jeggings</a></li>
-											</ul>
-										</div>
 
 
+												<div class="col-lg-6 mt-30 d-none d-lg-block">
+													<div class="sub-menu-img">
+														<a href="#">
+															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+																alt="Xpoge">
+														</a>
+													</div>
+												</div>
 
-										<div class="col-lg-6 mt-30 d-none d-lg-block">
-											<div class="sub-menu-img">
-												<a href="#">
-													<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
-														alt="Xpoge">
-												</a>
 											</div>
 										</div>
-
 									</div>
-								</div>
-							</div>
-						</li>
+								</li>
 
 
 
 
-						<li class="level dropdown">
-							<span class="opener plus"><i class="bi bi-chevron-down" style="color:white"></i></span>
-							<a href="#" class="nav-link">HANDBAGS</a>
-							<div class="megamenu full mobile-sub-menu">
-								<div class="megamenu-inner-top">
-									<div class="row sub-menu-level1">
-										<div class="col-lg-3 level2 ">
-											<ul class="sub-menu-level2">
-												<li class="level3"><a href="shop.html"><span>■</span>Jeans
-														& Jeggings</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Tops
-														& Shirts</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Winter
-														Wear</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Jeans
-														& Jeggings</a></li>
-											</ul>
-										</div>
-										<div class="col-lg-3 level2">
-											<ul class="sub-menu-level2">
-												<li class="level3"><a href="shop.html"><span>■</span>Jeans
-														& Jeggings</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Tops
-														& Shirts</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Winter
-														Wear</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Jeans
-														& Jeggings</a></li>
-											</ul>
-										</div>
+
+								<li class="level dropdown">
+									<span class="opener plus"><i class="bi bi-chevron-down"
+											style="color:white"></i></span>
+									<a href="#" class="nav-link">Bottoms</a>
+									<div class="megamenu full mobile-sub-menu">
+										<div class="megamenu-inner-top">
+											<div class="row sub-menu-level1">
+												<div class="col-lg-3 level2 ">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
 
 
 
-										<div class="col-lg-6 mt-30 d-none d-lg-block">
-											<div class="sub-menu-img">
-												<a href="#">
-													<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
-														alt="Xpoge">
-												</a>
+												<div class="col-lg-6 mt-30 d-none d-lg-block">
+													<div class="sub-menu-img">
+														<a href="#">
+															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+																alt="Xpoge">
+														</a>
+													</div>
+												</div>
+
 											</div>
 										</div>
-
 									</div>
-								</div>
-							</div>
-						</li>
+								</li>
 
 
 
-						<li class="level dropdown">
-							<span class="opener plus"><i class="bi bi-chevron-down" style="color:white"></i></span>
-							<a href="#" class="nav-link">HANDBAGS</a>
-							<div class="megamenu full mobile-sub-menu">
-								<div class="megamenu-inner-top">
-									<div class="row sub-menu-level1">
-										<div class="col-lg-3 level2 ">
-											<ul class="sub-menu-level2">
-												<li class="level3"><a href="shop.html"><span>■</span>Jeans
-														& Jeggings</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Tops
-														& Shirts</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Winter
-														Wear</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Jeans
-														& Jeggings</a></li>
-											</ul>
-										</div>
-										<div class="col-lg-3 level2">
-											<ul class="sub-menu-level2">
-												<li class="level3"><a href="shop.html"><span>■</span>Jeans
-														& Jeggings</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
-												</li>
-												<li class="level3"><a href="shop.html"><span>■</span>Tops
-														& Shirts</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Winter
-														Wear</a></li>
-												<li class="level3"><a href="shop.html"><span>■</span>Jeans
-														& Jeggings</a></li>
-											</ul>
-										</div>
+
+								<li class="level dropdown">
+									<span class="opener plus"><i class="bi bi-chevron-down"
+											style="color:white"></i></span>
+									<a href="#" class="nav-link">HANDBAGS</a>
+									<div class="megamenu full mobile-sub-menu">
+										<div class="megamenu-inner-top">
+											<div class="row sub-menu-level1">
+												<div class="col-lg-3 level2 ">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
 
 
 
-										<div class="col-lg-6 mt-30 d-none d-lg-block">
-											<div class="sub-menu-img">
-												<a href="#">
-													<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
-														alt="Xpoge">
-												</a>
+												<div class="col-lg-6 mt-30 d-none d-lg-block">
+													<div class="sub-menu-img">
+														<a href="#">
+															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+																alt="Xpoge">
+														</a>
+													</div>
+												</div>
+
 											</div>
 										</div>
-
 									</div>
-								</div>
-							</div>
-						</li>
+								</li>
 
 
 
@@ -1035,11 +991,11 @@
 
 
 
-						<!-- <li class="level">
+								<!-- <li class="level">
 										<a href="contact.html"
 											class="nav-link"> Contact Us</a>
 									</li> -->
-						<!-- <li class="level dropdown">
+								<!-- <li class="level dropdown">
 										<span class="opener plus"><i class="bi bi-chevron-down"
 												style="color:white"></i></span>
 	
@@ -1065,7 +1021,7 @@
 											</div>
 										</div>
 									</li> -->
-						<!-- <li class="level dropdown">
+								<!-- <li class="level dropdown">
 										<span class="opener plus"><i class="bi bi-chevron-down"
 												style="color:white"></i></span>
 	
@@ -1090,26 +1046,26 @@
 											</div>
 										</div>
 									</li> -->
-					</ul>
+							</ul>
 
 
-					<div class="newsletter-input-1 newsletter-input  destop  mt-3 " style="width: 100%;">
-						<form>
-							<div class="form-group m-0">
-								<input type="email" placeholder="Search Products  .. " required=" ">
+							<div class="newsletter-input-1 newsletter-input  destop  mt-3 " style="width: 100%;">
+								<form>
+									<div class="form-group m-0">
+										<input type="email" placeholder="Search Products  .. " required=" ">
+									</div>
+									<button type="submit" class="btn  btn--1"> <i class="bi bi-search"
+											style="color: #c68fa6;"></i></button>
+								</form>
 							</div>
-							<button type="submit" class="btn  btn--1"> <i class="bi bi-search"
-									style="color: #c68fa6;"></i></button>
-						</form>
+						</div>
+
 					</div>
 				</div>
-
 			</div>
-		</div>
-	</div>
 
 
-	</header>
+		</header>
 		<!-- Header end -->
 
 		<!-- Product list contant start -->
@@ -1209,56 +1165,17 @@
 														style="    font-family: 'FontAwesome';"></i><span> Select
 														all</span></a>
 												<ul>
-													<li>
-														<div class="check-box">
-															<span>
-																<input type="checkbox" class="checkbox" id="price1"
-																	name="price1">
-																<label for="price1">₹68.00 - ₹72.00
-																	<span>(02)</span></label>
-															</span>
+													<div class="filter_price">
+														<div id="price_filter22" class="reset-price ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" data-min="0" data-max="5000" data-min-value="1000" data-max-value="2500" data-price-sign="₹">
+															<div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 20%; width: 30%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 20%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 50%;"></span>
 														</div>
-													</li>
-													<li>
-														<div class="check-box">
-															<span>
-																<input type="checkbox" class="checkbox" id="price2"
-																	name="price2">
-																<label for="price2">₹86.00 - ₹89.00
-																	<span>(13)</span></label>
-															</span>
+														<div class="price_range">
+															<span> <span id="flt_price22">₹1000 - ₹2500</span></span>
+															<input type="hidden" id="price_first22" name="minprice">
+															<input type="hidden" id="price_second22" name="maxprice">
+															<input type="hidden" id="sort_byWeb" name="sort_by">
 														</div>
-													</li>
-													<li>
-														<div class="check-box">
-															<span>
-																<input type="checkbox" class="checkbox" id="price3"
-																	name="price3">
-																<label for="price3">₹99.00 - ₹103.00
-																	<span>(08)</span></label>
-															</span>
-														</div>
-													</li>
-													<li>
-														<div class="check-box">
-															<span>
-																<input type="checkbox" class="checkbox" id="price4"
-																	name="price4">
-																<label for="price4">₹104.00 - ₹108.00
-																	<span>(04)</span></label>
-															</span>
-														</div>
-													</li>
-													<li>
-														<div class="check-box">
-															<span>
-																<input type="checkbox" class="checkbox" id="price5"
-																	name="price5">
-																<label for="price5">₹109.00 - ₹113.00
-																	<span>(09)</span></label>
-															</span>
-														</div>
-													</li>
+													</div>
 												</ul>
 											</div>
 										</div>
@@ -1448,8 +1365,8 @@
 														class="fa-solid fa-check"
 														style="    font-family: 'FontAwesome';"></i><span> Select
 														all</span></a>
-												<ul class="list_brand product_color_switch mt-4"
-													style="text-align: left;max-height:82vh;overflow:auto; width: 100%;">
+												<ul class="list_brand product_color_switch mt-4" 
+													style="text-align: left;max-height:82vh;overflow:auto; width: 100%; margin-top: 10px !important;">
 													<li>
 														<div class="custome-checkbox">
 															<input class="form-check-input clearcolor colorCheck"
@@ -2508,10 +2425,10 @@
 								<span class="opener plus"></span>
 								<h3 class="head-three">Information</h3>
 								<ul class="footer-menu footer-block-contant">
-									<li><a href="#">Contact
+									<li><a href="contact.html">Contact
 											Us</a></li>
 									<li><a href="javascript:void(0)">Brands</a></li>
-									<li><a href="#">Blog</a>
+									<li><a href="blog-right-col.html">Blog</a>
 									</li>
 									<li><a href="javascript:void(0)">Returns</a></li>
 									<li><a href="javascript:void(0)">Privacy Policy</a></li>
@@ -2576,8 +2493,7 @@
 				<div class="row">
 					<div class="col-12">
 						<div class="w-100">
-							<p class="mb-0"><a href="https://templatescoder.com/" target="_blank"
-									title="TemplatesCoder"></a></p>
+							<p class="mb-0"><a href="#" target="_blank" title="TemplatesCoder"></a></p>
 							<!-- <p class="mb-0">© Xpoge all Rights Reserverd theme by <a href="https://templatescoder.com/"
 									target="_blank" title="TemplatesCoder">TemplatesCoder</a></p> -->
 						</div>
@@ -2596,17 +2512,7 @@
 			</div>
 		</div>
 
-		<!-- 
 
-		<div class="footer-am">
-	
-
-		<div><img src="assets/img/Untitled-8-removebg-preview.png" alt=""></div>
-		<div><img src="assets/img/Untitled-9-removebg-preview (1).png" alt=""></div>
-		<div><img src="assets/img/Untitled-10-removebg-preview (1).png" alt=""></div>
-		<div><img src="assets/img/Untitled-11-removebg-preview.png" alt=""></div>
-				
-	</div> -->
 
 	</footer>
 	<div class="container-fluid mobilebottom" style="position:sticky; bottom: 0;background:#f2f2f2;z-index: 9999;"
@@ -2632,7 +2538,7 @@
 		<div class="modal-dialog modal-lg  m-0 modal-dialog12" role="document"
 			style="width: 100%; min-width: -webkit-fill-available;">
 			<div class="modal-content">
-				<div class="modal-body">
+				<div class="modal-body" >
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true"><i class="ion-ios-close-empty"></i></span>
 					</button>
@@ -2674,19 +2580,20 @@
 		<div class="modal-dialog modal-lg modal-dialog-top m-0" role="document" style="max-width: 100%;">
 			<div class="modal-content" style="top: 0;">
 				<div class="modal-body text-center">
-					<h6 style="padding-top: 10px;background: rgb(253, 250, 250);font-size: 12px;padding-bottom: 15px;">
-						FILTER</h6>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true"><i class="ion-ios-close-empty"></i></span>
 					</button>
+					<h6 style="padding-top: 10px;background: rgb(253, 250, 250);font-size: 12px;padding-bottom: 15px;">
+						FILTER</h6>
 					<div class="row no-gutters">
 						<div class="col-sm-12" style="margin-top:-15px;">
-							<div class="popup_content" style="padding: 0px 20px ;">
-								<div class="row mt-2">
-									<div class="col-6" style="background: rgb(253, 250, 250);">
+							<div class="popup_content" style="padding: 0px 0px ;">
+								<div class="row mt-2" style="margin-right: 0px; 
+								margin-left: 0px;">
+									<div class="col-6 fdghddf" style="background: rgb(253, 250, 250);">
 										<a href="#" class="btn">CLEAR ALL</a>
 									</div>
-									<div class="col-6" style="background: rgb(253, 250, 250);">
+									<div class="col-6 fdghddf" style="background: rgb(253, 250, 250);">
 										<a href="#" class="btn">APPLY</a>
 									</div>
 								</div>
@@ -2717,17 +2624,14 @@
 											<div class="tab-content shop_info_tab" style="margin-top:5px;">
 												<div class="tab-pane show active" id="list-home" role="tabpanel"
 													aria-labelledby="price-tab">
-													<div class="row justify-content-end">
-														<div class="col-12  mb-2" style="    display: flex;
-														justify-content: end;">
-															<a class="btn btn-color small btn-filter  me-3  mb-20"
-																href="#"><i class="fa fa-close"></i><span>Clear
-																	all</span></a>
+												    <div class="row float-right mr-2" style="margin-top:20px;">
+														<a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="#"><i class="fa fa-close"></i><span class="h">Clear
+																all</span></a>
 
-
-														</div>
+														<a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="#"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span class="h">
+																Select all</span></a>
 													</div>
-													<div class="filter_price">
+													<div class="filter_price ">
 														<div id="price_filter22"
 															class="reset-price ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
 															data-min="0" data-max="5000" data-min-value="1000"
@@ -2749,18 +2653,18 @@
 												</div>
 												<div class="tab-pane fade" id="list-profile" role="tabpanel"
 													aria-labelledby="size-tab">
-													<div class="row float-right mr-2" style="margin-top:-20px;">
-														<a class="btn btn-color small btn-filter  me-3  mb-20"
-															href="#"><i class="fa fa-close"></i><span>Clear
+													<div class="row float-right mr-2 classk" style="margin-top:20px;">
+														<a class="btn btn-color dcxc small btn-filter  me-3  mb-20"
+															href="#"><i class="fa fa-close"></i><span class="hn">Clear
 																all</span></a>
 
-														<a class="btn btn-color small btn-filter  me-3  mb-20"
+														<a class="btn btn-color dcxc small btn-filter  me-3  mb-20"
 															href="#"><i class="fa-solid fa-check"
-																style="    font-family: 'FontAwesome';"></i><span>
+																style="    font-family: 'FontAwesome';"></i><span class="hn">
 																Select all</span></a>
 													</div>
-													<ul class="list_brand mt-4"
-														style="text-align: left;max-height:87vh;overflow:auto;">
+													<ul class="list_brand "
+														style="text-align: left;max-height:87vh;overflow:auto; width: 100%;">
 														<li>
 															<div class="custome-checkbox">
 																<input class="form-check-input sizeCheck"
@@ -2799,12 +2703,12 @@
 												</div>
 												<div class="tab-pane fade" id="list-messages" role="tabpanel"
 													aria-labelledby="color-tab">
-													<div class="row float-right mr-2" style="margin-top:-20px;">
-														<a class="btn btn-color small btn-filter  me-3  mb-20"
-															href="#"><i class="fa fa-close"></i><span>Clear
+													<div class="row float-right mr-2 classk" style="margin-top:20px;">
+														<a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="#"><i class="fa fa-close"></i><span class="hn">Clear
 																all</span></a>
 
-
+														<a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="#"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span class="hn">
+																Select all</span></a>
 													</div>
 													<ul class="list_brand mt-4"
 														style="text-align: left;max-height:87vh;overflow:auto;">
@@ -2848,13 +2752,11 @@
 												</div>
 												<div class="tab-pane fade" id="list-settings" role="tabpanel"
 													aria-labelledby="11-tab">
-													<div class="row float-right mr-2" style="margin-top:-30px;">
-														<a class="btn btn-color small btn-filter mb-20" href="#"><i
-																class="fa fa-close"></i><span>Clear all</span></a>
+													<div class="row float-right mr-2 classk" style="margin-top:20px;">
+														<a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="#"><i class="fa fa-close"></i><span class="hn">Clear
+																all</span></a>
 
-														<a class="btn btn-color small btn-filter  me-3  mb-20"
-															href="#"><i class="fa-solid fa-check"
-																style="    font-family: 'FontAwesome';"></i><span>
+														<a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="#"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span class="hn">
 																Select all</span></a>
 													</div>
 													<ul class="list_brand product_color_switch mt-4"
@@ -3023,53 +2925,147 @@
 
 	<!-- Footer section end -->
 	</div>
-	<div class="modal fade" id="login_Signin" tabindex="-1" role="dialog"
-	aria-labelledby="exampleModalScrollableTitle" aria-hidden="true" style="align-items: center;
-">
-	<div class="modal-dialog modal-dialog-scrollable tocenter" role="document">
-		<div class="modal-content">
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+		  <div class="modal-content">
+			
+			<div class="popup_content pl-0 pr-0 pt-0">
+
+				<div class="row text-left">
+					<div class="col-sm-12 text-center mb-5">
+
+						<img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg"
+							class="logo-imah-1">
+
+					</div>
+				</div>
+				<div class="popup-text" style="padding-left: 50px;padding-right: 50px;">
+					<div class="heading_s1">
+						<h4 class="text-center">LOG IN TO CONTINUE</h4>
+					</div>
+				</div>
+				<form method="post" action="javascript:void(0)" id="loginForm"
+					enctype="multipart/form-data" style="padding-left: 50px;padding-right: 50px;">
+					<div class="form-group">
+						<input name="number" required="" type="text" id="loginPhone"
+							class="form-control rounded-0" onkeypress="return isNumberKey(event)"
+							maxlength="10" minlength="10" placeholder="Enter Your Number">
+						<input type="hidden" id="loginverify" value="0" name="loginverify">
+					</div>
+					<div class="form-group hidden-OTP-field">
+						<input name="OTP" id="loginOTP" class="form-control rounded-0" type="text"
+							onkeypress="return isNumberKey(event)" maxlength="6" minlength="6"
+							placeholder="Enter OTP">
+					</div>
+					<div class="container">
+						<div class="row">
+							<p style="margin-bottom: 3px;">By Continuing, I agree to the <a
+									href="term-condition.html" style="color: #c68fa6;">Terms of use</a>
+								&amp; <a href="privacy_policy.html" style="color: #c68fa6;">Privacy
+									Policy</a></p>
+						</div>
+					</div>
+					<div class="form-group">
+						<button class="btn btn-fill-out btn-block text-uppercase rounded-0 btn-color "
+							type="submit">Submit</button>
+					</div>
+
+
+
+					<div class="text-center"><span class="mt-3">New Here?<a href="javascript:;"
+						data-toggle="modal" data-target="#exampleModalCenter2"
+								style="color:#c68fa6;">&nbsp;Sign Up</a></span>
+					</div>
+
+				</form>
+			</div>
+
+
+
+		  </div>
+		</div>
+	  </div>
+
+
+
+
+
+
+
+
+
+	  <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+		  <div class="modal-content">
+			
 			<div class="modal-body">
 				<div class="row no-gutters">
-				  <div class="col-sm-12">
-					<div class="popup_content pl-0 pr-0 pt-0">
-					  <div class="row text-left">
-						<div class="col-sm-12">
-											</div>
-					  </div>
-					  <div class="popup-text" style="padding-left: 50px;padding-right: 50px;">
-						<div class="heading_s1">
-						  <h4 class="text-center">LOG IN TO CONTINUE</h4>
+					<div class="col-sm-12">
+						<div class="popup_content pl-0 pr-0 pt-0">
+
+							<div class="row text-left">
+								<div class="col-sm-12 text-center mb-5">
+
+									<img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg"
+										class="logo-imah-1">
+
+								</div>
+							</div>
+							<div class="popup-text" style="padding-left: 50px;padding-right: 50px;">
+								<div class="heading_s1">
+									<h4 class="text-center">SIGN UP TO CONTINUE</h4>
+								</div>
+							</div>
+							<form method="post" action="javascript:void(0)" id="registerForm"
+								enctype="multipart/form-data" style="padding-left: 50px;padding-right: 50px;">
+								<div class="row">
+									<div class="form-group col-lg-6">
+										<input name="fname" required="" type="text" id="signinFname"
+											class="form-control rounded-0" placeholder="First Name">
+									</div>
+									<div class="form-group col-lg-6">
+										<input name="lname" required="" type="text" id="signinLname"
+											class="form-control rounded-0" placeholder="Last Name">
+									</div>
+								</div>
+								<div class="form-group">
+									<input name="phone" required="" type="text" id="signinPhone"
+										class="form-control rounded-0" placeholder="Enter Phone Number"
+										onkeypress="return isNumberKey(event)" maxlength="10" minlength="10">
+									<input type="hidden" id="signinverify" value="0" name="signinverify">
+									<input type="hidden" id="signintype" value="0" name="signinverify">
+								</div>
+								<div class="form-group hidden-OTP-field">
+									<input name="otp" type="text" id="signinOTP" class="form-control rounded-0"
+										placeholder="Enter OTP">
+								</div>
+								<div class="container">
+									<div class="row">
+										<p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="#"
+												style="color: #c68fa6;">Terms of use</a> &amp; <a href="#"
+												style="color: #c68fa6;">Privacy Policy</a></p>
+									</div>
+								</div>
+								<div class="form-group">
+									<button class="btn btn-fill-out btn-block  btn-color  text-uppercase rounded-0"
+										type="submit">Submit</button>
+								</div>
+								<div class="text-center"><span class="mt-3">Already have an Account?<a href="#"
+											data-target="#onload-popup1" data-toggle="modal" data-dismiss="modal"
+											style="color:#ed6f36;">&nbsp;Log In</a></span>
+								</div>
+							
+							</form>
 						</div>
-					  </div>
-					  <form method="post" action="javascript:void(0)" id="loginForm" enctype="multipart/form-data" style="padding-left: 50px;padding-right: 50px;">
-						<div class="form-group">
-						  <input name="number" required="" type="text" id="loginPhone" class="form-control rounded-0" onkeypress="return isNumberKey(event)" maxlength="10" minlength="10" placeholder="Enter Your Number">
-						  <input type="hidden" id="loginverify" value="0" name="loginverify">
-						</div>
-						<div class="form-group hidden-OTP-field">
-						  <input name="OTP" id="loginOTP" class="form-control rounded-0" type="text" onkeypress="return isNumberKey(event)" maxlength="6" minlength="6" placeholder="Enter OTP">
-						</div>
-						<div class="container">
-						  <div class="row">
-							<p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="term-condition.html" style="color: #FF324D;">Terms of use</a> &amp; <a href="privacy_policy.html" style="color: #FF324D;">Privacy Policy</a></p>
-						  </div>
-						</div>
-						<div class="form-group"> 
-						  <button class="btn btn-fill-out btn-block text-uppercase rounded-0 btn-color " type="submit">Submit</button> 
-						</div>
-						<div class="text-center"><span class="mt-3">New Here?<a href="javascript:;" data-target="#onload-popup2" data-toggle="modal" data-dismiss="modal" style="color:#ff324d;">&nbsp;Sign Up</a></span>
-						</div>
-						<!-- <p style="margin-bottom: 0px;">Or</p>
-						<div class="text-center"><span class="mt-3"><a href="https://www.fineoutput.co.in/tiara/Home/reseller_register" style="color:#ff324d;">Sign up as a Reseller</a></span>
-						</div> -->
-					  </form>
 					</div>
-				  </div>
 				</div>
-			  </div>
+			</div>
+
+
+		  </div>
 		</div>
-	</div>
-</div>
+	  </div>
+
 
 	<script src="assets/js/jquery-3.4.1.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>

@@ -96,7 +96,7 @@
             <div class="row detailborder" style="position: sticky;bottom: 0;background: #fff;">
               <div class="col-sm-4 col-6 mt-2 mobileviewdetail">
                 <p style="margin-bottom: 3px;color: black;">₹ <?=$order_data[0]->final_amount?></p>
-                <a href="javascript:void(0)" id="totop" style="color: #FF324D ;">View details</a>
+                <a href="javascript:void(0)" id="totop" style="color: #c68fa6 ;">View details</a>
               </div>
               <div class="col-sm-8 col-6 mt-2">
                 <button class="btn btn-fill-out btn-block col-sm-8 mb-3" id="loader" disabled style="display:none">
@@ -164,7 +164,7 @@
                   if (!empty($input)) {
                       ?>
                   <tr>
-                    <th colspan="2" style="color: #FF324D"><a href="javascript:void(0);" onclick="remove_promocode()" style="color:unset;"><?=$input?>&nbsp;&nbsp<i class="fa fa-times" aria-hidden="true"></i></a></th>
+                    <th colspan="2" style="color: #c68fa6"><a href="javascript:void(0);" onclick="remove_promocode()" style="color:unset;"><?=$input?>&nbsp;&nbsp<i class="fa fa-times" aria-hidden="true"></i></a></th>
                     <!-- <td></td> -->
                     <td></td>
                   </tr>

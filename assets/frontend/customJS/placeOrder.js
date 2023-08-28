@@ -103,7 +103,7 @@ $('#placeOrderForm').on('submit', function(e) {
               }
             },
             "theme": {
-              "color": "#FF324D"
+              "color": "#c68fa6"
             }
           };
           var rzp1 = new Razorpay(options);

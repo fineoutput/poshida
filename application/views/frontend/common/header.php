@@ -151,16 +151,16 @@ if(!empty($popup_data)){
                   </div>
                   <div class="container">
                     <div class="row">
-                      <p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="term-condition.html" style="color: #FF324D;">Terms of use</a> & <a href="privacy_policy.html" style="color: #FF324D;">Privacy Policy</a></p>
+                      <p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="term-condition.html" style="color: #c68fa6;">Terms of use</a> & <a href="privacy_policy.html" style="color: #c68fa6;">Privacy Policy</a></p>
                     </div>
                   </div>
                   <div class="form-group">
                     <button class="btn btn-fill-out btn-block text-uppercase rounded-0" type="submit">Submit</button>
                   </div>
-                  <div class="text-center"><span class="mt-3">New Here?<a href="javascript:;" data-target="#onload-popup2" data-toggle="modal" data-dismiss="modal" style="color:#ff324d;">&nbsp;Sign Up</a></span>
+                  <div class="text-center"><span class="mt-3">New Here?<a href="javascript:;" data-target="#onload-popup2" data-toggle="modal" data-dismiss="modal" style="color:#c68fa6;">&nbsp;Sign Up</a></span>
                   </div>
                   <!-- <p style="margin-bottom: 0px;">Or</p>
-                  <div class="text-center"><span class="mt-3"><a href="<?=base_url()?>Home/reseller_register" style="color:#ff324d;">Sign up as a Reseller</a></span>
+                  <div class="text-center"><span class="mt-3"><a href="<?=base_url()?>Home/reseller_register" style="color:#c68fa6;">Sign up as a Reseller</a></span>
                   </div> -->
                 </form>
               </div>
@@ -212,7 +212,7 @@ if(!empty($popup_data)){
                   </div>
                   <div class="container">
                     <div class="row">
-                      <p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="term-condition.html" style="color: #FF324D;">Terms of use</a> & <a href="privacy_policy.html" style="color: #ff324d;">Privacy Policy</a></p>
+                      <p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="term-condition.html" style="color: #c68fa6;">Terms of use</a> & <a href="privacy_policy.html" style="color: #c68fa6;">Privacy Policy</a></p>
                     </div>
                   </div>
                   <div class="form-group">
@@ -221,7 +221,7 @@ if(!empty($popup_data)){
                   <div class="text-center"><span class="mt-3">Already have an Account?<a href="#" data-target="#onload-popup1" data-toggle="modal" data-dismiss="modal" style="color:#ed6f36;">&nbsp;Log In</a></span>
                   </div>
                   <!-- <p style="margin-bottom: 0px;">Or</p>
-                  <div class="text-center"><span class="mt-3"><a href="<?=base_url()?>Home/reseller_register" style="color:#ff324d;">Sign up as a Reseller</a></span>
+                  <div class="text-center"><span class="mt-3"><a href="<?=base_url()?>Home/reseller_register" style="color:#c68fa6;">Sign up as a Reseller</a></span>
                   </div> -->
                 </form>
               </div>
@@ -400,7 +400,7 @@ if(!empty($popup_data)){
                   <li class=" mobdrop" style="padding-left:5px;"><a class="nav-link nav_item" href="<?=base_url()?>Home/contact">Contact</a></li>
                   <?if(empty($this->session->userdata('user_data'))){?>
                   <div class="justify-content-around mt-3 mob-show d-none">
-                    <a href="javascript:;" id="sup" data-target="#onload-popup2" data-toggle="modal" data-bs-dismiss="modal" style="color:#ff324d;"><button class="btn btn-fill-out btn-addtocart">Sign Up</button></a>
+                    <a href="javascript:;" id="sup" data-target="#onload-popup2" data-toggle="modal" data-bs-dismiss="modal" style="color:#c68fa6;"><button class="btn btn-fill-out btn-addtocart">Sign Up</button></a>
                     	<a href="#onload-popup1" id="log" data-toggle="modal" data-target="#onload-popup1"><button  class="btn btn-fill-out btn-addtocart">Login</button></a>
                   </div>
                   <?}else{?>

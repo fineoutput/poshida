@@ -384,7 +384,7 @@
                         <div class="tab-pane show active" id="price" role="tabpanel" aria-labelledby="price-tab">
                           <div class="row justify-content-end">
                             <div class="col-4 mb-2">
-                              <button style="background:transparent;border: none; color: #FF324D;font-size: 14px;" onclick="priceReset()">RESET</button>
+                              <button style="background:transparent;border: none; color: #c68fa6;font-size: 14px;" onclick="priceReset()">RESET</button>
                             </div>
                           </div>
                           <div class="filter_price">

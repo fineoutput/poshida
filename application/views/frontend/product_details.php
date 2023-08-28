@@ -190,7 +190,7 @@
                   <span></span>
                 </div>
               </div>
-              <p style="color:#FF324D"><a href="javascript:;" data-target="#chart_size_modal" data-toggle="modal" data-dismiss="modal" style="color:#FF324D;"><b>Size Chart</b></a></p>
+              <p style="color:#c68fa6"><a href="javascript:;" data-target="#chart_size_modal" data-toggle="modal" data-dismiss="modal" style="color:#c68fa6;"><b>Size Chart</b></a></p>
             </div>
             <hr />
             <? if ($this->session->userdata('user_type') == 2) {
@@ -370,14 +370,14 @@
           $wihslist = $this->db->get_where('tbl_wishlist', array('user_id' => $user_id, 'product_id' => $product_data[0]->id, 'type_id' => $type_data[0]->id))->result();
           if (!empty($wihslist)) {
         ?>
-            <button class="btn  btn-addtocart" type="button" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="remove" onclick="wishlist(this)" style="padding:8px 35px;letter-spacing:1px;background:#FF324D;color:white;"><i class="fa fa-heart"></i><span class="mt-1"> Wishlist</span></button>
+            <button class="btn  btn-addtocart" type="button" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="remove" onclick="wishlist(this)" style="padding:8px 35px;letter-spacing:1px;background:#c68fa6;color:white;"><i class="fa fa-heart"></i><span class="mt-1"> Wishlist</span></button>
           <? } else { ?>
-            <button class="btn  btn-addtocart" type="button" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="add" onclick="wishlist(this)" style="padding:8px 35px;letter-spacing:1px;background:#FF324D;color:white;"><i class="icon-heart"></i><span class="mt-1"> Wishlist</span></button>
+            <button class="btn  btn-addtocart" type="button" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="add" onclick="wishlist(this)" style="padding:8px 35px;letter-spacing:1px;background:#c68fa6;color:white;"><i class="icon-heart"></i><span class="mt-1"> Wishlist</span></button>
           <? } ?>
         <? } else { ?>
-          <button class="btn  btn-addtocart" type="button" data-target="#onload-popup1" data-toggle="modal" data-dismiss="modal" style="padding:8px 35px;letter-spacing:1px;background:#FF324D;color:white;"><i class="icon-heart"></i><span class="mt-1"> Wishlist</span></button>
+          <button class="btn  btn-addtocart" type="button" data-target="#onload-popup1" data-toggle="modal" data-dismiss="modal" style="padding:8px 35px;letter-spacing:1px;background:#c68fa6;color:white;"><i class="icon-heart"></i><span class="mt-1"> Wishlist</span></button>
         <? } ?>
-        <button class="btn  btn-addtocart" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" quantity="1" id="addtoCartButton" onclick="addToCart(this)" type="button" style="padding:8px 35px;background:#FF324D;color:white;"><i class="linearicons-bag2"></i> <span class="mt-1"> Add to bag</span></button>
+        <button class="btn  btn-addtocart" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" quantity="1" id="addtoCartButton" onclick="addToCart(this)" type="button" style="padding:8px 35px;background:#c68fa6;color:white;"><i class="linearicons-bag2"></i> <span class="mt-1"> Add to bag</span></button>
       </div>
       <!-- mobile cart/wishlist -->
       <div class="row">
