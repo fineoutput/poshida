@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<!-- Basic Page Needs -->
+	<meta charset="utf-8">
+	<title>Poshida</title>
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link type="image/x-icon" href="assets/img/Poshida Logo (2)_page-0001.jpg" rel="icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/xpoge.css">
+	<link rel="stylesheet" href="assets/css/responsive.css">
+	<link rel="stylesheet" href="assets/css/ionicons.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        a.active{
+            background-color: #c68fa6 !important;
+        }
+		.sidebar .sidebar-default {
+			background: #f5f5f5;
+			padding: 10px;
+			margin-bottom: 0px !important;
+			width: 100%;
+		}
+
+		.accordion.accordion_style1.mt-0.sidebar-default {
+			/* border-bottom: 2px solid #c68fa6 !important; */
+			margin-bottom: 2px !important;
+			padding: 10px auto !important;
+		}
+
+		@media (min-width:991px) {
+			.mobilebottom {
+				display: none;
+			}
+		}
+		/* .collapse:not(.show) {
+			display: none;
+		} */
+
+		.card {
+			position: relative;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			min-width: 0;
+			word-wrap: break-word;
+			/* background-color: #cac6c6; */
+			background-clip: border-box;
+			border: 1px solid rgba(0, 0, 0, .125);
+			border-radius: .25rem;
+
+		}
+
+		.card-body {
+			-ms-flex: 1 1 auto;
+			flex: 1 1 auto;
+			min-height: 1px;
+			padding: 1.25rem;
+		}
+
+		.card-header {
+			padding: .75rem 1.25rem;
+			margin-bottom: 0;
+			background-color: rgba(0, 0, 0, .03);
+			border-bottom: 1px solid rgba(0, 0, 0, .125);
+		}
+
+		.card-header:first-child {
+			border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+		}
+
+		.accordion {
+			overflow-anchor: none;
+		}
+
+		.accordion>.card {
+			overflow: hidden;
+		}
+
+		.accordion>.card:not(:last-of-type) {
+			border-bottom: 0;
+			border-bottom-right-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+
+		.accordion>.card:not(:first-of-type) {
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+		}
+
+		.accordion>.card>.card-header {
+			border-radius: 0;
+			margin-bottom: -1px;
+		}
+
+
+		@media (min-width:992px) {
+			.mt-lg-0 {
+				margin-top: 0 !important;
+			}
+
+			.pt-lg-0 {
+				padding-top: 0 !important;
+			}
+		}
+
+
+		/*! CSS Used from: https://www.tiarastore.co.in/assets/frontend/css/jquery-ui.css */
+		.ui-slider {
+			position: relative;
+			text-align: left;
+		}
+
+		.ui-slider .ui-slider-handle {
+			position: absolute;
+			z-index: 2;
+			width: 1.2em;
+			height: 1.2em;
+			cursor: default;
+			-ms-touch-action: none;
+			touch-action: none;
+		}
+
+		.ui-slider .ui-slider-range {
+			position: absolute;
+			z-index: 1;
+			font-size: .7em;
+			display: block;
+			border: 0;
+			background-position: 0 0;
+		}
+
+		.ui-slider-horizontal {
+			height: .8em;
+		}
+
+		.ui-slider-horizontal .ui-slider-handle {
+			top: -.3em;
+			margin-left: -.6em;
+		}
+
+		.ui-slider-horizontal .ui-slider-range {
+			top: 0;
+			height: 100%;
+		}
+
+		.ui-widget {
+
+			font-size: 1em;
+		}
+
+		.ui-widget.ui-widget-content {
+			border: 1px solid #c5c5c5;
+		}
+
+		.ui-widget-content {
+			border: 1px solid #dddddd;
+			background: #ffffff;
+			color: #333333;
+		}
+
+		.ui-widget-header {
+			border: 1px solid #dddddd;
+			background: #e9e9e9;
+			color: #333333;
+			font-weight: bold;
+		}
+
+		.ui-state-default,
+		.ui-widget-content .ui-state-default {
+			border: 1px solid #c5c5c5;
+			background: #f6f6f6;
+			font-weight: normal;
+			color: #454545;
+		}
+
+		.ui-corner-all {
+			border-top-left-radius: 3px;
+		}
+
+		.ui-corner-all {
+			border-top-right-radius: 3px;
+		}
+
+		.ui-corner-all {
+			border-bottom-left-radius: 3px;
+		}
+
+		.ui-corner-all {
+			border-bottom-right-radius: 3px;
+		}
+		.colorcheckboxes .colorspann::before {
+			content: "";
+			border: 2px solid #fff;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: -3px;
+			border-radius: 100%;
+			box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+		}
+
+		@media (max-width: 991px) {
+			.desktopfilterlist {
+				display: none;
+			}
+		}
+
+		.scrollbarr::-webkit-scrollbar {
+			width: 0.2125rem;
+		}
+
+		.scrollbarr::-webkit-scrollbar-track {
+			background-color: transparent;
+		}
+
+		.scrollbarr::-webkit-scrollbar-thumb {
+			background: #c68fa6;
+		}
+
+		.accordion .card .card-header {
+			background-color: transparent;
+			padding: 0px;
+			margin: 0;
+			border: 0px;
+		}
+
+		.accordion .card-header a {
+			/* padding: 15px 40px 15px 15px; */
+			display: block;
+			line-height: normal;
+		}
+
+		.accordion .card-body p:last-child {
+			margin: 0;
+		}
+
+		.card-body p {
+			margin-bottom: 15px;
+		}
+
+		.accordion_style1.accordion .card {
+
+			margin-bottom: 15px;
+			border-radius: 0;
+			border: 0;
+
+
+			background: #f5f5f5;
+
+		}
+
+		.accordion_style1.accordion .card:last-child {
+			margin-bottom: 0;
+		}
+
+
+
+		.accordion.accordion_style1 .card-header a {
+			padding-left: 0;
+			padding-top: 0;
+			font-weight: 500 !important;
+			text-transform: capitalize;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 16px;
+			line-height: 30px;
+			margin-bottom: 0px !important;
+
+			color: inherit !important;
+		}
+
+		.accordion_style1 .card-header a::after {
+			content: "\f106";
+			/* content: ""; */
+			font-family: "FontAwesome";
+			font-size: 16px;
+			font-weight: normal;
+			position: absolute;
+			right: 15px;
+			top: 1px;
+		}
+
+		.accordion_style1 .card-header a[aria-expanded="false"]::after {
+			content: "\f107";
+		}
+
+		.product_color_switch span {
+			height: 15px;
+			width: 15px;
+			display: inline-block;
+			vertical-align: middle;
+			margin: 5px;
+			position: relative;
+			cursor: pointer;
+			border-radius: 100%;
+		}
+
+		.product_color_switch span:first-child {
+			-webkit-transition: all 0.2s ease 0s;
+			-o-transition: all 0.2s ease 0s;
+			transition: all 0.2s ease 0s;
+		}
+
+		.product_color_switch span:nth-child(2) {
+			-webkit-transition: all 0.3s ease 0s;
+			-o-transition: all 0.3s ease 0s;
+			transition: all 0.3s ease 0s;
+		}
+
+		.list_brand li {
+			list-style: none;
+			margin-bottom: 10px;
+		}
+
+		.list_brand li:last-child {
+			margin-bottom: 0;
+		}
+
+		.list_brand .custome-checkbox .form-check-label {
+			color: #292b2c;
+		}
+
+		.filter_price .ui-widget.ui-widget-content {
+			border: 0;
+			border-radius: 0;
+			background-color: #ddd;
+			height: 4px;
+			margin-bottom: 20px;
+		}
+
+		.ui-slider-horizontal .ui-slider-range {
+			top: 0;
+			height: 100%;
+		}
+
+		.filter_price .ui-slider .ui-slider-range {
+			background-color: #c68fa6;
+			border-radius: 0;
+		}
+
+		.filter_price .ui-slider .ui-slider-handle {
+			cursor: pointer;
+			background-color: #fff;
+			border-radius: 100%;
+			border: 0;
+			height: 18px;
+			top: -8px;
+			width: 18px;
+			margin: 0;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
+
+		.price_range {
+			color: #292b2c;
+		}
+
+		#flt_price {
+			margin-left: 5px;
+			font-weight: 600;
+		}
+
+		.widget_title {
+			margin-bottom: 25px;
+			text-transform: capitalize;
+			font-weight: 600;
+			letter-spacing: 0.3px;
+		}
+
+		.custome-checkbox .form-check-label {
+			position: relative;
+			cursor: pointer;
+			color: #687188;
+			padding: 0;
+			vertical-align: middle;
+		}
+
+		.custome-checkbox .form-check-input {
+			display: none;
+		}
+
+		.custome-checkbox .form-check-label span {
+			vertical-align: middle;
+		}
+
+		.custome-checkbox .form-check-label::before {
+			content: "";
+			border: 2px solid #ced4da;
+			height: 17px;
+			width: 17px;
+			margin: 0px 8px 0 0;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.custome-checkbox input[type="checkbox"]:checked+.form-check-label::after {
+			opacity: 1;
+		}
+
+		.custome-checkbox input[type="checkbox"]+.form-check-label::after {
+			content: "";
+			width: 11px;
+			position: absolute;
+			top: 50%;
+			left: 3px;
+			opacity: 0;
+			height: 6px;
+			border-left: 2px solid #fff;
+			border-bottom: 2px solid #fff;
+			-moz-transform: translateY(-65%) rotate(-45deg);
+			-webkit-transform: translateY(-65%) rotate(-45deg);
+			transform: translateY(-65%) rotate(-45deg);
+		}
+
+		.colorcheckboxess input[type="checkbox"]+.form-check-label::after {
+			content: "";
+			width: 11px;
+			position: absolute;
+			top: 40% !important;
+			left: 3px;
+			opacity: 0;
+			height: 6px;
+			border-left: 2px solid #fff;
+			border-bottom: 2px solid #fff;
+			-moz-transform: translateY(-65%) rotate(-45deg);
+			-webkit-transform: translateY(-65%) rotate(-45deg);
+			transform: translateY(-65%) rotate(-45deg);
+		}
+
+		.custome-checkbox input[type="checkbox"]:checked+.form-check-label::before {
+			background-color: #c68fa6;
+			border-color: #c68fa6;
+		}
+
+		.custome-checkbox .form-check-input {
+			display: none;
+		}
+
+		.custome-checkbox .form-check-label {
+			position: relative;
+			cursor: pointer;
+		}
+
+
+        /* tableTabs */
+        .popup_content .list-group a {
+    text-align: left;
+    padding: 12px 20px;
+    border-radius: 0;
+    border-bottom: 1px solid #efefef;
+    color: #2b2f4c;
+}
+/* .list-group-tabs {
+    box-shadow: 0 0px 4px 0 #e9e9e9;
+} */
+.list-group-content {
+    border-radius: 0;
+    border: 0;
+    /* box-shadow: 0 0px 4px 0 #e9e9e9; */
+}
+.subscribe_popup{
+    margin: 40px 0;
+}
+.banner-22 {
+    height: 100%;
+    position: relative;
+    margin-top: 174px;
+}
+        /* tableTabs */
+
+		/*! CSS Used from: https://www.tiarastore.co.in/assets/frontend/css/responsive.css */
+		@media only screen and (max-width: 575px) {
+			p {
+				margin-bottom: 15px;
+			}
+
+			.widget_title {
+				margin-bottom: 20px;
+			}
+		}
+
+		@media only screen and (max-width: 480px) {
+			p {
+				line-height: 24px;
+			}
+
+			h6 {
+				font-size: 14px;
+			}
+
+			p {
+				margin-bottom: 15px;
+			}
+		}
+
+
+		@media (max-width:980px) {
+			.contant {
+				margin-top: 100px !important;
+			}
+
+			.inner-banner {
+				padding: 26px 0 !important;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Start preloader -->
+	<div id="preloader"></div>
+
+
+	<div class="main">
+		<!-- Header start -->
+		<header id="header " style="    padding-bottom: 10px !important; ">
+
+			<div class="container position-r pb-3">
+				<div class="row m-0">
+					<div class="col-lg-4 col-md-3 col-3 p-0 " style="display: flex;
+					align-items: center;">
+						<div class="newsletter-input-1 newsletter-input mob  " style="width: 70%;">
+							<form>
+								<div class="form-group m-0">
+									<input type="email" placeholder="Search Products  .. " required="">
+								</div>
+								<button type="submit" class="btn  btn--1"> <i class="bi bi-search"
+										style="color: #c68fa6;"></i></button>
+							</form>
+						</div>
+
+						<button data-target=".navbar-collapse" data-toggle="collapse"
+							class="navbar-toggle d-block d-lg-none d-xl-none" type="button"><i class="fa fa-bars"></i>
+						</button>
+					</div>
+					<div class="col-lg-4 col-md-6 col-6 p-0 position-initial icon-bar-center">
+						<div class="right-side">
+							<div class="navbar-header">
+								<a class="navbar-brand page-scroll" href="index.html">
+									<img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg"
+										class="logo-imah-1">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-3 col-3 p-0 icon-bar" style="display: flex;
+					align-items: center;">
+						<div class="header-right-link">
+							<ul>
+
+
+
+
+
+								<li class="search-box  search_box " onclick="hello()">
+									<a href="#"><span></span></a>
+								</li>
+
+
+
+
+								<li class="account-icon heig">
+									<a href="#"><span></span></a>
+									<div class="header-link-dropdown account-link-dropdown">
+										<ul class="link-dropdown-list">
+											<li> <span class="dropdown-title">Default welcome msg!</span>
+												<ul>
+													<li><a href="#">Sign
+															In</a></li>
+													<li><a href=#>Create
+															an Account</a></li>
+												</ul>
+											</li>
+											<li> <span class="dropdown-title">Language :</span>
+												<ul>
+													<li><a class="active" href="#">English</a></li>
+													<li><a href="#">French</a></li>
+													<li><a href="#">German</a></li>
+												</ul>
+											</li>
+											<li> <span class="dropdown-title">Currency :</span>
+												<ul>
+													<li><a class="active" href="#">USD</a></li>
+													<li><a href="#">AUD</a></li>
+													<li><a href="#">EUR</a></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</li>
+
+
+
+
+
+
+
+
+
+
+
+								<li class="cart-icon heig ">
+									<a href="#"> <span> <small class="cart-notification">2</small> </span> </a>
+									<div class="cart-dropdown header-link-dropdown">
+										<ul class="cart-list link-dropdown-list">
+											<li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
+												<figure> <a href="#" class="pull-left"> <img alt="Xpoge"
+															src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/1.jpg"></a>
+													<figcaption> <span><a href="#">Men's
+																Full Sleeves Collar Shirt</a></span>
+														<p class="cart-price">₹14.99</p>
+														<div class="product-qty">
+															<label>Qty:</label>
+															<div class="custom-qty">
+																<input type="text" name="qty" maxlength="8" value="1"
+																	title="Qty" class="input-text qty">
+															</div>
+														</div>
+													</figcaption>
+												</figure>
+											</li>
+											<li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
+												<figure> <a href="#" class="pull-left"> <img alt="Xpoge"
+															src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/2.jpg"></a>
+													<figcaption> <span><a href="#">Women's
+																Cape Jacket</a></span>
+														<p class="cart-price">₹14.99</p>
+														<div class="product-qty">
+															<label>Qty:</label>
+															<div class="custom-qty">
+																<input type="text" name="qty" maxlength="8" value="1"
+																	title="Qty" class="input-text qty">
+															</div>
+														</div>
+													</figcaption>
+												</figure>
+											</li>
+										</ul>
+										<p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span
+												class="pull-right"><strong class="price-box">₹29.98</strong></span> </p>
+										<div class="clearfix"></div>
+										<div class="mt-20"> <a href="#" class="btn-color btn">Cart</a> <a
+												href="checkout.html" class="btn-color btn right-side">Checkout</a>
+										</div>
+									</div>
+								</li>
+								<li class="cart-icon  heig dx">
+									<a href="#"> <span> <small class="cart-notification">2</small> </span> </a>
+
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<div id="toggle" class="no ">
+				<form action="" class="toggil_form">
+					<div class="form-group m-0 sty">
+						<input type="search" placeholder="Search Products  .. " required="">
+					</div>
+					<button type="submit" class="btn " style="position: absolute;
+					right: 38px;     padding: 18px 3px;"> <i class="bi bi-search"></i></button>
+				</form>
+			</div>
+
+
+			<div class="container position-r animate__animated animate__bounce">
+				<div class="row m-0">
+
+				</div>
+				<div class="col-lg-12 col-md-8 col-8 p-0 position-initial" style="justify-content: center;
+				display: flex;">
+					<div class="right-side">
+						<!-- <button data-target=".navbar-collapse" data-toggle="collapse"
+							class="navbar-toggle d-block d-lg-none d-xl-none" type="button"><i class="fa fa-bars"></i>
+						</button> -->
+						<div class="overlay"></div>
+						<div id="menu" class="navbar-collapse collapse">
+							<ul class="nav navbar-nav">
+								<li class="level">
+									<a href="index.html" class="nav-link">Home</a>
+								</li>
+
+
+								<li class="level dropdown">
+									<span class="opener plus"><i class="bi bi-chevron-down"
+											style="color:white"></i></span>
+									<a href="#" class="nav-link">Women</a>
+									<div class="megamenu full mobile-sub-menu">
+										<div class="megamenu-inner-top">
+											<div class="row sub-menu-level1">
+												<div class="col-lg-3 level2 ">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+
+
+
+												<div class="col-lg-6 mt-30 d-none d-lg-block">
+													<div class="sub-menu-img">
+														<a href="shop.html">
+															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+																alt="Xpoge">
+														</a>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</li>
+
+								<li class="level dropdown">
+									<span class="opener plus"><i class="bi bi-chevron-down"
+											style="color:white"></i></span>
+									<a href="#" class="nav-link">Men</a>
+									<div class="megamenu full mobile-sub-menu">
+										<div class="megamenu-inner-top">
+											<div class="row sub-menu-level1">
+												<div class="col-lg-3 level2 ">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Navy
+																Blazer</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Sport
+																Jeans</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Sleeveless
+																Shirt</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Trousers</a>
+														</li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2 ">
+														<li class="level3"><a href="shop.html"><span>■</span>Purse</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Sport
+																Shoes</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Wallets</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Belt</a>
+														</li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2 ">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2 ">
+														<li class="level3"><a href="shop.html"><span>■</span>Sunglasses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Pocket
+																Watch</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Gloves</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Socks</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-6 mt-30 d-none d-lg-block">
+													<div class="sub-menu-img">
+														<a href="#">
+															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+																alt="Xpoge">
+														</a>
+													</div>
+												</div>
+												<div class="col-lg-6 mt-30 d-none d-lg-block">
+													<div class="sub-menu-img">
+														<a href="#">
+															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner2.jpg"
+																alt="Xpoge">
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="level">
+									<a href="#" class="nav-link">Juniors</a>
+								</li>
+
+
+
+
+								<li class="level dropdown">
+									<span class="opener plus"><i class="bi bi-chevron-down"
+											style="color:white"></i></span>
+									<a href="#" class="nav-link">Combos</a>
+									<div class="megamenu full mobile-sub-menu">
+										<div class="megamenu-inner-top">
+											<div class="row sub-menu-level1">
+												<div class="col-lg-3 level2 ">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+
+
+
+												<div class="col-lg-6 mt-30 d-none d-lg-block">
+													<div class="sub-menu-img">
+														<a href="#">
+															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+																alt="Xpoge">
+														</a>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</li>
+
+
+
+
+
+								<li class="level dropdown">
+									<span class="opener plus"><i class="bi bi-chevron-down"
+											style="color:white"></i></span>
+									<a href="#" class="nav-link">Bottoms</a>
+									<div class="megamenu full mobile-sub-menu">
+										<div class="megamenu-inner-top">
+											<div class="row sub-menu-level1">
+												<div class="col-lg-3 level2 ">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+
+
+
+												<div class="col-lg-6 mt-30 d-none d-lg-block">
+													<div class="sub-menu-img">
+														<a href="#">
+															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+																alt="Xpoge">
+														</a>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</li>
+
+
+
+
+								<li class="level dropdown">
+									<span class="opener plus"><i class="bi bi-chevron-down"
+											style="color:white"></i></span>
+									<a href="#" class="nav-link">HANDBAGS</a>
+									<div class="megamenu full mobile-sub-menu">
+										<div class="megamenu-inner-top">
+											<div class="row sub-menu-level1">
+												<div class="col-lg-3 level2 ">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+
+
+
+												<div class="col-lg-6 mt-30 d-none d-lg-block">
+													<div class="sub-menu-img">
+														<a href="#">
+															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+																alt="Xpoge">
+														</a>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</li>
+
+
+
+								<li class="level dropdown">
+									<span class="opener plus"><i class="bi bi-chevron-down"
+											style="color:white"></i></span>
+									<a href="#" class="nav-link">HANDBAGS</a>
+									<div class="megamenu full mobile-sub-menu">
+										<div class="megamenu-inner-top">
+											<div class="row sub-menu-level1">
+												<div class="col-lg-3 level2 ">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 level2">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+													</ul>
+												</div>
+
+
+
+												<div class="col-lg-6 mt-30 d-none d-lg-block">
+													<div class="sub-menu-img">
+														<a href="#">
+															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+																alt="Xpoge">
+														</a>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								<!-- <li class="level">
+									<a href="contact.html"
+										class="nav-link"> Contact Us</a>
+								</li> -->
+								<!-- <li class="level dropdown">
+									<span class="opener plus"><i class="bi bi-chevron-down"
+											style="color:white"></i></span>
+
+									<a
+										href="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/blog-left-col.html">Blog</a>
+									<div class="megamenu mobile-sub-menu">
+										<div class="megamenu-inner-top">
+											<ul class="sub-menu-level1">
+												<li class="level2 ">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a
+																href="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/blog-left-col.html"><span>■</span>Blog
+																Left-Sidebar</a></li>
+														<li class="level3"><a
+																href="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/blog-right-col.html"><span>■</span>Blog
+																Right-Sidebar</a></li>
+														<li class="level3"><a
+																href="#"><span>■</span>Singal
+																Blog</a></li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li> -->
+								<!-- <li class="level dropdown">
+									<span class="opener plus"><i class="bi bi-chevron-down"
+											style="color:white"></i></span>
+
+									<a href="#" class="nav-link">Pages</a>
+									<div class="megamenu mobile-sub-menu">
+										<div class="megamenu-inner-top">
+											<ul class="sub-menu-level1">
+												<li class="level2 ">
+													<ul class="sub-menu-level2">
+														<li class="level3"><a
+																href="contact.html"><span>■</span>Contact</a></li>
+														<li class="level3"><a
+																href="checkout.html"><span>■</span>Checkout</a></li>
+														<li class="level3"><a
+																href="wishlist.html"><span>■</span>Wishlist</a></li>
+														<li class="level3"><a
+																href="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/404.html"><span>■</span>404</a>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li> -->
+							</ul>
+
+
+							<div class="newsletter-input-1 newsletter-input  destop  mt-3 " style="width: 100%;">
+								<form>
+									<div class="form-group m-0">
+										<input type="email" placeholder="Search Products  .. " required=" ">
+									</div>
+									<button type="submit" class="btn  btn--1"> <i class="bi bi-search"
+											style="color: #c68fa6;"></i></button>
+								</form>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+		</header>
+		<!-- Header end -->
+        <div class="main_content banner-22 ">
+
+            <!-- START DESKTOP SECTION SHOP -->
+           
+
+
+
+      
+            <div class="section" style="padding-top: 20px;">
+                <div class="container-fluid">
+                  <div class="container">
+                    <div class="row justify-content-center">
+                      <div class="col-lg-4 col-12 text-center">
+                        
+                        <input type="hidden" id="spn" value="56">
+                        <img src="https://www.fineoutput.co.in/tiara/assets/uploads/type/type20230503020520.jpg" alt="blog_small_img2" width="50%">
+                        <h5 class="mt-3">Beautiful Kurta For Women</h5>
+                        <h5> Ordered Qty: &nbsp;1</h5>
+                        <h6 id="return_msg" style="color:#FF324D"> </h6>
+                      </div>
+                      <div class="col-md-8 col-12">
+                        <form method="post" action="https://www.fineoutput.co.in/tiara/Order/insert_return_request" enctype="multipart/form-data" data-gtm-form-interact-id="0">
+                          <input type="hidden" name="order1_id" value="251">
+                          <input type="hidden" name="order2_id" value="358">
+                          <div class="form-group">
+                            <input type="radio" id="return" name="type" value="1" checked="" data-gtm-form-interact-field-id="1">
+                            <label for="return">Return</label>
+                            <input type="radio" id="replace" name="type" value="2" data-gtm-form-interact-field-id="0">
+                            <label for="replace">Replace</label>
+                          </div>
+                          <div class="form-group">
+                            <div class="custom_select">
+                              <select class="form-control first_null not_chosen" name="quantity" id="return_qty" required="">
+                                <option value="">Quantity...</option>
+                                                      <option value="1" data-id="577.5">1</option>
+                                                  </select>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="custom_select">
+                              <select class="form-control first_null not_chosen" name="reason" required="">
+                                <option value="">Reason...</option>
+                                <option value="Defective product received">Defective product received</option>
+                                <option value="Wrong product received">Wrong product received </option>
+                                <option value="Wrong size received">Wrong size received</option>
+                                <option value="Other">Other</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-lg-12" style="padding:0px;">
+                            <textarea name="message" cols="70" rows="5" style="width:100%; border:1px solid #ced4da;padding:10px;" placeholder="Enter Your Reason"></textarea>
+                          </div> <br>
+                          <h5>Select Your Product Images</h5><br>
+                          <div class="row">
+                            <div class="col-md-4 mt-2"><input type="file" name="image1"></div>
+                            <div class="col-md-4 mt-2"> <input type="file" name="image2"></div>
+                            <div class="col-md-4 mt-2"> <input type="file" name="image3"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-4 mt-2"><input type="file" name="image4"></div>
+                            <div class="col-md-4 mt-2"> <input type="file" name="image5"></div>
+                            <div class="col-md-4 mt-2"> <input type="file" name="image6"></div>
+                          </div>
+                          <div class="row mt-5 justify-content-center">
+                            <div class="col-md-4 mb-3">
+                              <button type="submit" class="btn btn-color btn btn-fill-out btn-block">Submit</button>
+                              <!-- <a href="#" class=""><span></span>Add to cart</a> -->
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+            <!-- END DESKTOP SECTION SHOP -->
+          
+            <!-- START MOBILE SECTION SHOP -->
+          
+      
+          
+         
+          </div>
+	
+	</div>
+	</div>
+	</div>
+	<!-- Product list contant end -->
+
+	<!-- Newslatter section start -->
+	<section class="newsletter-section align-center ptb-100">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-xl-7 col-lg-9 col-12">
+					<div class="newsletter-title">
+						<h2 class="main_title">Sign up for Newsletter </h2>
+						<p>Wants to get latest updates! sign up for Free </p>
+					</div>
+					<div class="newsletter-input">
+						<form>
+							<div class="form-group m-0">
+								<input type="email" placeholder="Your email address" required="">
+							</div>
+							<button type="submit" class="btn btn-color"><span class="d-none d-sm-block">Subscribe</span>
+								<i class="fa fa-send d-block d-sm-none"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Newslatter section end -->
+
+	<!-- Footer section start -->
+	<footer class="footer-part">
+		<div class="container">
+			<div class="footer-top ptb-100">
+				<div class="mb_-30">
+					<div class="row">
+						<div class="col-12 col-lg-3 col-md-6">
+							<div class="footer-about mb-sm-30">
+								<div class="footer-logo">
+									<a href="index.html">
+										<img src="assets/img/Poshida Logo (2)_page-0001.jpg" alt="logo">
+									</a>
+								</div>
+								<p class="footer-p">Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed
+									fringilla mauris sit amet nibh mauris sit amet nibh. Donec sodales sagittis</p>
+							</div>
+						</div>
+						<div class="col-12 col-lg-3 col-md-6">
+							<div class="footer-static-block">
+								<span class="opener plus"></span>
+								<h3 class="head-three">Information</h3>
+								<ul class="footer-menu footer-block-contant">
+									<li><a href="#">Contact
+											Us</a></li>
+									<li><a href="javascript:void(0)">Brands</a></li>
+									<li><a href="#">Blog</a>
+									</li>
+									<li><a href="javascript:void(0)">Returns</a></li>
+									<li><a href="javascript:void(0)">Privacy Policy</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-12 col-lg-3 col-md-6">
+							<div class="footer-static-block">
+								<span class="opener plus"></span>
+								<h3 class="head-three">My Account</h3>
+								<ul class="footer-menu footer-block-contant">
+									<li><a href="javascript:void(0)">Order History</a></li>
+									<li><a href="#">Wish
+											List</a></li>
+									<li><a href="javascript:void(0)">Newsletter</a></li>
+									<li><a href="javascript:void(0)">Specials</a></li>
+									<li><a href="javascript:void(0)">Gift Certificates</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-12 col-lg-3 col-md-6">
+							<div class="footer-static-block">
+								<span class="opener plus"></span>
+								<h3 class="head-three">Contact us</h3>
+								<div class="contact-box footer-block-contant">
+									<ul>
+										<li>
+											<div class="contact-thumb">
+												<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/address-icon.svg"
+													alt="xpoge">
+											</div>
+											<div class="contact-box-detail">
+												<p>869 Lexington Ave, New York, NY 10065, USA</p>
+											</div>
+										</li>
+										<li>
+											<div class="contact-thumb">
+												<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/phone-icon.svg"
+													alt="xpoge">
+											</div>
+											<div class="contact-box-detail">
+												<p>+91 123 456 789 0</p>
+											</div>
+										</li>
+										<li>
+											<div class="contact-thumb">
+												<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/mail-icon.svg"
+													alt="xpoge">
+											</div>
+											<div class="contact-box-detail">
+												<p>xpoge@hi123.com</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom align-center">
+				<div class="row">
+					<div class="col-12">
+						<div class="w-100">
+							<p class="mb-0"><a href="https://templatescoder.com/" target="_blank"
+									title="TemplatesCoder"></a></p>
+							<!-- <p class="mb-0">© Xpoge all Rights Reserverd theme by <a href="https://templatescoder.com/"
+									target="_blank" title="TemplatesCoder">TemplatesCoder</a></p> -->
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="social-media">
+							<ul>
+								<li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="javascript:void(0)"><i class="fa fa-instagram"></i></a></li>
+								<li><a href="javascript:void(0)"><i class="fa fa-youtube"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 
+
+		<div class="footer-am">
+	
+
+		<div><img src="assets/img/Untitled-8-removebg-preview.png" alt=""></div>
+		<div><img src="assets/img/Untitled-9-removebg-preview (1).png" alt=""></div>
+		<div><img src="assets/img/Untitled-10-removebg-preview (1).png" alt=""></div>
+		<div><img src="assets/img/Untitled-11-removebg-preview.png" alt=""></div>
+				
+	</div> -->
+
+	</footer>
+	
+
+	
+
+
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<!-- Footer section end -->
+	</div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+	<script src="assets/js/jquery-3.4.1.min.js"></script>
+	<!-- <script src="assets/js/bootstrap.min.js"></script> -->
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="assets/js/custom.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+
+
+	<script>
+		function hello() {
+			let element = document.getElementById("toggle");
+			element.classList.toggle("no");
+		}
+	</script>
+    
+</body>
