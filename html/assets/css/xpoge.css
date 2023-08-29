@@ -3700,6 +3700,9 @@ a.btn.btn-color.small.btn-filter.me-3.mb-20 {
 	cursor: pointer;
 	margin-bottom: 0;
 }
+.mabn{
+	margin: 13px;
+}
 
 .leave-rating label::before {
 	content: "\f005";
