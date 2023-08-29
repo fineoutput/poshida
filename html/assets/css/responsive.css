@@ -253,7 +253,7 @@ i.bi.bi-chevron-down{
 		padding-top: 60px;
 	}
 	.ptb-100 {
-	    padding-top: 65px;
+	    padding-top: 35px;
 	    padding-bottom: 65px;
 	}
 	.pt-100 {
@@ -331,11 +331,11 @@ i.bi.bi-chevron-down{
 	}
 
 	.banner {
-		margin-top: 90px;
+		margin-top: 100px;
 	}
 
 	.inner-banner {
-		padding: 60px 0;
+		padding: 2px 0;
 	}
 
 	.navbar-brand img {

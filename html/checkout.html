@@ -19,10 +19,65 @@
 
 
 	<style>
+		.main-form input {
+    background-color: #fff;
+    padding: -2px 15px !important;
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    min-height: 37px !important;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.btn.full {
+    width: 100%;
+    text-align: center;
+    padding: 14px 6px !important;
+}
+		.body{
+			color: #000000 !important;
+		}
 		.border-input {
 			padding: 10px;
 			border-bottom: 1px solid #dbdbdb;
 		}
+		button.btn-color.costrm {
+    padding: 11px 19px;
+}
+
+
+:not(input):not(textarea):not(button){-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;}
+
+.addressStrip-base-title{font-size:14px;max-width:75%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.addressStrip-base-title span{text-transform:capitalize;max-width:74%;overflow:hidden;text-overflow:ellipsis;}
+.addressStrip-base-addressName{width:100%;display:flex;white-space:pre;}
+.addressStrip-base-highlight{font-size:14px;font-weight:700;}
+.addressStrip-base-subText{font-size:12px;line-height:15px;margin-top:4px;overflow:hidden;text-overflow:ellipsis;text-transform:capitalize;}
+::-webkit-scrollbar{display:none;background-color:transparent;}
+
+		.sidebar-product .pro-media {
+    padding: 0 15px 0 0;
+    width: 110px;
+    float: left;
+}
+
+@media(max-width:767px) {
+	.col-11.col-md-12.mt-5.dsgsdcvsd{
+		padding: 10px;
+    border-top: 1px solid gainsboro;
+    position: fixed;
+    bottom: 0px;
+    z-index: 99;
+	background: white;
+}
+.col-xl-7.col-lg-9.col-12{
+	
+	padding: 0px !important;
+	}
+		}
+
 
 		@media(max-width:432px) {
 			.fdghrd {
@@ -670,13 +725,13 @@
 										href="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/index.html">Home</a>
 								</li>
 								<li><a href="#">Cart</a></li>
-								<li>Add Address</li>
+								<li>Checkout</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="checkout-part ptb-100">
+			<div class="checkout-part ptb-100" style="padding-top: 20px;">
 				<div class="container">
 					<form class="main-form">
 						<div class="row">
@@ -764,38 +819,52 @@
 
 
 
-													<div class="heading-part d-flex " style="align-items: center;">
-														<h3 class="m-0 fdghrd">Shipping Address</h3>
+													<!-- <div class="heading-parth  ">
+														<div class="d-flex">
+
+															<p class="mb-0"> <b style="color: #333;">Deliver to </b></p>
+															<p class="mb-0">: Rakesh kumar</p>
+															<p class="mb-0">,335508</p>
+														</div>
+														<div>
+															<p>61/348 , Mansarovar , jaipur</p>
+														</div>
+													</div> -->
+												
+													<div class="addressStrip-base-title"><div class="addressStrip-base-addressName">Deliver to: <span class="addressStrip-base-highlight">Kunal </span><div class="addressStrip-base-highlight">, 335803</div></div><div class="addressStrip-base-subText">ward no 1, Pilibangan, Pilibanga</div></div>
+
+
+
+
+													<div style="    align-items: center;
+													display: flex;">
+
+														<a href="add_address.html" class="btn-color fdghrd "
+															style="padding: 10px 20px; border-radius: 6px;"> Change
+														
+														</a>
 													</div>
-
-
-
-
-
-													<a href="add_address.html" class="btn-color fdghrd "
-														style="padding: 10px 20px; border-radius: 6px;"> Change Address
-													</a>
 												</div>
 											</div>
 
 
-
+											<!-- 
 											<form method="POST" id="placeOrderForm" action="javascript:;"
 												enctype="multipart/form-data">
-												<!-- //------- ADDRESS ---------- -->
+												
 												<input type="hidden" id="fname" value="dj">
 												<input type="hidden" id="lname" value="dj">
 												<input type="hidden" id="email" value="pawan@gmail.com">
 												<input type="hidden" id="phonenumber" value="9898989898">
-												<div class="form-group   d-flex m-0">
+												 <div class="form-group   d-flex m-0">
 													<p class="ma"><b style="color: rgb(66 64 64);">First name </b></p>
 													<p class="mat"> : dj</p>
 												</div>
 												<div class="form-group   d-flex m-0">
 													<p class="ma"><b style="color: rgb(66 64 64);"> Last name</b></p>
 													<p class="mat"> : dj</p>
+												</div> 
 												</div>
-												<!-- </div> -->
 												<div class="form-group   d-flex m-0">
 
 													<p class="ma"><b style="color: rgb(66 64 64);"> Email Address</b>
@@ -828,470 +897,591 @@
 
 													<p class="ma"><b style="color: rgb(66 64 64);"> City</b></p>
 													<p class="mat"> : spaCV VCin</p>
-												</div>
-												<div class="form-group d-flex m-0">
+												</div> -->
+											<!-- <div class="form-group d-flex m-0">
 
 													<p class="ma "><b style="color: rgb(66 64 64);"> Address</b></p>
 													<p class=" mb-4"> : jhh,mCV CV</p>
 
-												</div>
-												<div class="form-group border-input mb-2 p-0 d-flex m-0">
+												</div> -->
+											<!-- <div class="form-group border-input mb-2 p-0 d-flex m-0">
 
 													<p class="ma "><b style="color: rgb(66 64 64);"> Pincode</b></p>
 													<p class=" mb-4"> : XCB XC</p>
 
-												</div>
+												</div> -->
 
 
 
-												<div class="form-group  mb-2 p-0 d-flex m-0">
+											<!-- <div class="form-group  mb-2 p-0 d-flex m-0">
 
-													<p class="ma"><b style="color: rgb(66 64 64);"> Have Any referral
-															Code ? </b></p>
+												<p class="ma"><b style="color: rgb(66 64 64);"> Have Any referral
+														Code ? </b></p>
 
-												</div>
-												<div class="col-lg-12 p-0">
-													<div class="form-group">
-														<input class="form-control" type="text" id="referalcode"
-															name="reffercode" placeholder="Enter Referral Code">
-													</div>
-												</div>
-
-											</form>
-											<div class="payment_method" style="padding-bottom: 0px;">
-												<div class="heading_s1">
-													<h4>Payment</h4>
-													<p style="color: red;padding-bottom:0px;">Delivery Free Above ₹2499
-													</p>
-												</div>
-												<div class="payment_option">
-
-													<div class="check-box">
-														<span>
-															<input type="checkbox" class="checkbox"
-																id="different-address"
-																name="Ship to a different address?">
-															<label for="different-address" class="mb-0">Cash On Delivery
-																(COD)</label>
-														</span>
-													</div>
-
-													<div class="check-box">
-														<span>
-															<input type="checkbox" class="checkbox"
-																id="different-addres"
-																name="Ship to a different address?">
-															<label for="different-addres" class="mb-0">Online
-																Payment</label>
-														</span>
-													</div>
-												</div>
 											</div>
-											<!-- <div class="d-flex justify-content-end">
+											<div class="col-lg-12 p-0">
+												<div class="form-group">
+													<input class="form-control" type="text" id="referalcode"
+														name="reffercode" placeholder="Enter Referral Code">
+												</div>
+											</div> -->
+
+
+
+
+
+											<div class="col-12 col-lg-12">
+												<!-- <div class="heading-part mb-30 mb-sm-20">
+													<h3>Your order</h3>
+												</div> -->
+												<div class="checkout-products sidebar-product mb-60">
+													<ul>
+														<li>
+															<div class="pro-media"> <a href="shop.html"><img alt="Xpoge"
+																		src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/1.jpg"></a>
+															</div>
+															<div class="pro-detail-info"> <a href="shop.html" class="product-title">Men's Regular Fit
+																	T-Shirt</a>
+																<div class="price-box"> <span class="price">₹50.00</span> </div>
+																<div class="d-flex ">
+																	<p class="mb-0">Color</p>
+																	<p class="mb-0">: Red</p>
+																</div>
+										
+																<div class="d-flex ">
+																	<p class="mb-0">Size</p>
+																	<p class="mb-0">: XL</p>
+																</div>
+										
+										
+																<div class="checkout-qty">
+																	<div>
+																		<label>Qty: </label>
+																		<span class="info-deta">2</span>
+																	</div>
+																</div>
+																<!-- <div class="d-flex justify-content-end">
+
+																	<a href="javascript:void(0)" class="btn small btn-color">
+																		<i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i>
+																	</a>
+																</div> -->
+															</div>
+														</li>
+														
+														<li>
+															<div class="pro-media"> <a href="shop.html"><img alt="T-shirt"
+																		src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/3.jpg"></a>
+															</div>
+															<div class="pro-detail-info"> <a href="shop.html" class="product-title">Men's Regular Fit
+																	T-Shirt</a>
+																<div class="price-box"> <span class="price">₹50.00</span> </div>
+																<div class="d-flex ">
+																	<p class="mb-0">Color</p>
+																	<p class="mb-0">: Red</p>
+																</div>
+										
+																<div class="d-flex ">
+																	<p class="mb-0">Size</p>
+																	<p class="mb-0">: XL</p>
+																</div>
+										
+										
+																<div class="checkout-qty">
+																	<div>
+																		<label>Qty: </label>
+																		<span class="info-deta">2</span>
+																	</div>
+																</div>
+																<!-- <div class="d-flex justify-content-end">
+
+																	<a href="javascript:void(0)" class="btn small btn-color">
+																		<i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i>
+																	</a>
+																</div> -->
+															</div>
+														</li>
+													</ul>
+												</div>
+										
+										
+											</div>
+
+
+
+
+					</form>
+
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<!-- <div class="payment_method" style="padding-bottom: 0px;">
+						<div class="heading_s1">
+							<h4>Payment</h4>
+							<p style="color: red;padding-bottom:0px;">Delivery Free Above ₹2499
+							</p>
+						</div>
+						<div class="payment_option">
+
+							<div class="check-box">
+								<span>
+									<input type="checkbox" class="checkbox" id="different-address"
+										name="Ship to a different address?">
+									<label for="different-address" class="mb-0">Cash On Delivery
+										(COD)</label>
+								</span>
+							</div>
+
+							<div class="check-box">
+								<span>
+									<input type="checkbox" class="checkbox" id="different-addres"
+										name="Ship to a different address?">
+									<label for="different-addres" class="mb-0">Online
+										Payment</label>
+								</span>
+							</div>
+						</div>
+					</div> -->
+					<!-- <div class="d-flex justify-content-end">
 													  <button type="submit" class="btn-color">	Place Order
 													</button>
 												  </div> -->
 
-										</div>
-										<div class="col-10 col-md-6 mt-5 dsgsdcvsd">
-											<button class="btn full btn-color">Place order</button>
-										</div>
+				</div>
+				<!-- <div class="col-10 col-md-6 mt-5 dsgsdcvsd">
+					<button class="btn full btn-color">Place order</button>
+				</div> -->
 
 
-									</div>
+			</div>
 
 
-								</div>
-							</div>
-							<div class="col-12 col-lg-4">
-								<div class="heading-part mb-30 mb-sm-20">
-									<h3>Your order</h3>
-								</div>
-								<div class="checkout-products sidebar-product mb-60">
-									<ul>
-										<li>
-											<div class="pro-media"> <a href="shop.html"><img alt="Xpoge"
-														src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/1.jpg"></a>
-											</div>
-											<div class="pro-detail-info"> <a href="shop.html"
-												class="product-title">Men's Regular Fit T-Shirt</a>
-											<div class="price-box"> <span class="price">₹50.00</span> </div>
-											<div class="d-flex ">
-												<p class="mb-0">Color</p>
-												<p class="mb-0">: Red</p>
-											</div>
+		</div>
+	</div>
+	 <div class="col-12 col-lg-4">
+	
+		<div class="complete-order-detail commun-table gray-bg mb-30">
+			<div class="table-responsive n-1">
 
-											<div class="d-flex ">
-												<p class="mb-0">Size</p>
-												<p class="mb-0">: XL</p>
-											</div>
-											
-											
-											<div class="checkout-qty">
-												<div>
-													<label>Qty: </label>
-													<span class="info-deta">2</span>
-												</div>
-											</div>
-										</div>
-										</li>
-										<li>
-											<div class="pro-media"> <a href="shop.html"><img alt="T-shirt"
-														src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/2.jpg"></a>
-											</div>
-											<div class="pro-detail-info"> <a href="shop.html"
-												class="product-title">Men's Regular Fit T-Shirt</a>
-											<div class="price-box"> <span class="price">₹50.00</span> </div>
-											<div class="d-flex ">
-												<p class="mb-0">Color</p>
-												<p class="mb-0">: Red</p>
-											</div>
 
-											<div class="d-flex ">
-												<p class="mb-0">Size</p>
-												<p class="mb-0">: XL</p>
-											</div>
-											
-											
-											<div class="checkout-qty">
-												<div>
-													<label>Qty: </label>
-													<span class="info-deta">2</span>
-												</div>
-											</div>
-										</div>
-										</li>
-										<li>
-											<div class="pro-media"> <a href="shop.html"><img alt="T-shirt"
-														src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/3.jpg"></a>
-											</div>
-											<div class="pro-detail-info"> <a href="shop.html"
-													class="product-title">Men's Regular Fit T-Shirt</a>
-												<div class="price-box"> <span class="price">₹50.00</span> </div>
-												<div class="d-flex ">
-													<p class="mb-0">Color</p>
-													<p class="mb-0">: Red</p>
-												</div>
 
-												<div class="d-flex ">
-													<p class="mb-0">Size</p>
-													<p class="mb-0">: XL</p>
-												</div>
-												
-												
-												<div class="checkout-qty">
-													<div>
-														<label>Qty: </label>
-														<span class="info-deta">2</span>
-													</div>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</div>
-								<div class="complete-order-detail commun-table gray-bg mb-30">
-									<div class="table-responsive n-1">
-										
-											<div class="d-flex p-2 justify-content-between border-111">
-												<div class="pricebox"> <span class="prie"><b> Total : </b></span> </div>
-												<div class="price-box"> <span class="price">₹160.00</span> </div>
-											</div>
 
-											<div class="p-2">
-												<p> <b>Have any Promocode ? </b></p>
-												<div class="btn-app">
-													<div style="width: 100%;">
-														<input type="text">
-													</div>
-													<div class="d-flex justify-content-end m-2">
-														<button class="btn-color costrm"> APPLY</button>
-													</div>
-												</div>
 
-										
-										</div>
-									</div>
-								</div>
+				<div class="payment_method" style="padding: 10px;">
+					<div class="heading_s1">
+					
+						<p style="margin-bottom: 5px !important;"> <b>PRICE DETAILS </b></p>
+						
+					</div>
+					<div class="payment_option " style="border-top:  1px solid gainsboro;">
 
-							</div>
+						<div class="d-flex justify-content-between">
+							<span>
+								Sub Total
+							</span>
+							<span>
+								₹60
+							</span>
 						</div>
-					</form>
+						
+						<div class="d-flex justify-content-between">
+							<span>
+								shipping charges 
+							</span>
+							<span>
+								₹60
+							</span>
+						</div>
+
+						<div class="d-flex justify-content-between">
+							<span>
+								Promocode Discount 
+							</span>
+							<span>
+								₹6395
+							</span>
+						</div>
+						<div class="d-flex justify-content-between mb-2">
+							<span>
+								Total Amount
+							</span>
+							<span>
+								₹63965
+							</span>
+						</div>
+
+
+						
+				<div style="border-top:  1px solid gainsboro;" class="mt-3" >
+					<p style="margin-bottom: 5px !important;"> <b>Have any Promocode ? </b></p>
+					<div class="btn-app" style="display: flex; align-items: center;">
+						<div style="width: 100%;">
+							<input type="text">
+						</div>
+						<div class="d-flex justify-content-end m-2">
+							<button class="btn-color costrm"> APPLY</button>
+						</div>
+					</div>
+
+
+				</div>
+
+
+				<div style="border-top:  1px solid gainsboro;" class="mt-3" >
+			
+											 <div class="form-group  mb-2 p-0 d-flex m-0">
+
+												<p class="ma" style="margin-bottom: 5px !important;"><b style="color: rgb(66 64 64);"> Have Any referral
+														Code ? </b></p>
+
+											</div>
+											<div class="col-lg-12 p-0">
+												<div class="form-group">
+													<input class="form-control" type="text" id="referalcode"
+														name="reffercode" placeholder="Enter Referral Code">
+												</div>
+											</div>
+
+
+				</div>
+
+					
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+				<div class="payment_method mt-3 " style="padding: 10px;  border-top:  1px solid gainsboro;">
+					<div class="heading_s1">			
+						<p style="margin-bottom: 5px !important;"> <b>Payment </b></p>
+						<p style="color: red;padding-bottom:0px;">Delivery Free Above ₹2499
+						</p>
+					</div>
+					<div class="payment_option">
+
+						<div class="check-box">
+							<span>
+								<input type="checkbox" class="checkbox" id="different-address"
+									name="Ship to a different address?">
+								<label for="different-address" class="mb-0">Cash On Delivery
+									(COD)</label>
+							</span>
+						</div>
+
+						<div class="check-box">
+							<span>
+								<input type="checkbox" class="checkbox" id="different-addres"
+									name="Ship to a different address?">
+								<label for="different-addres" class="mb-0">Online
+									Payment</label>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-11 col-md-12 mt-5 dsgsdcvsd"  style="padding: 10px;  border-top:  1px solid gainsboro;">
+					<button class="btn full btn-color">Place order</button>
+				</div>
+
+			
+			
+			</div>
+		</div>
+
+	</div>
+	</div>
+	</form>
+	</div>
+	</div>
+	</div>
+	<!-- Checkout end -->
+
+	<!-- Newslatter section start -->
+	<section class="newsletter-section align-center ptb-100">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-xl-7 col-lg-9 col-12">
+					<div class="newsletter-title">
+						<h2 class="main_title">Sign up for Newsletter </h2>
+						<p>Wants to get latest updates! sign up for Free </p>
+					</div>
+					<div class="newsletter-input">
+						<form>
+							<div class="form-group m-0">
+								<input type="email" placeholder="Your email address" required>
+							</div>
+							<button type="submit" class="btn btn-color"><span class="d-none d-sm-block">Subscribe</span>
+								<i class="fa fa-send d-block d-sm-none"></i></button>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
-		<!-- Checkout end -->
+	</section>
+	<!-- Newslatter section end -->
 
-		<!-- Newslatter section start -->
-		<section class="newsletter-section align-center ptb-100">
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-xl-7 col-lg-9 col-12">
-						<div class="newsletter-title">
-							<h2 class="main_title">Sign up for Newsletter </h2>
-							<p>Wants to get latest updates! sign up for Free </p>
-						</div>
-						<div class="newsletter-input">
-							<form>
-								<div class="form-group m-0">
-									<input type="email" placeholder="Your email address" required>
-								</div>
-								<button type="submit" class="btn btn-color"><span
-										class="d-none d-sm-block">Subscribe</span> <i
-										class="fa fa-send d-block d-sm-none"></i></button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Newslatter section end -->
-
-		<!-- Footer section start -->
-		<footer class="footer-part">
-			<div class="container">
-				<div class="footer-top ptb-100">
-					<div class="mb_-30">
-						<div class="row">
-							<div class="col-12 col-lg-3 col-md-6">
-								<div class="footer-about mb-sm-30">
-									<div class="footer-logo">
-										<a href="index.html">
-											<img src="assets/img/Poshida Logo (2)_page-0001.jpg" alt="logo">
-										</a>
-									</div>
-									<p class="footer-p">Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed
-										fringilla mauris sit amet nibh mauris sit amet nibh. Donec sodales sagittis</p>
-								</div>
-							</div>
-							<div class="col-12 col-lg-3 col-md-6">
-								<div class="footer-static-block">
-									<span class="opener plus"></span>
-									<h3 class="head-three">Information</h3>
-									<ul class="footer-menu footer-block-contant">
-										<li><a href="contact.html">Contact
-												Us</a></li>
-										<li><a href="javascript:void(0)">Brands</a></li>
-										<li><a href="blog-right-col.html">Blog</a>
-										</li>
-										<li><a href="javascript:void(0)">Returns</a></li>
-										<li><a href="javascript:void(0)">Privacy Policy</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-12 col-lg-3 col-md-6">
-								<div class="footer-static-block">
-									<span class="opener plus"></span>
-									<h3 class="head-three">My Account</h3>
-									<ul class="footer-menu footer-block-contant">
-										<li><a href="javascript:void(0)">Order History</a></li>
-										<li><a href="#">Wish
-												List</a></li>
-										<li><a href="javascript:void(0)">Newsletter</a></li>
-										<li><a href="javascript:void(0)">Specials</a></li>
-										<li><a href="javascript:void(0)">Gift Certificates</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-12 col-lg-3 col-md-6">
-								<div class="footer-static-block">
-									<span class="opener plus"></span>
-									<h3 class="head-three">Contact us</h3>
-									<div class="contact-box footer-block-contant">
-										<ul>
-											<li>
-												<div class="contact-thumb">
-													<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/address-icon.svg"
-														alt="xpoge">
-												</div>
-												<div class="contact-box-detail">
-													<p>869 Lexington Ave, New York, NY 10065, USA</p>
-												</div>
-											</li>
-											<li>
-												<div class="contact-thumb">
-													<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/phone-icon.svg"
-														alt="xpoge">
-												</div>
-												<div class="contact-box-detail">
-													<p>+91 123 456 789 0</p>
-												</div>
-											</li>
-											<li>
-												<div class="contact-thumb">
-													<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/mail-icon.svg"
-														alt="xpoge">
-												</div>
-												<div class="contact-box-detail">
-													<p>xpoge@hi123.com</p>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="footer-bottom align-center">
+	<!-- Footer section start -->
+	<footer class="footer-part">
+		<div class="container">
+			<div class="footer-top ptb-100">
+				<div class="mb_-30">
 					<div class="row">
-						<div class="col-12">
-							<div class="w-100">
-								<p class="mb-0"><a href="#" target="_blank" title="TemplatesCoder"></a></p>
-								<!-- <p class="mb-0">© Xpoge all Rights Reserverd theme by <a href="https://templatescoder.com/"
-											target="_blank" title="TemplatesCoder">TemplatesCoder</a></p> -->
+						<div class="col-12 col-lg-3 col-md-6">
+							<div class="footer-about mb-sm-30">
+								<div class="footer-logo">
+									<a href="index.html">
+										<img src="assets/img/Poshida Logo (2)_page-0001.jpg" alt="logo">
+									</a>
+								</div>
+								<p class="footer-p">Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed
+									fringilla mauris sit amet nibh mauris sit amet nibh. Donec sodales sagittis</p>
 							</div>
 						</div>
-						<div class="col-12">
-							<div class="social-media">
-								<ul>
-									<li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="javascript:void(0)"><i class="fa fa-instagram"></i></a></li>
-									<li><a href="javascript:void(0)"><i class="fa fa-youtube"></i></a></li>
+						<div class="col-12 col-lg-3 col-md-6">
+							<div class="footer-static-block">
+								<span class="opener plus"></span>
+								<h3 class="head-three">Information</h3>
+								<ul class="footer-menu footer-block-contant">
+									<li><a href="contact.html">Contact
+											Us</a></li>
+									<li><a href="javascript:void(0)">Brands</a></li>
+									<li><a href="blog-right-col.html">Blog</a>
+									</li>
+									<li><a href="javascript:void(0)">Returns</a></li>
+									<li><a href="javascript:void(0)">Privacy Policy</a></li>
 								</ul>
 							</div>
 						</div>
+						<div class="col-12 col-lg-3 col-md-6">
+							<div class="footer-static-block">
+								<span class="opener plus"></span>
+								<h3 class="head-three">My Account</h3>
+								<ul class="footer-menu footer-block-contant">
+									<li><a href="javascript:void(0)">Order History</a></li>
+									<li><a href="#">Wish
+											List</a></li>
+									<li><a href="javascript:void(0)">Newsletter</a></li>
+									<li><a href="javascript:void(0)">Specials</a></li>
+									<li><a href="javascript:void(0)">Gift Certificates</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-12 col-lg-3 col-md-6">
+							<div class="footer-static-block">
+								<span class="opener plus"></span>
+								<h3 class="head-three">Contact us</h3>
+								<div class="contact-box footer-block-contant">
+									<ul>
+										<li>
+											<div class="contact-thumb">
+												<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/address-icon.svg"
+													alt="xpoge">
+											</div>
+											<div class="contact-box-detail">
+												<p>869 Lexington Ave, New York, NY 10065, USA</p>
+											</div>
+										</li>
+										<li>
+											<div class="contact-thumb">
+												<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/phone-icon.svg"
+													alt="xpoge">
+											</div>
+											<div class="contact-box-detail">
+												<p>+91 123 456 789 0</p>
+											</div>
+										</li>
+										<li>
+											<div class="contact-thumb">
+												<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/mail-icon.svg"
+													alt="xpoge">
+											</div>
+											<div class="contact-box-detail">
+												<p>xpoge@hi123.com</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-
-
-
-		</footer>
-		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-			aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered" role="document">
-				<div class="modal-content">
-
-					<div class="popup_content pl-0 pr-0 pt-0">
-
-						<div class="row text-left">
-							<div class="col-sm-12 text-center mb-5">
-
-								<img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg" class="logo-imah-1">
-
-							</div>
+			<div class="footer-bottom align-center">
+				<div class="row">
+					<div class="col-12">
+						<div class="w-100">
+							<p class="mb-0"><a href="#" target="_blank" title="TemplatesCoder"></a></p>
+							<!-- <p class="mb-0">© Xpoge all Rights Reserverd theme by <a href="https://templatescoder.com/"
+											target="_blank" title="TemplatesCoder">TemplatesCoder</a></p> -->
 						</div>
-						<div class="popup-text" style="padding-left: 50px;padding-right: 50px;">
-							<div class="heading_s1">
-								<h4 class="text-center">LOG IN TO CONTINUE</h4>
-							</div>
-						</div>
-						<form method="post" action="javascript:void(0)" id="loginForm" enctype="multipart/form-data"
-							style="padding-left: 50px;padding-right: 50px;">
-							<div class="form-group">
-								<input name="number" required="" type="text" id="loginPhone"
-									class="form-control rounded-0" onkeypress="return isNumberKey(event)" maxlength="10"
-									minlength="10" placeholder="Enter Your Number">
-								<input type="hidden" id="loginverify" value="0" name="loginverify">
-							</div>
-							<div class="form-group hidden-OTP-field">
-								<input name="OTP" id="loginOTP" class="form-control rounded-0" type="text"
-									onkeypress="return isNumberKey(event)" maxlength="6" minlength="6"
-									placeholder="Enter OTP">
-							</div>
-							<div class="container">
-								<div class="row">
-									<p style="margin-bottom: 3px;">By Continuing, I agree to the <a
-											href="term-condition.html" style="color: #c68fa6;">Terms of use</a>
-										&amp; <a href="privacy_policy.html" style="color: #c68fa6;">Privacy
-											Policy</a></p>
-								</div>
-							</div>
-							<div class="form-group">
-								<button class="btn btn-fill-out btn-block text-uppercase rounded-0 btn-color "
-									type="submit">Submit</button>
-							</div>
-
-
-
-							<div class="text-center"><span class="mt-3">New Here?<a href="javascript:;"
-										data-toggle="modal" data-target="#exampleModalCenter2"
-										style="color:#c68fa6;">&nbsp;Sign Up</a></span>
-							</div>
-
-						</form>
 					</div>
-
-
-
+					<div class="col-12">
+						<div class="social-media">
+							<ul>
+								<li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="javascript:void(0)"><i class="fa fa-instagram"></i></a></li>
+								<li><a href="javascript:void(0)"><i class="fa fa-youtube"></i></a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
-			aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered" role="document">
-				<div class="modal-content">
 
-					<div class="modal-body">
-						<div class="row no-gutters">
-							<div class="col-sm-12">
-								<div class="popup_content pl-0 pr-0 pt-0">
 
-									<div class="row text-left">
-										<div class="col-sm-12 text-center mb-5">
 
-											<img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg"
-												class="logo-imah-1">
+	</footer>
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
 
+				<div class="popup_content pl-0 pr-0 pt-0">
+
+					<div class="row text-left">
+						<div class="col-sm-12 text-center mb-5">
+
+							<img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg" class="logo-imah-1">
+
+						</div>
+					</div>
+					<div class="popup-text" style="padding-left: 50px;padding-right: 50px;">
+						<div class="heading_s1">
+							<h4 class="text-center">LOG IN TO CONTINUE</h4>
+						</div>
+					</div>
+					<form method="post" action="javascript:void(0)" id="loginForm" enctype="multipart/form-data"
+						style="padding-left: 50px;padding-right: 50px;">
+						<div class="form-group">
+							<input name="number" required="" type="text" id="loginPhone" class="form-control rounded-0"
+								onkeypress="return isNumberKey(event)" maxlength="10" minlength="10"
+								placeholder="Enter Your Number">
+							<input type="hidden" id="loginverify" value="0" name="loginverify">
+						</div>
+						<div class="form-group hidden-OTP-field">
+							<input name="OTP" id="loginOTP" class="form-control rounded-0" type="text"
+								onkeypress="return isNumberKey(event)" maxlength="6" minlength="6"
+								placeholder="Enter OTP">
+						</div>
+						<div class="container">
+							<div class="row">
+								<p style="margin-bottom: 3px;">By Continuing, I agree to the <a
+										href="term-condition.html" style="color: #c68fa6;">Terms of use</a>
+									&amp; <a href="privacy_policy.html" style="color: #c68fa6;">Privacy
+										Policy</a></p>
+							</div>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-fill-out btn-block text-uppercase rounded-0 btn-color "
+								type="submit">Submit</button>
+						</div>
+
+
+
+						<div class="text-center"><span class="mt-3">New Here?<a href="javascript:;" data-toggle="modal"
+									data-target="#exampleModalCenter2" style="color:#c68fa6;">&nbsp;Sign Up</a></span>
+						</div>
+
+					</form>
+				</div>
+
+
+
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+
+				<div class="modal-body">
+					<div class="row no-gutters">
+						<div class="col-sm-12">
+							<div class="popup_content pl-0 pr-0 pt-0">
+
+								<div class="row text-left">
+									<div class="col-sm-12 text-center mb-5">
+
+										<img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg"
+											class="logo-imah-1">
+
+									</div>
+								</div>
+								<div class="popup-text" style="padding-left: 50px;padding-right: 50px;">
+									<div class="heading_s1">
+										<h4 class="text-center">SIGN UP TO CONTINUE</h4>
+									</div>
+								</div>
+								<form method="post" action="javascript:void(0)" id="registerForm"
+									enctype="multipart/form-data" style="padding-left: 50px;padding-right: 50px;">
+									<div class="row">
+										<div class="form-group col-lg-6">
+											<input name="fname" required="" type="text" id="signinFname"
+												class="form-control rounded-0" placeholder="First Name">
+										</div>
+										<div class="form-group col-lg-6">
+											<input name="lname" required="" type="text" id="signinLname"
+												class="form-control rounded-0" placeholder="Last Name">
 										</div>
 									</div>
-									<div class="popup-text" style="padding-left: 50px;padding-right: 50px;">
-										<div class="heading_s1">
-											<h4 class="text-center">SIGN UP TO CONTINUE</h4>
-										</div>
+									<div class="form-group">
+										<input name="phone" required="" type="text" id="signinPhone"
+											class="form-control rounded-0" placeholder="Enter Phone Number"
+											onkeypress="return isNumberKey(event)" maxlength="10" minlength="10">
+										<input type="hidden" id="signinverify" value="0" name="signinverify">
+										<input type="hidden" id="signintype" value="0" name="signinverify">
 									</div>
-									<form method="post" action="javascript:void(0)" id="registerForm"
-										enctype="multipart/form-data" style="padding-left: 50px;padding-right: 50px;">
+									<div class="form-group hidden-OTP-field">
+										<input name="otp" type="text" id="signinOTP" class="form-control rounded-0"
+											placeholder="Enter OTP">
+									</div>
+									<div class="container">
 										<div class="row">
-											<div class="form-group col-lg-6">
-												<input name="fname" required="" type="text" id="signinFname"
-													class="form-control rounded-0" placeholder="First Name">
-											</div>
-											<div class="form-group col-lg-6">
-												<input name="lname" required="" type="text" id="signinLname"
-													class="form-control rounded-0" placeholder="Last Name">
-											</div>
+											<p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="#"
+													style="color: #c68fa6;">Terms of use</a> &amp; <a href="#"
+													style="color: #c68fa6;">Privacy Policy</a></p>
 										</div>
-										<div class="form-group">
-											<input name="phone" required="" type="text" id="signinPhone"
-												class="form-control rounded-0" placeholder="Enter Phone Number"
-												onkeypress="return isNumberKey(event)" maxlength="10" minlength="10">
-											<input type="hidden" id="signinverify" value="0" name="signinverify">
-											<input type="hidden" id="signintype" value="0" name="signinverify">
-										</div>
-										<div class="form-group hidden-OTP-field">
-											<input name="otp" type="text" id="signinOTP" class="form-control rounded-0"
-												placeholder="Enter OTP">
-										</div>
-										<div class="container">
-											<div class="row">
-												<p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="#"
-														style="color: #c68fa6;">Terms of use</a> &amp; <a href="#"
-														style="color: #c68fa6;">Privacy Policy</a></p>
-											</div>
-										</div>
-										<div class="form-group">
-											<button
-												class="btn btn-fill-out btn-block  btn-color  text-uppercase rounded-0"
-												type="submit">Submit</button>
-										</div>
-										<div class="text-center"><span class="mt-3">Already have an Account?<a href="#"
-													data-target="#onload-popup1" data-toggle="modal"
-													data-dismiss="modal" style="color:#ed6f36;">&nbsp;Log In</a></span>
-										</div>
+									</div>
+									<div class="form-group">
+										<button class="btn btn-fill-out btn-block  btn-color  text-uppercase rounded-0"
+											type="submit">Submit</button>
+									</div>
+									<div class="text-center"><span class="mt-3">Already have an Account?<a href="#"
+												data-target="#onload-popup1" data-toggle="modal" data-dismiss="modal"
+												style="color:#ed6f36;">&nbsp;Log In</a></span>
+									</div>
 
-									</form>
-								</div>
+								</form>
 							</div>
 						</div>
 					</div>
-
-
 				</div>
+
+
 			</div>
 		</div>
-		<!-- Footer section end -->
+	</div>
+	<!-- Footer section end -->
 	</div>
 	<script src="assets/js/jquery-3.4.1.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
