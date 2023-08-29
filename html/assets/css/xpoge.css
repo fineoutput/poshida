@@ -2152,7 +2152,11 @@ _______________________________________________________*/
 .blog-item .readmore-btn:hover {
 	color: #999;
 }
-
+.cart-dropdown.header-link-dropdown {
+    height: 80vh;
+    overflow: hidden;
+    overflow-y: auto;
+}
 /* Blog section css End */
 
 /* - Newslatter section  //---------------- */
@@ -2195,10 +2199,7 @@ _______________________________________________________*/
 
 /* Tab CSS Start */
 .product-tab-inner {
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-	-o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 20px rgb(0 0 0 / 3%);
 	padding: 30px;
 }
 
@@ -2354,7 +2355,7 @@ _______________________________________________________*/
 /* - Breadcrumb CSS //---------------- */
 .inner-banner {
 	background: #f9f9f9;
-	padding: 15px 0;
+	padding: 9px 0;
 	text-align: center;
 }
 
@@ -2364,7 +2365,7 @@ _______________________________________________________*/
 }
 
 .inner-banner .banner-title {
-	font-size: 24px;
+	font-size: 14px;
 	font-weight: 600;
 	float: left;
 	margin-bottom: 0;
@@ -2381,7 +2382,7 @@ _______________________________________________________*/
 
 .breadcrumb li {
 	color: #333;
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: 500;
 	display: inline-block;
 	position: relative;
@@ -3666,6 +3667,20 @@ a.btn.btn-color.small.btn-filter.me-3.mb-20 {
 
 
 
+/* KUNAL SONI */
+
+.border-111{
+	border-bottom:  1px solid #d1d1d1;
+	border-top:  1px solid #d1d1d1;
+	margin: 10px;
+}
+
+
+img.logo-imah-1.qwd {
+    width: 46%;
+    margin: 10px;
+}
+
 
 
 
@@ -3788,16 +3803,12 @@ a.btn.btn-color.small.btn-filter.me-3.mb-20 {
 
 }
 
-/* @media(max-width:700px) {
-	.center-table{
-		text-align: inherit !important;
+@media(max-width:767px) {
+	.product-slider.owl-carousel .owl-nav button[class*="owl-"] {
+		width: 28px;
+		height: 28px;
 	}
-	.redpomrw{
-		flex-direction: column;
-	}
-	
-} */
-
+}
 
 @media(max-width:758px) {
 	.price-box span.price {
@@ -3975,7 +3986,3 @@ a.btn.btn-color.small.btn-filter.me-3.mb-20 {
 		margin-left: 117px !important;
 	}
 }
-/* 
-.row.no-gutters .col-sm-12 .popup_content form#applyFilteronMobile .row .col-lg-3.col-md-4.list-group-tabs ul.nav.nav-tabs.visitedcolor div a {
-    color: white !important;
-} */

@@ -26,7 +26,6 @@
 
 </head>
 <style>
-
 	.witbgt {
 		width: 100% !important;
 	}
@@ -47,70 +46,7 @@
 		-webkit-transform: translate(50%, -50%);
 		-o-transform: translate(50%, -50%);
 	}
-
-	/* .ion-social-whatsapp:before {
-		display: inline-block;
-		font-family: "Ionicons";
-		speak: none;
-		font-style: normal;
-		font-weight: normal;
-		font-variant: normal;
-		text-transform: none;
-		text-rendering: auto;
-		line-height: 1;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-	} */
-	/* 
-	.ion-social-whatsapp:before {
-		content: "\f4f0";
-	} */
-
-	/* [class^="linearicons-"] {
-		font-family: 'Linearicons' !important;
-		speak: none;
-		font-style: normal;
-		font-weight: normal;
-		font-variant: normal;
-		text-transform: none;
-		line-height: 1;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-	} */
-
-	/* .linearicons-home:before {
-		content: "\e900";
-	}
-
-	.linearicons-heart:before {
-		content: "\e98c";
-	}
-
-	.linearicons-user:before {
-		content: "\ea1e";
-	}
-
-	.linearicons-bag2:before {
-		content: "\ea4c";
-	} */
-
-
-
-	/* a {
-		color: #292b2c;
-		text-decoration: none;
-		-webkit-transition: all 0.3s ease-in-out;
-		transition: all .3s ease-in-out;
-	}
-
-	a:hover {
-		color: #c68fa6;
-		text-decoration: none;
-	}
-
-	a:focus {
-		outline: none;
-	} */
+	
 
 	.cart_count,
 	.wishlist_count {
@@ -132,6 +68,10 @@
 		margin-right: -5px;
 	}
 
+	.d-scs{
+			display: none !important;
+		}
+
 	.icon {
 		margin-bottom: 15px;
 	}
@@ -149,7 +89,20 @@
 		.wishlist_count {
 			top: -8;
 		}
+
 	}
+
+	@media only screen and (max-width: 767px) {
+		.d-scs{
+			display: block !important;
+		}
+	}
+	@media only screen and (max-width: 758px) {
+		.banner {
+    margin-top: 2px !important;
+}
+	}
+
 
 	@media only screen and (max-width: 480px) {
 		h6 {
@@ -157,41 +110,30 @@
 			margin-top: 5px;
 		}
 	}
+
+	@media only screen and (max-width: 425px) {
+		.product-sliders.owl-carousel.position-initial.d-scs.owl-loaded.owl-drag{
+			margin-top: 102px !important;
+		}
+	}
+
+	@media only screen and (max-width: 375px){
+.product-sliders.owl-carousel.position-initial.d-scs.owl-loaded.owl-drag {
+    margin-top: 93px !important;
+}}
+
+@media only screen and (max-width: 320px){
+.product-sliders.owl-carousel.position-initial.d-scs.owl-loaded.owl-drag {
+    margin-top: 84px !important;
+}}
 </style>
 
 <body>
 	<!-- Start preloader -->
 	<div id="preloader"></div>
-<!-- 
+	
 
-	<div id="newslater-popup" class="mfp-hide white-popup-block open align-center">
-		<div class="nl-popup-main">
-			<div class="nl-popup-inner">
-				<div class="newsletter-inner">
-					<div class="row">
-						<div class="col-md-6"></div>
-						<div class="col-md-6">
-							<div class="mtb-30">
-								<h2 class="main_title">Subscribe Emails</h2>
-								<span class="sub-title mb-30">Sign up & get 10% off</span>
-								<form>
-									<input type="email" placeholder="Email Here...">
-									<button class="btn-color big-width btn" title="Subscribe">Subscribe</button>
-								</form>
-								<div class="check-box mt-30">
-									<span>
-										<input type="checkbox" class="checkbox" id="different-address"
-											name="Ship to a different address?">
-										<label for="different-address">Don`t show this popup again</label>
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
+
 
 
 
@@ -247,12 +189,14 @@
 									<div class="header-link-dropdown account-link-dropdown">
 										<ul class="link-dropdown-list">
 											<!-- <li> <span class="dropdown-title">Default welcome msg!</span> -->
-											<ul class="hrb" >
+											<ul class="hrb">
 												<li><a href="my_profile.html" class="p-1">My Account </a></li>
 												<li><a href="my_order.html" class="p-1">My Orders </a></li>
-												
-												<li><a href="my_order.html"  class="p-1" data-toggle="modal" data-target="#exampleModalCenter">Log In </a></li>
-												<li><a href="my_order.html"  class="p-1" data-toggle="modal" data-target="#exampleModalCenter2"> Register </a></li>
+
+												<li><a href="my_order.html" class="p-1" data-toggle="modal"
+														data-target="#exampleModalCenter">Log In </a></li>
+												<li><a href="my_order.html" class="p-1" data-toggle="modal"
+														data-target="#exampleModalCenter2"> Register </a></li>
 												<!-- <li><a href="#" class="p-1">Log Out </a></li> -->
 
 
@@ -277,28 +221,14 @@
 							<a href="#"> <span> <small class="cart-notification">2</small> </span> </a>
 							<div class="cart-dropdown header-link-dropdown">
 								<ul class="cart-list link-dropdown-list">
-									<!-- <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
-										<figure> <a href="#" class="pull-left"> <img alt="Xpoge"
-													src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/1.jpg"></a>
-											<figcaption> <span><a href="#">Men's
-														Full Sleeves Collar Shirt</a></span>
-												<p class="cart-price">₹14.99</p>
-												<div class="product-qty">
-													<label>Qty:</label>
-													<div class="custom-qty">
-														<p>2</p>
-													</div>
-												</div>
-											</figcaption>
-										</figure>
-									</li> -->
+								
 									<li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
 										<figure> <a href="#" class="pull-left"> <img alt="Xpoge"
 													src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/2.jpg"></a>
 											<figcaption> <span><a href="#">Women's
 														Cape Jacket</a></span>
 												<p class="cart-price m-0">₹14.99</p>
-												<p class="m-0">Blue : Colour</p>
+												<p class="m-0"> Color : Red</p>
 												<p class="m-0">Size : XXL</p>
 												<div class="product-qty">
 													<label>Qty:</label>
@@ -313,7 +243,8 @@
 								<p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span
 										class="pull-right"><strong class="price-box">₹29.98</strong></span> </p>
 								<div class="clearfix"></div>
-								<div class="mt-20 d-flex justify-content-center" > <a href="cart.html" class="btn-color btn"> View Cart</a>
+								<div class="mt-20 d-flex justify-content-center"> <a href="cart.html"
+										class="btn-color btn"> View Cart</a>
 									<!-- <a href="checkout.html"
 										class="btn-color btn right-side">Checkout</a> -->
 								</div>
@@ -355,11 +286,12 @@
 							</button> -->
 						<div class="overlay"></div>
 						<div id="menu" class="navbar-collapse collapse">
-							
+
 							<ul class="nav navbar-nav">
 								<div class="navbar-header dfghddgd">
 									<a class="navbar-brand page-scroll" href="index.html">
-										<img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg" class="logo-imah-1">
+										<img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg"
+											class="logo-imah-1">
 									</a>
 								</div>
 								<li class="level">
@@ -432,31 +364,6 @@
 											<div class="row sub-menu-level1">
 												<div class="col-lg-3 level2 ">
 													<ul class="sub-menu-level2">
-														<li class="level3"><a href="shop.html"><span>■</span>Navy
-																Blazer</a></li>
-														<li class="level3"><a href="shop.html"><span>■</span>Sport
-																Jeans</a></li>
-														<li class="level3"><a href="shop.html"><span>■</span>Sleeveless
-																Shirt</a></li>
-														<li class="level3"><a
-																href="shop.html"><span>■</span>Trousers</a>
-														</li>
-													</ul>
-												</div>
-												<div class="col-lg-3 level2">
-													<ul class="sub-menu-level2 ">
-														<li class="level3"><a href="shop.html"><span>■</span>Purse</a>
-														</li>
-														<li class="level3"><a href="shop.html"><span>■</span>Sport
-																Shoes</a></li>
-														<li class="level3"><a href="shop.html"><span>■</span>Wallets</a>
-														</li>
-														<li class="level3"><a href="shop.html"><span>■</span>Belt</a>
-														</li>
-													</ul>
-												</div>
-												<div class="col-lg-3 level2">
-													<ul class="sub-menu-level2 ">
 														<li class="level3"><a href="shop.html"><span>■</span>Jeans
 																& Jeggings</a></li>
 														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
@@ -465,39 +372,40 @@
 														</li>
 														<li class="level3"><a href="shop.html"><span>■</span>Tops
 																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
 													</ul>
 												</div>
 												<div class="col-lg-3 level2">
-													<ul class="sub-menu-level2 ">
-														<li class="level3"><a
-																href="shop.html"><span>■</span>Sunglasses</a>
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
 														</li>
-														<li class="level3"><a href="shop.html"><span>■</span>Pocket
-																Watch</a></li>
-														<li class="level3"><a href="shop.html"><span>■</span>Gloves</a>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
 														</li>
-														<li class="level3"><a href="shop.html"><span>■</span>Socks</a>
-														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
 													</ul>
 												</div>
-											</div>
-											<div class="row">
+
+
+
 												<div class="col-lg-6 mt-30 d-none d-lg-block">
 													<div class="sub-menu-img">
-														<a href="#">
+														<a href="shop.html">
 															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
 																alt="Xpoge">
 														</a>
 													</div>
 												</div>
-												<div class="col-lg-6 mt-30 d-none d-lg-block">
-													<div class="sub-menu-img">
-														<a href="#">
-															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner2.jpg"
-																alt="Xpoge">
-														</a>
-													</div>
-												</div>
+
 											</div>
 										</div>
 									</div>
@@ -553,7 +461,7 @@
 
 												<div class="col-lg-6 mt-30 d-none d-lg-block">
 													<div class="sub-menu-img">
-														<a href="#">
+														<a href="shop.html">
 															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
 																alt="Xpoge">
 														</a>
@@ -613,7 +521,7 @@
 
 												<div class="col-lg-6 mt-30 d-none d-lg-block">
 													<div class="sub-menu-img">
-														<a href="#">
+														<a href="shop.html">
 															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
 																alt="Xpoge">
 														</a>
@@ -672,7 +580,7 @@
 
 												<div class="col-lg-6 mt-30 d-none d-lg-block">
 													<div class="sub-menu-img">
-														<a href="#">
+														<a href="shop.html">
 															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
 																alt="Xpoge">
 														</a>
@@ -684,74 +592,6 @@
 									</div>
 								</li>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-								<!-- <li class="level">
-										<a href="contact.html"
-											class="nav-link"> Contact Us</a>
-									</li> -->
-								<!-- <li class="level dropdown">
-										<span class="opener plus"><i class="bi bi-chevron-down"
-												style="color:white"></i></span>
-	
-										<a
-											href="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/blog-left-col.html">Blog</a>
-										<div class="megamenu mobile-sub-menu">
-											<div class="megamenu-inner-top">
-												<ul class="sub-menu-level1">
-													<li class="level2 ">
-														<ul class="sub-menu-level2">
-															<li class="level3"><a
-																	href="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/blog-left-col.html"><span>■</span>Blog
-																	Left-Sidebar</a></li>
-															<li class="level3"><a
-																	href="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/blog-right-col.html"><span>■</span>Blog
-																	Right-Sidebar</a></li>
-															<li class="level3"><a
-																	href="#"><span>■</span>Singal
-																	Blog</a></li>
-														</ul>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</li> -->
-								<!-- <li class="level dropdown">
-										<span class="opener plus"><i class="bi bi-chevron-down"
-												style="color:white"></i></span>
-	
-										<a href="#" class="nav-link">Pages</a>
-										<div class="megamenu mobile-sub-menu">
-											<div class="megamenu-inner-top">
-												<ul class="sub-menu-level1">
-													<li class="level2 ">
-														<ul class="sub-menu-level2">
-															<li class="level3"><a
-																	href="contact.html"><span>■</span>Contact</a></li>
-															<li class="level3"><a
-																	href="checkout.html"><span>■</span>Checkout</a></li>
-															<li class="level3"><a
-																	href="wishlist.html"><span>■</span>Wishlist</a></li>
-															<li class="level3"><a
-																	href="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/404.html"><span>■</span>404</a>
-															</li>
-														</ul>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</li> -->
 							</ul>
 
 
@@ -776,8 +616,53 @@
 	<!-- Header end -->
 
 	<!-- Banner start -->
+
+
+
+
+		<div style="margin-top: 79px;" class="product-sliders owl-carousel position-initial d-scs">	
+			<div class=" item">
+				<img src="assets/img/1.png" alt="">
+				
+			</div>	
+			<div class=" item">
+				<img src="assets/img/2.png" alt="">
+				
+			</div>
+			<div class=" item">
+				<img src="assets/img/3.png" alt="">
+			
+			</div>
+			<div class=" item">
+				<img src="assets/img/4.png" alt="">
+				
+			</div>
+			<div class=" item">
+				<img src="assets/img/5.png" alt="">
+			
+			</div>
+			<div class=" item">
+				<img src="assets/img/6.png" alt="">
+				
+			</div>	
+			<div class=" item">
+				<img src="assets/img/7.png" alt="">
+				
+			</div>
+			<div class=" item">
+				<img src="assets/img/1.png" alt="">
+				
+			</div>	
+			<div class=" item">
+				<img src="assets/img/2.png" alt="">
+				
+			</div>
+		</div>
+
+
+
 	<section id="banner-part" class="menu-section pb-100">
-		<div class="banner banner-21 owl-loaded owl-drag main-banner owl-carousel main-baner ">
+		<div class="banner  owl-loaded owl-drag main-banner owl-carousel main-baner ">
 			<div class="banner-1 ">
 
 
@@ -1260,63 +1145,6 @@
 
 
 
-	<!-- Sub banner section End -->
-
-	<!-- Site Services Block Start -->
-
-
-
-	<!-- cvcvxcvfffffffffffffffffffffffffffffffffffffffffffff -->
-	<!-- <section id="services-part" class="menu-section services-part position-r pb-100">
-			    <div class="container">
-			      <div class="ser-feature-block mb_-30 center-sm">
-			        <div class="row">
-			          <div class="col-lg-4 col-12">
-			            <div class="services-box mb-30">
-			            	<div class="services-box-inner">
-					            <div class="services-icon services1">
-					              	<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/ser-icon1.svg" alt="xpoge">
-					            </div>
-					            <div class="services-detail">
-					                <h3 class="ser-title">Free Shipping</h3>
-					                <div class="ser-subtitle">Free Shipping on orders over ₹99</div>
-					            </div>
-				            </div>
-			            </div>
-			          </div>
-			          <div class="col-lg-4 col-12">
-			            <div class="services-box mb-30">
-			            	<div class="services-box-inner">
-					            <div class="services-icon services2">
-					              	<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/ser-icon2.svg" alt="xpoge">
-					            </div>
-					            <div class="services-detail">
-					                <h3 class="ser-title">Special Gift</h3>
-					                <div class="ser-subtitle">Perfect gift to your loved ones</div>
-					            </div>
-				            </div>
-			            </div>
-			          </div>
-			          <div class="col-lg-4 col-12">
-			            <div class="services-box mb-30">
-			            	<div class="services-box-inner">
-					            <div class="services-icon services3">
-					              	<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/ser-icon3.svg" alt="xpoge">
-					            </div>
-					            <div class="services-detail">
-					                <h3 class="ser-title">Money Back</h3>
-					                <div class="ser-subtitle">Not receiving an item applied to</div>
-					            </div>
-				            </div>
-			            </div>
-			          </div>
-			        </div>
-			      </div>
-			    </div>
-			</section> -->
-	<!-- Site Services Block End -->
-
-	<!-- Product Section Start -->
 
 
 	<section class="pb-100 " data-aos="fade-right">
@@ -1468,11 +1296,6 @@
 	</section>
 
 
-	<section class="pb-100">
-		<div>
-			<img src="assets/img/banner3.jpg" alt="">
-		</div>
-	</section>
 
 
 
@@ -1748,6 +1571,30 @@
 		</div>
 	</section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<section class="pb-100">
+		<div>
+			<img src="assets/img/banner3.jpg" alt="">
+		</div>
+	</section>
 
 
 
@@ -2226,11 +2073,11 @@
 								<ul class="footer-menu footer-block-contant">
 									<li><a href="contact.html">Contact
 											Us</a></li>
-									<li><a href="javascript:void(0)">Brands</a></li>
+									<li><a href="my_profile.html">Brands</a></li>
 									<li><a href="blog-right-col.html">Blog</a>
 									</li>
-									<li><a href="javascript:void(0)">Returns</a></li>
-									<li><a href="javascript:void(0)">Privacy Policy</a></li>
+									<li><a href="my_order.html">Returns</a></li>
+									<li><a href="my_order.html">Privacy Policy</a></li>
 								</ul>
 							</div>
 						</div>
@@ -2239,12 +2086,12 @@
 								<span class="opener plus"></span>
 								<h3 class="head-three">My Account</h3>
 								<ul class="footer-menu footer-block-contant">
-									<li><a href="javascript:void(0)">Order History</a></li>
+									<li><a href="my_order.html">Order History</a></li>
 									<li><a href="#">Wish
 											List</a></li>
-									<li><a href="javascript:void(0)">Newsletter</a></li>
-									<li><a href="javascript:void(0)">Specials</a></li>
-									<li><a href="javascript:void(0)">Gift Certificates</a></li>
+									<li><a href="my_profile.html">Newsletter</a></li>
+									<li><a href="my_order.html">Specials</a></li>
+									<li><a href="my_order.html">Gift Certificates</a></li>
 								</ul>
 							</div>
 						</div>
@@ -2321,14 +2168,12 @@
 			<div class="col-2 text-center mt-2 p-0"><a href="index.html"><img src="../assets/frontend/zuhause.png"></a>
 				<h6>Home</h6>
 			</div>
-			<div class="col-2 text-center mt-2 p-0"><a href="#" data-toggle="modal" data-target="#exampleModalCenter"
-				
-					><img src="../assets/frontend/benutzerprofil.png"></a>
+			<div class="col-2 text-center mt-2 p-0"><a href="#" data-toggle="modal"
+					data-target="#exampleModalCenter"><img src="../assets/frontend/benutzerprofil.png"></a>
 				<h6>Login</h6>
 			</div>
-			<div class="col-2 text-center mt-2 p-0"><a href="wishlist.html" data-target="#onload-popup1"
-					data-toggle="modal" data-dismiss="modal"><img src="../assets/frontend/liebe (1).png"></a><span
-					class="wishlist_count">0</span></a>
+			<div class="col-2 text-center mt-2 p-0"><a href="wishlist.html"><img
+						src="../assets/frontend/liebe (1).png"></a><span class="wishlist_count">0</span></a>
 				<h6>Wishlist</h6>
 			</div>
 			<div class="col-2 text-center mt-2 p-0"><a href="cart.html">&nbsp;<img
@@ -2342,137 +2187,137 @@
 		</div>
 	</div>
 
-	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
-		  <div class="modal-content">
-			
-			<div class="popup_content pl-0 pr-0 pt-0">
+			<div class="modal-content">
 
-				<div class="row text-left">
-					<div class="col-sm-12 text-center mb-5">
+				<div class="popup_content pl-0 pr-0 pt-0">
 
-						<img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg"
-							class="logo-imah-1">
+					<div class="row text-left">
+						<div class="col-sm-12 text-center mb-2">
 
-					</div>
-				</div>
-				<div class="popup-text" style="padding-left: 50px;padding-right: 50px;">
-					<div class="heading_s1">
-						<h4 class="text-center">LOG IN TO CONTINUE</h4>
-					</div>
-				</div>
-				<form method="post" action="javascript:void(0)" id="loginForm"
-					enctype="multipart/form-data" style="padding-left: 50px;padding-right: 50px;">
-					<div class="form-group">
-						<input name="number" required="" type="text" id="loginPhone"
-							class="form-control rounded-0" onkeypress="return isNumberKey(event)"
-							maxlength="10" minlength="10" placeholder="Enter Your Number">
-						<input type="hidden" id="loginverify" value="0" name="loginverify">
-					</div>
-					<div class="form-group hidden-OTP-field">
-						<input name="OTP" id="loginOTP" class="form-control rounded-0" type="text"
-							onkeypress="return isNumberKey(event)" maxlength="6" minlength="6"
-							placeholder="Enter OTP">
-					</div>
-					<div class="container">
-						<div class="row">
-							<p style="margin-bottom: 3px;">By Continuing, I agree to the <a
-									href="term-condition.html" style="color: #c68fa6;">Terms of use</a>
-								&amp; <a href="privacy_policy.html" style="color: #c68fa6;">Privacy
-									Policy</a></p>
+							<img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg" class="logo-imah-1 qwd">
+
 						</div>
 					</div>
-					<div class="form-group">
-						<button class="btn btn-fill-out btn-block text-uppercase rounded-0 btn-color "
-							type="submit">Submit</button>
+					<div class="popup-text" style="padding-left: 50px;padding-right: 50px;">
+						<div class="heading_s1">
+							<h4 class="text-center">LOG IN TO CONTINUE</h4>
+						</div>
 					</div>
+					<form method="post" action="javascript:void(0)" id="loginForm" enctype="multipart/form-data"
+						style="padding-left: 50px;padding-right: 50px;">
+						<div class="form-group">
+							<input name="number" required="" type="text" id="loginPhone" class="form-control rounded-0"
+								onkeypress="return isNumberKey(event)" maxlength="10" minlength="10"
+								placeholder="Enter Your Number">
+							<input type="hidden" id="loginverify" value="0" name="loginverify">
+						</div>
+						<div class="form-group hidden-OTP-field">
+							<input name="OTP" id="loginOTP" class="form-control rounded-0" type="text"
+								onkeypress="return isNumberKey(event)" maxlength="6" minlength="6"
+								placeholder="Enter OTP">
+						</div>
+						<div class="container">
+							<div class="row">
+								<p style="margin-bottom: 3px;">By Continuing, I agree to the <a
+										href="term-condition.html" style="color: #c68fa6;">Terms of use</a>
+									&amp; <a href="privacy_policy.html" style="color: #c68fa6;">Privacy
+										Policy</a></p>
+							</div>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-fill-out btn-block text-uppercase rounded-0 btn-color "
+								type="submit">Submit</button>
+						</div>
 
 
 
-					<div class="text-center"><span class="mt-3">New Here?<a href="javascript:;"
-						data-toggle="modal" data-target="#exampleModalCenter2"
-								style="color:#c68fa6;">&nbsp;Sign Up</a></span>
-					</div>
+						<div class="text-center"><span class="mt-3">New Here?<a href="javascript:;" data-toggle="modal"
+									data-target="#exampleModalCenter2" style="color:#c68fa6;">&nbsp;Sign Up</a></span>
+						</div>
 
-				</form>
+					</form>
+				</div>
+
+
+
 			</div>
-
-
-
-		  </div>
 		</div>
-	  </div>
-	  <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	</div>
+	<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
-		  <div class="modal-content">
-			
-			<div class="modal-body">
-				<div class="row no-gutters">
-					<div class="col-sm-12">
-						<div class="popup_content pl-0 pr-0 pt-0">
+			<div class="modal-content">
 
-							<div class="row text-left">
-								<div class="col-sm-12 text-center mb-5">
+				<div class="modal-body">
+					<div class="row no-gutters">
+						<div class="col-sm-12">
+							<div class="popup_content pl-0 pr-0 pt-0">
 
-									<img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg"
-										class="logo-imah-1">
+								<div class="row text-left">
+									<div class="col-sm-12 text-center mb-2">
 
-								</div>
-							</div>
-							<div class="popup-text" style="padding-left: 50px;padding-right: 50px;">
-								<div class="heading_s1">
-									<h4 class="text-center">SIGN UP TO CONTINUE</h4>
-								</div>
-							</div>
-							<form method="post" action="javascript:void(0)" id="registerForm"
-								enctype="multipart/form-data" style="padding-left: 50px;padding-right: 50px;">
-								<div class="row">
-									<div class="form-group col-lg-6">
-										<input name="fname" required="" type="text" id="signinFname"
-											class="form-control rounded-0" placeholder="First Name">
-									</div>
-									<div class="form-group col-lg-6">
-										<input name="lname" required="" type="text" id="signinLname"
-											class="form-control rounded-0" placeholder="Last Name">
+										<img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg"
+											class="logo-imah-1 qwd">
+
 									</div>
 								</div>
-								<div class="form-group">
-									<input name="phone" required="" type="text" id="signinPhone"
-										class="form-control rounded-0" placeholder="Enter Phone Number"
-										onkeypress="return isNumberKey(event)" maxlength="10" minlength="10">
-									<input type="hidden" id="signinverify" value="0" name="signinverify">
-									<input type="hidden" id="signintype" value="0" name="signinverify">
+								<div class="popup-text" style="padding-left: 50px;padding-right: 50px;">
+									<div class="heading_s1">
+										<h4 class="text-center">SIGN UP TO CONTINUE</h4>
+									</div>
 								</div>
-								<div class="form-group hidden-OTP-field">
-									<input name="otp" type="text" id="signinOTP" class="form-control rounded-0"
-										placeholder="Enter OTP">
-								</div>
-								<div class="container">
+								<form method="post" action="javascript:void(0)" id="registerForm"
+									enctype="multipart/form-data" style="padding-left: 50px;padding-right: 50px;">
 									<div class="row">
-										<p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="#"
-												style="color: #c68fa6;">Terms of use</a> &amp; <a href="#"
-												style="color: #c68fa6;">Privacy Policy</a></p>
+										<div class="form-group col-lg-6">
+											<input name="fname" required="" type="text" id="signinFname"
+												class="form-control rounded-0" placeholder="First Name">
+										</div>
+										<div class="form-group col-lg-6">
+											<input name="lname" required="" type="text" id="signinLname"
+												class="form-control rounded-0" placeholder="Last Name">
+										</div>
 									</div>
-								</div>
-								<div class="form-group">
-									<button class="btn btn-fill-out btn-block  btn-color  text-uppercase rounded-0"
-										type="submit">Submit</button>
-								</div>
-								<div class="text-center"><span class="mt-3">Already have an Account?<a href="#"
-											data-target="#onload-popup1" data-toggle="modal" data-dismiss="modal"
-											style="color:#ed6f36;">&nbsp;Log In</a></span>
-								</div>
-							
-							</form>
+									<div class="form-group">
+										<input name="phone" required="" type="text" id="signinPhone"
+											class="form-control rounded-0" placeholder="Enter Phone Number"
+											onkeypress="return isNumberKey(event)" maxlength="10" minlength="10">
+										<input type="hidden" id="signinverify" value="0" name="signinverify">
+										<input type="hidden" id="signintype" value="0" name="signinverify">
+									</div>
+									<div class="form-group hidden-OTP-field">
+										<input name="otp" type="text" id="signinOTP" class="form-control rounded-0"
+											placeholder="Enter OTP">
+									</div>
+									<div class="container">
+										<div class="row">
+											<p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="#"
+													style="color: #c68fa6;">Terms of use</a> &amp; <a href="#"
+													style="color: #c68fa6;">Privacy Policy</a></p>
+										</div>
+									</div>
+									<div class="form-group">
+										<button class="btn btn-fill-out btn-block  btn-color  text-uppercase rounded-0"
+											type="submit">Submit</button>
+									</div>
+									<div class="text-center"><span class="mt-3">Already have an Account?<a href="#"
+												data-target="#onload-popup1" data-toggle="modal" data-dismiss="modal"
+												style="color:#ed6f36;">&nbsp;Log In</a></span>
+									</div>
+
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
+
+
 			</div>
-
-
-		  </div>
 		</div>
-	  </div>
+	</div>
 
 
 

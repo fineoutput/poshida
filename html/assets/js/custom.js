@@ -240,6 +240,7 @@ $(function() {
 }
 
 
+
     if ($(".product-slider").length > 0) {
         $(".product-slider").owlCarousel({
             loop: true,
@@ -264,6 +265,34 @@ $(function() {
             }
         });
     }
+
+
+
+    if ($(".product-sliders").length > 0) {
+      $(".product-sliders").owlCarousel({
+          loop: true,
+          autoplay: false,
+          dots: false,
+          nav: false,
+          loop: true,
+          items: 6,
+          responsiveClass:false,
+          responsive: {
+              0: {
+                  items: 6,
+              },
+              420: {
+                  items: 6,
+              },
+              767: {
+                  items: 6,
+              },
+              991: {
+                  items: 6,
+              },
+          }
+      });
+  }
     
     /*end owl slider*/
 
