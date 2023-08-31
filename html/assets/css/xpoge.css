@@ -3746,6 +3746,7 @@ img.logo-imah-1.qwd {
 
 .root {
 	padding: 3rem 1.5rem;
+	padding-bottom: 0px !important;
 	border-radius: 5px;
 
   }
@@ -3777,12 +3778,9 @@ img.logo-imah-1.qwd {
     font-weight: 500;
 }
   .order-track {
-	margin-top: 2rem;
+
 	padding: 0 1rem;
-	border-top: 1px dashed #2c3e50;
-	padding-top: 2.5rem;
-	display: flex;
-	flex-direction: column;
+
   }
   .order-track-step {
 	display: flex;
@@ -3800,11 +3798,13 @@ img.logo-imah-1.qwd {
 	position: relative;
   }
   .order-track-status-dot {
-    display: block;
-    width: 1.2rem;
+	width: 1.2rem;
     height: 1.2rem;
     border-radius: 50%;
     background: #c68fa6;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
   .order-track-status-line {
 	display: block;
