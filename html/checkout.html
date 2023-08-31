@@ -20,62 +20,123 @@
 
 	<style>
 		.main-form input {
-    background-color: #fff;
-    padding: -2px 15px !important;
-    width: 100%;
-    border: 1px solid #e5e5e5;
-    min-height: 37px !important;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -o-border-radius: 5px;
-}
+			background-color: #fff;
+			padding: -2px 15px !important;
+			width: 100%;
+			border: 1px solid #e5e5e5;
+			min-height: 37px !important;
+			border-radius: 5px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			-o-border-radius: 5px;
+		}
 
-.btn.full {
-    width: 100%;
-    text-align: center;
-    padding: 14px 6px !important;
-}
-		.body{
+		.btn.full {
+			width: 100%;
+			text-align: center;
+			padding: 14px 6px !important;
+		}
+
+		.body {
 			color: #000000 !important;
 		}
+
 		.border-input {
 			padding: 10px;
 			border-bottom: 1px solid #dbdbdb;
 		}
+
 		button.btn-color.costrm {
-    padding: 11px 19px;
-}
+			padding: 11px 19px;
+		}
 
 
-:not(input):not(textarea):not(button){-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;}
+		:not(input):not(textarea):not(button) {
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+			-webkit-tap-highlight-color: transparent;
+		}
 
-.addressStrip-base-title{font-size:14px;max-width:75%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.addressStrip-base-title span{text-transform:capitalize;max-width:74%;overflow:hidden;text-overflow:ellipsis;}
-.addressStrip-base-addressName{width:100%;display:flex;white-space:pre;}
-.addressStrip-base-highlight{font-size:14px;font-weight:700;}
-.addressStrip-base-subText{font-size:12px;line-height:15px;margin-top:4px;overflow:hidden;text-overflow:ellipsis;text-transform:capitalize;}
-::-webkit-scrollbar{display:none;background-color:transparent;}
+		.addressStrip-base-title {
+			font-size: 14px;
+			max-width: 75%;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		.addressStrip-base-title span {
+			text-transform: capitalize;
+			max-width: 74%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		.addressStrip-base-addressName {
+			width: 100%;
+			display: flex;
+			white-space: pre;
+		}
+
+		.addressStrip-base-highlight {
+			font-size: 14px;
+			font-weight: 700;
+		}
+
+		.addressStrip-base-subText {
+			font-size: 12px;
+			line-height: 15px;
+			margin-top: 4px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			text-transform: capitalize;
+		}
+
+		::-webkit-scrollbar {
+			display: none;
+			background-color: transparent;
+		}
 
 		.sidebar-product .pro-media {
-    padding: 0 15px 0 0;
-    width: 110px;
-    float: left;
-}
+			padding: 0 15px 0 0;
+			width: 110px;
+			float: left;
+		}
 
-@media(max-width:767px) {
-	.col-11.col-md-12.mt-5.dsgsdcvsd{
-		padding: 10px;
-    border-top: 1px solid gainsboro;
-    position: fixed;
-    bottom: 0px;
-    z-index: 99;
-	background: white;
-}
-.col-xl-7.col-lg-9.col-12{
-	
-	padding: 0px !important;
-	}
+		@media(max-width:767px) {
+
+			/* .col-11.col-md-12.mt-5.dsgsdcvsd {
+				padding: 10px;
+				border-top: 1px solid gainsboro;
+				position: fixed;
+				bottom: 0px;
+				z-index: 99;
+				background: white;
+				left: 50%;
+				transform: translateX(-50%);
+			} */
+			.dsgsdcvsd {
+				padding: 10px;
+				border-top: 1px solid gainsboro;
+				position: fixed;
+				bottom: 0px;
+				z-index: 99;
+				background: white;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.trasition-csm{
+				transition: 0.5s;
+			}
+
+
+
+			.col-xl-7.col-lg-9.col-12 {
+
+				padding: 0px !important;
+			}
 		}
 
 
@@ -830,8 +891,15 @@
 															<p>61/348 , Mansarovar , jaipur</p>
 														</div>
 													</div> -->
-												
-													<div class="addressStrip-base-title"><div class="addressStrip-base-addressName">Deliver to: <span class="addressStrip-base-highlight">Kunal </span><div class="addressStrip-base-highlight">, 335803</div></div><div class="addressStrip-base-subText">ward no 1, Pilibangan, Pilibanga</div></div>
+
+													<div class="addressStrip-base-title">
+														<div class="addressStrip-base-addressName">Deliver to: <span
+																class="addressStrip-base-highlight">Kunal </span>
+															<div class="addressStrip-base-highlight">, 335803</div>
+														</div>
+														<div class="addressStrip-base-subText">ward no 1, Pilibangan,
+															Pilibanga</div>
+													</div>
 
 
 
@@ -841,7 +909,7 @@
 
 														<a href="add_address.html" class="btn-color fdghrd "
 															style="padding: 10px 20px; border-radius: 6px;"> Change
-														
+
 														</a>
 													</div>
 												</div>
@@ -940,20 +1008,22 @@
 															<div class="pro-media"> <a href="shop.html"><img alt="Xpoge"
 																		src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/1.jpg"></a>
 															</div>
-															<div class="pro-detail-info"> <a href="shop.html" class="product-title">Men's Regular Fit
+															<div class="pro-detail-info"> <a href="shop.html"
+																	class="product-title">Men's Regular Fit
 																	T-Shirt</a>
-																<div class="price-box"> <span class="price">₹50.00</span> </div>
+																<div class="price-box"> <span
+																		class="price">₹50.00</span> </div>
 																<div class="d-flex ">
 																	<p class="mb-0">Color</p>
 																	<p class="mb-0">: Red</p>
 																</div>
-										
+
 																<div class="d-flex ">
 																	<p class="mb-0">Size</p>
 																	<p class="mb-0">: XL</p>
 																</div>
-										
-										
+
+
 																<div class="checkout-qty">
 																	<div>
 																		<label>Qty: </label>
@@ -968,25 +1038,28 @@
 																</div> -->
 															</div>
 														</li>
-														
+
 														<li>
-															<div class="pro-media"> <a href="shop.html"><img alt="T-shirt"
+															<div class="pro-media"> <a href="shop.html"><img
+																		alt="T-shirt"
 																		src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/3.jpg"></a>
 															</div>
-															<div class="pro-detail-info"> <a href="shop.html" class="product-title">Men's Regular Fit
+															<div class="pro-detail-info"> <a href="shop.html"
+																	class="product-title">Men's Regular Fit
 																	T-Shirt</a>
-																<div class="price-box"> <span class="price">₹50.00</span> </div>
+																<div class="price-box"> <span
+																		class="price">₹50.00</span> </div>
 																<div class="d-flex ">
 																	<p class="mb-0">Color</p>
 																	<p class="mb-0">: Red</p>
 																</div>
-										
+
 																<div class="d-flex ">
 																	<p class="mb-0">Size</p>
 																	<p class="mb-0">: XL</p>
 																</div>
-										
-										
+
+
 																<div class="checkout-qty">
 																	<div>
 																		<label>Qty: </label>
@@ -1003,8 +1076,8 @@
 														</li>
 													</ul>
 												</div>
-										
-										
+
+
 											</div>
 
 
@@ -1012,7 +1085,7 @@
 
 					</form>
 
-					
+
 
 
 
@@ -1071,8 +1144,8 @@
 
 		</div>
 	</div>
-	 <div class="col-12 col-lg-4">
-	
+	<div class="col-12 col-lg-4">
+
 		<div class="complete-order-detail commun-table gray-bg mb-30">
 			<div class="table-responsive n-1">
 
@@ -1082,9 +1155,9 @@
 
 				<div class="payment_method" style="padding: 10px;">
 					<div class="heading_s1">
-					
+
 						<p style="margin-bottom: 5px !important;"> <b>PRICE DETAILS </b></p>
-						
+
 					</div>
 					<div class="payment_option " style="border-top:  1px solid gainsboro;">
 
@@ -1096,10 +1169,10 @@
 								₹60
 							</span>
 						</div>
-						
+
 						<div class="d-flex justify-content-between">
 							<span>
-								shipping charges 
+								shipping charges
 							</span>
 							<span>
 								₹60
@@ -1108,7 +1181,7 @@
 
 						<div class="d-flex justify-content-between">
 							<span>
-								Promocode Discount 
+								Promocode Discount
 							</span>
 							<span>
 								₹6395
@@ -1124,41 +1197,42 @@
 						</div>
 
 
-						
-				<div style="border-top:  1px solid gainsboro;" class="mt-3" >
-					<p style="margin-bottom: 5px !important;"> <b>Have any Promocode ? </b></p>
-					<div class="btn-app" style="display: flex; align-items: center;">
-						<div style="width: 100%;">
-							<input type="text">
+
+						<div style="border-top:  1px solid gainsboro;" class="mt-3">
+							<p style="margin-bottom: 5px !important;"> <b>Have any Promocode ? </b></p>
+							<div class="btn-app" style="display: flex; align-items: center;">
+								<div style="width: 100%;">
+									<input type="text">
+								</div>
+								<div class="d-flex justify-content-end m-2">
+									<button class="btn-color costrm"> APPLY</button>
+								</div>
+							</div>
+
+
 						</div>
-						<div class="d-flex justify-content-end m-2">
-							<button class="btn-color costrm"> APPLY</button>
+
+
+						<div style="border-top:  1px solid gainsboro;" class="mt-3">
+
+							<div class="form-group  mb-2 p-0 d-flex m-0">
+
+								<p class="ma" style="margin-bottom: 5px !important;"><b style="color: rgb(66 64 64);">
+										Have Any referral
+										Code ? </b></p>
+
+							</div>
+							<div class="col-lg-12 p-0">
+								<div class="form-group">
+									<input class="form-control" type="text" id="referalcode" name="reffercode"
+										placeholder="Enter Referral Code">
+								</div>
+							</div>
+
+
 						</div>
-					</div>
 
 
-				</div>
-
-
-				<div style="border-top:  1px solid gainsboro;" class="mt-3" >
-			
-											 <div class="form-group  mb-2 p-0 d-flex m-0">
-
-												<p class="ma" style="margin-bottom: 5px !important;"><b style="color: rgb(66 64 64);"> Have Any referral
-														Code ? </b></p>
-
-											</div>
-											<div class="col-lg-12 p-0">
-												<div class="form-group">
-													<input class="form-control" type="text" id="referalcode"
-														name="reffercode" placeholder="Enter Referral Code">
-												</div>
-											</div>
-
-
-				</div>
-
-					
 					</div>
 				</div>
 
@@ -1170,7 +1244,7 @@
 
 
 				<div class="payment_method mt-3 " style="padding: 10px;  border-top:  1px solid gainsboro;">
-					<div class="heading_s1">			
+					<div class="heading_s1">
 						<p style="margin-bottom: 5px !important;"> <b>Payment </b></p>
 						<p style="color: red;padding-bottom:0px;">Delivery Free Above ₹2499
 						</p>
@@ -1197,12 +1271,13 @@
 					</div>
 				</div>
 
-				<div class="col-11 col-md-12 mt-5 dsgsdcvsd"  style="padding: 10px;  border-top:  1px solid gainsboro;">
+				<div class="col-12 col-md-12 mt-5 dsgsdcvsd trasition-csm" id="sticks"
+					style="padding: 10px;  border-top:  1px solid gainsboro;">
 					<button class="btn full btn-color">Place order</button>
 				</div>
 
-			
-			
+
+
 			</div>
 		</div>
 
@@ -1496,6 +1571,12 @@
 			let element = document.getElementById("toggle");
 			element.classList.toggle("no");
 		}
+
+		
+
+		
+
+
 	</script>
 </body>
 

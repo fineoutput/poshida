@@ -1,4 +1,15 @@
 // JavaScript Document
+// function scrollTopFN() {
+//   let buttonAdd = document.getElementById("sticks");
+//   let y = buttonAdd.scrollTop;
+//   if (y == 50){
+//     buttonAdd.classList.add("is-fixed");
+//             }else{
+//       buttonAdd.classList.remove("is-fixed")
+//     }
+    
+
+// }
 $(function() {
  "use strict";
 
@@ -6,9 +17,20 @@ $(function() {
     $(window).on("scroll",function() {
         if ($(this).scrollTop() > 94) {
             $("header").addClass("header-fixed");
-        } else {
-            $("header").removeClass("header-fixed");
+            
+
         }
+        
+        
+        if($(this).scrollTop() > 800){
+          $("#sticks").removeClass("dsgsdcvsd");
+          
+        }
+        else {
+          $("header").removeClass("header-fixed");
+          $("#sticks").addClass("dsgsdcvsd");
+          
+      }
     });
     /*end header animation*/
 
@@ -346,3 +368,10 @@ $(window).on("load", function() {
     /*------End----------*/
   
 });
+
+
+
+
+
+
+
