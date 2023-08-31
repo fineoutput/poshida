@@ -19,6 +19,14 @@
 
 
 	<style>
+		@media (max-width: 429px){
+td:not(:first-child) {
+    clear: both;
+    margin-left: 100px;
+    padding: 0px;
+    position: relative;
+    text-align: left;
+}}
 		.main-form input {
 			background-color: #fff;
 			padding: -2px 15px !important;
@@ -1138,7 +1146,7 @@
 
 
 						<div style="border-top:  1px solid gainsboro;" class="mt-3">
-							<p style="margin-bottom: 5px !important;"> <b>Have any Promocode ? </b></p>
+							<p style="margin-bottom: 5px !important; margin-top: 5px !important""> <b>Have any Promocode ? </b></p>
 							<div class="btn-app" style="display: flex; align-items: center;">
 								<div style="width: 100%;">
 									<input type="text">
@@ -1156,7 +1164,7 @@
 
 							<div class="form-group  mb-2 p-0 d-flex m-0">
 
-								<p class="ma" style="margin-bottom: 5px !important;"><b style="color: rgb(66 64 64);">
+								<p class="ma" style="margin-bottom: 5px !important; margin-top: 5px !important"><b style="color: rgb(66 64 64);">
 										Have Any referral
 										Code ? </b></p>
 
@@ -1192,7 +1200,7 @@
 
 						<div class="check-box">
 							<span>
-								<input type="checkbox" class="checkbox" id="different-address"
+								<input type="radio" class="checkbox" id="different-address"
 									name="Ship to a different address?">
 								<label for="different-address" class="mb-0">Cash On Delivery
 									(COD)</label>
@@ -1201,7 +1209,7 @@
 
 						<div class="check-box">
 							<span>
-								<input type="checkbox" class="checkbox" id="different-addres"
+								<input type="radio" class="checkbox" id="different-addres"
 									name="Ship to a different address?">
 								<label for="different-addres" class="mb-0">Online
 									Payment</label>
@@ -1210,7 +1218,7 @@
 					</div>
 				</div>
 
-				<div class="col-12 col-md-12 mt-5 dsgsdcvsd trasition-csm" id="sticks"
+				<div class="col-12 col-md-12  dsgsdcvsd trasition-csm" id="sticks"
 					style="padding: 10px;  border-top:  1px solid gainsboro;">
 					<button class="btn full btn-color">Place order</button>
 				</div>

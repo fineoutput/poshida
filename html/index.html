@@ -205,7 +205,7 @@
 										<ul class="link-dropdown-list">
 											<!-- <li> <span class="dropdown-title">Default welcome msg!</span> -->
 											<ul class="hrb">
-												<li><a href="my_profile.html" class="p-1">My Account </a></li>
+												<li><a href="my_order.html" class="p-1">My Account </a></li>
 												<li><a href="my_order.html" class="p-1">My Orders </a></li>
 
 												<li><a href="my_order.html" class="p-1" data-toggle="modal"
@@ -251,6 +251,7 @@
 														<p class="m-0">2</p>
 													</div>
 												</div>
+											
 											</figcaption>
 										</figure>
 									</li>
@@ -278,7 +279,7 @@
 
 
 
-			<div id="toggle" class="no ">
+			<div id="toggle" class="no " style="margin-top: 10px;">
 				<form action="" class="toggil_form">
 					<div class="form-group m-0 sty">
 						<input type="text" placeholder="Search Products  .. " required="" style="width: 100%;">
@@ -2198,6 +2199,10 @@
 
 				<div class="popup_content pl-0 pr-0 pt-0">
 
+					<button type="button" class="close p-3" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					  </button>
+
 					<div class="row text-left">
 						<div class="col-sm-12 text-center mb-2">
 
@@ -2211,7 +2216,7 @@
 						</div>
 					</div>
 					<form method="post" action="javascript:void(0)" id="loginForm" enctype="multipart/form-data"
-						style="padding-left: 50px;padding-right: 50px;">
+						style="padding-left: 20px;padding-right: 20px;">
 						<div class="form-group">
 							<input name="number" required="" type="text" id="loginPhone" class="form-control rounded-0"
 								onkeypress="return isNumberKey(event)" maxlength="10" minlength="10"
@@ -2224,14 +2229,14 @@
 								placeholder="Enter OTP">
 						</div>
 						<div class="container">
-							<div class="row">
+							<div class="row " style="justify-content: center;">
 								<p style="margin-bottom: 3px;">By Continuing, I agree to the <a
 										href="term-condition.html" style="color: #c68fa6;">Terms of use</a>
 									&amp; <a href="privacy_policy.html" style="color: #c68fa6;">Privacy
 										Policy</a></p>
 							</div>
 						</div>
-						<div class="form-group">
+						<div class="form-group mt-2">
 							<button class="btn btn-fill-out btn-block text-uppercase rounded-0 btn-color "
 								type="submit">Submit</button>
 						</div>
@@ -2253,9 +2258,15 @@
 	<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
 		aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
-			<+-+-+-+-+-+-+-div class="modal-content">
+			<div class="modal-content">
 
 				<div class="modal-body">
+
+
+					<button type="button" class="close p-3" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					  </button>
+
 					<div class="row no-gutters">
 						<div class="col-sm-12">
 							<div class="popup_content pl-0 pr-0 pt-0">
@@ -2274,7 +2285,7 @@
 									</div>
 								</div>
 								<form method="post" action="javascript:void(0)" id="registerForm"
-									enctype="multipart/form-data" style="padding-left: 50px;padding-right: 50px;">
+									enctype="multipart/form-data" style="padding-left: 20px;padding-right: 20px;">
 									<div class="row">
 										<div class="form-group col-lg-6">
 											<input name="fname" required="" type="text" id="signinFname"
@@ -2297,13 +2308,13 @@
 											placeholder="Enter OTP">
 									</div>
 									<div class="container">
-										<div class="row">
+										<div class="row" style="justify-content: center;">
 											<p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="#"
 													style="color: #c68fa6;">Terms of use</a> &amp; <a href="#"
 													style="color: #c68fa6;">Privacy Policy</a></p>
 										</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group mt-2">
 										<button class="btn btn-fill-out btn-block  btn-color  text-uppercase rounded-0"
 											type="submit">Submit</button>
 									</div>

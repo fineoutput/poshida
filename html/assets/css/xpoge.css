@@ -145,6 +145,7 @@ a:link,
 img {
 	outline: none;
 	text-decoration: none;
+	
 }
 
 a {
@@ -864,8 +865,8 @@ input.radio-button:checked+label::before {
 .owl-dots .owl-dot span {
 	background: #fff;
 	display: inline-block;
-	height: 15px;
-	width: 15px;
+	height: 8px;
+	width: 8px;
 	border-radius: 50%;
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
@@ -2153,7 +2154,7 @@ _______________________________________________________*/
 	color: #999;
 }
 .cart-dropdown.header-link-dropdown {
-    height: 80vh;
+    /* height: 80vh; */
     overflow: hidden;
     overflow-y: auto;
 }
@@ -2199,8 +2200,8 @@ _______________________________________________________*/
 
 /* Tab CSS Start */
 .product-tab-inner {
-	box-shadow: 0 0 20px rgb(0 0 0 / 3%);
-	padding: 30px;
+	box-shadow: 0 0 20px rgb(0 0 0 / 1%);
+	/* padding: 30px; */
 }
 
 #tabs {
@@ -2250,7 +2251,7 @@ _______________________________________________________*/
 #tabs .nav-tabs>li>a.selected,
 #tabs .nav-tabs>li>a:hover,
 #tabs .nav-tabs>li>a.selected:focus {
-	border-bottom: 1px solid #c68fa6;
+	/* border-bottom: 1px solid #c68fa6; */
 	color: #c68fa6 !important;
 }
 
@@ -2354,7 +2355,7 @@ _______________________________________________________*/
 
 /* - Breadcrumb CSS //---------------- */
 .inner-banner {
-	background: #f9f9f9;
+	background: transparent;
 	padding: 9px 0;
 	text-align: center;
 }
@@ -3460,9 +3461,8 @@ i.bi.bi-heart {
 }
 
 .btn--1 {
-	padding: 10px 26px;
-	border-radius: 0px !important;
-
+    padding: 10px 9px;
+    border-radius: 0px !important;
 }
 
 .ivo-ho {
@@ -3534,12 +3534,11 @@ div#footerCount .row .col-2.text-center.mt-2.p-0 a img {
 }
 
 div#footerCount .row .col-2.text-center.mt-2.p-0 {
-	padding: 6px !important;
+    padding: 6px !important;
+    padding-bottom: 0px !important;
 }
 
-a.btn.btn-color.small.btn-filter.mb-20 {
-	margin-top: 19px;
-}
+
 
 .mkjmkj {
 	max-width: 40% !important;
@@ -3888,11 +3887,26 @@ img.logo-imah-1.qwd {
 
 }
 
+@media(max-width:768px) {
+	
+
+	.owl-carousel .owl-nav button[class*="owl-"], .owl-carousel .owl-nav button[class*="owl-"].disabled:hover {
+		background: #efefef;
+		position: absolute;
+		top: 38%;
+		text-align: center;
+		width: 33px !important;
+		height: 34px !important;
+		border-radius: 50px;
+	}
+}
+
 @media(max-width:767px) {
 	.product-slider.owl-carousel .owl-nav button[class*="owl-"] {
 		width: 28px;
 		height: 28px;
 	}
+
 }
 
 @media(max-width:758px) {
@@ -3917,9 +3931,7 @@ img.logo-imah-1.qwd {
 	}
 
 	td:first-child {
-
-		top: 44% !important;
-
+		top: 38% !important;
 	}
 
 	td.margin-respon.icone-red {
@@ -3980,9 +3992,29 @@ img.logo-imah-1.qwd {
 	.logo-imah-1 {
 		width: 65%;
 	}
+	a.btn.df{
+		font-size: 12px !important;
+	}
+	.sale-label{
+		font-size: 8px;
+	}
+	.new-label {
+	
+		font-size: 7px;
+	
+	}
 
 	div#toggle form.toggil_form button.btn {
 		right: 29px !important;
+	}
+	.owl-carousel .owl-nav button[class*="owl-"], .owl-carousel .owl-nav button[class*="owl-"].disabled:hover {
+		background: #efefef;
+		position: absolute;
+		top: 45864% !important;
+		text-align: center;
+		width: 47px;
+		height: 46px;
+		border-radius: 50px;
 	}
 
 .contant {
@@ -4001,9 +4033,7 @@ img.logo-imah-1.qwd {
 	}
 
 	td:first-child {
-
-		top: 44% !important;
-
+		top: 38% !important;
 	}
 
 	td.margin-respon.icone-red {
@@ -4053,7 +4083,7 @@ img.logo-imah-1.qwd {
 	}
 
 	td:first-child {
-		top: 39% !important;
+		top: 36% !important;
 	}
 
 	td.margin-respon {
