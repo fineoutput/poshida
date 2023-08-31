@@ -3900,6 +3900,10 @@ img.logo-imah-1.qwd {
 		right: 29px !important;
 	}
 
+.contant {
+    margin-top: 115px !important;
+}
+
 }
 
 @media(max-width:435px) {
@@ -3935,6 +3939,9 @@ img.logo-imah-1.qwd {
 @media(max-width:375px) {
 	h2.main_title {
 		font-size: 19px !important;
+	}
+	.contant {
+		margin-top: 105px !important;
 	}
 }
 
@@ -3984,5 +3991,8 @@ img.logo-imah-1.qwd {
 	}
 	td.margin-respon.icone-red.text-center.ewfsf {
 		margin-left: 117px !important;
+	}
+	.contant {
+		margin-top: 97px !important;
 	}
 }
