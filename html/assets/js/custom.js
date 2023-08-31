@@ -145,7 +145,7 @@ $(function() {
     if ($(".main-baner ").length > 0) {
         $(".main-baner ").owlCarousel({
             loop: true,
-            autoplay: false,
+            autoplay: true,
             dots: true,
             nav: false,
             items: 1,
@@ -162,7 +162,7 @@ $(function() {
     if ($(".main-banner, .fv").length > 0) {
       $(".main-banner, .fv").owlCarousel({
           loop: true,
-          autoplay: false,
+          autoplay: true,
           dots: true,
           nav: false,
           items: 1,
@@ -192,7 +192,7 @@ $(function() {
   if ($(".main-banner, .fvsx").length > 0) {
     $(".main-banner, .fvsx").owlCarousel({
         loop: true,
-        autoplay: false,
+        autoplay: true,
         dots: true,
         nav: false,
         items: 1,
@@ -217,7 +217,7 @@ $(function() {
       if ($(".main-banner, .fvv").length > 0) {
       $(".main-banner, .fvv").owlCarousel({
           loop: true,
-          autoplay: false,
+          autoplay: true,
           dots: true,
           nav: true,
           items: 2,
@@ -239,7 +239,7 @@ $(function() {
   if ($(".main-banner, .catrty").length > 0) {
     $(".main-banner, .catrty").owlCarousel({
       loop: true,
-            autoplay: false,
+            autoplay: true,
             dots: false,
             nav: true,
             loop: true,
@@ -266,7 +266,7 @@ $(function() {
     if ($(".product-slider").length > 0) {
         $(".product-slider").owlCarousel({
             loop: true,
-            autoplay: false,
+            autoplay: true,
             dots: false,
             nav: true,
             loop: true,
@@ -293,7 +293,7 @@ $(function() {
     if ($(".product-sliders").length > 0) {
       $(".product-sliders").owlCarousel({
           loop: true,
-          autoplay: false,
+          autoplay: true,
           dots: false,
           nav: false,
           loop: true,

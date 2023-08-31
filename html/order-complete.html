@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <title>Poshida</title>
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link type="image/x-icon" href="assets/img/Poshida Logo (2)_page-0001.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/xpoge.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <style>
+        .modal-content {
+            border: 0px;
+        }
+
+        .sidebar .sidebar-default {
+            background: transparent;
+            padding: 10px;
+            margin-bottom: 0px !important;
+            width: 100%;
+        }
+
+        .accordion.accordion_style1.mt-0.sidebar-default {
+            /* border-bottom: 2px solid #c68fa6 !important; */
+            margin-bottom: 2px !important;
+            padding: 10px auto !important;
+        }
+
+        @media (min-width:991px) {
+            .mobilebottom {
+                display: none;
+            }
+        }
+
+        /* .collapse:not(.show) {
+			display: none;
+		} */
+
+        .card {
+            position: relative;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #cac6c6;
+            background-clip: border-box;
+            border: 1px solid rgba(0, 0, 0, .125);
+            border-radius: .25rem;
+
+        }
+
+        .card-body {
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            min-height: 1px;
+            padding: 1.25rem;
+        }
+
+        .card-header {
+            padding: .75rem 1.25rem;
+            margin-bottom: 0;
+            background-color: rgba(0, 0, 0, .03);
+            border-bottom: 1px solid rgba(0, 0, 0, .125);
+        }
+
+        .card-header:first-child {
+            border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+        }
+
+        .accordion {
+            overflow-anchor: none;
+        }
+
+        .accordion>.card {
+            overflow: hidden;
+        }
+
+        .accordion>.card:not(:last-of-type) {
+            border-bottom: 0;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .accordion>.card:not(:first-of-type) {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        .accordion>.card>.card-header {
+            border-radius: 0;
+            margin-bottom: -1px;
+        }
+
+
+        @media (min-width:992px) {
+            .mt-lg-0 {
+                margin-top: 0 !important;
+            }
+
+            .pt-lg-0 {
+                padding-top: 0 !important;
+            }
+        }
+
+
+        /*! CSS Used from: https://www.tiarastore.co.in/assets/frontend/css/jquery-ui.css */
+        .ui-slider {
+            position: relative;
+            text-align: left;
+        }
+
+        .ui-slider .ui-slider-handle {
+            position: absolute;
+            z-index: 2;
+            width: 1.2em;
+            height: 1.2em;
+            cursor: default;
+            -ms-touch-action: none;
+            touch-action: none;
+        }
+
+        .ui-slider .ui-slider-range {
+            position: absolute;
+            z-index: 1;
+            font-size: .7em;
+            display: block;
+            border: 0;
+            background-position: 0 0;
+        }
+
+        .ui-slider-horizontal {
+            height: .8em;
+        }
+
+        .ui-slider-horizontal .ui-slider-handle {
+            top: -.3em;
+            margin-left: -.6em;
+        }
+
+        .ui-slider-horizontal .ui-slider-range {
+            top: 0;
+            height: 100%;
+        }
+
+        .ui-widget {
+
+            font-size: 1em;
+        }
+
+        .ui-widget.ui-widget-content {
+            border: 1px solid #c5c5c5;
+        }
+
+        .ui-widget-content {
+            border: 1px solid #dddddd;
+            background: #ffffff;
+            color: #333333;
+        }
+
+        .ui-widget-header {
+            border: 1px solid #dddddd;
+            background: #e9e9e9;
+            color: #333333;
+            font-weight: bold;
+        }
+
+        .ui-state-default,
+        .ui-widget-content .ui-state-default {
+            border: 1px solid #c5c5c5;
+            background: #f6f6f6;
+            font-weight: normal;
+            color: #454545;
+        }
+
+        .ui-corner-all {
+            border-top-left-radius: 3px;
+        }
+
+        .ui-corner-all {
+            border-top-right-radius: 3px;
+        }
+
+        .ui-corner-all {
+            border-bottom-left-radius: 3px;
+        }
+
+        .ui-corner-all {
+            border-bottom-right-radius: 3px;
+        }
+
+        .colorcheckboxes .colorspann::before {
+            content: "";
+            border: 2px solid #fff;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: -3px;
+            border-radius: 100%;
+            box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+        }
+
+        @media (max-width: 991px) {
+            .desktopfilterlist {
+                display: none;
+            }
+        }
+
+        .scrollbarr::-webkit-scrollbar {
+            width: 0.2125rem;
+        }
+
+        .scrollbarr::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        .scrollbarr::-webkit-scrollbar-thumb {
+            background: #c68fa6;
+        }
+
+        .accordion .card .card-header {
+            background-color: transparent;
+            padding: 0px;
+            margin: 0;
+            border: 0px;
+        }
+
+        .accordion .card-header a {
+            /* padding: 15px 40px 15px 15px; */
+            display: block;
+            line-height: normal;
+        }
+
+        .accordion .card-body p:last-child {
+            margin: 0;
+        }
+
+        .card-body p {
+            margin-bottom: 15px;
+        }
+
+        .accordion_style1.accordion .card {
+
+            margin-bottom: 15px;
+            border-radius: 0;
+            border: 0;
+
+
+            background: transparent;
+
+        }
+
+        .accordion_style1.accordion .card:last-child {
+            margin-bottom: 0;
+        }
+
+
+
+        .accordion.accordion_style1 .card-header a {
+            padding-left: 0;
+            padding-top: 0;
+            font-weight: 500 !important;
+            text-transform: capitalize;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            line-height: 30px;
+            margin-bottom: 0px !important;
+
+            color: inherit !important;
+        }
+
+        .accordion_style1 .card-header a::after {
+            content: "\f106";
+            /* content: ""; */
+            font-family: "FontAwesome";
+            font-size: 16px;
+            font-weight: normal;
+            position: absolute;
+            right: 15px;
+            top: 1px;
+        }
+
+        .accordion_style1 .card-header a[aria-expanded="false"]::after {
+            content: "\f107";
+        }
+
+        .product_color_switch span {
+            height: 15px;
+            width: 15px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 5px;
+            position: relative;
+            cursor: pointer;
+            border-radius: 100%;
+        }
+
+        .product_color_switch span:first-child {
+            -webkit-transition: all 0.2s ease 0s;
+            -o-transition: all 0.2s ease 0s;
+            transition: all 0.2s ease 0s;
+        }
+
+        .product_color_switch span:nth-child(2) {
+            -webkit-transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+        }
+
+        .list_brand li {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+        .list_brand li:last-child {
+            margin-bottom: 0;
+        }
+
+        .list_brand .custome-checkbox .form-check-label {
+            color: #292b2c;
+        }
+
+        .filter_price .ui-widget.ui-widget-content {
+            border: 0;
+            border-radius: 0;
+            background-color: #ddd;
+            height: 4px;
+            margin-bottom: 20px;
+        }
+
+        .ui-slider-horizontal .ui-slider-range {
+            top: 0;
+            height: 100%;
+        }
+
+        .filter_price .ui-slider .ui-slider-range {
+            background-color: #c68fa6;
+            border-radius: 0;
+        }
+
+        .filter_price .ui-slider .ui-slider-handle {
+            cursor: pointer;
+            background-color: #fff;
+            border-radius: 100%;
+            border: 0;
+            height: 18px;
+            top: -8px;
+            width: 18px;
+            margin: 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .price_range {
+            color: #292b2c;
+        }
+
+        #flt_price {
+            margin-left: 5px;
+            font-weight: 600;
+        }
+
+        .widget_title {
+            margin-bottom: 25px;
+            text-transform: capitalize;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .custome-checkbox .form-check-label {
+            position: relative;
+            cursor: pointer;
+            color: #687188;
+            padding: 0;
+            vertical-align: middle;
+        }
+
+        .custome-checkbox .form-check-input {
+            display: none;
+        }
+
+        .custome-checkbox .form-check-label span {
+            vertical-align: middle;
+        }
+
+        .custome-checkbox .form-check-label::before {
+            content: "";
+            border: 2px solid #ced4da;
+            height: 17px;
+            width: 17px;
+            margin: 0px 8px 0 0;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .custome-checkbox input[type="checkbox"]:checked+.form-check-label::after {
+            opacity: 1;
+        }
+
+        .custome-checkbox input[type="checkbox"]+.form-check-label::after {
+            content: "";
+            width: 11px;
+            position: absolute;
+            top: 50%;
+            left: 3px;
+            opacity: 0;
+            height: 6px;
+            border-left: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            -moz-transform: translateY(-65%) rotate(-45deg);
+            -webkit-transform: translateY(-65%) rotate(-45deg);
+            transform: translateY(-65%) rotate(-45deg);
+        }
+
+        .colorcheckboxess input[type="checkbox"]+.form-check-label::after {
+            content: "";
+            width: 11px;
+            position: absolute;
+            top: 40% !important;
+            left: 3px;
+            opacity: 0;
+            height: 6px;
+            border-left: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            -moz-transform: translateY(-65%) rotate(-45deg);
+            -webkit-transform: translateY(-65%) rotate(-45deg);
+            transform: translateY(-65%) rotate(-45deg);
+        }
+
+        .custome-checkbox input[type="checkbox"]:checked+.form-check-label::before {
+            background-color: #c68fa6;
+            border-color: #c68fa6;
+        }
+
+        .custome-checkbox .form-check-input {
+            display: none;
+        }
+
+        .custome-checkbox .form-check-label {
+            position: relative;
+            cursor: pointer;
+        }
+
+        /*! CSS Used from: https://www.tiarastore.co.in/assets/frontend/css/responsive.css */
+        @media only screen and (max-width: 575px) {
+            p {
+                margin-bottom: 15px;
+            }
+
+            .widget_title {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            p {
+                line-height: 24px;
+            }
+
+            h6 {
+                font-size: 14px;
+            }
+
+            p {
+                margin-bottom: 15px;
+            }
+        }
+
+
+        @media (max-width:980px) {
+            .contant {
+                margin-top: 100px !important;
+            }
+
+            .inner-banner {
+                padding: 26px 0 !important;
+            }
+        }
+
+        @media (max-width:980px) {
+            .contant {
+                margin-top: 100px !important;
+            }
+
+            .inner-banner {
+                padding: 1px 0 !important;
+            }
+
+            .inner-banner {
+                padding: 2px 0 !important;
+            }
+
+
+            .banner-22 {
+                height: 100%;
+                position: relative;
+                margin-top: 0px !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .banner-21 {
+                height: 100%;
+                position: relative;
+                margin-top: 91px !important;
+            }
+
+            .banner {
+                margin-top: 90px !important;
+            }
+
+            .contant {
+                margin-top: 81px !important;
+            }
+        }
+
+
+        @media (max-width: 425px) {
+            .banner {
+                margin-top: 99px !important;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .banner {
+                margin-top: 91px !important;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .banner-21 {
+                height: 100%;
+                position: relative;
+                margin-top: 81px !important;
+            }
+
+            .banner {
+                margin-top: 80px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Start preloader -->
+    <div id="preloader"></div>
+
+
+    <div class="main">
+        <!-- Header start -->
+        <header id="header " style="    padding-bottom: 10px !important; ">
+
+            <div class="container position-r header-class  pb-3">
+                <div class="row m-0">
+                    <div class="col-lg-4 col-md-3 col-3 p-0 " style="display: flex;
+						align-items: center;">
+                        <div class="newsletter-input-1 newsletter-input mob  " style="width: 70%;">
+                            <form>
+                                <div class="form-group m-0">
+                                    <input type="text" placeholder="Search Products  .. " required="">
+                                </div>
+                                <button type="submit" class="btn  btn--1"> <i class="bi bi-search"
+                                        style="color: #c68fa6;"></i></button>
+                            </form>
+                        </div>
+
+                        <button data-target=".navbar-collapse" data-toggle="collapse"
+                            class="navbar-toggle d-block d-lg-none d-xl-none" type="button"><i class="fa fa-bars"></i>
+                        </button>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-6 p-0 position-initial icon-bar-center">
+                        <div class="right-side">
+                            <div class="navbar-header">
+                                <a class="navbar-brand page-scroll" href="index.html">
+                                    <img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg"
+                                        class="logo-imah-1">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-3 col-3 p-0 icon-bar" style="display: flex;
+						align-items: center;">
+                        <div class="header-right-link">
+                            <ul>
+
+
+
+
+
+                                <li class="search-box  search_box " onclick="hello()">
+                                    <a href="#"><span></span></a>
+                                </li>
+
+
+
+                                <li class="account-icon heig" style="position: inherit;">
+                                    <a href="#"><span></span></a>
+                                    <div class="header-link-dropdown account-link-dropdown">
+                                        <ul class="link-dropdown-list">
+                                            <!-- <li> <span class="dropdown-title">Default welcome msg!</span> -->
+                                            <ul class="hrb">
+                                                <li><a href="my_order.html" class="p-1">My Account </a></li>
+                                                <li><a href="my_order.html" class="p-1">My Orders </a></li>
+
+                                                <li><a href="my_order.html" class="p-1" data-toggle="modal"
+                                                        data-target="#exampleModalCenter">Log In </a></li>
+                                                <li><a href="my_order.html" class="p-1" data-toggle="modal"
+                                                        data-target="#exampleModalCenter2"> Register </a></li>
+                                                <!-- <li><a href="#" class="p-1">Log Out </a></li> -->
+
+
+                                            </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                        </li>
+
+
+
+
+
+
+
+
+
+
+
+                        <li class="cart-icon heig ">
+                            <a href="#"> <span> <small class="cart-notification">2</small> </span> </a>
+                            <div class="cart-dropdown header-link-dropdown">
+                                <ul class="cart-list link-dropdown-list">
+
+                                    <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
+                                        <figure> <a href="#" class="pull-left"> <img alt="Xpoge"
+                                                    src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/2.jpg"></a>
+                                            <figcaption> <span><a href="#">Women's
+                                                        Cape Jacket</a></span>
+                                                <p class="cart-price m-0">₹14.99</p>
+                                                <p class="m-0"> Color : Red</p>
+                                                <p class="m-0">Size : XXL</p>
+                                                <div class="product-qty">
+                                                    <label>Qty:</label>
+                                                    <div class="custom-qty">
+                                                        <p class="m-0">2</p>
+                                                    </div>
+                                                </div>
+
+                                            </figcaption>
+                                        </figure>
+                                    </li>
+                                </ul>
+                                <p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span
+                                        class="pull-right"><strong class="price-box">₹29.98</strong></span> </p>
+                                <div class="clearfix"></div>
+                                <div class="mt-20 d-flex justify-content-center"> <a href="cart.html"
+                                        class="btn-color btn"> View Cart</a>
+                                    <!-- <a href="checkout.html"
+										class="btn-color btn right-side">Checkout</a> -->
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cart-icon  heig dx">
+                            <a href="wishlist.html"> <span> <small class="cart-notification">2</small> </span> </a>
+
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div id="toggle" class="no " style="margin-top: 10px;">
+                <form action="" class="toggil_form">
+                    <div class="form-group m-0 sty">
+                        <input type="text" placeholder="Search Products  .. " required="" style="width: 100%;">
+                    </div>
+                    <button type="submit" class="btn " style="position: absolute;
+						right: 38px;     padding: 18px 3px;"> <i class="bi bi-search" style="position: relative;
+    align-items: center;
+    display: flex;
+    top: -12px;
+    right: -1px;"></i></button>
+                </form>
+            </div>
+
+
+            <div class="container position-r animate__animated animate__bounce">
+                <div class="row m-0">
+
+                </div>
+                <div class="col-lg-12 col-md-8 col-8 p-0 position-initial" style="justify-content: center;
+					display: flex;">
+                    <div class="right-side">
+                        <!-- <button data-target=".navbar-collapse" data-toggle="collapse"
+								class="navbar-toggle d-block d-lg-none d-xl-none" type="button"><i class="fa fa-bars"></i>
+							</button> -->
+                        <div class="overlay"></div>
+                        <div id="menu" class="navbar-collapse collapse">
+
+                            <ul class="nav navbar-nav">
+                                <div class="navbar-header dfghddgd">
+                                    <a class="navbar-brand page-scroll" href="index.html">
+                                        <img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg"
+                                            class="logo-imah-1">
+                                    </a>
+                                </div>
+                                <li class="level">
+                                    <a href="index.html" class="nav-link">Home</a>
+                                </li>
+
+
+                                <li class="level dropdown">
+                                    <span class="opener plus"><i class="bi bi-chevron-down"
+                                            style="color:white"></i></span>
+                                    <a href="#" class="nav-link">Women</a>
+                                    <div class="megamenu full mobile-sub-menu">
+                                        <div class="megamenu-inner-top">
+                                            <div class="row sub-menu-level1">
+                                                <div class="col-lg-3 level2 ">
+                                                    <ul class="sub-menu-level2">
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Jeans
+                                                                & Jeggings</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+                                                        </li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+                                                        </li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Tops
+                                                                & Shirts</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Winter
+                                                                Wear</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Jeans
+                                                                & Jeggings</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-lg-3 level2">
+                                                    <ul class="sub-menu-level2">
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Jeans
+                                                                & Jeggings</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+                                                        </li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+                                                        </li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Tops
+                                                                & Shirts</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Winter
+                                                                Wear</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Jeans
+                                                                & Jeggings</a></li>
+                                                    </ul>
+                                                </div>
+
+
+
+                                                <div class="col-lg-6 mt-30 d-none d-lg-block">
+                                                    <div class="sub-menu-img">
+                                                        <a href="shop.html">
+                                                            <img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+                                                                alt="Xpoge">
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="level dropdown">
+                                    <span class="opener plus"><i class="bi bi-chevron-down"
+                                            style="color:white"></i></span>
+                                    <a href="#" class="nav-link">Men</a>
+                                    <div class="megamenu full mobile-sub-menu">
+                                        <div class="megamenu-inner-top">
+                                            <div class="row sub-menu-level1">
+                                                <div class="col-lg-3 level2 ">
+                                                    <ul class="sub-menu-level2">
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Jeans
+                                                                & Jeggings</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+                                                        </li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+                                                        </li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Tops
+                                                                & Shirts</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Winter
+                                                                Wear</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Jeans
+                                                                & Jeggings</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-lg-3 level2">
+                                                    <ul class="sub-menu-level2">
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Jeans
+                                                                & Jeggings</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+                                                        </li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+                                                        </li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Tops
+                                                                & Shirts</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Winter
+                                                                Wear</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Jeans
+                                                                & Jeggings</a></li>
+                                                    </ul>
+                                                </div>
+
+
+
+                                                <div class="col-lg-6 mt-30 d-none d-lg-block">
+                                                    <div class="sub-menu-img">
+                                                        <a href="shop.html">
+                                                            <img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+                                                                alt="Xpoge">
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="level">
+                                    <a href="#" class="nav-link">Juniors</a>
+                                </li>
+
+
+
+
+                                <li class="level dropdown">
+                                    <span class="opener plus"><i class="bi bi-chevron-down"
+                                            style="color:white"></i></span>
+                                    <a href="#" class="nav-link">Combos</a>
+                                    <div class="megamenu full mobile-sub-menu">
+                                        <div class="megamenu-inner-top">
+                                            <div class="row sub-menu-level1">
+                                                <div class="col-lg-3 level2 ">
+                                                    <ul class="sub-menu-level2">
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Jeans
+                                                                & Jeggings</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+                                                        </li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+                                                        </li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Tops
+                                                                & Shirts</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Winter
+                                                                Wear</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Jeans
+                                                                & Jeggings</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-lg-3 level2">
+                                                    <ul class="sub-menu-level2">
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Jeans
+                                                                & Jeggings</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+                                                        </li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+                                                        </li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Tops
+                                                                & Shirts</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Winter
+                                                                Wear</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Jeans
+                                                                & Jeggings</a></li>
+                                                    </ul>
+                                                </div>
+
+
+
+                                                <div class="col-lg-6 mt-30 d-none d-lg-block">
+                                                    <div class="sub-menu-img">
+                                                        <a href="shop.html">
+                                                            <img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+                                                                alt="Xpoge">
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+
+
+
+                                <li class="level dropdown">
+                                    <span class="opener plus"><i class="bi bi-chevron-down"
+                                            style="color:white"></i></span>
+                                    <a href="#" class="nav-link">Bottoms</a>
+                                    <div class="megamenu full mobile-sub-menu">
+                                        <div class="megamenu-inner-top">
+                                            <div class="row sub-menu-level1">
+                                                <div class="col-lg-3 level2 ">
+                                                    <ul class="sub-menu-level2">
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Jeans
+                                                                & Jeggings</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+                                                        </li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+                                                        </li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Tops
+                                                                & Shirts</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Winter
+                                                                Wear</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Jeans
+                                                                & Jeggings</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-lg-3 level2">
+                                                    <ul class="sub-menu-level2">
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Jeans
+                                                                & Jeggings</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+                                                        </li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+                                                        </li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Tops
+                                                                & Shirts</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Winter
+                                                                Wear</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Jeans
+                                                                & Jeggings</a></li>
+                                                    </ul>
+                                                </div>
+
+
+
+                                                <div class="col-lg-6 mt-30 d-none d-lg-block">
+                                                    <div class="sub-menu-img">
+                                                        <a href="shop.html">
+                                                            <img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+                                                                alt="Xpoge">
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+
+
+                                <li class="level dropdown">
+                                    <span class="opener plus"><i class="bi bi-chevron-down"
+                                            style="color:white"></i></span>
+                                    <a href="#" class="nav-link">HANDBAGS</a>
+                                    <div class="megamenu full mobile-sub-menu">
+                                        <div class="megamenu-inner-top">
+                                            <div class="row sub-menu-level1">
+                                                <div class="col-lg-3 level2 ">
+                                                    <ul class="sub-menu-level2">
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Jeans
+                                                                & Jeggings</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+                                                        </li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+                                                        </li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Tops
+                                                                & Shirts</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Winter
+                                                                Wear</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Jeans
+                                                                & Jeggings</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-lg-3 level2">
+                                                    <ul class="sub-menu-level2">
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Jeans
+                                                                & Jeggings</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
+                                                        </li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
+                                                        </li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Tops
+                                                                & Shirts</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Winter
+                                                                Wear</a></li>
+                                                        <li class="level3"><a href="shop.html"><span>■</span>Jeans
+                                                                & Jeggings</a></li>
+                                                    </ul>
+                                                </div>
+
+
+
+                                                <div class="col-lg-6 mt-30 d-none d-lg-block">
+                                                    <div class="sub-menu-img">
+                                                        <a href="shop.html">
+                                                            <img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
+                                                                alt="Xpoge">
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+
+                            <div class="newsletter-input-1 newsletter-input  destop  mt-3 " style="width: 100%;">
+                                <form>
+                                    <div class="form-group m-0">
+                                        <input type="text" placeholder="Search Products  .. " required=" ">
+                                    </div>
+                                    <button type="submit" class="btn  btn--1"> <i class="bi bi-search"
+                                            style="color: #c68fa6;"></i></button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </header>
+        <!-- Header end -->
+
+        <!-- Product list contant start -->
+        <div class="contant" style="margin-top: 162px;">
+            <div id="banner-part" class="banner inner-banner">
+                <div class="container">
+                    <div class="bread-crumb-main">
+                        <h1 class="banner-title">Order Completed</h1>
+                        <div class="breadcrumb">
+                            <ul class="inline">
+                                <li><a href="#">Home</a>
+                                </li>
+                                <li>Order Completed</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- Product list contant end -->
+
+
+
+
+
+
+
+
+
+
+    <div class="section">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-md-8">
+
+                    <div class="text-center order_complete">
+
+                        <i class="fas fa-check-circle" style="color: green;"></i>
+
+                        <div class="heading_s1">
+
+                            <h3>Your order is succesfully placed!</h3>
+
+                        </div>
+
+                        <p>Thank you for your order! Your order is being processed and will be completed within 3-6
+                            hours. You will receive an email confirmation when your order is successfully placed.</p>
+
+                        <a href="my-account.html" class="btn btn-fill-out">View Order</a>
+
+                        <a href="all_Product.html" class="btn btn-fill-out">Continue Shopping</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- Newslatter section start -->
+    <section class="newsletter-section align-center ptb-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-7 col-lg-9 col-12">
+                    <div class="newsletter-title">
+                        <h2 class="main_title">Sign up for Newsletter </h2>
+                        <p>Wants to get latest updates! sign up for Free </p>
+                    </div>
+                    <div class="newsletter-input">
+                        <form>
+                            <div class="form-group m-0">
+                                <input type="email" placeholder="Your email address" required="">
+                            </div>
+                            <button type="submit" class="btn btn-color"><span class="d-none d-sm-block">Subscribe</span>
+                                <i class="fa fa-send d-block d-sm-none"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Newslatter section end -->
+
+    <!-- Footer section start -->
+    <footer class="footer-part">
+        <div class="container">
+            <div class="footer-top ptb-100">
+                <div class="mb_-30">
+                    <div class="row">
+                        <div class="col-12 col-lg-3 col-md-6">
+                            <div class="footer-about mb-sm-30">
+                                <div class="footer-logo">
+                                    <a href="index.html">
+                                        <img src="assets/img/Poshida Logo (2)_page-0001.jpg" alt="logo">
+                                    </a>
+                                </div>
+                                <p class="footer-p">Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed
+                                    fringilla mauris sit amet nibh mauris sit amet nibh. Donec sodales sagittis</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 col-md-6">
+                            <div class="footer-static-block">
+                                <span class="opener plus"></span>
+                                <h3 class="head-three">Information</h3>
+                                <ul class="footer-menu footer-block-contant">
+                                    <li><a href="contact.html">Contact
+                                            Us</a></li>
+                                    <li><a href="javascript:void(0)">Brands</a></li>
+                                    <li><a href="blog-right-col.html">Blog</a>
+                                    </li>
+                                    <li><a href="javascript:void(0)">Returns</a></li>
+                                    <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 col-md-6">
+                            <div class="footer-static-block">
+                                <span class="opener plus"></span>
+                                <h3 class="head-three">My Account</h3>
+                                <ul class="footer-menu footer-block-contant">
+                                    <li><a href="javascript:void(0)">Order History</a></li>
+                                    <li><a href="#">Wish
+                                            List</a></li>
+                                    <li><a href="javascript:void(0)">Newsletter</a></li>
+                                    <li><a href="javascript:void(0)">Specials</a></li>
+                                    <li><a href="javascript:void(0)">Gift Certificates</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 col-md-6">
+                            <div class="footer-static-block">
+                                <span class="opener plus"></span>
+                                <h3 class="head-three">Contact us</h3>
+                                <div class="contact-box footer-block-contant">
+                                    <ul>
+                                        <li>
+                                            <div class="contact-thumb">
+                                                <img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/address-icon.svg"
+                                                    alt="xpoge">
+                                            </div>
+                                            <div class="contact-box-detail">
+                                                <p>869 Lexington Ave, New York, NY 10065, USA</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="contact-thumb">
+                                                <img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/phone-icon.svg"
+                                                    alt="xpoge">
+                                            </div>
+                                            <div class="contact-box-detail">
+                                                <p>+91 123 456 789 0</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="contact-thumb">
+                                                <img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/mail-icon.svg"
+                                                    alt="xpoge">
+                                            </div>
+                                            <div class="contact-box-detail">
+                                                <p>xpoge@hi123.com</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom align-center">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="w-100">
+                            <p class="mb-0"><a href="#" target="_blank" title="TemplatesCoder"></a></p>
+                            <!-- <p class="mb-0">© Xpoge all Rights Reserverd theme by <a href="https://templatescoder.com/"
+									target="_blank" title="TemplatesCoder">TemplatesCoder</a></p> -->
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="social-media">
+                            <ul>
+                                <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </footer>
+    <div class="container-fluid mobilebottom" style="position:sticky; bottom: 0;background:#f2f2f2;z-index: 9999;"
+        id="footerCount">
+
+
+        <div class="row text-center">
+            <div class="col-6 p-2" style="border-right: 2px solid #dee2e6 ;">
+                <a href="#" data-target="#sortby" data-toggle="modal" data-bs-dismiss="modal"> <img
+                        src="https://www.tiarastore.co.in/assets\frontend\images\sort.png"> SORT BY</a>
+            </div>
+            <div class="col-6 p-2">
+                <a href="#" data-target="#filter" data-toggle="modal" data-bs-dismiss="modal"> <img
+                        src="https://www.tiarastore.co.in/assets\frontend\images\filter.png"> FILTER</a>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <div class="modal subscribe_popup show" id="sortby" tabindex="-1" style="display: none;" aria-modal="true"
+        role="dialog">
+        <div class="modal-dialog modal-lg  m-0 modal-dialog12" role="document"
+            style="width: 100%; min-width: -webkit-fill-available;">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="ion-ios-close-empty"></i></span>
+                    </button>
+                    <div class="row no-gutters">
+                        <div class="col-sm-12">
+                            <div class="popup_content">
+                                <div class="popup-text">
+                                    <div class="heading_s1">
+                                        <h6>Sort by price</h6>
+                                    </div>
+                                </div>
+                                <ul style="list-style-type: none;">
+                                    <li style="padding:15px 0px; border-bottom: 2px solid rgb(235, 232, 232);"> <a
+                                            href="javascript:;" onclick="soryBy('ASC')">Sort by price: Low to High</a>
+                                    </li>
+                                    <li style="padding:15px 0px; border-bottom: 2px solid rgb(235, 232, 232);"> <a
+                                            href="javascript:;" onclick="soryBy('DESC')">Sort by price: High to Low</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="modal subscribe_popup show" id="filter" tabindex="-1"
+        style="z-index: 100321; overflow: hidden; display: none;" aria-modal="true" role="dialog">
+
+
+        <div class="modal-dialog modal-lg modal-dialog-top m-0" role="document" style="max-width: 100%;">
+            <div class="modal-content" style="top: 0;">
+                <div class="modal-body text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="ion-ios-close-empty"></i></span>
+                    </button>
+                    <h6 style="padding-top: 10px;font-size: 12px;">
+                        FILTER</h6>
+                    <div class="row no-gutters">
+                        <div class="col-sm-12" style="margin-top:-15px;">
+                            <div class="popup_content" style="padding: 0px 0px ;">
+                                <div class="row mt-2" style="margin-right: 0px; 
+								margin-left: 0px;">
+                                    <div class="col-6 fdghddf">
+                                        <a href="#" class="btn df">CLEAR ALL</a>
+                                    </div>
+                                    <div class="col-6 fdghddf">
+                                        <a href="#" class="btn  df">APPLY</a>
+                                    </div>
+                                </div>
+                                <form action="#" id="applyFilteronMobile" method="get" enctype="multipart/form-data">
+                                    <div class="row">
+                                        <div class="col-4"
+                                            style="border-right: 2px solid rgb(240, 238, 238); min-height: 100vh;">
+                                            <ul class="nav nav-tabs visitedcolor" role="tablist"
+                                                style="display: block; border-bottom: 0px;">
+
+
+                                                <div class="list-group" id="list-tab" role="tablist">
+                                                    <a class=" active" id="list-home-list" data-toggle="list"
+                                                        href="#list-home" role="tab" aria-controls="home">Price</a>
+                                                    <a id="list-profile-list" data-toggle="list" href="#list-profile"
+                                                        role="tab" aria-controls="profile">Types</a>
+                                                    <a id="list-messages-list" data-toggle="list" href="#list-messages"
+                                                        role="tab" aria-controls="messages">Brand</a>
+                                                    <a id="list-settings-list" data-toggle="list" href="#list-settings"
+                                                        role="tab" aria-controls="settings">Color</a>
+
+
+                                                </div>
+
+                                            </ul>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="tab-content shop_info_tab" style="margin-top:5px;">
+                                                <div class="tab-pane show active" id="list-home" role="tabpanel"
+                                                    aria-labelledby="price-tab">
+                                                    <div class="row float-right mr-2 classk" style="margin-top:20px;">
+                                                        <a class="btn btn-color dcxc small btn-filter  me-3  mb-20"
+                                                            href="#"><i class="fa fa-close"></i><span class="hn">Clear
+                                                                all</span></a>
+
+                                                        <a class="btn btn-color dcxc small btn-filter  me-3  mb-20"
+                                                            href="#"><i class="fa-solid fa-check"
+                                                                style="    font-family: 'FontAwesome';"></i><span
+                                                                class="hn">
+                                                                Select all</span></a>
+                                                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    <div class="filter_price hrtf   " style="    position: absolute;
+													width: 100%;
+													top: 96px;">
+                                                        <div id="price_filter22"
+                                                            class="reset-price ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                                                            data-min="0" data-max="5000" data-min-value="1000"
+                                                            data-max-value="2500" data-price-sign="₹">
+                                                            <div class="ui-slider-range ui-corner-all ui-widget-header"
+                                                                style="left: 20%; width: 30%;"></div><span tabindex="0"
+                                                                class="ui-slider-handle ui-corner-all ui-state-default"
+                                                                style="left: 20%;"></span><span tabindex="0"
+                                                                class="ui-slider-handle ui-corner-all ui-state-default"
+                                                                style="left: 50%;"></span>
+                                                        </div>
+                                                        <div class="price_range">
+                                                            <span> <span id="flt_price22">₹1000 - ₹2500</span></span>
+                                                            <input type="hidden" id="price_first22" name="minprice">
+                                                            <input type="hidden" id="price_second22" name="maxprice">
+                                                            <input type="hidden" id="sort_byWeb" name="sort_by">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="list-profile" role="tabpanel"
+                                                    aria-labelledby="size-tab">
+                                                    <div class="row float-right mr-2 classk" style="margin-top:20px;">
+                                                        <a class="btn btn-color dcxc small btn-filter  me-3  mb-20"
+                                                            href="#"><i class="fa fa-close"></i><span class="hn">Clear
+                                                                all</span></a>
+
+                                                        <a class="btn btn-color dcxc small btn-filter  me-3  mb-20"
+                                                            href="#"><i class="fa-solid fa-check"
+                                                                style="    font-family: 'FontAwesome';"></i><span
+                                                                class="hn">
+                                                                Select all</span></a>
+                                                    </div>
+                                                    <ul class="list_brand "
+                                                        style="text-align: left;max-height:87vh;overflow:auto; width: 100%;">
+                                                        <li>
+                                                            <div class="custome-checkbox">
+                                                                <input class="form-check-input sizeCheck"
+                                                                    type="checkbox" name="size[]" id="size17" value="7">
+                                                                <label class="form-check-label" for="size17"><span>Top
+                                                                        (05)</span></label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="custome-checkbox">
+                                                                <input class="form-check-input sizeCheck"
+                                                                    type="checkbox" name="size[]" id="size8" value="8">
+                                                                <label class="form-check-label"
+                                                                    for="size8"><span>T-shirt </span></label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="custome-checkbox">
+                                                                <input class="form-check-input sizeCheck"
+                                                                    type="checkbox" name="size[]" id="size19" value="9">
+                                                                <label class="form-check-label" for="size19"><span>Shirt
+                                                                    </span></label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="custome-checkbox">
+                                                                <input class="form-check-input sizeCheck"
+                                                                    type="checkbox" name="size[]" id="sie10" value="10">
+                                                                <label class="form-check-label" for="sie10"><span>Jeans
+                                                                    </span></label>
+                                                            </div>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                                <div class="tab-pane fade" id="list-messages" role="tabpanel"
+                                                    aria-labelledby="color-tab">
+                                                    <div class="row float-right mr-2 classk" style="margin-top:20px;">
+                                                        <a class="btn btn-color dcxc small btn-filter  me-3  mb-20"
+                                                            href="#"><i class="fa fa-close"></i><span class="hn">Clear
+                                                                all</span></a>
+
+                                                        <a class="btn btn-color dcxc small btn-filter  me-3  mb-20"
+                                                            href="#"><i class="fa-solid fa-check"
+                                                                style="    font-family: 'FontAwesome';"></i><span
+                                                                class="hn">
+                                                                Select all</span></a>
+                                                    </div>
+                                                    <ul class="list_brand mt-4"
+                                                        style="text-align: left;max-height:87vh;overflow:auto;">
+                                                        <li>
+                                                            <div class="custome-checkbox">
+                                                                <input class="form-check-input sizeCheck"
+                                                                    type="checkbox" name="size[]" id="sie7" value="7">
+                                                                <label class="form-check-label" for="sie7"><span>John
+                                                                        Players
+                                                                    </span></label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="custome-checkbox">
+                                                                <input class="form-check-input sizeCheck"
+                                                                    type="checkbox" name="size[]" id="size118"
+                                                                    value="8">
+                                                                <label class="form-check-label"
+                                                                    for="size118"><span>Here&Now
+                                                                    </span></label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="custome-checkbox">
+                                                                <input class="form-check-input sizeCheck"
+                                                                    type="checkbox" name="size[]" id="size1119"
+                                                                    value="9">
+                                                                <label class="form-check-label"
+                                                                    for="size1119"><span>Roadster </span></label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="custome-checkbox">
+                                                                <input class="form-check-input sizeCheck"
+                                                                    type="checkbox" name="size[]" id="size1110"
+                                                                    value="10">
+                                                                <label class="form-check-label"
+                                                                    for="size1110"><span>Puma
+                                                                    </span></label>
+                                                            </div>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                                <div class="tab-pane fade" id="list-settings" role="tabpanel"
+                                                    aria-labelledby="11-tab">
+                                                    <div class="row float-right mr-2 classk" style="margin-top:20px;">
+                                                        <a class="btn btn-color dcxc small btn-filter  me-3  mb-20"
+                                                            href="#"><i class="fa fa-close"></i><span class="hn">Clear
+                                                                all</span></a>
+
+                                                        <a class="btn btn-color dcxc small btn-filter  me-3  mb-20"
+                                                            href="#"><i class="fa-solid fa-check"
+                                                                style="    font-family: 'FontAwesome';"></i><span
+                                                                class="hn">
+                                                                Select all</span></a>
+                                                    </div>
+                                                    <ul class="list_brand product_color_switch mt-4"
+                                                        style="text-align: left;max-height:65vh;overflow:auto; width: 100%;">
+                                                        <li>
+                                                            <div class="custome-checkbox">
+                                                                <input class="form-check-input clearcolor colorCheck"
+                                                                    type="checkbox" name="color[]" id="color1128"
+                                                                    value="128">
+                                                                <label class="form-check-label " for="color1128"> <span
+                                                                        data-color="#125a87"
+                                                                        style="background-color: rgb(18, 90, 135);"></span>French
+                                                                    Blue</label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="custome-checkbox">
+                                                                <input class="form-check-input clearcolor colorCheck"
+                                                                    type="checkbox" name="color[]" id="color715"
+                                                                    value="75">
+                                                                <label class="form-check-label " for="color715"> <span
+                                                                        data-color="#2554c7"
+                                                                        style="background-color: rgb(37, 84, 199);"></span>Sapphire
+                                                                    BLue</label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="custome-checkbox">
+                                                                <input class="form-check-input clearcolor colorCheck"
+                                                                    type="checkbox" name="color[]" id="color1117"
+                                                                    value="17">
+                                                                <label class="form-check-label " for="color1117"> <span
+                                                                        data-color="#808080"
+                                                                        style="background-color: rgb(128, 128, 128);"></span>Gray</label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="custome-checkbox">
+                                                                <input class="form-check-input clearcolor colorCheck"
+                                                                    type="checkbox" name="color[]" id="color412"
+                                                                    value="2">
+                                                                <label class="form-check-label " for="color412"> <span
+                                                                        data-color="#800000"
+                                                                        style="background-color: rgb(128, 0, 0);"></span>Maroon</label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="custome-checkbox">
+                                                                <input class="form-check-input clearcolor colorCheck"
+                                                                    type="checkbox" name="color[]" id="color145"
+                                                                    value="15">
+                                                                <label class="form-check-label " for="color145"> <span
+                                                                        data-color="#cc338b"
+                                                                        style="background-color: rgb(204, 51, 139);"></span>Magenta</label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="custome-checkbox">
+                                                                <input class="form-check-input clearcolor colorCheck"
+                                                                    type="checkbox" name="color[]" id="color14436"
+                                                                    value="136">
+                                                                <label class="form-check-label " for="color14436"> <span
+                                                                        data-color="#00796f"
+                                                                        style="background-color: rgb(0, 121, 111);"></span>Pine
+                                                                    green</label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="custome-checkbox">
+                                                                <input class="form-check-input clearcolor colorCheck"
+                                                                    type="checkbox" name="color[]" id="color6418"
+                                                                    value="68">
+                                                                <label class="form-check-label " for="color6418"> <span
+                                                                        data-color="#f09090"
+                                                                        style="background-color: rgb(240, 144, 144);"></span>Sea
+                                                                    Pink</label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="custome-checkbox">
+                                                                <input class="form-check-input clearcolor colorCheck"
+                                                                    type="checkbox" name="color[]" id="color104143"
+                                                                    value="103">
+                                                                <label class="form-check-label " for="color104143">
+                                                                    <span data-color="#b8dbb8"
+                                                                        style="background-color: rgb(184, 219, 184);"></span>MINT
+                                                                    GREEN</label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="custome-checkbox">
+                                                                <input class="form-check-input clearcolor colorCheck"
+                                                                    type="checkbox" name="color[]" id="color34116"
+                                                                    value="36">
+                                                                <label class="form-check-label " for="color34116"> <span
+                                                                        data-color="#fffaf0"
+                                                                        style="background-color: rgb(255, 250, 240);"></span>Off
+                                                                    White</label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="custome-checkbox">
+                                                                <input class="form-check-input clearcolor colorCheck"
+                                                                    type="checkbox" name="color[]" id="color11435"
+                                                                    value="135">
+                                                                <label class="form-check-label " for="color11435"> <span
+                                                                        data-color="#14d2cf"
+                                                                        style="background-color: rgb(20, 210, 207);"></span>Tiffany
+                                                                    Blue</label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="custome-checkbox">
+                                                                <input class="form-check-input clearcolor colorCheck"
+                                                                    type="checkbox" name="color[]" id="colo44r7"
+                                                                    value="7">
+                                                                <label class="form-check-label " for="colo44r7"> <span
+                                                                        data-color="#000000"
+                                                                        style="background-color: rgb(0, 0, 0);"></span>Black</label>
+                                                            </div>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Footer section end -->
+    </div>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="popup_content pl-0 pr-0 pt-0">
+
+                    <div class="row text-left">
+                        <div class="col-sm-12 text-center mb-5">
+
+                            <img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg" class="logo-imah-1">
+
+                        </div>
+                    </div>
+                    <div class="popup-text" style="padding-left: 50px;padding-right: 50px;">
+                        <div class="heading_s1">
+                            <h4 class="text-center">LOG IN TO CONTINUE</h4>
+                        </div>
+                    </div>
+                    <form method="post" action="javascript:void(0)" id="loginForm" enctype="multipart/form-data"
+                        style="padding-left: 50px;padding-right: 50px;">
+                        <div class="form-group">
+                            <input name="number" required="" type="text" id="loginPhone" class="form-control rounded-0"
+                                onkeypress="return isNumberKey(event)" maxlength="10" minlength="10"
+                                placeholder="Enter Your Number">
+                            <input type="hidden" id="loginverify" value="0" name="loginverify">
+                        </div>
+                        <div class="form-group hidden-OTP-field">
+                            <input name="OTP" id="loginOTP" class="form-control rounded-0" type="text"
+                                onkeypress="return isNumberKey(event)" maxlength="6" minlength="6"
+                                placeholder="Enter OTP">
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <p style="margin-bottom: 3px;">By Continuing, I agree to the <a
+                                        href="term-condition.html" style="color: #c68fa6;">Terms of use</a>
+                                    &amp; <a href="privacy_policy.html" style="color: #c68fa6;">Privacy
+                                        Policy</a></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-fill-out btn-block text-uppercase rounded-0 btn-color "
+                                type="submit">Submit</button>
+                        </div>
+
+
+
+                        <div class="text-center"><span class="mt-3">New Here?<a href="javascript:;" data-toggle="modal"
+                                    data-target="#exampleModalCenter2" style="color:#c68fa6;">&nbsp;Sign Up</a></span>
+                        </div>
+
+                    </form>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <div class="row no-gutters">
+                        <div class="col-sm-12">
+                            <div class="popup_content pl-0 pr-0 pt-0">
+
+                                <div class="row text-left">
+                                    <div class="col-sm-12 text-center mb-5">
+
+                                        <img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg"
+                                            class="logo-imah-1">
+
+                                    </div>
+                                </div>
+                                <div class="popup-text" style="padding-left: 50px;padding-right: 50px;">
+                                    <div class="heading_s1">
+                                        <h4 class="text-center">SIGN UP TO CONTINUE</h4>
+                                    </div>
+                                </div>
+                                <form method="post" action="javascript:void(0)" id="registerForm"
+                                    enctype="multipart/form-data" style="padding-left: 50px;padding-right: 50px;">
+                                    <div class="row">
+                                        <div class="form-group col-lg-6">
+                                            <input name="fname" required="" type="text" id="signinFname"
+                                                class="form-control rounded-0" placeholder="First Name">
+                                        </div>
+                                        <div class="form-group col-lg-6">
+                                            <input name="lname" required="" type="text" id="signinLname"
+                                                class="form-control rounded-0" placeholder="Last Name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input name="phone" required="" type="text" id="signinPhone"
+                                            class="form-control rounded-0" placeholder="Enter Phone Number"
+                                            onkeypress="return isNumberKey(event)" maxlength="10" minlength="10">
+                                        <input type="hidden" id="signinverify" value="0" name="signinverify">
+                                        <input type="hidden" id="signintype" value="0" name="signinverify">
+                                    </div>
+                                    <div class="form-group hidden-OTP-field">
+                                        <input name="otp" type="text" id="signinOTP" class="form-control rounded-0"
+                                            placeholder="Enter OTP">
+                                    </div>
+                                    <div class="container">
+                                        <div class="row">
+                                            <p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="#"
+                                                    style="color: #c68fa6;">Terms of use</a> &amp; <a href="#"
+                                                    style="color: #c68fa6;">Privacy Policy</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-fill-out btn-block  btn-color  text-uppercase rounded-0"
+                                            type="submit">Submit</button>
+                                    </div>
+                                    <div class="text-center"><span class="mt-3">Already have an Account?<a href="#"
+                                                data-target="#onload-popup1" data-toggle="modal" data-dismiss="modal"
+                                                style="color:#ed6f36;">&nbsp;Log In</a></span>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+    <script>
+        function hello() {
+            let element = document.getElementById("toggle");
+            element.classList.toggle("no");
+        }
+    </script>
+</body>

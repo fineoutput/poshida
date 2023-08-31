@@ -27,6 +27,15 @@
 		.wsws:hover{
            color: red !important;
 		}
+		.rating_wrap.d-flex {
+    margin-top: 18px;
+}
+
+		.review_author {
+    display: block;
+    color: #292b2c;
+    font-weight: 500;
+}
 
 
 		.spanpadding span {
@@ -136,7 +145,7 @@
 		<!-- Header start -->
 		<header id="header " style="    padding-bottom: 10px !important; ">
 
-			<div class="container position-r pb-3">
+			<div class="container position-r header-class  pb-3">
 				<div class="row m-0">
 					<div class="col-lg-4 col-md-3 col-3 p-0 " style="display: flex;
 						align-items: center;">
@@ -185,7 +194,7 @@
 										<ul class="link-dropdown-list">
 											<!-- <li> <span class="dropdown-title">Default welcome msg!</span> -->
 											<ul class="hrb">
-												<li><a href="my_profile.html" class="p-1">My Account </a></li>
+												<li><a href="my_order.html" class="p-1">My Account </a></li>
 												<li><a href="my_order.html" class="p-1">My Orders </a></li>
 
 												<li><a href="my_order.html" class="p-1" data-toggle="modal"
@@ -216,21 +225,7 @@
 							<a href="#"> <span> <small class="cart-notification">2</small> </span> </a>
 							<div class="cart-dropdown header-link-dropdown">
 								<ul class="cart-list link-dropdown-list">
-									<!-- <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
-										<figure> <a href="#" class="pull-left"> <img alt="Xpoge"
-													src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/1.jpg"></a>
-											<figcaption> <span><a href="#">Men's
-														Full Sleeves Collar Shirt</a></span>
-												<p class="cart-price">₹14.99</p>
-												<div class="product-qty">
-													<label>Qty:</label>
-													<div class="custom-qty">
-														<p>2</p>
-													</div>
-												</div>
-											</figcaption>
-										</figure>
-									</li> -->
+								
 									<li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
 										<figure> <a href="#" class="pull-left"> <img alt="Xpoge"
 													src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/2.jpg"></a>
@@ -245,6 +240,7 @@
 														<p class="m-0">2</p>
 													</div>
 												</div>
+											
 											</figcaption>
 										</figure>
 									</li>
@@ -272,13 +268,17 @@
 
 
 
-			<div id="toggle" class="no ">
+			<div id="toggle" class="no " style="margin-top: 10px;">
 				<form action="" class="toggil_form">
 					<div class="form-group m-0 sty">
-						<input type="text" placeholder="Search Products  .. " required="">
+						<input type="text" placeholder="Search Products  .. " required="" style="width: 100%;">
 					</div>
 					<button type="submit" class="btn " style="position: absolute;
-						right: 38px;     padding: 18px 3px;"> <i class="bi bi-search"></i></button>
+						right: 38px;     padding: 18px 3px;"> <i class="bi bi-search" style="position: relative;
+    align-items: center;
+    display: flex;
+    top: -12px;
+    right: -1px;"></i></button>
 				</form>
 			</div>
 
@@ -295,7 +295,14 @@
 							</button> -->
 						<div class="overlay"></div>
 						<div id="menu" class="navbar-collapse collapse">
+
 							<ul class="nav navbar-nav">
+								<div class="navbar-header dfghddgd">
+									<a class="navbar-brand page-scroll" href="index.html">
+										<img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg"
+											class="logo-imah-1">
+									</a>
+								</div>
 								<li class="level">
 									<a href="index.html" class="nav-link">Home</a>
 								</li>
@@ -366,31 +373,6 @@
 											<div class="row sub-menu-level1">
 												<div class="col-lg-3 level2 ">
 													<ul class="sub-menu-level2">
-														<li class="level3"><a href="shop.html"><span>■</span>Navy
-																Blazer</a></li>
-														<li class="level3"><a href="shop.html"><span>■</span>Sport
-																Jeans</a></li>
-														<li class="level3"><a href="shop.html"><span>■</span>Sleeveless
-																Shirt</a></li>
-														<li class="level3"><a
-																href="shop.html"><span>■</span>Trousers</a>
-														</li>
-													</ul>
-												</div>
-												<div class="col-lg-3 level2">
-													<ul class="sub-menu-level2 ">
-														<li class="level3"><a href="shop.html"><span>■</span>Purse</a>
-														</li>
-														<li class="level3"><a href="shop.html"><span>■</span>Sport
-																Shoes</a></li>
-														<li class="level3"><a href="shop.html"><span>■</span>Wallets</a>
-														</li>
-														<li class="level3"><a href="shop.html"><span>■</span>Belt</a>
-														</li>
-													</ul>
-												</div>
-												<div class="col-lg-3 level2">
-													<ul class="sub-menu-level2 ">
 														<li class="level3"><a href="shop.html"><span>■</span>Jeans
 																& Jeggings</a></li>
 														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
@@ -399,39 +381,40 @@
 														</li>
 														<li class="level3"><a href="shop.html"><span>■</span>Tops
 																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
 													</ul>
 												</div>
 												<div class="col-lg-3 level2">
-													<ul class="sub-menu-level2 ">
-														<li class="level3"><a
-																href="shop.html"><span>■</span>Sunglasses</a>
+													<ul class="sub-menu-level2">
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Skirts</a>
 														</li>
-														<li class="level3"><a href="shop.html"><span>■</span>Pocket
-																Watch</a></li>
-														<li class="level3"><a href="shop.html"><span>■</span>Gloves</a>
+														<li class="level3"><a href="shop.html"><span>■</span>Dresses</a>
 														</li>
-														<li class="level3"><a href="shop.html"><span>■</span>Socks</a>
-														</li>
+														<li class="level3"><a href="shop.html"><span>■</span>Tops
+																& Shirts</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Winter
+																Wear</a></li>
+														<li class="level3"><a href="shop.html"><span>■</span>Jeans
+																& Jeggings</a></li>
 													</ul>
 												</div>
-											</div>
-											<div class="row">
+
+
+
 												<div class="col-lg-6 mt-30 d-none d-lg-block">
 													<div class="sub-menu-img">
-														<a href="#">
+														<a href="shop.html">
 															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
 																alt="Xpoge">
 														</a>
 													</div>
 												</div>
-												<div class="col-lg-6 mt-30 d-none d-lg-block">
-													<div class="sub-menu-img">
-														<a href="#">
-															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner2.jpg"
-																alt="Xpoge">
-														</a>
-													</div>
-												</div>
+
 											</div>
 										</div>
 									</div>
@@ -487,7 +470,7 @@
 
 												<div class="col-lg-6 mt-30 d-none d-lg-block">
 													<div class="sub-menu-img">
-														<a href="#">
+														<a href="shop.html">
 															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
 																alt="Xpoge">
 														</a>
@@ -547,7 +530,7 @@
 
 												<div class="col-lg-6 mt-30 d-none d-lg-block">
 													<div class="sub-menu-img">
-														<a href="#">
+														<a href="shop.html">
 															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
 																alt="Xpoge">
 														</a>
@@ -606,7 +589,7 @@
 
 												<div class="col-lg-6 mt-30 d-none d-lg-block">
 													<div class="sub-menu-img">
-														<a href="#">
+														<a href="shop.html">
 															<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/drop_banner1.jpg"
 																alt="Xpoge">
 														</a>
@@ -618,74 +601,6 @@
 									</div>
 								</li>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-								<!-- <li class="level">
-										<a href="contact.html"
-											class="nav-link"> Contact Us</a>
-									</li> -->
-								<!-- <li class="level dropdown">
-										<span class="opener plus"><i class="bi bi-chevron-down"
-												style="color:white"></i></span>
-	
-										<a
-											href="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/blog-left-col.html">Blog</a>
-										<div class="megamenu mobile-sub-menu">
-											<div class="megamenu-inner-top">
-												<ul class="sub-menu-level1">
-													<li class="level2 ">
-														<ul class="sub-menu-level2">
-															<li class="level3"><a
-																	href="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/blog-left-col.html"><span>■</span>Blog
-																	Left-Sidebar</a></li>
-															<li class="level3"><a
-																	href="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/blog-right-col.html"><span>■</span>Blog
-																	Right-Sidebar</a></li>
-															<li class="level3"><a
-																	href="#"><span>■</span>Singal
-																	Blog</a></li>
-														</ul>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</li> -->
-								<!-- <li class="level dropdown">
-										<span class="opener plus"><i class="bi bi-chevron-down"
-												style="color:white"></i></span>
-	
-										<a href="#" class="nav-link">Pages</a>
-										<div class="megamenu mobile-sub-menu">
-											<div class="megamenu-inner-top">
-												<ul class="sub-menu-level1">
-													<li class="level2 ">
-														<ul class="sub-menu-level2">
-															<li class="level3"><a
-																	href="contact.html"><span>■</span>Contact</a></li>
-															<li class="level3"><a
-																	href="checkout.html"><span>■</span>Checkout</a></li>
-															<li class="level3"><a
-																	href="wishlist.html"><span>■</span>Wishlist</a></li>
-															<li class="level3"><a
-																	href="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/404.html"><span>■</span>404</a>
-															</li>
-														</ul>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</li> -->
 							</ul>
 
 
@@ -953,7 +868,7 @@
 						<div class="col-12">
 							<div id="tabs">
 								<ul class="nav nav-tabs">
-									<li><a class="tab-Description selected" title="Description">Description</a></li>
+									<li><a class="tab-Description selected" style="padding: 10px 0px;" title="Description">Description</a></li>
 									<!-- <li><a class="tab-Tags" title="Tags">Product Tags</a></li> -->
 									<!-- <li><a class="tab-Review" title="Review">Review</a></li> -->
 								</ul>
@@ -1076,13 +991,114 @@
 					<div class="row">
 						<div class="col-12">
 							<div id="tabs">
-								<ul class="nav nav-tabs">
-									<li><a class="tab-Description selected" title="Description">Review</a></li>
-									
+								<ul class="nav nav-tabs" style="display: flex; justify-content: space-between;">
+									<li><a class="tab-Description selected" style="padding: 10px 0px;"  title="Description">Review</a></li>
+									<li><a class="tab-Description selected" title="Description"> View All</a></li>			
 								</ul>
 							</div>
 							<div id="items">
 								<div class="tab_content">
+									<div class="comment_block" style="border-bottom:  1px solid rgb(215, 214, 214);">
+										<div class="rating_wrap d-flex" style="justify-content: space-between; " >
+											<div>
+												<p class="customer_meta">
+													<span class="review_author">Grace Wong</span> <br>
+													<span class="comment-date"> <i>June 17, 2018 </i> </span>
+												</p>
+											</div>
+											<div>
+												<div class="star_rating">
+													<i class="fa fa-star" style="color: #f68a03;;"></i>
+													<i class="fa fa-star" style="color: #f68a03;;"></i>
+													<i class="fa fa-star" style="color: #f68a03;;"></i>
+													<i class="fa fa-star" style="color: #f68a03;;"></i>
+													<i class="fa fa-star" style="color: #f68a03;;"></i>
+												</div>
+											</div>
+										</div>
+										
+										<div class="description" style=" text-align: justify;">
+											<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+										</div>
+									</div>
+
+
+									<div class="comment_block" style="border-bottom:  1px solid rgb(215, 214, 214);">
+										<div class="rating_wrap d-flex" style="justify-content: space-between; " >
+											<div>
+												<p class="customer_meta">
+													<span class="review_author">Grace Wong</span> <br>
+													<span class="comment-date"> <i>June 17, 2018 </i> </span>
+												</p>
+											</div>
+											<div>
+												<div class="star_rating">
+													<i class="fa fa-star" style="color: #f68a03;;"></i>
+													<i class="fa fa-star" style="color: #f68a03;;"></i>
+													<i class="fa fa-star" style="color: #f68a03;;"></i>
+													<i class="fa fa-star" style="color: #f68a03;;"></i>
+													<i class="fa fa-star" style="color: #f68a03;;"></i>
+												</div>
+											</div>
+										</div>
+										
+										<div class="description" style=" text-align: justify;">
+											<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+										</div>
+									</div>
+
+
+									<div class="comment_block" style="border-bottom:  1px solid rgb(215, 214, 214);">
+										<div class="rating_wrap d-flex" style="justify-content: space-between; " >
+											<div>
+												<p class="customer_meta">
+													<span class="review_author">Grace Wong</span> <br>
+													<span class="comment-date"> <i>June 17, 2018 </i> </span>
+												</p>
+											</div>
+											<div>
+												<div class="star_rating">
+													<i class="fa fa-star" style="color: #f68a03;;"></i>
+													<i class="fa fa-star" style="color: #f68a03;;"></i>
+													<i class="fa fa-star" style="color: #f68a03;;"></i>
+													<i class="fa fa-star" style="color: #f68a03;;"></i>
+													<i class="fa fa-star" style="color: #f68a03;;"></i>
+												</div>
+											</div>
+										</div>
+										
+										<div class="description" style=" text-align: justify;">
+											<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+										</div>
+									</div>
+
+
+									<div class="comment_block" style="border-bottom:  1px solid rgb(215, 214, 214);">
+										<div class="rating_wrap d-flex" style="justify-content: space-between; " >
+											<div>
+												<p class="customer_meta">
+													<span class="review_author">Grace Wong</span> <br>
+													<span class="comment-date"> <i>June 17, 2018 </i> </span>
+												</p>
+											</div>
+											<div>
+												<div class="star_rating">
+													<i class="fa fa-star" style="color: #f68a03;;"></i>
+													<i class="fa fa-star" style="color: #f68a03;;"></i>
+													<i class="fa fa-star" style="color: #f68a03;;"></i>
+													<i class="fa fa-star" style="color: #f68a03;;"></i>
+													<i class="fa fa-star" style="color: #f68a03;;"></i>
+												</div>
+											</div>
+										</div>
+										
+										<div class="description" style=" text-align: justify;">
+											<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+										</div>
+									</div>
+									
+
+									
 									<ul>
 										<li>
 											<div class="items-Description selected">

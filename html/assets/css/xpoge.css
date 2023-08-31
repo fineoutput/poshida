@@ -3581,7 +3581,7 @@ div#footerCount .row .col-2.text-center.mt-2.p-0 {
 
 
 .sty {
-	width: 92%;
+	width: 100%;
 }
 
 .form-group.m-0.sty input[type="search"] {
@@ -4010,7 +4010,7 @@ img.logo-imah-1.qwd {
 	.owl-carousel .owl-nav button[class*="owl-"], .owl-carousel .owl-nav button[class*="owl-"].disabled:hover {
 		background: #efefef;
 		position: absolute;
-		top: 45864% !important;
+		top: 40%;
 		text-align: center;
 		width: 47px;
 		height: 46px;
