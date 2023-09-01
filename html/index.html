@@ -15,6 +15,7 @@
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/xpoge.css">
 	<link rel="stylesheet" href="assets/css/responsive.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -26,9 +27,6 @@
 
 </head>
 <style>
-	.banner-1{
-		margin-top: 170px;
-	}
 	.witbgt {
 		width: 100% !important;
 	}
@@ -83,7 +81,14 @@
 		.mobilebottom {
 			display: none;
 		}
+		.banner {
+			margin-top: 90px;}
 	}
+
+
+	
+
+
 
 
 	@media only screen and (max-width: 991px) {
@@ -94,23 +99,11 @@
 		}
 
 	}
-	@media only screen and (max-width: 768px) {
-		
-		.banner-1{
-		margin-top: 0px !important;
-	}
-	.banner {
-    margin-top: 90px !important;
-}
-	}
 
 	@media only screen and (max-width: 767px) {
 		.d-scs{
 			display: block !important;
 		}
-		.banner-1{
-		margin-top: 0px !important;
-	}
 	}
 	@media only screen and (max-width: 758px) {
 		.banner {
@@ -163,7 +156,7 @@
 						<div class="newsletter-input-1 newsletter-input mob  " style="width: 70%;">
 							<form>
 								<div class="form-group m-0">
-									<input type="text" placeholder="Search Products  .. " required="">
+									<input type="search" placeholder="Search Products  .. " required="">
 								</div>
 								<button type="submit" class="btn  btn--1"> <i class="bi bi-search"
 										style="color: #c68fa6;"></i></button>
@@ -199,7 +192,7 @@
 
 
 
-								<li class="account-icon heig" style="position: inherit;">
+								<li class="account-icon heig show-icon" style="position: inherit;">
 									<a href="#"><span></span></a>
 									<div class="header-link-dropdown account-link-dropdown">
 										<ul class="link-dropdown-list">
@@ -225,14 +218,7 @@
 
 
 
-
-
-
-
-
-
-
-						<li class="cart-icon heig ">
+						<li class="cart-icon heig show-icon ">
 							<a href="#"> <span> <small class="cart-notification">2</small> </span> </a>
 							<div class="cart-dropdown header-link-dropdown">
 								<ul class="cart-list link-dropdown-list">
@@ -251,7 +237,6 @@
 														<p class="m-0">2</p>
 													</div>
 												</div>
-											
 											</figcaption>
 										</figure>
 									</li>
@@ -266,7 +251,7 @@
 								</div>
 							</div>
 						</li>
-						<li class="cart-icon  heig dx">
+						<li class="cart-icon  heig show-icon dx">
 							<a href="wishlist.html"> <span> <small class="cart-notification">2</small> </span> </a>
 
 						</li>
@@ -279,17 +264,13 @@
 
 
 
-			<div id="toggle" class="no " style="margin-top: 10px;">
+			<div id="toggle" class="no ">
 				<form action="" class="toggil_form">
 					<div class="form-group m-0 sty">
-						<input type="text" placeholder="Search Products  .. " required="" style="width: 100%;">
+						<input type="search" placeholder="Search Products  .. " required="">
 					</div>
 					<button type="submit" class="btn " style="position: absolute;
-						right: 38px;     padding: 18px 3px;"> <i class="bi bi-search" style="position: relative;
-    align-items: center;
-    display: flex;
-    top: -12px;
-    right: -1px;"></i></button>
+						right: 38px;     padding: 18px 3px;"> <i class="bi bi-search"></i></button>
 				</form>
 			</div>
 
@@ -618,7 +599,7 @@
 							<div class="newsletter-input-1 newsletter-input  destop  mt-3 " style="width: 100%;">
 								<form>
 									<div class="form-group m-0">
-										<input type="text" placeholder="Search Products  .. " required=" ">
+										<input type="email" placeholder="Search Products  .. " required=" ">
 									</div>
 									<button type="submit" class="btn  btn--1"> <i class="bi bi-search"
 											style="color: #c68fa6;"></i></button>
@@ -683,14 +664,29 @@
 
 	<section id="banner-part" class="menu-section pb-100">
 		<div class="banner  owl-loaded owl-drag main-banner owl-carousel main-baner ">
-			<div class="banner-1 ">
+			<div class="banner-1 bhbh" >
 
 
 				<img class="d-none d-md-block " src="assets/img/banner1.jpg" alt="Xpoge">
 				<img class="d-block d-md-none fb" src="assets/img/138.jpg" alt="Xpoge">
-				
+				<div class="banner-detail">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<!-- <div class="banner-detail-inner">
+											<span class="subtitle1">Women Style</span>
+											<h1 class="banner-title">Big sale</h1>
+											<div class="subtitle2">
+												<span class="part1">Summer</span>
+												<span class="part2">Collection</span>
+											</div>
+										</div> -->
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="banner-2 banner-1">
+			<div class="banner-2 bhbh " >
 
 
 				<img class="d-none d-md-block" src="assets/img/banner2.jpg" alt="Xpoge">
@@ -725,7 +721,7 @@
 
 
 
-	<section class="product-section pb-100 nb">
+	<section class="product-section pb-100">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -738,7 +734,7 @@
 			<div class="position-r mb-5">
 				<div class="row">
 					<div class="product-slider owl-carousel position-initial">
-						<div class="item">
+						<div class="item wow bounceInLeft">
 							<div class="product-item">
 								<div class="product-image">
 									<div class="sale-label"><span>Sale</span></div>
@@ -780,7 +776,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="item">
+						<div class="item wow bounceInRight">
 							<div class="product-item">
 								<div class="product-image">
 									<a href="product-page.html">
@@ -821,7 +817,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="item">
+						<div class="item wow bounceInLeft">
 							<div class="product-item">
 								<div class="product-image">
 									<div class="new-label"><span>New</span></div>
@@ -863,7 +859,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="item">
+						<div class="item wow bounceInRight">
 							<div class="product-item">
 								<div class="product-image">
 									<a href="product-page.html">
@@ -1025,7 +1021,7 @@
 			<div class="row">
 
 				<div class="col-lg-3 col-4 col-md-4 p-0">
-					<div class="sub-banner-box mb-0">
+					<div class="sub-banner-box wow bounceInLeft mb-0">
 						<a href="shop.html">
 							<img class=" witbgt" src="assets/img/sub.jpg" alt="Xpoge">
 
@@ -1035,7 +1031,7 @@
 
 
 				<div class="col-lg-3 col-4 col-md-4 p-0">
-					<div class="sub-banner-box mb-0">
+					<div class="sub-banner-box wow bounceInLeft mb-0">
 						<a href="shop.html">
 							<img class=" witbgt" src="assets/img/sub1.jpg" alt="Xpoge">
 
@@ -1045,7 +1041,7 @@
 
 
 				<div class="col-lg-3 col-4 col-md-4 p-0">
-					<div class="sub-banner-box mb-0">
+					<div class="sub-banner-box wow bounceInLeft mb-0">
 						<a href="shop.html">
 							<img class=" witbgt" src="assets/img/sub2.jpg" alt="Xpoge">
 
@@ -1054,7 +1050,7 @@
 				</div>
 
 				<div class="col-lg-3 col-4 col-md-4 p-0">
-					<div class="sub-banner-box mb-0">
+					<div class="sub-banner-box wow bounceInLeft mb-0">
 						<a href="shop.html">
 							<img class="witbgt" src="assets/img/sub4.jpg" alt="Xpoge">
 
@@ -1063,7 +1059,7 @@
 				</div>
 
 				<div class="col-lg-3 col-4 col-md-4 p-0">
-					<div class="sub-banner-box mb-0">
+					<div class="sub-banner-box wow bounceInLeft mb-0">
 						<a href="shop.html">
 							<img class=" witbgt" src="assets/img/sub.jpg" alt="Xpoge">
 
@@ -1073,7 +1069,7 @@
 
 
 				<div class="col-lg-3 col-4 col-md-4 p-0">
-					<div class="sub-banner-box mb-0">
+					<div class="sub-banner-box wow bounceInLeft mb-0">
 						<a href="shop.html">
 							<img class=" witbgt" src="assets/img/sub1.jpg" alt="Xpoge">
 
@@ -1083,7 +1079,7 @@
 
 
 				<div class="col-lg-3 col-4 col-md-4 p-0">
-					<div class="sub-banner-box mb-0">
+					<div class="sub-banner-box wow bounceInLeft mb-0">
 						<a href="shop.html">
 							<img class=" witbgt" src="assets/img/sub2.jpg" alt="Xpoge">
 
@@ -1092,7 +1088,7 @@
 				</div>
 
 				<div class="col-lg-3 col-4 col-md-4 p-0">
-					<div class="sub-banner-box mb-0">
+					<div class="sub-banner-box wow bounceInLeft mb-0">
 						<a href="shop.html">
 							<img class="witbgt" src="assets/img/sub4.jpg" alt="Xpoge">
 
@@ -1100,7 +1096,7 @@
 					</div>
 				</div>
 				<div class="col-lg-3 col-4 col-md-4 p-0">
-					<div class="sub-banner-box mb-0">
+					<div class="sub-banner-box wow bounceInRight mb-0">
 						<a href="shop.html">
 							<img class="witbgt" src="assets/img/sub5.jpg" alt="Xpoge">
 
@@ -1109,7 +1105,7 @@
 				</div>
 
 				<div class="col-lg-3 col-4 col-md-4 p-0">
-					<div class="sub-banner-box mb-0">
+					<div class="sub-banner-box wow bounceInRight mb-0">
 						<a href="shop.html">
 							<img class="witbgt" src="assets/img/sub6.jpg" alt="Xpoge">
 
@@ -1117,7 +1113,7 @@
 					</div>
 				</div>
 				<div class="col-lg-3 col-4 col-md-4 p-0">
-					<div class="sub-banner-box mb-0">
+					<div class="sub-banner-box wow bounceInRight mb-0">
 						<a href="shop.html">
 							<img class="witbgt" src="assets/img/sub4.jpg" alt="Xpoge">
 
@@ -1125,7 +1121,7 @@
 					</div>
 				</div>
 				<div class="col-lg-3 col-4 col-md-4 p-0">
-					<div class="sub-banner-box mb-0">
+					<div class="sub-banner-box wow bounceInRight mb-0">
 						<a href="shop.html">
 							<img class="witbgt" src="assets/img/sub.jpg" alt="Xpoge">
 
@@ -1152,7 +1148,7 @@
 
 
 
-	<section class="pb-100 " >
+	<section class="pb-100 " data-aos="fade-right">
 		<div>
 			<img src="assets/img/banner3.jpg" alt="">
 		</div>
@@ -1174,7 +1170,7 @@
 
 
 
-	<section class="product-section pb-100 nb"  >
+	<section class="product-section pb-100">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -1305,7 +1301,7 @@
 
 
 
-	<section class="product-section pb-100 nb gggrege" >
+	<section class="product-section pb-100">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -2198,10 +2194,9 @@
 			<div class="modal-content">
 
 				<div class="popup_content pl-0 pr-0 pt-0">
-
-					<button type="button" class="close p-3" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					  </button>
+					<button type="button" class="close p-2" data-dismiss="modal" aria-label="Close">
+														<span aria-hidden="true">×</span>
+													  </button>
 
 					<div class="row text-left">
 						<div class="col-sm-12 text-center mb-2">
@@ -2210,7 +2205,7 @@
 
 						</div>
 					</div>
-					<div class="popup-text" style="padding-left: 50px;padding-right: 50px;">
+					<div class="popup-text" style="padding-left: 20px;padding-right: 20px;">
 						<div class="heading_s1">
 							<h4 class="text-center">LOG IN TO CONTINUE</h4>
 						</div>
@@ -2229,15 +2224,15 @@
 								placeholder="Enter OTP">
 						</div>
 						<div class="container">
-							<div class="row " style="justify-content: center;">
+							<div class="row">
 								<p style="margin-bottom: 3px;">By Continuing, I agree to the <a
 										href="term-condition.html" style="color: #c68fa6;">Terms of use</a>
 									&amp; <a href="privacy_policy.html" style="color: #c68fa6;">Privacy
 										Policy</a></p>
 							</div>
 						</div>
-						<div class="form-group mt-2">
-							<button class="btn btn-fill-out btn-block text-uppercase rounded-0 btn-color "
+						<div class="form-group">
+							<button class="btn btn-fill-out btn-block text-uppercase mt-2 rounded-0 btn-color " style="padding: 14px 18px;"
 								type="submit">Submit</button>
 						</div>
 
@@ -2261,15 +2256,12 @@
 			<div class="modal-content">
 
 				<div class="modal-body">
-
-
-					<button type="button" class="close p-3" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					  </button>
-
 					<div class="row no-gutters">
 						<div class="col-sm-12">
 							<div class="popup_content pl-0 pr-0 pt-0">
+								<button type="button" class="close p-2" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">×</span>
+								  </button>
 
 								<div class="row text-left">
 									<div class="col-sm-12 text-center mb-2">
@@ -2279,7 +2271,7 @@
 
 									</div>
 								</div>
-								<div class="popup-text" style="padding-left: 50px;padding-right: 50px;">
+								<div class="popup-text" style="padding-left: 20px;padding-right: 20px;">
 									<div class="heading_s1">
 										<h4 class="text-center">SIGN UP TO CONTINUE</h4>
 									</div>
@@ -2308,14 +2300,14 @@
 											placeholder="Enter OTP">
 									</div>
 									<div class="container">
-										<div class="row" style="justify-content: center;">
+										<div class="row">
 											<p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="#"
 													style="color: #c68fa6;">Terms of use</a> &amp; <a href="#"
 													style="color: #c68fa6;">Privacy Policy</a></p>
 										</div>
 									</div>
-									<div class="form-group mt-2">
-										<button class="btn btn-fill-out btn-block  btn-color  text-uppercase rounded-0"
+									<div class="form-group">
+										<button class="btn btn-fill-out btn-block  btn-color  mt-2 text-uppercase rounded-0" style="padding: 14px 18px; "
 											type="submit">Submit</button>
 									</div>
 									<div class="text-center"><span class="mt-3">Already have an Account?<a href="#"
@@ -2368,6 +2360,10 @@
 			element.classList.toggle("no");
 		}
 	</script>
+	<script src="assets/js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+		</script>
 </body>
 
 

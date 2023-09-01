@@ -1186,7 +1186,9 @@ input[type="radio"] {
 .cart-dropdown .cart-price {
 	font-weight: 600;
 }
-
+.bhbh {
+    margin-top: 82px !important;
+}
 .account-link-dropdown {
 	width: 280px;
 }
@@ -3883,7 +3885,23 @@ img.logo-imah-1.qwd {
 	.gbgb {
 		display: none;
 	}
+	.show-icon{
 
+        display: block !important;
+
+    }
+
+    .header-right-link ul{
+
+        display: flex !important;
+
+    }
+
+    .header-right-link ul li:nth-child(2){
+
+        display: none !important;
+
+    }
 
 }
 

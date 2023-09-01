@@ -255,7 +255,7 @@ td:not(:first-child) {
 						<div class="newsletter-input-1 newsletter-input mob  " style="width: 70%;">
 							<form>
 								<div class="form-group m-0">
-									<input type="text" placeholder="Search Products  .. " required="">
+									<input type="search" placeholder="Search Products  .. " required="">
 								</div>
 								<button type="submit" class="btn  btn--1"> <i class="bi bi-search"
 										style="color: #c68fa6;"></i></button>
@@ -291,7 +291,7 @@ td:not(:first-child) {
 
 
 
-								<li class="account-icon heig" style="position: inherit;">
+								<li class="account-icon heig show-icon" style="position: inherit;">
 									<a href="#"><span></span></a>
 									<div class="header-link-dropdown account-link-dropdown">
 										<ul class="link-dropdown-list">
@@ -317,14 +317,7 @@ td:not(:first-child) {
 
 
 
-
-
-
-
-
-
-
-						<li class="cart-icon heig ">
+						<li class="cart-icon heig show-icon ">
 							<a href="#"> <span> <small class="cart-notification">2</small> </span> </a>
 							<div class="cart-dropdown header-link-dropdown">
 								<ul class="cart-list link-dropdown-list">
@@ -343,7 +336,6 @@ td:not(:first-child) {
 														<p class="m-0">2</p>
 													</div>
 												</div>
-											
 											</figcaption>
 										</figure>
 									</li>
@@ -358,7 +350,7 @@ td:not(:first-child) {
 								</div>
 							</div>
 						</li>
-						<li class="cart-icon  heig dx">
+						<li class="cart-icon  heig show-icon dx">
 							<a href="wishlist.html"> <span> <small class="cart-notification">2</small> </span> </a>
 
 						</li>
@@ -371,17 +363,13 @@ td:not(:first-child) {
 
 
 
-			<div id="toggle" class="no " style="margin-top: 10px;">
+			<div id="toggle" class="no ">
 				<form action="" class="toggil_form">
 					<div class="form-group m-0 sty">
-						<input type="text" placeholder="Search Products  .. " required="" style="width: 100%;">
+						<input type="search" placeholder="Search Products  .. " required="">
 					</div>
 					<button type="submit" class="btn " style="position: absolute;
-						right: 38px;     padding: 18px 3px;"> <i class="bi bi-search" style="position: relative;
-    align-items: center;
-    display: flex;
-    top: -12px;
-    right: -1px;"></i></button>
+						right: 38px;     padding: 18px 3px;"> <i class="bi bi-search"></i></button>
 				</form>
 			</div>
 
@@ -710,7 +698,7 @@ td:not(:first-child) {
 							<div class="newsletter-input-1 newsletter-input  destop  mt-3 " style="width: 100%;">
 								<form>
 									<div class="form-group m-0">
-										<input type="text" placeholder="Search Products  .. " required=" ">
+										<input type="email" placeholder="Search Products  .. " required=" ">
 									</div>
 									<button type="submit" class="btn  btn--1"> <i class="bi bi-search"
 											style="color: #c68fa6;"></i></button>
@@ -1214,7 +1202,7 @@ td:not(:first-child) {
 
 						<div class="check-box">
 							<span>
-								<input type="radio" class="checkbox" id="different-addres"
+								<input type="radio" class="checkbox"  id="different-addres"
 									name="Ship to a different address?">
 								<label for="different-addres" class="mb-0">Online
 									Payment</label>
@@ -1225,7 +1213,7 @@ td:not(:first-child) {
 
 				<div class="col-12 col-md-12  dsgsdcvsd trasition-csm" id="sticks"
 					style="padding: 10px;  border-top:  1px solid gainsboro;">
-					<button class="btn full btn-color">Place order</button>
+					<button class="btn full btn-color"> <a href="order-complete.html" style="color: white;">Place order </a></button>
 				</div>
 
 
@@ -1383,21 +1371,24 @@ td:not(:first-child) {
 			<div class="modal-content">
 
 				<div class="popup_content pl-0 pr-0 pt-0">
+					<button type="button" class="close p-2" data-dismiss="modal" aria-label="Close">
+														<span aria-hidden="true">×</span>
+													  </button>
 
 					<div class="row text-left">
-						<div class="col-sm-12 text-center mb-5">
+						<div class="col-sm-12 text-center mb-2">
 
-							<img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg" class="logo-imah-1">
+							<img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg" class="logo-imah-1 qwd">
 
 						</div>
 					</div>
-					<div class="popup-text" style="padding-left: 50px;padding-right: 50px;">
+					<div class="popup-text" style="padding-left: 20px;padding-right: 20px;">
 						<div class="heading_s1">
 							<h4 class="text-center">LOG IN TO CONTINUE</h4>
 						</div>
 					</div>
 					<form method="post" action="javascript:void(0)" id="loginForm" enctype="multipart/form-data"
-						style="padding-left: 50px;padding-right: 50px;">
+						style="padding-left: 20px;padding-right: 20px;">
 						<div class="form-group">
 							<input name="number" required="" type="text" id="loginPhone" class="form-control rounded-0"
 								onkeypress="return isNumberKey(event)" maxlength="10" minlength="10"
@@ -1418,7 +1409,7 @@ td:not(:first-child) {
 							</div>
 						</div>
 						<div class="form-group">
-							<button class="btn btn-fill-out btn-block text-uppercase rounded-0 btn-color "
+							<button class="btn btn-fill-out btn-block text-uppercase mt-2 rounded-0 btn-color " style="padding: 14px 18px;"
 								type="submit">Submit</button>
 						</div>
 
@@ -1445,22 +1436,25 @@ td:not(:first-child) {
 					<div class="row no-gutters">
 						<div class="col-sm-12">
 							<div class="popup_content pl-0 pr-0 pt-0">
+								<button type="button" class="close p-2" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">×</span>
+								  </button>
 
 								<div class="row text-left">
-									<div class="col-sm-12 text-center mb-5">
+									<div class="col-sm-12 text-center mb-2">
 
 										<img alt="xpoge" src="assets/img/Poshida Logo (2)_page-0001.jpg"
-											class="logo-imah-1">
+											class="logo-imah-1 qwd">
 
 									</div>
 								</div>
-								<div class="popup-text" style="padding-left: 50px;padding-right: 50px;">
+								<div class="popup-text" style="padding-left: 20px;padding-right: 20px;">
 									<div class="heading_s1">
 										<h4 class="text-center">SIGN UP TO CONTINUE</h4>
 									</div>
 								</div>
 								<form method="post" action="javascript:void(0)" id="registerForm"
-									enctype="multipart/form-data" style="padding-left: 50px;padding-right: 50px;">
+									enctype="multipart/form-data" style="padding-left: 20px;padding-right: 20px;">
 									<div class="row">
 										<div class="form-group col-lg-6">
 											<input name="fname" required="" type="text" id="signinFname"
@@ -1490,7 +1484,7 @@ td:not(:first-child) {
 										</div>
 									</div>
 									<div class="form-group">
-										<button class="btn btn-fill-out btn-block  btn-color  text-uppercase rounded-0"
+										<button class="btn btn-fill-out btn-block  btn-color  mt-2 text-uppercase rounded-0" style="padding: 14px 18px; "
 											type="submit">Submit</button>
 									</div>
 									<div class="text-center"><span class="mt-3">Already have an Account?<a href="#"
@@ -1508,6 +1502,7 @@ td:not(:first-child) {
 			</div>
 		</div>
 	</div>
+
 	<!-- Footer section end -->
 	</div>
 	<script src="assets/js/jquery-3.4.1.min.js"></script>
