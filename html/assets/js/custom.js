@@ -22,12 +22,18 @@ $(function () {
     }
 
 
-    if ($(this).scrollTop() > 800) {
+    if ($(this).scrollTop() > 800) {  //placeOrder Checkout.html Page
       $("#sticks").removeClass("dsgsdcvsd");
 
-    } else {
+    } if ($(this).scrollTop() > 850) {  //placeOrder Checkout.html Page
+      $("#addCartFav").removeClass("stickyAdClass");
+
+    } 
+     else {
       $("header").removeClass("header-fixed");
       $("#sticks").addClass("dsgsdcvsd");
+      $("#addCartFav").addClass("stickyAdClass");
+
 
     }
   });

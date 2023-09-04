@@ -1,0 +1,46 @@
+@media (max-width:640px) {
+    .stickyAdClass{
+        position: fixed;
+        bottom: 0px;
+        z-index: 99;
+        width: 100%;
+        text-align: center;
+        left: 0;
+        /* background: #fff; */
+        padding: 10px 0;
+    }
+    .wishlist-icon{
+        display: none !important;
+    }
+    .product-details-btn ul{
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+       
+    }
+    .wishlist-heart{
+        display: block !important;
+    }
+    .fav-icon-heart{
+        display: none !important;
+    }
+
+   
+}
+.product-details-btn ul{
+    display: flex;
+    align-items: center;
+
+   
+}
+.product-details-btn{
+    transition: all 0.8s;
+}
+
+@media (min-width: 641px) and (max-width: 1400px) {
+    .wishlist-heart{
+        display: none !important ;
+    }
+}
+
+
