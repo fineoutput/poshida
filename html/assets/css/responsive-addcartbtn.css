@@ -64,8 +64,8 @@
 
    
 }
-.product-details-btn{
-    transition: all 0.8s;
+.product-details-btn ul{
+    transition: width linear 0.8s;
 }
 
 @media (min-width: 641px) and (max-width: 1400px) {

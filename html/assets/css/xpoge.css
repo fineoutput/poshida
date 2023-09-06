@@ -5,43 +5,7 @@
 @import url("../css/glass-case.css");
 
 
-/* 
 
-* Google Fonts
-
-* BASIC STYLE
-  - General Style    
-  - Headings Style    
-  - Button Style    
-  - Form Style    
-  - Spacer Style
-  - Table Style
-
-* HEADER
-
-* CONTANT
-  - Banner Style
-  - Services Features section
-  - Product section
-  - Testimonial section
-  - Brand-slider
-  - Blog section
-  - Newslatter section
-  - Contact section
-  - Breadcrumb CSS
-  - Sorting CSS
-  - Sidebar CSS
-  - Product Page
-  - Blog Page
-  - Blog Detail Page
-  - Checkout Page
-
-* FOOTERtype
-*/
-
-/*_______________________________________________________
-// BASIC STYLE  //----------------------------
-_______________________________________________________*/
 
 /* - Google Fonts //---------------- */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap');
@@ -3703,7 +3667,9 @@ img.logo-imah-1.qwd {
 }
 
 
-
+.matgin-image{
+	margin: 0px !important;
+}
 
 
 
@@ -3983,6 +3949,11 @@ img.logo-imah-1.qwd {
 	td.margin-respon.icone-red {
 		text-align: end !important;
 	}
+	a.btn.btn-color{
+
+			padding: 12px 18px !important;
+	}
+	
 }
 
 @media(max-width:548px) {
