@@ -2422,7 +2422,10 @@ _______________________________________________________*/
 	margin: 3px 0px 0;
 	padding: 0 5px;
 }
-
+.cart-dropdown.header-link-dropdown ul.cart-list.link-dropdown-list {
+    max-height: 174px;
+    min-height: 162px;
+}
 .list-types.grid {
 	border-right: 1px solid #dedede;
 }
