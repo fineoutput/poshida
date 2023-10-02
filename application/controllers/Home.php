@@ -20,8 +20,6 @@ class Home extends CI_Controller
     //=============================================== Index ==============================================================
     public function index()
     {
-        $this->load->view('index');
-        return;
         if (!empty($this->session->userdata('user_type'))) {
             if ($this->session->userdata('user_type') == 2) {
                 $user_type = 1;
