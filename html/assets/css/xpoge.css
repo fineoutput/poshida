@@ -2403,9 +2403,7 @@ _______________________________________________________*/
 	content: '';
 }
 
-/* Breadcrumb CSS end */
 
-/* - Sorting CSS //---------------- */
 .shorting {
 	background: #f5f5f5;
 	padding: 15px;
@@ -2488,7 +2486,7 @@ _______________________________________________________*/
 	font-size: 14px;
 }
 
-.pagination-bar {}
+
 
 .pagination-bar ul {
 	display: inline-flex;
@@ -4122,4 +4120,47 @@ img.logo-imah-1.qwd {
 	.contant {
 		margin-top: 97px !important;
 	}
+}
+
+
+@media(max-width:574px){
+	.cart-dropdown.header-link-dropdown{
+		right: 0px !important;
+	}
+}
+
+@media(max-width:385px){
+	.cart-dropdown.header-link-dropdown{
+		right: 42px !important;
+		width: 288px !important;
+	}
+	.cart-dropdown.header-link-dropdown .mt-20.d-flex.justify-content-center a.btn-color.btn {
+		padding: 10px 18px !important;
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 575px){
+.ptb-100 {
+ 
+    padding-bottom: 0px !important;
+}
+.position-r.mb-5{
+	margin-bottom:  0px  !important;
+}
+}
+
+
+
+.owl-carousel .owl-nav button[class*="owl-"], .owl-carousel .owl-nav button[class*="owl-"].disabled:hover {
+    background: #efefef;
+    position: absolute;
+    top: 44%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+}
+.testimonial-main .client-detail{
+	width: 94%;
 }
