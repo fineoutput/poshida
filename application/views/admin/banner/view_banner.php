@@ -12,7 +12,7 @@
   <section class="content">
     <div class="row">
       <div class="col-lg-12">
-        <!-- <a class="btn custom_btn" href="<?php echo base_url() ?>dcadmin/banner/add_banner" role="button" style="margin-bottom:12px;"> Add banner</a> -->
+        <a class="btn custom_btn" href="<?php echo base_url() ?>dcadmin/banner/add_banner" role="button" style="margin-bottom:12px;"> Add banner</a>
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title"><i class="fa fa-money fa-fw"></i>View Banner</h3>
@@ -44,7 +44,7 @@
                       <th>Image</th>
                       <!-- <th>Image2</th> -->
                       <th>Link</th>
-                      <!-- <th>Link-2</th> -->
+                      <th>Sequence</th>
                       <th>Status</th>
                       <?if($this->session->userdata('position')!='Manager'){?>
                     <th>Action</th>
@@ -70,7 +70,7 @@
                         <?php } ?>
                       </td> -->
                       <td><?php echo $data->link ?> </td>
-                      <!-- <td><?php echo $data->link2 ?> </td> -->
+                      <td><?php echo $data->seq ?> </td>
 
 
                       <td><?php if ($data->is_active==1) { ?>

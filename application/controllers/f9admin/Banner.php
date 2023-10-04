@@ -58,11 +58,11 @@ class Banner extends CI_finecontrol
                 // print_r($this->input->post());
                 // exit;
                 $this->form_validation->set_rules('link', 'link', 'xss_clean|trim');
-                // $this->form_validation->set_rules('link2', 'link2', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('seq', 'seq', 'required|xss_clean|trim');
 
                 if ($this->form_validation->run()== true) {
                     $link=$this->input->post('link');
-                    // $link2=$this->input->post('link2');
+                    $seq=$this->input->post('seq');
 
                     $ip = $this->input->ip_address();
                     date_default_timezone_set("Asia/Calcutta");
@@ -110,7 +110,7 @@ class Banner extends CI_finecontrol
 
                         $data_insert = array(
                                                         'image'=>$image,
-                                                        // 'image2'=>$image2,
+                                                        'seq'=>$seq,
                                                     'link'=>$link,
                                                     // 'link2'=>$link2,
                                                     'ip' =>$ip,
@@ -182,7 +182,7 @@ class Banner extends CI_finecontrol
 
                         if (!empty($image)) {
                             $data_insert = array('link'=>$link,
-                            // 'link2'=>$link2,
+                            'seq'=>$seq,
                             'image'=>$image,
                             // 'image2'=>$image2,
 

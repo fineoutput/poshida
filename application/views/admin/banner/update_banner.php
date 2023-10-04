@@ -70,6 +70,12 @@
                         <input type="url" name="link" class="form-control" placeholder="" value="<?=$banner->link?>" />
                       </td>
                     </tr>
+                    <tr>
+                      <td> <strong>Sequence</strong> <span style="color:red;">*</span></strong> </td>
+                      <td>
+                        <input type="number" name="seq" class="form-control" placeholder="" required value="<?=$banner->seq?>" />
+                      </td>
+                    </tr>
                     <!-- <tr>
                       <td> <strong>Link-2</strong> <span style="color:red;">*</span></ strong>
                       </td>

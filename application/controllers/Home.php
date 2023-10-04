@@ -42,10 +42,8 @@ class Home extends CI_Controller
         $this->db->from('tbl_shop_by_category');
         $this->db->where('is_active', 1);
         $data['shop_by_category_data'] = $this->db->get();
-        $this->db->select('*');
-        $this->db->from('tbl_banner');
-        $this->db->where('is_active', 1);
-        $data['banner_data'] = $this->db->get();
+        $data['banner_data'] = $this->db->order_by('seq', 'asc')->get_where('tbl_banner', array('is_active' => 1))->result();
+
         $this->db->select('*');
         $this->db->from('tbl_product');
         $this->db->where('is_active', 1);
@@ -410,7 +408,7 @@ class Home extends CI_Controller
             $data['title'] = $returnarray['product_data'][0]->title;
             $data['keyword'] = $returnarray['product_data'][0]->keyword;
             $data['dsc'] = $returnarray['product_data'][0]->dsc;
-            $related_products = $this->products->related_products($url,$returnarray['product_data'][0]->category_id);
+            $related_products = $this->products->related_products($url, $returnarray['product_data'][0]->category_id);
             $buy_with_it = $this->products->buy_with_it($url);
             $product_reviews = $this->products->productReviews($url);
             $type_datas = $this->db->get_where('tbl_type', array('product_id = ' => $returnarray['product_data'][0]->id, 'is_active = ' => 1));

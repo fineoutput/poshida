@@ -156,50 +156,39 @@
 
   <!-- =========================== END WHATS NEW  =================================== -->
 
-  <!-- ======================= START SHOP BY CATEGORIES  ======================== -->
+  <!-- ======================= START FIRST BIG BANNER SECTION  ======================== -->
+  <section class="pb-100 " data-aos="fade-right">
+  	<div>
+  		<img src="<?= base_url() . $banner_data[0]->image ?>" alt="">
+  	</div>
+  </section>
+  <!-- ======================= END FIRST BIG BANNER SECTION  ======================== -->
+  <!-- ======================= START  BANNER SECTION  ======================== -->
 
   <div class="sub-banner-part pb-100">
   	<div class="container-fluid">
-  		<div class="col-12">
-  			<div class="heading-part text-center mb-30 mb-sm-20">
-  				<h2 class="main_title">Shop By Categories</h2>
-  			</div>
-  		</div>
   		<div class="row">
-  			<?php $i = 1;
-				foreach ($shop_by_category_data->result() as $category) { ?>
-  				<div class="col-lg-3 col-4 col-md-4 p-0">
-  					<div class="sub-banner-box wow bounceInLeft mb-0">
-  						<a href="<?= $category->link ?>">
-  							<img class=" witbgt" src="<?= base_url() . $category->image ?>" alt="<?= $category->name ?>" alt="Broken Image">
-  						</a>
+  			<?php $i = 0;
+				$a = 0;
+				$numItems = count($banner_data);
+				foreach ($banner_data as $key => $banner) {
+					if ($i != 0 && $i != ($numItems - 1) && $a <= 11) {
+				?>
+  					<div class="col-lg-3 col-4 col-md-4 p-0">
+  						<div class="sub-banner-box wow bounceInLeft mb-0">
+  							<a href="<?= $banner->link ?>">
+  								<img class=" witbgt" src="<?= base_url() . $banner->image ?>" alt="Broken Image">
+  							</a>
+  						</div>
   					</div>
-  				</div>
-  			<?php $i++;
+  			<?php $a++;
+					}
+					$i++;
 				} ?>
   		</div>
   	</div>
   </div>
-  <!-- ======================= END SHOP BY CATEGORIES  ======================== -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <section class="pb-100 " data-aos="fade-right">
-  	<div>
-  		<img src="<?= base_url() ?>assets/frontend/img/banner3.jpg" alt="">
-  	</div>
-  </section>
+  <!-- ======================= END BANNER SECTION  ======================== -->
 
 
   <!-- ======================= START SHOP BY CATEGORIES  ======================== -->
@@ -366,13 +355,39 @@
   <!-- ======================== END TRENDING PRODUCTS ====================== -->
 
 
-  <section class="pb-100">
+  <!-- ======================= START SECOND BIG BANNER SECTION  ======================== -->
+  <section class="pb-100 " data-aos="fade-right">
   	<div>
-  		<img src="<?= base_url() ?>assets/frontend/img/banner3.jpg" alt="">
+  		<img src="<?= base_url() . $banner_data[$numItems - 1]->image ?>" alt="">
   	</div>
   </section>
+  <!-- ======================= END SECOND BIG BANNER SECTION  ======================== -->
+  <!-- ======================= START  BANNER SECTION  ======================== -->
 
-
+  <div class="sub-banner-part pb-100">
+  	<div class="container-fluid">
+  		<div class="row">
+  			<?php $i = 0;
+				$a = 0;
+				$numItems = count($banner_data);
+				foreach ($banner_data as $key => $banner) {
+					if ($i != 0 && $i != ($numItems - 1) && $i > 11) {
+				?>
+  					<div class="col-lg-3 col-4 col-md-4 p-0">
+  						<div class="sub-banner-box wow bounceInLeft mb-0">
+  							<a href="<?= $banner->link ?>">
+  								<img class=" witbgt" src="<?= base_url() . $banner->image ?>" alt="Broken Image">
+  							</a>
+  						</div>
+  					</div>
+  			<?php $a++;
+					}
+					$i++;
+				} ?>
+  		</div>
+  	</div>
+  </div>
+  <!-- ======================= END BANNER SECTION  ======================== -->
   <!-- ======================== START TESTIMONIAL PRODUCTS ====================== -->
 
   <section class="testimonial-section position-r  pb-100">
@@ -449,9 +464,9 @@
   							<?php $i++;
 								} ?>
   						</div>
-						<div class="w-100 text-center">
-							<a href="<?= base_url() ?>Home/all_blogs" class="readmore-btn">View All Blogs</a>
-						</div>
+  						<div class="w-100 text-center">
+  							<a href="<?= base_url() ?>Home/all_blogs" class="readmore-btn">View All Blogs</a>
+  						</div>
   					</div>
   				</div>
   			</div>

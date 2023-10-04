@@ -12,25 +12,24 @@
   <section class="content">
     <div class="row">
       <div class="col-lg-12">
-
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Add New banner</h3>
           </div>
 
           <?php if (!empty($this->session->flashdata('smessage'))) { ?>
-          <div class="alert alert-success alert-dismissible">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            <h4><i class="icon fa fa-check"></i> Alert!</h4>
-            <?php echo $this->session->flashdata('smessage'); ?>
-          </div>
+            <div class="alert alert-success alert-dismissible">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <h4><i class="icon fa fa-check"></i> Alert!</h4>
+              <?php echo $this->session->flashdata('smessage'); ?>
+            </div>
           <?php }
-                                       if (!empty($this->session->flashdata('emessage'))) { ?>
-          <div class="alert alert-danger alert-dismissible">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            <h4><i class="icon fa fa-ban"></i> Alert!</h4>
-            <?php echo $this->session->flashdata('emessage'); ?>
-          </div>
+          if (!empty($this->session->flashdata('emessage'))) { ?>
+            <div class="alert alert-danger alert-dismissible">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <h4><i class="icon fa fa-ban"></i> Alert!</h4>
+              <?php echo $this->session->flashdata('emessage'); ?>
+            </div>
           <?php } ?>
 
 
@@ -59,12 +58,12 @@
                         <input type="url" name="link" class="form-control" placeholder="" value="" />
                       </td>
                     </tr>
-                    <!-- <tr>
-                      <td> <strong>Link-2</strong> <span style="color:red;">*</span></strong> </td>
+                    <tr>
+                      <td> <strong>Sequence</strong> <span style="color:red;">*</span></strong> </td>
                       <td>
-                        <input type="url" name="link2" class="form-control" placeholder=""required value="" />
+                        <input type="number" name="seq" class="form-control" placeholder="" required value="" />
                       </td>
-                    </tr> -->
+                    </tr>
                     <tr>
                       <td colspan="2">
                         <input type="submit" class="btn btn-success" value="save">

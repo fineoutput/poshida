@@ -235,8 +235,22 @@
 <script src="<?= base_url() ?>assets/frontend/js/owl.carousel.min.js"></script>
 <script src="<?= base_url() ?>assets/frontend/js/jquery.magnific-popup.min.js"></script>
 <script src="<?= base_url() ?>assets/frontend/js/custom.js"></script>
+<script src="<?= base_url() ?>assets/frontend/js/modernizr.js"></script>
 <script>
+  $(document).ready(function () {
+			//If your <ul> has the id "glasscase"
+			$('#glasscase').glassCase({
+				'thumbsPosition': 'bottom',
+				'widthDisplayPerc': 100,
+				isDownloadEnabled: false,
+			});
+
+		});
+    $(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		})
   AOS.init();
+  
 </script>
 
 
