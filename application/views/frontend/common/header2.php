@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/responsive-addcartbtn.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <style>
     .product-details-btn ul {
       display: flex;
@@ -602,7 +602,7 @@
           <div class="col-lg-4 col-md-6 col-6 p-0 position-initial icon-bar-center">
             <div class="right-side">
               <div class="navbar-header">
-                <a class="navbar-brand page-scroll" href="index.html">
+                <a class="navbar-brand page-scroll" href="<?= base_url() ?>">
                   <img alt="xpoge" src="<?= base_url() ?>assets/frontend/img/Poshida Logo (2)_page-0001.jpg" class="logo-imah-1">
                 </a>
               </div>
@@ -783,7 +783,7 @@
                             <div class="col-lg-3 mt-30 d-none d-lg-block matgin-image" style="display: flex !important;
 												justify-content: center;">
                               <div class="sub-menu-img" style="width: 80%;">
-                                <a href="shop.html">
+                                <a href="<?= base_url() ?>Home/all_products/<?= $category->url ?>/1">
                                   <img src="<?= base_url() . $category->image ?>" alt="Xpoge" style="width: 100%;">
                                 </a>
                               </div>
@@ -795,8 +795,8 @@
                   <?php $i++;
                   } ?>
 
-                  <li class="level dropdown"><a href="<?= base_url() ?>Home/all_blogs" class="nav-link">Blog</a></li>
-                  <li class="level dropdown"><a href="<?= base_url() ?>Home/contact" class="nav-link">Contact</a></li>
+                  <li class="level "><a href="<?= base_url() ?>Home/all_blogs" class="nav-link">Blog</a></li>
+                  <li class="level "><a href="<?= base_url() ?>Home/contact" class="nav-link">Contact</a></li>
 
                 </ul>
               </div>

@@ -328,7 +328,7 @@ if (!empty($this->session->userdata('user_data'))) {
                   $this->db->where('is_active', 1);
                   $subcategory_data = $this->db->get(); ?>
                   <li class="level dropdown">
-                    <a href="<?= base_url() ?>Home/all_products/<?= $category->url ?>/1"" class=" nav-link"><?= $category->name ?></a>
+                    <a href="<?= base_url() ?>Home/all_products/<?= $category->url ?>/1" class=" nav-link"><?= $category->name ?></a>
                     <span class="opener plus"><i class="bi bi-chevron-down" style="color:white"></i></span>
                     <div class="megamenu full mobile-sub-menu">
                       <div class="megamenu-inner-top">
@@ -360,7 +360,7 @@ if (!empty($this->session->userdata('user_data'))) {
                           <div class="col-lg-3 mt-30 d-none d-lg-block matgin-image" style="display: flex !important;
 												justify-content: center;">
                             <div class="sub-menu-img" style="width: 80%;">
-                              <a href="shop.html">
+                              <a href="<?= base_url() ?>Home/all_products/<?= $category->url ?>/1">
                                 <img src="<?= base_url() . $category->image ?>" alt="Xpoge" style="width: 100%;">
                               </a>
                             </div>
@@ -372,8 +372,8 @@ if (!empty($this->session->userdata('user_data'))) {
                 <?php $i++;
                 } ?>
 
-                <li class="level dropdown"><a href="<?= base_url() ?>Home/all_blogs" class="nav-link">Blog</a></li>
-                <li class="level dropdown"><a href="<?= base_url() ?>Home/contact" class="nav-link">Contact</a></li>
+                <li class="level "><a href="<?= base_url() ?>Home/all_blogs" class="nav-link">Blog</a></li>
+                <li class="level "><a href="<?= base_url() ?>Home/contact" class="nav-link">Contact</a></li>
 
               </ul>
             </div>
