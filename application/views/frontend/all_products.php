@@ -302,8 +302,7 @@
                                     }
                                   }
                                   if ($status == 0) {
-                                    array_push($size_arr, $size_data->id);
-                            ?>
+                                    array_push($size_arr, $size_data->id); ?>
                                     <li class="icon  cart-icon">
                                       <a href="<?= base_url() ?>Home/product_detail/<?= $data->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?></a>
                                     </li>
@@ -334,6 +333,7 @@
             </div>
           <? } ?>
         </div>
+
         <!-- ============= START PAGINATION ================== -->
         <div class="shorting center-md mb-3 p-1">
           <div class="row">
@@ -345,7 +345,7 @@
           </div>
         </div>
         <!-- ============= END PAGINATION ================== -->
-
+        
       </div>
     </div>
   </div>

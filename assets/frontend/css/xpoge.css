@@ -3922,10 +3922,10 @@ img.logo-imah-1.qwd {
 	td.margin-respon.icone-red {
 		text-align: end !important;
 	}
-	a.btn.btn-color{
+	/* a.btn.btn-color{
 
 			padding: 12px 18px !important;
-	}
+	} */
 	
 }
 
@@ -4111,3 +4111,12 @@ td:first-child {
 }}
 
 
+div#menu ul.nav.navbar-nav span.opener.plus{
+	top: 8px;
+}
+.megamenu.full.mobile-sub-menu .megamenu-inner-top .row.sub-menu-level1 .col-lg-5.level2 {
+    margin-bottom: 0px;
+}
+.megamenu.full.mobile-sub-menu .megamenu-inner-top .row.sub-menu-level1 .col-lg-3.mt-30.d-none.d-lg-block.matgin-image .sub-menu-img{
+	margin-bottom: 9px !important;
+}
