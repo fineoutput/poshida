@@ -181,11 +181,11 @@
                       <a href="javascript:void();"> <b><?= $cart['product_name'] ?></b></a>
                       <div class="d-flex">
                         <p style="margin-bottom: 5px !important;">Color</p>
-                        <p style="margin-bottom: 5px !important;">:<?= $cart['color'] ?></p>
+                        <p style="margin-bottom: 5px !important;">: <?= $cart['color'] ?></p>
                       </div>
                       <div class="d-flex">
                         <p style="margin-bottom: 5px !important;">Size</p>
-                        <p style="margin-bottom: 5px !important;">:<?= $cart['size'] ?></p>
+                        <p style="margin-bottom: 5px !important;">: <?= $cart['size'] ?></p>
                       </div>
                     </div>
                   </td>
