@@ -3527,19 +3527,16 @@ div#footerCount .row .col-2.text-center.mt-2.p-0 {
     padding-bottom: 0px !important;
 }
 
-
-
 .mkjmkj {
 	max-width: 40% !important;
 }
-
 
 .ann {
 	bottom: 0px;
 	position: absolute;
 	width: 111px;
 	left: -22px;
-	/* top: 49px; */
+
 	animation: hello 1.9s linear infinite alternate;
 }
 
@@ -3557,17 +3554,10 @@ div#footerCount .row .col-2.text-center.mt-2.p-0 {
 	justify-content: space-around;
 }
 
-/* 
-@keyframes hello {
-	to{
-		transform: translate(-10px);
-	}
-} */
+
 .blog-image1 {
 	width: 100% !important;
 }
-
-
 
 .sty {
 	width: 100%;
@@ -3578,22 +3568,18 @@ div#footerCount .row .col-2.text-center.mt-2.p-0 {
 	margin: 10px 0px;
 	border: none;
 	border: 1px solid #c5c5c5;
-	/* font-size: 17px; */
+	
 	padding: 7px;
 }
-
 
 .modal-dialog.modal-lg.m-0.modal-dialog12 {
 	position: fixed !important;
 	bottom: 0px;
 }
 
-
 ul.list_brand.mt-4 {
 	width: 100% !important;
 }
-
-
 
 form#applyFilteronMobile .row .col-4 ul.nav.nav-tabs.visitedcolor div#list-tab a {
 	padding: 14px;
@@ -3649,13 +3635,7 @@ a.btn.btn-color.small.btn-filter.me-3.mb-20 {
 
 
 
-
-
-
-
-
-
-/* KUNAL SONI */
+/* KUNAL SONI new css */
 
 .border-111{
 	border-bottom:  1px solid #d1d1d1;
@@ -3673,14 +3653,6 @@ img.logo-imah-1.qwd {
 .matgin-image{
 	margin: 0px !important;
 }
-
-
-
-
-
-
-
-
 
 .leave-rating {
 	width: auto;
@@ -3746,8 +3718,6 @@ img.logo-imah-1.qwd {
   figure img {
 	width: 8rem;
 	height: 8rem;
-	/* border-radius: 50%;
-	border: 1px solid #f05a00; */
 	margin-right: 1.5rem;
   }
   figure figcaption {
@@ -4124,5 +4094,20 @@ img.logo-imah-1.qwd {
 	}
 }
 
+
+
+
+/* kunal soni table css start */
+
+
+@media (max-width: 341px){
+	td:first-child {
+		top: 34% !important;
+	}	
+}
+@media (max-width: 435px){
+td:first-child {
+    top: 38% !important;
+}}
 
 

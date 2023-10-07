@@ -1,5 +1,137 @@
+
+<style>
+	.product-details-btn ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+	.table-users {
+		/* border: 1px solid #327a81; */
+		border-radius: 10px;
+		box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+		max-width: calc(100% - 2em);
+		margin: 1em auto;
+		overflow: hidden;
+		width: 800px;
+	}
+
+	table {
+		width: 100%;
+	}
+
+	table td,
+	table th {
+		/* color: #2b686e; */
+		padding: 10px;
+		border: 0px !important;
+	}
+
+	table td:last-child {
+		font-size: 0.95em;
+		line-height: 1.4;
+		text-align: left;
+	}
+
+
+
+
+
+	@media screen and (max-width: 700px) {
+
+		table,
+		tr,
+		td {
+			display: block;
+		}
+		.safee{
+			display: flex;
+			justify-content: center;
+		}
+
+		td:first-child {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+
+		}
+
+		td:not(:first-child) {
+			clear: both;
+			/* margin-left: 100px; */
+			padding: 4px 20px 4px 90px;
+			position: relative;
+			text-align: left;
+		}
+
+		td:not(:first-child):before {
+			/* color: #91ced4; */
+			content: '';
+			display: block;
+			left: 0;
+			position: absolute;
+		}
+
+
+		tr {
+			padding: 10px 0;
+			position: relative;
+		}
+
+		thead {
+			display: none;
+		}
+	}
+	@media (max-width: 768px){
+			.banner-21 {
+    height: 100%;
+    position: relative;
+    margin-top: 91px !important;
+         }
+		 .banner {
+    margin-top: 90px !important;
+}
+.contant {
+    margin-top: 90px !important;
+}
+.price-box span.price {
+    font-size: 17px !important;}
+		}  
+
+		
+		@media (max-width: 425px){
+			.banner {
+    margin-top: 99px !important;
+}
+.price-box span.price {
+    font-size: 17px !important;}
+		} 
+				
+		@media (max-width: 375px){
+			.banner {
+    margin-top: 91px !important;
+}
+.price-box span.price {
+    font-size: 17px !important;}
+		} 
+
+		@media (max-width: 320px){
+			.banner-21 {
+    height: 100%;
+    position: relative;
+    margin-top: 81px !important;
+}
+.price-box span.price {
+    font-size: 17px !important;}
+.banner {
+    margin-top: 80px !important;
+}
+		} 
+
+</style>
+
 <div class="contant refreshing">
   <!-- ================================== START SECTION BREADCRUMB =================== -->
+
   <div id="banner-part" class="banner inner-banner">
     <div class="container">
       <div class="bread-crumb-main">
@@ -14,6 +146,7 @@
       </div>
     </div>
   </div>
+
   <!-- ================================== END SECTION BREADCRUMB =================== -->
 
   <div class="ptb-100">
@@ -89,7 +222,7 @@
           <div class="row">
             <div class="col-12 safee">
               <div class="right-side float-none-xs">
-                <h5>Total : ₹<?=$sub_total?></h5>
+                <h5>Total : ₹<?= $sub_total ?></h5>
                 <? if (!empty($this->session->userdata('user_data'))) { ?>
                   <a href="javascript:void(0)" onclick="call_calculate()" class="btn btn-color">Proceed to checkout
                     <span><i class="fa fa-angle-right"></i></span>
@@ -97,8 +230,8 @@
                 <? } else { ?>
                   <a href="checkout.html" class="btn btn-color">Proceed to checkout
                     <span><i class="fa fa-angle-right"></i></span>
-                    </a>
-                  <? } ?>
+                  </a>
+                <? } ?>
               </div>
             </div>
           </div>
@@ -110,4 +243,5 @@
       </div>
     <? } ?>
   </div>
-  </div>
+
+</div>
