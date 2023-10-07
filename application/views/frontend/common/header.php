@@ -23,7 +23,7 @@
   <!-- icon -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+  <script src="<?= base_url() ?>assets/frontend/js/bootstrap-notify.min.js"></script>
 
 
 </head>
@@ -194,7 +194,7 @@ if (!empty($this->session->userdata('user_data'))) {
           <div class="col-lg-4 col-md-3 col-3 p-0 icon-bar" style="display: flex;
 						align-items: center;">
             <div class="header-right-link">
-              <ul>
+              <ul id="headerCount">
                 <li class="search-box  search_box " onclick="hello()">
                   <a href="#"><span></span></a>
                 </li>
@@ -240,12 +240,12 @@ if (!empty($this->session->userdata('user_data'))) {
                   <? if (!empty($headerMiniCart['cart_data'])) { ?>
                     <ul class="cart_list">
                       <? foreach ($headerMiniCart['cart_data'] as $miniCart) { ?>
-                        <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
-                          <figure> <a href="javascript:;" class="pull-left"> <img alt="Xpoge" src="<?= $miniCart['image'] ?>"></a>
+                        <li> <a href="javascript:void(0);" product_id="<?= base64_encode($miniCart['product_id']) ?>" type_id="<?= base64_encode($miniCart['type_id']) ?>" onclick="deleteCart(this)" class="close-cart"><i class="fa fa-times-circle"></i></a>
+                          <figure> <a href="javascript:void(0);" class="pull-left"> <img alt="Xpoge" src="<?= $miniCart['image'] ?>"></a>
                             <figcaption> <span><a href="#"><?= $miniCart['product_name'] ?></a></span>
                               <p class="cart-price m-0">₹<?= $miniCart['price'] ?></p>
-                              <p class="m-0"> Color : Red</p>
-                              <p class="m-0">Size : XXL</p>
+                              <!-- <p class="m-0"> Color : Red</p>
+                              <p class="m-0">Size : XXL</p> -->
                               <div class="product-qty">
                                 <label>Qty:</label>
                                 <div class="custom-qty">

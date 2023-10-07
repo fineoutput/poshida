@@ -299,7 +299,11 @@
                   </div>
                 </div>
                 <!-- ========= END COLORS============= -->
-
+                <? if ($this->session->userdata('user_type') == 2) {
+                  $minQty = $type_data[0]->reseller_min_qty;
+                } else {
+                  $minQty = 1;
+                } ?>
                 <!-- ========= START QUANTITY ============= -->
 
                 <div class="col-12">

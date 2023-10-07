@@ -263,9 +263,52 @@
 <script src="<?= base_url() ?>assets/frontend/js/jquery.magnific-popup.min.js"></script>
 <script src="<?= base_url() ?>assets/frontend/js/custom.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Alert Notification js -->
+<script src="<?= base_url() ?>assets/frontend/customJS/notificationMessage.js"></script>
+<!-- Login Signup js -->
+<script src="<?= base_url() ?>assets/frontend/customJS/loginSignup.js"></script>
+<!-- Cart functions js -->
+<script src="<?= base_url() ?>assets/frontend/customJS/cartOfflineOnline.js"></script>
+<!-- Wishlist js -->
+<script src="<?= base_url() ?>assets/frontend/customJS/wishlist.js"></script>
+<!-- Promocode js -->
+<script src="<?= base_url() ?>assets/frontend/customJS/promoCode.js"></script>
+<!-- Place Order js -->
+<script src="<?= base_url() ?>assets/frontend/customJS/placeOrder.js"></script>
+<!-- // - mixed js  -->
+<script src="<?= base_url() ?>assets/frontend/customJS/mixed.js"></script>
 <script>
 	AOS.init();
 </script>
+<script>
+	$(document).ready(function() {
+		<?php if (!empty($this->session->flashdata('emessage'))) { ?>
+			var fail_message = '<?php echo $this->session->flashdata('emessage') ?>';
+			loadErrorNotify(fail_message);
+		<?php  } ?>
+		<?php if (!empty($this->session->flashdata('validationemessage'))) {
+			$valid_errors = $this->session->flashdata('validationemessage');
+			$valid_errors = substr($valid_errors, 0, -1); ?>
+			loadErrorNotify("<?= $valid_errors ?>");
+		<?php
+		} ?>
+		<?php if (!empty($this->session->flashdata('smessage'))) { ?>
+			var succ_message = '<?php echo $this->session->flashdata('smessage'); ?>';
+			loadSuccessNotify(succ_message);
+		<?php  } ?>
+	});
+	//================================== SUCCESS NOTIFY  ======================================
+	function loadSuccessNotify(succ_message) {
+		notifySuccess(succ_message);
+	}
+	//================================== FAIL NOTIFY  ======================================
+	function loadErrorNotify(message) {
+		notifyError(message);
+	}
+	// AOS.init();
+	var base_url = "<?= base_url() ?>"
+</script>
+
 <script>
 	/* ------------ Newslater-popup JS Start ------------- */
 	(window).on('load', function() {
@@ -288,6 +331,8 @@
 	}
 </script>
 <script src="<?= base_url() ?>assets/frontend/js/wow.min.js"></script>
+<script src="<?= base_url() ?>assets/frontend/js/scripts.js"></script>
+<script src="<?= base_url() ?>assets/frontend/js/bootstrap-notify.min.js"></script>
 <script>
 	new WOW().init();
 </script>

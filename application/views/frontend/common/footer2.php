@@ -1,27 +1,26 @@
-
-	<!-- Newslatter section start -->
-	<section class="newsletter-section align-center ptb-100">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-xl-7 col-lg-9 col-12">
-					<div class="newsletter-title">
-						<h2 class="main_title">Sign up for Newsletter </h2>
-						<p>Wants to get latest updates! sign up for Free </p>
-					</div>
-					<div class="newsletter-input">
-						<form>
-							<div class="form-group m-0">
-								<input type="email" placeholder="Your email address" required="">
-							</div>
-							<button type="submit" class="btn btn-color"><span class="d-none d-sm-block">Subscribe</span>
-								<i class="fa fa-send d-block d-sm-none"></i></button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Newslatter section end -->
+<!-- Newslatter section start -->
+<section class="newsletter-section align-center ptb-100">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-7 col-lg-9 col-12">
+        <div class="newsletter-title">
+          <h2 class="main_title">Sign up for Newsletter </h2>
+          <p>Wants to get latest updates! sign up for Free </p>
+        </div>
+        <div class="newsletter-input">
+          <form>
+            <div class="form-group m-0">
+              <input type="email" placeholder="Your email address" required="">
+            </div>
+            <button type="submit" class="btn btn-color"><span class="d-none d-sm-block">Subscribe</span>
+              <i class="fa fa-send d-block d-sm-none"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Newslatter section end -->
 <!-- Footer section start -->
 <footer class="footer-part">
   <div class="container">
@@ -236,21 +235,57 @@
 <script src="<?= base_url() ?>assets/frontend/js/jquery.magnific-popup.min.js"></script>
 <script src="<?= base_url() ?>assets/frontend/js/custom.js"></script>
 <script src="<?= base_url() ?>assets/frontend/js/modernizr.js"></script>
+<!-- Alert Notification js -->
+<script src="<?= base_url() ?>assets/frontend/customJS/notificationMessage.js"></script>
+<!-- Login Signup js -->
+<script src="<?= base_url() ?>assets/frontend/customJS/loginSignup.js"></script>
+<!-- Cart functions js -->
+<script src="<?= base_url() ?>assets/frontend/customJS/cartOfflineOnline.js"></script>
+<!-- Wishlist js -->
+<script src="<?= base_url() ?>assets/frontend/customJS/wishlist.js"></script>
+<!-- Promocode js -->
+<script src="<?= base_url() ?>assets/frontend/customJS/promoCode.js"></script>
+<!-- Place Order js -->
+<script src="<?= base_url() ?>assets/frontend/customJS/placeOrder.js"></script>
+<!-- // - mixed js  -->
+<script src="<?= base_url() ?>assets/frontend/customJS/mixed.js"></script>
 <script>
-  $(document).ready(function () {
-			//If your <ul> has the id "glasscase"
-			$('#glasscase').glassCase({
-				'thumbsPosition': 'bottom',
-				'widthDisplayPerc': 100,
-				isDownloadEnabled: false,
-			});
+  $(document).ready(function() {
+    <?php if (!empty($this->session->flashdata('emessage'))) { ?>
+      var fail_message = '<?php echo $this->session->flashdata('emessage') ?>';
+      loadErrorNotify(fail_message);
+    <?php  } ?>
+    <?php if (!empty($this->session->flashdata('validationemessage'))) {
+      $valid_errors = $this->session->flashdata('validationemessage');
+      $valid_errors = substr($valid_errors, 0, -1); ?>
+      loadErrorNotify("<?= $valid_errors ?>");
+    <?php
+    } ?>
+    <?php if (!empty($this->session->flashdata('smessage'))) { ?>
+      var succ_message = '<?php echo $this->session->flashdata('smessage'); ?>';
+      loadSuccessNotify(succ_message);
+    <?php  } ?>
+  });
+  //================================== SUCCESS NOTIFY  ======================================
+  function loadSuccessNotify(succ_message) {
+    notifySuccess(succ_message);
+  }
+  //================================== FAIL NOTIFY  ======================================
+  function loadErrorNotify(message) {
+    notifyError(message);
+  }
+  //If your <ul> has the id "glasscase"
+  $('#glasscase').glassCase({
+    'thumbsPosition': 'bottom',
+    'widthDisplayPerc': 100,
+    isDownloadEnabled: false,
+  });
 
-		});
-    $(function () {
-			$('[data-toggle="tooltip"]').tooltip()
-		})
-  AOS.init();
-  
+  $(function() {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+  // AOS.init();
+  var base_url = "<?= base_url() ?>"
 </script>
 
 
@@ -260,4 +295,7 @@
     element.classList.toggle("no");
   }
 </script>
+<!-- scripts js -->
+<script src="<?= base_url() ?>assets/frontend/js/scripts.js"></script>
+<script src="<?= base_url() ?>assets/frontend/js/bootstrap-notify.min.js"></script>
 </body>
