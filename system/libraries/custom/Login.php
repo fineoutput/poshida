@@ -455,7 +455,7 @@ class CI_Login
             return json_encode($respone);
         }
     }
-    //============================================== LOGIN OTP VERIFY =============================================
+    //============================== Email Login ==============================
     public function EmailLogin($email, $password)
     {
         if (empty($this->CI->session->userdata('user_data'))) {
@@ -484,7 +484,7 @@ class CI_Login
                         $session_cart = $this->CI->session->userdata('cart_data');
                         if (!empty($session_cart)) {
                             foreach ($session_cart as $cart) {
-                                $check_cart_existence = $this->CI->db->get_where('tbl_cart', array('user_id = ' => $user_data[0]->id, 'product_id' => $cart['product_id'], 'type_id' => $cart['type_id']))->result();
+                                $check_cart_existence = $this->CI->db->get_where('tbl_cart', array('user_id = ' => $userCheck[0]->id, 'product_id' => $cart['product_id'], 'type_id' => $cart['type_id']))->result();
                                 if (empty($check_cart_existence)) {
                                     $cart_insert = array(
                                         'user_id' => $userCheck[0]->id,
@@ -528,15 +528,15 @@ class CI_Login
             //----------------------- Reseller login handle --------------------------------
             elseif ($type == 2) {
                 if ($resellerCheck[0]->reseller_status == 1 && $resellerCheck[0]->is_active == 1) { // for approved retailer
-                    if ($userCheck[0]->password == md5($password)) {
+                    if ($resellerCheck[0]->password == md5($password)) {
                         //---------- entries in cart table --------------
                         $session_cart = $this->CI->session->userdata('cart_data');
                         if (!empty($session_cart)) {
                             foreach ($session_cart as $cart) {
-                                $check_cart_existence = $this->CI->db->get_where('tbl_cart', array('user_id = ' => $user_data[0]->id, 'product_id' => $cart['product_id'], 'type_id' => $cart['type_id']))->result();
+                                $check_cart_existence = $this->CI->db->get_where('tbl_cart', array('user_id = ' => $resellerCheck[0]->id, 'product_id' => $cart['product_id'], 'type_id' => $cart['type_id']))->result();
                                 if (empty($check_cart_existence)) {
                                     $cart_insert = array(
-                                        'user_id' => $userCheck[0]->id,
+                                        'user_id' => $resellerCheck[0]->id,
                                         'product_id' => $cart['product_id'],
                                         'type_id' => $cart['type_id'],
                                         'quantity' => $cart['quantity'],
@@ -550,10 +550,10 @@ class CI_Login
                         }
                         //---------- set login session -------------------
                         $this->CI->session->set_userdata('user_data', 1);
-                        $this->CI->session->set_userdata('name', $userCheck[0]->f_name);
-                        $this->CI->session->set_userdata('phone', $userCheck[0]->phone);
+                        $this->CI->session->set_userdata('name', $resellerCheck[0]->f_name);
+                        $this->CI->session->set_userdata('phone', $resellerCheck[0]->phone);
                         $this->CI->session->set_userdata('user_type', $type);
-                        $this->CI->session->set_userdata('user_id', $userCheck[0]->id);
+                        $this->CI->session->set_userdata('user_id', $resellerCheck[0]->id);
                         $respone['status'] = true;
                         $respone['message'] = 'Login Successfully';
                         $this->CI->session->set_flashdata('smessage', 'Login Successfully');
@@ -584,6 +584,74 @@ class CI_Login
                 $respone['status'] = false;
                 $respone['message'] = 'Phone number not registered. Sign up to continue';
                 $this->CI->session->set_flashdata('emessage', 'Phone number not registered. Sign up to continue');
+                return json_encode($respone);
+            }
+        } else {
+            $respone['status'] = false;
+            return json_encode($respone);
+        }
+    }
+    //============================== Email Register ==============================
+    public function EmailRegister($fname, $lname, $phone, $email, $password)
+    {
+        if (empty($this->CI->session->userdata('user_data'))) {
+            $ip = $this->CI->input->ip_address();
+            date_default_timezone_set("Asia/Calcutta");
+            $cur_date = date("Y-m-d H:i:s");
+            $userCheck = $this->CI->db->get_where('tbl_users', array('email' => $email))->result();
+            $resellerCheck = $this->CI->db->get_where('tbl_reseller', array('email' => $email))->result();
+            if (empty($userCheck) && empty($resellerCheck)) { //---- check user is exist or not ---------
+                $userPhone = $this->CI->db->get_where('tbl_users', array('phone' => $phone))->result();
+                if (!empty($userPhone)) {
+                    $respone['status'] = false;
+                    $respone['message'] = 'User Already Exist!';
+                    $this->CI->session->set_flashdata('emessage', 'User Already Exist!');
+                    return json_encode($respone);
+                }
+                //------ insert user data from temp to user table -----------
+                $data_insert = array(
+                    'f_name' => $fname,
+                    'l_name' => $lname,
+                    'phone' => $phone,
+                    'email' => $email,
+                    'password' => md5($password),
+                    'ip' => $ip,
+                    'is_active' => 1,
+                    'is_model' => 0,
+                    'date' => $cur_date
+                );
+                $last_id2 = $this->CI->base_model->insert_table("tbl_users", $data_insert, 1);
+
+                //---------- entries in cart table --------------
+                $session_cart = $this->CI->session->userdata('cart_data');
+                if (!empty($session_cart)) {
+                    foreach ($session_cart as $cart) {
+                        $cart_insert = array(
+                            'user_id' => $last_id2,
+                            'product_id' => $cart['product_id'],
+                            'type_id' => $cart['type_id'],
+                            'quantity' => $cart['quantity'],
+                            'user_type' => 1,
+                            'ip' => $ip,
+                            'date' => $cur_date
+                        );
+                        $last_id = $this->CI->base_model->insert_table("tbl_cart", $cart_insert, 1);
+                    }
+                }
+
+                //---------- set login session -------------------
+                $this->CI->session->set_userdata('user_data', 1);
+                $this->CI->session->set_userdata('name', $fname);
+                $this->CI->session->set_userdata('phone', $phone);
+                $this->CI->session->set_userdata('user_type', 1);
+                $this->CI->session->set_userdata('user_id', $last_id2);
+                $respone['status'] = true;
+                $respone['message'] = 'Successfully Registered!';
+                $this->CI->session->set_flashdata('smessage', 'Successfully Registered!');
+            } else {
+                $respone['status'] = false;
+                $respone['message'] = 'User Already Exist!';
+                $this->CI->session->set_flashdata('emessage', 'User Already Exist!');
                 return json_encode($respone);
             }
         } else {

@@ -629,7 +629,7 @@
                     <ul class="hrb">
                       <? if (empty($this->session->userdata('user_data'))) { ?>
                         <li><a href="#" class="p-1" data-toggle="modal" data-target="#LoginModel">Log In </a></li>
-                        <li><a href="#" class="p-1" data-toggle="modal" data-target="#exampleModalCenter2"> Register </a></li>
+                        <li><a href="#" class="p-1" data-toggle="modal" data-target="#SignUpModel"> Register </a></li>
                       <? } else { ?>
                         <li><a href="<?= base_url() ?>Home/my_profile" class="p-1">My Account </a></li>
                         <li><a href="<?= base_url() ?>Home/my_profile/order" class="p-1">My Orders </a></li>
