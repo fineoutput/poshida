@@ -623,7 +623,7 @@
                 <li class="search-box  search_box " onclick="hello()">
                   <a href="#"><span></span></a>
                 </li>
-                <li class="account-icon heig show-icon" style="position: inherit;">
+                <li class="account-icon heig show-icon" >
                   <a href="#"><span></span></a>
                   <div class="header-link-dropdown account-link-dropdown">
                     <ul class="hrb">

@@ -124,7 +124,7 @@
 																	array_push($size_arr, $size_data->id);
 													?>
   																<li class="icon  cart-icon">
-  																	<a href="<?= base_url() ?>Home/product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_size->id) ?>"> <?= $size_data->name ?> | </a>
+  																	<a href="<?= base_url() ?>Home/product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_size->id) ?>"> <?= $size_data->name ?> <p style="margin-bottom:0; padding: 0px 10px;">|</p> </a>
   																</li>
   													<?php }
 															}
@@ -157,7 +157,7 @@
   <!-- =========================== END WHATS NEW  =================================== -->
 
   <!-- ======================= START FIRST BIG BANNER SECTION  ======================== -->
-  <section class="pb-100 " data-aos="fade-right">
+  <section class="pb-100 " >
   	<div>
   		<img src="<?= base_url() . $banner_data[0]->image ?>" alt="">
   	</div>
@@ -324,7 +324,7 @@
 																	array_push($size_arr, $size_data->id);
 													?>
   																<li class="icon  cart-icon">
-  																	<a href="<?= base_url() ?>Home/product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_size->id) ?>"> <?= $size_data->name ?> | </a>
+  																	<a href="<?= base_url() ?>Home/product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_size->id) ?>"> <?= $size_data->name ?> <p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
   																</li>
   													<?php }
 															}
