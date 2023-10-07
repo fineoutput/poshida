@@ -120,7 +120,7 @@
   </div>
 </footer>
 <!-- =================================== Start login Popup Section ============================================-->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="LoginModel" tabindex="-1" role="dialog" aria-labelledby="LoginModelTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="popup_content pl-0 pr-0 pt-0">

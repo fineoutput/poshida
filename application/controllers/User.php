@@ -148,6 +148,33 @@ class User extends CI_Controller
             redirect($_SERVER['HTTP_REFERER']);
         }
     }
+    //=============================================== USER LOGIN OTP VERIFY =============================================================
+    public function email_login()
+    {
+        $this->load->helper(array('form', 'url'));
+        $this->load->library('form_validation');
+        $this->load->helper('security');
+        if ($this->input->post()) {
+            $this->form_validation->set_rules('email', 'email', 'required|xss_clean|trim');
+            $this->form_validation->set_rules('password', 'password', 'required|xss_clean|trim');
+            if ($this->form_validation->run()== true) {
+                $email=$this->input->post('email');
+                $password=$this->input->post('password');
+                //-------------- register otp verify ------------
+                $LoginVerify = $this->login->EmailLogin($email, $password);
+                echo $LoginVerify;
+                // die();
+                redirect($_SERVER['HTTP_REFERER']);
+
+            } else {
+                $this->session->set_flashdata('emessage', validation_errors());
+                redirect($_SERVER['HTTP_REFERER']);
+            }
+        } else {
+            $this->session->set_flashdata('emessage', 'Please insert some data');
+            redirect($_SERVER['HTTP_REFERER']);
+        }
+    }
 
     //======================================= UPDATE USER PROFILE =============================================
     public function update_profile(){

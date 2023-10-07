@@ -116,10 +116,10 @@
 			</div>
 		<?
 		} else { ?>
-			<div class="col-2 text-center mt-2 p-0"><a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter"><img src="<?= base_url() ?>assets/frontend/benutzerprofil.png"></a>
+			<div class="col-2 text-center mt-2 p-0"><a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel"><img src="<?= base_url() ?>assets/frontend/benutzerprofil.png"></a>
 				<h6>Login</h6>
 			</div>
-			<div class="col-2 text-center mt-2 p-0"><a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter"><img src="<?= base_url() ?>assets/frontend/liebe (1).png"></a><span class="wishlist_count">0</span></a>
+			<div class="col-2 text-center mt-2 p-0"><a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel"><img src="<?= base_url() ?>assets/frontend/liebe (1).png"></a><span class="wishlist_count">0</span></a>
 				<h6>Wishlist</h6>
 			</div>
 		<? } ?>
@@ -143,7 +143,7 @@
 <!-- //=================== End Bottom Tabs ========================== -->
 
 <!-- =================================== Start login Popup Section ============================================-->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="LoginModel" tabindex="-1" role="dialog" aria-labelledby="LoginModel" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
 			<div class="popup_content pl-0 pr-0 pt-0">
@@ -152,7 +152,7 @@
 				</button>
 				<div class="row text-left">
 					<div class="col-sm-12 text-center mb-2">
-						<img alt="xpoge" src="<?= base_url() ?>assets/frontend/img/Poshida Logo (2)_page-0001.jpg" class="logo-imah-1 qwd">
+						<img alt="Broken Image" src="<?= base_url() ?>assets/frontend/img/Poshida Logo (2)_page-0001.jpg" class="logo-imah-1 qwd">
 
 					</div>
 				</div>
@@ -161,13 +161,19 @@
 						<h4 class="text-center">LOG IN TO CONTINUE</h4>
 					</div>
 				</div>
-				<form method="post" action="javascript:void(0)" id="loginForm" enctype="multipart/form-data" style="padding-left: 20px;padding-right: 20px;">
-					<div class="form-group">
+				<form method="post" action="<?=base_url()?>User/email_login" enctype="multipart/form-data" style="padding-left: 20px;padding-right: 20px;">
+					<!-- <div class="form-group">
 						<input name="number" required="" type="text" id="loginPhone" class="form-control rounded-0" onkeypress="return isNumberKey(event)" maxlength="10" minlength="10" placeholder="Enter Your Number">
 						<input type="hidden" id="loginverify" value="0" name="loginverify">
 					</div>
 					<div class="form-group hidden-OTP-field">
 						<input name="OTP" id="loginOTP" class="form-control rounded-0" type="text" onkeypress="return isNumberKey(event)" maxlength="6" minlength="6" placeholder="Enter OTP">
+					</div> -->
+					<div class="form-group">
+						<input name="email" required="" type="email" class="form-control rounded-0" placeholder="Enter Your Email">
+					</div>
+					<div class="form-group">
+						<input name="password" class="form-control rounded-0" type="password" placeholder="Enter Password">
 					</div>
 					<div class="container">
 						<div class="row">
@@ -205,7 +211,7 @@
 							<div class="row text-left">
 								<div class="col-sm-12 text-center mb-2">
 
-									<img alt="xpoge" src="<?= base_url() ?>assets/frontend/img/Poshida Logo (2)_page-0001.jpg" class="logo-imah-1 qwd">
+									<img alt="Broken Image" src="<?= base_url() ?>assets/frontend/img/Poshida Logo (2)_page-0001.jpg" class="logo-imah-1 qwd">
 
 								</div>
 							</div>
