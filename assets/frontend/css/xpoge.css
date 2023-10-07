@@ -3585,7 +3585,7 @@ div#footerCount .row .col-2.text-center.mt-2.p-0 {
 
 .modal-dialog.modal-lg.m-0.modal-dialog12 {
 	position: fixed !important;
-	bottom: 38px;
+	bottom: 0px;
 }
 
 
