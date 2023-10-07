@@ -205,7 +205,7 @@ if (!empty($this->session->userdata('user_data'))) {
                       <!-- <li> <span class="dropdown-title">Default welcome msg!</span> -->
                       <ul class="hrb">
                         <? if (empty($this->session->userdata('user_data'))) { ?>
-                          <li><a href="#" class="p-1" data-toggle="modal" data-target="#exampleModalCenter">Log In </a></li>
+                          <li><a href="#" class="p-1" data-toggle="modal" data-target="#LoginModel">Log In </a></li>
                           <li><a href="#" class="p-1" data-toggle="modal" data-target="#exampleModalCenter2"> Register </a></li>
                         <? } else { ?>
                           <li><a href="<?= base_url() ?>Home/my_profile" class="p-1">My Account </a></li>
@@ -340,8 +340,8 @@ if (!empty($this->session->userdata('user_data'))) {
                                 if ($i % 2 == 0) {
                               ?>
                                   <li class="level3"><a href="<?= base_url() ?>Home/all_products/<?= $subcat->url ?>/1"><span>■</span><?= $subcat->name ?></a></li>
-                              <?php }$i++;
-                                
+                              <?php }
+                                $i++;
                               } ?>
                             </ul>
                           </div>
@@ -352,8 +352,8 @@ if (!empty($this->session->userdata('user_data'))) {
                                 if ($i  % 2 != 0) {
                               ?>
                                   <li class="level3"><a href="<?= base_url() ?>Home/all_products/<?= $subcat->url ?>/1"><span>■</span><?= $subcat->name ?></a></li>
-                              <?php } $i++;
-                                
+                              <?php }
+                                $i++;
                               } ?>
                             </ul>
                           </div>
