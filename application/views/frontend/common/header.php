@@ -235,8 +235,8 @@ if (!empty($this->session->userdata('user_data'))) {
               <? } else { ?>
                 <a href="#"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
               <? } ?>
-              <div class="cart-dropdown header-link-dropdown">
-                <ul class="cart-list link-dropdown-list">
+              <div class="cart-dropdown header-link-dropdown scc">
+                <ul class="cart-list link-dropdown-list sdfsZ">
                   <? if (!empty($headerMiniCart['cart_data'])) { ?>
                     <ul class="cart_list">
                       <? foreach ($headerMiniCart['cart_data'] as $miniCart) { ?>

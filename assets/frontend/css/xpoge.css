@@ -10,6 +10,22 @@
 /* - Google Fonts //---------------- */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap');
 
+::-webkit-scrollbar {
+	display: none;
+  }
+  
+  /* Demonstrate a "mostly customized" scrollbar
+   * (won't be visible otherwise if width/height is specified) */
+::-webkit-scrollbar {
+	width: 5px;
+	height: 8px;
+	background-color: #c68fa6; /* or add it to the track */
+  }
+  
+  /* Add a thumb */
+ ::-webkit-scrollbar-thumb {
+	background: #c68fa6;
+  }
 
 /* - General Style //---------------- */
 
@@ -4119,4 +4135,11 @@ div#menu ul.nav.navbar-nav span.opener.plus{
 }
 .megamenu.full.mobile-sub-menu .megamenu-inner-top .row.sub-menu-level1 .col-lg-3.mt-30.d-none.d-lg-block.matgin-image .sub-menu-img{
 	margin-bottom: 9px !important;
+}
+
+
+
+
+.cart-dropdown.header-link-dropdown.scc{
+	right: -142px !important;
 }
