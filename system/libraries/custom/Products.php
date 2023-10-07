@@ -59,11 +59,11 @@ class CI_Products
         }
         //-------fetch data by category
         if ($t == 1) {
-            $this->CI->db->where('category_id', $id);
+            $this->CI->db->like('category_id', '"category_id":' . $id);
         }
         //-------fetch data by subcategory
         else {
-            $this->CI->db->where('subcategory_id', $id);
+            $this->CI->db->like('subcategory_id', '"subcategory_id":' . $id);
         }
         $this->CI->db->where('product_type !=', 2);
         $this->CI->db->where('is_active', 1);
@@ -174,7 +174,7 @@ class CI_Products
     //====================================== PRODUCT DETAIL ===============================================
     public function product_detail($url)
     {
-        $product_data = $this->CI->db->get_where('tbl_product', array('url = ' => $url,'is_active' => 1))->result();
+        $product_data = $this->CI->db->get_where('tbl_product', array('url = ' => $url, 'is_active' => 1))->result();
         if (!empty($product_data)) {
             $type_exists = $this->CI->db->get_where('tbl_type', array('product_id = ' => $product_data[0]->id, 'is_active' => 1))->result();
             $returnarray = array("product_data" => $product_data, "type_exists" => $type_exists);
@@ -184,7 +184,7 @@ class CI_Products
         return $returnarray;
     }
     //====================================== RELATED PRODUCTS ===============================================
-    public function related_products($url,$category_id)
+    public function related_products($url, $category_id)
     {
         $productviewnotequal = 0;
         if (!empty($this->CI->session->userdata('user_type'))) {
@@ -387,7 +387,7 @@ class CI_Products
         //         $this->CI->db->order_by('selling_price', 'desc');
         //     }
         // } else {
-            $this->CI->db->order_by('id', 'desc');
+        $this->CI->db->order_by('id', 'desc');
         // }
         // $this->CI->db->limit($config["per_page"], $start);
         $product_data = $this->CI->db->get()->result();
@@ -688,7 +688,7 @@ class CI_Products
             }
             $subcategory_name = $sub_data->name;
         } else {
-            $sendArray = array( "product_data" => [], "all_data" => [], "category_name" => [], "subcategory_name" => [], "url" => [], "id" => [], "t" => []);
+            $sendArray = array("product_data" => [], "all_data" => [], "category_name" => [], "subcategory_name" => [], "url" => [], "id" => [], "t" => []);
             return $sendArray;
         }
         $this->CI->db->select('*');
@@ -704,13 +704,13 @@ class CI_Products
                 $this->CI->db->where('product_view != ', 2);
             }
         }
-        //-------fetch data by category
-        if ($t == 1) {
-            $this->CI->db->where('category_id', $id);
+         //-------fetch data by category
+         if ($t == 1) {
+            $this->CI->db->like('category_id', '"category_id":' . $id);
         }
         //-------fetch data by subcategory
         else {
-            $this->CI->db->where('subcategory_id', $id);
+            $this->CI->db->like('subcategory_id', '"subcategory_id":' . $id);
         }
         $this->CI->db->order_by('id', 'desc');
         // ------------------- FITERS -------------------

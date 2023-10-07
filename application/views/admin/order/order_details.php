@@ -121,7 +121,7 @@
 
 
                               <td><?php echo $data->quantity ?></td>
-                              <td><?php echo "₹".$data->selling_price ?></td>
+                              <td><?php echo "₹".$data->spgst ?></td>
                                 <?if ($order_type==2) {
                                   $per_data = $this->db->get_where('tbl_percentage', array('id'=> $data->percentage_id))->result();
                                   ?>

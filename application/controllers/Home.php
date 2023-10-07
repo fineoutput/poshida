@@ -42,8 +42,10 @@ class Home extends CI_Controller
         $this->db->from('tbl_shop_by_category');
         $this->db->where('is_active', 1);
         $data['shop_by_category_data'] = $this->db->get();
-        $data['banner_data'] = $this->db->order_by('seq', 'asc')->get_where('tbl_banner', array('is_active' => 1))->result();
-
+        $this->db->select('*');
+        $this->db->from('tbl_banner');
+        $this->db->where('is_active', 1);
+        $data['banner_data'] = $this->db->get()->result();
         $this->db->select('*');
         $this->db->from('tbl_product');
         $this->db->where('is_active', 1);
@@ -233,6 +235,9 @@ class Home extends CI_Controller
                     $data['model_table'] = $this->db->get_where('tbl_model_products', array('user_id = ' => $this->session->userdata('user_id')));
                     $data['model_points'] = $this->db->get_where('tbl_points_transation', array('model_id = ' => $this->session->userdata('user_id')));
                     $data['model_data_exists'] = $data['model_table']->result();
+                    $user_id = $this->session->userdata('user_id');
+                    $user_type = $this->session->userdata('user_type');
+                    $data['address_data'] = $this->db->order_by('is_default', 'asc')->get_where('tbl_user_address', array('user_id' => $user_id, 'user_type' => $user_type, 'is_active' => 1))->result();
                     $this->load->view('frontend/common/header2', $data);
                     $this->load->view('frontend/my_profile');
                     $this->load->view('frontend/common/footer2');
@@ -271,8 +276,8 @@ class Home extends CI_Controller
             $id = base64_decode($idd);
             $order1_data = $this->db->get_where('tbl_order1', array('id = ' => $id))->result();
             $track_data = $this->shiprocket->trackOrderAWB($order1_data[0]->awb_code);
-            if (!empty($track_data->track_status)) {
-                $data['track_data'] = $track_data;
+            if (!empty($track_data->tracking_data->track_status)) {
+                $data['track_data'] = $track_data->tracking_data;
                 $data['order1_data'] = $order1_data;
             } else {
                 $data['track_data'] = [];
@@ -428,6 +433,31 @@ class Home extends CI_Controller
             $data['product_data'] = $returnarray['product_data'];
             $data['color_arr'] = $color_arr;
             $data['size_arr'] = $size_arr;
+            // ----------------- start  for meta -----------------
+            $data['meta'] = 1;
+            $type_datas = $this->db->get_where('tbl_type', array('product_id = ' => $data['product_data'][0]->id, 'is_active = ' => 1, 'color_active' => 1, 'size_active' => 1));
+            $type_data = $this->db->get_where('tbl_type', array('id = ' => $data['type_id']))->result();
+            if (!empty($type_data[0]->image)) {
+                $image = base_url() . $type_data[0]->image;
+            } else {
+                $image = '';
+            }
+            $data['type_spgst'] = $type_data[0]->retailer_spgst;
+            $data['image'] = $image;
+            if ($type_data[0]->inventory > 0) {
+                $data['stock'] = 'in stock';
+            } else {
+                $data['stock'] = 'out of stock';
+            }
+            if ($data['product_data'][0]->exclusive == 1) {
+                $data['condition'] = 'exclusive';
+            } else {
+                $data['condition'] = '';
+            }
+            $cat = $this->db->get_where('tbl_category', array('id = ' => $data['product_data'][0]->category_id))->row();
+            $data['category_name'] = $cat->name;
+            // ----------------- end  for meta -----------------
+
             if (!empty($returnarray['type_exists'])) {
                 $this->load->view('frontend/common/header2', $data);
                 $this->load->view('frontend/product_details');
@@ -584,7 +614,15 @@ class Home extends CI_Controller
     }
     public function terms_and_conditions()
     {
-        $this->load->view('frontend/common/header2');
+        
+        $this->load->view('frontend/common/header2',);
+        $this->load->view('frontend/terms_and_conditions');
+        $this->load->view('frontend/common/footer2');
+    }
+    public function terms_and_conditions2()
+    {
+        $data['hide'] = 1;
+        $this->load->view('frontend/common/header2',$data);
         $this->load->view('frontend/terms_and_conditions');
         $this->load->view('frontend/common/footer2');
     }
@@ -619,6 +657,209 @@ class Home extends CI_Controller
             $respone['status'] = false;
             $respone['message'] = "Please insert some data, No data available";
             echo json_encode($respone);
+        }
+    }
+    ///=============================== Edit Address =======================
+
+    public function edit_address($idd, $t = 2)
+    {
+        if (!empty($this->session->userdata('user_id'))) {
+            $id = base64_decode($idd);
+            $data['id'] = $idd;
+            $data['t'] = $t;
+            $data['address_data'] = $this->db->get_where('tbl_user_address', array('id' => $id))->row();
+            $data['state_data'] = $this->db->get('all_states');
+            $this->load->view('frontend/common/header2', $data);
+            $this->load->view('frontend/edit_address');
+            $this->load->view('frontend/common/footer2');
+        } else {
+            redirect("/", "refresh");
+        }
+    }
+    ///=============================== Add Address =======================
+
+    public function add_address()
+    {
+        if (!empty($this->session->userdata('user_id'))) {
+            $data['state_data'] = $this->db->get('all_states');
+            $this->load->view('frontend/common/header2', $data);
+            $this->load->view('frontend/add_new_address');
+            $this->load->view('frontend/common/footer2');
+        } else {
+            redirect("/", "refresh");
+        }
+    }
+    ///=============================== Edit Address data =======================
+    public function edit_address_data()
+    {
+
+        if (!empty($this->session->userdata('user_data'))) {
+            $this->load->helper(array('form', 'url'));
+            $this->load->library('form_validation');
+            $this->load->helper('security');
+            if ($this->input->post()) {
+                $this->form_validation->set_rules('address_id', 'address_id', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('fname', 'fname', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('lname', 'lname', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('email', 'email', 'xss_clean|trim');
+                $this->form_validation->set_rules('phonenumber', 'phonenumber', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('state', 'state', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('city', 'city', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('address', 'address', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('pincode', 'pincode', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('t', 't', 'required|xss_clean|trim');
+                if ($this->form_validation->run() == true) {
+                    $address_id = $this->input->post('address_id');
+                    $t = $this->input->post('t');
+                    $fname = $this->input->post('fname');
+                    $lname = $this->input->post('lname');
+                    $email = $this->input->post('email');
+                    $phone = $this->input->post('phonenumber');
+                    $state = $this->input->post('state');
+                    $city = $this->input->post('city');
+                    $address = $this->input->post('address');
+                    $pincode = $this->input->post('pincode');
+                    date_default_timezone_set("Asia/Calcutta");
+
+                    $data_insert = array(
+                        'f_name' => $fname,
+                        'l_name' => $lname,
+                        'email' => $email,
+                        'phone' => $phone,
+                        'state' => $state,
+                        'city' => $city,
+                        'address' => $address,
+                        'pincode' => $pincode,
+                    );
+
+                    $this->db->where('id', $address_id);
+                    $zapak = $this->db->update('tbl_user_address', $data_insert);
+                    if (!empty($zapak)) {
+                        $this->session->set_flashdata('smessage', 'Address updated successfully!');
+                        if ($t == 1) {
+                            redirect('Order/add_address', 'refresh');
+                        } else {
+                            redirect('Home/my_profile/ordes', 'refresh');
+                        }
+                    } else {
+                        $this->session->set_flashdata('emessage', 'Some error occurred!');
+                        redirect($_SERVER['HTTP_REFERER']);
+                    }
+                } else {
+                    $this->session->set_flashdata('emessage', validation_errors());
+                    redirect($_SERVER['HTTP_REFERER']);
+                }
+            } else {
+                $this->session->set_flashdata('emessage', 'Please insert some data, No data available');
+                redirect($_SERVER['HTTP_REFERER']);
+            }
+        } else {
+            redirect('/', 'refresh');
+        }
+    }
+    ///=============================== Delete Address =======================
+
+    public function delete_address($idd)
+    {
+
+        if (!empty($this->session->userdata('user_id'))) {
+
+            $id = base64_decode($idd);
+            $user_id = $this->session->userdata('user_id');
+            $user_type = $this->session->userdata('user_type');
+
+            $this->db->select('id');
+            $this->db->from('tbl_user_address');
+            $this->db->where('id', $id);
+            $this->db->where('user_id', $user_id);
+            $this->db->where('user_type', $user_type);
+            $da = $this->db->get()->row();
+
+            if (!empty($da)) {
+                $data_update = array(
+                    'is_active' => 0,
+                );
+                $this->db->where('id', $id);
+                $zapak = $this->db->update('tbl_user_address', $data_update);
+                if ($zapak != 0) {
+                    $this->session->set_flashdata('smessage', 'Address successfully deleted!');
+                    redirect('Home/my_profile/ordes', 'refresh');
+                } else {
+                    $this->session->set_flashdata('emessage', 'Sorry error occured');
+                    redirect($_SERVER['HTTP_REFERER']);
+                }
+            } else {
+                $this->session->set_flashdata('emessage', 'Sorry error occured');
+                redirect($_SERVER['HTTP_REFERER']);
+            }
+        } else {
+            redirect("Home/login", "refresh");
+        }
+    }
+    ///=============================== Delete Address =======================
+
+    public function add_address_data()
+    {
+
+        if (!empty($this->session->userdata('user_data'))) {
+            $this->load->helper(array('form', 'url'));
+            $this->load->library('form_validation');
+            $this->load->helper('security');
+            if ($this->input->post()) {
+                $this->form_validation->set_rules('fname', 'fname', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('lname', 'lname', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('email', 'email', 'xss_clean|trim');
+                $this->form_validation->set_rules('phonenumber', 'phonenumber', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('state', 'state', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('city', 'city', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('address', 'address', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('pincode', 'pincode', 'required|xss_clean|trim');
+                if ($this->form_validation->run() == true) {
+                    $fname = $this->input->post('fname');
+                    $lname = $this->input->post('lname');
+                    $email = $this->input->post('email');
+                    $phone = $this->input->post('phonenumber');
+                    $state = $this->input->post('state');
+                    $city = $this->input->post('city');
+                    $address = $this->input->post('address');
+                    $pincode = $this->input->post('pincode');
+                    date_default_timezone_set("Asia/Calcutta");
+                    $cur_date = date("Y-m-d H:i:s");
+                    $user_id = $this->session->userdata('user_id');
+                    $user_type = $this->session->userdata('user_type');
+                    $data_insert = array(
+                        'user_id' => $user_id,
+                        'user_type' => $user_type,
+                        'f_name' => $fname,
+                        'l_name' => $lname,
+                        'email' => $email,
+                        'phone' => $phone,
+                        'state' => $state,
+                        'city' => $city,
+                        'address' => $address,
+                        'pincode' => $pincode,
+                        'is_default' => 0,
+                        'date' => $cur_date
+                    );
+
+                    $last_id = $this->base_model->insert_table("tbl_user_address", $data_insert, 1);
+                    if (!empty($last_id)) {
+                        $this->session->set_flashdata('smessage', 'Address added successfully!');
+                        redirect('Home/my_profile/ordes', 'refresh');
+                    } else {
+                        $this->session->set_flashdata('emessage', 'Some error occurred!');
+                        redirect($_SERVER['HTTP_REFERER']);
+                    }
+                } else {
+                    $this->session->set_flashdata('emessage', validation_errors());
+                    redirect($_SERVER['HTTP_REFERER']);
+                }
+            } else {
+                $this->session->set_flashdata('emessage', 'Please insert some data, No data available');
+                redirect($_SERVER['HTTP_REFERER']);
+            }
+        } else {
+            redirect('/', 'refresh');
         }
     }
 }

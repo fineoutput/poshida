@@ -93,9 +93,10 @@ define('SMSAUTH','379704A9kcGMskeHG62d4f215P1');
 define('SMSID','TIAOTP');
 define('SIGNUP_DLT','1207166444129174674');
 define('LOGIN_DLT','1207166444113966752');
-// ========================= RAZORPAY API AND SECRET =============================
-define('API_KEY','rzp_test_nyyE7NA4CoCIbN');
-define('API_SECRET','U0iJVwdeskvEw7qVstJ7mh1c');
+// ----ccavenue -------------
+define('MERCHANT_ID', '2298208');
+define('WORKING_KEY', '85B6635B4774DED2F398A2E939894DBA'); //live 
+define('ACCESS_CODE', 'AVVP48KD41AU85PVUA');//live
 //=============== Minimum redeem points =======
 define('REFERAL_POINTS',100);
 //=============== Minimum redeem points =======

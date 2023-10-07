@@ -21,7 +21,8 @@ class CI_Order
     }
 
     //===================================== CALCULATE ========================================================
-    public function calculate($pincode, $courier_id)
+    // public function calculate($pincode, $courier_id)
+    public function calculate()
     {
         $user_type = $this->CI->session->userdata('user_type');
         if ($user_type == 2) {
@@ -73,13 +74,25 @@ class CI_Order
                 $total_weight = $total_weight + $weight; //--calculate total weight
                 $final_amount = $total;
             }
+            $user_type = $this->CI->session->userdata('user_type');
+            $address_data = $this->CI->db->order_by('id', 'desc')->get_where('tbl_user_address', array('user_id' => $user_id, 'user_type' => $user_type, 'is_default' => 1))->row();
+
             // echo $total; die();
-            $shipping = $this->CI->shiprocket->GetCourierServiceability($pincode, $total_weight, $final_amount);
-            $shipping = json_decode($shipping);
-            if ($shipping->status == false) {
-                $this->CI->session->set_flashdata('emessage', 'Some error occurred!');
-                return 0;
-                exit;
+            $pincode = '';
+            if (!empty($address_data)) {
+                $pincode = $address_data->pincode;
+                $shipping = $this->CI->shiprocket->GetCourierServiceability($pincode, $total_weight, $final_amount);
+                $shipping = json_decode($shipping);
+                if ($shipping->status == false) {
+                    $this->CI->session->set_flashdata('emessage', $shipping->message);
+                    return 0;
+                    exit;
+                }
+                $shipping = $shipping->data->shipping;
+                $courier_id = $shipping->data->courier_id;
+            } else {
+                $shipping = 0;
+                $courier_id = '';
             }
             $final_amount = $final_amount + $shipping->data->shipping;
             //------order1 entry-------------
@@ -90,8 +103,7 @@ class CI_Order
                 'final_amount' => $final_amount,
                 'payment_status' => 0,
                 'order_status' => 0,
-                'shipping' => $shipping->data->shipping,
-                'pincode' => $pincode,
+                'shipping' => $shipping,
                 'courier_id' => $courier_id,
                 'weight' => $total_weight,
                 'ip' => $ip,
@@ -193,12 +205,12 @@ class CI_Order
                 }
                 //----------order1 entry-------------
                 $order1_update = array(
-                    'name' => $placeOrder['name'],
-                    'email' => $placeOrder['email'],
-                    'phone' => $placeOrder['phone'],
-                    'address' => $placeOrder['address'],
-                    'state' => $placeOrder['state'],
-                    'city' => $placeOrder['city'],
+                    // 'name' => $placeOrder['name'],
+                    // 'email' => $placeOrder['email'],
+                    // 'phone' => $placeOrder['phone'],
+                    // 'address' => $placeOrder['address'],
+                    // 'state' => $placeOrder['state'],
+                    // 'city' => $placeOrder['city'],
                     'final_amount' => $final_amount,
                     'refererral_code' => $placeOrder['referalcode'],
                     'ref_points' => $referpoints['refer_points'],
@@ -382,7 +394,7 @@ class CI_Order
                         CURLOPT_FOLLOWLOCATION => true,
                         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                         CURLOPT_CUSTOMREQUEST => 'POST',
-                        CURLOPT_POSTFIELDS => 'phone=' . WHATSAPP_NUMBERS3 . '&order_id=' . $order_id . '&amount=' . $totalamt . '&date=' . $cur_date2 . '&method=' . $pptype . $product_des . '&customer_name=' . $name2  .  '',
+                        CURLOPT_POSTFIELDS => 'phone=' . WHATSAPP_NUMBERS3 . '&order_id=' . $order_id . '&amount=' . $totalamt . '&date=' . $cur_date2 . '&method=' . $pptype . '&products=' . $product_des . '&customer_name=' . $name2  .  '',
                         CURLOPT_HTTPHEADER => array(
                             'token:' . TOKEN . '',
                             'Content-Type:application/x-www-form-urlencoded',
@@ -421,43 +433,12 @@ class CI_Order
         }
     }
 
-    // =============================================== CREATE RAZORPAY ORDER ID =====================================================
-    public function CreateRazorPayOrderID()
-    {
-        if ((!empty($this->CI->session->userdata('order_id')))) {
-            $order_id = base64_decode($this->CI->session->userdata('order_id'));
-            $order_data = $this->CI->db->get_where('tbl_order1', array('id = ' => $order_id))->result();
-
-            $orderData = [
-                'receipt'         => $order_data[0]->id,
-                'amount'          => $order_data[0]->final_amount * 100, // 39900 rupees in paise
-                'currency'        => 'INR'
-            ];
-
-            $api_key = API_KEY;
-            $api_secret = API_SECRET;
-            $api = new Api($api_key, $api_secret);
-
-            $razorpayOrder = $api->order->create($orderData);
-
-            $respone['status'] = true;
-            $respone['message'] = 'success';
-            $respone['razorpayOrder'] = $razorpayOrder->id;
-            return json_encode($respone);
-        } else {
-            $respone['status'] = false;
-            return json_encode($respone);
-        }
-    }
-
-
-    // =============================== PLACE ONLINE ARDER AFTER CONFIRMATION FROM RAZORPAY ====================================
-    public function PlacePrePaidOrder($placeOrder)
+    // =============================== PLACE ONLINE  AFTER CONFIRMATION FROM CCAVENUE ====================================
+    public function PlacePrePaidOrder($order_id,$decryptValues)
     {
         $ip = $this->CI->input->ip_address();
         date_default_timezone_set("Asia/Calcutta");
         $cur_date = date("Y-m-d H:i:s");
-        $order_id = base64_decode($this->CI->session->userdata('order_id'));
         $user_type = $this->CI->session->userdata('user_type');
         if ($this->CI->session->userdata('user_type') == 2) {
             $user_id = $this->CI->session->userdata('user_id');
@@ -468,234 +449,201 @@ class CI_Order
         }
         if (!empty($user_data)) {
             if ($user_data[0]->is_active == 1) {
-                $success = true;
-                $error = "Payment Failed";
-                $keyId = API_KEY;
-                $keySecret = API_SECRET;
-                if (empty($placeOrder['razorpay_payment_id']) === false) {
-                    $api = new Api($keyId, $keySecret);
-                    try {
-                        // Please note that the razorpay order ID must
-                        // come from a trusted source (session here, but
-                        // could be database or something else)
-                        $attributes = array(
-                            'razorpay_order_id' => $placeOrder['razorpay_order_id'],
-                            'razorpay_payment_id' => $placeOrder['razorpay_payment_id'],
-                            'razorpay_signature' => $placeOrder['razorpay_signature']
-                        );
-
-                        $api->utility->verifyPaymentSignature($attributes);
-                    } catch (SignatureVerificationError $e) {
-                        $success = false;
-                        $error = 'Razorpay Error : ' . $e->getMessage();
-                    }
+                $order_data = $this->CI->db->get_where('tbl_order1', array('id = ' => $order_id))->result();
+                if ($order_data[0]->payment_status == 1) {
+                    $respone['status'] = true;
+                    return json_encode($respone);
                 }
-                if ($success == true) {
-                    $order_data = $this->CI->db->get_where('tbl_order1', array('id = ' => $order_id))->result();
-                    // $final_amount = $order_data[0]->total_amount - $order_data[0]->promo_discount +  $order_data[0]->shipping;
-                    $user_id = $order_data[0]->user_id;
-                    $final_amount = $order_data[0]->final_amount - $order_data[0]->promo_discount;
-                    $referpoints['model_id'] = '';
-                    $referpoints['refer_points'] = 0;
-                    if (!empty($placeOrder['referalcode'])) {
-                        $referpoints = $this->checkModelReferal($placeOrder['referalcode'], $order_id, $user_id);
+                // $final_amount = $order_data[0]->total_amount - $order_data[0]->promo_discount +  $order_data[0]->shipping;
+                $user_id = $order_data[0]->user_id;
+                $final_amount = $order_data[0]->final_amount - $order_data[0]->promo_discount;
+                $referpoints['model_id'] = '';
+                $referpoints['refer_points'] = 0;
+                if (!empty($order_data[0]->refererral_code)) {
+                    $referpoints = $this->checkModelReferal($order_data[0]->refererral_code, $order_id, $user_id);
+                }
+                //--- generate invoice no ------
+                $order1 = $this->CI->db->order_by('id', 'desc')->get_where('tbl_order1', array('payment_status' => 1))->result();
+                if (empty($order1[0]->invoice_no)) {
+                    $invoice_no = 1;
+                } else {
+                    $invoice_no = $order1[0]->invoice_no + 1;
+                }
+                //----------order1 entry-------------
+                $order1_update = array(
+                    'cc_response' => $decryptValues,
+                    'payment_status' => 1,
+                    'payment_type' => 2,
+                    'order_status' => 1,
+                    'order_type' => 1,
+                    'invoice_no' => $invoice_no,
+                    'date' => $cur_date,
+                    'ip' => $ip,
+                );
+                $this->CI->db->where('id', $order_id);
+                $zapak2 = $this->CI->db->update('tbl_order1', $order1_update);
+
+                if ($zapak2 == 1) {
+                    $order2_data = $this->CI->db->get_where('tbl_order2', array('main_id = ' => $order_id));
+                    //--------------inventory update and cart delete--------
+                    foreach ($order2_data->result() as $odr2) {
+                        //---------- inventory update ------------------------
+                        $type_data = $this->CI->db->get_where('tbl_type', array('id = ' => $odr2->type_id))->result();
+                        if ((int)$type_data[0]->inventory >= (int)$odr2->quantity) {
+                            $new_inventory = (int)$type_data[0]->inventory - (int)$odr2->quantity;
+                            //--------- inventory transaction --------
+                            $data_insert = array(
+                                'order1_id' => $odr2->main_id,
+                                'order2_id' => $odr2->id,
+                                'type_id' => $odr2->type_id,
+                                'qty' => $odr2->quantity,
+                                'old_inventory' => $type_data[0]->inventory,
+                                'new_inventory' => $new_inventory,
+                                'date' => $cur_date,
+                            );
+                            $last_id = $this->CI->base_model->insert_table("tbl_inventory_transaction", $data_insert, 1);
+
+                            $this->CI->db->where('id', $odr2->type_id);
+                            $zapak2 = $this->CI->db->update('tbl_type', array('inventory' => $new_inventory));
+                            //-------cart delete---------
+                            $delete = $this->CI->db->delete('tbl_cart', array('user_id' => $user_id, 'product_id' => $odr2->product_id, 'type_id' => $odr2->type_id, 'user_type' => $user_type));
+                            $this->CI->session->unset_userdata('cart_data');
+                        }
                     }
-                    //--- generate invoice no ------
-                    $order1 = $this->CI->db->order_by('id', 'desc')->get_where('tbl_order1', array('payment_status' => 1))->result();
-                    if (empty($order1[0]->invoice_no)) {
-                        $invoice_no = 1;
-                    } else {
-                        $invoice_no = $order1[0]->invoice_no + 1;
+                    // $config = Array(
+                    // 'protocol' => 'smtp',
+                    // 'smtp_host' => SMTP_HOST,
+                    // 'smtp_port' => SMTP_PORT,
+                    // 'smtp_user' => USER_NAME, // change it to yours
+                    // 'smtp_pass' => PASSWORD, // change it to yours
+                    // 'mailtype' => 'html',
+                    // 'charset' => 'iso-8859-1',
+                    // 'wordwrap' => true
+                    // );
+                    // $to=$email;
+                    // $data['name']= $name;
+                    // $data['email']= $email;
+                    // $data['phone']= $phone;
+                    // $data['order1_id']= $order_id;
+                    // $data['date']= $cur_date;
+                    // $message =$this->load->view('email/ordersuccess',$data,TRUE);
+                    // // echo $to;
+                    // // print_r($message);
+                    // // exit;
+                    // $this->load->library('email', $config);
+                    // $this->email->set_newline("");
+                    // $this->email->from(EMAIL); // change it to yours
+                    // $this->email->to($to);// change it to yours
+                    // $this->email->subject('Order Placed');
+                    // $this->email->message($message);
+                    // if($this->email->send()){
+                    // // echo 'Email sent.';
+                    // }else{
+                    // show_error($this->email->print_debugger());
+                    // }
+                    // die();
+
+                    //order placing
+                    //whattsapp message sent
+                    $this->CI->db->select('*');
+                    $this->CI->db->from('tbl_order2');
+                    $this->CI->db->where('main_id', $order_id);
+                    $d1 = $this->CI->db->get();
+                    $p1 = '';
+                    $i = 1;
+                    foreach ($d1->result() as $data1) {
+                        $productid = $data1->product_id;
+                        $typeid = $data1->type_id;
+                        $qtys = $data1->quantity;
+                        $this->CI->db->select('*');
+                        $this->CI->db->from('tbl_product');
+                        $this->CI->db->where('id', $productid);
+                        $dsa = $this->CI->db->get();
+                        $da_p = $dsa->row();
+                        if (!empty($da_p)) {
+                            $p_name = $da_p->name;
+                        } else {
+                            $p_name = '';
+                        }
+                        $this->CI->db->select('*');
+                        $this->CI->db->from('tbl_type');
+                        $this->CI->db->where('id', $typeid);
+                        $dsa = $this->CI->db->get();
+                        $da_type = $dsa->row();
+                        if (!empty($da_type)) {
+                            $tsize = $da_type->size_id;
+                            $tcolor = $da_type->colour_id;
+                        } else {
+                            $tsize = '';
+                            $tcolor = '';
+                        }
+
+                        $this->CI->db->select('*');
+                        $this->CI->db->from('tbl_size');
+                        $this->CI->db->where('id', $tsize);
+                        $dsa_size = $this->CI->db->get()->row();
+                        $size = $dsa_size->name;
+
+                        $this->CI->db->select('*');
+                        $this->CI->db->from('tbl_colour');
+                        $this->CI->db->where('id', $tcolor);
+                        $dsa_color = $this->CI->db->get()->row();
+                        $colour = $dsa_color->colour_name;
                     }
-                    //----------order1 entry-------------
-                    $order1_update = array(
-                        'name' => $placeOrder['name'],
-                        'email' => $placeOrder['email'],
-                        'phone' => $placeOrder['phone'],
-                        'address' => $placeOrder['address'],
-                        'state' => $placeOrder['state'],
-                        'city' => $placeOrder['city'],
-                        'final_amount' => $final_amount,
-                        'refererral_code' => $placeOrder['referalcode'],
-                        'ref_points' => $referpoints['refer_points'],
-                        'model_id' => $referpoints['model_id'],
-                        'payment_status' => 1,
-                        'payment_type' => 2,
-                        'order_status' => 1,
-                        'order_type' => 1,
-                        'invoice_no' => $invoice_no,
-                        'date' => $cur_date,
-                        'ip' => $ip,
-                    );
+                    $this->CI->db->select('*');
+                    $this->CI->db->from('tbl_order1');
                     $this->CI->db->where('id', $order_id);
-                    $zapak2 = $this->CI->db->update('tbl_order1', $order1_update);
+                    $dsa = $this->CI->db->get();
+                    $da = $dsa->row();
+                    if (!empty($da)) {
+                        $totalamt = $da->total_amount;
+                        $cur_date2 = $da->date;
+                        $ptype = $da->payment_type;
+                        $user_id2 = $da->user_id;
 
-                    if ($zapak2 == 1) {
-                        $order2_data = $this->CI->db->get_where('tbl_order2', array('main_id = ' => $order_id));
-                        //--------------inventory update and cart delete--------
-                        foreach ($order2_data->result() as $odr2) {
-                            //---------- inventory update ------------------------
-                            $type_data = $this->CI->db->get_where('tbl_type', array('id = ' => $odr2->type_id))->result();
-                            if ((int)$type_data[0]->inventory >= (int)$odr2->quantity) {
-                                $new_inventory = (int)$type_data[0]->inventory - (int)$odr2->quantity;
-                                //--------- inventory transaction --------
-                                $data_insert = array(
-                                    'order1_id' => $odr2->main_id,
-                                    'order2_id' => $odr2->id,
-                                    'type_id' => $odr2->type_id,
-                                    'qty' => $odr2->quantity,
-                                    'old_inventory' => $type_data[0]->inventory,
-                                    'new_inventory' => $new_inventory,
-                                    'date' => $cur_date,
-                                );
-                                $last_id = $this->CI->base_model->insert_table("tbl_inventory_transaction", $data_insert, 1);
 
-                                $this->CI->db->where('id', $odr2->type_id);
-                                $zapak2 = $this->CI->db->update('tbl_type', array('inventory' => $new_inventory));
-                                //-------cart delete---------
-                                $delete = $this->CI->db->delete('tbl_cart', array('user_id' => $user_id, 'product_id' => $odr2->product_id, 'type_id' => $odr2->type_id, 'user_type' => $user_type));
-                                $this->CI->session->unset_userdata('cart_data');
-                            }
-                        }
-                        // $config = Array(
-                        // 'protocol' => 'smtp',
-                        // 'smtp_host' => SMTP_HOST,
-                        // 'smtp_port' => SMTP_PORT,
-                        // 'smtp_user' => USER_NAME, // change it to yours
-                        // 'smtp_pass' => PASSWORD, // change it to yours
-                        // 'mailtype' => 'html',
-                        // 'charset' => 'iso-8859-1',
-                        // 'wordwrap' => true
-                        // );
-                        // $to=$email;
-                        // $data['name']= $name;
-                        // $data['email']= $email;
-                        // $data['phone']= $phone;
-                        // $data['order1_id']= $order_id;
-                        // $data['date']= $cur_date;
-                        // $message =$this->load->view('email/ordersuccess',$data,TRUE);
-                        // // echo $to;
-                        // // print_r($message);
-                        // // exit;
-                        // $this->load->library('email', $config);
-                        // $this->email->set_newline("");
-                        // $this->email->from(EMAIL); // change it to yours
-                        // $this->email->to($to);// change it to yours
-                        // $this->email->subject('Order Placed');
-                        // $this->email->message($message);
-                        // if($this->email->send()){
-                        // // echo 'Email sent.';
-                        // }else{
-                        // show_error($this->email->print_debugger());
-                        // }
-                        // die();
-
-                        //order placing
-                        //whattsapp message sent
-                        $this->db->select('*');
-                        $this->db->from('tbl_order2');
-                        $this->db->where('main_id', $order_id);
-                        $d1 = $this->db->get();
-                        $p1 = '';
-                        $i = 1;
-                        foreach ($d1->result() as $data1) {
-                            $productid = $data1->product_id;
-                            $typeid = $data1->type_id;
-                            $qtys = $data1->quantity;
-                            $this->db->select('*');
-                            $this->db->from('tbl_product');
-                            $this->db->where('id', $productid);
-                            $dsa = $this->db->get();
-                            $da_p = $dsa->row();
-                            if (!empty($da_p)) {
-                                $p_name = $da_p->name;
-                            } else {
-                                $p_name = '';
-                            }
-                            $this->db->select('*');
-                            $this->db->from('tbl_type');
-                            $this->db->where('id', $typeid);
-                            $dsa = $this->db->get();
-                            $da_type = $dsa->row();
-                            if (!empty($da_type)) {
-                                $tsize = $da_type->size_id;
-                                $tcolor = $da_type->colour_id;
-                            } else {
-                                $tsize = '';
-                                $tcolor = '';
-                            }
-
-                            $this->db->select('*');
-                            $this->db->from('tbl_size');
-                            $this->db->where('id', $tsize);
-                            $dsa_size = $this->db->get()->row();
-                            $size = $dsa_size->name;
-
-                            $this->db->select('*');
-                            $this->db->from('tbl_colour');
-                            $this->db->where('id', $tcolor);
-                            $dsa_color = $this->db->get()->row();
-                            $colour = $dsa_color->colour_name;
-                        }
-                        $this->db->select('*');
-                        $this->db->from('tbl_order1');
-                        $this->db->where('id', $order_id);
-                        $dsa = $this->db->get();
+                        $this->CI->db->select('*');
+                        $this->CI->db->from('tbl_users');
+                        $this->CI->db->where('id', $user_id2);
+                        $dsa = $this->CI->db->get();
                         $da = $dsa->row();
                         if (!empty($da)) {
-                            $totalamt = $da->total_amount;
-                            $cur_date2 = $da->date;
-                            $ptype = $da->payment_type;
-                            $user_id2 = $da->user_id;
-
-
-                            $this->db->select('*');
-                            $this->db->from('tbl_users');
-                            $this->db->where('id', $user_id2);
-                            $dsa = $this->db->get();
-                            $da = $dsa->row();
-                            if (!empty($da)) {
-                                $first_name = $da->f_name;
-                                $last_name = $da->l_name;
-                                $name2 = $first_name . $last_name;
-                            } else {
-                                $name2 = '';
-                            }
-                            if ($ptype == 1) {
-                                $pptype = "Cash on delivery";
-                            } else if ($ptype == 2) {
-                                $pptype = "Online payment";
-                            }
+                            $first_name = $da->f_name;
+                            $last_name = $da->l_name;
+                            $name2 = $first_name . ' ' . $last_name;
+                        } else {
+                            $name2 = '';
                         }
-                        $product_des = '&product name=' . $p_name . '-' . $size . '(' . $colour . ')*' . $qtys;
-                        $curl = curl_init();
-                        curl_setopt_array($curl, array(
-                            CURLOPT_URL => 'https://whatsapp.fineoutput.com/send_order_message',
-                            CURLOPT_RETURNTRANSFER => true,
-                            CURLOPT_ENCODING => '',
-                            CURLOPT_MAXREDIRS => 10,
-                            CURLOPT_TIMEOUT => 0,
-                            CURLOPT_FOLLOWLOCATION => true,
-                            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                            CURLOPT_CUSTOMREQUEST => 'POST',
-                            CURLOPT_POSTFIELDS => 'phone=' . WHATSAPP_NUMBERS3 . '&order_id=' . $order_id . '&amount=' . $totalamt . '&date=' . $cur_date2 . '&method=' . $pptype . $product_des . '&customer_name=' . $name2  .  '',
-                            CURLOPT_HTTPHEADER => array(
-                                'token:' . TOKEN . '',
-                                'Content-Type:application/x-www-form-urlencoded',
-                                'Cookie:ci_session=e40e757b02bc2d8fb6f5bf9c5b7bb2ea74c897e8'
-                            ),
-                        ));
-                        $respons = curl_exec($curl);
-                        curl_close($curl);
-
-
-                        $respone['status'] = true;
-                        return json_encode($respone);
-                    } else {
-                        $respone['status'] = false;
-                        $respone['message'] = "Some error occurred";
-                        return json_encode($respone);
+                        if ($ptype == 1) {
+                            $pptype = "Cash on delivery";
+                        } else if ($ptype == 2) {
+                            $pptype = "Online payment";
+                        }
                     }
+                    $product_des = '&product name=' . $p_name . '-' . $size . '(' . $colour . ')*' . $qtys;
+                    $curl = curl_init();
+                    curl_setopt_array($curl, array(
+                        CURLOPT_URL => 'https://whatsapp.fineoutput.com/send_order_message',
+                        CURLOPT_RETURNTRANSFER => true,
+                        CURLOPT_ENCODING => '',
+                        CURLOPT_MAXREDIRS => 10,
+                        CURLOPT_TIMEOUT => 0,
+                        CURLOPT_FOLLOWLOCATION => true,
+                        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                        CURLOPT_CUSTOMREQUEST => 'POST',
+                        CURLOPT_POSTFIELDS => 'phone=' . WHATSAPP_NUMBERS3 . '&order_id=' . $order_id . '&amount=' . $totalamt . '&date=' . $cur_date2 . '&method=' . $pptype . '&products=' . $product_des . '&customer_name=' . $name2  .  '',
+                        CURLOPT_HTTPHEADER => array(
+                            'token:' . TOKEN . '',
+                            'Content-Type:application/x-www-form-urlencoded',
+                            'Cookie:ci_session=e40e757b02bc2d8fb6f5bf9c5b7bb2ea74c897e8'
+                        ),
+                    ));
+                    $respons = curl_exec($curl);
+                    curl_close($curl);
+
+
+                    $respone['status'] = true;
+                    return json_encode($respone);
                 } else {
                     $respone['status'] = false;
                     $respone['message'] = "Some error occurred";
@@ -764,9 +712,9 @@ class CI_Order
         $this->CI->db->where('id', $order_id);
         $zapak = $this->CI->db->update('tbl_order1', $data_update);
         //-------update inventory-------
-        $data_order2 = $this->CI->db->get_where('tbl_order2', array('main_id = ' => $order_id));
-        foreach ($data_order2->result() as $data) {
-            $type = $this->CI->db->get_where('tbl_type', array('id = ' => $data->type_id))->result();
+        $data_order2 = $this->CI->db->get_where('tbl_order2', array('main_id = ' => $order_id))->result();
+        foreach ($data_order2 as $data) {
+            $type = $this->CI->db->get_where('tbl_type', array('id = ' => $data->type_id))->row();
             if (!empty($type)) {
                 $update_inv = $type->inventory + $data->quantity;
                 $data_update = array('inventory' => $update_inv);
@@ -778,6 +726,50 @@ class CI_Order
             return true;
         } else {
             return false;
+        }
+    }
+    // =================================== UPDATE SHIPPING ===========================================================
+    public function updateShipping($address_data, $order_id, $check = 0)
+    {
+        $order_id = base64_decode($order_id);
+        $order1_data = $this->CI->db->get_where('tbl_order1', array('id' => $order_id))->row();
+        // print_r($order1_data);die();
+
+        $pincode = $address_data->pincode;
+        $shipping = $this->CI->shiprocket->GetCourierServiceability($pincode, $order1_data->weight, $order1_data->final_amount);
+        $shipping = json_decode($shipping);
+        if ($shipping->status == false) {
+            $this->CI->session->set_flashdata('emessage', $shipping->message);
+            $data_update = array(
+                'shipping' => 0, 'final_amount' => $order1_data->total_amount - $order1_data->promo_discount,
+            );
+            $this->CI->db->where('id', $order_id);
+            $zapak = $this->CI->db->update('tbl_order1', $data_update);
+            $respone['status'] = false;
+            $respone['message'] =  $shipping->message;
+            return json_encode($respone);
+            exit;
+        }
+        if ($check == 1) {
+            $respone['status'] = true;
+            return json_encode($respone);
+        }
+        $shipping_charge = $shipping->data->shipping;
+        $courier_id = $shipping->data->courier_id;
+        $data_update = array(
+            'shipping' => $shipping_charge, 'courier_id' => $courier_id,
+            'final_amount' => $order1_data->total_amount - $order1_data->promo_discount + $shipping_charge, 'address_id' => $address_data->id
+        );
+        $this->CI->db->where('id', $order_id);
+        $zapak = $this->CI->db->update('tbl_order1', $data_update);
+        if (!empty($zapak)) {
+            $respone['status'] = true;
+            return json_encode($respone);
+        } else {
+            $respone['status'] = false;
+            $respone['message'] =  'Some error occured';
+            return json_encode($respone);
+            exit;
         }
     }
 }

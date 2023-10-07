@@ -8,14 +8,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <!-- Css file include -->
   <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/style.css">
-  <link rel="shortcut icon" href="<?= base_url() ?>assets/logo.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="<?= base_url() ?>assets/frontend/img/Poshida Logo (2)_page-0001.jpg" type="image/x-icon" />
   <title>Tiara Invoice</title>
 </head>
 <body style="padding-top:75px;">
   <div class="container main_container">
     <div class="row">
       <div class="col-sm-6 oswal_logo">
-        <img src="<?= base_url() ?>assets/frontend/images/logo2.png" class="img-fluid" style="width:150px;">
+        <img src="<?= base_url() ?>assets/frontend/img/Poshida Logo (2)_page-0001.jpg" class="img-fluid" style="width:150px;">
       </div>
       <div class="col-sm-6 content_part">Tax Invoice/Bill of Supply/Cash Memo
         <p>(Original for Recipient)</p>
@@ -24,12 +24,11 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6"><span class="font-weight-bold ">Sold By</span><br>
-          <span class="seller_details">Tiara Collection <br>
-            Plot no. C-2, Shop No B-14,15,16,17, Saurav Tower, Gautam Marg,<br>
-            Vaishali Nagar, Jaipur, Rajasthan,
+          <span class="seller_details">Poshida <br>
+            Shayam Nagar, Jaipur, Rajasthan,
             <br> 302021
             <br>
-            www.tiarastore.co.in
+            www.poshida.com
             <br>
             <br></span>
         </div>
@@ -83,12 +82,24 @@
           <? } ?>
           <?php
           if (!empty($order1_data)) {
-            $name = $order1_data->name;
-            $phone = $order1_data->phone;
-            $pincode = $order1_data->pincode;
-            $email = $order1_data->email;
-            $address = $order1_data->address;
-            $city = $order1_data->city;
+            if (!empty($order1_data->address_id)) {
+              $address_data = $this->db->get_where('tbl_user_address', array('id' => $order1_data->address_id))->row();
+              $name = $address_data ? $address_data->f_name ." ". $address_data->l_name:'';
+              $phone = $address_data ? $address_data->phone:'';
+              $pincode = $address_data ? $address_data->pincode:'';
+              $state = $address_data ? $address_data->state:'';
+              $city = $address_data ? $address_data->city:'';
+              $email = $address_data ? $address_data->email:'';
+              $address = $address_data ? $address_data->address:'';
+            } else {
+              $name = $order1_data->name;
+              $phone = $order1_data->phone;
+              $pincode = $order1_data->pincode;
+              $state = $order1_data->state;
+              $city = $order1_data->city;
+              $email = $order1_data->email;
+              $address = $order1_data->address;
+            }
           }
           ?>
         </div>
@@ -98,7 +109,7 @@
         <div class="col-sm-6">
           <br />
           <br />
-          <span class="font-weight-bold">GST Registration Number : </span> <br> 08BVTPJ7597L1ZC
+          <span class="font-weight-bold">GST Registration Number : </span> <br> FINE122OUT
         </div>
         <div class="col-sm-6 shipping_content"><span class="font-weight-bold ">Shipping Address:</span> <br>
           Name:<?php
@@ -131,7 +142,7 @@
                     }
                     ?> <br>
           State:
-          <?php echo $order1_data->state; ?><br>
+          <?php echo $state; ?><br>
           City:<?php
                 if (!empty($city)) {
                   echo $city;
@@ -205,25 +216,25 @@
                         } else {
                           $hsn_code = "";
                         } ?></td>
-                    <td><?php echo "₹" . $data->spgst; ?></td>
+                    <td><?php echo "₹" . $data->selling_price; ?></td>
                     <? if ($order_type == 2) { ?>
                       <td><?php echo "₹" . $data->percentage_discount ?></td>
                     <? } ?>
                     <td><?php echo $data->quantity; ?></td>
-                    <td><?php echo "₹" . $data->total_amount; ?> </td>
-                    <?php if ($order1_data->state == "Rajasthan [RJ]") { ?>
+                    <td><?php echo "₹" . ($data->selling_price*$data->quantity); ?> </td>
+                    <?php if ($state == "Rajasthan [RJ]") { ?>
                       <td><span> <?php $half = $data->gst / 2;
                                   echo $half . "%"; ?> </span> <br> <span> <?php $half = $data->gst / 2;
                                                                             echo $half . "%"; ?> </span></td>
                     <?php } else { ?>
                       <td><?php echo $data->gst . "%"; ?></td>
                     <?php } ?>
-                    <?php if ($order1_data->state == "Rajasthan [RJ]") { ?>
+                    <?php if ($state == "Rajasthan [RJ]") { ?>
                       <td><span> CGST </span> <br> <span> SGST </span></td>
                     <?php } else { ?>
                       <td>IGST</td>
                     <?php } ?>
-                    <?php if ($order1_data->state == "Rajasthan [RJ]") { ?>
+                    <?php if ($state == "Rajasthan [RJ]") { ?>
                       <td>
                         <span> <?php
                                 $total_gst = $data->selling_price * $data->gst / 100;
@@ -238,7 +249,7 @@
                         </span>
                       </td>
                     <?php } else { ?>
-                      <td><?php echo "₹" . $data->spgst * $data->gst / 100 * $data->quantity; ?></td>
+                      <td><?php echo "₹" . $data->selling_price * $data->gst / 100 * $data->quantity; ?></td>
                     <?php } ?>
                     <td><?php
                         // $total = $data->total_amount;

@@ -228,7 +228,7 @@
                     <span><i class="fa fa-angle-right"></i></span>
                   </a>
                 <? } else { ?>
-                  <a href="checkout.html" class="btn btn-color">Proceed to checkout
+                  <a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel" class="btn btn-color">Proceed to checkout
                     <span><i class="fa fa-angle-right"></i></span>
                   </a>
                 <? } ?>

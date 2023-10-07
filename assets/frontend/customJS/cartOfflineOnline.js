@@ -17,7 +17,14 @@ function addToCart(obj) {
         $("#headerCount").load(window.location.href + " #headerCount > *");   //cart count
         $("#footerCount").load(window.location.href + " #footerCount > *");   //cart count
         $(".refreshing").load(window.location.href + " .refreshing > *");
+        // var element = document.getElementById("minicart");
+        // element.classList.toggle("toggle");
         notifySuccess(response.message)
+        setTimeout(() => {
+          $("#mob_cart").addClass("show");
+          $("#minicart").addClass("show");
+          $("#carto").attr("aria-expanded","true");   
+        }, 1000);
       } else if (response.status == false) {
         notifyError(response.message)
         if(response.message=='Item is already in your cart'){

@@ -1,196 +1,228 @@
-<!-- START SECTION BREADCRUMB -->
-<div class="breadcrumb_section bg_gray page-title-mini">
-  <div class="container">
-    <!-- STRART CONTAINER -->
-    <div class="row align-items-center">
-      <div class="col-md-12">
-        <ol class="breadcrumb justify-content-md-start">
-          <li class="breadcrumb-item"><a href="<?=base_url()?>">Home</a></li>
-          <li class="breadcrumb-item active">Checkout</li>
-        </ol>
-      </div>
-    </div>
-  </div><!-- END CONTAINER-->
-</div>
-<!-- END SECTION BREADCRUMB -->
-
-<!-- START MAIN CONTENT -->
-<div class="main_content">
-
-
-  <!-- START SECTION SHOP -->
-  <div class="section topp" style="padding-top: 20px; position: sticky; top: 0;">
+<div class="contant">
+  <!-- START SECTION BREADCRUMB -->
+  <div id="banner-part" class="banner inner-banner">
     <div class="container">
-
-      <div class="row">
-        <div class="col-12">
-          <div class="medium_divider"></div>
-          <div class="divider center_icon"><i class="linearicons-credit-card"></i></div>
-          <div class="medium_divider"></div>
-        </div>
-      </div>
-
-      <div class="row reversecheckout">
-        <div class="col-md-6">
-          <div class="heading_s1">
-            <h4>Shipping Address</h4>
-          </div>
-          <form method="POST" id="placeOrderForm" action="javascript:;" enctype="multipart/form-data">
-            <div class="row">
-              <div class="form-group col-lg-6">
-                <input type="text" required class="form-control" id="fname" onkeyup='saveValue(this);' name="fname" placeholder="First name *">
-              </div>
-              <div class="form-group col-lg-6">
-                <input type="text" required class="form-control" id="lname" onkeyup='saveValue(this);' name="lname" placeholder="Last name *">
-              </div>
-            </div>
-            <div class="form-group">
-              <input class="form-control" required type="email" id="email" onkeyup='saveValue(this);' name="email" placeholder="Email Address *">
-            </div>
-            <input type="hidden" id="totAmt" name="totalAmount" value="<?=$order_data[0]->final_amount?>" />
-            <div class="form-group">
-              <input class="form-control" onkeypress="return isNumberKey(event)" maxlength="10" minlength="10"  required type="text" id="phonenumber" onkeyup='saveValue(this);' name="phonenumber" placeholder="Phone Number *">
-            </div>
-            <div class="row">
-              <div class="form-group col-lg-6">
-                <div class="custom_select">
-                  <select class="form-control" id="state" required>
-                    <option value="">---- Select State ----</option>
-                    <?foreach ($state_data->result() as $state) {?>
-                    <option value="<?=$state->state_name?>"><?=$state->state_name?></option>
-                    <?}?>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group col-lg-6">
-                <input class="form-control" id="city" onkeyup='saveValue(this);' required type="text" name="city" placeholder="City *">
-              </div>
-            </div>
-            <div class="form-group">
-              <input class="form-control" required type="text" id="address" onkeyup='saveValue(this);' name="address" placeholder="Address *">
-            </div>
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="form-group">
-                  <input class="form-control" type="text" id="referalcode" name="reffercode" placeholder="Enter Referral Code">
-                </div>
-              </div>
-
-            </div>
-            <div class="payment_method" style="padding-bottom: 0px;">
-              <div class="heading_s1">
-                <h4>Payment</h4>
-                <!-- <p style="color: red;padding-bottom:0px;">Delivery Free Above RS 2499</p> -->
-              </div>
-              <div class="payment_option">
-                <div class="custome-radio">
-                  <input class="form-check-input payment_option payment_emthod" required="" type="radio" name="payment_option" id="exampleRadios3" value="1" checked="">
-                  <label class="form-check-label" for="exampleRadios3">Cash On Delivery (COD)</label>
-                </div>
-                <div class="custome-radio">
-                  <input class="form-check-input payment_option payment_emthod" type="radio" name="payment_option" id="exampleRadios4" value="2">
-                  <label class="form-check-label" for="exampleRadios4">Online Payment</label>
-                </div>
-              </div>
-            </div>
-            <div class="row detailborder" style="position: sticky;bottom: 0;background: #fff;">
-              <div class="col-sm-4 col-6 mt-2 mobileviewdetail">
-                <p style="margin-bottom: 3px;color: black;">₹ <?=$order_data[0]->final_amount?></p>
-                <a href="javascript:void(0)" id="totop" style="color: #c68fa6 ;">View details</a>
-              </div>
-              <div class="col-sm-8 col-6 mt-2">
-                <button class="btn btn-fill-out btn-block col-sm-8 mb-3" id="loader" disabled style="display:none">
-                  <i class="fa fa-spinner fa-spin"></i>Loading
-                </button>
-                <button type="submit" class="btn btn-fill-out btn-block col-sm-8 mb-3" id="place">Place Order</a>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="col-md-6" id="summary">
-          <div class="order_review" >
-            <div class="heading_s1">
-              <h4>Order Summary</h4>
-            </div>
-            <div class="table-responsive order_table">
-              <table class="table" id="order_review">
-                <thead>
-                  <tr>
-                    <th>Product</th>
-                    <th></th>
-                    <th>Total</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php foreach ($cart_fetch['cart_data'] as $cart) {?>
-                  <tr>
-                    <td width="10%"><img src="<?=$cart['image']?>" alt=""></td>
-                    <td><?=$cart['product_name']?> <span class="product-qty">x <?=$cart['quantity']?></span></td>
-                    <td>₹<?=$cart['price']?></td>
-                  </tr>
-                  <?}?>
-                </tbody>
-                <tfoot>
-                  <tr>
-                    <th>Total</th>
-                    <td></td>
-                    <td class="product-subtotal">₹<?=$order_data[0]->total_amount?></td>
-                  </tr>
-                  <?
-                  if (!empty($order_data[0]->promo_discount) && $order_data[0]->promo_discount > 1) {
-                      ?>
-                   <tr>
-                    <th>Discount</th>
-                    <td></td>
-                    <td style="color:green">-₹<?=$order_data[0]->promo_discount?></td>
-                  </tr>
-                  <?
-                  }?>
-                  <tr>
-                    <th>Shipping</th>
-                    <td></td>
-                    <td><?if(empty($order_data[0]->shipping)){echo 'Free Shipping';}else{echo '₹'.$order_data[0]->shipping;}?></td>
-                  </tr>
-                  <tr>
-                    <th>SubTotal</th>
-                    <td></td>
-                    <td class="product-subtotal">₹<?=number_format($order_data[0]->final_amount,2);?></td>
-                  </tr>
-                  <?$promo_string = $this->db->get_where('tbl_promocode', array('id = ' => $order_data[0]->promocode))->result();
-                  $input = "";
-                  if (!empty($promo_string)) {
-                      $input = $promo_string[0]->promocode;
-                  }
-                  if (!empty($input)) {
-                      ?>
-                  <tr>
-                    <th colspan="2" style="color: #c68fa6"><a href="javascript:void(0);" onclick="remove_promocode()" style="color:unset;"><?=$input?>&nbsp;&nbsp<i class="fa fa-times" aria-hidden="true"></i></a></th>
-                    <!-- <td></td> -->
-                    <td></td>
-                  </tr>
-                  <?
-                  }?>
-                </tfoot>
-              </table>
-            </div>
-            <form id="promocode_form" method="POST" enctype="multipart/form-data" action="javascript:void(0)">
-            <div class="row">
-              <div class="col-lg-8">
-                <div class="form-group">
-                  <input class="form-control" type="text" name="promocode" id="inputPromocode" required placeholder="Apply Coupon">
-                </div>
-              </div>
-              <div class="col-lg-4" id="apply_promocode">
-                <button type="submit" href="javascript:void(0);" class="btn btn-fill-out btn-block">Apply</button>
-              </div>
-            </div>
-          </form>
-          </div>
+      <div class="bread-crumb-main">
+        <h1 class="banner-title">Checkout</h1>
+        <div class="breadcrumb">
+          <ul class="inline">
+            <li><a href="<?= base_url() ?>">Home</a>
+            </li>
+            <li>Checkout</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
-  <!-- END SECTION SHOP -->
+  <!-- END SECTION BREADCRUMB -->
 
-</div>
-<!-- END MAIN CONTENT -->
+  <div class="checkout-part ptb-100" style="padding-top: 20px;">
+    <div class="container">
+      <div class="main-form">
+        <div class="row">
+          <div class="col-12 col-lg-8">
+            <div class="mb-md-30">
+              <div class="mb-60">
+                <div class="col-md-12  p-0">
+                  <!------ start address section ------ -->
+                  <div class="heading_s1 border-input ">
+                    <div style="display: flex; justify-content: space-between;">
+                      <div class="addressStrip-base-title">
+                        <? if (!empty($address_data)) { ?>
+                          <div class="addressStrip-base-addressName">Deliver to: <span class="addressStrip-base-highlight"><?= $address_data->f_name ?> <?= $address_data->l_name ?></span>
+                            <div class="addressStrip-base-highlight"><?= $address_data->address ?>, <?= $address_data->city ?>, <?= $address_data->state ?>- <?= $address_data->pincode ?> </div>
+                          </div>
+                          <div class="addressStrip-base-subText"><?= $address_data->email ?>, <?= $address_data->phone ?></div>
+                        <? } else { ?>
+                          <div class="addressStrip-base-addressName">
+                            <h5 class="text-center" style="color:#FF324D">Please add address for checkout</h5>
+                          </div>
+                        <? } ?>
+
+                      </div>
+                      <div style="align-items: center;display: flex;">
+                        <a href="<?= base_url() ?>Order/add_address" class="btn-color fdghrd " style="padding: 10px 20px; border-radius: 6px;"> <? if (!empty($address_data)) {
+                                                                                                                                                  echo 'Change';
+                                                                                                                                                } else {
+                                                                                                                                                  echo 'Add';
+                                                                                                                                                } ?>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!------ End address section ------ -->
+
+                  <!------ Start  products section ------ -->
+                  <div class="col-12 col-lg-12">
+                    <div class="checkout-products sidebar-product mb-60">
+                      <ul>
+                        <?php foreach ($cart_fetch['cart_data'] as $cart) { ?>
+                          <li>
+                            <div class="pro-media"> <a href="javascript:void(0)"><img alt="Image not found" src="<?= $cart['image'] ?>"></a>
+                            </div>
+                            <div class="pro-detail-info"> <a href="javascript:void(0)" class="product-title"><?= $cart['product_name'] ?></a>
+                              <div class="price-box"> <span class="price">₹<?= $cart['price'] ?></span> </div>
+                              <!-- <div class="d-flex ">
+                                <p class="mb-0">Color</p>
+                                <p class="mb-0">: Red</p>
+                              </div>
+                              <div class="d-flex ">
+                                <p class="mb-0">Size</p>
+                                <p class="mb-0">: XL</p>
+                              </div> -->
+                              <div class="checkout-qty">
+                                <div>
+                                  <label>Qty: </label>
+                                  <span class="info-deta"><?= $cart['quantity'] ?></span>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        <? } ?>
+                      </ul>
+                    </div>
+                  </div>
+                  <!------ end  products section ------ -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-4" id="summary">
+
+            <div class="complete-order-detail commun-table gray-bg mb-30">
+              <div class="table-responsive n-1">
+                <div class="payment_method" style="padding: 10px;">
+                  <div class="heading_s1">
+                    <p style="margin-bottom: 5px !important;"> <b>PRICE DETAILS </b></p>
+                  </div>
+                  <div class="payment_option " style="border-top:  1px solid gainsboro;">
+                    <div id="order_review">
+                      <div class="d-flex justify-content-between">
+                        <span>
+                          Sub Total
+                        </span>
+                        <span>
+                          ₹<?= $order_data[0]->total_amount ?>
+                        </span>
+                      </div>
+
+                      <div class="d-flex justify-content-between">
+                        <span>
+                          Shipping charges
+                        </span>
+                        <span>
+                          <? if (empty($order_data[0]->shipping)) {
+                            echo 'Free Shipping';
+                          } else {
+                            echo '₹' . $order_data[0]->shipping;
+                          } ?>
+                        </span>
+                      </div>
+                      <?
+                      if (!empty($order_data[0]->promo_discount) && $order_data[0]->promo_discount > 1) {
+                      ?>
+                        <div class="d-flex justify-content-between">
+                          <span>
+                            Promocode Discount
+                          </span>
+                          <span>
+                            -₹<?= $order_data[0]->promo_discount ?>
+                          </span>
+                        </div>
+                      <? } ?>
+
+                      <div class="d-flex justify-content-between mb-2">
+                        <span>
+                          Total Amount
+                        </span>
+                        <span>
+                          ₹<?= number_format($order_data[0]->final_amount, 2); ?>
+                        </span>
+                      </div>
+                      <? $promo_string = $this->db->get_where('tbl_promocode', array('id = ' => $order_data[0]->promocode))->result();
+                      $input = "";
+                      if (!empty($promo_string)) {
+                        $input = $promo_string[0]->promocode;
+                      } ?>
+                      <? if (!empty($input)) {
+                      ?>
+                        <div class="d-flex justify-content-between mb-2">
+                          <span style="color: #FF324D">
+                            <?= $input ?>
+                          </span>
+                          <span style="color: #FF324D">
+                            <a href="javascript:void(0);" onclick="remove_promocode()" style="color:unset;"><i class="fa fa-times" aria-hidden="true"></i></a>
+                          </span>
+                        </div>
+                      <?
+                      } ?>
+                    </div>
+
+                    <div style="border-top:  1px solid gainsboro;" class="mt-3">
+                      <p style="margin-bottom: 5px !important; margin-top: 5px !important"> <b>Have any Promocode ? </b></p>
+                      <form id="promocode_form" method="POST" enctype="multipart/form-data" action="javascript:void(0)">
+                        <div class=" btn-app" style="display: flex; align-items: center;">
+                          <div style="width: 100%;">
+                            <input type="text" name="promocode" id="inputPromocode" required placeholder="Apply Coupon">
+                          </div>
+                          <div class="d-flex justify-content-end m-2">
+                            <button class="btn-color costrm" type="submit"> APPLY</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+
+                    <form method="POST" id="placeOrderForm" action="javascript:;" enctype="multipart/form-data">
+                      <input type="hidden" id="totAmt" name="totalAmount" value="<?= $order_data[0]->final_amount ?>" />
+                      <div style="border-top:  1px solid gainsboro;" class="mt-3">
+                        <div class="form-group  mb-2 p-0 d-flex m-0">
+                          <p class="ma" style="margin-bottom: 5px !important; margin-top: 5px !important"><b style="color: rgb(66 64 64);">
+                              Have Any referral
+                              Code ? </b></p>
+                        </div>
+                        <div class="col-lg-12 p-0">
+                          <div class="form-group">
+                            <input class="form-control" type="text" id="referalcode" name="reffercode" placeholder="Enter Referral Code">
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="payment_method mt-3 " style="padding: 10px;  border-top:  1px solid gainsboro;">
+                        <div class="heading_s1">
+                          <p style="margin-bottom: 5px !important;"> <b>Payment </b></p>
+                          <p style="color: red;padding-bottom:0px;">Delivery Free Above ₹<?= FREESHIPPING ?>
+                          </p>
+                        </div>
+                        <div class="payment_option">
+                          <div class="check-box">
+                            <span>
+                              <input type="radio" class="checkbox payment_method" id="COD" checked name="payment_option" value="1">
+                              <label for="COD" class="mb-0">Cash On Delivery
+                                (COD)</label>
+                            </span>
+                          </div>
+
+                          <div class="check-box">
+                            <span>
+                              <input type="radio" class="checkbox payment_method" value="2" id="online" name="payment_option">
+                              <label for="online" class="mb-0">Online
+                                Payment</label>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-md-12  dsgsdcvsd trasition-csm" id="sticks" style="padding: 10px;  border-top:  1px solid gainsboro;">
+                        <button class="btn full btn-color" type="submit" id="place">Place Order</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Checkout end -->

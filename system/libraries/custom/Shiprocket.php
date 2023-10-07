@@ -89,6 +89,7 @@ class CI_Shiprocket
       if ($sub_total > FREESHIPPING) {
         $shipping = 0;
       }
+
       $new_total = $sub_total + $shipping;
       $res = array('sub_total' => number_format($new_total, 2), 'shipping' => number_format($shipping, 2), 'pincode' => $pincode, 'courier_id' => $courier_id);
       $respone['status'] = true;
@@ -101,6 +102,7 @@ class CI_Shiprocket
     } else {
       $respone['status'] = false;
       $respone['message'] = $decodeed->message;
+      $respone['list'] = [];
       return json_encode($respone);
     }
   }
@@ -110,12 +112,13 @@ class CI_Shiprocket
     $Token = $this->GenerateSrToken();
     $newdate = new DateTime($order1_data[0]->date);
     $date =  $newdate->format('Y-m-d h:m');
-    $name = explode(" ", $order1_data[0]->name);
     if ($order1_data[0]->payment_type == 1) {
       $p_status = 'COD';
     } else {
       $p_status = 'Prepaid';
     }
+    $address_data = $this->CI->db->get_where('tbl_user_address', array('id' => $order1_data[0]->address_id))->row();
+    // $name = explode(" ", $address_data->name);
     $curl = curl_init();
     curl_setopt_array($curl, array(
       CURLOPT_URL => 'https://apiv2.shiprocket.in/v1/external/orders/create/adhoc',
@@ -129,15 +132,15 @@ class CI_Shiprocket
       CURLOPT_POSTFIELDS => '{
         "order_id": "' . $order1_data[0]->id . '",
         "order_date": "' . $date . '",
-        "billing_customer_name": "' . $name[0] . '",
-        "billing_last_name": "' . $name[1] . '",
-        "billing_address": "' . $order1_data[0]->address . '",
-        "billing_city": "' . $order1_data[0]->city . '",
-        "billing_pincode": "' . $order1_data[0]->pincode . '",
-        "billing_state": "' . $order1_data[0]->state . '",
+        "billing_customer_name": "' . $address_data->f_name . '",
+        "billing_last_name": "' . $address_data->l_name . '",
+        "billing_address": "' . $address_data->address . '",
+        "billing_city": "' . $address_data->city . '",
+        "billing_pincode": "' . $address_data->pincode . '",
+        "billing_state": "' . $address_data->state . '",
         "billing_country": "India",
-        "billing_email": "' . $order1_data[0]->email . '",
-        "billing_phone": "' . $order1_data[0]->phone . '",
+        "billing_email": "' . $address_data->email . '",
+        "billing_phone": "' . $address_data->phone . '",
         "shipping_is_billing": true,
         "order_items": ' . json_encode($order_items) . ',
         "payment_method": "' . $p_status . '",
