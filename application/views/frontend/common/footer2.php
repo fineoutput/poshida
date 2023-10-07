@@ -119,8 +119,9 @@
     </div>
   </div>
 </footer>
-<!-- =================================== Start login Popup Section ============================================-->
-<div class="modal fade" id="LoginModel" tabindex="-1" role="dialog" aria-labelledby="LoginModelTitle" aria-hidden="true">
+
+<!-- ============================ Start login Model ========================================-->
+<div class="modal fade" id="LoginModel" tabindex="-1" role="dialog" aria-labelledby="LoginModel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="popup_content pl-0 pr-0 pt-0">
@@ -129,7 +130,7 @@
         </button>
         <div class="row text-left">
           <div class="col-sm-12 text-center mb-2">
-            <img alt="xpoge" src="<?= base_url() ?>assets/frontend/img/Poshida Logo (2)_page-0001.jpg" class="logo-imah-1 qwd">
+            <img alt="Broken Image" src="<?= base_url() ?>assets/frontend/img/Poshida Logo (2)_page-0001.jpg" class="logo-imah-1 qwd">
 
           </div>
         </div>
@@ -138,13 +139,19 @@
             <h4 class="text-center">LOG IN TO CONTINUE</h4>
           </div>
         </div>
-        <form method="post" action="javascript:void(0)" id="loginForm" enctype="multipart/form-data" style="padding-left: 20px;padding-right: 20px;">
+        <form method="post" action="<?= base_url() ?>User/email_login" enctype="multipart/form-data" style="padding-left: 20px;padding-right: 20px;">
+          <!-- <div class="form-group">
+						<input name="number" required="" type="text" id="loginPhone" class="form-control rounded-0" onkeypress="return isNumberKey(event)" maxlength="10" minlength="10" placeholder="Enter Your Number">
+						<input type="hidden" id="loginverify" value="0" name="loginverify">
+					</div>
+					<div class="form-group hidden-OTP-field">
+						<input name="OTP" id="loginOTP" class="form-control rounded-0" type="text" onkeypress="return isNumberKey(event)" maxlength="6" minlength="6" placeholder="Enter OTP">
+					</div> -->
           <div class="form-group">
-            <input name="number" required="" type="text" id="loginPhone" class="form-control rounded-0" onkeypress="return isNumberKey(event)" maxlength="10" minlength="10" placeholder="Enter Your Number">
-            <input type="hidden" id="loginverify" value="0" name="loginverify">
+            <input name="email" required="" type="email" class="form-control rounded-0" placeholder="Enter Your Email">
           </div>
-          <div class="form-group hidden-OTP-field">
-            <input name="OTP" id="loginOTP" class="form-control rounded-0" type="text" onkeypress="return isNumberKey(event)" maxlength="6" minlength="6" placeholder="Enter OTP">
+          <div class="form-group">
+            <input name="password" class="form-control rounded-0" type="password" placeholder="Enter Password">
           </div>
           <div class="container">
             <div class="row">
@@ -156,15 +163,17 @@
           <div class="form-group">
             <button class="btn btn-fill-out btn-block text-uppercase mt-2 rounded-0 btn-color " style="padding: 14px 18px;" type="submit">Submit</button>
           </div>
-          <div class="text-center"><span class="mt-3">New Here?<a href="javascript:;" data-toggle="modal" data-target="#exampleModalCenter2" style="color:#c68fa6;">&nbsp;Sign Up</a></span>
+          <div class="text-center"><span class="mt-3">New Here?<a href="javascript:;" data-toggle="modal" data-target="#SignUpModel" style="color:#c68fa6;">&nbsp;Sign Up</a></span>
           </div>
         </form>
       </div>
     </div>
   </div>
 </div>
+<!-- ============================ End login Model ========================================-->
+<!-- ============================ Start Sign Model ========================================-->
 
-<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="SignUpModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-body">
@@ -177,9 +186,7 @@
 
               <div class="row text-left">
                 <div class="col-sm-12 text-center mb-2">
-
-                  <img alt="xpoge" src="<?= base_url() ?>assets/frontend/img/Poshida Logo (2)_page-0001.jpg" class="logo-imah-1 qwd">
-
+                  <img alt="Broken Image" src="<?= base_url() ?>assets/frontend/img/Poshida Logo (2)_page-0001.jpg" class="logo-imah-1 qwd">
                 </div>
               </div>
               <div class="popup-text" style="padding-left: 20px;padding-right: 20px;">
@@ -187,7 +194,8 @@
                   <h4 class="text-center">SIGN UP TO CONTINUE</h4>
                 </div>
               </div>
-              <form method="post" action="javascript:void(0)" id="registerForm" enctype="multipart/form-data" style="padding-left: 20px;padding-right: 20px;">
+              <!-- <form method="post" action="javascript:void(0)" id="registerForm" enctype="multipart/form-data" style="padding-left: 20px;padding-right: 20px;"> -->
+              <form method="post" action="<?= base_url() ?>User/email_register" enctype="multipart/form-data" style="padding-left: 20px;padding-right: 20px;">
                 <div class="row">
                   <div class="form-group col-lg-6">
                     <input name="fname" required="" type="text" id="signinFname" class="form-control rounded-0" placeholder="First Name">
@@ -201,8 +209,14 @@
                   <input type="hidden" id="signinverify" value="0" name="signinverify">
                   <input type="hidden" id="signintype" value="0" name="signinverify">
                 </div>
+                <!-- <div class="form-group hidden-OTP-field">
+									<input name="otp" type="text" id="signinOTP" class="form-control rounded-0" placeholder="Enter OTP">
+								</div> -->
                 <div class="form-group hidden-OTP-field">
-                  <input name="otp" type="text" id="signinOTP" class="form-control rounded-0" placeholder="Enter OTP">
+                  <input name="email" type="email" class="form-control rounded-0" placeholder="Enter Email">
+                </div>
+                <div class="form-group hidden-OTP-field">
+                  <input name="password" type="password" class="form-control rounded-0" placeholder="Enter Password">
                 </div>
                 <div class="container">
                   <div class="row">
@@ -214,15 +228,17 @@
                 </div>
                 <div class="text-center"><span class="mt-3">Already have an Account?<a href="#" data-target="#onload-popup1" data-toggle="modal" data-dismiss="modal" style="color:#ed6f36;">&nbsp;Log In</a></span>
                 </div>
+
               </form>
             </div>
           </div>
         </div>
       </div>
+
+
     </div>
   </div>
 </div>
-
 
 </div>
 </div>
