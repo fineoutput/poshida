@@ -312,6 +312,7 @@
   }
 </script>
 <!-- scripts js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
 <script src="<?= base_url() ?>assets/frontend/js/scripts.js"></script>
 <script src="<?= base_url() ?>assets/frontend/js/bootstrap-notify.min.js"></script>
 </body>

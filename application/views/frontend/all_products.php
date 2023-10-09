@@ -1,3 +1,43 @@
+<style>
+  .filter_price .ui-widget.ui-widget-content {
+    border: 0;
+    border-radius: 0;
+    background-color: #ddd;
+    height: 4px;
+    margin-bottom: 20px;
+  }
+
+  .ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 100%;
+  }
+
+  .filter_price .ui-slider .ui-slider-range {
+    background-color: #c68fa6;
+    border-radius: 0;
+  }
+
+  .filter_price .ui-slider .ui-slider-handle {
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 0;
+    height: 18px;
+    top: -8px;
+    width: 18px;
+    margin: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .price_range {
+    color: #292b2c;
+  }
+
+  #flt_price {
+    margin-left: 5px;
+    font-weight: 600;
+  }
+</style>
 <!-- Product list contant start -->
 <div class="contant" style="margin-top: 162px;">
   <!--========================= START SECTION BREADCRUMB ==============================-->
@@ -23,8 +63,9 @@
       <div class="row">
         <div class="col-12 col-lg-4 col-xl-3 gbgb ">
           <form action="<?= base_url() ?>Home/apply_filter" id="applyFilter" method="get" enctype="multipart/form-data">
+            <input type="hidden" value="<?= $url ?>" name="url" />
             <div class=" d-flex justify-content-end p-2 mb-2 " style="gap: 10px ;">
-              <a href="#"> Clear All </a> |
+              <span style="cursor: pointer;" onclick="clearAllFilters()"> Clear All </span> |
               <span style="cursor: pointer;" onclick="submitFilters()">Apply</span>
             </div>
             <div class="sidebar mb-md-30">
@@ -38,20 +79,15 @@
 
                   <div id="accordion">
                     <div id="collapseThr" class="collapse scrollbarr " aria-labelledby="headingThre" data-parent="#accordion" style="max-height:11rem;overflow-y: scroll;">
-                      <a class="btn btn-color small btn-filter  me-3  mb-20" href="#"><i class="fa fa-close"></i><span>Clear all</span></a>
-
-                      <a class="btn btn-color small btn-filter  me-3  mb-20" href="#"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span> Select
-                          all</span></a>
+                      <a class="btn btn-color small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="priceReset()"><i class="fa fa-close"></i><span>Reset</span></a>
                       <ul>
-                        <div class="filter_price">
-                          <div id="price_filter22" class="reset-price ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" data-min="0" data-max="5000" data-min-value="1000" data-max-value="2500" data-price-sign="₹">
-                            <div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 20%; width: 30%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 20%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 50%;"></span>
-                          </div>
+                        <div class="filter_price" style="padding: 0px 25px;">
+                          <div id="price_filter" data-min="0" data-max="5000" data-min-value="0" data-max-value="2000" data-price-sign="₹"></div>
                           <div class="price_range">
-                            <span> <span id="flt_price22">₹1000 - ₹2500</span></span>
-                            <input type="hidden" id="price_first22" name="minprice">
-                            <input type="hidden" id="price_second22" name="maxprice">
-                            <input type="hidden" id="sort_byWeb" name="sort_by">
+                            <span> <span id="flt_price"></span></span>
+                            <input type="hidden" id="price_first" name="minprice" value="0">
+                            <input type="hidden" id="price_second" name="maxprice" value="2000">
+                            <input type="hidden" id="sort_by" name="sort_by" />
                           </div>
                         </div>
                       </ul>
@@ -60,7 +96,6 @@
                 </div>
               </div>
 
-
               <!-- ============= START SIZE FILTER ================== -->
               <div class="accordion accordion_style1 mt-0 sidebar-default ">
                 <div class="card ">
@@ -68,13 +103,11 @@
                     <h6 class="mb-0"> <a class="collapsed fontweidth cat-title " data-toggle="collapse" href="#collapseWsize" aria-expanded="false" aria-controls="collapseSec">Size</a>
                     </h6>
                   </div>
-                  <input type="hidden" value="<?= $url ?>" name="url" />
 
                   <div id="accordion">
                     <div id="collapseWsize" class="collapse scrollbarr " aria-labelledby="Wsize" data-parent="#accordion" style="max-height:11rem;overflow-y: scroll;">
-                      <a class="btn btn-color small btn-filter  me-3  mb-20" href="#"><i class="fa fa-close"></i><span>Clear all</span></a>
-
-                      <a class="btn btn-color small btn-filter  me-3  mb-20" href="#"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span> Select
+                      <a class="btn btn-color small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="clearSize()"><i class="fa fa-close"></i><span>Clear all</span></a>
+                      <a class="btn btn-color small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="selectSize()"><i class="fa-solid fa-check" style="font-family: 'FontAwesome';"></i><span> Select
                           all</span></a>
                       <ul>
 
@@ -85,7 +118,7 @@
                             <li>
                               <div class="check-box">
                                 <span>
-                                  <input type="checkbox" class="checkbox" id="s<?= $size_filter[0]->id ?>" name="size[]" value="<?= $size_filter[0]->id ?>">
+                                  <input type="checkbox" class="checkbox sizeCheck" id="s<?= $size_filter[0]->id ?>" name="size[]" value="<?= $size_filter[0]->id ?>">
                                   <label for="s<?= $size_filter[0]->id ?>"><?= $size_filter[0]->name ?></span></label>
                                 </span>
                               </div>
@@ -105,13 +138,12 @@
                     <h6 class="mb-0"> <a class="collapsed fontweidth cat-title " data-toggle="collapse" href="#collapseWcolor" aria-expanded="false" aria-controls="collapseSec">Color</a>
                     </h6>
                   </div>
-                  <input type="hidden" value="<?= $url ?>" name="url" />
 
                   <div id="accordion">
                     <div id="collapseWcolor" class="collapse scrollbarr " aria-labelledby="Wcolor" data-parent="#accordion" style="max-height:11rem;overflow-y: scroll;">
-                      <a class="btn btn-color small btn-filter  me-3  mb-20" href="#"><i class="fa fa-close"></i><span>Clear all</span></a>
+                      <a class="btn btn-color small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="clearColor()"><i class="fa fa-close"></i><span>Clear all</span></a>
 
-                      <a class="btn btn-color small btn-filter  me-3  mb-20" href="#"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span> Select
+                      <a class="btn btn-color small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="selectColor()"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span> Select
                           all</span></a>
                       <ul>
 
@@ -122,7 +154,7 @@
                             <li>
                               <div class="check-box">
                                 <span>
-                                  <input type="checkbox" class="checkbox" id="c<?= $olor_filter[0]->id ?>" name="color[]" value="<?= $olor_filter[0]->id ?>">
+                                  <input type="checkbox" class="checkbox colorCheck" id="c<?= $olor_filter[0]->id ?>" name="color[]" value="<?= $olor_filter[0]->id ?>">
                                   <label for="c<?= $olor_filter[0]->id ?>"><span data-color="<?= $olor_filter[0]->name ?>" class="colorspann"></span>
                                     <span style="width:100px;height:auto;font-size:14px;vertical-align:top;"><?= $olor_filter[0]->colour_name ?> </span></label>
                                 </span>
@@ -153,13 +185,12 @@
                         <h6 class="mb-0"> <a class="collapsed fontweidth cat-title " data-toggle="collapse" href="#collapse<?= $filter->id ?>" aria-expanded="false" aria-controls="collapseSec"><?= $filter->name ?></a>
                         </h6>
                       </div>
-                      <input type="hidden" value="<?= $url ?>" name="url" />
 
                       <div id="accordion">
-                        <div id="collapse<?= $filter->id ?>" class="collapse scrollbarr " aria-labelledby="Wfilter<?= $filter->id ?>"" data-parent=" #accordion" style="max-height:11rem;overflow-y: scroll;">
-                          <a class="btn btn-color small btn-filter  me-3  mb-20" href="#"><i class="fa fa-close"></i><span>Clear all</span></a>
+                        <div id="collapse<?= $filter->id ?>" class="collapse scrollbarr " aria-labelledby="Wfilter<?= $filter->id ?>" data-parent=" #accordion" style="max-height:11rem;overflow-y: scroll;">
+                          <a class="btn btn-color small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="removeAttributes(<?= $filter->id ?>)"><i class="fa fa-close"></i><span>Clear all</span></a>
 
-                          <a class="btn btn-color small btn-filter  me-3  mb-20" href="#"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span> Select
+                          <a class="btn btn-color small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="selectAttribute(<?= $filter->id ?>)"><i class="fa-solid fa-check" style="font-family: 'FontAwesome';"></i><span> Select
                               all</span></a>
                           <ul>
                             <? $attributes = $this->db->get_where('tbl_attribute', array('filter_id = ' => $filter->id));
@@ -203,9 +234,9 @@
           <div class="col-lg-12 leftr mb-2">
             <div class="short-by float-right-md"> <span> Sort by price</span>
               <div class="select-item">
-                <select>
-                  <option value="" selected="selected"> Low to High</option>
-                  <option value=""> High to Low</option>
+                <select id="mySelect" onchange="myFunction()">
+                  <option value="ASC" selected="selected"> Low to High</option>
+                  <option value="DESC"> High to Low</option>
 
                 </select>
               </div>
@@ -345,7 +376,7 @@
           </div>
         </div>
         <!-- ============= END PAGINATION ================== -->
-        
+
       </div>
     </div>
   </div>
@@ -411,7 +442,7 @@
               <div class="row mt-2" style="margin-right: 0px; 
 								margin-left: 0px;">
                 <div class="col-6 fdghddf">
-                  <a href="#" class="btn df">CLEAR ALL</a>
+                  <a href="javascript:void(0);" onclick="clearAllFilters()" class="btn df">CLEAR ALL</a>
                 </div>
                 <div class="col-6 fdghddf">
                   <a href="javascript:;" class="btn df" onclick="submitMOB()">APPLY</a>
@@ -437,34 +468,28 @@
                     <div class="tab-content shop_info_tab" style="margin-top:5px;">
                       <div class="tab-pane show active" id="price" role="tabpanel" aria-labelledby="price-tab">
                         <div class="row float-right mr-2 classk" style="margin-top:20px;">
-                          <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="#"><i class="fa fa-close"></i><span class="hn">Clear
-                              all</span></a>
-
-                          <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="#"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span class="hn">
-                              Select all</span></a>
+                          <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="priceReset()"><i class="fa fa-close"></i><span class="hn">Reset</span></a>
                         </div>
 
                         <div class="filter_price hrtf   " style="    position: absolute;
 													width: 100%;
 													top: 96px;">
-                          <div id="price_filter22" class="reset-price ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" data-min="0" data-max="5000" data-min-value="1000" data-max-value="2500" data-price-sign="₹">
-                            <div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 20%; width: 30%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 20%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 50%;"></span>
-                          </div>
+                          <div id="price_filter22" class="reset-price" data-min="0" data-max="5000" data-min-value="0" data-max-value="2000" data-price-sign="₹"></div>
                           <div class="price_range">
-                            <span> <span id="flt_price22">₹1000 - ₹2500</span></span>
-                            <input type="hidden" id="price_first22" name="minprice">
-                            <input type="hidden" id="price_second22" name="maxprice">
-                            <input type="hidden" id="sort_byWeb" name="sort_by">
+                            <span> <span id="flt_price22"></span></span>
+                            <input type="hidden" id="price_first22" name="minprice" value="0">
+                            <input type="hidden" id="price_second22" name="maxprice" value="2000">
+                            <input type="hidden" id="sort_byWeb" name="sort_by" />
                           </div>
                         </div>
                       </div>
 
                       <div class="tab-pane fade" id="size" role="tabpanel" aria-labelledby="size-tab">
                         <div class="row float-right mr-2 classk" style="margin-top:20px;">
-                          <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="#"><i class="fa fa-close"></i><span class="hn">Clear
+                          <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="clearSize()"><i class="fa fa-close"></i><span class="hn">Clear
                               all</span></a>
 
-                          <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="#"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span class="hn">
+                          <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="selectSize()"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span class="hn">
                               Select all</span></a>
                         </div>
                         <ul class="list_brand " style="text-align: left;max-height:87vh;overflow:auto; width: 100%;">
@@ -484,10 +509,10 @@
                       </div>
                       <div class="tab-pane fade" id="color" role="tabpanel" aria-labelledby="color-tab">
                         <div class="row float-right mr-2 classk" style="margin-top:20px;">
-                          <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="#"><i class="fa fa-close"></i><span class="hn">Clear
+                          <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="javascript:void(0)"onclick="clearColor()"><i class="fa fa-close"></i><span class="hn">Clear
                               all</span></a>
 
-                          <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="#"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span class="hn">
+                          <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="selectColor()"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span class="hn">
                               Select all</span></a>
                         </div>
                         <ul class="list_brand mt-4" style="text-align: left;max-height:87vh;overflow:auto;">
@@ -520,10 +545,10 @@
                       ?>
                           <div class="tab-pane fade" id="tog<?= $filter->id ?>" role="tabpanel" aria-labelledby="<?= $filter->id ?>-tab">
                             <div class="row float-right mr-2 classk" style="margin-top:20px;">
-                              <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="#"><i class="fa fa-close"></i><span class="hn">Clear
+                              <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="removeAttributes(<?= $filter->id ?>)"><i class="fa fa-close"></i><span class="hn">Clear
                                   all</span></a>
 
-                              <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="#"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span class="hn">
+                              <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="selectAttribute(<?= $filter->id ?>)"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span class="hn">
                                   Select all</span></a>
                             </div>
                             <ul class="list_brand product_color_switch mt-4" style="text-align: left;max-height:65vh;overflow:auto; width: 100%;">
@@ -559,3 +584,75 @@
     </div>
   </div>
 </div>
+<!-- END MAIN CONTENT -->
+<script>
+  function submitFilters() {
+    document.getElementById("applyFilter").submit();
+  }
+
+  function submitMOB() {
+    document.getElementById("applyFilteronMobile").submit();
+  }
+
+  function soryBy(sort) {
+    if (sort == "ASC") {
+      $('#sort_by').val('ASC')
+      $('#sort_byWeb').val('ASC')
+    } else {
+      $('#sort_by').val('DESC')
+      $('#sort_byWeb').val('DESC')
+    }
+    var width = screen.availWidth
+    if (width > 446) {
+      submitFilters()
+    } else {
+      submitMOB()
+    }
+  }
+
+  function myFunction() {
+    var x = document.getElementById("mySelect").value;
+    soryBy(x)
+  }
+
+  function selectAllFilters() {
+    $('.form-check-input').attr("checked", "true")
+  }
+
+  function clearAllFilters() {
+    $('.form-check-input').prop("checked", false)
+  }
+
+  function selectAttribute(i) {
+    $('.attribute' + i).prop("checked", true)
+  }
+
+  function removeAttributes(i) {
+    $('.attribute' + i).prop("checked", false)
+  }
+
+  function LASTaTTR(i) {
+    $('.attribute' + i).prop("checked", true)
+  }
+
+  function selectColor() {
+    $('.colorCheck').prop("checked", true)
+  }
+
+  function clearColor() {
+    $('.colorCheck').prop("checked", false)
+  }
+
+  function selectSize() {
+    $('.sizeCheck').prop("checked", true)
+  }
+
+  function clearSize() {
+    $('.sizeCheck').prop("checked", false)
+  }
+
+  function priceReset() {
+    $('.reset-price').prop("data-min-value", "false")
+    $('.reset-price').prop("data-max-value", "false")
+  }
+</script>
