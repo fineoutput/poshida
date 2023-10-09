@@ -1135,3 +1135,21 @@ i.bi.bi-chevron-down{
 	}
 }
 
+@media(max-width:425px){
+		button.btn.btn-resp {
+			top: 77px !important;
+			right: 22px !important;
+		}
+}
+
+@media(max-width:375px){
+	button.btn.btn-resp {
+		top: 69px !important;
+	}
+}
+@media(max-width:320px){
+	button.btn.btn-resp {
+		top:  58px !important;
+		right: 25px !important;
+	}
+}

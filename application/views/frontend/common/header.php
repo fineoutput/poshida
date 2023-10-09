@@ -165,8 +165,8 @@ if (!empty($this->session->userdata('user_data'))) {
   <div class="main">
     <!-- //================ START HEADER ============================= -->
 
-    <header id="header " style="    padding-bottom: 10px !important; ">
-      <div class="container position-r header-class  pb-3">
+    <header id="header " >
+      <div class="container position-r header-class  ">
         <div class="row m-0">
           <div class="col-lg-4 col-md-3 col-3 p-0 " style="display: flex;
 						align-items: center;">
@@ -294,8 +294,8 @@ if (!empty($this->session->userdata('user_data'))) {
           <div class="form-group m-0 sty">
             <input type="search" placeholder="Search Products... " required="" name="search">
           </div>
-          <button type="submit" class="btn " style="position: absolute;
-						right: 38px;     padding: 18px 3px;"> <i class="bi bi-search"></i></button>
+          <button type="submit" class="btn  btn-resp" style="position: absolute;
+						right: 23px;padding: 18px 3px; top :66px;"> <i class="bi bi-search"></i></button>
         </form>
       </div>
       <div class="container position-r animate__animated animate__bounce">

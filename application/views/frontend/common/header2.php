@@ -588,10 +588,10 @@
 
 
   <div class="main">
-    <!-- Header start -->
-    <header id="header " style="    padding-bottom: 10px !important; ">
+    <!-- Header start style="    padding-bottom: 10px !important; "-->
+    <header id="header " >
 
-      <div class="container position-r header-class  pb-3">
+      <div class="container position-r header-class ">
         <div class="row m-0">
           <div class="col-lg-4 col-md-3 col-3 p-0 " style="display: flex;
 						align-items: center;">
@@ -719,8 +719,7 @@
             <div class="form-group m-0 sty">
               <input type="search" placeholder="Search Products... " required="" name="search">
             </div>
-            <button type="submit" class="btn " style="position: absolute;
-						right: 38px;     padding: 18px 3px;"> <i class="bi bi-search"></i></button>
+            <button type="submit" class="btn btn-resp " style="position: absolute; right: 23px; padding: 18px 3px; top :66px;"> <i class="bi bi-search"></i></button>
           </form>
         </div>
 
