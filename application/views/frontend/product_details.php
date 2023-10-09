@@ -314,9 +314,9 @@
                       </div>
                       <div class="col-xl-10 col-md-9 col-9">
                         <div class="custom-qty">
-                          <button onclick="var result = document.getElementById('qty1'); var qty1 = result.value; if( !isNaN( qty1 ) && qty1 > 1 ) result.value--;return false;" class="reduced items paa-ews" id="myminus" type="button"> <i class="fa fa-minus "></i> </button>
-                          <input type="text" class="input-text qty voain-re" readonly onkeypress="return isNumberKey(event)" min-qty="<?= $minQty ?>" name="quantity" product_id='' value="<?= $minQty ?>" title="Qty" id="quantity" autocomplete="off">
-                          <button onclick="var result = document.getElementById('qty1'); var qty1 = result.value; if( !isNaN( qty1 )) result.value++;return false;" class="increase items paa-ews" type="button"> <i class="fa fa-plus "></i> </button>
+                          <button type="button" value="-" change=0 id="myminus" class="reduced items paa-ews minus"> <i class="fa fa-minus "></i> </button>
+                          <input type="text" readonly onkeypress="return isNumberKey(event)" min-qty="<?= $minQty ?>" name="quantity" product_id='' value="<?= $minQty ?>" title="Qty" id="quantity" size="4" class="input-text qty voain-re">
+                          <button type="button" value="+" change=0 id="" class="increase items paa-ews plus" type="button"> <i class="fa fa-plus "></i> </button>
                         </div>
                       </div>
                     </div>
