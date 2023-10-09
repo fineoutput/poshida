@@ -11,7 +11,7 @@
   }
 
   .wsws:hover {
-    color: red !important;
+    color: #c68fa6 !important;
   }
 
   .rating_wrap.d-flex {
@@ -327,7 +327,7 @@
 
               <hr class="mb-20">
 
-              <div class="product-details-btn stickyAdClass" id="addCartFav">
+              <div class="product-details-btn stickyAdClass" id="wishlist">
                 <ul>
                   <li class="icon cart-icon ">
                     <button class="btn btn-color fhf" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" quantity="1" id="addtoCartButton" onclick="addToCart(this)" type="button"><span></span>Add to cart</button>
@@ -341,7 +341,7 @@
                         <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="remove" onclick="wishlist(this)" class="btn btn-color sice"> <i class="fa fa-heart wsws" style="font-size: 23px; color: #fff; "></i>Remove Wishlist</a>
                       </li>
                       <li class="icon fav-icon-heart ">
-                        <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="remove" onclick="wishlist(this)"><i class="fa fa-heart wsws" style="font-size: 23px; margin-left: 24px; color: #686868;; ">
+                        <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="remove" onclick="wishlist(this)"><i class="fa fa-heart wsws" style="font-size: 23px; margin-left: 24px; color: #c68fa6; ">
                             <div class="tooltip">Remove to wishlist</div>
                           </i>
                         </a>
@@ -350,7 +350,7 @@
                       <li class="icon cart-icon wishlist-heart">
                         <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="add" onclick="wishlist(this)" class="btn btn-color sice"> <i class="fa fa-heart wsws" style="font-size: 23px; color: #fff; "></i>Add Wishlist</a>
                       </li>
-                      <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="add" onclick="wishlist(this)"><i class="fa fa-heart-0 wsws" style="font-size: 23px; margin-left: 24px; color: #686868;; ">
+                      <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="add" onclick="wishlist(this)"><i class="fa fa-heart-o wsws" style="font-size: 23px; margin-left: 24px; color: #686868;; ">
                           <div class="tooltip">Add to wishlist</div>
                         </i></a>
                     <? } ?>
@@ -583,8 +583,7 @@
                     <div class="product-details-outer">
                       <div class="product-details">
                         <div class="product-title">
-                          <a href="#">Men's
-                            Full Sleeves Collar Shirt</a>
+                          <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with[0]->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $buy_with[0]->name ?></a>
                         </div>
                         <div class="price-box">
                           <span class="price">₹<?= $type_spgst ?></span>
@@ -720,8 +719,7 @@
                     <div class="product-details-outer">
                       <div class="product-details">
                         <div class="product-title">
-                          <a href="#">Men's
-                            Full Sleeves Collar Shirt</a>
+                          <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with[0]->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $buy_with[0]->name ?></a>
                         </div>
                         <div class="price-box">
                           <span class="price">₹<?= $type_spgst ?></span>

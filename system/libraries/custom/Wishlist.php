@@ -171,11 +171,11 @@ class CI_Wishlist
                     }
                     //------ manage price ------
                     if ($user_type == 2) { //------ for reselller ----
-                        $type_mrp = $type_data->reseller_mrp;
-                        $type_spgst = $type_data->reseller_spgst;
+                        $type_mrp = $type_data[0]->reseller_mrp;
+                        $type_spgst = $type_data[0]->reseller_spgst;
                     } else { //---- for retailer  -----
-                        $type_mrp = $type_data->retailer_mrp;
-                        $type_spgst = $type_data->retailer_spgst;
+                        $type_mrp = $type_data[0]->retailer_mrp;
+                        $type_spgst = $type_data[0]->retailer_spgst;
                     }
                     //------ stock status -----
                     if ($type_data[0]->inventory == 0) {
