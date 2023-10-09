@@ -625,7 +625,7 @@
                 </li>
                 <li class="account-icon heig show-icon" >
                   <a href="#"><span></span></a>
-                  <div class="header-link-dropdown account-link-dropdown">
+                  <div class="header-link-dropdown account-link-dropdown hrlllll">
                     <ul class="hrb">
                       <? if (empty($this->session->userdata('user_data'))) { ?>
                         <li><a href="#" class="p-1" data-toggle="modal" data-target="#LoginModel">Log In </a></li>

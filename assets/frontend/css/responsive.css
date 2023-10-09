@@ -1153,3 +1153,12 @@ i.bi.bi-chevron-down{
 		right: 25px !important;
 	}
 }
+
+button.btn-close.xcross {
+    padding: 0px;
+    border: none;
+    padding: 0px 3px;
+    position: relative;
+    top: -15px;
+    left: 283px;
+}

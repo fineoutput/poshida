@@ -12,6 +12,24 @@
 
 
 /* - General Style //---------------- */
+::-webkit-scrollbar {
+	display: none;
+  }
+  
+  /* Demonstrate a "mostly customized" scrollbar
+   * (won't be visible otherwise if width/height is specified) */
+::-webkit-scrollbar {
+	width: 5px;
+	height: 8px;
+	background-color: #c68fa6; /* or add it to the track */
+  }
+  
+  /* Add a thumb */
+ ::-webkit-scrollbar-thumb {
+	background: #c68fa6;
+  }
+
+/* - General Style //---------------- */
 
 ::-moz-selection {
 	background-color: #c68fa6;
@@ -22,6 +40,7 @@
 	background-color: #c68fa6;
 	color: #FFF;
 }
+
 
 ul.list_brand.product_color_switch.mt-4::-webkit-scrollbar {
 	width: 15px;
@@ -4164,3 +4183,5 @@ img.logo-imah-1.qwd {
 .testimonial-main .client-detail{
 	width: 94%;
 }
+
+
