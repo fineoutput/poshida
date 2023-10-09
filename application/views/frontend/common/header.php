@@ -200,7 +200,7 @@ if (!empty($this->session->userdata('user_data'))) {
                 </li>
                 <li class="account-icon heig show-icon" >
                   <a href="#"><span></span></a>
-                  <div class="header-link-dropdown account-link-dropdown">
+                  <div class="header-link-dropdown account-link-dropdown hrlllll">
                     <ul class="link-dropdown-list">
                       <!-- <li> <span class="dropdown-title">Default welcome msg!</span> -->
                       <ul class="hrb">

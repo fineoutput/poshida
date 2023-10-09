@@ -39,6 +39,8 @@
 	color: #FFF;
 }
 
+
+
 ul.list_brand.product_color_switch.mt-4::-webkit-scrollbar {
 	width: 15px;
 }
@@ -1096,7 +1098,7 @@ header.header-fixed {
 	position: absolute;
 	width: 320px;
 	display: inline-block;
-	right: -158px;
+	right: -102px;
 	top: 100%;
 	padding: 25px;
 	opacity: 0;
@@ -4140,9 +4142,7 @@ div#menu ul.nav.navbar-nav span.opener.plus{
 
 
 
-.cart-dropdown.header-link-dropdown.scc{
-	right: -142px !important;
-}
+
 
 a.readmore-btn{
 	background: #c68fa6;
@@ -4162,4 +4162,54 @@ a.readmore-btn:hover{
 	border: 2px solid #c68fa6;
 	font-weight: 600;
 
+}
+
+
+
+
+
+
+.cart-dropdown.header-link-dropdown{
+
+}
+.cart-dropdown.header-link-dropdown {
+    height: 250px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+
+@media(max-width:615px){
+	.header-link-dropdown {
+	
+		right: -66px !important;
+	
+	}
+}
+@media(max-width:491px){
+	.header-link-dropdown {
+		
+		right: -28px !important;
+	
+}}
+@media(max-width:403px){
+	.header-link-dropdown {
+		
+		right: 51px !important;
+		
+	}
+}
+@media(max-width:320px){
+	.header-link-dropdown {
+	
+		right: 45px !important;
+	
+	}
+}
+
+.mobalert.col-xs-11.col-sm-3.alert.alert-success.alert-dismissible.fade.show.alert-success.animated.fadeInDown
+
+
+button.btn-close.xcross{
+	display: none !important;
 }

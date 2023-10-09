@@ -22,7 +22,6 @@
   }
 
   .accordion.accordion_style1.mt-0.sidebar-default {
-    /* border-bottom: 2px solid #c68fa6 !important; */
     margin-bottom: 2px !important;
     padding: 10px auto !important;
   }
@@ -32,11 +31,6 @@
       display: none;
     }
   }
-
-  /* .collapse:not(.show) {
-			display: none;
-		} */
-
   .card {
     position: relative;
     display: -ms-flexbox;
@@ -210,7 +204,7 @@
     }
   }
 
-  .scrollbarr::-webkit-scrollbar {
+  /* .scrollbarr::-webkit-scrollbar {
     width: 0.2125rem;
   }
 
@@ -220,7 +214,7 @@
 
   .scrollbarr::-webkit-scrollbar-thumb {
     background: #c68fa6;
-  }
+  } */
 
   .accordion .card .card-header {
     background-color: transparent;
@@ -460,7 +454,7 @@
   .list-group-content {
     border-radius: 0;
     border: 0;
-    /* box-shadow: 0 0px 4px 0 #e9e9e9; */
+
   }
 
   .subscribe_popup {
@@ -490,7 +484,7 @@
     border-width: 1px;
     cursor: pointer;
     line-height: normal;
-    padding: 12px 35px;
+    /* padding: 12px 35px; */
     text-transform: capitalize;
     transition: all 0.3s ease-in-out;
   }
@@ -545,9 +539,7 @@
     font-size: 16px;
   }
 
-  /* tableTabs */
 
-  /*! CSS Used from: https://www.tiarastore.co.in/assets/frontend/css/responsive.css */
   @media only screen and (max-width: 575px) {
     p {
       margin-bottom: 15px;
