@@ -69,8 +69,7 @@
     transform: rotate(140deg);
   }
 
-  /* joginder */
-  /* CSS */
+
   .product_color_switch span,
   .product-details-btn ul li i {
     position: relative;
