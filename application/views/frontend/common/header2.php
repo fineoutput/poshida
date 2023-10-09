@@ -597,9 +597,9 @@
           <div class="col-lg-4 col-md-3 col-3 p-0 " style="display: flex;
 						align-items: center;">
             <div class="newsletter-input-1 newsletter-input mob  " style="width: 70%;">
-              <form action="<?= base_url() ?>Home/search" method="GET" enctype="multipart/form-data">
+            <form action="<?= base_url() ?>Home/search" method="GET" enctype="multipart/form-data">
                 <div class="form-group m-0">
-                  <input type="search" placeholder="Search Products  .. " required="">
+                <input type="search" placeholder="Search Products... " required="" name="search">
                 </div>
                 <button type="submit" class="btn  btn--1"> <i class="bi bi-search" style="color: #c68fa6;"></i></button>
               </form>
