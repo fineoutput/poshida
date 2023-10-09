@@ -4169,9 +4169,7 @@ a.readmore-btn:hover{
 
 
 
-.cart-dropdown.header-link-dropdown{
 
-}
 .cart-dropdown.header-link-dropdown {
     height: 250px;
     overflow: hidden;
@@ -4207,9 +4205,11 @@ a.readmore-btn:hover{
 	}
 }
 
-.mobalert.col-xs-11.col-sm-3.alert.alert-success.alert-dismissible.fade.show.alert-success.animated.fadeInDown
+input.form-control{
+	background-color: white !important ;
+}
 
-
-button.btn-close.xcross{
-	display: none !important;
+button.btn.{
+	top: -3px;
+	right: -22px;
 }

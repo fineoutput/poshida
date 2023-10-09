@@ -204,17 +204,7 @@
     }
   }
 
-  /* .scrollbarr::-webkit-scrollbar {
-    width: 0.2125rem;
-  }
-
-  .scrollbarr::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-
-  .scrollbarr::-webkit-scrollbar-thumb {
-    background: #c68fa6;
-  } */
+  
 
   .accordion .card .card-header {
     background-color: transparent;
@@ -224,7 +214,7 @@
   }
 
   .accordion .card-header a {
-    /* padding: 15px 40px 15px 15px; */
+   
     display: block;
     line-height: normal;
   }
@@ -269,7 +259,7 @@
 
   .accordion_style1 .card-header a::after {
     content: "\f106";
-    /* content: ""; */
+   
     font-family: "FontAwesome";
     font-size: 16px;
     font-weight: normal;
@@ -448,9 +438,6 @@
     color: #2b2f4c;
   }
 
-  /* .list-group-tabs {
-    box-shadow: 0 0px 4px 0 #e9e9e9;
-} */
   .list-group-content {
     border-radius: 0;
     border: 0;
@@ -467,7 +454,7 @@
     margin-top: 174px;
   }
 
-  /* joginder */
+  
   p {
     color: #687188;
     line-height: 28px;
@@ -484,7 +471,7 @@
     border-width: 1px;
     cursor: pointer;
     line-height: normal;
-    /* padding: 12px 35px; */
+  
     text-transform: capitalize;
     transition: all 0.3s ease-in-out;
   }
