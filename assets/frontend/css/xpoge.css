@@ -2149,10 +2149,10 @@ _______________________________________________________*/
 	white-space: nowrap;
 }
 
-.blog-item .readmore-btn {
+/* .blog-item .readmore-btn {
 	color: #c68fa6;
 	font-weight: 500;
-}
+} */
 
 .blog-item .readmore-btn:hover {
 	color: #999;
@@ -4152,17 +4152,6 @@ a.readmore-btn{
 	font-size: 15px;
 }
 
-a.readmore-btn:hover{
-	color: #c68fa6;
-	background: white;
-	
-	padding: 15px 30px;
-	border-radius: 9px ;
-	font-size: 15px;
-	border: 2px solid #c68fa6;
-	font-weight: 600;
-
-}
 
 
 
@@ -4209,7 +4198,9 @@ input.form-control{
 	background-color: white !important ;
 }
 
-button.btn.{
-	top: -3px;
-	right: -22px;
+
+
+a.readmore-btn.re {
+    background: transparent !important;
+	color: #c68fa6 !important;
 }

@@ -190,12 +190,12 @@ $(function () {
 
 
 
-  if ($(".main-banner, .fvsx").length > 0) {
-    $(".main-banner, .fvsx").owlCarousel({
+  if ($(".main-banner, .fsx").length > 0) {
+    $(".main-banner, .fvs").owlCarousel({
       loop: true,
-    autoplay: true,
+      autoplay: true,
       dots: true,
-      nav: false,
+      nav: true,
       items: 1,
       responsiveClass: true,
 

@@ -195,14 +195,14 @@ $(function () {
       loop: true,
     autoplay: true,
       dots: true,
-      nav: false,
-      items: 1,
+      nav: true,
+      items: 2,
       responsiveClass: true,
 
       responsive: {
 
         767: {
-          dots: false,
+          dots: true,
           nav: true,
           items: 3
         }
