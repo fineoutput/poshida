@@ -44,7 +44,7 @@
 								<ul>
 									<li>
 										<div class="contact-thumb">
-											<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/address-icon.svg" alt="xpoge">
+											<img src="<?= base_url() ?>assets/frontend/img/address-icon.svg" alt="xpoge">
 										</div>
 										<div class="contact-box-detail">
 											<p>869 Lexington Ave, New York, NY 10065, USA</p>
@@ -52,7 +52,7 @@
 									</li>
 									<li>
 										<div class="contact-thumb">
-											<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/phone-icon.svg" alt="xpoge">
+											<img src="<?= base_url() ?>assets/frontend/img/phone-icon.svg" alt="xpoge">
 										</div>
 										<div class="contact-box-detail">
 											<p>+91 123 456 789 0</p>
@@ -60,7 +60,7 @@
 									</li>
 									<li>
 										<div class="contact-thumb">
-											<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/mail-icon.svg" alt="xpoge">
+											<img src="<?= base_url() ?>assets/frontend/img/mail-icon.svg" alt="xpoge">
 										</div>
 										<div class="contact-box-detail">
 											<p>xpoge@hi123.com</p>
