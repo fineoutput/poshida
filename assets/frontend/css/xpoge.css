@@ -4143,3 +4143,23 @@ div#menu ul.nav.navbar-nav span.opener.plus{
 .cart-dropdown.header-link-dropdown.scc{
 	right: -142px !important;
 }
+
+a.readmore-btn{
+	background: #c68fa6;
+	color: white;
+	padding: 15px 30px;
+	border-radius: 9px ;
+	font-size: 15px;
+}
+
+a.readmore-btn:hover{
+	color: #c68fa6;
+	background: white;
+	
+	padding: 15px 30px;
+	border-radius: 9px ;
+	font-size: 15px;
+	border: 2px solid #c68fa6;
+	font-weight: 600;
+
+}
