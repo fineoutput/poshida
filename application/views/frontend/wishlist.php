@@ -1,76 +1,76 @@
-<!-- ================================================== START SECTION BREADCRUMB =====================================================-->
-<div class="breadcrumb_section bg_gray page-title-mini">
-  <div class="container">
-    <!-- STRART CONTAINER -->
-    <div class="row align-items-center">
-
-      <div class="col-md-12">
-        <ol class="breadcrumb justify-content-md-start">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item"><a href="#">Pages</a></li>
-          <li class="breadcrumb-item active">Wishlist</li>
-        </ol>
-      </div>
-    </div>
-  </div><!-- END CONTAINER-->
-</div>
-<!-- =================================================== END SECTION BREADCRUMB ==========================================================-->
-
-<!--  ================================================== START MAIN CONTENT ================================================================-->
-<div class="main_content">
-
-  <!-- ================================================== START SECTION WISHLIST ==================================================================-->
-  <div class="section" id="wishlist">
-    <?if (!empty($wishlist_data)) {?>
+<!-- wishlist contant start -->
+<div class="contant">
+  <!-- ========================= START SECTION BREADCRUMB ==========================-->
+  <div id="banner-part" class="banner inner-banner">
     <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="table-responsive wishlist_table">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th class="product-thumbnail">&nbsp;</th>
-                  <th class="product-name">Product</th>
-                  <th class="product-price">Price</th>
-                  <th class="product-stock-status">Stock Status</th>
-                  <th class="product-add-to-cart"></th>
-                  <th class="product-remove">Remove</th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php $i=1; foreach ($wishlist_data as $wishlist) { ?>
-                <tr>
-                  <td class="product-thumbnail"><a href="<?=base_url()?>Home/product_detail/<?=$wishlist['url']?>?type=<?=base64_encode($wishlist['type_id'])?>"><img src="<?=$wishlist['image']?>" alt="product1"></a></td>
-                  <td class="product-name" data-title="Product"><a href="<?=base_url()?>Home/product_detail/<?=$wishlist['url']?>?type=<?=base64_encode($wishlist['type_id'])?>"><?=$wishlist['product_name']?></a>
-                    <br /><span style="font-size: 12px;">Size: <?=$wishlist['size']?><br />Color: <?=$wishlist['color']?></span>
-
-                  </td>
-                  <td class="product-price" data-title="Price">₹<?=$wishlist['price']?></td>
-                  <td class="product-stock-status" data-title="Stock Status">
-                    <?if ($wishlist['stock']==1) {?>
-                    <span class="badge badge-pill badge-success">In Stock</span>
-                    <?} else {?>
-                    <span class="badge badge-pill badge-danger">Out of Stock</span>
-                    <?}?>
-                  </td>
-                  <td class="product-add-to-cart">
-                    <?if ($wishlist['stock']==1) {?>
-                    <a href="javascript:;" class="btn btn-fill-out" product_id="<?=base64_encode($wishlist['product_id'])?>" type_id="<?=base64_encode($wishlist['type_id'])?>" status="move"  onclick="wishlist(this)"><i class="icon-basket-loaded"></i> Move to Cart</a>
-                    <?}?>
-                  </td>
-                  <td class="product-remove" data-title="Remove"><a href="javascript:void(0)" product_id="<?=base64_encode($wishlist['product_id'])?>" type_id="<?=base64_encode($wishlist['type_id'])?>" status="remove"  onclick="wishlist(this)"><i class="ti-close"></i></a></td>
-                </tr>
-                <?php $i++; } ?>
-              </tbody>
-            </table>
-          </div>
+      <div class="bread-crumb-main">
+        <h1 class="banner-title">Wishlist</h1>
+        <div class="breadcrumb">
+          <ul class="inline">
+            <li><a href="<?= base_url() ?>">Home</a>
+            </li>
+            <li>Wishlist</li>
+          </ul>
         </div>
       </div>
     </div>
-    <?} else {?>
-    <div class="text-center">
-      <img src="<?=base_url()?>assets/frontend/images/wishlist_empty.jpg" alt="Empty Wishlist" class="img-fluid">
-    </div>
-    <?}?>
   </div>
-  <!-- ================================================================== END SECTION WISHLIST ========================================================-->
+  <!-- ========================= END SECTION BREADCRUMB ==========================-->
+
+  <div class="ptb-100" style="padding-top: 40px !important;">
+    <? if (!empty($wishlist_data)) { ?>
+      <div class="container">
+        <div class="row">
+          <?php $i = 1;
+          foreach ($wishlist_data as $wishlist) { ?>
+            <div class="col-lg-3 col-6 col-md-6 ">
+              <div class="product-item">
+                <div class="product-image">
+                  <div class="sale-label">
+                    <a href="javascript:void(0)" product_id="<?= base64_encode($wishlist['product_id']) ?>" type_id="<?= base64_encode($wishlist['type_id']) ?>" status="remove" onclick="wishlist(this)">
+                      <i class="fa fa-times" style="color: #bf6d6d;
+										font-size: 13px;"></i></a>
+                  </div>
+                  <a href="<?= base_url() ?>Home/product_detail/<?= $wishlist['url'] ?>?type=<?= base64_encode($wishlist['type_id']) ?>">
+                    <img src="<?= $wishlist['image'] ?>" alt="broken image">
+                  </a>
+                </div>
+                <div class="product-details-outer">
+                  <div class="product-details">
+                    <div class="product-title">
+                      <a href="#"><?= $wishlist['product_name'] ?></a>
+                    </div>
+                    <div class="price-box">
+                      <span class="price"><?= $wishlist['price'] ?></span>
+                      <del class="price old-price">₹100.00</del>
+                      <? if ($wishlist['mrp'] > $wishlist['price']) { ?><del class="price old-price">₹<?= $wishlist['mrp'] ?></del> <? } ?>
+                      <? if ($percent > 0) { ?>
+                        <span class="on-sic"> <?= round($wishlist['percent']) ?>% off </span>
+                      <? } ?>
+
+                    </div>
+                  </div>
+                  <div class="product-details-btn">
+                    <ul>
+                      <li class="icon  cart-icon">
+                        <p class="m-0">Size :<?= $wishlist['size'] ?></p>
+                      </li> |
+                      <li class="icon ivo-ho wishlist-icon">
+                        <a href="javascript:void(0);" class="btn btn-fill-out" product_id="<?= base64_encode($wishlist['product_id']) ?>" type_id="<?= base64_encode($wishlist['type_id']) ?>" status="move" onclick="wishlist(this)" class="btn-color-H"> Move to Cart</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <?php $i++;
+          } ?>
+        </div>
+      </div>
+    <? } else { ?>
+      <div class="text-center">
+        <img src="<?= base_url() ?>assets/frontend/images/wishlist_empty.jpg" alt="Empty Wishlist" class="img-fluid">
+      </div>
+    <? } ?>
+  </div>
+</div>
