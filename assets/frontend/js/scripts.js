@@ -325,13 +325,7 @@ PAGE JS
     return false;
   });
 
-  /*===================================*
-  08. PARALLAX JS
-  *===================================*/
-  $(window).on('load', function() {
-    $('.parallax_bg').parallaxBackground();
-  });
-
+  
   /*===================================*
   09. MASONRY JS
   *===================================*/
@@ -801,11 +795,11 @@ PAGE JS
 	22. PRICE FILTER JS
 	*===================================*/
   $('#price_filter').each(function() {
-
     var $filter_selector = $(this);
     var a = $filter_selector.data("min-value");
     var b = $filter_selector.data("max-value");
     var c = $filter_selector.data("price-sign");
+    
     $filter_selector.slider({
       range: true,
       min: $filter_selector.data("min"),
@@ -817,7 +811,6 @@ PAGE JS
         $("#price_second").val(ui.values[1]);
       }
     });
-
     $("#flt_price").html(c + $filter_selector.slider("values", 0) + " - " + c + $filter_selector.slider("values", 1));
   });
   $('#price_filter22').each(function() {
