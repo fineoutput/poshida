@@ -388,10 +388,11 @@
 <div class="container-fluid mobilebottom" style="position:sticky; bottom: 0;background:#f2f2f2;" id="footerCount">
   <div class="row text-center">
     <div class="col-6 p-2" style="border-right: 2px solid #dee2e6 ;">
-      <a href="#" data-target="#sortby" data-toggle="modal" data-bs-dismiss="modal"> <img src="https://www.tiarastore.co.in/assets\frontend\images\sort.png"> SORT BY</a>
+      <a href="#" data-target="#sortby" data-toggle="modal" data-bs-dismiss="modal"> <img src="<?= base_url() ?>assets/frontend/img/sort.png"> SORT BY</a>
     </div>
     <div class="col-6 p-2">
-      <a href="#" data-target="#filter" data-toggle="modal" data-bs-dismiss="modal"> <img src="https://www.tiarastore.co.in/assets\frontend\images\filter.png"> FILTER</a>
+      <a href="#" data-target="#filter" data-toggle="modal" data-bs-dismiss="modal"> <img src="<?= base_url() ?>assets/frontend/img/filter.png">
+ FILTER</a>
     </div>
   </div>
 
