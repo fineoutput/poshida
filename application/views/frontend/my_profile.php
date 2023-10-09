@@ -1007,3 +1007,57 @@
   </div>
   <!-- END DESKTOP SECTION SHOP -->
 </div>
+<!-- END MAIN CONTENT -->
+<script src="<?= base_url() ?>assets/frontend/js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+  $(window).on('load', function() {
+    var pageURL = $(location).attr("href");
+    if (pageURL.includes('order')) {
+      $('#list-profile-list').removeClass('active');
+      $('#account-detail-tab').removeClass('active');
+      $('#list-messages-list').removeClass('active');
+      $('#list-home-list').addClass('active');
+      $('#list-profile').removeClass('active show');
+      $('#orders-tab').removeClass('active show');
+      $('#list-messages').removeClass('active show');
+      $('#list-home').addClass('active show');
+    }
+    if (pageURL.includes('account')) {
+      $('#list-messages-list').removeClass('active');
+      $('#account-detail-tab').removeClass('active');
+      $('#list-profile-list').removeClass('active');
+      $('#list-home-list').addClass('active');
+      $('#list-profile').removeClass('active show');
+      $('#orders-tab').removeClass('active show');
+      $('#list-home').removeClass('active show');
+      $('#list-messages').addClass('active show');
+    }
+    if (pageURL.includes('ordes')) {
+      $('#list-home-list').removeClass('active');
+      $('#account-detail-tab').removeClass('active');
+      $('#list-messages-list').removeClass('active');
+      $('#list-profile-list').addClass('active');
+      $('#list-home').removeClass('active show');
+      $('#orders-tab').removeClass('active show');
+      $('#list-messages').removeClass('active show');
+      $('#list-profile').addClass('active show');
+    }
+  });
+</script>
+<script>
+  function myFunction() {
+    /* Get the text field */
+    var copyText = document.getElementById("myInput");
+
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText.value);
+
+    /* Alert the copied text */
+    notifyInfo("Copied")
+  }
+</script>
