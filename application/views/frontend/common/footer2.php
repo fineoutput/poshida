@@ -70,7 +70,11 @@
                     <img src="<?= base_url() ?>assets/frontend/img/address-icon.svg" alt="xpoge">
                     </div>
                     <div class="contact-box-detail">
-                      <p>869 Lexington Ave, New York, NY 10065, USA</p>
+                      <p>POSHIDA CLOTHING STORE
+
+
+PLOT NO. 81, NANDPURI-B, NEAR MAHIMA PANSCHAP,
+JAGATPURA, Jaipur, Jaipur, Rajasthan, 302017/p>
                     </div>
                   </li>
                   <li>

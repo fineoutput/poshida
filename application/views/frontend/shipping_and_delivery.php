@@ -1,18 +1,6 @@
 <!-- END HEADER -->
 <!-- START SECTION BREADCRUMB -->
-<div class="breadcrumb_section bg_gray page-title-mini">
-  <div class="container">
-    <!-- STRART CONTAINER -->
-    <div class="row align-items-center">
-      <div class="col-md-12">
-        <ol class="breadcrumb justify-content-md-start">
-          <li class="breadcrumb-item"><a href="<?=base_url()?>">Home</a></li>
-          <li class="breadcrumb-item active">Shipping & Delivery Policy</li>
-        </ol>
-      </div>
-    </div>
-  </div><!-- END CONTAINER-->
-</div>
+
 <!-- END SECTION BREADCRUMB -->
 <!-- START MAIN CONTENT -->
 <div class="main_content">
