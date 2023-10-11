@@ -620,7 +620,7 @@
                                   array_push($size_arr, $size_data->id);
                           ?>
                                   <li class="icon  cart-icon">
-                                    <a href="<?= base_url() ?>Home/product_detail/<?= $data->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?></a>
+                                    <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?></a>
                                   </li>
                               <?php
                                 }
@@ -634,7 +634,7 @@
                             if (!empty($size_data)) {
                               ?>
                               <li class="icon ivo-ho compare-icon">
-                                <a href="<?= base_url() ?>Home/product_detail/<?= $data->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
+                                <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
                               </li>
                           <? }
                           } ?>
@@ -756,7 +756,7 @@
                                   array_push($size_arr, $size_data->id);
                           ?>
                                   <li class="icon  cart-icon">
-                                    <a href="<?= base_url() ?>Home/product_detail/<?= $data->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?></a>
+                                    <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?></a>
                                   </li>
                               <?php
                                 }
@@ -770,7 +770,7 @@
                             if (!empty($size_data)) {
                               ?>
                               <li class="icon ivo-ho compare-icon">
-                                <a href="<?= base_url() ?>Home/product_detail/<?= $data->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
+                                <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
                               </li>
                           <? }
                           } ?>

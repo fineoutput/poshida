@@ -34,8 +34,7 @@
                   <img src="<?= base_url() ?>assets/frontend/img/Poshida Logo (2)_page-0001.jpg" alt="logo">
                 </a>
               </div>
-              <p class="footer-p">Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed
-                fringilla mauris sit amet nibh mauris sit amet nibh. Donec sodales sagittis</p>
+              <p class="footer-p text-justify">Founded in Jaipur, our journey began as a ready-to-wear brand that has since become synonymous with versatile and empowering casual attire.</p>
             </div>
           </div>
           <div class="col-12 col-lg-3 col-md-6">
@@ -46,19 +45,34 @@
                 <li><a href="<?= base_url() ?>Home/privacy_policy">Privacy & Policy</a></li>
                 <li><a href="<?= base_url() ?>Home/return_and_replace">Returns, Replace & Exchanges</a></li>
                 <li><a href="<?= base_url() ?>Home/shipping_and_delivery">Shipping & Delivery</a></li>
+								<li><a href="<?= base_url() ?>Home/terms_and_conditions">Terms & Conditions</a></li>
+
               </ul>
             </div>
           </div>
-          <div class="col-12 col-lg-3 col-md-6">
-            <div class="footer-static-block">
-              <span class="opener plus"></span>
-              <h3 class="head-three">My Account</h3>
-              <ul class="footer-menu footer-block-contant">
-                <li><a href="<?= base_url() ?>Home/my_profile/order">Orders & Returns</a></li>
-                <li><a href="<?= base_url() ?>Home/my_profile">Account Details</a></li>
-              </ul>
+          <? if (!empty($this->session->userdata('user_data'))) { ?>
+            <div class="col-12 col-lg-3 col-md-6">
+              <div class="footer-static-block">
+                <span class="opener plus"></span>
+                <h3 class="head-three">My Account</h3>
+                <ul class="footer-menu footer-block-contant">
+                  <li><a href="<?= base_url() ?>Home/my_profile/order">Orders & Returns</a></li>
+                  <li><a href="<?= base_url() ?>Home/my_profile">Account Details</a></li>
+                </ul>
+              </div>
             </div>
-          </div>
+          <? } else { ?>
+            <div class="col-12 col-lg-3 col-md-6">
+              <div class="footer-static-block">
+                <span class="opener plus"></span>
+                <h3 class="head-three">My Account</h3>
+                <ul class="footer-menu footer-block-contant">
+                  <li><a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel">Login</a></li>
+                  <li><a href="<?= base_url() ?>Home/about_us">About Us</a></li>
+                </ul>
+              </div>
+            </div>
+          <? } ?>
           <div class="col-12 col-lg-3 col-md-6">
             <div class="footer-static-block">
               <span class="opener plus"></span>
@@ -67,19 +81,19 @@
                 <ul>
                   <li>
                     <div class="contact-thumb">
-                    <img src="<?= base_url() ?>assets/frontend/img/address-icon.svg" alt="xpoge">
+                      <img src="<?= base_url() ?>assets/frontend/img/address-icon.svg" alt="xpoge">
                     </div>
                     <div class="contact-box-detail">
                       <p>POSHIDA CLOTHING STORE
 
 
-PLOT NO. 81, NANDPURI-B, NEAR MAHIMA PANSCHAP,
-JAGATPURA, Jaipur, Jaipur, Rajasthan, 302017/p>
+                        PLOT NO. 81, NANDPURI-B, NEAR MAHIMA PANSCHAP,
+                        JAGATPURA, Jaipur, Jaipur, Rajasthan, 302017/p>
                     </div>
                   </li>
                   <li>
                     <div class="contact-thumb">
-                    <img src="<?= base_url() ?>assets/frontend/img/phone-icon.svg" alt="xpoge">
+                      <img src="<?= base_url() ?>assets/frontend/img/phone-icon.svg" alt="xpoge">
                     </div>
                     <div class="contact-box-detail">
                       <p>+91 123 456 789 0</p>
@@ -87,7 +101,7 @@ JAGATPURA, Jaipur, Jaipur, Rajasthan, 302017/p>
                   </li>
                   <li>
                     <div class="contact-thumb">
-                    <img src="<?= base_url() ?>assets/frontend/img/mail-icon.svg" alt="xpoge">
+                      <img src="<?= base_url() ?>assets/frontend/img/mail-icon.svg" alt="xpoge">
                     </div>
                     <div class="contact-box-detail">
                       <p>xpoge@hi123.com</p>
