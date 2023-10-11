@@ -10,7 +10,7 @@
         </ol>
       </div>
     </div>
-  </div><!-- END CONTAINER-->
+  </div><!-- END CONTAINER--> 
 </div>
 <!-- BREADCRUMB AREA END -->
 <!-- ABOUT US AREA START -->
