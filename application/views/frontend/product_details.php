@@ -535,10 +535,10 @@
             <? foreach ($buy_with_it as $buy_with) {
               $type_mrp = 0;
               $type_spgst = 0;
-              $type_datas = $this->db->get_where('tbl_type', array('product_id = ' => $buy_with[0]->id, 'is_active' => 1));
+              $type_datas = $this->db->get_where('tbl_type', array('product_id = ' => $buy_with->id, 'is_active' => 1));
               $type_data = $type_datas->result();
               if (!empty($type_data)) {
-                if ($buy_with[0]->product_view == 3) {
+                if ($buy_with->product_view == 3) {
                   if (!empty($this->session->userdata('user_type'))) {
                     if ($this->session->userdata('user_type') == 2) {
                       $type_mrp = $type_data[0]->reseller_mrp;
@@ -551,7 +551,7 @@
                     $type_mrp = $type_data[0]->retailer_mrp;
                     $type_spgst = $type_data[0]->retailer_spgst;
                   }
-                } elseif ($buy_with[0]->product_view == 2) {
+                } elseif ($buy_with->product_view == 2) {
                   $type_mrp = $type_data[0]->reseller_mrp;
                   $type_spgst = $type_data[0]->reseller_spgst;
                 } else {
@@ -574,15 +574,15 @@
                 <div class="item">
                   <div class="product-item">
                     <div class="product-image">
-                      <? if ($buy_with[0]->exclusive == 1) { ?> <div class="sale-label"><span>Sale</span></div> <? } ?>
-                      <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with[0]->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
+                      <? if ($buy_with->exclusive == 1) { ?> <div class="sale-label"><span>Sale</span></div> <? } ?>
+                      <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
                         <img src="<?= base_url() . $type_data[0]->image ?>" alt=" ">
                       </a>
                     </div>
                     <div class="product-details-outer">
                       <div class="product-details">
                         <div class="product-title">
-                          <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with[0]->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $buy_with[0]->name ?></a>
+                          <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $buy_with->name ?></a>
                         </div>
                         <div class="price-box">
                           <span class="price">₹<?= $type_spgst ?></span>
@@ -671,10 +671,10 @@
             <? foreach ($related_data->result() as $buy_with) {
               $type_mrp = 0;
               $type_spgst = 0;
-              $type_datas = $this->db->get_where('tbl_type', array('product_id = ' => $buy_with[0]->id, 'is_active' => 1));
+              $type_datas = $this->db->get_where('tbl_type', array('product_id = ' => $buy_with->id, 'is_active' => 1));
               $type_data = $type_datas->result();
               if (!empty($type_data)) {
-                if ($buy_with[0]->product_view == 3) {
+                if ($buy_with->product_view == 3) {
                   if (!empty($this->session->userdata('user_type'))) {
                     if ($this->session->userdata('user_type') == 2) {
                       $type_mrp = $type_data[0]->reseller_mrp;
@@ -687,7 +687,7 @@
                     $type_mrp = $type_data[0]->retailer_mrp;
                     $type_spgst = $type_data[0]->retailer_spgst;
                   }
-                } elseif ($buy_with[0]->product_view == 2) {
+                } elseif ($buy_with->product_view == 2) {
                   $type_mrp = $type_data[0]->reseller_mrp;
                   $type_spgst = $type_data[0]->reseller_spgst;
                 } else {
@@ -710,15 +710,15 @@
                 <div class="item">
                   <div class="product-item">
                     <div class="product-image">
-                      <? if ($buy_with[0]->exclusive == 1) { ?> <div class="sale-label"><span>Sale</span></div> <? } ?>
-                      <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with[0]->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
+                      <? if ($buy_with->exclusive == 1) { ?> <div class="sale-label"><span>Sale</span></div> <? } ?>
+                      <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
                         <img src="<?= base_url() . $type_data[0]->image ?>" alt=" ">
                       </a>
                     </div>
                     <div class="product-details-outer">
                       <div class="product-details">
                         <div class="product-title">
-                          <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with[0]->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $buy_with[0]->name ?></a>
+                          <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $buy_with->name ?></a>
                         </div>
                         <div class="price-box">
                           <span class="price">₹<?= $type_spgst ?></span>

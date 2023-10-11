@@ -1,6 +1,7 @@
 <!-- ============================================= START SECTION BREADCRUMB  ========================================-->
-<!-- <div class="breadcrumb_section bg_gray page-title-mini">
+<div class="breadcrumb_section bg_gray page-title-mini">
   <div class="container">
+    <!-- STRART CONTAINER -->
     <div class="row align-items-center">
       <div class="col-md-12">
         <ol class="breadcrumb justify-content-md-start">
@@ -9,8 +10,8 @@
         </ol>
       </div>
     </div>
-  </div>
-</div> -->
+  </div><!-- END CONTAINER-->
+</div>
 <!-- BREADCRUMB AREA END -->
 <!-- ABOUT US AREA START -->
 <div class="ltn__about-us-area pt-120 pb-120 " style="background:white;">
