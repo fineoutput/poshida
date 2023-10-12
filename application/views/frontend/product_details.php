@@ -116,7 +116,7 @@
             <li><a href="<?= base_url() ?>">Home</a></li>
             <li><a href="<?= base_url() ?>Home/all_products/<?= $cat_name[0]->url ?>/1"><?= $cat_name[0]->name ?></a></li>
             <li><a href="<?= base_url() ?>Home/all_products/<?= $subcat_name[0]->url ?>/1"><?= $subcat_name[0]->name ?></a></li>
-            <li><?= $product_data[0]->name ?></li>
+            <!-- <li><?= $product_data[0]->name ?></li> -->
           </ul>
         </div>
       </div>
@@ -338,17 +338,17 @@
                     if (!empty($wihslist)) {
                   ?>
                       <li class="icon cart-icon wishlist-heart">
-                        <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="remove" onclick="wishlist(this)" class="btn btn-color sice"> <i class="fa fa-heart wsws" style="font-size: 23px; color: #fff; "></i>Remove Wishlist</a>
+                        <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="remove" onclick="wishlist(this)" class="btn btn-color sice"> <i class="fa fa-hart wsws" style="font-size: 23px; color: #fff; "></i>Remove Wishlist</a>
                       </li>
                       <li class="icon fav-icon-heart ">
-                        <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="remove" onclick="wishlist(this)"><i class="fa fa-heart wsws" style="font-size: 23px; margin-left: 24px; color: #c68fa6; ">
+                        <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="remove" onclick="wishlist(this)"><i class="fa fa-hert wsws" style="font-size: 23px; margin-left: 24px; color: #c68fa6; ">
                             <div class="tooltip">Remove to wishlist</div>
                           </i>
                         </a>
                       </li>
                     <? } else { ?>
                       <li class="icon cart-icon wishlist-heart">
-                        <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="add" onclick="wishlist(this)" class="btn btn-color sice"> <i class="fa fa-heart wsws" style="font-size: 23px; color: #fff; "></i>Add Wishlist</a>
+                        <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="add" onclick="wishlist(this)" class="btn btn-color sice"> <i class="fa fa-hart wsws" style="font-size: 23px; color: #fff; "></i>Add Wishlist</a>
                       </li>
                       <li class="icon fav-icon-heart ">
                       <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="add" onclick="wishlist(this)"><i class="fa fa-heart-o wsws" style="font-size: 23px; margin-left: 24px; color: #686868;; ">
