@@ -8,14 +8,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <!-- Css file include -->
   <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/style.css">
-  <link rel="shortcut icon" href="<?= base_url() ?>assets/frontend/img/Poshida Logo (2)_page-0001.jpg" type="image/x-icon" />
-  <title>Tiara Invoice</title>
+  <link rel="shortcut icon" href="<?= base_url() ?>assets/frontend/img/Poshida.jpg" type="image/x-icon" />
+  <title>Poshida Invoice</title>
 </head>
 <body style="padding-top:75px;">
   <div class="container main_container">
     <div class="row">
       <div class="col-sm-6 oswal_logo">
-        <img src="<?= base_url() ?>assets/frontend/img/Poshida Logo (2)_page-0001.jpg" class="img-fluid" style="width:150px;">
+        <img src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="img-fluid" style="width:150px;">
       </div>
       <div class="col-sm-6 content_part">Tax Invoice/Bill of Supply/Cash Memo
         <p>(Original for Recipient)</p>
