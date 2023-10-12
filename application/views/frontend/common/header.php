@@ -173,7 +173,7 @@ if (!empty($this->session->userdata('user_data'))) {
             <div class="newsletter-input-1 newsletter-input mob  " style="width: 70%;">
               <form action="<?= base_url() ?>Home/search" method="GET" enctype="multipart/form-data">
                 <div class="form-group m-0">
-                  <input type="search" placeholder="Search Products... " name="search" required="">
+                  <input type="searc" placeholder="Search Products... " name="search" required="">
                 </div>
                 <button type="submit" class="btn  btn--1"> <i class="bi bi-search" style="color: #c68fa6;"></i></button>
               </form>
@@ -292,7 +292,7 @@ if (!empty($this->session->userdata('user_data'))) {
       <div id="toggle" class="no ">
         <form action="<?= base_url() ?>Home/search" method="GET" enctype="multipart/form-data">
           <div class="form-group m-0 sty">
-            <input type="search" placeholder="Search Products... " required="" name="search">
+            <input type="searc" placeholder="Search Products... " required="" name="search">
           </div>
           <button type="submit" class="btn  btn-resp" style="position: absolute;
 						right: 23px;padding: 18px 3px; top :66px;"> <i class="bi bi-search"></i></button>

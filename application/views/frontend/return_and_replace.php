@@ -62,7 +62,7 @@
 
               <p>Customer can raise concerns on website for replacement return with easy steps as shown below:</p>
               <ol style="list-style-type: disc;">
-                <li>Login to TIARA STORE website then click on Your Account.</li>
+                <li>Login to poshida STORE website then click on Your Account.</li>
                 <li>Click on My Orders.</li>
                 <li>Click on view in action column for returns of replacement or exchanges.</li>
               </ol>
@@ -82,7 +82,7 @@
               <p>You can cancel an order in an easy step:</p>
               <p>Email us on <b>contactus@poshida.co.in</b></p>
               <p>Please note that the complete order needs to be canceled. We do not accept Partial order cancellation requests. </p>
-              <p>The customer agrees not to dispute the decision made by poshida and accept The TIARA STORE’s decision regarding the cancellation.</p>
+              <p>The customer agrees not to dispute the decision made by poshida and accept The poshida STORE’s decision regarding the cancellation.</p>
               <hr>
               <h4>Refund Policy</h4>
               <p>Your refund will be initiated by us within 2 business days of receiving the refund request and authorization of the refund.</p>

@@ -355,7 +355,7 @@
                                   if ($status == 0) {
                                     array_push($size_arr, $size_data->id); ?>
                                     <li class="icon  cart-icon">
-                                      <a href="<?= base_url() ?>Home/product_detail/<?= $data->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?></a>
+                                      <a href="<?= base_url() ?>Home/product_detail/<?= $data->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?><p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
                                     </li>
                                 <?php
                                   }
