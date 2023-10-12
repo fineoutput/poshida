@@ -68,7 +68,7 @@
     transition: width linear 0.8s;
 }
 
-@media (min-width: 641px) and (max-width: 2600px) {
+@media (min-width: 641px) and (max-width: 3000px) {
     .wishlist-heart{
         display: none !important ;
     }
