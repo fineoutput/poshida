@@ -46,7 +46,7 @@
     <p>By working closely together as a family, WE focused on the key elements of fashion production –design, manufacture, distribution and retail– with three pillars -flexibility, digital integration and sustainability- we brought our customers
       closer than ever to the products they wanted at affordable prices.</p> -->
       <h4>Value beyond profit</h4>
-      <!-- <p style="color: black;"> <u>TIARA brand is an Exclusive Collection for more meaningful buying.</u> </p> -->
+      <!-- <p style="color: black;"> <u>poshida brand is an Exclusive Collection for more meaningful buying.</u> </p> -->
       <p>Our brand represents more than just fashion; it embodies an exclusive collection that
         promotes meaningful consumption. Our dedicated workforce consistently prioritizes
         the customer's needs and values, transcending mere profitability. We strive to create
@@ -101,7 +101,7 @@
       <div class=" mt-3">
         <h4>Key Attributes:
         </h4>
-        <!-- <p style="color: black;"> <u>TIARA brand is an Exclusive Collection for more meaningful buying.</u> </p> -->
+        <!-- <p style="color: black;"> <u>poshida brand is an Exclusive Collection for more meaningful buying.</u> </p> -->
         <p>ISO Certified: We're all about quality and excellence. Our ISO certification
           shows that we're really serious about meeting international standards and
           making fashion that lasts.
