@@ -10,7 +10,7 @@
 
   <!-- Mobile Specific Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link type="image/x-icon" href="<?= base_url() ?>assets/frontend/img/Poshida Logo (2)_page-0001.jpg" rel="icon">
+  <link type="image/x-icon" href="<?= base_url() ?>assets/frontend/img/Poshida.jpg" rel="icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- CSS -->
@@ -173,7 +173,7 @@ if (!empty($this->session->userdata('user_data'))) {
             <div class="newsletter-input-1 newsletter-input mob  " style="width: 70%;">
               <form action="<?= base_url() ?>Home/search" method="GET" enctype="multipart/form-data">
                 <div class="form-group m-0">
-                  <input type="search" placeholder="Search Products... " name="search" required="">
+                  <input type="searc" placeholder="Search Products... " name="search" required="">
                 </div>
                 <button type="submit" class="btn  btn--1"> <i class="bi bi-search" style="color: #c68fa6;"></i></button>
               </form>
@@ -186,7 +186,7 @@ if (!empty($this->session->userdata('user_data'))) {
             <div class="right-side">
               <div class="navbar-header">
                 <a class="navbar-brand page-scroll" href="<?= base_url() ?>">
-                  <img alt="xpoge" src="<?= base_url() ?>assets/frontend/img/Poshida Logo (2)_page-0001.jpg" class="logo-imah-1">
+                  <img alt="xpoge" src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
                 </a>
               </div>
             </div>
@@ -292,7 +292,7 @@ if (!empty($this->session->userdata('user_data'))) {
       <div id="toggle" class="no ">
         <form action="<?= base_url() ?>Home/search" method="GET" enctype="multipart/form-data">
           <div class="form-group m-0 sty">
-            <input type="search" placeholder="Search Products... " required="" name="search">
+            <input type="searc" placeholder="Search Products... " required="" name="search">
           </div>
           <button type="submit" class="btn  btn-resp" style="position: absolute;
 						right: 23px;padding: 18px 3px; top :66px;"> <i class="bi bi-search"></i></button>
@@ -309,7 +309,7 @@ if (!empty($this->session->userdata('user_data'))) {
               <ul class="nav navbar-nav">
                 <div class="navbar-header dfghddgd">
                   <a class="navbar-brand page-scroll" href="<?= base_url() ?>">
-                    <img alt="xpoge" src="<?= base_url() ?>assets/frontend/img/Poshida Logo (2)_page-0001.jpg" class="logo-imah-1">
+                    <img alt="xpoge" src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
                   </a>
                 </div>
                 <li class="level">

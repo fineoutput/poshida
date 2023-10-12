@@ -24,8 +24,8 @@
           <div class="col-12">
             <div class="term_conditions">
               <h4>Terms & Conditions</h4>
-              <p>Please read the following terms and conditions very carefully as your use of the service is subject to your acceptance of and compliance with the following terms and conditions ("Terms"). By subscribing to or using any of our services you agree that you have read, understood, and are bound by the Terms, regardless of how you subscribe to or use the services. If you do not want to be bound by the Terms, you must not subscribe to or use our services.
-                YOUR USE OF THE WEBSITE IMPLIES THAT YOU AGREE WITH THE TERMS OF USE. </span>
+              <p>Please read the following terms and conditions very carefully as your use of the service is subject to your acceptance of and compliance with the following terms and conditions ("Terms"). By subscribing to or using any of our services you agree that you have read, understood, and are bound by the Terms, regardless of how you subscribe to or use the services. If you do not want to be bound by the Terms, you must not subscribe to or use our services. 
+                YOUR USE OF THE WEBSITE IMPLIES THAT YOU AGREE WITH THE TERMS OF USE.  </span>
               </p>
               <hr>
               <h4>Introduction</h4>

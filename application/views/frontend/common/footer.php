@@ -8,7 +8,7 @@
 						<div class="footer-about mb-sm-30">
 							<div class="footer-logo">
 								<a href="<?= base_url() ?>">
-									<img src="<?= base_url() ?>assets/frontend/img/Poshida Logo (2)_page-0001.jpg" alt="logo">
+									<img src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" alt="logo">
 								</a>
 							</div>
 							<p class="footer-p text-justify">Founded in Jaipur, our journey began as a ready-to-wear brand that has since become synonymous with versatile and empowering casual attire. </p>
@@ -167,7 +167,7 @@
 				</button>
 				<div class="row text-left">
 					<div class="col-sm-12 text-center mb-2">
-						<img alt="Broken Image" src="<?= base_url() ?>assets/frontend/img/Poshida Logo (2)_page-0001.jpg" class="logo-imah-1 qwd">
+						<img alt="Broken Image" src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1 qwd">
 
 					</div>
 				</div>
@@ -224,7 +224,7 @@
 
 							<div class="row text-left">
 								<div class="col-sm-12 text-center mb-2">
-									<img alt="Broken Image" src="<?= base_url() ?>assets/frontend/img/Poshida Logo (2)_page-0001.jpg" class="logo-imah-1 qwd">
+									<img alt="Broken Image" src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1 qwd">
 								</div>
 							</div>
 							<div class="popup-text" style="padding-left: 20px;padding-right: 20px;">

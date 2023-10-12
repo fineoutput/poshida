@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <!-- Css file include -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <title>Tiara Tag</title>
+  <title>Poshida Tag</title>
   <style>
     p {
       font-family: Calibri (Body);
@@ -70,9 +70,9 @@
         </div>
         <div style="border: 1px solid #000;border-collapse: collapse;">
           <img src="<?=base_url()?>assets/frontend/images/tiara_logo.png" alt="" class="img-fluid" style="margin-top: -0px;">
-          <h5 style="margin-top: 0px;font-weight:bold;">TIARASTORE</h5>
+          <h5 style="margin-top: 0px;font-weight:bold;">Poshida</h5>
           <p style="text-align:center;font-weight:500;text-transform:uppercase;font-size:25px;margin-top:-5px;">For Complaints/Feedback, <br> Please Write Us To Our Customer Care <br> Executive At Bellow Address Or <br> Email Address: </p>
-          <a href="contactus@tiarastore.co.in" style="font-size: 25px;text-decoration:underline;color:blue;font-weight:800;">contactus@tiarastore.co.in</a>
+          <a href="contactus@Poshida.co.in" style="font-size: 25px;text-decoration:underline;color:blue;font-weight:800;">contactus@Poshida.co.in</a>
           <p style="font-size: 23px;font-weight:bold;">B 14,15, SOURAV TOWER, AMARPALI CIRCLE, VAISHALI <br> NAGAR, JAIPUR, PIN : 302021</p>
         </div>
       </div>

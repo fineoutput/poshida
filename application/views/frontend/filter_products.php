@@ -355,7 +355,7 @@
                                   if ($status == 0) {
                                     array_push($size_arr, $size_data->id); ?>
                                     <li class="icon  cart-icon">
-                                      <a href="<?= base_url() ?>Home/product_detail/<?= $data->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?></a>
+                                      <a href="<?= base_url() ?>Home/product_detail/<?= $data->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?><p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
                                     </li>
                                 <?php
                                   }
@@ -396,10 +396,10 @@
 <div class="container-fluid mobilebottom" style="position:sticky; bottom: 0;background:#f2f2f2;" id="footerCount">
   <div class="row text-center">
     <div class="col-6 p-2" style="border-right: 2px solid #dee2e6 ;">
-      <a href="#" data-target="#sortby" data-toggle="modal" data-bs-dismiss="modal"> <img src="https://www.tiarastore.co.in/assets\frontend\images\sort.png"> SORT BY</a>
+      <a href="#" data-target="#sortby" data-toggle="modal" data-bs-dismiss="modal"> <img  href="<?= base_url() ?>assets/frontend/img/sort.png" rel="icon">> SORT BY</a>
     </div>
     <div class="col-6 p-2">
-      <a href="#" data-target="#filter" data-toggle="modal" data-bs-dismiss="modal"> <img src="https://www.tiarastore.co.in/assets\frontend\images\filter.png"> FILTER</a>
+      <a href="#" data-target="#filter" data-toggle="modal" data-bs-dismiss="modal"> <img href="<?= base_url() ?>assets/frontend/img/filter.png" rel="icon">> FILTER</a>
     </div>
   </div>
 
