@@ -162,7 +162,7 @@ class User extends CI_Controller
                 $password = $this->input->post('password');
                 //-------------- register otp verify ------------
                 $LoginVerify = $this->login->EmailLogin($email, $password);
-                echo $LoginVerify;
+                // echo $LoginVerify;
                 // die();
                 redirect($_SERVER['HTTP_REFERER']);
             } else {
