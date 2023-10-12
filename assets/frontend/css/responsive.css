@@ -966,6 +966,12 @@ i.bi.bi-chevron-down{
 	    font-size: 25px;
 	}
 }
+@media (max-width: 952px) {
+	img.logo-imah-1.qwd {
+		width: 23%;
+		margin: 10px;
+	}
+}
 
 @media (max-width: 419px) {
 	.ser-feature-block .col-6 {
@@ -1096,8 +1102,7 @@ i.bi.bi-chevron-down{
 	
 
 
-
-
+		
 
 
 
@@ -1122,19 +1127,14 @@ i.bi.bi-chevron-down{
 	}
 }
 
+
+
+
+
 @media (max-width: 358px) {
 	a.btn.btn-color.small.btn-filter.me-3.mb-20 {
-    margin-right: 7px;}
+	margin-right: 7px;}
 }
-
-
-@media (max-width: 952px) {
-	img.logo-imah-1.qwd {
-		width: 23%;
-		margin: 10px;
-	}
-}
-
 @media(max-width:425px){
 		button.btn.btn-resp {
 			top: 77px !important;
@@ -1154,3 +1154,32 @@ i.bi.bi-chevron-down{
 	}
 }
 
+@media(max-width:617px){
+	div#wishlist ul li.icon.cart-icon{
+		width: auto;
+	}
+	#btn-center{
+		justify-content: center !important;
+	}
+}
+@media(max-width:570px){
+	section.product-tab-part.position-r.pb-100.renpos-icon-desigin{
+		padding: 20px 20px !important;
+	}}
+
+
+	@media (max-width: 640px){
+.product-detail-main .product-details-btn ul li a {
+    padding: 14px 20px !important;
+}
+button#addtoCartButton{
+    padding: 14px 20px !important;
+
+}
+}
+
+@media (max-width: 336px){
+	button#addtoCartButton {
+		font-size: 13px;
+	}
+}

@@ -326,8 +326,9 @@
 
               <hr class="mb-20">
 
-              <div class="product-details-btn stickyAdClass" id="wishlist">
-                <ul>
+              <div class="product-details-btn stickyAdClass" id="wishlist" >
+                <ul style="    display: flex;
+                  justify-content: start;" id="btn-center">
                   <li class="icon cart-icon ">
                     <button class="btn btn-color fhf" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" quantity="1" id="addtoCartButton" onclick="addToCart(this)" type="button"><span></span>Add to cart</button>
                   </li>
@@ -349,15 +350,22 @@
                       <li class="icon cart-icon wishlist-heart">
                         <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="add" onclick="wishlist(this)" class="btn btn-color sice"> <i class="fa fa-heart wsws" style="font-size: 23px; color: #fff; "></i>Add Wishlist</a>
                       </li>
+                      <li class="icon fav-icon-heart ">
                       <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="add" onclick="wishlist(this)"><i class="fa fa-heart-o wsws" style="font-size: 23px; margin-left: 24px; color: #686868;; ">
                           <div class="tooltip">Add to wishlist</div>
                         </i></a>
+                      </li>
                     <? } ?>
                   <? } else { ?>
                     <!-- //-----LOGIN ----- -->
-                    <i class="fa fa-heart-o wsws" style="font-size: 23px; margin-left: 24px; color: #686868;; ">
+                    <li class="icon cart-icon wishlist-heart">
+                        <a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel" class="btn btn-color sice"> <i class="fa fa wsws" style="font-size: 23px; color: #fff; "></i>Add to wishlist</a>
+                      </li>
+                    <li class="icon fav-icon-heart ">
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel"><i class="fa fa-he=art-o wsws" style="font-size: 23px; margin-left: 24px; color: #686868;; ">
                       <div class="tooltip">Add to wishlist</div>
                     </i>
+                    </li>
                   <? } ?>
                 </ul>
               </div>
@@ -418,7 +426,7 @@
 </section>
 <!-- ========= END DESCRIPTION ============= -->
 
-<section class="product-tab-part position-r pb-100" style="padding: 20px  0px !important;">
+<section class="product-tab-part position-r pb-100 renpos-icon-desigin" >
   <div class="container">
     <div class="product-tab-inner">
       <div class="row">
@@ -461,7 +469,7 @@
 
           <!-- ========= START ADD REVIEW ============= -->
 
-          <div class="items-Description selected">
+          <div class="items-Description selected" style="">
             <form class="row mt-3" method="POST" action="<?= base_url() ?>Home/product_review" enctype="multipart/form-data">
               <div class="leave-comment-part " style="padding-top: 20px;">
                 <h3 class="head-three">Leave A Comment</h3>

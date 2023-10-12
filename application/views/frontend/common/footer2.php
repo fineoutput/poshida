@@ -173,15 +173,17 @@
           </div>
           <div class="container">
             <div class="row">
+              <div class="col">
               <p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="<?= base_url() ?>Home/terms_and_conditions" style="color: #c68fa6;">Terms of use</a>
                 &amp; <a href="<?= base_url() ?>Home/privacy_policy" style="color: #c68fa6;">Privacy
                   Policy</a></p>
+                  </div>
             </div>
           </div>
           <div class="form-group">
             <button class="btn btn-fill-out btn-block text-uppercase mt-2 rounded-0 btn-color " style="padding: 14px 18px;" type="submit">Submit</button>
           </div>
-          <div class="text-center"><span class="mt-3">New Here?<a href="javascript:;" data-toggle="modal" data-target="#SignUpModel" style="color:#c68fa6;">&nbsp;Sign Up</a></span>
+          <div class="text-center mb-3" ><span class="mt-3 ">New Here?<a href="javascript:;" data-toggle="modal" data-target="#SignUpModel" style="color:#c68fa6;">&nbsp;Sign Up</a></span>
           </div>
         </form>
       </div>
@@ -238,7 +240,9 @@
                 </div>
                 <div class="container">
                   <div class="row">
+                    <div class="col">
                     <p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="#" style="color: #c68fa6;">Terms of use</a> &amp; <a href="#" style="color: #c68fa6;">Privacy Policy</a></p>
+                  </div>
                   </div>
                 </div>
                 <div class="form-group">
