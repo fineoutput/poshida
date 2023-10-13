@@ -74,43 +74,48 @@
             </div>
           <? } ?>
           <div class="col-12 col-lg-3 col-md-6">
-            <div class="footer-static-block">
-              <span class="opener plus"></span>
-              <h3 class="head-three">Contact us</h3>
-              <div class="contact-box footer-block-contant">
-                <ul>
-                  <li>
-                    <div class="contact-thumb">
-                      <img src="<?= base_url() ?>assets/frontend/img/address-icon.svg" alt="xpoge">
-                    </div>
-                    <div class="contact-box-detail">
-                      <p>POSHIDA CLOTHING STORE
+						<div class="footer-static-block">
+							<span class="opener plus"></span>
+							<h3 class="head-three">Contact us</h3>
+							<div class="contact-box footer-block-contant">
+								<ul>
+									<li>
+										<div class="contact-thumb">
+											<img src="<?= base_url() ?>assets/frontend/img/address-icon.svg" alt="">
+										</div>
+										<div class="contact-box-detail">
+											<p>Plot No. 81, Nandpuri-B, Near Mahima Panschap, Jagatpura, Jaipur</p>
+										</div>
+									</li>
+									<li>
+										<div class="contact-thumb">
+											<img src="<?= base_url() ?>assets/frontend/img/phone-icon.svg" alt="">
+										</div>
+										<div class="contact-box-detail" style="cursor: pointer;">
+											<p>
+												<a href="tel:+91-6377898988">+91-6377898988</a>
+											</p>
 
+											<p>
+												<a href="tel:+0141-2988751">0141-2988751</a>
+											</p>
 
-                        PLOT NO. 81, NANDPURI-B, NEAR MAHIMA PANSCHAP,
-                        JAGATPURA, Jaipur, Jaipur, Rajasthan, 302017/p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="contact-thumb">
-                      <img src="<?= base_url() ?>assets/frontend/img/phone-icon.svg" alt="xpoge">
-                    </div>
-                    <div class="contact-box-detail">
-                      <p>+91 123 456 789 0</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="contact-thumb">
-                      <img src="<?= base_url() ?>assets/frontend/img/mail-icon.svg" alt="xpoge">
-                    </div>
-                    <div class="contact-box-detail">
-                      <p>xpoge@hi123.com</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+										
+
+										</div>
+									</li>
+									<li>
+										<div class="contact-thumb">
+											<img src="<?= base_url() ?>assets/frontend/img/mail-icon.svg" alt="xpoge">
+										</div>
+										<div class="contact-box-detail" style="cursor: pointer;">
+											<p> <a href="mailto:Poshida.ronak@gmail.com">Poshida.ronak@gmail.com</a></p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
         </div>
       </div>
     </div>
@@ -124,15 +129,15 @@
           </div>
         </div>
         <div class="col-12">
-          <div class="social-media">
-            <ul>
-              <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="javascript:void(0)"><i class="fa fa-instagram"></i></a></li>
-              <li><a href="javascript:void(0)"><i class="fa fa-youtube"></i></a></li>
-            </ul>
-          </div>
-        </div>
+					<div class="social-media">
+						<ul>
+							<li><a href="https://www.facebook.com/profile.php?id=61551728737337" target="_blank"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://www.pinterest.com/Poshida_/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+							<li><a href="https://www.instagram.com/poshi.da/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/poshida/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+						</ul>
+					</div>
+				</div>
       </div>
     </div>
   </div>
