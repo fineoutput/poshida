@@ -95,11 +95,11 @@ class Type extends CI_finecontrol
                 $this->form_validation->set_rules('re_spgst', 'spgst', 'xss_clean|trim');
                 $this->form_validation->set_rules('reseller_min_qty', 'reseller_min_qty', 'xss_clean|trim');
                 $this->form_validation->set_rules('inventory', 'inventory', 'required|xss_clean|trim');
-                if (base64_decode($t) == 1) {
-                    $this->form_validation->set_rules('t_code', 't_code', 'required|xss_clean|trim');
-                } else {
-                    $this->form_validation->set_rules('t_code', 't_code', 'xss_clean|trim');
-                }
+                // if (base64_decode($t) == 1) {
+                //     $this->form_validation->set_rules('t_code', 't_code', 'required|xss_clean|trim');
+                // } else {
+                //     $this->form_validation->set_rules('t_code', 't_code', 'xss_clean|trim');
+                // }
                 if ($this->form_validation->run() == true) {
                     $product_id = base64_decode($this->input->post('product_id'));
                     $size_id = $this->input->post('size_id');
@@ -116,7 +116,7 @@ class Type extends CI_finecontrol
                     $reseller_price = $this->input->post('reseller_price');
                     $reseller_min_qty = $this->input->post('reseller_min_qty');
                     $inventory = $this->input->post('inventory');
-                    $t_code = $this->input->post('t_code');
+                    // $t_code = $this->input->post('t_code');
                     // echo $size_id;exit;
                     $ip = $this->input->ip_address();
                     date_default_timezone_set("Asia/Calcutta");
@@ -308,27 +308,28 @@ class Type extends CI_finecontrol
                     $typ = base64_decode($t);
                     if ($typ == 1) {
                         //----------generate barcode-------
-                        $this->db->select('*');
-                        $this->db->from('tbl_type');
-                        $this->db->where('t_code', $t_code);
-                        $t_data = $this->db->get()->row();
-                        if (empty($t_data)) {
-                            $code = $t_code;
-                            //load library
-                            $this->load->library('zend');
-                            //load in folder Zend
-                            $this->zend->load('Zend/Barcode');
-                            //generate barcode
-                            $this->load->library('upload');
-                            // $imageResource = Zend_Barcode::render('code128', 'image', array('text'=>$code), array());
-                            $imageResource = Zend_Barcode::factory('Code128', 'image', array('text' => $code . '|Rs' . $mrp, 'factor' => 3.8, 'font' => 5, 'fontSize' => 30), array())->draw();
-                            $path = $code . date("YmdHis");
-                            imagepng($imageResource, 'assets/uploads/barcodes/' . $path . '.png');
-                            $image = 'assets/uploads/barcodes/' . $path . '.png';
-                            $imageResource2 = Zend_Barcode::factory('Code128', 'image', array('text' => $code, 'factor' => 3.8, 'font' => 5, 'fontSize' => 30), array())->draw();
-                            $path2 = $code . date("YmdHis");
-                            imagepng($imageResource2, 'assets/uploads/barcodes/' . $path2 . '.png');
-                            $image2 = 'assets/uploads/barcodes/' . $path2 . '.png';
+                        // $this->db->select('*');
+                        // $this->db->from('tbl_type');
+                        // $this->db->where('t_code', $t_code);
+                        // $t_data = $this->db->get()->row();
+                        // if (empty($t_data)) {
+                        //     $code = $t_code;
+                        //     //load library
+                        //     $this->load->library('zend');
+                        //     //load in folder Zend
+                        //     $this->zend->load('Zend/Barcode');
+                        //     //generate barcode
+                        //     $this->load->library('upload');
+                        //     // $imageResource = Zend_Barcode::render('code128', 'image', array('text'=>$code), array());
+                        //     $imageResource = Zend_Barcode::factory('Code128', 'image', array('text' => $code . '|Rs' . $mrp, 'factor' => 3.8, 'font' => 5, 'fontSize' => 30), array())->draw();
+                        //     $path = $code . date("YmdHis");
+                        //     imagepng($imageResource, 'assets/uploads/barcodes/' . $path . '.png');
+                        //     $image = 'assets/uploads/barcodes/' . $path . '.png';
+                        //     $imageResource2 = Zend_Barcode::factory('Code128', 'image', array('text' => $code, 'factor' => 3.8, 'font' => 5, 'fontSize' => 30), array())->draw();
+                        //     $path2 = $code . date("YmdHis");
+                        //     imagepng($imageResource2, 'assets/uploads/barcodes/' . $path2 . '.png');
+                        //     $image2 = 'assets/uploads/barcodes/' . $path2 . '.png';
+                            $image2 = "";
                             $this->db->select('*');
                             $this->db->from('tbl_type');
                             $this->db->where('is_active', 1);
@@ -392,9 +393,9 @@ class Type extends CI_finecontrol
                                 'color_active' => 1,
                                 'size_active' => 1,
                                 'date' => $cur_date,
-                                't_code' => $t_code,
-                                'barcode' => $code,
-                                'barcode_image' => $image,
+                                // 't_code' => $t_code,
+                                // 'barcode' => $code,
+                                // 'barcode_image' => $image,
                                 'barcode_tag_image' => $image2,
                             );
                             $last_id = $this->base_model->insert_table("tbl_type", $data_insert, 1);
@@ -405,10 +406,10 @@ class Type extends CI_finecontrol
                                 $this->session->set_flashdata('emessage', 'Sorry error occurred');
                                 redirect($_SERVER['HTTP_REFERER']);
                             }
-                        } else {
-                            $this->session->set_flashdata('emessage', 'This type code is already used');
-                            redirect($_SERVER['HTTP_REFERER']);
-                        }
+                        // } else {
+                        //     $this->session->set_flashdata('emessage', 'This type code is already used');
+                        //     redirect($_SERVER['HTTP_REFERER']);
+                        // }
                     }
                     if ($typ == 2) {
                         $idw = base64_decode($iw);
@@ -417,21 +418,21 @@ class Type extends CI_finecontrol
                         $this->db->where('id', $idw);
                         $pro_data = $this->db->get()->row();
                         //----------generate barcode-------
-                        $this->load->library('zend');
-                        $code = rand(10000, 9999999999);
-                        //load in folder Zend
-                        $this->zend->load('Zend/Barcode');
-                        //generate barcode
-                        $this->load->library('upload');
-                        // $imageResource = Zend_Barcode::render('code128', 'image', array('text'=>$code), array());
-                        $imageResource = Zend_Barcode::factory('Code128', 'image', array('text' => $pro_data->barcode . '|Rs' . $mrp, 'factor' => 3.8, 'font' => 5, 'fontSize' => 30,), array())->draw();
-                        $path = $code . date("YmdHis");
-                        imagepng($imageResource, 'assets/uploads/barcodes/' . $path . '.png');
-                        $image = 'assets/uploads/barcodes/' . $path . '.png';
-                        $imageResource2 = Zend_Barcode::factory('Code128', 'image', array('text' => $pro_data->barcode, 'factor' => 3.8, 'font' => 5, 'fontSize' => 30,), array())->draw();
-                        $path2 = $code . date("YmdHis");
-                        imagepng($imageResource2, 'assets/uploads/barcodes/' . $path2 . '.png');
-                        $image2 = 'assets/uploads/barcodes/' . $path2 . '.png';
+                        // $this->load->library('zend');
+                        // $code = rand(10000, 9999999999);
+                        // //load in folder Zend
+                        // $this->zend->load('Zend/Barcode');
+                        // //generate barcode
+                        // $this->load->library('upload');
+                        // // $imageResource = Zend_Barcode::render('code128', 'image', array('text'=>$code), array());
+                        // $imageResource = Zend_Barcode::factory('Code128', 'image', array('text' => $pro_data->barcode . '|Rs' . $mrp, 'factor' => 3.8, 'font' => 5, 'fontSize' => 30,), array())->draw();
+                        // $path = $code . date("YmdHis");
+                        // imagepng($imageResource, 'assets/uploads/barcodes/' . $path . '.png');
+                        // $image = 'assets/uploads/barcodes/' . $path . '.png';
+                        // $imageResource2 = Zend_Barcode::factory('Code128', 'image', array('text' => $pro_data->barcode, 'factor' => 3.8, 'font' => 5, 'fontSize' => 30,), array())->draw();
+                        // $path2 = $code . date("YmdHis");
+                        // imagepng($imageResource2, 'assets/uploads/barcodes/' . $path2 . '.png');
+                        // $image2 = 'assets/uploads/barcodes/' . $path2 . '.png';
                         if (empty($nnnn)) {
                             $nnnn = $pro_data->image;
                         }
@@ -470,8 +471,8 @@ class Type extends CI_finecontrol
                             // 'reseller_price' =>$reseller_price,
                             'reseller_min_qty' => $reseller_min_qty,
                             'inventory' => $inventory,
-                            'barcode_image' => $image,
-                            'barcode_tag_image' => $image2,
+                            // 'barcode_image' => $image,
+                            // 'barcode_tag_image' => $image2,
                         );
                         $this->db->where('id', $idw);
                         $last_id = $this->db->update('tbl_type', $data_insert);
