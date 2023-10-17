@@ -60,25 +60,32 @@
 											<img src="<?= base_url() ?>assets/frontend/img/address-icon.svg" alt="xpoge">
 										</div>
 										<div class="contact-box-detail">
-											<p>POSHIDA CLOTHING STORE
-												PLOT NO. 81, NANDPURI-B, NEAR MAHIMA PANSCHAP,
-												JAGATPURA, Jaipur, Jaipur, Rajasthan, 302017</p>
+											<p>Plot No. 81, Nandpuri-B, Near Mahima Panschap, Jagatpura, Jaipur</p>
 										</div>
 									</li>
 									<li>
 										<div class="contact-thumb">
 											<img src="<?= base_url() ?>assets/frontend/img/phone-icon.svg" alt="xpoge">
 										</div>
-										<div class="contact-box-detail">
-											<p>+91 123 456 789 0</p>
+										<div class="contact-box-detail" style="cursor: pointer;">
+											<p>
+												<a href="tel:+91-6377898988">+91-6377898988</a>
+											</p>
+
+											<p>
+												<a href="tel:+0141-2988751">0141-2988751</a>
+											</p>
+
+										
+
 										</div>
 									</li>
 									<li>
 										<div class="contact-thumb">
 											<img src="<?= base_url() ?>assets/frontend/img/mail-icon.svg" alt="xpoge">
 										</div>
-										<div class="contact-box-detail">
-											<p>xpoge@hi123.com</p>
+										<div class="contact-box-detail" style="cursor: pointer;">
+											<p> <a href="mailto:Poshida.ronak@gmail.com">Poshida.ronak@gmail.com</a></p>
 										</div>
 									</li>
 								</ul>
@@ -100,10 +107,10 @@
 				<div class="col-12">
 					<div class="social-media">
 						<ul>
-							<li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="javascript:void(0)"><i class="fa fa-instagram"></i></a></li>
-							<li><a href="javascript:void(0)"><i class="fa fa-youtube"></i></a></li>
+							<li><a href="https://www.facebook.com/profile.php?id=61551728737337" target="_blank"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://www.pinterest.com/Poshida_/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+							<li><a href="https://www.instagram.com/poshi.da/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/poshida/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
 						</ul>
 					</div>
 				</div>
@@ -193,15 +200,16 @@
 					</div>
 					<div class="container">
 						<div class="row">
+							<div class="col">
 							<p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="<?= base_url() ?>Home/terms_and_conditions" style="color: #c68fa6;">Terms of use</a>
 								&amp; <a href="<?= base_url() ?>Home/privacy_policy" style="color: #c68fa6;">Privacy
-									Policy</a></p>
+									Policy</a></p></div>
 						</div>
 					</div>
 					<div class="form-group">
 						<button class="btn btn-fill-out btn-block text-uppercase mt-2 rounded-0 btn-color " style="padding: 14px 18px;" type="submit">Submit</button>
 					</div>
-					<div class="text-center"><span class="mt-3">New Here?<a href="javascript:;" data-toggle="modal" data-target="#SignUpModel" style="color:#c68fa6;">&nbsp;Sign Up</a></span>
+					<div class="text-center mb-3"><span class="mt-3 ">New Here?<a href="javascript:;" data-toggle="modal" data-target="#SignUpModel" style="color:#c68fa6;">&nbsp;Sign Up</a></span>
 					</div>
 				</form>
 			</div>
@@ -258,7 +266,9 @@
 								</div>
 								<div class="container">
 									<div class="row">
+										<div class="col">
 										<p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="#" style="color: #c68fa6;">Terms of use</a> &amp; <a href="#" style="color: #c68fa6;">Privacy Policy</a></p>
+									</div>
 									</div>
 								</div>
 								<div class="form-group">
