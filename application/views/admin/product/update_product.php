@@ -69,6 +69,7 @@
                     </tr> -->
                     <input type="hidden" name="category_id" value="<?=$product->category_id?>" />
                     <input type="hidden" name="subcategory_id" value="<?=$product->subcategory_id?>" />
+                    <input type="hidden" name="product_type" value="1" />
 
                     <tr>
                       <td> <strong> Product Name</strong> <span style="color:red;">*</span></strong> </td>
@@ -101,7 +102,7 @@
                         <input type="text" name="vendor_code" class="form-control" placeholder="" required value="<?=$product->vendor_code?>" />
                       </td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                       <td> <strong>Product Type</strong> <span style="color:red;"></span></strong> </td>
                       <td>
                         <select name="product_type" class="form-control">
@@ -114,8 +115,9 @@
                           <option <?if ($product->product_type=="3") {
                             echo "selected";
                             }?> value="3">Both</option>
+                        </select>
                       </td>
-                    </tr>
+                    </tr> -->
                     <tr>
                       <td> <strong>Product View</strong> <span style="color:red;"></span></strong> </td>
                       <td>
