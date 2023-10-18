@@ -61,7 +61,7 @@
                       <th>SKU</th>
                       <th>HSN Code</th>
                       <th>Vendor Code</th>
-                      <th>Product Type</th>
+                      <!-- <th>Product Type</th> -->
                       <th>Product View</th>
                       <th>Description</th>
                       <th>Exclusive Product</th>
@@ -109,7 +109,7 @@
                       <td><?php echo $data->hsn_code ?></td>
                       <td><?php echo $data->vendor_code ?></td>
 
-                      <td><?php
+                      <!-- <td><?php
 if ($data->product_type==1) {
                                 echo"Online";
                             } if ($data->product_type==2) {
@@ -117,7 +117,7 @@ if ($data->product_type==1) {
                             } if ($data->product_type==3) {
                                 echo"Both";
                             }
-?></td>
+?></td> -->
                       <td><?php
 if ($data->product_view==1) {
     echo"Retailer";

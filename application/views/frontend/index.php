@@ -157,11 +157,13 @@
   <!-- =========================== END WHATS NEW  =================================== -->
 
   <!-- ======================= START FIRST BIG BANNER SECTION  ======================== -->
-  <section class="pb-100 " >
-  	<div>
-  		<img src="<?= base_url() . $banner_data[0]->image ?>" alt="">
-  	</div>
-  </section>
+  <? if (!empty($banner_data[0])) { ?>
+  	<section class="pb-100 ">
+  		<div>
+  			<img src="<?= base_url() . $banner_data[0]->image ?>" alt="">
+  		</div>
+  	</section>
+  <? } ?>
   <!-- ======================= END FIRST BIG BANNER SECTION  ======================== -->
   <!-- ======================= START  BANNER SECTION  ======================== -->
 
@@ -356,11 +358,13 @@
 
 
   <!-- ======================= START SECOND BIG BANNER SECTION  ======================== -->
+  <?if(!empty($banner_data[$numItems - 1])){?>
   <section class="pb-100 " data-aos="fade-right">
   	<div>
   		<img src="<?= base_url() . $banner_data[$numItems - 1]->image ?>" alt="">
   	</div>
   </section>
+  <?}?>
   <!-- ======================= END SECOND BIG BANNER SECTION  ======================== -->
   <!-- ======================= START  BANNER SECTION  ======================== -->
 
@@ -455,7 +459,7 @@
   										</div>
   										<div class="blog-detail">
   											<span class="bloger-date mt-1"><? $newdate = new DateTime($blog->date);
-																		echo $newdate->format('d-M-Y'); ?></span>
+																				echo $newdate->format('d-M-Y'); ?></span>
   											<h3 class="head-three mb-10"><a href="<?= base_url() ?>Home/blog_details/<?= base64_encode($blog->id) ?>"><?= $blog->heading ?></a>
   											</h3>
   											<p> <?= $blog->description ?></p>

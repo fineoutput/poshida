@@ -272,11 +272,11 @@
                                     <?php } elseif ($data->order_status == 2) {
                                     if (empty($data->shiprocket_label)) {
                                     ?>
-                                      <li><a href="<?php echo base_url() ?>dcadmin/order/viewCreateOrder/<?php echo base64_encode($data->id) ?>">Create Order</a></li>
+                                      <!-- <li><a href="<?php echo base_url() ?>dcadmin/order/viewCreateOrder/<?php echo base64_encode($data->id) ?>">Create Order</a></li> -->
                                     <? }
                                     if (!empty($data->shiprocket_label)) {
                                     ?>
-                                      <li><a href="<?php echo base_url() ?>dcadmin/order/viewPickupReq/<?php echo base64_encode($data->id) ?>">Scheduled Pickup Request</a></li>
+                                      <!-- <li><a href="<?php echo base_url() ?>dcadmin/order/viewPickupReq/<?php echo base64_encode($data->id) ?>">Scheduled Pickup Request</a></li> -->
                                     <? } ?>
                                     <li><a href="<?php echo base_url() ?>dcadmin/order/updateorderStatus/<?php echo base64_encode($data->id) ?>/dispatched">Dispatched</a></li>
                                     <li><a href="<?php echo base_url() ?>dcadmin/order/updateorderStatus/<?php echo base64_encode($data->id) ?>/reject">Reject</a></li>

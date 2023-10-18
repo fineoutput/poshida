@@ -1380,8 +1380,8 @@ span.badge {
 ul.sidebar-menu {
     top: 81px;
     overflow-y: auto;
-    max-height: 96vh;
-    min-height: 93vh;
+    max-height: 80vh;
+    min-height: 88vh;
     position: fixed;
     width: 230px;
     font-size: 13px;

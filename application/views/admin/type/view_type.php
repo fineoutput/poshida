@@ -69,8 +69,8 @@ Type
 <th>Reseller Min. Qty</th>
 <?}?>
 <th>Inventory</th>
-<th>Type Code</th>
-<th>Barcode</th>
+<!-- <th>Type Code</th> -->
+<!-- <th>Barcode</th> -->
 <th>Status</th>
 <?if($this->session->userdata('position')!='Manager'){?>
   <th>Action</th>
@@ -167,8 +167,8 @@ if(!empty($colour_data)){
 <td><?php echo $data->reseller_min_qty ?></td>
 <?}?>
 <td><?php echo $data->inventory ?></td>
-<td><?php echo $data->t_code ?></td>
-<td><a download="barcode.<?=$data->barcode_tag_image?>.png" href="<?=base_url().$data->barcode_tag_image?>" title="barcode"><img src="<?=base_url().$data->barcode_tag_image?>"></a></td>
+<!-- <td><?php echo $data->t_code ?></td> -->
+<!-- <td><a download="barcode.<?=$data->barcode_tag_image?>.png" href="<?=base_url().$data->barcode_tag_image?>" title="barcode"><img src="<?=base_url().$data->barcode_tag_image?>"></a></td> -->
 
 <td><?php if ($data->is_active==1) { ?>
 <p class="label bg-green">Active</p>

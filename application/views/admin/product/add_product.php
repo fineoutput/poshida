@@ -62,6 +62,7 @@
                     </tr> -->
                     <input type="hidden" name="category_id" value="<?=base64_decode($category_id)?>" />
                     <input type="hidden" name="subcategory_id" value="<?=base64_decode($subcategory_id)?>" />
+                    <input type="hidden" name="product_type" value="1" />
                     <tr>
                       <td> <strong>Product Name</strong> <span style="color:red;">*</span></strong> </td>
                       <td>
@@ -92,7 +93,7 @@
                         <input type="text" name="vendor_code" class="form-control" placeholder="" requird value="" />
                       </td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                       <td> <strong>Product Type</strong> <span style="color:red;">*</span></strong> </td>
                       <td>
                         <select name="product_type"  class="form-control">
@@ -100,7 +101,7 @@
                           <option value="2">Offline</option>
                           <option value="3">Both</option>
                       </td>
-                    </tr>
+                    </tr> -->
                     <tr>
                       <td> <strong>Product View</strong> <span style="color:red;">*</span></strong> </td>
                       <td>
