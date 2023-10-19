@@ -1,4 +1,16 @@
 <!-- Footer section start -->
+<style>
+img.width-custem {
+    width: 28px !important;
+    position: relative;
+    left: 10px;
+}
+
+.coko-mar{
+	margin-top: 0px !important;
+}
+</style>
+
 <footer class="footer-part">
 	<div class="container">
 		<div class="footer-top ptb-100">
@@ -125,24 +137,24 @@
 <div class="container-fluid mobilebottom" style="position:sticky; bottom: 0;background:#f2f2f2;z-index: 9999;" id="footerCount">
 	<div class="row" style="justify-content: space-between;">
 
-		<div class="col-2 text-center mt-2 p-0"><a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/frontend/zuhause.png"></a>
+		<div class="col-2 text-center mt-2 p-0"><a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/frontend/img/home.png"></a>
 			<h6>Home</h6>
 		</div>
 		<? if (!empty($this->session->userdata('user_data'))) {
 			$wishCount = $this->db->get_where('tbl_wishlist', array('user_id = ' => $this->session->userdata('user_id'), 'user_type', $this->session->userdata('user_type')))->num_rows(); ?>
-			<div class="col-2 text-center mt-2 p-0"><a href="<?= base_url() ?>Home/my_profile"><img src="<?= base_url() ?>assets/frontend/benutzerprofil.png"></a>
+			<div class="col-2 text-center mt-2 p-0"><a href="<?= base_url() ?>Home/my_profile"><img src="<?= base_url() ?>assets/frontend/img/user(3).png"></a>
 				<h6>Account</h6>
 			</div>
-			<div class="col-2 text-center mt-2 p-0"><a href="<?= base_url() ?>Home/my_wishlist"><img src="<?= base_url() ?>assets/frontend/liebe (1).png"></a><span class="wishlist_count"><?= $wishCount; ?></span></a>
-				<h6>Wishlist</h6>
+			<div class="col-2 text-center mt-2 p-0"><a href="<?= base_url() ?>Home/my_wishlist"><img src="<?= base_url() ?>assets/frontend/img/heart (6).png" class="width-custem"></a><span class="wishlist_count"><?= $wishCount; ?></span></a>
+				<h6 class="coko-mar">Wishlist</h6>
 			</div>
 		<?
 		} else { ?>
-			<div class="col-2 text-center mt-2 p-0"><a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel"><img src="<?= base_url() ?>assets/frontend/benutzerprofil.png"></a>
+			<div class="col-2 text-center mt-2 p-0"><a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel"><img src="<?= base_url() ?>assets/frontend/img/user(3).png"></a>
 				<h6>Login</h6>
 			</div>
-			<div class="col-2 text-center mt-2 p-0"><a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel"><img src="<?= base_url() ?>assets/frontend/liebe (1).png"></a><span class="wishlist_count">0</span></a>
-				<h6>Wishlist</h6>
+			<div class="col-2 text-center mt-2 p-0"><a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel"><img src="<?= base_url() ?>assets/frontend/img/heart (6).png" class="width-custem"></a><span class="wishlist_count">0</span></a>
+				<h6 class="coko-mar">Wishlist</h6>
 			</div>
 		<? } ?>
 		<?php $cartCount = 0;
@@ -154,10 +166,11 @@
 			}
 		}
 		?>
-		<div class="col-2 text-center mt-2 p-0"><a href="<?= base_url() ?>Home/my_bag">&nbsp;<img src="<?= base_url() ?>assets/frontend/big-bag-mit-griffen.png"></i><span class="cart_count"><?= $cartCount; ?></span></a>
+		<div class="col-2 text-center mt-2 p-0"><a href="<?= base_url() ?>Home/my_bag">&nbsp;<img src="<?= base_url() ?>assets/frontend/img/bag.png" class=""></i><span class="cart_count" style="    top: -6px;
+    left: -3px;"><?= $cartCount; ?></span></a>
 			<h6>Bag</h6>
 		</div>
-		<div class="col-2 text-center mt-2 p-0"><a href="https://wa.me/+91000000000/" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer"> <img src="<?= base_url() ?>assets/frontend/whatsapp.png"></a>
+		<div class="col-2 text-center mt-2 p-0"><a href="https://wa.me/+91000000000/" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer"> <img src="<?= base_url() ?>assets/frontend/img/whatsapp.png"></a>
 			<h6 style="margin-left:-10px;">Connect</h6>
 		</div>
 	</div>
