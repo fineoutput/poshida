@@ -209,7 +209,7 @@
     left: -3px;"><?= $cartCount; ?></span></a>
 			<h6>Bag</h6>
 		</div>
-		<div class="col-2 text-center mt-2 p-0"><a href="https://wa.me/+91000000000/" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer"> <img src="<?= base_url() ?>assets/frontend/img/whatsapp.png"></a>
+		<div class="col-2 text-center mt-2 p-0"><a href="https://wa.me/+916377898988/" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer"> <img src="<?= base_url() ?>assets/frontend/img/whatsapp.png"></a>
 			<h6 style="margin-left:-10px;">Connect</h6>
 		</div>
 	</div>

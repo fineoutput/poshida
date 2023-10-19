@@ -145,32 +145,39 @@
 
 
   <div class="container">
-    <div class="row copyright_text">
-      <div class="col-md-4" style="text-align: center;
+		<div class="row copyright_text">
+			<div class="col-md-4" style="text-align: center;
     align-items: center;
     display: flex;
     justify-content: center;">
-        <p class="mt-2 mset">
-          Copyright © <script>
-            document.write(new Date().getFullYear())
-          </script> <a href="poshida.in" style="text-transform: lowercase;"> POSHIDA.IN.ALL RIGHTS RESERVED.</a>
-        </p>
-      </div>
-      <div class="col-md-4" style="text-align: center;
+				<p class="mt-2 mset">
+					Copyright © <script>
+						document.write(new Date().getFullYear())
+					</script> <a href="poshida.in" style="text-transform: lowercase;"> POSHIDA.IN.ALL RIGHTS RESERVED.</a>
+				</p>
+			</div>
+			<div class="col-md-4" style="text-align: center;
     align-items: center;
     display: flex;
     justify-content: center;">
-        <p class="mb-0">Design & Developed by </p><a href="https://www.fineoutput.com"><b>
-            Fineoutput
-          </b> </a>
-      </div>
-      <div class="col-md-4" style="text-align: center;">
-        <p><a href="https://digitaldukandaari.com/">Grace In Every Stitch .</a></p>
-      </div>
+				<p class="mb-0"  style="margin-right: 5px;">Design & Developed by </p><a href="https://www.fineoutput.com"><b>
+						Fineoutput
+					</b> </a>
+			</div>
+		
 
-    </div>
+			<div class="col-md-4" style="text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;">
+				<p class="mb-0" style="margin-right: 5px;" >Marketing by </p><a href="https://digitaldukandaari.com/"><b>
+				Digitaldukandaari
+					</b> </a>
+			</div>
 
-  </div>
+		</div>
+
+	</div>
 
   <a href="https://wa.me/+916377898988/" target="_blank" rel="noopener noreferrer" class="btn btn-success white fgdfdfgdf btn-lg mt-3 button-fixed-right green  desktopwhatsapp ">
     <i class="icon ion-social-whatsapp" style="font-size:30px;"></i>
