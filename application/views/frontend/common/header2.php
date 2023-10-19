@@ -747,6 +747,9 @@
                   <li class="level">
                     <a href="<?= base_url() ?>" class="nav-link">Home</a>
                   </li>
+                  <li class="level">
+                <a href="<?= base_url() ?>Home/about_us">About Us</a>
+                </li>
                   <?php $i = 1;
                   $this->db->select('*');
                   $this->db->from('tbl_category');
@@ -764,20 +767,23 @@
                       <span class="opener plus"><i class="bi bi-chevron-down" style="color:white"></i></span>
                       <div class="megamenu full mobile-sub-menu">
                         <div class="megamenu-inner-top">
-                          <div class="row sub-menu-level1">
-                            <div class="col-lg-5 level2 ">
+                          <div class="row sub-menu-level1" style="display: block;">
+                            <div class="col- level2 ">
                               <ul class="sub-menu-level2">
                                 <?php $i = 2;
                                 foreach ($subcategory_data->result() as $subcat) {
-                                  if ($i % 2 == 0) {
+                                  // if ($i % 2 == 0) {
                                 ?>
                                     <li class="level3"><a href="<?= base_url() ?>Home/all_products/<?= $subcat->url ?>/1"><span>■</span><?= $subcat->name ?></a></li>
-                                <?php }
+                               
+                               <?php
+                                // }
+
                                   $i++;
                                 } ?>
                               </ul>
                             </div>
-                            <div class="col-lg-4 level2">
+                            <!-- <div class="col-lg-4 level2">
                               <ul class="sub-menu-level2">
                                 <?php $i = 2;
                                 foreach ($subcategory_data->result() as $subcat) {
@@ -788,15 +794,15 @@
                                   $i++;
                                 } ?>
                               </ul>
-                            </div>
-                            <div class="col-lg-3 mt-30 d-none d-lg-block matgin-image" style="display: flex !important;
+                            </div> -->
+                            <!-- <div class="col-lg-3 mt-30 d-none d-lg-block matgin-image" style="display: flex !important;
 												justify-content: center;">
                               <div class="sub-menu-img" style="width: 80%;">
                                 <a href="<?= base_url() ?>Home/all_products/<?= $category->url ?>/1">
                                   <img src="<?= base_url() . $category->image ?>" alt="Xpoge" style="width: 100%;">
                                 </a>
                               </div>
-                            </div>
+                            </div> -->
                           </div>
                         </div>
                       </div>

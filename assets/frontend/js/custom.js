@@ -24,9 +24,12 @@ $(function () {
 
     if ($(this).scrollTop() > 800) {  //placeOrder Checkout.html Page
       $("#sticks").removeClass("dsgsdcvsd");
+   
+
 
     } if ($(this).scrollTop() > 850) {  //placeOrder Checkout.html Page
       $("#addCartFav").removeClass("stickyAdClass");
+      // alert("hello")
 
     } 
      else {
@@ -196,7 +199,7 @@ $(function () {
     autoplay: true,
       dots: true,
       nav: true,
-      items: 2,
+      items: 1,
       responsiveClass: true,
 
       responsive: {

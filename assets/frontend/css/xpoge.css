@@ -4209,3 +4209,42 @@ section.product-tab-part.position-r.pb-100.renpos-icon-desigin{
 	padding: 20px 0px !important;
 }
 
+footer.footer-part .container .footer-top.ptb-100 .mb_-30 .row .col-12.col-lg-3.col-md-6 .footer-about.mb-sm-30 .footer-logo {
+    width: 65%;
+}
+
+.megamenu.full {
+    left: 510px;
+    width: auto;
+    padding: 44px;
+}
+
+@media(max-width:419px){
+	a.readmore-btn {
+		background: #c68fa6;
+		color: white;
+		padding: 15px 0px;
+		border-radius: 9px;
+		font-size: 15px;
+	}
+}
+@media(max-width:1149px){
+	.megamenu.full {
+		left: 397px;
+
+	}
+}
+
+@media(max-width:991px){
+	.container .bread-crumb-main h1.banner-title{
+		color: transparent;
+		height: 2px !important;
+	}
+	.bread-crumb-main {
+		text-align: left !important;
+	}
+	ul.inline li {
+		font-size: 13px;
+	}
+}
+
