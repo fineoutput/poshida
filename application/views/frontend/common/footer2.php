@@ -141,7 +141,25 @@
       </div>
     </div>
   </div>
-</footer>
+
+
+
+  <div class="container">
+  <div class="row copyright_text">
+      <div class="col-12" style="text-align: center;">
+        <p class="mt-2 mset">
+          Copyright © <script>
+            document.write(new Date().getFullYear())
+          </script> <a href="poshida.in"> JAIPURKURTI.COM.ALL RIGHTS RESERVED.</a>
+        </p>
+      </div>
+      
+    </div>
+
+    </div>
+
+ 
+  </footer>
 
 <!-- ============================ Start login Model ========================================-->
 <div class="modal fade" id="LoginModel" tabindex="-1" role="dialog" aria-labelledby="LoginModel" aria-hidden="true">

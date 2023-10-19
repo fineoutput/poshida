@@ -132,6 +132,19 @@ img.width-custem {
 
 
 
+	<div class="container">
+  <div class="row copyright_text">
+      <div class="col-12" style="text-align: center;">
+        <p class="mt-2 mset">
+          Copyright © <script>
+            document.write(new Date().getFullYear())
+          </script> <a href="poshida.in"> JAIPURKURTI.COM.ALL RIGHTS RESERVED.</a>
+        </p>
+      </div>
+      
+    </div>
+
+    </div>
 </footer>
 <!-- //=================== Start Bottom Tabs ========================== -->
 <div class="container-fluid mobilebottom" style="position:sticky; bottom: 0;background:#f2f2f2;z-index: 9999;" id="footerCount">
