@@ -138,7 +138,7 @@ img.width-custem {
         <p class="mt-2 mset">
           Copyright © <script>
             document.write(new Date().getFullYear())
-          </script> <a href="poshida.in"> JAIPURKURTI.COM.ALL RIGHTS RESERVED.</a>
+          </script> <a href="poshida.in"> POSHIDA.COM.ALL RIGHTS RESERVED.</a>
         </p>
       </div>
       
