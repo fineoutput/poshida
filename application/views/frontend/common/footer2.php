@@ -26,7 +26,7 @@
   <div class="container">
     <div class="footer-top ptb-100">
       <div class="mb_-30">
-        <div class="row">
+        <div class="row" style="align-items: baseline;">
           <div class="col-12 col-lg-3 col-md-6">
             <div class="footer-about mb-sm-30">
               <div class="footer-logo">
@@ -45,7 +45,7 @@
                 <li><a href="<?= base_url() ?>Home/privacy_policy">Privacy & Policy</a></li>
                 <li><a href="<?= base_url() ?>Home/return_and_replace">Returns, Replace & Exchanges</a></li>
                 <li><a href="<?= base_url() ?>Home/shipping_and_delivery">Shipping & Delivery</a></li>
-								<li><a href="<?= base_url() ?>Home/terms_and_conditions">Terms & Conditions</a></li>
+                <li><a href="<?= base_url() ?>Home/terms_and_conditions">Terms & Conditions</a></li>
 
               </ul>
             </div>
@@ -74,48 +74,48 @@
             </div>
           <? } ?>
           <div class="col-12 col-lg-3 col-md-6">
-						<div class="footer-static-block">
-							<span class="opener plus"></span>
-							<h3 class="head-three">Contact us</h3>
-							<div class="contact-box footer-block-contant">
-								<ul>
-									<li>
-										<div class="contact-thumb">
-											<img src="<?= base_url() ?>assets/frontend/img/address-icon.svg" alt="">
-										</div>
-										<div class="contact-box-detail">
-											<p>Plot No. 81, Nandpuri-B, Near Mahima Panschap, Jagatpura, Jaipur</p>
-										</div>
-									</li>
-									<li>
-										<div class="contact-thumb">
-											<img src="<?= base_url() ?>assets/frontend/img/phone-icon.svg" alt="">
-										</div>
-										<div class="contact-box-detail" style="cursor: pointer;">
-											<p>
-												<a href="tel:+91-6377898988">+91-6377898988</a>
-											</p>
+            <div class="footer-static-block">
+              <span class="opener plus"></span>
+              <h3 class="head-three">Contact us</h3>
+              <div class="contact-box footer-block-contant">
+                <ul>
+                  <li>
+                    <div class="contact-thumb">
+                      <img src="<?= base_url() ?>assets/frontend/img/address-icon.svg" alt="">
+                    </div>
+                    <div class="contact-box-detail">
+                      <p>Plot No. 81, Nandpuri-B, Near Mahima Panschap, Jagatpura, Jaipur</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="contact-thumb">
+                      <img src="<?= base_url() ?>assets/frontend/img/phone-icon.svg" alt="">
+                    </div>
+                    <div class="contact-box-detail" style="cursor: pointer;">
+                      <p>
+                        <a href="tel:+91-6377898988">+91-6377898988</a>
+                      </p>
 
-											<p>
-												<a href="tel:+0141-2988751">0141-2988751</a>
-											</p>
+                      <p>
+                        <a href="tel:+0141-2988751">0141-2988751</a>
+                      </p>
 
-										
 
-										</div>
-									</li>
-									<li>
-										<div class="contact-thumb">
-											<img src="<?= base_url() ?>assets/frontend/img/mail-icon.svg" alt="xpoge">
-										</div>
-										<div class="contact-box-detail" style="cursor: pointer;">
-											<p> <a href="mailto:Poshida.ronak@gmail.com">Poshida.ronak@gmail.com</a></p>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
+
+                    </div>
+                  </li>
+                  <li>
+                    <div class="contact-thumb">
+                      <img src="<?= base_url() ?>assets/frontend/img/mail-icon.svg" alt="xpoge">
+                    </div>
+                    <div class="contact-box-detail" style="cursor: pointer;">
+                      <p> <a href="mailto:Poshida.ronak@gmail.com">Poshida.ronak@gmail.com</a></p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -129,15 +129,15 @@
           </div>
         </div>
         <div class="col-12">
-					<div class="social-media">
-						<ul>
-							<li><a href="https://www.facebook.com/profile.php?id=61551728737337" target="_blank"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="https://www.pinterest.com/Poshida_/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-							<li><a href="https://www.instagram.com/poshi.da/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-							<li><a href="https://www.linkedin.com/company/poshida/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-						</ul>
-					</div>
-				</div>
+          <div class="social-media">
+            <ul>
+              <li><a href="https://www.facebook.com/profile.php?id=61551728737337" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://www.pinterest.com/Poshida_/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+              <li><a href="https://www.instagram.com/poshi.da/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://www.linkedin.com/company/poshida/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -145,21 +145,39 @@
 
 
   <div class="container">
-  <div class="row copyright_text">
-      <div class="col-12" style="text-align: center;">
+    <div class="row copyright_text">
+      <div class="col-md-4" style="text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;">
         <p class="mt-2 mset">
           Copyright © <script>
             document.write(new Date().getFullYear())
-          </script> <a href="poshida.in"> POSHIDA.IN.ALL RIGHTS RESERVED.</a>
+          </script> <a href="poshida.in" style="text-transform: lowercase;"> POSHIDA.IN.ALL RIGHTS RESERVED.</a>
         </p>
       </div>
-      
-    </div>
+      <div class="col-md-4" style="text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;">
+        <p class="mb-0">Design & Developed by </p><a href="https://www.fineoutput.com"><b>
+            Fineoutput
+          </b> </a>
+      </div>
+      <div class="col-md-4" style="text-align: center;">
+        <p><a href="https://digitaldukandaari.com/">Grace In Every Stitch .</a></p>
+      </div>
 
     </div>
 
- 
-  </footer>
+  </div>
+
+  <a href="https://wa.me/+916377898988/" target="_blank" rel="noopener noreferrer" class="btn btn-success white fgdfdfgdf btn-lg mt-3 button-fixed-right green  desktopwhatsapp ">
+    <i class="icon ion-social-whatsapp" style="font-size:30px;"></i>
+  </a>
+
+
+</footer>
 
 <!-- ============================ Start login Model ========================================-->
 <div class="modal fade" id="LoginModel" tabindex="-1" role="dialog" aria-labelledby="LoginModel" aria-hidden="true">
@@ -197,16 +215,16 @@
           <div class="container">
             <div class="row">
               <div class="col">
-              <p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="<?= base_url() ?>Home/terms_and_conditions" style="color: #c68fa6;">Terms of use</a>
-                &amp; <a href="<?= base_url() ?>Home/privacy_policy" style="color: #c68fa6;">Privacy
-                  Policy</a></p>
-                  </div>
+                <p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="<?= base_url() ?>Home/terms_and_conditions" style="color: #c68fa6;">Terms of use</a>
+                  &amp; <a href="<?= base_url() ?>Home/privacy_policy" style="color: #c68fa6;">Privacy
+                    Policy</a></p>
+              </div>
             </div>
           </div>
           <div class="form-group">
             <button class="btn btn-fill-out btn-block text-uppercase mt-2 rounded-0 btn-color " style="padding: 14px 18px;" type="submit">Submit</button>
           </div>
-          <div class="text-center mb-3" ><span class="mt-3 ">New Here?<a href="javascript:;" data-toggle="modal" data-target="#SignUpModel" style="color:#c68fa6;">&nbsp;Sign Up</a></span>
+          <div class="text-center mb-3"><span class="mt-3 ">New Here?<a href="javascript:;" data-toggle="modal" data-target="#SignUpModel" style="color:#c68fa6;">&nbsp;Sign Up</a></span>
           </div>
         </form>
       </div>
@@ -264,8 +282,8 @@
                 <div class="container">
                   <div class="row">
                     <div class="col">
-                    <p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="#" style="color: #c68fa6;">Terms of use</a> &amp; <a href="#" style="color: #c68fa6;">Privacy Policy</a></p>
-                  </div>
+                      <p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="#" style="color: #c68fa6;">Terms of use</a> &amp; <a href="#" style="color: #c68fa6;">Privacy Policy</a></p>
+                    </div>
                   </div>
                 </div>
                 <div class="form-group">

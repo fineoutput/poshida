@@ -197,7 +197,7 @@ $(function () {
     $(".main-banner, .fvsx").owlCarousel({
       loop: true,
     autoplay: true,
-      dots: true,
+      dots: false,
       nav: true,
       items: 1,
       responsiveClass: true,
@@ -205,7 +205,7 @@ $(function () {
       responsive: {
 
         767: {
-          dots: true,
+          dots: false,
           nav: true,
           items: 3
         }

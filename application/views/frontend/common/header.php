@@ -330,7 +330,7 @@ if (!empty($this->session->userdata('user_data'))) {
                   $this->db->where('category_id', $category->id);
                   $this->db->where('is_active', 1);
                   $subcategory_data = $this->db->get(); ?>
-                  <li class="level dropdown">
+                  <li class="level dropdown" style="    position: relative;">
                     <a href="<?= base_url() ?>Home/all_products/<?= $category->url ?>/1" class=" nav-link"><?= $category->name ?></a>
                     <span class="opener plus"><i class="bi bi-chevron-down" style="color:white"></i></span>
                     <div class="megamenu full mobile-sub-menu">
@@ -342,7 +342,7 @@ if (!empty($this->session->userdata('user_data'))) {
                               foreach ($subcategory_data->result() as $subcat) {
                                 // if ($i % 2 == 0) {
                               ?>
-                                  <li class="level3"><a href="<?= base_url() ?>Home/all_products/<?= $subcat->url ?>/1"><span>■</span><?= $subcat->name ?></a></li>
+                                  <li class="level3"><a href="<?= base_url() ?>Home/all_products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
                               <?php 
                               // }
                                 $i++;
@@ -355,7 +355,7 @@ if (!empty($this->session->userdata('user_data'))) {
                               foreach ($subcategory_data->result() as $subcat) {
                                 if ($i  % 2 != 0) {
                               ?>
-                                  <li class="level3"><a href="<?= base_url() ?>Home/all_products/<?= $subcat->url ?>/1"><span>■</span><?= $subcat->name ?></a></li>
+                                  <li class="level3"><a href="<?= base_url() ?>Home/all_products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
                               <?php }
                                 $i++;
                               } ?>
