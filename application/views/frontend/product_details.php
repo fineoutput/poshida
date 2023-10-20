@@ -1,5 +1,9 @@
 <!-- Product detail contant start -->
 <style>
+  html {
+    scroll-behavior: smooth;
+  }
+
   .product-details-btn ul {
     display: flex;
     align-items: center;
@@ -203,10 +207,12 @@
                 }
                 $rating = ($totalStars / $review_countdiv) * 100;
                 ?>
-                <div class="rating-summary-block">
-                  <div title="<?= $rating ?>%" class="rating-result"> <span style="width:<?= $rating ?>%"></span>
+                <a href="javascript:void(0)" onclick="scrollMe()">
+                  <div class="rating-summary-block">
+                    <div title="<?= $rating ?>%" class="rating-result"> <span style="width:<?= $rating ?>%"></span>
+                    </div>
                   </div>
-                </div>
+                </a>
                 <span><? echo "(" . $review_count . ")";
                       ?></span>
               </div>
@@ -326,11 +332,13 @@
 
               <hr class="mb-20">
 
-              <div class="product-details-btn stickyAdClass" id="wishlist" >
+
+              <div class="product-details-btn stickyAdClass" id="addCartFav">
                 <ul style="    display: flex;
                   justify-content: start;" id="btn-center">
-                  <li class="icon cart-icon ">
-                    <button class="btn btn-color fhf" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" quantity="1" id="addtoCartButton" onclick="addToCart(this)" type="button"><span></span>Add to cart</button>
+                  <li class="icon cart-icon " style="    background: #c68fa6;
+    border-radius: 6px;     text-align: center;">
+                    <button class="btn btn-color fhf" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" quantity="1" id="addtoCartButton" onclick="addToCart(this)" type="button"><span></span>Add to cart <span></span> </button>
                   </li>
                   <? if (!empty($this->session->userdata('user_data'))) {
                     $user_id = $this->session->userdata('user_id');
@@ -351,20 +359,20 @@
                         <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="add" onclick="wishlist(this)" class="btn btn-color sice"> <i class="fa fa-hart wsws" style="font-size: 23px; color: #fff; "></i>Add Wishlist</a>
                       </li>
                       <li class="icon fav-icon-heart ">
-                      <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="add" onclick="wishlist(this)"><i class="fa fa-heart-o wsws" style="font-size: 23px; margin-left: 24px; color: #686868;; ">
-                          <div class="tooltip">Add to wishlist</div>
-                        </i></a>
+                        <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="add" onclick="wishlist(this)"><i class="fa fa-heart-o wsws" style="font-size: 23px; margin-left: 24px; color: #686868;; ">
+                            <div class="tooltip">Add to wishlist</div>
+                          </i></a>
                       </li>
                     <? } ?>
                   <? } else { ?>
                     <!-- //-----LOGIN ----- -->
                     <li class="icon cart-icon wishlist-heart">
-                        <a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel" class="btn btn-color sice"> <i class="fa fa wsws" style="font-size: 23px; color: #fff; "></i>Add to wishlist</a>
-                      </li>
+                      <a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel" class="btn btn-color sice"> <i class="fa fa wsws" style="font-size: 23px; color: #fff; "></i>Add to wishlist</a>
+                    </li>
                     <li class="icon fav-icon-heart ">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel"><i class="fa fa-he=art-o wsws" style="font-size: 23px; margin-left: 24px; color: #686868;; ">
-                      <div class="tooltip">Add to wishlist</div>
-                    </i>
+                      <a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel"><i class="fa fa-he=art-o wsws" style="font-size: 23px; margin-left: 24px; color: #686868;; ">
+                          <div class="tooltip">Add to wishlist</div>
+                        </i>
                     </li>
                   <? } ?>
                 </ul>
@@ -426,7 +434,7 @@
 </section>
 <!-- ========= END DESCRIPTION ============= -->
 
-<section class="product-tab-part position-r pb-100 renpos-icon-desigin" >
+<section class="product-tab-part position-r pb-100 renpos-icon-desigin">
   <div class="container">
     <div class="product-tab-inner">
       <div class="row">
@@ -469,7 +477,7 @@
 
           <!-- ========= START ADD REVIEW ============= -->
 
-          <div class="items-Description selected" style="">
+          <div class="items-Description selected" id="scrollHere">
             <form class="row mt-3" method="POST" action="<?= base_url() ?>Home/product_review" enctype="multipart/form-data">
               <div class="leave-comment-part " style="padding-top: 20px;">
                 <h3 class="head-three">Leave A Comment</h3>
@@ -795,4 +803,15 @@
     </div>
   </section>
 <? } ?>
+<script>
+ 
+  function scrollMe (){
+    $('html,body').animate({
+        scrollTop: $("#scrollHere").offset().top-100
+      },
+      'slow');
+  };
+</script>
+
+
 <!-- ========= START RELATED PRODUCTS ============= -->

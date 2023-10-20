@@ -212,9 +212,9 @@
 						foreach ($shop_by_category_data->result() as $category) { ?>
   						<div class=" item">
   							<a href="<?= $category->link ?>"><img src="<?= base_url() . $category->image ?>" alt="<?= $category->name ?>" alt="Broken Image">
-  								<div class="product-title hellooo">
+  								<!-- <div class="product-title hellooo">
   									<?= $category->name ?>
-  								</div>
+  								</div> -->
   							</a>
   						</div>
   					<?php $i++;

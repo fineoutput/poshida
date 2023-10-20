@@ -1,4 +1,11 @@
 <!-- ============================================= START SECTION BREADCRUMB  ========================================-->
+<style>
+  p{
+    text-align: justify;
+  }
+</style>
+
+
 <div class="banner-21">
   <div id="banner-part  " class="banner inner-banner inner-banner mb-3">
     <div class="container">
@@ -20,7 +27,7 @@
     <div class="container mt-3">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <span style="font-size:30px; margin-bottom:-10px;">Who We Are</span>
+          <span style="font-size:30px; margin-bottom:10px; "> <b> Who We Are </b></span>
           <hr>
         </div>
       </div>

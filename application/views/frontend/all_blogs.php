@@ -21,7 +21,7 @@
           <div class="row">
             <?php $i = 1;
               foreach ($blog_data->result() as $blog) { ?>
-                  <div class="fsx owl-carousel col-lg-4 col-md-4 col-6 p-0" style="display: block;">
+                  <div class="fsx owl-carousel col-lg-4 col-md-6 col-12 p-0" style="display: block;">
                 <div class=" m-3 item  ">
                   <div class="blog-item">
                     <div class="blog-image blog-image1">

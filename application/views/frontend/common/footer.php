@@ -1,21 +1,21 @@
 <!-- Footer section start -->
 <style>
-img.width-custem {
-    width: 28px !important;
-    position: relative;
-    left: 10px;
-}
+	img.width-custem {
+		width: 28px !important;
+		position: relative;
+		left: 10px;
+	}
 
-.coko-mar{
-	margin-top: 0px !important;
-}
+	.coko-mar {
+		margin-top: 0px !important;
+	}
 </style>
 
 <footer class="footer-part">
 	<div class="container">
 		<div class="footer-top ptb-100">
 			<div class="mb_-30">
-				<div class="row">
+				<div class="row" style="align-items: baseline;">
 					<div class="col-12 col-lg-3 col-md-6">
 						<div class="footer-about mb-sm-30">
 							<div class="footer-logo">
@@ -55,7 +55,7 @@ img.width-custem {
 								<span class="opener plus"></span>
 								<h3 class="head-three">My Account</h3>
 								<ul class="footer-menu footer-block-contant">
-									<li><a href="javascript:void(0)"  data-toggle="modal" data-target="#LoginModel">Login</a></li>
+									<li><a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel">Login</a></li>
 									<li><a href="<?= base_url() ?>Home/about_us">About Us</a></li>
 								</ul>
 							</div>
@@ -88,7 +88,7 @@ img.width-custem {
 												<a href="tel:+0141-2988751">0141-2988751</a>
 											</p>
 
-										
+
 
 										</div>
 									</li>
@@ -132,6 +132,45 @@ img.width-custem {
 
 
 
+
+	<div class="container">
+		<div class="row copyright_text">
+			<div class="col-md-4" style="text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;">
+				<p class="mt-2 mset">
+					Copyright © <script>
+						document.write(new Date().getFullYear())
+					</script> <a href="poshida.in" style="text-transform: lowercase;"> POSHIDA.IN.ALL RIGHTS RESERVED.</a>
+				</p>
+			</div>
+			<div class="col-md-4" style="text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;">
+				<p class="mb-0"  style="margin-right: 5px;">Design & Developed by </p><a href="https://www.fineoutput.com"><b>
+						Fineoutput
+					</b> </a>
+			</div>
+		
+
+			<div class="col-md-4" style="text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;">
+				<p class="mb-0" style="margin-right: 5px;" >Marketing by </p><a href="https://digitaldukandaari.com/"><b>
+				Digitaldukandaari
+					</b> </a>
+			</div>
+
+		</div>
+
+	</div>
+
+	<a href="https://wa.me/+916377898988/" target="_blank" rel="noopener noreferrer" class="btn btn-success white fgdfdfgdf btn-lg mt-3 button-fixed-right green  desktopwhatsapp ">
+		<i class="icon ion-social-whatsapp" style="font-size:30px;"></i>
+	</a>
 </footer>
 <!-- //=================== Start Bottom Tabs ========================== -->
 <div class="container-fluid mobilebottom" style="position:sticky; bottom: 0;background:#f2f2f2;z-index: 9999;" id="footerCount">
@@ -170,7 +209,7 @@ img.width-custem {
     left: -3px;"><?= $cartCount; ?></span></a>
 			<h6>Bag</h6>
 		</div>
-		<div class="col-2 text-center mt-2 p-0"><a href="https://wa.me/+91000000000/" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer"> <img src="<?= base_url() ?>assets/frontend/img/whatsapp.png"></a>
+		<div class="col-2 text-center mt-2 p-0"><a href="https://wa.me/+916377898988/" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer"> <img src="<?= base_url() ?>assets/frontend/img/whatsapp.png"></a>
 			<h6 style="margin-left:-10px;">Connect</h6>
 		</div>
 	</div>
@@ -214,9 +253,10 @@ img.width-custem {
 					<div class="container">
 						<div class="row">
 							<div class="col">
-							<p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="<?= base_url() ?>Home/terms_and_conditions" style="color: #c68fa6;">Terms of use</a>
-								&amp; <a href="<?= base_url() ?>Home/privacy_policy" style="color: #c68fa6;">Privacy
-									Policy</a></p></div>
+								<p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="<?= base_url() ?>Home/terms_and_conditions" style="color: #c68fa6;">Terms of use</a>
+									&amp; <a href="<?= base_url() ?>Home/privacy_policy" style="color: #c68fa6;">Privacy
+										Policy</a></p>
+							</div>
 						</div>
 					</div>
 					<div class="form-group">
@@ -280,8 +320,8 @@ img.width-custem {
 								<div class="container">
 									<div class="row">
 										<div class="col">
-										<p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="#" style="color: #c68fa6;">Terms of use</a> &amp; <a href="#" style="color: #c68fa6;">Privacy Policy</a></p>
-									</div>
+											<p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="#" style="color: #c68fa6;">Terms of use</a> &amp; <a href="#" style="color: #c68fa6;">Privacy Policy</a></p>
+										</div>
 									</div>
 								</div>
 								<div class="form-group">

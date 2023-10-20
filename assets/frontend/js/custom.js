@@ -24,9 +24,12 @@ $(function () {
 
     if ($(this).scrollTop() > 800) {  //placeOrder Checkout.html Page
       $("#sticks").removeClass("dsgsdcvsd");
+   
+
 
     } if ($(this).scrollTop() > 850) {  //placeOrder Checkout.html Page
       $("#addCartFav").removeClass("stickyAdClass");
+      // alert("hello")
 
     } 
      else {
@@ -194,15 +197,15 @@ $(function () {
     $(".main-banner, .fvsx").owlCarousel({
       loop: true,
     autoplay: true,
-      dots: true,
+      dots: false,
       nav: true,
-      items: 2,
+      items: 1,
       responsiveClass: true,
 
       responsive: {
 
         767: {
-          dots: true,
+          dots: false,
           nav: true,
           items: 3
         }
