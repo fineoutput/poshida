@@ -213,8 +213,8 @@
   </div>
 
   <a href="https://wa.me/+916377898988/" target="_blank" rel="noopener noreferrer" class="btn btn-success white fgdfdfgdf btn-lg mt-3 button-fixed-right green  desktopwhatsapp ">
-    <i class="icon ion-social-whatsapp" style="font-size:30px;"></i>
-  </a>
+	<i class="bi bi-whatsapp" style="font-size:30px;"></i>
+	</a>
 
 
 </footer>
@@ -357,7 +357,7 @@ if (!empty($popup_data)) {
 					<div class="row" style="    justify-content: space-around;">
 						<div class="col-md-5">
 							<!-- <div class="background_bg h-100" data-img-src="<?= base_url() . $popup_data[0]->image ?>"></div> -->
-							<img src="<?= base_url() . $popup_data[0]->image ?>" class="img-fluid"/>
+							<img src="<?= base_url() . $popup_data[0]->image ?>" class="img-fluid image-respo"/>
 						</div>
 						<div class="col-md-6">
 							<div class="mtb-30" style="margin-top: 10px;">

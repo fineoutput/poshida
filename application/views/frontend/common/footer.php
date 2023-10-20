@@ -382,7 +382,7 @@ if (!empty($popup_data)) {
 					<div class="row" style="    justify-content: space-around;">
 						<div class="col-md-5">
 							<!-- <div class="background_bg h-100" data-img-src="<?= base_url() . $popup_data[0]->image ?>"></div> -->
-							<img src="<?= base_url() . $popup_data[0]->image ?>" class="img-fluid"/>
+							<img src="<?= base_url() . $popup_data[0]->image ?>" class="img-fluid image-respo"/>
 						</div>
 						<div class="col-md-6">
 							<div class="mtb-30" style="margin-top: 10px;">
