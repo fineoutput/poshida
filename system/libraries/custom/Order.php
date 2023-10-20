@@ -79,22 +79,24 @@ class CI_Order
 
             // echo $total; die();
             $pincode = '';
-            if (!empty($address_data)) {
-                $pincode = $address_data->pincode;
-                $shipping = $this->CI->shiprocket->GetCourierServiceability($pincode, $total_weight, $final_amount);
-                $shipping = json_decode($shipping);
-                if ($shipping->status == false) {
-                    $this->CI->session->set_flashdata('emessage', $shipping->message);
-                    return 0;
-                    exit;
-                }
-                $shipping = $shipping->data->shipping;
-                $courier_id = $shipping->data->courier_id;
-            } else {
-                $shipping = 0;
-                $courier_id = '';
-            }
-            $final_amount = $final_amount + $shipping->data->shipping;
+            // if (!empty($address_data)) {
+            //     $pincode = $address_data->pincode;
+            //     $shipping = $this->CI->shiprocket->GetCourierServiceability($pincode, $total_weight, $final_amount);
+            //     $shipping = json_decode($shipping);
+            //     if ($shipping->status == false) {
+            //         $this->CI->session->set_flashdata('emessage', $shipping->message);
+            //         return 0;
+            //         exit;
+            //     }
+            //     $shipping = $shipping->data->shipping;
+            //     $courier_id = $shipping->data->courier_id;
+            // } else {
+            //     $shipping = 0;
+            //     $courier_id = '';
+            // }
+            $shipping = 0;
+            $courier_id = '';
+            $final_amount = $final_amount + $shipping;
             //------order1 entry-------------
             $order1_insert = array(
                 'user_id' => $user_id,

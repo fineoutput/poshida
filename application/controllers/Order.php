@@ -15,6 +15,7 @@ class Order extends CI_Controller
         $this->load->library("custom/Cart");
         $this->load->library("custom/Order");
         $this->load->library("custom/Promocode");
+        $this->load->library("custom/Delhivery");
     }
 
     //-------------calculate--------------
@@ -65,7 +66,7 @@ class Order extends CI_Controller
                 $data_update3 = array('address_id' => $data['address_data']->id);
                 $this->db->where('id', base64_decode($this->session->userdata('order_id')));
                 $zapak3 = $this->db->update('tbl_order1', $data_update3);
-                $update = $this->order->updateShipping($data['address_data'], $this->session->userdata('order_id'));
+                // $update = $this->order->updateShipping($data['address_data'], $this->session->userdata('order_id'));
             }
             $data['order_data'] = $this->db->get_where('tbl_order1', array('id' => base64_decode($this->session->userdata('order_id'))))->result();
 
@@ -186,7 +187,7 @@ class Order extends CI_Controller
                 $user_type = $this->session->userdata('user_type');
                 $data['address_data'] = $this->db->order_by('id', 'desc')->get_where('tbl_user_address', array('id' => $address_id))->row();
                 if (!empty($data['address_data'])) {
-                    $update = $this->order->updateShipping($data['address_data'], $this->session->userdata('order_id'));
+                    // $update = $this->order->updateShipping($data['address_data'], $this->session->userdata('order_id'));
                 }
                 redirect("Order/view_checkout");
             } else {
@@ -249,14 +250,14 @@ class Order extends CI_Controller
                     $order1_data = $this->db->get_where('tbl_order1', array('id' => $order_id))->row();
                     if (!empty($order1_data->address_id)) {
                         $address_data = $this->db->get_where('tbl_user_address', array('id' => $order1_data->address_id))->row();
-                        if (!empty($address_data)) {
-                            $update = $this->order->updateShipping($address_data, $this->session->userdata('order_id'), 1);
-                            $shipping = json_decode($update);
-                            if ($shipping->status == false) {
-                                echo $update;
-                                return;
-                            }
-                        }
+                        // if (!empty($address_data)) {
+                        //     $update = $this->order->updateShipping($address_data, $this->session->userdata('order_id'), 1);
+                        //     $shipping = json_decode($update);
+                        //     if ($shipping->status == false) {
+                        //         echo $update;
+                        //         return;
+                        //     }
+                        // }
                     } else {
                         $respone['status'] = false;
                         $respone['message'] = 'Please add address before checkout';
@@ -387,9 +388,9 @@ class Order extends CI_Controller
         $last_id = $this->base_model->insert_table("tbl_ccavenue_response", $data_insert, 1);
         // echo $order_status;die();
         if ($order_status === "Success") {
-            $placeOrder = json_decode($this->order->PlacePrePaidOrder($order_id,json_encode($decryptValues)));
+            $placeOrder = json_decode($this->order->PlacePrePaidOrder($order_id, json_encode($decryptValues)));
             if ($placeOrder == true) {
-                redirect("Order/order_success" );
+                redirect("Order/order_success");
             } else {
                 redirect("Order/order_failed");
             }
@@ -401,7 +402,7 @@ class Order extends CI_Controller
         }
     }
 
-    
+
 
     //-----------order success---------
     public function order_success()
@@ -755,5 +756,9 @@ class Order extends CI_Controller
             $count += 2;
         }
         return $binString;
+    }
+    public function delivery_pincode_check()
+    {
+        $cart_fetch = $this->delhivery->GetCourierServiceability(302020);
     }
 }
