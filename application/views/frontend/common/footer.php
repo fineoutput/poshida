@@ -13,6 +13,275 @@
 	.mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.mfp-ready {
 		z-index: 9999999999;
 	}
+
+	.popup-text.redsp{
+		margin-bottom: 18px;
+    font-weight: 700;
+    font-size: 23px;
+
+	}
+
+	#newslater-popup .newsletter-inner input {
+    border: none;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 0px;
+}
+
+
+* {
+	outline: none !important;
+	list-style: none !important;
+	text-decoration: none !important;
+}
+
+body,
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	line-height: 24px;
+	color: #464646;
+	font-size: 14px;
+	font-family: 'Montserrat', sans-serif !important;
+	font-weight: 400;
+	letter-spacing: 0px;
+	position: relative;
+}
+
+.container {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.no-js #loader {
+	display: none;
+}
+
+
+a:hover {
+	color: #0056b3;
+	text-decoration: underline;
+}
+
+.btn {
+	display: inline-block;
+	font-weight: 400;
+	color: #212529;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: transparent;
+	border: 1px solid transparent;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: .25rem;
+	transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+@media (prefers-reduced-motion:reduce) {
+	.btn {
+		transition: none;
+	}
+}
+
+.btn:hover {
+	color: #212529;
+	text-decoration: none;
+}
+
+.btn:focus {
+	outline: 0;
+	box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+}
+
+.btn:disabled {
+	opacity: .65;
+}
+
+.btn:not(:disabled):not(.disabled) {
+	cursor: pointer;
+}
+
+.btn-success {
+	color: #fff;
+	background-color: #28a745;
+	border-color: #28a745;
+}
+
+.btn-success:hover {
+	color: #fff;
+	background-color: #218838;
+	border-color: #1e7e34;
+}
+
+.btn-success:focus {
+	color: #fff;
+	background-color: #218838;
+	border-color: #1e7e34;
+	box-shadow: 0 0 0 .2rem rgba(72, 180, 97, .5);
+}
+
+.btn-success:disabled {
+	color: #fff;
+	background-color: #28a745;
+	border-color: #28a745;
+}
+
+.btn-success:not(:disabled):not(.disabled):active {
+	color: #fff;
+	background-color: #1e7e34;
+	border-color: #1c7430;
+}
+
+.btn-success:not(:disabled):not(.disabled):active:focus {
+	box-shadow: 0 0 0 .2rem rgba(72, 180, 97, .5);
+}
+
+.btn-lg {
+	padding: .5rem 1rem;
+	font-size: 1.25rem;
+	line-height: 1.5;
+	border-radius: .3rem;
+}
+
+
+.ion-social-whatsapp:before {
+	display: inline-block;
+	font-family: "Ionicons";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-rendering: auto;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.ion-social-whatsapp:before {
+	content: "\f4f0";
+}
+
+
+a {
+	color: #292b2c;
+	text-decoration: none;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+a:hover {
+	color: #FF324D;
+	text-decoration: none;
+}
+
+a:focus {
+	outline: none;
+}
+
+.btn:focus,
+.btn:hover {
+	box-shadow: none;
+	outline: medium none;
+}
+
+.btn {
+	border-width: 1px;
+	cursor: pointer;
+	line-height: normal;
+	padding: 12px 35px;
+	text-transform: capitalize;
+	transition: all 0.3s ease-in-out;
+}
+
+.btn:active:focus {
+	box-shadow: none !important;
+}
+
+.btn i {
+	font-size: 16px;
+	margin-right: 2px;
+	vertical-align: middle;
+	line-height: 1;
+}
+
+.btn-lg {
+	padding: 16px 45px;
+}
+
+.btn.btn-lg i {
+	font-size: 22px;
+}
+
+.icon {
+	margin-bottom: 15px;
+}
+
+@media (max-width: 991px) {
+	.desktopwhatsapp {
+		display: none;
+	}
+}
+
+.button-fixed-right {
+	position: fixed;
+	bottom: 20px;
+	right: 10px;
+	border-radius: 50% !important;
+	padding: 7px 9px !important;
+	z-index: 999;
+}
+
+.button-fixed-right {
+	position: fixed;
+	bottom: 20px;
+	right: 28px;
+	border-radius: 50% !important;
+	padding: 7px 9px !important;
+	z-index: 999;
+}
+
+
+@media only screen and (max-width: 575px) {
+	.btn {
+		padding: 10px 28px;
+		font-size: 14px;
+	}
+
+	.btn-lg {
+		padding: 14px 38px;
+		font-size: 18px;
+	}
+
+	.btn.btn-lg i {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 380px) {
+	.btn {
+		padding: 8px 24px;
+	}
+
+	.btn-lg {
+		padding: 12px 34px;
+		font-size: 16px;
+	}
+
+	.btn.btn-lg i {
+		font-size: 18px;
+	}
+}
+
 </style>
 
 <footer class="footer-part">
@@ -27,7 +296,11 @@
 									<img src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" alt="logo">
 								</a>
 							</div>
-							<p class="footer-p text-justify">Grace In Every Stitch </p>
+							
+							<p class="footer-p " style="    text-align: center !important;
+    font-size: 17px;
+    font-weight: 600;
+">Grace In Every Stitch </p>
 						</div>
 					</div>
 					<div class="col-12 col-lg-3 col-md-6">
@@ -352,13 +625,14 @@ if (!empty($popup_data)) {
 		<div class="nl-popup-main" style="display: block;">
 			<div class="nl-popup-inner">
 				<div class="newsletter-inner">
-					<div class="row">
+					<div class="row" style="    justify-content: space-around;">
 						<div class="col-md-5">
-							<div class="background_bg h-100" data-img-src="<?= base_url() . $popup_data[0]->image ?>"></div>
+							<!-- <div class="background_bg h-100" data-img-src="<?= base_url() . $popup_data[0]->image ?>"></div> -->
+							<img src="<?= base_url() . $popup_data[0]->image ?>" class="img-fluid"/>
 						</div>
 						<div class="col-md-6">
-							<div class="mtb-30">
-								<div class="popup-text">
+							<div class="mtb-30" style="margin-top: 10px;">
+								<div class="popup-text redsp">
 									<?= $popup_data[0]->text; ?>
 								</div>
 								<form method="POST" action="<?= base_url() ?>Home/subscribe_to_popup" enctype="multipart/form-data">
@@ -483,7 +757,7 @@ if (!empty($popup_data)) {
 	// 			},
 	// 			type: 'inline'
 	// 		}, 0);
-	// 	}, 10000)
+	// 	}, 1000)
 	// });
 </script>
 
