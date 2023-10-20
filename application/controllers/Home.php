@@ -362,7 +362,7 @@ class Home extends CI_Controller
                 $phone = $this->input->post('phone');
                 $email = $this->input->post('email');
                 $submit_popup = $this->forms->popupFormSubmit($email, $name, $phone);
-                redirect('/', 'refresh');
+                redirect($_SERVER['HTTP_REFERER']);
             } else {
                 $this->session->set_flashdata('emessage', validation_errors());
                 redirect($_SERVER['HTTP_REFERER']);

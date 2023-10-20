@@ -9,7 +9,8 @@
 	.coko-mar {
 		margin-top: 0px !important;
 	}
-	.mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.mfp-ready{
+
+	.mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.mfp-ready {
 		z-index: 9999999999;
 	}
 </style>
@@ -26,7 +27,7 @@
 									<img src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" alt="logo">
 								</a>
 							</div>
-							<p class="footer-p text-justify">Grace In Every Stitch  </p>
+							<p class="footer-p text-justify">Grace In Every Stitch </p>
 						</div>
 					</div>
 					<div class="col-12 col-lg-3 col-md-6">
@@ -152,18 +153,18 @@
     align-items: center;
     display: flex;
     justify-content: center;">
-				<p class="mb-0"  style="margin-right: 5px;">Design & Developed by </p><a href="https://www.fineoutput.com"><b>
+				<p class="mb-0" style="margin-right: 5px;">Design & Developed by </p><a href="https://www.fineoutput.com"><b>
 						Fineoutput
 					</b> </a>
 			</div>
-		
+
 
 			<div class="col-md-4" style="text-align: center;
     align-items: center;
     display: flex;
     justify-content: center;">
-				<p class="mb-0" style="margin-right: 5px;" >Marketing by </p><a href="https://digitaldukandaari.com/"><b>
-				Digitaldukandaari
+				<p class="mb-0" style="margin-right: 5px;">Marketing by </p><a href="https://digitaldukandaari.com/"><b>
+						Digitaldukandaari
 					</b> </a>
 			</div>
 
@@ -343,36 +344,46 @@
 		</div>
 	</div>
 </div>
-
-<div style="">
-<div id="newslater-popup" class="mfp-hide white-popup-block open align-center">
-		<div class="nl-popup-main"  style="display: block;">
+<!-- ============================ START POP MODEL ========================================-->
+<? $popup_data = $this->db->get_where('tbl_popup_image', array('is_active = ' => 1))->result();
+if (!empty($popup_data)) {
+?>
+	<div id="newslater-popup" class="mfp-hide white-popup-block open align-center">
+		<div class="nl-popup-main" style="display: block;">
 			<div class="nl-popup-inner">
 				<div class="newsletter-inner">
 					<div class="row">
-						<div class="col-md-6"></div>
+						<div class="col-md-5">
+							<div class="background_bg h-100" data-img-src="<?= base_url() . $popup_data[0]->image ?>"></div>
+						</div>
 						<div class="col-md-6">
 							<div class="mtb-30">
-								<h2 class="main_title">Subscribe Emails</h2>
-								<span class="sub-title mb-30">Sign up & get 10% off</span>
-								<form>
-									<input type="email" placeholder="Email Here...">
-									<button class="btn-color big-width btn" title="Subscribe">Subscribe</button>
-								</form>
-								<div class="check-box mt-30">
-									<span>
-										<input type="checkbox" class="checkbox" id="different-address" name="Ship to a different address?">
-										<label for="different-address">Don`t show this popup again</label>
-									</span>
+								<div class="popup-text">
+									<?= $popup_data[0]->text; ?>
 								</div>
+								<form method="POST" action="<?= base_url() ?>Home/subscribe_to_popup" enctype="multipart/form-data">
+									<div class="form-group">
+										<input name="name" required type="text" placeholder="Enter Your Name">
+									</div>
+									<div class="form-group">
+										<input name="phone" required type="text" maxlength="10" minlength="10" onkeypress="return isNumberKey(event)" placeholder="Enter Your Mobile Number">
+									</div>
+									<div class="form-group">
+										<input name="email" type="email" required placeholder="Enter Your Email">
+									</div>
+									<div class="form-group">
+										<button class="btn-color big-width btn" title="Subscribe" type="submit">Subscribe</button>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- ============================ END POP MODEL ========================================-->
 	</div>
-</div>
+<? } ?>
 
 <!-- Footer section end -->
 </div>
@@ -398,6 +409,14 @@
 <script src="<?= base_url() ?>assets/frontend/customJS/mixed.js"></script>
 <script>
 	AOS.init();
+</script>
+<script>
+	function isNumberKey(evt) {
+		var charCode = (evt.which) ? evt.which : evt.keyCode
+		if (charCode > 31 && (charCode < 48 || charCode > 57))
+			return false;
+		return true;
+	}
 </script>
 <script>
 	$(document).ready(function() {
@@ -428,27 +447,44 @@
 	var base_url = "<?= base_url() ?>"
 </script>
 <script>
-		$(window).on('load', function(){
-			setTimeout(function(){
+	$(window).on('load', function() {
+		var pageURL = $(location).attr("href");
+		if (pageURL == base_url) {
+			var visited = localStorage.getItem('visited');
+			const now = new Date();
+			if (visited === null) {
+				const newD = now.getTime() + 1440 * 60000; // local storage set with plus 24 hours
+				localStorage.setItem('visited', newD)
 				jQuery.magnificPopup.open({
-				items: {src: '#newslater-popup'},type: 'inline'}, 0);
-			},10000)
-		});
-</script>
-
-<script>
-	/* ------------ Newslater-popup JS Start ------------- */
-	(window).on('load', function() {
-		setTimeout(function() {
-			jQuery.magnificPopup.open({
-				items: {
-					src: '#newslater-popup'
-				},
-				type: 'inline'
-			}, 0);
-		}, 10000)
+					items: {
+						src: '#newslater-popup'
+					},
+					type: 'inline'
+				}, 0);
+			} else {
+				if (now.getTime() > visited) {
+					const newD = now.getTime() + 1440 * 60000; // local storage set with plus 24 hours
+					localStorage.setItem('visited', newD)
+					jQuery.magnificPopup.open({
+						items: {
+							src: '#newslater-popup'
+						},
+						type: 'inline'
+					}, 0);
+				}
+			}
+		}
 	});
-	/* ------------ Newslater-popup JS End ------------- */
+	// $(window).on('load', function() {
+	// 	setTimeout(function() {
+	// 		jQuery.magnificPopup.open({
+	// 			items: {
+	// 				src: '#newslater-popup'
+	// 			},
+	// 			type: 'inline'
+	// 		}, 0);
+	// 	}, 10000)
+	// });
 </script>
 
 <script>

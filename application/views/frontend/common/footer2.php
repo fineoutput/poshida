@@ -1,8 +1,7 @@
-
 <style>
-  .mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.mfp-ready{
-		z-index: 9999999999;
-	}
+  .mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.mfp-ready {
+    z-index: 9999999999;
+  }
 </style>
 <!-- Newslatter section start -->
 <section class="newsletter-section align-center ptb-100">
@@ -151,39 +150,39 @@
 
 
   <div class="container">
-		<div class="row copyright_text">
-			<div class="col-md-4" style="text-align: center;
+    <div class="row copyright_text">
+      <div class="col-md-4" style="text-align: center;
     align-items: center;
     display: flex;
     justify-content: center;">
-				<p class="mt-2 mset">
-					Copyright © <script>
-						document.write(new Date().getFullYear())
-					</script> <a href="poshida.in" style="text-transform: lowercase;"> POSHIDA.IN.ALL RIGHTS RESERVED.</a>
-				</p>
-			</div>
-			<div class="col-md-4" style="text-align: center;
+        <p class="mt-2 mset">
+          Copyright © <script>
+            document.write(new Date().getFullYear())
+          </script> <a href="poshida.in" style="text-transform: lowercase;"> POSHIDA.IN.ALL RIGHTS RESERVED.</a>
+        </p>
+      </div>
+      <div class="col-md-4" style="text-align: center;
     align-items: center;
     display: flex;
     justify-content: center;">
-				<p class="mb-0"  style="margin-right: 5px;">Design & Developed by </p><a href="https://www.fineoutput.com"><b>
-						Fineoutput
-					</b> </a>
-			</div>
-		
+        <p class="mb-0" style="margin-right: 5px;">Design & Developed by </p><a href="https://www.fineoutput.com"><b>
+            Fineoutput
+          </b> </a>
+      </div>
 
-			<div class="col-md-4" style="text-align: center;
+
+      <div class="col-md-4" style="text-align: center;
     align-items: center;
     display: flex;
     justify-content: center;">
-				<p class="mb-0" style="margin-right: 5px;" >Marketing by </p><a href="https://digitaldukandaari.com/"><b>
-				Digitaldukandaari
-					</b> </a>
-			</div>
+        <p class="mb-0" style="margin-right: 5px;">Marketing by </p><a href="https://digitaldukandaari.com/"><b>
+            Digitaldukandaari
+          </b> </a>
+      </div>
 
-		</div>
+    </div>
 
-	</div>
+  </div>
 
   <a href="https://wa.me/+916377898988/" target="_blank" rel="noopener noreferrer" class="btn btn-success white fgdfdfgdf btn-lg mt-3 button-fixed-right green  desktopwhatsapp ">
     <i class="icon ion-social-whatsapp" style="font-size:30px;"></i>
@@ -319,36 +318,46 @@
 </div>
 </div>
 </div>
-
-<div id="newslater-popup" class="mfp-hide white-popup-block open align-center">
-		<div class="nl-popup-main" style="display: block;">
-			<div class="nl-popup-inner">
-				<div class="newsletter-inner">
-					<div class="row">
-						<div class="col-md-6"></div>
-						<div class="col-md-6">
-							<div class="mtb-30">
-								<h2 class="main_title">Subscribe Emails</h2>
-								<span class="sub-title mb-30">Sign up & get 10% off</span>
-								<form>
-									<input type="email" placeholder="Email Here...">
-									<button class="btn-color big-width btn" title="Subscribe">Subscribe</button>
-								</form>
-								<div class="check-box mt-30">
-									<span>
-										<input type="checkbox" class="checkbox" id="different-address" name="Ship to a different address?">
-										<label for="different-address">Don`t show this popup again</label>
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
+<!-- ============================ START POP MODEL ========================================-->
+<? $popup_data = $this->db->get_where('tbl_popup_image', array('is_active = ' => 1))->result();
+if (!empty($popup_data)) {
+?>
+  <div id="newslater-popup" class="mfp-hide white-popup-block open align-center">
+    <div class="nl-popup-main" style="display: block;">
+      <div class="nl-popup-inner">
+        <div class="newsletter-inner">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="background_bg h-100" data-img-src="<?= base_url() . $popup_data[0]->image ?>"></div>
+            </div>
+            <div class="col-md-6">
+              <div class="mtb-30">
+                <div class="popup-text">
+                  <?= $popup_data[0]->text; ?>
+                </div>
+                <form method="POST" action="<?= base_url() ?>Home/subscribe_to_popup" enctype="multipart/form-data">
+                  <div class="form-group">
+                    <input name="name" required type="text" placeholder="Enter Your Name">
+                  </div>
+                  <div class="form-group">
+                    <input name="phone" required type="text" maxlength="10" minlength="10" onkeypress="return isNumberKey(event)" placeholder="Enter Your Mobile Number">
+                  </div>
+                  <div class="form-group">
+                    <input name="email" type="email" required placeholder="Enter Your Email">
+                  </div>
+                  <div class="form-group">
+                    <button class="btn-color big-width btn" title="Subscribe" type="submit">Subscribe</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================ END POP MODEL ========================================-->
+  </div>
+<? } ?>
 <script src="<?= base_url() ?>assets/frontend/js/jquery-3.4.1.min.js"></script>
 <script src="<?= base_url() ?>assets/frontend/js/bootstrap.min.js"></script>
 <script src="<?= base_url() ?>assets/frontend/js/owl.carousel.min.js"></script>
@@ -408,14 +417,45 @@
   var base_url = "<?= base_url() ?>"
 </script>
 <script>
-		$(window).on('load', function(){
-			setTimeout(function(){
-				jQuery.magnificPopup.open({
-				items: {src: '#newslater-popup'},type: 'inline'}, 0);
-			},10000)
-		});
+  $(window).on('load', function() {
+    var pageURL = $(location).attr("href");
+    if (pageURL == base_url) {
+      var visited = localStorage.getItem('visited');
+      const now = new Date();
+      if (visited === null) {
+        const newD = now.getTime() + 1440 * 60000; // local storage set with plus 24 hours
+        localStorage.setItem('visited', newD)
+        jQuery.magnificPopup.open({
+          items: {
+            src: '#newslater-popup'
+          },
+          type: 'inline'
+        }, 0);
+      } else {
+        if (now.getTime() > visited) {
+          const newD = now.getTime() + 1440 * 60000; // local storage set with plus 24 hours
+          localStorage.setItem('visited', newD)
+          jQuery.magnificPopup.open({
+            items: {
+              src: '#newslater-popup'
+            },
+            type: 'inline'
+          }, 0);
+        }
+      }
+    }
+  });
+  // $(window).on('load', function() {
+  // 	setTimeout(function() {
+  // 		jQuery.magnificPopup.open({
+  // 			items: {
+  // 				src: '#newslater-popup'
+  // 			},
+  // 			type: 'inline'
+  // 		}, 0);
+  // 	}, 10000)
+  // });
 </script>
-
 <script>
   function hello() {
     let element = document.getElementById("toggle");
