@@ -100,7 +100,7 @@
 								<ul>
 									<li>
 										<div class="contact-thumb">
-											<img src="<?= base_url() ?>assets/frontend/img/address-icon.svg" alt="xpoge">
+											<img src="<?= base_url() ?>assets/frontend/img/address-icon.svg" alt=" ">
 										</div>
 										<div class="contact-box-detail">
 											<p>Plot No. 81, Nandpuri-B, Near Mahima Panschap, Jagatpura, Jaipur</p>
@@ -108,7 +108,7 @@
 									</li>
 									<li>
 										<div class="contact-thumb">
-											<img src="<?= base_url() ?>assets/frontend/img/phone-icon.svg" alt="xpoge">
+											<img src="<?= base_url() ?>assets/frontend/img/phone-icon.svg" alt=" ">
 										</div>
 										<div class="contact-box-detail" style="cursor: pointer;">
 											<p>
@@ -125,7 +125,7 @@
 									</li>
 									<li>
 										<div class="contact-thumb">
-											<img src="<?= base_url() ?>assets/frontend/img/mail-icon.svg" alt="xpoge">
+											<img src="<?= base_url() ?>assets/frontend/img/mail-icon.svg" alt=" ">
 										</div>
 										<div class="contact-box-detail" style="cursor: pointer;">
 											<p> <a href="mailto:Poshida.ronak@gmail.com">Poshida.ronak@gmail.com</a></p>

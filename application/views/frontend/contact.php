@@ -6,7 +6,7 @@
                 <h1 class="banner-title">Contact us</h1>
                 <div class="breadcrumb">
                     <ul class="inline">
-                        <li><a href="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/index.html">Home</a></li>
+                        <li><a href="#">Home</a></li>
                         <li>Contact us</li>
                     </ul>
                 </div>
@@ -30,7 +30,7 @@
                                     <ul>
                                         <li>
                                             <div class="contact-thumb">
-                                                <img src="<?= base_url() ?>assets/frontend/img/address-icon.svg" alt="xpoge">
+                                                <img src="<?= base_url() ?>assets/frontend/img/address-icon.svg" alt=" ">
                                             </div>
                                             <div class="contact-box-detail">
                                                 <h4 class="contact-title">Visit Office</h4>
@@ -40,7 +40,7 @@
 
                                         <li>
                                             <div class="contact-thumb">
-                                                <img src="<?= base_url() ?>assets/frontend/img/mail-icon.svg" alt="xpoge">
+                                                <img src="<?= base_url() ?>assets/frontend/img/mail-icon.svg" alt=" ">
                                             </div>
                                             <div class="contact-box-detail">
                                                 <h4 class="contact-title">Email</h4>
@@ -49,7 +49,7 @@
                                         </li>
                                         <li>
                                             <div class="contact-thumb">
-                                                <img src="<?= base_url() ?>assets/frontend/img/phone-icon.svg" alt="xpoge">
+                                                <img src="<?= base_url() ?>assets/frontend/img/phone-icon.svg" alt=" ">
                                             </div>
                                             <div class="contact-box-detail" style="cursor: pointer;">
                                                 <h4 class="contact-title">Call Us</h4>

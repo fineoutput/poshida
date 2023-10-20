@@ -186,7 +186,7 @@ if (!empty($this->session->userdata('user_data'))) {
             <div class="right-side">
               <div class="navbar-header">
                 <a class="navbar-brand page-scroll" href="<?= base_url() ?>">
-                  <img alt="xpoge" src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
+                  <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
                 </a>
               </div>
             </div>
@@ -241,7 +241,7 @@ if (!empty($this->session->userdata('user_data'))) {
                     <ul class="cart_list">
                       <? foreach ($headerMiniCart['cart_data'] as $miniCart) { ?>
                         <li> <a href="javascript:void(0);" product_id="<?= base64_encode($miniCart['product_id']) ?>" type_id="<?= base64_encode($miniCart['type_id']) ?>" onclick="deleteCart(this)" class="close-cart"><i class="fa fa-times-circle"></i></a>
-                          <figure> <a href="javascript:void(0);" class="pull-left"> <img alt="Xpoge" src="<?= $miniCart['image'] ?>"></a>
+                          <figure> <a href="javascript:void(0);" class="pull-left"> <img alt=" " src="<?= $miniCart['image'] ?>"></a>
                             <figcaption> <span><a href="#"><?= $miniCart['product_name'] ?></a></span>
                               <p class="cart-price m-0">₹<?= $miniCart['price'] ?></p>
                               <!-- <p class="m-0"> Color : Red</p>
@@ -309,7 +309,7 @@ if (!empty($this->session->userdata('user_data'))) {
               <ul class="nav navbar-nav">
                 <div class="navbar-header dfghddgd">
                   <a class="navbar-brand page-scroll" href="<?= base_url() ?>">
-                    <img alt="xpoge" src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
+                    <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
                   </a>
                 </div>
                 <li class="level">
@@ -365,7 +365,7 @@ if (!empty($this->session->userdata('user_data'))) {
 												justify-content: center;">
                             <div class="sub-menu-img" style="width: 80%;">
                               <a href="<?= base_url() ?>Home/all_products/<?= $category->url ?>/1">
-                                <img src="<?= base_url() . $category->image ?>" alt="Xpoge" style="width: 100%;">
+                                <img src="<?= base_url() . $category->image ?>" alt=" " style="width: 100%;">
                               </a>
                             </div>
                           </div> -->
