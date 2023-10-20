@@ -200,7 +200,7 @@
 	</div>
 
 	<a href="https://wa.me/+916377898988/" target="_blank" rel="noopener noreferrer" class="btn btn-success white fgdfdfgdf btn-lg mt-3 button-fixed-right green  desktopwhatsapp ">
-		<i class="icon ion-social-whatsapp" style="font-size:30px;"></i>
+	<i class="bi bi-whatsapp" style="font-size:30px;"></i>
 	</a>
 </footer>
 <!-- //=================== Start Bottom Tabs ========================== -->
