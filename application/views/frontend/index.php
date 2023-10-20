@@ -358,8 +358,8 @@
 
 
   <!-- ======================= START SECOND BIG BANNER SECTION  ======================== -->
-  <?if(!empty($banner_data[$numItems - 1])){?>
-  <section class="pb-100 " data-aos="fade-right">
+  <?if(!empty($banner_data[$numItems - 1]) && $numItems>1){?>
+  <section class="pb-100 " data-aos="fade-right"> 
   	<div>
   		<img src="<?= base_url() . $banner_data[$numItems - 1]->image ?>" alt="">
   	</div>
