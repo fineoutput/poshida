@@ -1108,12 +1108,13 @@ input.radio-button:checked+label::before {
 
 .nl-popup-main {
 	display: block;
-	background: url(../img/nl-popup-bg.jpg) no-repeat scroll 0 0;
+	/* background: url(../img/nl-popup-bg.jpg) no-repeat scroll 0 0; */
 	overflow: hidden;
 	border-radius: 0px;
 	-moz-border-radius: 0px;
 	-webkit-border-radius: 0px;
 	-o-border-radius: 0px;
+	background-color: rgb(251 250 250)
 }
 
 .nl-popup-inner {
