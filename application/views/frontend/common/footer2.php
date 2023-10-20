@@ -34,7 +34,7 @@
                   <img src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" alt="logo">
                 </a>
               </div>
-              <p class="footer-p text-justify">Founded in Jaipur, our journey began as a ready-to-wear brand that has since become synonymous with versatile and empowering casual attire.</p>
+              <p class="footer-p text-justify">Grace In Every Stitch </p>
             </div>
           </div>
           <div class="col-12 col-lg-3 col-md-6">

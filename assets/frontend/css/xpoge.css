@@ -4051,10 +4051,6 @@ a.btn.btn-color.small.btn-filter.me-3.mb-20 {
 }
 
 
-.nl-popup-main {
-	display: none;
-}
-
 
 
 
@@ -4704,4 +4700,15 @@ footer.footer-part .container .footer-top.ptb-100 .mb_-30 .row .col-12.col-lg-3.
     width: 200px !important;
     padding: 7px 30px;
 	/* left: -86px; */
+}
+
+@media (max-width: 767px){
+
+
+.pb-100 {
+    padding-bottom: 45px !important;
+}
+.position-r.mb-5 {
+    margin-bottom: 0px !important;
+}
 }
