@@ -9,6 +9,9 @@
 	.coko-mar {
 		margin-top: 0px !important;
 	}
+	.mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.mfp-ready{
+		z-index: 9999999999;
+	}
 </style>
 
 <footer class="footer-part">
@@ -341,7 +344,35 @@
 	</div>
 </div>
 
-
+<div style="">
+<div id="newslater-popup" class="mfp-hide white-popup-block open align-center">
+		<div class="nl-popup-main"  style="display: block;">
+			<div class="nl-popup-inner">
+				<div class="newsletter-inner">
+					<div class="row">
+						<div class="col-md-6"></div>
+						<div class="col-md-6">
+							<div class="mtb-30">
+								<h2 class="main_title">Subscribe Emails</h2>
+								<span class="sub-title mb-30">Sign up & get 10% off</span>
+								<form>
+									<input type="email" placeholder="Email Here...">
+									<button class="btn-color big-width btn" title="Subscribe">Subscribe</button>
+								</form>
+								<div class="check-box mt-30">
+									<span>
+										<input type="checkbox" class="checkbox" id="different-address" name="Ship to a different address?">
+										<label for="different-address">Don`t show this popup again</label>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <!-- Footer section end -->
 </div>
@@ -395,6 +426,14 @@
 	}
 	// AOS.init();
 	var base_url = "<?= base_url() ?>"
+</script>
+<script>
+		$(window).on('load', function(){
+			setTimeout(function(){
+				jQuery.magnificPopup.open({
+				items: {src: '#newslater-popup'},type: 'inline'}, 0);
+			},10000)
+		});
 </script>
 
 <script>
