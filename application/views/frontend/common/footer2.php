@@ -17,258 +17,13 @@
     margin-bottom: 0px;
 }
 
-* {
-	outline: none !important;
-	list-style: none !important;
-	text-decoration: none !important;
+@media(max-width:381px){
+.text-footer-p{
+	margin-left: 0px !important;
 }
-
-body,
-html {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	line-height: 24px;
-	color: #464646;
-	font-size: 14px;
-	font-family: 'Montserrat', sans-serif !important;
-	font-weight: 400;
-	letter-spacing: 0px;
-	position: relative;
-}
-
-.container {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-.no-js #loader {
-	display: none;
 }
 
 
-a:hover {
-	color: #0056b3;
-	text-decoration: underline;
-}
-
-.btn {
-	display: inline-block;
-	font-weight: 400;
-	color: #212529;
-	text-align: center;
-	vertical-align: middle;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	background-color: transparent;
-	border: 1px solid transparent;
-	padding: .375rem .75rem;
-	font-size: 1rem;
-	line-height: 1.5;
-	border-radius: .25rem;
-	transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
-
-@media (prefers-reduced-motion:reduce) {
-	.btn {
-		transition: none;
-	}
-}
-
-.btn:hover {
-	color: #212529;
-	text-decoration: none;
-}
-
-.btn:focus {
-	outline: 0;
-	box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
-}
-
-.btn:disabled {
-	opacity: .65;
-}
-
-.btn:not(:disabled):not(.disabled) {
-	cursor: pointer;
-}
-
-.btn-success {
-	color: #fff;
-	background-color: #28a745;
-	border-color: #28a745;
-}
-
-.btn-success:hover {
-	color: #fff;
-	background-color: #218838;
-	border-color: #1e7e34;
-}
-
-.btn-success:focus {
-	color: #fff;
-	background-color: #218838;
-	border-color: #1e7e34;
-	box-shadow: 0 0 0 .2rem rgba(72, 180, 97, .5);
-}
-
-.btn-success:disabled {
-	color: #fff;
-	background-color: #28a745;
-	border-color: #28a745;
-}
-
-.btn-success:not(:disabled):not(.disabled):active {
-	color: #fff;
-	background-color: #1e7e34;
-	border-color: #1c7430;
-}
-
-.btn-success:not(:disabled):not(.disabled):active:focus {
-	box-shadow: 0 0 0 .2rem rgba(72, 180, 97, .5);
-}
-
-.btn-lg {
-	padding: .5rem 1rem;
-	font-size: 1.25rem;
-	line-height: 1.5;
-	border-radius: .3rem;
-}
-
-
-.ion-social-whatsapp:before {
-	display: inline-block;
-	font-family: "Ionicons";
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	text-rendering: auto;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.ion-social-whatsapp:before {
-	content: "\f4f0";
-}
-
-
-a {
-	color: #292b2c;
-	text-decoration: none;
-	-webkit-transition: all 0.3s ease-in-out;
-	transition: all .3s ease-in-out;
-}
-
-a:hover {
-	color: #FF324D;
-	text-decoration: none;
-}
-
-a:focus {
-	outline: none;
-}
-
-.btn:focus,
-.btn:hover {
-	box-shadow: none;
-	outline: medium none;
-}
-
-.btn {
-	border-width: 1px;
-	cursor: pointer;
-	line-height: normal;
-	padding: 12px 35px;
-	text-transform: capitalize;
-	transition: all 0.3s ease-in-out;
-}
-
-.btn:active:focus {
-	box-shadow: none !important;
-}
-
-.btn i {
-	font-size: 16px;
-	margin-right: 2px;
-	vertical-align: middle;
-	line-height: 1;
-}
-
-.btn-lg {
-	padding: 16px 45px;
-}
-
-.btn.btn-lg i {
-	font-size: 22px;
-}
-
-.icon {
-	margin-bottom: 15px;
-}
-
-@media (max-width: 991px) {
-	.desktopwhatsapp {
-		display: none;
-	}
-}
-
-.button-fixed-right {
-	position: fixed;
-	bottom: 20px;
-	right: 10px;
-	border-radius: 50% !important;
-	padding: 7px 9px !important;
-	z-index: 999;
-}
-
-.button-fixed-right {
-	position: fixed;
-	bottom: 20px;
-	right: 28px;
-	border-radius: 50% !important;
-	padding: 7px 9px !important;
-	z-index: 999;
-}
-
-
-@media only screen and (max-width: 575px) {
-	.btn {
-		padding: 10px 28px;
-		font-size: 14px;
-	}
-
-	.btn-lg {
-		padding: 14px 38px;
-		font-size: 18px;
-	}
-
-	.btn.btn-lg i {
-		font-size: 20px;
-	}
-}
-
-@media only screen and (max-width: 380px) {
-	.btn {
-		padding: 8px 24px;
-	}
-
-	.btn-lg {
-		padding: 12px 34px;
-		font-size: 16px;
-	}
-
-	.btn.btn-lg i {
-		font-size: 18px;
-	}
-}
 
 </style>
 <!-- Newslatter section start -->
@@ -307,10 +62,12 @@ a:focus {
                   <img src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" alt="logo">
                 </a>
               </div>
-              <p class="footer-p " style="    text-align: center !important;
-                font-size: 17px;
-                font-weight: 600;
-            ">Grace In Every Stitch </p>
+         	
+							<p class="footer-p text-footer-p " style="   
+										font-size: 17px;
+										font-weight: 600;
+										margin-left :18px;
+									">Grace In Every Stitch </p>
             </div>
           </div>
           <div class="col-12 col-lg-3 col-md-6">
@@ -689,44 +446,44 @@ if (!empty($popup_data)) {
   var base_url = "<?= base_url() ?>"
 </script>
 <script>
-  $(window).on('load', function() {
-    var pageURL = $(location).attr("href");
-    if (pageURL == base_url) {
-      var visited = localStorage.getItem('visited');
-      const now = new Date();
-      if (visited === null) {
-        const newD = now.getTime() + 1440 * 60000; // local storage set with plus 24 hours
-        localStorage.setItem('visited', newD)
-        jQuery.magnificPopup.open({
-          items: {
-            src: '#newslater-popup'
-          },
-          type: 'inline'
-        }, 0);
-      } else {
-        if (now.getTime() > visited) {
-          const newD = now.getTime() + 1440 * 60000; // local storage set with plus 24 hours
-          localStorage.setItem('visited', newD)
-          jQuery.magnificPopup.open({
-            items: {
-              src: '#newslater-popup'
-            },
-            type: 'inline'
-          }, 0);
-        }
-      }
-    }
-  });
   // $(window).on('load', function() {
-  // 	setTimeout(function() {
-  // 		jQuery.magnificPopup.open({
-  // 			items: {
-  // 				src: '#newslater-popup'
-  // 			},
-  // 			type: 'inline'
-  // 		}, 0);
-  // 	}, 1000)
+  //   var pageURL = $(location).attr("href");
+  //   if (pageURL == base_url) {
+  //     var visited = localStorage.getItem('visited');
+  //     const now = new Date();
+  //     if (visited === null) {
+  //       const newD = now.getTime() + 1440 * 60000; // local storage set with plus 24 hours
+  //       localStorage.setItem('visited', newD)
+  //       jQuery.magnificPopup.open({
+  //         items: {
+  //           src: '#newslater-popup'
+  //         },
+  //         type: 'inline'
+  //       }, 0);
+  //     } else {
+  //       if (now.getTime() > visited) {
+  //         const newD = now.getTime() + 1440 * 60000; // local storage set with plus 24 hours
+  //         localStorage.setItem('visited', newD)
+  //         jQuery.magnificPopup.open({
+  //           items: {
+  //             src: '#newslater-popup'
+  //           },
+  //           type: 'inline'
+  //         }, 0);
+  //       }
+  //     }
+  //   }
   // });
+	$(window).on('load', function() {
+		setTimeout(function() {
+			jQuery.magnificPopup.open({
+				items: {
+					src: '#newslater-popup'
+				},
+				type: 'inline'
+			}, 0);
+		}, 6000)
+	});
 </script>
 <script>
   function hello() {

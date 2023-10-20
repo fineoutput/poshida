@@ -18,7 +18,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="add-ma pb-100">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56970.58533593212!2d75.75872352167971!3d26.818902199999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dc9dd3415235d%3A0x22db68f84a00eace!2sMahima%20Panache!5e0!3m2!1sde!2sin!4v1697204369140!5m2!1sde!2sin" height="585" style="border:0;width:100%;" allowfullscreen></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d890.1686405005053!2d75.8298055!3d26.8184891!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dc9034cbdf60b%3A0x706185398ba5ee81!2sPoshida%20-%20Clothing%20Brand!5e0!3m2!1sde!2sin!4v1697807879914!5m2!1sde!2sin"  height="585" style="border:0;width:100%;" allowfullscreen></iframe>
+                           
 
                     </div>
                     
