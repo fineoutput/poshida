@@ -18,9 +18,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="add-ma pb-100">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113941.33032295817!2d75.68613974335939!3d26.81874340000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dc9b3015c7dff%3A0x16ece7b3f04f16f0!2sRONAK%20TEXTILES!5e0!3m2!1sde!2sin!4v1697869713180!5m2!1sde!2sin"  height="585" style="border:0;width:100%;" allowfullscreen></iframe>
-                 
-                           
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113941.33032295831!2d75.68613974335939!3d26.81874340000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dc9b3015c7dff%3A0x16ece7b3f04f16f0!2sRONAK%20TEXTILES!5e0!3m2!1sen!2sin!4v1697871058706!5m2!1sen!2sin"  height="585" style="border:0;width:100%;" allowfullscreen></iframe>
+
+                            
 
                     </div>
                     
