@@ -35,7 +35,7 @@
                                             </div>
                                             <div class="contact-box-detail">
                                                 <h4 class="contact-title">Visit Office</h4>
-                                                <p>Plot No. 81, Nandpuri-B, Near Mahima Panschap, Jagatpura, Jaipur</p>
+                                                <p>Plot No. 81, Nandpuri-B, Near Mahima  Panache , Jagatpura, Jaipur</p>
                                             </div>
                                         </li>
 
