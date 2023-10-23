@@ -154,9 +154,6 @@
       <div class="row">
         <div class="col-12">
           <div class="w-100">
-            <p class="mb-0"><a href="#" target="_blank" title="TemplatesCoder"></a></p>
-            <!-- <p class="mb-0">© Xpoge all Rights Reserverd theme by <a href="https://templatescoder.com/"
-									target="_blank" title="TemplatesCoder">TemplatesCoder</a></p> -->
           </div>
         </div>
         <div class="col-12">
