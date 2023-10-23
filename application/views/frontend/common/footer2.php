@@ -117,7 +117,7 @@
                       <img src="<?= base_url() ?>assets/frontend/img/address-icon.svg" alt="">
                     </div>
                     <div class="contact-box-detail">
-                      <p>Plot No. 81, Nandpuri-B, Near Mahima Panschap, Jagatpura, Jaipur</p>
+                      <p>Plot No. 81, Nandpuri-B, Near Mahima Panache , Jagatpura, Jaipur</p>
                     </div>
                   </li>
                   <li>
@@ -179,7 +179,7 @@
 
   <div class="container">
     <div class="row copyright_text">
-      <div class="col-md-4" style="text-align: center;
+      <div class="col-md-12" style="text-align: center;
     align-items: center;
     display: flex;
     justify-content: center;">
@@ -189,7 +189,7 @@
           </script> <a href="poshida.in" style="text-transform: lowercase;"> POSHIDA.IN.ALL RIGHTS RESERVED.</a>
         </p>
       </div>
-      <div class="col-md-4" style="text-align: center;
+      <!-- <div class="col-md-4" style="text-align: center;
     align-items: center;
     display: flex;
     justify-content: center;">
@@ -205,7 +205,7 @@
     justify-content: center;">
         <p class="mb-0" style="margin-right: 5px;">Marketing by </p><a href="https://digitaldukandaari.com/"><b>
             Digitaldukandaari
-          </b> </a>
+          </b> </a> -->
       </div>
 
     </div>
