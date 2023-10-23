@@ -45,6 +45,7 @@ Users
       <th>First Name</th>
       <th>Last Name</th>
       <th>Phone</th>
+      <th>Email</th>
       <th>Status</th>
       <?if($this->session->userdata('position')!='Manager'){?>
         <th>Action</th>
@@ -58,6 +59,7 @@ Users
       <td><?php echo $data->f_name ?></td>
       <td><?php echo $data->l_name ?></td>
       <td><?php echo $data->phone ?></td>
+      <td><?php echo $data->email ?></td>
       <td><?php if ($data->is_active==1) { ?>
         <p class="label bg-green">Active</p>
 

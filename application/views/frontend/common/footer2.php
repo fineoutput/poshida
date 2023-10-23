@@ -3,28 +3,25 @@
     z-index: 9999999999;
   }
 
-  .popup-text.redsp{
-		margin-bottom: 18px;
+  .popup-text.redsp {
+    margin-bottom: 18px;
     font-weight: 700;
     font-size: 23px;
 
-	}
+  }
 
-	#newslater-popup .newsletter-inner input {
+  #newslater-popup .newsletter-inner input {
     border: none;
     width: 100%;
     padding: 10px;
     margin-bottom: 0px;
-}
+  }
 
-@media(max-width:381px){
-.text-footer-p{
-	margin-left: 0px !important;
-}
-}
-
-
-
+  @media(max-width:381px) {
+    .text-footer-p {
+      margin-left: 0px !important;
+    }
+  }
 </style>
 <!-- Newslatter section start -->
 <section class="newsletter-section align-center ptb-100">
@@ -62,8 +59,8 @@
                   <img src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" alt="logo">
                 </a>
               </div>
-         	
-							<p class="footer-p text-footer-p " style="   
+
+              <p class="footer-p text-footer-p " style="   
 										font-size: 17px;
 										font-weight: 600;
 										margin-left :18px;
@@ -207,15 +204,15 @@
         <p class="mb-0" style="margin-right: 5px;">Marketing by </p><a href="https://digitaldukandaari.com/"><b>
             Digitaldukandaari
           </b> </a> -->
-      </div>
-
     </div>
 
   </div>
 
+  </div>
+
   <a href="https://wa.me/+916377898988/" target="_blank" rel="noopener noreferrer" class="btn btn-success white fgdfdfgdf btn-lg mt-3 button-fixed-right green  desktopwhatsapp ">
-	<i class="bi bi-whatsapp" style="font-size:30px;"></i>
-	</a>
+    <i class="bi bi-whatsapp" style="font-size:30px;"></i>
+  </a>
 
 
 </footer>
@@ -351,42 +348,42 @@
 <? $popup_data = $this->db->get_where('tbl_popup_image', array('is_active = ' => 1))->result();
 if (!empty($popup_data)) {
 ?>
- <div id="newslater-popup" class="mfp-hide white-popup-block open align-center">
-		<div class="nl-popup-main" style="display: block;">
-			<div class="nl-popup-inner">
-				<div class="newsletter-inner">
-					<div class="row" style="    justify-content: space-around;">
-						<div class="col-md-5">
-							<!-- <div class="background_bg h-100" data-img-src="<?= base_url() . $popup_data[0]->image ?>"></div> -->
-							<img src="<?= base_url() . $popup_data[0]->image ?>" class="img-fluid image-respo"/>
-						</div>
-						<div class="col-md-6">
-							<div class="mtb-30" style="margin-top: 10px;">
-								<div class="popup-text redsp">
-									<?= $popup_data[0]->text; ?>
-								</div>
-								<form method="POST" action="<?= base_url() ?>Home/subscribe_to_popup" enctype="multipart/form-data">
-									<div class="form-group">
-										<input name="name" required type="text" placeholder="Enter Your Name">
-									</div>
-									<div class="form-group">
-										<input name="phone" required type="text" maxlength="10" minlength="10" onkeypress="return isNumberKey(event)" placeholder="Enter Your Mobile Number">
-									</div>
-									<div class="form-group">
-										<input name="email" type="email" required placeholder="Enter Your Email">
-									</div>
-									<div class="form-group">
-										<button class="btn-color big-width btn" title="Subscribe" type="submit">Subscribe</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- ============================ END POP MODEL ========================================-->
-	</div>
+  <div id="newslater-popup" class="mfp-hide white-popup-block open align-center">
+    <div class="nl-popup-main" style="display: block;">
+      <div class="nl-popup-inner">
+        <div class="newsletter-inner">
+          <div class="row" style="    justify-content: space-around;">
+            <div class="col-md-5">
+              <!-- <div class="background_bg h-100" data-img-src="<?= base_url() . $popup_data[0]->image ?>"></div> -->
+              <img src="<?= base_url() . $popup_data[0]->image ?>" class="img-fluid image-respo" />
+            </div>
+            <div class="col-md-6">
+              <div class="mtb-30" style="margin-top: 10px;">
+                <div class="popup-text redsp">
+                  <?= $popup_data[0]->text; ?>
+                </div>
+                <form method="POST" action="<?= base_url() ?>Home/subscribe_to_popup" enctype="multipart/form-data">
+                  <div class="form-group">
+                    <input name="name" required type="text" placeholder="Enter Your Name">
+                  </div>
+                  <div class="form-group">
+                    <input name="phone" required type="text" maxlength="10" minlength="10" onkeypress="return isNumberKey(event)" placeholder="Enter Your Mobile Number">
+                  </div>
+                  <div class="form-group">
+                    <input name="email" type="email" required placeholder="Enter Your Email">
+                  </div>
+                  <div class="form-group">
+                    <button class="btn-color big-width btn" title="Subscribe" type="submit">Subscribe</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================ END POP MODEL ========================================-->
+  </div>
 <? } ?>
 <script src="<?= base_url() ?>assets/frontend/js/jquery-3.4.1.min.js"></script>
 <script src="<?= base_url() ?>assets/frontend/js/bootstrap.min.js"></script>
@@ -447,44 +444,48 @@ if (!empty($popup_data)) {
   var base_url = "<?= base_url() ?>"
 </script>
 <script>
-  // $(window).on('load', function() {
-  //   var pageURL = $(location).attr("href");
-  //   if (pageURL == base_url) {
-  //     var visited = localStorage.getItem('visited');
-  //     const now = new Date();
-  //     if (visited === null) {
-  //       const newD = now.getTime() + 1440 * 60000; // local storage set with plus 24 hours
-  //       localStorage.setItem('visited', newD)
-  //       jQuery.magnificPopup.open({
-  //         items: {
-  //           src: '#newslater-popup'
-  //         },
-  //         type: 'inline'
-  //       }, 0);
-  //     } else {
-  //       if (now.getTime() > visited) {
-  //         const newD = now.getTime() + 1440 * 60000; // local storage set with plus 24 hours
-  //         localStorage.setItem('visited', newD)
-  //         jQuery.magnificPopup.open({
-  //           items: {
-  //             src: '#newslater-popup'
-  //           },
-  //           type: 'inline'
-  //         }, 0);
-  //       }
-  //     }
-  //   }
-  // });
-	$(window).on('load', function() {
-		setTimeout(function() {
-			jQuery.magnificPopup.open({
-				items: {
-					src: '#newslater-popup'
-				},
-				type: 'inline'
-			}, 0);
-		}, 6000)
-	});
+  <? $popup_data = $this->db->get_where('tbl_popup_image', array('is_active = ' => 1))->result();
+  if (!empty($popup_data)) {
+  ?>
+    $(window).on('load', function() {
+      var pageURL = $(location).attr("href");
+      if (pageURL == base_url) {
+        var visited = localStorage.getItem('visited');
+        const now = new Date();
+        if (visited === null) {
+          const newD = now.getTime() + 1440 * 60000; // local storage set with plus 24 hours
+          localStorage.setItem('visited', newD)
+          jQuery.magnificPopup.open({
+            items: {
+              src: '#newslater-popup'
+            },
+            type: 'inline'
+          }, 0);
+        } else {
+          if (now.getTime() > visited) {
+            const newD = now.getTime() + 1440 * 60000; // local storage set with plus 24 hours
+            localStorage.setItem('visited', newD)
+            jQuery.magnificPopup.open({
+              items: {
+                src: '#newslater-popup'
+              },
+              type: 'inline'
+            }, 0);
+          }
+        }
+      }
+    });
+    // $(window).on('load', function() {
+    // 	setTimeout(function() {
+    // 		jQuery.magnificPopup.open({
+    // 			items: {
+    // 				src: '#newslater-popup'
+    // 			},
+    // 			type: 'inline'
+    // 		}, 0);
+    // 	}, 6000)
+    // });
+  <? } ?>
 </script>
 <script>
   function hello() {
