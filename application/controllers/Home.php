@@ -139,6 +139,13 @@ class Home extends CI_Controller
         $this->load->view('frontend/about');
         $this->load->view('frontend/common/footer2');
     }
+    // ============================================ career =================================================
+    public function career()
+    {
+        $this->load->view('frontend/common/header2');
+        $this->load->view('frontend/career');
+        $this->load->view('frontend/common/footer2');
+    }
     //================================================= FILTERS ON ALL PRODUCTS ======================================
     public function apply_filter()
     {
@@ -308,15 +315,83 @@ class Home extends CI_Controller
         $this->load->library('form_validation');
         $this->load->helper('security');
         if ($this->input->post()) {
-            $this->form_validation->set_rules('name', 'name', 'xss_clean|trim');
-            $this->form_validation->set_rules('message', 'message', 'xss_clean|trim');
-            $this->form_validation->set_rules('email', 'email', 'xss_clean|trim');
+            $this->form_validation->set_rules('name', 'name', 'required|xss_clean|trim');
+            $this->form_validation->set_rules('message', 'message', 'required|xss_clean|trim');
+            $this->form_validation->set_rules('email', 'email', 'required|xss_clean|trim');
             if ($this->form_validation->run() == true) {
                 $name = $this->input->post('name');
                 $message = $this->input->post('message');
                 $email = $this->input->post('email');
                 $response_entry = $this->forms->contactFormSubmit($name, $message, $email);
                 redirect("/", "refresh");
+            } else {
+                $this->session->set_flashdata('emessage', validation_errors());
+                redirect($_SERVER['HTTP_REFERER']);
+            }
+        } else {
+            $this->session->set_flashdata('emessage', 'Please insert some data, No data available');
+            redirect($_SERVER['HTTP_REFERER']);
+        }
+    }
+    public function carrier_form_submit()
+    {
+        $this->load->helper(array('form', 'url'));
+        $this->load->library('form_validation');
+        $this->load->helper('security');
+        if ($this->input->post()) {
+            $this->form_validation->set_rules('name', 'name', 'required|xss_clean|trim');
+            $this->form_validation->set_rules('phone', 'phone', 'required|xss_clean|trim');
+            $this->form_validation->set_rules('email', 'email', 'required|xss_clean|trim');
+            if ($this->form_validation->run() == true) {
+                $name = $this->input->post('name');
+                $phone = $this->input->post('phone');
+                $email = $this->input->post('email');
+                $ip = $this->input->ip_address();
+                date_default_timezone_set("Asia/Calcutta");
+                $cur_date = date("Y-m-d H:i:s");
+                //-----------UPLOAD FILE INTO SERVER --------
+                $this->load->library('upload');
+                $img1 = 'cv';
+                $file_check = ($_FILES['cv']['error']);
+                if ($file_check != 4) {
+                    $image_upload_folder = FCPATH . "assets/uploads/carrier/cv";
+                    if (!file_exists($image_upload_folder)) {
+                        mkdir($image_upload_folder, DIR_WRITE_MODE, true);
+                    }
+                    $new_file_name = "cv" . date("YmdHis");
+                    $this->upload_config = array(
+                        'upload_path'   => $image_upload_folder,
+                        'file_name' => $new_file_name,
+                        'allowed_types' => 'pdf|jpg|png|jpeg',
+                        'max_size'      => 25000
+                    );
+                    $this->upload->initialize($this->upload_config);
+                    if (!$this->upload->do_upload($img1)) {
+                        $upload_error = $this->upload->display_errors();
+                        $this->session->set_flashdata('emessage', $upload_error);
+                        redirect($_SERVER['HTTP_REFERER']);
+                    } else {
+                        $file_info = $this->upload->data();
+                        $videoNAmePath = "assets/uploads/carrier/cv/" . $new_file_name . $file_info['file_ext'];
+                        $inputFileName = $videoNAmePath;
+                    }
+                }
+                $data_insert = array(
+                    'name' => $name,
+                    'email' => $email,
+                    'phone' => $phone,
+                    'cv' => $inputFileName,
+                    'ip' => $ip,
+                    'date' => $cur_date
+                );
+                $last_id = $this->base_model->insert_table("tbl_carrier", $data_insert, 1);
+                if ($last_id != 0) {
+                    $this->session->set_flashdata('smessage', 'Thank you for contacting us! We will get back to you soon');
+                    redirect($_SERVER['HTTP_REFERER']);
+                } else {
+                    $this->session->set_flashdata('emessage', 'Some unknown error occurred');
+                    redirect($_SERVER['HTTP_REFERER']);
+                }
             } else {
                 $this->session->set_flashdata('emessage', validation_errors());
                 redirect($_SERVER['HTTP_REFERER']);
@@ -614,7 +689,7 @@ class Home extends CI_Controller
     }
     public function terms_and_conditions()
     {
-        
+
         $this->load->view('frontend/common/header2',);
         $this->load->view('frontend/terms_and_conditions');
         $this->load->view('frontend/common/footer2');
@@ -622,7 +697,7 @@ class Home extends CI_Controller
     public function terms_and_conditions2()
     {
         $data['hide'] = 1;
-        $this->load->view('frontend/common/header2',$data);
+        $this->load->view('frontend/common/header2', $data);
         $this->load->view('frontend/terms_and_conditions');
         $this->load->view('frontend/common/footer2');
     }

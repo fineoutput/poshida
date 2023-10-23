@@ -6,7 +6,7 @@
                 <h1 class="banner-title">Contact us</h1>
                 <div class="breadcrumb">
                     <ul class="inline">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="<?=base_url()?>">Home</a></li>
                         <li>Contact us</li>
                     </ul>
                 </div>
@@ -89,12 +89,6 @@
                                                     <textarea required placeholder="Message *" name="message" rows="4"></textarea>
                                                 </div>
                                             </div>
-                                            <div class="col-12">
-                                            <div class="form-group mt-3">
-                                                <label class="mr-4">Upload your CV:</label>
-                                                <input type="file" name="file" style="border: 0px;     padding: 0px;">
-                                            </div>
-                                                                                    </div>
                                             <div class="col-12">
                                                 <button type="submit" class="btn-color">Send Massage</button>
                                             </div>

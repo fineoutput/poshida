@@ -87,7 +87,7 @@
 								<ul class="footer-menu footer-block-contant">
 									<li><a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel">Login</a></li>
 									<li><a href="<?= base_url() ?>Home/about_us">About Us</a></li>
-									<li><a href="<?= base_url() ?>Home/about_us">Career</a></li>
+									<li><a href="<?= base_url() ?>Home/career">Career</a></li>
 								</ul>
 							</div>
 						</div>
@@ -436,9 +436,6 @@ if (!empty($popup_data)) {
 <!-- // - mixed js  -->
 <script src="<?= base_url() ?>assets/frontend/customJS/mixed.js"></script>
 <script>
-	AOS.init();
-</script>
-<script>
 	function isNumberKey(evt) {
 		var charCode = (evt.which) ? evt.which : evt.keyCode
 		if (charCode > 31 && (charCode < 48 || charCode > 57))
@@ -446,6 +443,10 @@ if (!empty($popup_data)) {
 		return true;
 	}
 </script>
+<script>
+	AOS.init();
+</script>
+
 <script>
 	$(document).ready(function() {
 		<?php if (!empty($this->session->flashdata('emessage'))) { ?>

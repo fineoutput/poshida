@@ -99,7 +99,7 @@
                 <ul class="footer-menu footer-block-contant">
                   <li><a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel">Login</a></li>
                   <li><a href="<?= base_url() ?>Home/about_us">About Us</a></li>
-                  <li><a href="<?= base_url() ?>Home/about_us">Career</a></li>
+                  <li><a href="<?= base_url() ?>Home/career">Career</a></li>
                 </ul>
               </div>
             </div>
