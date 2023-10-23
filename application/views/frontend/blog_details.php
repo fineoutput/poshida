@@ -64,7 +64,7 @@
 										<div class="blog-image blog-image1">
 											<a href="blog-detail.html">
 												<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/blog-img2.jpg"
-													alt="Xpoge">
+													alt=" ">
 											</a>
 										</div>
 										<div class="blog-detail">
@@ -84,7 +84,7 @@
 										<div class="blog-image blog-image1">
 											<a href="blog-detail.html">
 												<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/blog-img3.jpg"
-													alt="Xpoge">
+													alt=" ">
 											</a>
 										</div>
 										<div class="blog-detail">
@@ -104,7 +104,7 @@
 										<div class="blog-image blog-image1">
 											<a href="blog-detail.html">
 												<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/blog-img3.jpg"
-													alt="Xpoge">
+													alt=" ">
 											</a>
 										</div>
 										<div class="blog-detail">

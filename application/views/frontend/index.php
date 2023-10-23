@@ -412,10 +412,10 @@
   				<div class="item testimonial-main">
   					<div class="client-img-main">
   						<div class="client-img">
-  							<img alt="Xpoge" src="<?= base_url() . $testimonials->image ?>">
+  							<img alt=" " src="<?= base_url() . $testimonials->image ?>">
   						</div>
   						<div class="quote-img">
-  							<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/quote-img.png" alt="Xpoge">
+  							<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/quote-img.png" alt=" ">
   						</div>
   					</div>
   					<div class="clear-fix"></div>
