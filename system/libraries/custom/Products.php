@@ -174,9 +174,10 @@ class CI_Products
     //====================================== PRODUCT DETAIL ===============================================
     public function product_detail($url)
     {
-        $product_data = $this->CI->db->get_where('tbl_product', array('url = ' => $url, 'is_active' => 1))->result();
+        $product_data = $this->CI->db->order_by('id','desc')->get_where('tbl_product', array('url = ' => $url, 'is_active' => 1))->result();
         if (!empty($product_data)) {
             $type_exists = $this->CI->db->get_where('tbl_type', array('product_id = ' => $product_data[0]->id, 'is_active' => 1))->result();
+            // print_r($type_exists);die();
             $returnarray = array("product_data" => $product_data, "type_exists" => $type_exists);
         } else {
             $returnarray = array("product_data" => [], "type_exists" => []);

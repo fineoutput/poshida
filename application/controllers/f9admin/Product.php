@@ -1,5 +1,5 @@
 <?php
-if (! defined('BASEPATH')) {
+if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
 }
 require_once(APPPATH . 'core/CI_finecontrol.php');
@@ -15,14 +15,14 @@ class Product extends CI_finecontrol
     public function view_category()
     {
         if (!empty($this->session->userdata('admin_data'))) {
-            $data['user_name']=$this->load->get_var('user_name');
+            $data['user_name'] = $this->load->get_var('user_name');
             // echo SITE_NAME;
             // echo $this->session->userdata('image');
             // echo $this->session->userdata('position');
             // exit;
             $this->db->select('*');
             $this->db->from('tbl_category');
-            $data['category_data']= $this->db->get();
+            $data['category_data'] = $this->db->get();
             $this->load->view('admin/common/header_view', $data);
             $this->load->view('admin/product/view_category');
             $this->load->view('admin/common/footer_view');
@@ -33,17 +33,17 @@ class Product extends CI_finecontrol
     public function view_subcategory($idd)
     {
         if (!empty($this->session->userdata('admin_data'))) {
-            $data['user_name']=$this->load->get_var('user_name');
+            $data['user_name'] = $this->load->get_var('user_name');
             // echo SITE_NAME;
             // echo $this->session->userdata('image');
             // echo $this->session->userdata('position');
             // exit;
-            $id=base64_decode($idd);
-            $data['id']=$idd;
+            $id = base64_decode($idd);
+            $data['id'] = $idd;
             $this->db->select('*');
             $this->db->from('tbl_subcategory');
             $this->db->where('category_id', $id);
-            $data['subcategory_data']= $this->db->get();
+            $data['subcategory_data'] = $this->db->get();
             $this->db->select('*');
             $this->db->from('tbl_category');
             $this->db->where('id', $id);
@@ -60,13 +60,13 @@ class Product extends CI_finecontrol
     public function view_product($idd)
     {
         if (!empty($this->session->userdata('admin_data'))) {
-            $data['user_name']=$this->load->get_var('user_name');
-            $id=base64_decode($idd);
-            $data['id']=$idd;
+            $data['user_name'] = $this->load->get_var('user_name');
+            $id = base64_decode($idd);
+            $data['id'] = $idd;
             $this->db->select('*');
             $this->db->from('tbl_product');
             $this->db->where('subcategory_id', $id);
-            $data['product_data']= $this->db->get();
+            $data['product_data'] = $this->db->get();
             $this->db->select('*');
             $this->db->from('tbl_subcategory');
             $this->db->where('id', $id);
@@ -90,19 +90,19 @@ class Product extends CI_finecontrol
     public function add_product($id, $id2)
     {
         if (!empty($this->session->userdata('admin_data'))) {
-            $data['user_name']=$this->load->get_var('user_name');
-            $data['category_id']= $id;
-            $data['subcategory_id']= $id2;
+            $data['user_name'] = $this->load->get_var('user_name');
+            $data['category_id'] = $id;
+            $data['subcategory_id'] = $id2;
             $this->db->select('*');
             $this->db->from('tbl_category');
-            $data['category_data']= $this->db->get();
+            $data['category_data'] = $this->db->get();
             $this->db->select('*');
             $this->db->from('tbl_subcategory');
-            $data['subcategory_data']= $this->db->get();
+            $data['subcategory_data'] = $this->db->get();
             $this->db->select('*');
             $this->db->from('tbl_filters');
             $this->db->where('is_active', 1);
-            $data['filters_data']= $this->db->get();
+            $data['filters_data'] = $this->db->get();
             $this->load->view('admin/common/header_view', $data);
             $this->load->view('admin/product/add_product');
             $this->load->view('admin/common/footer_view');
@@ -111,7 +111,7 @@ class Product extends CI_finecontrol
         }
     }
     //========================add_user_data=========================\\
-    public function add_product_data($t, $iw="")
+    public function add_product_data($t, $iw = "")
     {
         if (!empty($this->session->userdata('admin_data'))) {
             $this->load->helper(array('form', 'url'));
@@ -137,43 +137,43 @@ class Product extends CI_finecontrol
                 $this->form_validation->set_rules('dsc', 'dsc', 'required');
                 $this->form_validation->set_rules('hsn_code', 'hsn_code', 'required|xss_clean|trim');
                 $this->form_validation->set_rules('filter_arr[]', 'filter_arr', 'xss_clean|trim');
-                if ($this->form_validation->run()== true) {
-                    $name=$this->input->post('name');
-                    $category_id=$this->input->post('category_id');
-                    $subcategory_id=$this->input->post('subcategory_id');
-                    $image1=$this->input->post('image1');
-                    $description=$this->input->post('description');
-                    $sku=$this->input->post('sku');
-                    $exclusive=$this->input->post('exclusive');
-                    $tags=$this->input->post('tags');
-                    $weight=$this->input->post('weight');
-                    $vendor_code=$this->input->post('vendor_code');
-                    $product_type=$this->input->post('product_type');
-                    $product_view=$this->input->post('product_view');
-                    $trending=$this->input->post('trending');
+                if ($this->form_validation->run() == true) {
+                    $name = $this->input->post('name');
+                    $category_id = $this->input->post('category_id');
+                    $subcategory_id = $this->input->post('subcategory_id');
+                    $image1 = $this->input->post('image1');
+                    $description = $this->input->post('description');
+                    $sku = $this->input->post('sku');
+                    $exclusive = $this->input->post('exclusive');
+                    $tags = $this->input->post('tags');
+                    $weight = $this->input->post('weight');
+                    $vendor_code = $this->input->post('vendor_code');
+                    $product_type = $this->input->post('product_type');
+                    $product_view = $this->input->post('product_view');
+                    $trending = $this->input->post('trending');
                     // -------------------changes-------------------------
-                    $title=$this->input->post('title');
-                    $keyword=$this->input->post('keyword');
-                    $dsc=$this->input->post('dsc');
-                    $hsn_code=$this->input->post('hsn_code');
-                    $filter_arr=json_decode($this->input->post('filter_arr'));
+                    $title = $this->input->post('title');
+                    $keyword = $this->input->post('keyword');
+                    $dsc = $this->input->post('dsc');
+                    $hsn_code = $this->input->post('hsn_code');
+                    $filter_arr = json_decode($this->input->post('filter_arr'));
                     // print_r($filter_arr);
                     $length = count($filter_arr);
-                    $attribute_arr=[];
-                    $all_filter_arr=[];
-                    $all_attribute_arr=[];
+                    $attribute_arr = [];
+                    $all_filter_arr = [];
+                    $all_attribute_arr = [];
                     if (!empty($filter_arr)) {
-                        for ($k=0; $k<$length;$k++) {
-                            $attributes=$this->input->post('attribute_'.$filter_arr[$k]);
+                        for ($k = 0; $k < $length; $k++) {
+                            $attributes = $this->input->post('attribute_' . $filter_arr[$k]);
                             array_push($attribute_arr, $attributes);
                             //------- all filter array -----
-                                if (!empty($attributes)) {
-                                    array_push($all_filter_arr, $filter_arr[$k]);
-                                }
+                            if (!empty($attributes)) {
+                                array_push($all_filter_arr, $filter_arr[$k]);
+                            }
                             //------- all attribute array -----
                             if (!empty($all_attribute_arr)) {
                                 if (!empty($attributes)) {
-                                    $all_attribute_arr=array_merge($all_attribute_arr, $attributes);
+                                    $all_attribute_arr = array_merge($all_attribute_arr, $attributes);
                                 }
                             } else {
                                 $all_attribute_arr = $attributes;
@@ -182,27 +182,27 @@ class Product extends CI_finecontrol
                     }
                     $ip = $this->input->ip_address();
                     date_default_timezone_set("Asia/Calcutta");
-                    $cur_date=date("Y-m-d H:i:s");
-                    $addedby=$this->session->userdata('admin_id');
+                    $cur_date = date("Y-m-d H:i:s");
+                    $addedby = $this->session->userdata('admin_id');
                     $pro = explode(" ", $name);
                     $url = implode("-", $pro);
                     //========================image_1 upload========================\\
                     $this->load->library('upload');
-                    $image1="";
-                    $img1='image1';
-                    $file_check=($_FILES['image1']['error']);
-                    if ($file_check!=4) {
+                    $image1 = "";
+                    $img1 = 'image1';
+                    $file_check = ($_FILES['image1']['error']);
+                    if ($file_check != 4) {
                         $image_upload_folder = FCPATH . "assets/uploads/product/";
                         if (!file_exists($image_upload_folder)) {
                             mkdir($image_upload_folder, DIR_WRITE_MODE, true);
                         }
-                        $new_file_name="product".date("YmdHis");
+                        $new_file_name = "product" . date("YmdHis");
                         $this->upload_config = array(
-                  'upload_path'   => $image_upload_folder,
-                  'file_name' => $new_file_name,
-                  'allowed_types' =>'jpg|jpeg|png|webp',
-                  'max_size'      => 300
-                  );
+                            'upload_path'   => $image_upload_folder,
+                            'file_name' => $new_file_name,
+                            'allowed_types' => 'jpg|jpeg|png|webp',
+                            'max_size'      => 300
+                        );
                         $this->upload->initialize($this->upload_config);
                         if (!$this->upload->do_upload($img1)) {
                             $upload_error = $this->upload->display_errors();
@@ -212,90 +212,98 @@ class Product extends CI_finecontrol
                             redirect($_SERVER['HTTP_REFERER']);
                         } else {
                             $file_info = $this->upload->data();
-                            $videoNAmePath = "assets/uploads/product/".$file_info['file_name'];
-                            $image1=$videoNAmePath;
+                            $videoNAmePath = "assets/uploads/product/" . $file_info['file_name'];
+                            $image1 = $videoNAmePath;
                             // echo json_encode($file_info);
                         }
                     }
                     $cat_active = $this->db->get_where('tbl_category', array('id = ' => $category_id))->result();
                     $subcat_active = $this->db->get_where('tbl_subcategory', array('id = ' => $subcategory_id))->result();
-                    $typ=base64_decode($t);
-                    if ($typ==1) {
-                        $data_insert = array('category_id'=>$category_id,
-                    'subcategory_id'=>$subcategory_id,
-                    'name'=>$name,
-                    'image1'=>$image1,
-                    'exclusive' =>$exclusive,
-                    'description' =>$description,
-                    'sku' =>$sku,
-                    'vendor_code' =>$vendor_code,
-                    'tags' =>$tags,
-                    'weight' =>$weight,
-                    // -------------changes-------------------
-                    'title'=>$title,
-                    'keyword'=>$keyword,
-                    'dsc'=>$dsc,
-                    'product_type' =>$product_type,
-                    'product_view' =>$product_view,
-                    'hsn_code' =>$hsn_code,
-                    'filter_ids' =>json_encode($filter_arr),
-                    'filter_attributes' =>json_encode($attribute_arr),
-                    'all_filters' =>json_encode($all_filter_arr),
-                    'all_attributes' =>json_encode($all_attribute_arr),
-                    'url' =>$url,
-                    'added_by' =>$addedby,
-                    'cat_active' =>$cat_active[0]->is_active,
-                    'subcat_active' =>$subcat_active[0]->is_active,
-                    'is_active' =>0,
-                    'date'=>$cur_date
-                    );
-                        $last_id=$this->base_model->insert_table("tbl_product", $data_insert, 1) ;
-                        if ($last_id!=0) {
+                    $typ = base64_decode($t);
+                    if ($typ == 1) {
+                        $pro_check = $this->db->get_where('tbl_product', array('name' => $name))->row();
+                        if (!empty($pro_check)) {
+                            $this->session->set_flashdata('emessage', 'Product name is already exist!');
+                            redirect($_SERVER['HTTP_REFERER']);
+                            die();
+                        }
+                        $data_insert = array(
+                            'category_id' => $category_id,
+                            'subcategory_id' => $subcategory_id,
+                            'name' => $name,
+                            'image1' => $image1,
+                            'exclusive' => $exclusive,
+                            'description' => $description,
+                            'sku' => $sku,
+                            'vendor_code' => $vendor_code,
+                            'tags' => $tags,
+                            'weight' => $weight,
+                            // -------------changes-------------------
+                            'title' => $title,
+                            'keyword' => $keyword,
+                            'dsc' => $dsc,
+                            'product_type' => $product_type,
+                            'product_view' => $product_view,
+                            'hsn_code' => $hsn_code,
+                            'filter_ids' => json_encode($filter_arr),
+                            'filter_attributes' => json_encode($attribute_arr),
+                            'all_filters' => json_encode($all_filter_arr),
+                            'all_attributes' => json_encode($all_attribute_arr),
+                            'url' => $url,
+                            'added_by' => $addedby,
+                            'cat_active' => $cat_active[0]->is_active,
+                            'subcat_active' => $subcat_active[0]->is_active,
+                            'is_active' => 0,
+                            'date' => $cur_date
+                        );
+                        $last_id = $this->base_model->insert_table("tbl_product", $data_insert, 1);
+                        if ($last_id != 0) {
                             $this->session->set_flashdata('smessage', 'Data inserted successfully');
-                            redirect("dcadmin/Type/view_type/".base64_encode($last_id), "refresh");
+                            redirect("dcadmin/Type/view_type/" . base64_encode($last_id), "refresh");
                         } else {
                             $this->session->set_flashdata('emessage', 'Sorry error occurred');
                             redirect($_SERVER['HTTP_REFERER']);
                         }
                     }
-                    if ($typ==2) {
-                        $idw=base64_decode($iw);
+                    if ($typ == 2) {
+                        $idw = base64_decode($iw);
                         $this->db->select('*');
                         $this->db->from('tbl_product');
                         $this->db->where('id', $idw);
-                        $pro_data= $this->db->get()->row();
+                        $pro_data = $this->db->get()->row();
                         if (empty($image1)) {
-                            $image1=$pro_data->image1;
+                            $image1 = $pro_data->image1;
                         }
-                        $data_insert = array('category_id'=>$category_id,
-                       'subcategory_id'=>$subcategory_id,
-                       'name'=>$name,
-                       'image1'=>$image1,
-                       'exclusive' =>$exclusive,
-                       'description' =>$description,
-                       'sku' =>$sku,
-                       'vendor_code' =>$vendor_code,
-                       'tags' =>$tags,
-                       'weight' =>$weight,
-                       'product_type' =>$product_type,
-                       'product_view' =>$product_view,
-                       'trending' =>$trending,
-                    //    --------------changes-------------
-                       'title'=>$title,
-                        'keyword'=>$keyword,
-                        'dsc'=>$dsc,
-                       'hsn_code' =>$hsn_code,
-                       'url' =>$url,
-                       'filter_ids' =>json_encode($filter_arr),
-                       'filter_attributes' =>json_encode($attribute_arr),
-                       'all_filters' =>json_encode($all_filter_arr),
-                       'all_attributes' =>json_encode($all_attribute_arr),
-          );
+                        $data_insert = array(
+                            'category_id' => $category_id,
+                            'subcategory_id' => $subcategory_id,
+                            'name' => $name,
+                            'image1' => $image1,
+                            'exclusive' => $exclusive,
+                            'description' => $description,
+                            'sku' => $sku,
+                            'vendor_code' => $vendor_code,
+                            'tags' => $tags,
+                            'weight' => $weight,
+                            'product_type' => $product_type,
+                            'product_view' => $product_view,
+                            'trending' => $trending,
+                            //    --------------changes-------------
+                            'title' => $title,
+                            'keyword' => $keyword,
+                            'dsc' => $dsc,
+                            'hsn_code' => $hsn_code,
+                            'url' => $url,
+                            'filter_ids' => json_encode($filter_arr),
+                            'filter_attributes' => json_encode($attribute_arr),
+                            'all_filters' => json_encode($all_filter_arr),
+                            'all_attributes' => json_encode($all_attribute_arr),
+                        );
                         $this->db->where('id', $idw);
-                        $last_id=$this->db->update('tbl_product', $data_insert);
-                        if ($last_id!=0) {
+                        $last_id = $this->db->update('tbl_product', $data_insert);
+                        if ($last_id != 0) {
                             $this->session->set_flashdata('smessage', 'Data updated successfully');
-                            redirect("dcadmin/product/view_product/".base64_encode($subcategory_id), "refresh");
+                            redirect("dcadmin/product/view_product/" . base64_encode($subcategory_id), "refresh");
                         } else {
                             $this->session->set_flashdata('emessage', 'Sorry error occurred');
                             redirect($_SERVER['HTTP_REFERER']);
@@ -317,31 +325,31 @@ class Product extends CI_finecontrol
     public function update_product($idd)
     {
         if (!empty($this->session->userdata('admin_data'))) {
-            $data['user_name']=$this->load->get_var('user_name');
+            $data['user_name'] = $this->load->get_var('user_name');
             $this->db->select('*');
             $this->db->from('tbl_category');
             //$this->db->where('id',$usr);
-            $data['category_data']= $this->db->get();
-            $id=base64_decode($idd);
-            $data['id']=$idd;
+            $data['category_data'] = $this->db->get();
+            $id = base64_decode($idd);
+            $data['id'] = $idd;
             $this->db->select('*');
             $this->db->from('tbl_product');
             $this->db->where('id', $id);
-            $dsa= $this->db->get();
-            $data['product']=$dsa->row();
+            $dsa = $this->db->get();
+            $data['product'] = $dsa->row();
             $this->db->select('*');
             $this->db->from('tbl_subcategory');
             $this->db->where('category_id', $data['product']->category_id);
-            $data['subcategory_data']= $this->db->get();
+            $data['subcategory_data'] = $this->db->get();
             $this->db->select('*');
             $this->db->from('tbl_product');
             $this->db->where('id', $id);
-            $prodata= $this->db->get()->row();
+            $prodata = $this->db->get()->row();
             $data['subcategory_id'] = $prodata->subcategory_id;
             $this->db->select('*');
             $this->db->from('tbl_filters');
             $this->db->where('is_active', 1);
-            $data['filters_data']= $this->db->get();
+            $data['filters_data'] = $this->db->get();
             $this->load->view('admin/common/header_view', $data);
             $this->load->view('admin/product/update_product');
             $this->load->view('admin/common/footer_view');
@@ -353,13 +361,13 @@ class Product extends CI_finecontrol
     public function delete_product($idd)
     {
         if (!empty($this->session->userdata('admin_data'))) {
-            $data['user_name']=$this->load->get_var('user_name');
-            $id=base64_decode($idd);
-            if ($this->load->get_var('position')=="Super Admin") {
-                $zapak1=$this->db->delete('tbl_cart', array('product_id' => $id));
-                $zapak1=$this->db->delete('tbl_wishlist', array('product_id' => $id));
-                $zapak=$this->db->delete('tbl_product', array('id' => $id));
-                if ($zapak!=0) {
+            $data['user_name'] = $this->load->get_var('user_name');
+            $id = base64_decode($idd);
+            if ($this->load->get_var('position') == "Super Admin") {
+                $zapak1 = $this->db->delete('tbl_cart', array('product_id' => $id));
+                $zapak1 = $this->db->delete('tbl_wishlist', array('product_id' => $id));
+                $zapak = $this->db->delete('tbl_product', array('id' => $id));
+                if ($zapak != 0) {
                     $this->session->set_flashdata('smessage', 'Data deleted successfully');
                     redirect($_SERVER['HTTP_REFERER']);
                 } else {
@@ -367,7 +375,7 @@ class Product extends CI_finecontrol
                     exit;
                 }
             } else {
-                $data['e']="Sorry You Don't Have Permission To Delete Anything.";
+                $data['e'] = "Sorry You Don't Have Permission To Delete Anything.";
                 // exit;
                 $this->load->view('errors/error500admin', $data);
             }
@@ -379,46 +387,46 @@ class Product extends CI_finecontrol
     public function updateproductStatus($idd, $t)
     {
         if (!empty($this->session->userdata('admin_data'))) {
-            $data['user_name']=$this->load->get_var('user_name');
-            $id=base64_decode($idd);
-            if ($t=="active") {
+            $data['user_name'] = $this->load->get_var('user_name');
+            $id = base64_decode($idd);
+            if ($t == "active") {
                 $this->db->select('*');
                 $this->db->from('tbl_type');
                 $this->db->where('is_active', 1);
                 $this->db->where('product_id', $id);
                 $type_data = $this->db->get()->row();
                 if (!empty($type_data)) {
-                    $data_update = array('is_active'=>1);
+                    $data_update = array('is_active' => 1);
                     $this->session->set_flashdata('smessage', 'Status updated successfully');
                 } else {
-                    $data_update = array('is_active'=>0);
+                    $data_update = array('is_active' => 0);
                     $this->session->set_flashdata('emessage', 'Active type does not exist!');
                 }
                 $this->db->where('id', $id);
-                $zapak=$this->db->update('tbl_product', $data_update);
-                $zapak1=$this->db->delete('tbl_cart', array('product_id' => $id));
-                $zapak2=$this->db->delete('tbl_wishlist', array('product_id' => $id));
+                $zapak = $this->db->update('tbl_product', $data_update);
+                $zapak1 = $this->db->delete('tbl_cart', array('product_id' => $id));
+                $zapak2 = $this->db->delete('tbl_wishlist', array('product_id' => $id));
                 $this->session->set_flashdata('smessage', 'Data updated successfully');
-                if ($zapak!=0) {
+                if ($zapak != 0) {
                     redirect($_SERVER['HTTP_REFERER']);
                 } else {
                     echo "Error";
                     exit;
                 }
             }
-            if ($t=="inactive") {
+            if ($t == "inactive") {
                 $data_update = array(
-                            'is_active'=>0
-                            );
+                    'is_active' => 0
+                );
                 $this->db->where('id', $id);
-                $zapak=$this->db->update('tbl_product', $data_update);
-                $zapak1=$this->db->delete('tbl_cart', array('product_id' => $id));
-                $zapak2=$this->db->delete('tbl_wishlist', array('product_id' => $id));
+                $zapak = $this->db->update('tbl_product', $data_update);
+                $zapak1 = $this->db->delete('tbl_cart', array('product_id' => $id));
+                $zapak2 = $this->db->delete('tbl_wishlist', array('product_id' => $id));
                 $this->session->set_flashdata('smessage', 'Data updated successfully');
-                if ($zapak!=0) {
+                if ($zapak != 0) {
                     redirect($_SERVER['HTTP_REFERER']);
                 } else {
-                    $data['e']="Error occurred";
+                    $data['e'] = "Error occurred";
                     // exit;
                     $this->load->view('errors/error500admin', $data);
                 }
@@ -430,17 +438,17 @@ class Product extends CI_finecontrol
     //============== category subcategory =============
     public function get_subcategory()
     {
-        $cat_id=$_GET['cat_id'];
+        $cat_id = $_GET['cat_id'];
         $this->db->select('*');
         $this->db->from('tbl_subcategory');
         $this->db->where('category_id', $cat_id);
-        $subcat_data= $this->db->get();
-        $res=[];
+        $subcat_data = $this->db->get();
+        $res = [];
         foreach ($subcat_data->result() as $data) {
-            $res[]= array(
-          'id'=>$data->id,
-          'name'=>$data->name,
-        );
+            $res[] = array(
+                'id' => $data->id,
+                'name' => $data->name,
+            );
         }
         echo json_encode($res);
     }
@@ -448,18 +456,18 @@ class Product extends CI_finecontrol
     public function view_buy_with_it($idd)
     {
         if (!empty($this->session->userdata('admin_data'))) {
-            $id=base64_decode($idd);
-            $data['id']=$idd;
+            $id = base64_decode($idd);
+            $data['id'] = $idd;
             $this->db->select('*');
             $this->db->from('tbl_product');
             // $this->db->where('is_active', 1);
             // $this->db->where('id', $id);
-            $data['product_data']= $this->db->get();
+            $data['product_data'] = $this->db->get();
             $this->db->select('*');
             $this->db->from('tbl_product');
             // $this->db->where('is_active', 1);
             $this->db->where('id', $id);
-            $product_data= $this->db->get()->row();
+            $product_data = $this->db->get()->row();
             $this->db->select('*');
             $this->db->from('tbl_subcategory');
             $this->db->where('id', $product_data->subcategory_id);
@@ -483,16 +491,16 @@ class Product extends CI_finecontrol
     public function add_buy_with_it($idd)
     {
         if (!empty($this->session->userdata('admin_data'))) {
-            $id=base64_decode($idd);
-            $data['id']=$idd;
+            $id = base64_decode($idd);
+            $data['id'] = $idd;
             $this->db->select('*');
             $this->db->from('tbl_product');
             $this->db->where('id !=', $id);
-            $data['product_data']= $this->db->get();
+            $data['product_data'] = $this->db->get();
             $this->db->select('*');
             $this->db->from('tbl_product');
             $this->db->where('id', $id);
-            $data['pro_data']= $this->db->get()->row();
+            $data['pro_data'] = $this->db->get()->row();
             $this->load->view('admin/common/header_view', $data);
             $this->load->view('admin/product/add_buy_with_it');
             $this->load->view('admin/common/footer_view');
@@ -501,7 +509,7 @@ class Product extends CI_finecontrol
         }
     }
     //============== add Buy With It Data =============
-    public function add_buy_with_it_data($t, $iw="")
+    public function add_buy_with_it_data($t, $iw = "")
     {
         if (!empty($this->session->userdata('admin_data'))) {
             $this->load->helper(array('form', 'url'));
@@ -511,19 +519,19 @@ class Product extends CI_finecontrol
                 // $this->form_validation->set_rules('user_id', 'user_id', 'xss_clean|trim');
                 $this->form_validation->set_rules('product_id', 'product_id', 'required|xss_clean|trim');
                 $this->form_validation->set_rules('pro_id', 'pro_id', 'required|xss_clean|trim');
-                if ($this->form_validation->run()== true) {
+                if ($this->form_validation->run() == true) {
                     // $user_id=$this->input->post('user_id');
-                    $pro_id=$this->input->post('pro_id');
-                    $product_id=$this->input->post('product_id');
-                    $id=base64_decode($pro_id);
+                    $pro_id = $this->input->post('pro_id');
+                    $product_id = $this->input->post('product_id');
+                    $id = base64_decode($pro_id);
                     // print_r([$product_id,2]);die();
                     // print_r($product_id);die();
                     $this->db->select('*');
                     $this->db->from('tbl_product');
                     $this->db->where('id', $id);
-                    $pro_data= $this->db->get()->row();
+                    $pro_data = $this->db->get()->row();
                     if (!empty($pro_data->buy_with)) {
-                        $buy_arr=json_decode($pro_data->buy_with);
+                        $buy_arr = json_decode($pro_data->buy_with);
                         array_push($buy_arr, $product_id);
                         $buy_arr = json_encode($buy_arr);
                     } else {
@@ -531,20 +539,21 @@ class Product extends CI_finecontrol
                     }
                     $ip = $this->input->ip_address();
                     date_default_timezone_set("Asia/Calcutta");
-                    $cur_date=date("Y-m-d H:i:s");
-                    $addedby=$this->session->userdata('admin_id');
-                    $data_insert = array('buy_with'=>$buy_arr,
-            // 'user_id'=>$user_id,
-            'added_by' =>$addedby,
-            'is_active' =>1,
-            'date'=>$cur_date
-  );
+                    $cur_date = date("Y-m-d H:i:s");
+                    $addedby = $this->session->userdata('admin_id');
+                    $data_insert = array(
+                        'buy_with' => $buy_arr,
+                        // 'user_id'=>$user_id,
+                        'added_by' => $addedby,
+                        'is_active' => 1,
+                        'date' => $cur_date
+                    );
                     // die();
                     $this->db->where('id', $id);
-                    $last_id=$this->db->update('tbl_product', $data_insert);
-                    if ($last_id!=0) {
+                    $last_id = $this->db->update('tbl_product', $data_insert);
+                    if ($last_id != 0) {
                         $this->session->set_flashdata('smessage', 'Data inserted successfully');
-                        redirect("dcadmin/Product/view_buy_with_it/".$pro_id, "refresh");
+                        redirect("dcadmin/Product/view_buy_with_it/" . $pro_id, "refresh");
                     } else {
                         $this->session->set_flashdata('emessage', 'Sorry error occurred');
                         redirect($_SERVER['HTTP_REFERER']);
@@ -565,26 +574,27 @@ class Product extends CI_finecontrol
     public function remove_buy_with($pro_id, $buy_id)
     {
         if (!empty($this->session->userdata('admin_data'))) {
-            $pro_id=base64_decode($pro_id);
-            $buy_id=base64_decode($buy_id);
+            $pro_id = base64_decode($pro_id);
+            $buy_id = base64_decode($buy_id);
             $this->db->select('*');
             $this->db->from('tbl_product');
             $this->db->where('id', $pro_id);
-            $pro_data= $this->db->get()->row();
+            $pro_data = $this->db->get()->row();
             $buy_arr = json_decode($pro_data->buy_with);
             $length = count($buy_arr);
             $buy_arr2 = [];
             // echo$length;die();
-            for ($j=0; $j<$length;$j++) {
+            for ($j = 0; $j < $length; $j++) {
                 if ($buy_id != $buy_arr[$j]) {
                     array_push($buy_arr2, $buy_arr[$j]);
                 }
             }
             // print_r($buy_arr2);die();
-            $data_update = array('buy_with'=>json_encode($buy_arr2),
-                      );
+            $data_update = array(
+                'buy_with' => json_encode($buy_arr2),
+            );
             $this->db->where('id', $pro_id);
-            $zapak=$this->db->update('tbl_product', $data_update);
+            $zapak = $this->db->update('tbl_product', $data_update);
             if (!empty($zapak)) {
                 $this->session->set_flashdata('smessage', 'Item removed successfully!');
                 redirect($_SERVER['HTTP_REFERER']);
@@ -603,23 +613,23 @@ class Product extends CI_finecontrol
         //-----------UPLOAD FILE INTO SERVER --------
         $ip = $this->input->ip_address();
         date_default_timezone_set("Asia/Calcutta");
-        $cur_date=date("Y-m-d H:i:s");
-        $addedby=$this->session->userdata('admin_id');
+        $cur_date = date("Y-m-d H:i:s");
+        $addedby = $this->session->userdata('admin_id');
         $this->load->library('upload');
-        $img1='uploadFile';
-        $file_check=($_FILES['uploadFile']['error']);
-        if ($file_check!=4) {
+        $img1 = 'uploadFile';
+        $file_check = ($_FILES['uploadFile']['error']);
+        if ($file_check != 4) {
             $image_upload_folder = FCPATH . "assets/uploads/product/excel";
             if (!file_exists($image_upload_folder)) {
                 mkdir($image_upload_folder, DIR_WRITE_MODE, true);
             }
-            $new_file_name="product_excel".date("YmdHis");
+            $new_file_name = "product_excel" . date("YmdHis");
             $this->upload_config = array(
-              'upload_path'   => $image_upload_folder,
-              'file_name' => $new_file_name,
-              'allowed_types' =>'xlsx|xls|csv',
-              'max_size'      => 25000
-              );
+                'upload_path'   => $image_upload_folder,
+                'file_name' => $new_file_name,
+                'allowed_types' => 'xlsx|xls|csv',
+                'max_size'      => 25000
+            );
             $this->upload->initialize($this->upload_config);
             if (!$this->upload->do_upload($img1)) {
                 $upload_error = $this->upload->display_errors();
@@ -627,8 +637,8 @@ class Product extends CI_finecontrol
                 redirect($_SERVER['HTTP_REFERER']);
             } else {
                 $file_info = $this->upload->data();
-                $videoNAmePath = "assets/uploads/product/excel/".$file_info['file_name'];
-                $inputFileName=$videoNAmePath;
+                $videoNAmePath = "assets/uploads/product/excel/" . $file_info['file_name'];
+                $inputFileName = $videoNAmePath;
             }
         }
         //-------- start excel read and insert into db
@@ -638,34 +648,36 @@ class Product extends CI_finecontrol
             $objPHPExcel = $objReader->load($inputFileName);
             $allDataInSheet = $objPHPExcel->getActiveSheet()->toArray(null, true, true, true);
             $flag = true;
-            $i=0;
+            $i = 0;
             foreach ($allDataInSheet as $value) {
                 if ($flag) {
-                    $flag =false;
+                    $flag = false;
                     continue;
                 }
                 $pro = explode(" ", $value['C']);
                 $url = implode("-", $pro);
-                $data_insert = array('category_id'=>$value['A'],
-                              'subcategory_id'=>$value['B'],
-                              'name'=>$value['C'],
-                              'image1'=>$value['D'],
-                              'sku' =>$value['E'],
-                              'hsn_code' =>$value['F'],
-                              'vendor_code' =>$value['G'],
-                              'product_type'=>$value['H'],
-                              'product_view'=>$value['I'],
-                              'description'=>$value['J'],
-                              'exclusive'=>$value['K'],
-                              'tags'=>$value['L'],
-                              'weight'=>$value['M'],
-                              'trending'=>$value['N'],
-                              'url'=>$url,
-                              'is_active'=>1,
-                              'ip'=>$ip,
-                              'added_by'=>$addedby,
-                              'date'=>$cur_date );
-                $last_id=$this->base_model->insert_table("tbl_product", $data_insert, 1) ;
+                $data_insert = array(
+                    'category_id' => $value['A'],
+                    'subcategory_id' => $value['B'],
+                    'name' => $value['C'],
+                    'image1' => $value['D'],
+                    'sku' => $value['E'],
+                    'hsn_code' => $value['F'],
+                    'vendor_code' => $value['G'],
+                    'product_type' => $value['H'],
+                    'product_view' => $value['I'],
+                    'description' => $value['J'],
+                    'exclusive' => $value['K'],
+                    'tags' => $value['L'],
+                    'weight' => $value['M'],
+                    'trending' => $value['N'],
+                    'url' => $url,
+                    'is_active' => 1,
+                    'ip' => $ip,
+                    'added_by' => $addedby,
+                    'date' => $cur_date
+                );
+                $last_id = $this->base_model->insert_table("tbl_product", $data_insert, 1);
                 $i++;
             }
             if ($last_id) {
@@ -676,8 +688,8 @@ class Product extends CI_finecontrol
                 redirect($_SERVER['HTTP_REFERER']);
             }
         } catch (Exception $e) {
-            die('Error loading file "'.pathinfo($inputFileName, PATHINFO_BASENAME)
-. '": ' .$e->getMessage());
+            die('Error loading file "' . pathinfo($inputFileName, PATHINFO_BASENAME)
+                . '": ' . $e->getMessage());
         }
     }
 }

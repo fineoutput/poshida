@@ -31,6 +31,7 @@
       display: none;
     }
   }
+
   .card {
     position: relative;
     display: -ms-flexbox;
@@ -204,7 +205,7 @@
     }
   }
 
-  
+
 
   .accordion .card .card-header {
     background-color: transparent;
@@ -214,7 +215,7 @@
   }
 
   .accordion .card-header a {
-   
+
     display: block;
     line-height: normal;
   }
@@ -259,7 +260,7 @@
 
   .accordion_style1 .card-header a::after {
     content: "\f106";
-   
+
     font-family: "FontAwesome";
     font-size: 16px;
     font-weight: normal;
@@ -454,7 +455,7 @@
     margin-top: 174px;
   }
 
-  
+
   p {
     color: #687188;
     line-height: 28px;
@@ -471,7 +472,7 @@
     border-width: 1px;
     cursor: pointer;
     line-height: normal;
-  
+
     text-transform: capitalize;
     transition: all 0.3s ease-in-out;
   }
@@ -826,7 +827,11 @@
                                         $type_data = $this->db->get_where('tbl_type', array('product_id = ' => $product_data[0]->id))->result();
                                       ?>
                                         <tr>
-                                          <td class="product-thumbnail"><a href="<?= base_url() ?>Home/product_detail/<?= $product_data[0]->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><img src="<?= base_url() . $type_data[0]->image ?>" alt="<?= $product_data[0]->name ?>"></a></td>
+                                          <? if (!empty($type_data)) { ?>
+                                            <td class="product-thumbnail"><a href="<?= base_url() ?>Home/product_detail/<?= $product_data[0]->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><img src="<?= base_url() . $type_data[0]->image ?>" alt="<?= $product_data[0]->name ?>"></a></td>
+                                          <? } else { ?>
+                                            <td class="product-thumbnail">Type not found</td>
+                                          <? } ?>
                                           <td class="product-name" data-title="Product"><a href="javascript:;"><?= $product_data[0]->name ?></a></td>
                                           <td class="product-price" data-title="Price"><?= $product_data[0]->sku ?></td>
                                         </tr>
