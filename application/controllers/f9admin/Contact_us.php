@@ -30,8 +30,8 @@ class Contact_Us extends CI_finecontrol
             redirect("login/admin_login", "refresh");
         }
     }
-    //====================view_carrier==================\\
-    public function view_carrier()
+    //====================view_career==================\\
+    public function view_career()
     {
         if (!empty($this->session->userdata('admin_data'))) {
             $data['user_name']=$this->load->get_var('user_name');
@@ -42,7 +42,7 @@ class Contact_Us extends CI_finecontrol
             $data['contact_us_data']= $this->db->get();
 
             $this->load->view('admin/common/header_view', $data);
-            $this->load->view('admin/contact_us/view_carrier');
+            $this->load->view('admin/contact_us/view_career');
             $this->load->view('admin/common/footer_view');
         } else {
             redirect("login/admin_login", "refresh");

@@ -1,7 +1,7 @@
 <div class="content-wrapper">
   <section class="content-header">
     <h1>
-      Carrier
+      Career
     </h1>
     <ol class="breadcrumb">
       <li><a href="<?php echo base_url() ?>dcadmin/Home"><i class="fa fa-dashboard"></i> Dashboard</a></li>
@@ -14,7 +14,7 @@
         <!-- <a class="btn custom_btn" href="<?php echo base_url() ?>dcadmin/contact_us/add_contact_us" role="button" style="margin-bottom:12px;"> Add contact_us</a> -->
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-money fa-fw"></i>View Carrier</h3>
+            <h3 class="panel-title"><i class="fa fa-money fa-fw"></i>View Career</h3>
           </div>
           <div class="panel panel-default">
 
