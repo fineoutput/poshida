@@ -6,7 +6,7 @@
                 <h1 class="banner-title">Contact us</h1>
                 <div class="breadcrumb">
                     <ul class="inline">
-                        <li><a href="<?=base_url()?>">Home</a></li>
+                        <li><a href="<?= base_url() ?>">Home</a></li>
                         <li>Contact us</li>
                     </ul>
                 </div>
@@ -45,7 +45,7 @@
                                             </div>
                                             <div class="contact-box-detail">
                                                 <h4 class="contact-title">Email</h4>
-                                                <p>Poshida.ronak@gmail.com</p>
+                                                <p>info@poshida.in</p>
                                             </div>
                                         </li>
                                         <li>

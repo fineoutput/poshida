@@ -80,7 +80,7 @@
               <p>An easy cancellation process is available for all our esteemed customers. You can cancel your online order before the product has been shipped. Your entire order amount will be refunded.</p>
               <p style="color:red">Prepaid orders are not eligible for cancellation.</p>
               <p>You can cancel an order in an easy step:</p>
-              <p>Email us on <b>contactus@poshida.co.in</b></p>
+              <p>Email us on <b>customercare@poshida.in</b></p>
               <p>Please note that the complete order needs to be canceled. We do not accept Partial order cancellation requests. </p>
               <p>The customer agrees not to dispute the decision made by poshida and accept The poshida STORE’s decision regarding the cancellation.</p>
               <hr>

@@ -140,7 +140,7 @@
                       <img src="<?= base_url() ?>assets/frontend/img/mail-icon.svg" alt=" ">
                     </div>
                     <div class="contact-box-detail" style="cursor: pointer;">
-                      <p> <a href="mailto:Poshida.ronak@gmail.com">Poshida.ronak@gmail.com</a></p>
+                      <p> <a href="mailto:info@poshida.in">info@poshida.in</a></p>
                     </div>
                   </li>
                 </ul>
@@ -157,7 +157,7 @@
           </div>
         </div>
         <div class="col-12">
-          <div class="social-media">
+          <div class="social-media mt-1">
             <ul>
               <li><a href="https://www.facebook.com/profile.php?id=61551728737337" target="_blank"><i class="fa fa-facebook"></i></a></li>
               <li><a href="https://www.pinterest.com/Poshida_/" target="_blank"><i class="fa fa-pinterest"></i></a></li>

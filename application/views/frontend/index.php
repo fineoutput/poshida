@@ -448,7 +448,7 @@
   				<div class="col-lg-12">
   					<div class="row">
   						<div class="fvsx owl-carousel">
-  							<?php $i = 1;
+						  <?php $i = 1;
 								foreach ($blog_data->result() as $blog) { ?>
   								<div class=" m-3 item">
   									<div class="blog-item">

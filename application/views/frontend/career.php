@@ -45,7 +45,7 @@
                                             </div>
                                             <div class="contact-box-detail">
                                                 <h4 class="contact-title">Email</h4>
-                                                <p>Poshida.ronak@gmail.com</p>
+                                                <p>hr@poshida.in</p>
                                             </div>
                                         </li>
                                         <li>
