@@ -16,12 +16,24 @@
     padding: 10px;
     margin-bottom: 0px;
   }
+  footer .social-media {
+    padding: 0px 0 1px 0px;
+}
 
   @media(max-width:381px) {
     .text-footer-p {
       margin-left: 0px !important;
     }
   }
+     
+	.social-media.mt-1 ul.iconn li a i {
+    color: #c68fa6;
+    font-size: 20px;
+}
+	.social-media.mt-1 ul.iconn li a i:hover {
+    color: white;
+}
+
 </style>
 <!-- Newslatter section start -->
 <section class="newsletter-section align-center ptb-100">
@@ -70,7 +82,7 @@
           <div class="col-12 col-lg-3 col-md-6">
             <div class="footer-static-block">
               <span class="opener plus"></span>
-              <h3 class="head-three">Information</h3>
+              <h3 class="head-three">Quick Help</h3>
               <ul class="footer-menu footer-block-contant">
                 <li><a href="<?= base_url() ?>Home/privacy_policy">Privacy & Policy</a></li>
                 <li><a href="<?= base_url() ?>Home/return_and_replace">Returns, Replace & Exchanges</a></li>
@@ -158,11 +170,12 @@
         </div>
         <div class="col-12">
           <div class="social-media mt-1">
-            <ul>
+            <ul class="iconn">
               <li><a href="https://www.facebook.com/profile.php?id=61551728737337" target="_blank"><i class="fa fa-facebook"></i></a></li>
               <li><a href="https://www.pinterest.com/Poshida_/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
               <li><a href="https://www.instagram.com/poshi.da/" target="_blank"><i class="fa fa-instagram"></i></a></li>
               <li><a href="https://www.linkedin.com/company/poshida/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="https://www.youtube.com/@Poshida_" target="_blank"><i class="fa fa-youtube"></i></a></li>
             </ul>
           </div>
         </div>

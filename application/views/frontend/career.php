@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="add-ma pb-100">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113941.33032295831!2d75.68613974335939!3d26.81874340000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dc9b3015c7dff%3A0x16ece7b3f04f16f0!2sRONAK%20TEXTILES!5e0!3m2!1sen!2sin!4v1697871058706!5m2!1sen!2sin" height="585" style="border:0;width:100%;" allowfullscreen></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3560.687782231552!2d75.8283773!3d26.8180683!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dc9034cbdf60b%3A0x706185398ba5ee81!2sPoshida%20-%20Clothing%20Brand!5e0!3m2!1sen!2sin!4v1698230809773!5m2!1sen!2sin" height="585" style="border:0;width:100%;" allowfullscreen></iframe>
 
 
 
@@ -35,7 +35,7 @@
                                             </div>
                                             <div class="contact-box-detail">
                                                 <h4 class="contact-title">Visit Office</h4>
-                                                <p>Plot No. 81, Nandpuri-B, Near Mahima Panache , Jagatpura, Jaipur</p>
+                                                <p>Plot No. 81, near Mahima Panache, Nandpuri B, Sheopur, Jagatpura, Jaipur, Rajasthan 302025</p>
                                             </div>
                                         </li>
 
