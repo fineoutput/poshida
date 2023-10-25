@@ -20,9 +20,10 @@
 		font-size: 23px;
 
 	}
+
 	footer .social-media {
-    padding: 0px 0 1px 0px;
-}
+		padding: 0px 0 1px 0px;
+	}
 
 	#newslater-popup .newsletter-inner input {
 		border: none;
@@ -30,14 +31,15 @@
 		padding: 10px;
 		margin-bottom: 0px;
 	}
-   
-	.social-media.mt-1 ul.iconn li a i {
-    color: #c68fa6;
-	font-size: 20px;
-}
-	.social-media.mt-1 ul.iconn li a i:hover {
-    color: white;
-}
+
+	.social-media.mt-3 ul.iconn li a i {
+		color: #c68fa6;
+		font-size: 20px;
+	}
+
+	.social-media.mt-3 ul.iconn li a i:hover {
+		color: white;
+	}
 
 	@media(max-width:381px) {
 		.text-footer-p {
@@ -152,11 +154,11 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="w-100">
-						
+
 					</div>
 				</div>
 				<div class="col-12">
-					<div class="social-media mt-1">
+					<div class="social-media mt-3">
 						<ul class="iconn">
 							<li><a href="https://www.facebook.com/profile.php?id=61551728737337" target="_blank"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="https://www.pinterest.com/Poshida_/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
@@ -488,22 +490,12 @@ if (!empty($popup_data)) {
 	<? $popup_data = $this->db->get_where('tbl_popup_image', array('is_active = ' => 1))->result();
 	if (!empty($popup_data)) {
 	?>
-	$(window).on('load', function() {
-		var pageURL = $(location).attr("href");
-		if (pageURL == base_url) {
-			var visited = localStorage.getItem('visited');
-			const now = new Date();
-			if (visited === null) {
-				const newD = now.getTime() + 1440 * 60000; // local storage set with plus 24 hours
-				localStorage.setItem('visited', newD)
-				jQuery.magnificPopup.open({
-					items: {
-						src: '#newslater-popup'
-					},
-					type: 'inline'
-				}, 0);
-			} else {
-				if (now.getTime() > visited) {
+		$(window).on('load', function() {
+			var pageURL = $(location).attr("href");
+			if (pageURL == base_url) {
+				var visited = localStorage.getItem('visited');
+				const now = new Date();
+				if (visited === null) {
 					const newD = now.getTime() + 1440 * 60000; // local storage set with plus 24 hours
 					localStorage.setItem('visited', newD)
 					jQuery.magnificPopup.open({
@@ -512,11 +504,21 @@ if (!empty($popup_data)) {
 						},
 						type: 'inline'
 					}, 0);
+				} else {
+					if (now.getTime() > visited) {
+						const newD = now.getTime() + 1440 * 60000; // local storage set with plus 24 hours
+						localStorage.setItem('visited', newD)
+						jQuery.magnificPopup.open({
+							items: {
+								src: '#newslater-popup'
+							},
+							type: 'inline'
+						}, 0);
+					}
 				}
 			}
-		}
-	});
-	
+		});
+
 		// $(window).on('load', function() {
 		// 	setTimeout(function() {
 		// 		jQuery.magnificPopup.open({

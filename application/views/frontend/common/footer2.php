@@ -16,24 +16,25 @@
     padding: 10px;
     margin-bottom: 0px;
   }
+
   footer .social-media {
     padding: 0px 0 1px 0px;
-}
+  }
 
   @media(max-width:381px) {
     .text-footer-p {
       margin-left: 0px !important;
     }
   }
-     
-	.social-media.mt-1 ul.iconn li a i {
+
+  .social-media.mt-3 ul.iconn li a i {
     color: #c68fa6;
     font-size: 20px;
-}
-	.social-media.mt-1 ul.iconn li a i:hover {
-    color: white;
-}
+  }
 
+  .social-media.mt-3 ul.iconn li a i:hover {
+    color: white;
+  }
 </style>
 <!-- Newslatter section start -->
 <section class="newsletter-section align-center ptb-100">
@@ -169,7 +170,7 @@
           </div>
         </div>
         <div class="col-12">
-          <div class="social-media mt-1">
+          <div class="social-media mt-3">
             <ul class="iconn">
               <li><a href="https://www.facebook.com/profile.php?id=61551728737337" target="_blank"><i class="fa fa-facebook"></i></a></li>
               <li><a href="https://www.pinterest.com/Poshida_/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
