@@ -803,4 +803,29 @@ class Type extends CI_finecontrol
                 . '": ' . $e->getMessage());
         }
     }
+    public function remove_img($idd, $t)
+    {
+        if (!empty($this->session->userdata('admin_data'))) {
+            $data['user_name'] = $this->load->get_var('user_name');
+
+            $id = base64_decode($idd);
+
+            $data_update = array(
+                $t => ""
+
+            );
+            $this->db->where('id', $id);
+            $zapak = $this->db->update('tbl_type', $data_update);
+
+            if ($zapak != 0) {
+                $this->session->set_flashdata('smessage', 'Successfully Removed');
+                redirect($_SERVER['HTTP_REFERER']);
+            } else {
+                $this->session->set_flashdata('emessage', 'Sorry error occured');
+                redirect($_SERVER['HTTP_REFERER']);
+            }
+        } else {
+            $this->load->view('admin/login/index');
+        }
+    }
 }
