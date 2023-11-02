@@ -354,10 +354,10 @@
 									<input name="otp" type="text" id="signinOTP" class="form-control rounded-0" placeholder="Enter OTP">
 								</div> -->
 								<div class="form-group hidden-OTP-field">
-									<input name="email" type="email" class="form-control rounded-0" placeholder="Enter Email">
+									<input name="email" type="email" required class="form-control rounded-0" placeholder="Enter Email">
 								</div>
 								<div class="form-group hidden-OTP-field">
-									<input name="password" type="password" class="form-control rounded-0" placeholder="Enter Password">
+									<input name="password" type="password" required class="form-control rounded-0" placeholder="Enter Password">
 								</div>
 								<div class="container">
 									<div class="row">
@@ -370,6 +370,9 @@
 									<button class="btn btn-fill-out btn-block  btn-color  mt-2 text-uppercase rounded-0" style="padding: 14px 18px; " type="submit">Submit</button>
 								</div>
 								<div class="text-center"><span class="mt-3">Already have an Account?<a href="#" data-target="#onload-popup1" data-toggle="modal" data-dismiss="modal" style="color:#ed6f36;">&nbsp;Log In</a></span>
+								</div>
+								<p class="text-center" style="margin-bottom: 0px;">Or</p>
+								<div class="text-center"><span class="mt-3"><a href="<?= base_url() ?>Home/reseller_register" style="color:#ed6f36;">Sign up as a Reseller</a></span>
 								</div>
 
 							</form>

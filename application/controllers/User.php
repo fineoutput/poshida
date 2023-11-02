@@ -305,6 +305,44 @@ class User extends CI_Controller
             redirect($_SERVER['HTTP_REFERER']);
         }
     }
+    //=============================================== Reseller REGISTER =============================================================
+    public function reseller_email_register()
+    {
+        $this->load->helper(array('form', 'url'));
+        $this->load->library('form_validation');
+        $this->load->helper('security');
+        if ($this->input->post()) {
+            $this->form_validation->set_rules('fname', 'fname', 'required|xss_clean|trim');
+            $this->form_validation->set_rules('Email', 'Email', 'required|xss_clean|trim');
+            $this->form_validation->set_rules('gstnumber', 'gstnumber', 'required|xss_clean|trim');
+            $this->form_validation->set_rules('state', 'state', 'required|xss_clean|trim');
+            $this->form_validation->set_rules('shopname', 'shopname', 'required|xss_clean|trim');
+            $this->form_validation->set_rules('password', 'password', 'required|xss_clean|trim');
+            $this->form_validation->set_rules('phonenumber', 'phonenumber', 'required|xss_clean|trim');
+            $this->form_validation->set_rules('city', 'city', 'required|xss_clean|trim');
+            $this->form_validation->set_rules('address', 'address', 'required|xss_clean|trim');
+            if ($this->form_validation->run() == true) {
+                $fname = $this->input->post('fname');
+                $Email = $this->input->post('Email');
+                $gstnumber = $this->input->post('gstnumber');
+                $state = $this->input->post('state');
+                $shopname = $this->input->post('shopname');
+                $password = $this->input->post('password');
+                $phonenumber = $this->input->post('phonenumber');
+                $city = $this->input->post('city');
+                $address = $this->input->post('address');
+                //-------------- register user  with otp ------------
+                $Register = $this->login->ResellerEmailRegister($fname, $Email, $gstnumber, $state, $shopname,$password,$phonenumber,$city,$address);
+                redirect($_SERVER['HTTP_REFERER']);
+            } else {
+                $this->session->set_flashdata('emessage', validation_errors());
+                redirect($_SERVER['HTTP_REFERER']);
+            }
+        } else {
+            $this->session->set_flashdata('emessage', 'Please insert some data');
+            redirect($_SERVER['HTTP_REFERER']);
+        }
+    }
     //======================================== USER LOGOUT ========================================================
     public function logout()
     {

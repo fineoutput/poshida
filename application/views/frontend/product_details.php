@@ -305,7 +305,7 @@
                 </div>
                 <!-- ========= END COLORS============= -->
                 <? if ($this->session->userdata('user_type') == 2) {
-                  $minQty = $type_data[0]->reseller_min_qty;
+                  $minQty = (int)$type_data[0]->reseller_min_qty;
                 } else {
                   $minQty = 1;
                 } ?>
@@ -338,7 +338,7 @@
                   justify-content: start;" id="btn-center">
                   <li class="icon cart-icon " style="    background: #c68fa6;
     border-radius: 6px;     text-align: center;">
-                    <button class="btn btn-color fhf" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" quantity="1" id="addtoCartButton" onclick="addToCart(this)" type="button"><span></span>Add to cart <span></span> </button>
+                    <button class="btn btn-color fhf" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" quantity="<?= $minQty ?>" id="addtoCartButton" onclick="addToCart(this)" type="button"><span></span>Add to cart <span></span> </button>
                   </li>
                   <? if (!empty($this->session->userdata('user_data'))) {
                     $user_id = $this->session->userdata('user_id');

@@ -659,6 +659,61 @@ class CI_Login
             return json_encode($respone);
         }
     }
+    //============================== Email Register ==============================
+    public function ResellerEmailRegister($fname, $Email, $gstnumber, $state, $shopname, $password, $phonenumber, $city, $address)
+    {
+        if (empty($this->CI->session->userdata('user_data'))) {
+            $ip = $this->CI->input->ip_address();
+            date_default_timezone_set("Asia/Calcutta");
+            $cur_date = date("Y-m-d H:i:s");
+            $userCheck = $this->CI->db->get_where('tbl_users', array('email' => $Email))->result();
+            $resellerCheck = $this->CI->db->get_where('tbl_reseller', array('email' => $Email))->result();
+            if (empty($userCheck) && empty($resellerCheck)) { //---- check user is exist or not ---------
+                $userPhone = $this->CI->db->get_where('tbl_reseller', array('phone' => $phonenumber))->result();
+                if (!empty($userPhone)) {
+                    $respone['status'] = false;
+                    $respone['message'] = 'User Already Exist!';
+                    $this->CI->session->set_flashdata('emessage', 'User Already Exist!');
+                    return json_encode($respone);
+                }
+                //------ insert user data from temp to user table -----------
+                $data_insert = array(
+                    'name' => $fname,
+                    'email' => $Email,
+                    'gst_number' => $gstnumber,
+                    'state' => $state,
+                    'shop' => $shopname,
+                    'address' => $address,
+                    'phone' => $phonenumber,
+                    'city' => $city,
+                    'password' => md5($password),
+                    'ip' => $ip,
+                    'is_active' => 1,
+                    'reseller_status' => 0,
+                    'date' => $cur_date
+                );
+                $last_id2 = $this->CI->base_model->insert_table("tbl_reseller", $data_insert, 1);
+
+                // //---------- set login session -------------------
+                // $this->CI->session->set_userdata('user_data', 1);
+                // $this->CI->session->set_userdata('name', $fname);
+                // $this->CI->session->set_userdata('phone', $phonenumber);
+                // $this->CI->session->set_userdata('user_type', 2);
+                // $this->CI->session->set_userdata('user_id', $last_id2);
+                $respone['status'] = true;
+                $respone['message'] = 'Successfully Registered!';
+                $this->CI->session->set_flashdata('smessage', 'Request submitted successfully! Please wait for admin approval');
+            } else {
+                $respone['status'] = false;
+                $respone['message'] = 'User Already Exist!';
+                $this->CI->session->set_flashdata('emessage', 'User Already Exist!');
+                return json_encode($respone);
+            }
+        } else {
+            $respone['status'] = false;
+            return json_encode($respone);
+        }
+    }
 
     //============================= USER OTP LOGOUT ==========================================
     public function UserOtpLogout()

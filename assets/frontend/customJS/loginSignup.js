@@ -67,7 +67,7 @@ $("#reseller_resgisteration_form").on('submit',function(e){
     success: function(response) {
       if(response.status==true){
         notifySuccess(response.message)
-        $('.hidden-OTP-field').css('display', 'inline')
+        $('.hidden-OTP-field').css('display', 'flex')
         $('#reseller_row').css('display', 'none')
         document.getElementById("reSendbtn").innerHTML = "Register";
         $('#reConfirmPhone').val(phone)
