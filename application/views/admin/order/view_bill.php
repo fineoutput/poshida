@@ -113,7 +113,7 @@
         <div class="col-sm-6">
           <br />
           <br />
-          <span class="font-weight-bold">GST Registration Number : </span> <br> FINE122OUT
+          <span class="font-weight-bold">GST Registration Number : </span> <br> 08AIFPR8500F2Z8
         </div>
         <div class="col-sm-6 shipping_content"><span class="font-weight-bold ">Shipping Address:</span> <br>
           Name:<?php
