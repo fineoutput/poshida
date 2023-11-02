@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,6 +12,7 @@
   <link rel="shortcut icon" href="<?= base_url() ?>assets/frontend/img/Poshida.jpg" type="image/x-icon" />
   <title>Poshida Invoice</title>
 </head>
+
 <body style="padding-top:75px;">
   <div class="container main_container">
     <div class="row">
@@ -25,8 +27,10 @@
       <div class="row">
         <div class="col-sm-6"><span class="font-weight-bold ">Sold By</span><br>
           <span class="seller_details">Poshida <br>
-            Shayam Nagar, Jaipur, Rajasthan,
-            <br> 302021
+          Plot No. 81, Nandpuri-B, Near,
+          <br>
+            Mahima Panache , Jagatpura,
+            <br> Jaipur
             <br>
             www.poshida.com
             <br>
@@ -84,13 +88,13 @@
           if (!empty($order1_data)) {
             if (!empty($order1_data->address_id)) {
               $address_data = $this->db->get_where('tbl_user_address', array('id' => $order1_data->address_id))->row();
-              $name = $address_data ? $address_data->f_name ." ". $address_data->l_name:'';
-              $phone = $address_data ? $address_data->phone:'';
-              $pincode = $address_data ? $address_data->pincode:'';
-              $state = $address_data ? $address_data->state:'';
-              $city = $address_data ? $address_data->city:'';
-              $email = $address_data ? $address_data->email:'';
-              $address = $address_data ? $address_data->address:'';
+              $name = $address_data ? $address_data->f_name . " " . $address_data->l_name : '';
+              $phone = $address_data ? $address_data->phone : '';
+              $pincode = $address_data ? $address_data->pincode : '';
+              $state = $address_data ? $address_data->state : '';
+              $city = $address_data ? $address_data->city : '';
+              $email = $address_data ? $address_data->email : '';
+              $address = $address_data ? $address_data->address : '';
             } else {
               $name = $order1_data->name;
               $phone = $order1_data->phone;
@@ -155,11 +159,11 @@
       <div class="row">
         <div class="col-sm-6">
           Order Id : &nbsp; <?php if (!empty($order1_data)) {
-                                                    echo $order1_data->id;
-                                                  } ?><br>
+                              echo $order1_data->id;
+                            } ?><br>
           Invoice No: &nbsp; <?php if (!empty($order1_data)) {
-                                                    echo $order1_data->invoice_no;
-                                                  } ?><br>
+                                echo $order1_data->invoice_no;
+                              } ?><br>
           <p> Order Date: &nbsp;
             <?php if (!empty($order1_data)) {
               $source = $order1_data->date;
@@ -175,6 +179,8 @@
               <tr>
                 <th>SNo.</th>
                 <th>Description</th>
+                <th>Size</th>
+                <th>Product Code</th>
                 <th>HSN Code</th>
                 <!-- <th>Type</th> -->
                 <!-- <th>Unit Name</th> -->
@@ -201,7 +207,16 @@
                   $this->db->select('*');
                   $this->db->from('tbl_product');
                   $this->db->where('id', $data->product_id);
-                  $product_data = $this->db->get()->row(); ?>
+                  $product_data = $this->db->get()->row();
+                  $type_data = $this->db->get_where('tbl_type', array('id = ' => $data->type_id))->row();
+                  if (!empty($type_data)) {
+                    $sizeOfType = $this->db->get_where('tbl_size', array('id = ' => $type_data->size_id))->row();
+                    $colorOfType = $this->db->get_where('tbl_colour', array('id = ' => $type_data->colour_id))->row();
+                  } else {
+                    $sizeOfType = [];
+                    $colorOfType = [];
+                  }
+              ?>
                   <tr class="product_table2">
                     <td><?php echo $i; ?></td>
                     <td><?php
@@ -210,6 +225,16 @@
                         } else {
                           $product_name = "";
                         } ?></td>
+                    <td> <? if (!empty($sizeOfType)) {
+                            echo $sizeOfType->name;
+                          } else {
+                            echo "Size not found";
+                          } ?> </td>
+                    <td><?php
+                        if (!empty($product_data)) {
+                          echo $product_data->sku;
+                        }
+                        ?></td>
                     <td><?php
                         if (!empty($product_data)) {
                           echo $hsn_code = $product_data->hsn_code;
@@ -221,7 +246,7 @@
                       <td><?php echo "₹" . $data->percentage_discount ?></td>
                     <? } ?>
                     <td><?php echo $data->quantity; ?></td>
-                    <td><?php echo "₹" . ($data->selling_price*$data->quantity); ?> </td>
+                    <td><?php echo "₹" . ($data->selling_price * $data->quantity); ?> </td>
                     <?php if ($state == "Rajasthan [RJ]") { ?>
                       <td><span> <?php $half = $data->gst / 2;
                                   echo $half . "%"; ?> </span> <br> <span> <?php $half = $data->gst / 2;
@@ -267,9 +292,9 @@
                                             echo "";
                                           } ?></th>
                 <th class="product_table" colspan="<? if ($order_type == 2) {
-                                                      echo '8';
+                                                      echo '10';
                                                     } else {
-                                                      echo '7';
+                                                      echo '9';
                                                     } ?>"><?php if (!empty($order1_data)) {
                                                             echo "";
                                                           } ?></th>
@@ -290,7 +315,7 @@
                   $promocode_name = "";
                 } ?>
                 <tr>
-                  <th colspan="8">Promocode: <?= $promocode_name; ?> </th>
+                  <th colspan="10">Promocode: <?= $promocode_name; ?> </th>
                   <th class="product_table"><?php if (!empty($order1_data)) {
                                               echo " ";
                                             } ?></th>
@@ -319,9 +344,9 @@
                                               echo "";
                                             } ?></th>
                   <th class="product_table" colspan="<? if ($order_type == 2) {
-                                                        echo '8';
+                                                        echo '10';
                                                       } else {
-                                                        echo '7';
+                                                        echo '9';
                                                       } ?>"><?php if (!empty($order1_data)) {
                                                               echo "";
                                                             } ?></th>
@@ -338,9 +363,9 @@
                                               echo "";
                                             } ?></th>
                   <th class="product_table" colspan="<? if ($order_type == 2) {
-                                                        echo '8';
+                                                        echo '10';
                                                       } else {
-                                                        echo '7';
+                                                        echo '9';
                                                       } ?>"><?php if (!empty($order1_data)) {
                                                               echo "";
                                                             } ?></th>
@@ -353,9 +378,9 @@
               <? } ?>
               <tr>
                 <th colspan="<? if ($order_type == 2) {
-                                echo '10';
+                                echo '12';
                               } else {
-                                echo '9';
+                                echo '11';
                               } ?>">SubTotal</th>
                 <th class="product_table"><?php if (!empty($order1_data)) {
                                             echo "₹" . $order1_data->final_amount;
@@ -418,6 +443,7 @@
   };
   var a = ['', 'One ', 'Two ', 'Three ', 'Four ', 'Five ', 'Six ', 'Seven ', 'Eight ', 'Nine ', 'Ten ', 'Eleven ', 'Twelve ', 'Thirteen ', 'Fourteen ', 'Fifteen ', 'Sixteen ', 'Seventeen ', 'Eighteen ', 'Nineteen'];
   var b = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+
   function inWords(num) {
     if ((num = num.toString()).length > 9) return 'overflow';
     n = ('000000000' + num).substr(-9).match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
@@ -433,4 +459,5 @@
     $("#checks123").text(str);
   }
 </script>
+
 </html>
