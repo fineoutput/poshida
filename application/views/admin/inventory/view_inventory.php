@@ -33,6 +33,7 @@
                           <thead>
                             <tr>
                               <th>#</th>
+                              <!-- <th>Product Id</th> -->
                               <th>Category Name</th>
                               <th>SubCategory Name</th>
                               <th>Product Name</th>
@@ -52,64 +53,67 @@
                               $this->db->from('tbl_product');
                               $this->db->where('id', $data->product_id);
                               $pro_da = $this->db->get()->row();
+                              if (!empty($pro_da)) {
                             ?>
-                              <tr>
-                                <td><?= $i ?></td>
-                                <td><?php $this->db->select('*');
-                                    $this->db->from('tbl_category');
-                                    $this->db->where('id', $pro_da->category_id);
-                                    $category_data = $this->db->get()->row();
-                                    echo $category_data->name; ?></td>
-                                <td><?php
-                                    $this->db->select('*');
-                                    $this->db->from('tbl_subcategory');
-                                    $this->db->where('id', $pro_da->subcategory_id);
-                                    $subcategory_data = $this->db->get()->row();
-                                    echo $subcategory_data->name; ?></td>
-                                <td><?php echo $pro_da->name; ?></td>
+                                <tr>
+                                  <td><?= $i ?></td>
+                                  <!-- <td><?= $data->product_id ?></td> -->
+                                  <td><?php $this->db->select('*');
+                                      $this->db->from('tbl_category');
+                                      $this->db->where('id', $pro_da->category_id);
+                                      $category_data = $this->db->get()->row();
+                                      echo $category_data->name; ?></td>
+                                  <td><?php
+                                      $this->db->select('*');
+                                      $this->db->from('tbl_subcategory');
+                                      $this->db->where('id', $pro_da->subcategory_id);
+                                      $subcategory_data = $this->db->get()->row();
+                                      echo $subcategory_data->name; ?></td>
+                                  <td><?php echo $pro_da->name; ?></td>
 
-                                <td><?php $this->db->select('*');
-                                    $this->db->from('tbl_size');
-                                    $this->db->where('id', $data->size_id);
-                                    $size_data = $this->db->get()->row();
-                                    echo $size_data->name;
+                                  <td><?php $this->db->select('*');
+                                      $this->db->from('tbl_size');
+                                      $this->db->where('id', $data->size_id);
+                                      $size_data = $this->db->get()->row();
+                                      echo $size_data->name;
 
-                                    ?></td>
-                                <td><?php $this->db->select('*');
-                                    $this->db->from('tbl_colour');
-                                    $this->db->where('id', $data->colour_id);
-                                    $colour_data = $this->db->get()->row();
-                                    if (!empty($colour_data)) {
-                                    ?>
-                                    <span style="background-color:<?php echo $colour_data->name ?>;border-radius:80%">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
-                                    <? echo $colour_data->colour_name; ?>
-                                  <? } else {
-                                      echo "No Color Found";
-                                    } ?>
-                                </td>
-                                <td><?php echo $pro_da->sku; ?></td>
-
-                                <td><?php echo $data->inventory ?></td>
-                                <? if ($this->session->userdata('position') != 'Manager') { ?>
-                                  <td>
-                                    <div class="btn-group" id="btns<?php echo $i ?>">
-                                      <div class="btn-group">
-                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> Action <span class="caret"></span></button>
-                                        <ul class="dropdown-menu" role="menu">
-                                          <li><a href="<?php echo base_url() ?>dcadmin/Inventory/update_inventory/<?php echo base64_encode($data->id) ?>">Add Inventory</a></li>
-                                          <li><a href="<?php echo base_url() ?>dcadmin/Inventory/view_inventory_transactions/<?php echo base64_encode($data->id) ?>">View Transactions</a></li>
-                                        </ul>
-                                      </div>
-                                    </div>
-
-                                    <div style="display:none" id="cnfbox<?php echo $i ?>">
-                                      <p> Are you sure delete this </p>
-                                      <a href="<?php echo base_url() ?>dcadmin/Product/delete_product/<?php echo base64_encode($data->id); ?>" class="btn btn-danger">Yes</a>
-                                      <a href="javasript:;" class="cans btn btn-default" mydatas="<?php echo $i ?>">No</a>
-                                    </div>
+                                      ?></td>
+                                  <td><?php $this->db->select('*');
+                                      $this->db->from('tbl_colour');
+                                      $this->db->where('id', $data->colour_id);
+                                      $colour_data = $this->db->get()->row();
+                                      if (!empty($colour_data)) {
+                                      ?>
+                                      <span style="background-color:<?php echo $colour_data->name ?>;border-radius:80%">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                                      <? echo $colour_data->colour_name; ?>
+                                    <? } else {
+                                        echo "No Color Found";
+                                      } ?>
                                   </td>
-                                <? } ?>
+                                  <td><?php echo $pro_da->sku; ?></td>
+
+                                  <td><?php echo $data->inventory ?></td>
+                                  <? if ($this->session->userdata('position') != 'Manager') { ?>
+                                    <td>
+                                      <div class="btn-group" id="btns<?php echo $i ?>">
+                                        <div class="btn-group">
+                                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> Action <span class="caret"></span></button>
+                                          <ul class="dropdown-menu" role="menu">
+                                            <li><a href="<?php echo base_url() ?>dcadmin/Inventory/update_inventory/<?php echo base64_encode($data->id) ?>">Add Inventory</a></li>
+                                            <li><a href="<?php echo base_url() ?>dcadmin/Inventory/view_inventory_transactions/<?php echo base64_encode($data->id) ?>">View Transactions</a></li>
+                                          </ul>
+                                        </div>
+                                      </div>
+
+                                      <div style="display:none" id="cnfbox<?php echo $i ?>">
+                                        <p> Are you sure delete this </p>
+                                        <a href="<?php echo base_url() ?>dcadmin/Product/delete_product/<?php echo base64_encode($data->id); ?>" class="btn btn-danger">Yes</a>
+                                        <a href="javasript:;" class="cans btn btn-default" mydatas="<?php echo $i ?>">No</a>
+                                      </div>
+                                    </td>
+                                  <? } ?>
                               <?php $i++;
+                              }
                             } ?>
                           </tbody>
                         </table>
@@ -128,64 +132,64 @@
         </style>
         <script src="<?php echo base_url() ?>assets/admin/plugins/datatables/jquery.dataTables.js"></script>
         <script src="<?php echo base_url() ?>assets/admin/plugins/datatables/dataTables.bootstrap.js"></script>
-        
 
-<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 
-<script src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
-<!-- <script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.flash.min.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script> -->
-<script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+        <script src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
+        <!-- <script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.flash.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script> -->
+        <script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>
         <script type="text/javascript">
           $(document).ready(function() {
             $('#orderTable').DataTable({
-      responsive: true,
-      "bStateSave": true,
-      "fnStateSave": function(oSettings, oData) {
-        localStorage.setItem('offersDataTables', JSON.stringify(oData));
-      },
-      "fnStateLoad": function(oSettings) {
-        return JSON.parse(localStorage.getItem('offersDataTables'));
-      },
-      dom: 'Bfrtip',
-      buttons: [{
-          extend: 'copyHtml5',
-          exportOptions: {
-            columns: [1, 2, 3, 4, 5, 6, 7] //number of columns, excluding # column
-          }
-        },
-        {
-          extend: 'csvHtml5',
-          exportOptions: {
-            columns: [1, 2, 3, 4, 5, 6, 7]
-          }
-        },
-        {
-          extend: 'excelHtml5',
-          exportOptions: {
-            columns: [1, 2, 3, 4, 5, 6, 7]
-          }
-        },
-        {
-          extend: 'pdfHtml5',
-          exportOptions: {
-            columns: [1, 2, 3, 4, 5, 6, 7]
-          }
-        },
-        {
-          extend: 'print',
-          exportOptions: {
-            columns: [1, 2, 3, 4, 5, 6, 7]
-          }
-        },
+              responsive: true,
+              "bStateSave": true,
+              "fnStateSave": function(oSettings, oData) {
+                localStorage.setItem('offersDataTables', JSON.stringify(oData));
+              },
+              "fnStateLoad": function(oSettings) {
+                return JSON.parse(localStorage.getItem('offersDataTables'));
+              },
+              dom: 'Bfrtip',
+              buttons: [{
+                  extend: 'copyHtml5',
+                  exportOptions: {
+                    columns: [1, 2, 3, 4, 5, 6, 7] //number of columns, excluding # column
+                  }
+                },
+                {
+                  extend: 'csvHtml5',
+                  exportOptions: {
+                    columns: [1, 2, 3, 4, 5, 6, 7]
+                  }
+                },
+                {
+                  extend: 'excelHtml5',
+                  exportOptions: {
+                    columns: [1, 2, 3, 4, 5, 6, 7]
+                  }
+                },
+                {
+                  extend: 'pdfHtml5',
+                  exportOptions: {
+                    columns: [1, 2, 3, 4, 5, 6, 7]
+                  }
+                },
+                {
+                  extend: 'print',
+                  exportOptions: {
+                    columns: [1, 2, 3, 4, 5, 6, 7]
+                  }
+                },
 
-      ]
+              ]
 
 
-    });
+            });
             $(document.body).on('click', '.dCnf', function() {
               var i = $(this).attr("mydata");
               console.log(i);
