@@ -180,6 +180,7 @@
                 <th>SNo.</th>
                 <th>Description</th>
                 <th>Size</th>
+                <th>Color</th>
                 <th>Product Code</th>
                 <th>HSN Code</th>
                 <!-- <th>Type</th> -->
@@ -229,6 +230,11 @@
                             echo $sizeOfType->name;
                           } else {
                             echo "Size not found";
+                          } ?> </td>
+                    <td> <? if (!empty($colorOfType)) {
+                            echo $colorOfType->colour_name;
+                          } else {
+                            echo "Color not found";
                           } ?> </td>
                     <td><?php
                         if (!empty($product_data)) {
