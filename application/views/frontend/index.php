@@ -225,7 +225,9 @@
   	</div>
   </section>
   <!-- ======================= END SHOP BY CATEGORIES  ======================== -->
-
+<div>
+<img alt=" " src="<?= base_url() ?>assets/frontend/img/bannnerrr.png" >
+</div>
   <!-- ======================== START TRENDING PRODUCTS ====================== -->
   <section class="product-section pb-100">
   	<div class="container">
