@@ -91,10 +91,10 @@ body {
 }
 
 
-a:hover {
-	color: #0056b3;
+/* a:hover {
+	color: 
 	text-decoration: underline;
-}
+} */
 
 .btn {
 	display: inline-block;
