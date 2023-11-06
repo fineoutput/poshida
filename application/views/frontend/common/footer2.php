@@ -341,7 +341,7 @@
                 <div class="text-center"><span class="mt-3">Already have an Account?<a href="#" data-target="#onload-popup1" data-toggle="modal" data-dismiss="modal" style="color:#ed6f36;">&nbsp;Log In</a></span>
                 </div>
                 <p class="text-center" style="margin-bottom: 0px;">Or</p>
-                <div class="text-center"><span class="mt-3"><a href="<?= base_url() ?>Home/reseller_register" style="color:#ed6f36;">Sign up as a Reseller</a></span>
+                <div class="text-center"><span class="mt-3"><a href="<?= base_url() ?>Home/reseller_register" style="color:#ed6f36;">Partner with us</a></span>
                 </div>
 
               </form>
