@@ -276,10 +276,10 @@
             $image1 = $type_data[0]->image;
           } ?>
 
-          <!-- <div class="sk"></div>
-          <div class="sj"></div> -->
-          <!-- <div class="align-center mb-md-30">
-            <ul id="glasscase" class="gc-start">
+          <div class="sk"></div>
+          <div class="sj"></div>
+          <div class="align-center mb-md-30">
+            <!-- <ul id="glasscase" class="gc-start">
               <li><img src="<?= base_url() . $type_data[0]->image ?>" alt=" "></li>
               <? if (!empty($type_data[0]->image2)) { ?><li><img src="<?= base_url() .  $type_data[0]->image2 ?>" alt=" "></li> <? }
                                                                                                                               if (!empty($type_data[0]->image3)) { ?>
@@ -295,38 +295,36 @@
                 ?>
             </ul> -->
 
+
+            <section id="detail">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mx-auto">
+   
+          <div class="product-images demo-gallery">
             
-                        <section id="detail">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-12 mx-auto">
-               
-                      <div class="product-images demo-gallery">
-                        
-                        <div class="main-img-slider">
-                           <a  data-fancybox="gallery" href="https://endtest-videos.s3-us-west-2.amazonaws.com/documentation/endtest_data_driven_testing_csv.mp4"> <img  src="https://www.poshida.in/assets/uploads/blog/blog20231105135118.jpg" class="img-fluid gc-zoom"></a>
-                           <a data-fancybox="gallery" href="https://endtest-videos.s3-us-west-2.amazonaws.com/documentation/endtest_data_driven_testing_csv.mp4"> <img src="https://www.poshida.in/assets/uploads/blog/blog20231105135118.jpg" class="img-fluid"></a>
-                           <a data-fancybox="gallery" href="https://endtest-videos.s3-us-west-2.amazonaws.com/documentation/endtest_data_driven_testing_csv.mp4"> <img src="https://www.poshida.in/assets/uploads/blog/blog20231105135118.jpg" class="img-fluid"></a>
-                           <a data-fancybox="gallery" href="https://endtest-videos.s3-us-west-2.amazonaws.com/documentation/endtest_data_driven_testing_csv.mp4"> <img src="https://www.poshida.in/assets/uploads/blog/blog20231105135118.jpg" class="img-fluid"></a>
-                        </div>
-            
-                    
-                      <ul class="thumb-nav">
-                        <li><img src="https://www.poshida.in/assets/uploads/blog/blog20231105135118.jpg"></li>
-                        <li><img src="https://www.poshida.in/assets/uploads/blog/blog20231105135118.jpg"></li>
-                        <li><img src="https://www.poshida.in/assets/uploads/blog/blog20231105135118.jpg"></li>
-                      
-                      </ul>
-              
-                    </div>
-                  
-                    
-                  </div>
-                </div>
-              </div>
-              
-              
-            </section> 
+            <div class="main-img-slider">
+               <a  data-fancybox="gallery" href="https://endtest-videos.s3-us-west-2.amazonaws.com/documentation/endtest_data_driven_testing_csv.mp4"> <img  src="https://www.poshida.in/assets/uploads/blog/blog20231105135118.jpg" class="img-fluid gc-zoom"></a>
+               <a data-fancybox="gallery" href="https://endtest-videos.s3-us-west-2.amazonaws.com/documentation/endtest_data_driven_testing_csv.mp4"> <img src="https://www.poshida.in/assets/uploads/blog/blog20231105135118.jpg" class="img-fluid"></a>
+               <a data-fancybox="gallery" href="https://endtest-videos.s3-us-west-2.amazonaws.com/documentation/endtest_data_driven_testing_csv.mp4"> <img src="https://www.poshida.in/assets/uploads/blog/blog20231105135118.jpg" class="img-fluid"></a>
+               <a data-fancybox="gallery" href="https://endtest-videos.s3-us-west-2.amazonaws.com/documentation/endtest_data_driven_testing_csv.mp4"> <img src="https://www.poshida.in/assets/uploads/blog/blog20231105135118.jpg" class="img-fluid"></a>
+          	</div>
+
+        
+          <ul class="thumb-nav">
+            <li><img src="https://www.poshida.in/assets/uploads/blog/blog20231105135118.jpg"></li>
+            <li><img src="https://www.poshida.in/assets/uploads/blog/blog20231105135118.jpg"></li>
+            <li><img src="https://www.poshida.in/assets/uploads/blog/blog20231105135118.jpg"></li>
+          
+          </ul>
+  
+        </div>
+      
+        
+      </div>
+    </div>
+  </div>
+</section>
           </div>
         </div>
         <div class="col-lg-7 col-md-6 col-12">
