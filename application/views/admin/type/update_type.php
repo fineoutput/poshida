@@ -54,8 +54,8 @@
                           <?php $i = 1;
                           foreach ($size_data->result() as $size) { ?>
                             <option value="<?= $size->id ?>" <? if ($size->id == $type->size_id) {
-                                                              echo "selected";
-                                                            } ?>><?= $size->name ?></option>
+                                                                echo "selected";
+                                                              } ?>><?= $size->name ?></option>
                           <?php $i++;
                           } ?>
                         </select>
@@ -69,8 +69,8 @@
                           <?php $i = 1;
                           foreach ($colour_data->result() as $colour) { ?>
                             <option value="<?= $colour->id ?>" <? if ($colour->id == $type->colour_id) {
-                                                                echo "selected";
-                                                              } ?>><?= $colour->colour_name ?></option>
+                                                                  echo "selected";
+                                                                } ?>><?= $colour->colour_name ?></option>
                           <?php $i++;
                           } ?>
                         </select>
@@ -82,7 +82,7 @@
                         <input type="file" name="image" class="form-control" placeholder="" />
                         <? if (!empty($type->image)) { ?>
                           <img id="slide_img_path" height=50 width=100 src="<?php echo base_url() . $type->image ?>"><a href="<?= base_url() ?>dcadmin/Type/remove_img/<?php echo
-                                                                                                                                                                          base64_encode($type->id) ?>/image"> Remove</a>
+                                                                                                                                                                        base64_encode($type->id) ?>/image"> Remove</a>
                         <? } else { ?>
                           Sorry No image Found
                         <? } ?>
@@ -94,7 +94,7 @@
                         <input type="file" name="image2" class="form-control" placeholder="" />
                         <? if (!empty($type->image2)) { ?>
                           <img id="slide_img_path" height=50 width=100 src="<?php echo base_url() . $type->image2 ?>"><a href="<?= base_url() ?>dcadmin/Type/remove_img/<?php echo
-                                                                                                                                                                            base64_encode($type->id) ?>/image2"> Remove</a>
+                                                                                                                                                                        base64_encode($type->id) ?>/image2"> Remove</a>
                         <? } else { ?>
                           Sorry No image Found
                         <? } ?>
@@ -106,7 +106,7 @@
                         <input type="file" name="image3" class="form-control" placeholder="" />
                         <? if (!empty($type->image3)) { ?>
                           <img id="slide_img_path" height=50 width=100 src="<?php echo base_url() . $type->image3 ?>"><a href="<?= base_url() ?>dcadmin/Type/remove_img/<?php echo
-                                                                                                                                                                            base64_encode($type->id) ?>/image3"> Remove</a>
+                                                                                                                                                                        base64_encode($type->id) ?>/image3"> Remove</a>
                         <? } else { ?>
                           Sorry No image Found
                         <? } ?>
@@ -118,7 +118,7 @@
                         <input type="file" name="image4" class="form-control" placeholder="" />
                         <? if (!empty($type->image4)) { ?>
                           <img id="slide_img_path" height=50 width=100 src="<?php echo base_url() . $type->image4 ?>"><a href="<?= base_url() ?>dcadmin/Type/remove_img/<?php echo
-                                                                                                                                                                            base64_encode($type->id) ?>/image4"> Remove</a>
+                                                                                                                                                                        base64_encode($type->id) ?>/image4"> Remove</a>
                         <? } else { ?>
                           Sorry No image Found
                         <? } ?>
@@ -130,7 +130,7 @@
                         <input type="file" name="image5" class="form-control" placeholder="" />
                         <? if (!empty($type->image5)) { ?>
                           <img id="slide_img_path" height=50 width=100 src="<?php echo base_url() . $type->image5 ?>"><a href="<?= base_url() ?>dcadmin/Type/remove_img/<?php echo
-                                                                                                                                                                            base64_encode($type->id) ?>/image5"> Remove</a>
+                                                                                                                                                                        base64_encode($type->id) ?>/image5"> Remove</a>
                         <? } else { ?>
                           Sorry No image Found
                         <? } ?>
@@ -142,11 +142,28 @@
                         <input type="file" name="image6" class="form-control" placeholder="" />
                         <? if (!empty($type->image6)) { ?>
                           <img id="slide_img_path" height=50 width=100 src="<?php echo base_url() . $type->image6 ?>"><a href="<?= base_url() ?>dcadmin/Type/remove_img/<?php echo
-                                                                                                                                                                            base64_encode($type->id) ?>/image6"> Remove</a>
+                                                                                                                                                                        base64_encode($type->id) ?>/image6"> Remove</a>
                         <? } else { ?>
                           Sorry No image Found
                         <? } ?>
                       </td>
+                    </tr>
+                    <tr>
+                      <td> <strong>Video</strong></td>
+                      <td> <input type="file" name="video" class="form-control" placeholder="" value="<?= $type->video ?>" />
+
+                        <?php if ($type->video != "") { ?>
+                          <video autoplay height="100" width="150" controls>
+                            <source src="<?= base_url() . $type->video ?>" type="video/mp4">
+                            </source>
+                          </video><a href="<?= base_url() ?>dcadmin/Type/remove_img/<?php echo
+                                                                                      base64_encode($type->id) ?>/video">Remove</a>
+                        <?php } else { ?>
+                          Sorry No File Found
+                        <?php } ?>
+                      </td>
+
+
                     </tr>
                     <? if ($productView == 1 || $productView == 3) {
                     ?>

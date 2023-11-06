@@ -55,6 +55,8 @@ Type
 <th>Image-4</th>
 <th>Image-5</th>
 <th>Image-6</th>
+<th>Video</th>
+
 <?if($productView==1 || $productView==3){?>
 <th>Retailer MRP</th>
 <th>Retailer Selling price</th>
@@ -151,6 +153,16 @@ if(!empty($colour_data)){
                       Sorry No image Found
                       <?php } ?>
                     </td>
+                    <td>
+                          <?php if ($data->video != "") { ?>
+                            <video muted height="100" width="150" controls>
+                              <source src="<?= base_url() . $data->video ?>" type="video/mp4">
+                              </source>
+                            </video>
+                          <?php } else { ?>
+                            Sorry No File Found
+                          <?php } ?>
+                        </td>
 
 <!-- <td><?php echo $data->name ?></td> -->
 <?if($productView==1 || $productView==3){?>

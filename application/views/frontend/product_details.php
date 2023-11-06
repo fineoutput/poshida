@@ -171,7 +171,7 @@
           <div class="sk"></div>
           <div class="sj"></div>
           <div class="align-center mb-md-30">
-            <ul id="glasscase" class="gc-start">
+            <!-- <ul id="glasscase" class="gc-start">
               <li><img src="<?= base_url() . $type_data[0]->image ?>" alt=" "></li>
               <? if (!empty($type_data[0]->image2)) { ?><li><img src="<?= base_url() .  $type_data[0]->image2 ?>" alt=" "></li> <? }
                                                                                                                               if (!empty($type_data[0]->image3)) { ?>
@@ -181,8 +181,11 @@
                                                                                                                               if (!empty($type_data[0]->image5)) { ?>
                 <li><img src="<?= base_url() . $type_data[0]->image5 ?>" alt=" "></li> <? }
                                                                                                                               if (!empty($type_data[0]->image6)) { ?>
-                <li><img src="<?= base_url() .  $type_data[0]->image6 ?>" alt=" "></li> <? } ?>
-            </ul>
+                <li><img src="<?= base_url() .  $type_data[0]->image6 ?>" alt=" "></li> <? } 
+                                                                                                                              if (!empty($type_data[0]->video)) { ?>
+                <li><img src="<?= base_url() .  $type_data[0]->video ?>"></li> <? } 
+                ?>
+            </ul> -->
           </div>
         </div>
         <div class="col-lg-7 col-md-6 col-12">

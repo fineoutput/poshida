@@ -275,6 +275,7 @@ class Type extends CI_finecontrol
                             $nnnn5 = $videoNAmePath;
                         }
                     }
+
                     //==========================image_6 upload=======================\\
                     $this->load->library('upload');
                     $img6 = 'image6';
@@ -305,6 +306,36 @@ class Type extends CI_finecontrol
                             $nnnn6 = $videoNAmePath;
                         }
                     }
+                    //==========================video upload=======================\\
+                    $this->load->library('upload');
+                    $img7 = 'video';
+                    $video = "";
+                    $file_check = ($_FILES['video']['error']);
+                    if ($file_check != 4) {
+                        $image_upload_folder = FCPATH . "assets/uploads/type/";
+                        if (!file_exists($image_upload_folder)) {
+                            mkdir($image_upload_folder, DIR_WRITE_MODE, true);
+                        }
+                        $new_file_name = "type6" . date("YmdHis");
+                        $this->upload_config = array(
+                            'upload_path'   => $image_upload_folder,
+                            'file_name' => $new_file_name,
+                            'allowed_types' => 'mp4',
+                            'max_size'      => 2500
+                        );
+                        $this->upload->initialize($this->upload_config);
+                        if (!$this->upload->do_upload($img7)) {
+                            $upload_error = $this->upload->display_errors();
+                            // echo json_encode($upload_error);
+                            $this->session->set_flashdata('emessage', $upload_error);
+                            //echo $upload_error;
+                            redirect($_SERVER['HTTP_REFERER']);
+                        } else {
+                            $file_info = $this->upload->data();
+                            $videoNAmePath = "assets/uploads/type/" . $file_info['file_name'];
+                            $video = $videoNAmePath;
+                        }
+                    }
                     $typ = base64_decode($t);
                     if ($typ == 1) {
                         //----------generate barcode-------
@@ -329,83 +360,87 @@ class Type extends CI_finecontrol
                         //     $path2 = $code . date("YmdHis");
                         //     imagepng($imageResource2, 'assets/uploads/barcodes/' . $path2 . '.png');
                         //     $image2 = 'assets/uploads/barcodes/' . $path2 . '.png';
-                            $image2 = "";
+                        $image2 = "";
+                        $this->db->select('*');
+                        $this->db->from('tbl_type');
+                        $this->db->where('is_active', 1);
+                        $this->db->where('product_id', $product_id);
+                        $type_data = $this->db->count_all_results();
+                        if ($type_data < 1) {
+                            $data_update = array('is_active' => 1);
+                            $this->db->where('id', $product_id);
+                            $zapak = $this->db->update('tbl_product', $data_update);
+                        }
+                        $idw = base64_decode($iw);
+                        if (!empty($idw)) {
                             $this->db->select('*');
                             $this->db->from('tbl_type');
-                            $this->db->where('is_active', 1);
-                            $this->db->where('product_id', $product_id);
-                            $type_data = $this->db->count_all_results();
-                            if ($type_data < 1) {
-                                $data_update = array('is_active' => 1);
-                                $this->db->where('id', $product_id);
-                                $zapak = $this->db->update('tbl_product', $data_update);
+                            $this->db->where('id', $idw);
+                            $pro_data = $this->db->get()->row();
+                            if (empty($nnnn)) {
+                                $nnnn = $pro_data->image;
                             }
-                            $idw = base64_decode($iw);
-                            if (!empty($idw)) {
-                                $this->db->select('*');
-                                $this->db->from('tbl_type');
-                                $this->db->where('id', $idw);
-                                $pro_data = $this->db->get()->row();
-                                if (empty($nnnn)) {
-                                    $nnnn = $pro_data->image;
-                                }
-                                if (empty($nnnn2)) {
-                                    $nnnn2 = $pro_data->image2;
-                                }
-                                if (empty($nnnn3)) {
-                                    $nnnn3 = $pro_data->image3;
-                                }
-                                if (empty($nnnn4)) {
-                                    $nnnn4 = $pro_data->image4;
-                                }
-                                if (empty($nnnn5)) {
-                                    $nnnn5 = $pro_data->image5;
-                                }
-                                if (empty($nnnn6)) {
-                                    $nnnn6 = $pro_data->image6;
-                                }
+                            if (empty($nnnn2)) {
+                                $nnnn2 = $pro_data->image2;
                             }
-                            $data_insert = array(
-                                'product_id' => $product_id,
-                                'size_id' => $size_id,
-                                'colour_id' => $colour_id,
-                                // 'name'=>$name,
-                                'image' => $nnnn,
-                                'image2' => $nnnn2,
-                                'image3' => $nnnn3,
-                                'image4' => $nnnn4,
-                                'image5' => $nnnn5,
-                                'image6' => $nnnn6,
-                                'retailer_mrp' => $mrp,
-                                'retailer_sp' => $sp,
-                                'retailer_gst' => $gst,
-                                'retailer_spgst' => $spgst,
-                                'reseller_mrp' => $re_mrp,
-                                'reseller_sp' => $re_sp,
-                                'reseller_gst' => $re_gst,
-                                'reseller_spgst' => $re_spgst,
-                                // 'reseller_price' =>$reseller_price,
-                                'reseller_min_qty' => $reseller_min_qty,
-                                'inventory' => $inventory,
-                                'ip' => $ip,
-                                'added_by' => $addedby,
-                                'is_active' => 1,
-                                'color_active' => 1,
-                                'size_active' => 1,
-                                'date' => $cur_date,
-                                // 't_code' => $t_code,
-                                // 'barcode' => $code,
-                                // 'barcode_image' => $image,
-                                'barcode_tag_image' => $image2,
-                            );
-                            $last_id = $this->base_model->insert_table("tbl_type", $data_insert, 1);
-                            if ($last_id != 0) {
-                                $this->session->set_flashdata('smessage', 'Type inserted successfully');
-                                redirect("dcadmin/Type/view_type/" . base64_encode($product_id), "refresh");
-                            } else {
-                                $this->session->set_flashdata('emessage', 'Sorry error occurred');
-                                redirect($_SERVER['HTTP_REFERER']);
+                            if (empty($nnnn3)) {
+                                $nnnn3 = $pro_data->image3;
                             }
+                            if (empty($nnnn4)) {
+                                $nnnn4 = $pro_data->image4;
+                            }
+                            if (empty($nnnn5)) {
+                                $nnnn5 = $pro_data->image5;
+                            }
+                            if (empty($nnnn6)) {
+                                $nnnn6 = $pro_data->image6;
+                            }
+                            if (empty($video)) {
+                                $video = $pro_data->video;
+                            }
+                        }
+                        $data_insert = array(
+                            'product_id' => $product_id,
+                            'size_id' => $size_id,
+                            'colour_id' => $colour_id,
+                            // 'name'=>$name,
+                            'image' => $nnnn,
+                            'image2' => $nnnn2,
+                            'image3' => $nnnn3,
+                            'image4' => $nnnn4,
+                            'image5' => $nnnn5,
+                            'image6' => $nnnn6,
+                            'video' => $video,
+                            'retailer_mrp' => $mrp,
+                            'retailer_sp' => $sp,
+                            'retailer_gst' => $gst,
+                            'retailer_spgst' => $spgst,
+                            'reseller_mrp' => $re_mrp,
+                            'reseller_sp' => $re_sp,
+                            'reseller_gst' => $re_gst,
+                            'reseller_spgst' => $re_spgst,
+                            // 'reseller_price' =>$reseller_price,
+                            'reseller_min_qty' => $reseller_min_qty,
+                            'inventory' => $inventory,
+                            'ip' => $ip,
+                            'added_by' => $addedby,
+                            'is_active' => 1,
+                            'color_active' => 1,
+                            'size_active' => 1,
+                            'date' => $cur_date,
+                            // 't_code' => $t_code,
+                            // 'barcode' => $code,
+                            // 'barcode_image' => $image,
+                            'barcode_tag_image' => $image2,
+                        );
+                        $last_id = $this->base_model->insert_table("tbl_type", $data_insert, 1);
+                        if ($last_id != 0) {
+                            $this->session->set_flashdata('smessage', 'Type inserted successfully');
+                            redirect("dcadmin/Type/view_type/" . base64_encode($product_id), "refresh");
+                        } else {
+                            $this->session->set_flashdata('emessage', 'Sorry error occurred');
+                            redirect($_SERVER['HTTP_REFERER']);
+                        }
                         // } else {
                         //     $this->session->set_flashdata('emessage', 'This type code is already used');
                         //     redirect($_SERVER['HTTP_REFERER']);
@@ -451,6 +486,9 @@ class Type extends CI_finecontrol
                         if (empty($nnnn6)) {
                             $nnnn6 = $pro_data->image6;
                         }
+                        if (empty($video)) {
+                            $video = $pro_data->video;
+                        }
                         $data_insert = array(
                             'size_id' => $size_id,
                             'colour_id' => $colour_id,
@@ -460,6 +498,7 @@ class Type extends CI_finecontrol
                             'image4' => $nnnn4,
                             'image5' => $nnnn5,
                             'image6' => $nnnn6,
+                            'video' => $video,
                             'retailer_mrp' => $mrp,
                             'retailer_sp' => $sp,
                             'retailer_gst' => $gst,

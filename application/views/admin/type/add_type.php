@@ -103,6 +103,10 @@
                         <input type="file" name="image6" class="form-control" placeholder="" value="" />
                       </td>
                     </tr>
+                    <tr>
+                      <td> <strong>Video</strong></td>
+                      <td> <input type="file" name="video" class="form-control" placeholder="" value="" /> </td>
+                    </tr>
                     <!-- <tr>
   <td> <strong>Name</strong> <span style="color:red;">*</span></strong> </td>
   <td>
