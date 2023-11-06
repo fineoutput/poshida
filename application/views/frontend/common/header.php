@@ -30,6 +30,11 @@
 <!-- //================ END HEAD ============================= -->
 
 <style>
+  .goog-te-gadget {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+}
   .product-details-btn ul {
     display: flex;
     align-items: center;
