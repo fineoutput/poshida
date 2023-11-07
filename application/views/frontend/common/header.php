@@ -30,6 +30,7 @@
 <!-- //================ END HEAD ============================= -->
 
 <style>
+
   .product-details-btn ul {
     display: flex;
     align-items: center;
@@ -147,6 +148,18 @@
       margin-top: 84px !important;
     }
   }
+  div#google_translate_element span {
+    font-size: 9px !important;
+}   
+div#google_translate_element{
+  margin-right: 10px;
+}
+
+@media(max-width:982px){
+  .hr{
+    display: none;
+  }
+}
 </style>
 <!-- //================ START BODY ============================= -->
 <? $headerMiniCart = [];
@@ -170,7 +183,7 @@ if (!empty($this->session->userdata('user_data'))) {
         <div class="row m-0">
           <div class="col-lg-4 col-md-3 col-3 p-0 " style="display: flex;
 						align-items: center;">
-               <div id="google_translate_element"></div>
+               <div id="google_translate_element" class="hr"></div>
             <div class="newsletter-input-1 newsletter-input mob  " style="width: 70%;">
               <form action="<?= base_url() ?>Home/search" method="GET" enctype="multipart/form-data">
                 <div class="form-group m-0">
@@ -308,6 +321,7 @@ if (!empty($this->session->userdata('user_data'))) {
           <div class="right-side">
             <div class="overlay"></div>
             <div id="menu" class="navbar-collapse collapse">
+                       
               <ul class="nav navbar-nav">
                 <div class="navbar-header dfghddgd">
                   <a class="navbar-brand page-scroll" href="<?= base_url() ?>">
@@ -382,6 +396,7 @@ if (!empty($this->session->userdata('user_data'))) {
                 <li class="level "><a href="<?= base_url() ?>Home/contact" class="nav-link">Contact</a></li>
 
               </ul>
+         
             </div>
           </div>
         </div>

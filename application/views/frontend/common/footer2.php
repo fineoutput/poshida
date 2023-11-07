@@ -35,6 +35,17 @@
   .social-media.mt-3 ul.iconn li a i:hover {
     color: white;
   }
+  .sdgsdggsd{
+		display: none;
+	}
+
+  @media(max-width:982px){
+    .sdgsdggsd{
+		display: block !important;
+    margin: 1rem;
+	}
+  }
+
 </style>
 <!-- Newslatter section start -->
 <section class="newsletter-section align-center ptb-100">
@@ -79,6 +90,9 @@
 										margin-left :18px;
 									">Grace In Every Stitch </p>
             </div>
+		
+            <div id="google_translate_element" style="margin-top: 20px;" class=" sdgsdggsd  ms-2"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage" class="goog-te-gadget-simple" style="white-space: nowrap;"><img src="https://www.google.com/images/cleardot.gif" class="goog-te-gadget-icon" alt="" style="background-image: url(&quot;https://translate.googleapis.com/translate_static/img/te_ctrl3.gif&quot;); background-position: -65px 0px;"><span style="vertical-align: middle;"><a aria-haspopup="true" class="VIpgJd-ZVi9od-xl07Ob-lTBxed" href="#"><span>Select Language</span><img src="https://www.google.com/images/cleardot.gif" alt="" width="1" height="1"><span style="border-left: 1px solid rgb(187, 187, 187);">​</span><img src="https://www.google.com/images/cleardot.gif" alt="" width="1" height="1"><span aria-hidden="true" style="color: rgb(118, 118, 118);">▼</span></a></span></div></div></div>
+			
           </div>
           <div class="col-12 col-lg-3 col-md-6">
             <div class="footer-static-block">
@@ -113,6 +127,7 @@
                   <li><a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel">Login</a></li>
                   <li><a href="<?= base_url() ?>Home/about_us">About Us</a></li>
                   <li><a href="<?= base_url() ?>Home/career">Career</a></li>
+                  <li><a href="<?= base_url() ?>Home/reseller_register" >Partner with us</a></li>
                 </ul>
               </div>
             </div>
