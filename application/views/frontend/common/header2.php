@@ -76,6 +76,14 @@
         display: none;
       }
     }
+    .navbar-nav>li>a {
+    padding: 14px 0px !important;
+    display: inline-block;
+    font-weight: 400;
+    color: #333;
+    font-size: 14px;
+    position: relative;
+}
 
     /* .collapse:not(.show) {
 			display: none;
@@ -587,8 +595,25 @@
     }
 
     div#google_translate_element span {
-      font-size: 9px !important;
-    }
+
+    font-size: 9px !important;
+}   
+div#google_translate_element{
+  margin-right: 10px;
+}
+@media(max-width:982px){
+  .hr{
+    display: none;
+  }
+}
+.nav>li {
+    position: inherit;
+    display: inline-block;
+    padding: 0px 8px !important;
+    font-size: 9px !important;
+}
+
+
 
     div#google_translate_element {
       margin-right: 10px;
@@ -599,6 +624,7 @@
         display: none;
       }
     }
+
   </style>
 </head>
 
@@ -776,9 +802,9 @@
                   <li class="level">
                     <a href="<?= base_url() ?>" class="nav-link">Home</a>
                   </li>
-                  <li class="level">
-                    <a href="<?= base_url() ?>Home/about_us">About Us</a>
-                  </li>
+                  <!-- <li class="level">
+                <a href="<?= base_url() ?>Home/about_us">About Us</a>
+                </li> -->
                   <?php $i = 1;
                   $this->db->select('*');
                   $this->db->from('tbl_category');
