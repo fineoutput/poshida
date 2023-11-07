@@ -397,7 +397,7 @@ if (!empty($this->session->userdata('user_data'))) {
                 <?php $i++;
                 } ?>
 
-<li><a href="<?= base_url() ?>Home/reseller_register">Partner with us</a></li>
+<li><a href="<?= base_url() ?>Home/reseller_register">Partner With Us</a></li>
                 <li class="level "><a href="<?= base_url() ?>Home/contact" class="nav-link">Contact</a></li>
 
               </ul>
