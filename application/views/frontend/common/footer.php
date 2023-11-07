@@ -466,11 +466,11 @@ if (!empty($popup_data)) {
 <!-- Place Order js -->
 <script src="<?= base_url() ?>assets/frontend/customJS/placeOrder.js"></script>
 <!-- // - mixed js  -->
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script src="<?= base_url() ?>assets/frontend/customJS/mixed.js"></script>
 <script src="<?= base_url() ?>assets/frontend/js/bootstrap-notify.min.js"></script>
+<!-- <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	var x = window.matchMedia("(max-width: 700px)")
 	if (x.matches) { // If media query matches
 		function googleTranslateElementInit() {
@@ -486,7 +486,7 @@ if (!empty($popup_data)) {
 			}, 'google_translate_element');
 		}
 	}
-</script>
+</script> -->
 
 <script>
 	function isNumberKey(evt) {
