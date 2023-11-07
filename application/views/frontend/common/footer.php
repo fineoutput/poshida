@@ -114,7 +114,9 @@
 									<li><a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel">Login</a></li>
 									<li><a href="<?= base_url() ?>Home/about_us">About Us</a></li>
 									<li><a href="<?= base_url() ?>Home/career">Career</a></li>
-									<li><a href="<?= base_url() ?>Home/reseller_register">Partner with us</a></li>
+							
+									
+									<li class="level "><a href="<?= base_url() ?>Home/all_blogs" class="nav-link">Blog</a></li>
 								</ul>
 							</div>
 						</div>

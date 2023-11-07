@@ -824,7 +824,7 @@ div#google_translate_element{
                   <?php $i++;
                   } ?>
 
-                  <li class="level "><a href="<?= base_url() ?>Home/all_blogs" class="nav-link">Blog</a></li>
+<li><a href="<?= base_url() ?>Home/reseller_register">Partner with us</a></li>
                   <li class="level "><a href="<?= base_url() ?>Home/contact" class="nav-link">Contact</a></li>
 
                 </ul>
