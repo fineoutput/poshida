@@ -9,10 +9,11 @@
   <title>Poshida</title>
 
   <!-- Mobile Specific Metas -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link type="image/x-icon" href="<?= base_url() ?>assets/frontend/img/Poshida.jpg" rel="icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <meta name="google-site-verification" content="CuMy5Mu3gGOC41M6wxypzrV2jXpos0v_BD8NYcP0mAQ" />
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/xpoge.css">
   <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/responsive.css">
@@ -25,17 +26,29 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="<?= base_url() ?>assets/frontend/js/bootstrap-notify.min.js"></script>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NY9GDLVWKY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+
+    gtag('config', 'G-NY9GDLVWKY');
+  </script>
 </head>
 <!-- //================ END HEAD ============================= -->
 
 <style>
-
   .goog-te-gadget {
     width: 200px;
     height: 50px;
     font-size: 20px;
-}
+  }
+
   .product-details-btn ul {
     display: flex;
     align-items: center;
@@ -153,18 +166,20 @@
       margin-top: 84px !important;
     }
   }
+
   div#google_translate_element span {
     font-size: 9px !important;
-}   
-div#google_translate_element{
-  margin-right: 10px;
-}
-
-@media(max-width:982px){
-  .hr{
-    display: none;
   }
-}
+
+  div#google_translate_element {
+    margin-right: 10px;
+  }
+
+  @media(max-width:982px) {
+    .hr {
+      display: none;
+    }
+  }
 </style>
 <!-- //================ START BODY ============================= -->
 <? $headerMiniCart = [];
@@ -183,12 +198,12 @@ if (!empty($this->session->userdata('user_data'))) {
   <div class="main">
     <!-- //================ START HEADER ============================= -->
 
-    <header id="header " >
+    <header id="header ">
       <div class="container position-r header-class  ">
         <div class="row m-0">
           <div class="col-lg-4 col-md-3 col-3 p-0 " style="display: flex;
 						align-items: center;">
-               <div id="google_translate_element" class="hr"></div>
+            <div id="google_translate_element" class="hr"></div>
             <div class="newsletter-input-1 newsletter-input mob  " style="width: 70%;">
               <form action="<?= base_url() ?>Home/search" method="GET" enctype="multipart/form-data">
                 <div class="form-group m-0">
@@ -218,7 +233,7 @@ if (!empty($this->session->userdata('user_data'))) {
                 <li class="search-box  search_box " onclick="hello()">
                   <a href="#"><span></span></a>
                 </li>
-                <li class="account-icon heig show-icon" >
+                <li class="account-icon heig show-icon">
                   <a href="#"><span></span></a>
                   <div class="header-link-dropdown account-link-dropdown hrlllll">
                     <ul class="link-dropdown-list">
@@ -326,7 +341,7 @@ if (!empty($this->session->userdata('user_data'))) {
           <div class="right-side">
             <div class="overlay"></div>
             <div id="menu" class="navbar-collapse collapse">
-                       
+
               <ul class="nav navbar-nav">
                 <div class="navbar-header dfghddgd">
                   <a class="navbar-brand page-scroll" href="<?= base_url() ?>">
@@ -337,7 +352,7 @@ if (!empty($this->session->userdata('user_data'))) {
                   <a href="<?= base_url() ?>" class="nav-link">Home</a>
                 </li>
                 <li class="level">
-                <a href="<?= base_url() ?>Home/about_us">About Us</a>
+                  <a href="<?= base_url() ?>Home/about_us">About Us</a>
                 </li>
                 <?php $i = 1;
                 $this->db->select('*');
@@ -363,9 +378,9 @@ if (!empty($this->session->userdata('user_data'))) {
                               foreach ($subcategory_data->result() as $subcat) {
                                 // if ($i % 2 == 0) {
                               ?>
-                                  <li class="level3"><a href="<?= base_url() ?>Home/all_products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
-                              <?php 
-                              // }
+                                <li class="level3"><a href="<?= base_url() ?>Home/all_products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
+                              <?php
+                                // }
                                 $i++;
                               } ?>
                             </ul>
@@ -397,11 +412,11 @@ if (!empty($this->session->userdata('user_data'))) {
                 <?php $i++;
                 } ?>
 
-<li><a href="<?= base_url() ?>Home/reseller_register">Partner With Us</a></li>
+                <li><a href="<?= base_url() ?>Home/reseller_register">Partner With Us</a></li>
                 <li class="level "><a href="<?= base_url() ?>Home/contact" class="nav-link">Contact</a></li>
 
               </ul>
-         
+
             </div>
           </div>
         </div>
