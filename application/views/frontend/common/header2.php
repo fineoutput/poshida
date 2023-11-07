@@ -19,7 +19,7 @@
   <? if (!empty($dsc)) { ?>
     <meta name="description" content="<?= $dsc ?>">
   <? } ?>
-
+  <meta name="google-site-verification" content="CuMy5Mu3gGOC41M6wxypzrV2jXpos0v_BD8NYcP0mAQ" />
   <!-- Mobile Specific Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link type="image/x-icon" href="<?= base_url() ?>assets/frontend/img/Poshida.jpg" rel="icon">
@@ -34,6 +34,19 @@
   <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/responsive-addcartbtn.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NY9GDLVWKY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+
+    gtag('config', 'G-NY9GDLVWKY');
+  </script>
   <style>
     .product-details-btn ul {
       display: flex;
@@ -582,6 +595,7 @@
     }
 
     div#google_translate_element span {
+
     font-size: 9px !important;
 }   
 div#google_translate_element{
@@ -596,7 +610,21 @@ div#google_translate_element{
     position: inherit;
     display: inline-block;
     padding: 0px 8px !important;
+    font-size: 9px !important;
 }
+
+
+
+    div#google_translate_element {
+      margin-right: 10px;
+    }
+
+    @media(max-width:982px) {
+      .hr {
+        display: none;
+      }
+    }
+
   </style>
 </head>
 
@@ -615,17 +643,17 @@ div#google_translate_element{
 
   <div class="main">
     <!-- Header start style="    padding-bottom: 10px !important; "-->
-    <header id="header " >
+    <header id="header ">
 
       <div class="container position-r header-class ">
         <div class="row m-0">
           <div class="col-lg-4 col-md-3 col-3 p-0 " style="display: flex;
 						align-items: center;">
-               <div id="google_translate_element" class="hr"></div>
+            <div id="google_translate_element" class="hr"></div>
             <div class="newsletter-input-1 newsletter-input mob  " style="width: 70%;">
-            <form action="<?= base_url() ?>Home/search" method="GET" enctype="multipart/form-data">
+              <form action="<?= base_url() ?>Home/search" method="GET" enctype="multipart/form-data">
                 <div class="form-group m-0">
-                <input type="searc" placeholder="Search Products... " required="" name="search">
+                  <input type="searc" placeholder="Search Products... " required="" name="search">
                 </div>
                 <button type="submit" class="btn  btn--1"> <i class="bi bi-search" style="color: #c68fa6;"></i></button>
               </form>
@@ -651,7 +679,7 @@ div#google_translate_element{
                 <li class="search-box  search_box " onclick="hello()">
                   <a href="#"><span></span></a>
                 </li>
-                <li class="account-icon heig show-icon" >
+                <li class="account-icon heig show-icon">
                   <a href="#"><span></span></a>
                   <div class="header-link-dropdown account-link-dropdown hrlllll">
                     <ul class="hrb">
@@ -693,7 +721,7 @@ div#google_translate_element{
                         <ul class="cart_list">
                           <? foreach ($headerMiniCart['cart_data'] as $miniCart) {
                           ?>
-                            <li> <a href="javascript:void(0);" product_id="<?= base64_encode($miniCart['product_id']) ?>" type_id="<?= base64_encode($miniCart['type_id']) ?>" onclick="deleteCart(this)"   class="close-cart"><i class="fa fa-times-circle"></i></a>
+                            <li> <a href="javascript:void(0);" product_id="<?= base64_encode($miniCart['product_id']) ?>" type_id="<?= base64_encode($miniCart['type_id']) ?>" onclick="deleteCart(this)" class="close-cart"><i class="fa fa-times-circle"></i></a>
                               <figure> <a href="javascript:;" class="pull-left"> <img alt=" " src="<?= $miniCart['image'] ?>"></a>
                                 <figcaption> <span><a href="#"><?= $miniCart['product_name'] ?></a></span>
                                   <p class="cart-price m-0">₹<?= $miniCart['price'] ?></p>
@@ -764,7 +792,7 @@ div#google_translate_element{
 							</button> -->
               <div class="overlay"></div>
               <div id="menu" class="navbar-collapse collapse">
-         <!-- <div id="google_translate_element" class="hr"></div> -->
+                <!-- <div id="google_translate_element" class="hr"></div> -->
                 <ul class="nav navbar-nav">
                   <div class="navbar-header dfghddgd">
                     <a class="navbar-brand page-scroll" href="<?= base_url() ?>">
@@ -774,9 +802,15 @@ div#google_translate_element{
                   <li class="level">
                     <a href="<?= base_url() ?>" class="nav-link">Home</a>
                   </li>
+<<<<<<< HEAD
                   <!-- <li class="level">
                 <a href="<?= base_url() ?>Home/about_us">About Us</a>
                 </li> -->
+=======
+                  <li class="level">
+                    <a href="<?= base_url() ?>Home/about_us">About Us</a>
+                  </li>
+>>>>>>> 019a106e20732d82d278e7dd2a0af56b2d0430e6
                   <?php $i = 1;
                   $this->db->select('*');
                   $this->db->from('tbl_category');
@@ -789,7 +823,7 @@ div#google_translate_element{
                     $this->db->where('category_id', $category->id);
                     $this->db->where('is_active', 1);
                     $subcategory_data = $this->db->get(); ?>
-                    <li class="level dropdown"  style="position: relative;">
+                    <li class="level dropdown" style="position: relative;">
                       <a href="<?= base_url() ?>Home/all_products/<?= $category->url ?>/1"" class=" nav-link"><?= $category->name ?></a>
                       <span class="opener plus"><i class="bi bi-chevron-down" style="color:white"></i></span>
                       <div class="megamenu full mobile-sub-menu">
@@ -801,10 +835,10 @@ div#google_translate_element{
                                 foreach ($subcategory_data->result() as $subcat) {
                                   // if ($i % 2 == 0) {
                                 ?>
-                                    <li class="level3"><a href="<?= base_url() ?>Home/all_products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
-                               
-                               <?php
-                                // }
+                                  <li class="level3"><a href="<?= base_url() ?>Home/all_products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
+
+                                <?php
+                                  // }
 
                                   $i++;
                                 } ?>
@@ -837,7 +871,7 @@ div#google_translate_element{
                   <?php $i++;
                   } ?>
 
-<li><a href="<?= base_url() ?>Home/reseller_register">Partner With Us</a></li>
+                  <li><a href="<?= base_url() ?>Home/reseller_register">Partner With Us</a></li>
                   <li class="level "><a href="<?= base_url() ?>Home/contact" class="nav-link">Contact</a></li>
 
                 </ul>
