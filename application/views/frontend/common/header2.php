@@ -632,7 +632,7 @@ div#google_translate_element{
           </div>
           <div class="col-lg-4 col-md-3 col-3 p-0 icon-bar" style="display: flex;
 						align-items: center;">
-            <!-- <div id="google_translate_element"></div> -->
+            <div id="google_translate_element"></div>
             <div class="header-right-link">
               <ul id="headerCount">
                 <li class="search-box  search_box " onclick="hello()">

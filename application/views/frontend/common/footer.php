@@ -46,17 +46,17 @@
 			margin-left: 0px !important;
 		}
 	}
-	.sdgsdggsd{
+
+	.sdgsdggsd {
 		display: none;
 	}
 
-  @media(max-width:982px){
-    .sdgsdggsd{
-		display: block !important;
-    margin: 1rem;
+	@media(max-width:982px) {
+		.sdgsdggsd {
+			display: block !important;
+			margin: 1rem;
+		}
 	}
-  }
-
 </style>
 
 <footer class="footer-part">
@@ -78,8 +78,8 @@
 										margin-left :18px;
 									">Grace In Every Stitch </p>
 						</div>
-						
-						<div id="google_translate_element"  class=" sdgsdggsd ms-2"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage" class="goog-te-gadget-simple" style="white-space: nowrap;"><img src="https://www.google.com/images/cleardot.gif" class="goog-te-gadget-icon" alt="" style="background-image: url(&quot;https://translate.googleapis.com/translate_static/img/te_ctrl3.gif&quot;); background-position: -65px 0px;"><span style="vertical-align: middle;"><a aria-haspopup="true" class="VIpgJd-ZVi9od-xl07Ob-lTBxed" href="#"><span>Select Language</span><img src="https://www.google.com/images/cleardot.gif" alt="" width="1" height="1"><span style="border-left: 1px solid rgb(187, 187, 187);">​</span><img src="https://www.google.com/images/cleardot.gif" alt="" width="1" height="1"><span aria-hidden="true" style="color: rgb(118, 118, 118);">▼</span></a></span></div></div></div>
+
+						<div id="google_translate_element2" class=" sdgsdggsd ms-2"></div>
 					</div>
 					<div class="col-12 col-lg-3 col-md-6">
 						<div class="footer-static-block">
@@ -101,7 +101,7 @@
 								<ul class="footer-menu footer-block-contant">
 									<li><a href="<?= base_url() ?>Home/my_profile/order">Orders & Returns</a></li>
 									<li><a href="<?= base_url() ?>Home/my_profile">Account Details</a></li>
-									
+
 								</ul>
 							</div>
 						</div>
@@ -114,7 +114,7 @@
 									<li><a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel">Login</a></li>
 									<li><a href="<?= base_url() ?>Home/about_us">About Us</a></li>
 									<li><a href="<?= base_url() ?>Home/career">Career</a></li>
-									<li><a  href="<?= base_url() ?>Home/reseller_register" >Partner with us</a></li>
+									<li><a href="<?= base_url() ?>Home/reseller_register">Partner with us</a></li>
 								</ul>
 							</div>
 						</div>
@@ -202,7 +202,7 @@
 					</script> <a href="poshida.in" style="text-transform: lowercase;"> POSHIDA.IN.ALL RIGHTS RESERVED.</a>
 				</p>
 			</div>
-	
+
 			<!-- <div class="col-md-4" style="text-align: center;
     align-items: center;
     display: flex;
@@ -466,11 +466,24 @@ if (!empty($popup_data)) {
 <!-- // - mixed js  -->
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script src="<?= base_url() ?>assets/frontend/customJS/mixed.js"></script>
+<script src="<?= base_url() ?>assets/frontend/js/bootstrap-notify.min.js"></script>
+
 <script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-}
+	var x = window.matchMedia("(max-width: 700px)")
+	if (x.matches) { // If media query matches
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement({
+				pageLanguage: 'en'
+			}, 'google_translate_element2');
+		}
+	} else {
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement({
+				pageLanguage: 'en',
+				layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+			}, 'google_translate_element');
+		}
+	}
 </script>
 
 <script>
@@ -567,7 +580,6 @@ function googleTranslateElementInit() {
 </script>
 <script src="<?= base_url() ?>assets/frontend/js/wow.min.js"></script>
 <script src="<?= base_url() ?>assets/frontend/js/scripts.js"></script>
-<script src="<?= base_url() ?>assets/frontend/js/bootstrap-notify.min.js"></script>
 <script>
 	new WOW().init();
 </script>

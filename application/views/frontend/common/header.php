@@ -30,15 +30,12 @@
 <!-- //================ END HEAD ============================= -->
 
 <style>
-<<<<<<< HEAD
 
-=======
   .goog-te-gadget {
     width: 200px;
     height: 50px;
     font-size: 20px;
 }
->>>>>>> c323726dd9469a4c22a4e574102afe27ec82f65d
   .product-details-btn ul {
     display: flex;
     align-items: center;
