@@ -802,15 +802,9 @@ div#google_translate_element{
                   <li class="level">
                     <a href="<?= base_url() ?>" class="nav-link">Home</a>
                   </li>
-<<<<<<< HEAD
                   <!-- <li class="level">
                 <a href="<?= base_url() ?>Home/about_us">About Us</a>
                 </li> -->
-=======
-                  <li class="level">
-                    <a href="<?= base_url() ?>Home/about_us">About Us</a>
-                  </li>
->>>>>>> 019a106e20732d82d278e7dd2a0af56b2d0430e6
                   <?php $i = 1;
                   $this->db->select('*');
                   $this->db->from('tbl_category');

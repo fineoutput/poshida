@@ -372,10 +372,6 @@ if (!empty($this->session->userdata('user_data'))) {
                 <a href="<?= base_url() ?>Home/about_us">About Us</a>
                 </li> -->
 
-                <li class="level">
-                  <a href="<?= base_url() ?>Home/about_us">About Us</a>
-                </li>
-
                 <?php $i = 1;
                 $this->db->select('*');
                 $this->db->from('tbl_category');
