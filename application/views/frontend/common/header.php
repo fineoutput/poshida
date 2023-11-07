@@ -46,7 +46,14 @@
     width: 100% !important;
   }
 
-
+  .navbar-nav>li>a {
+    padding: 14px 0px !important;
+    display: inline-block;
+    font-weight: 400;
+    color: #333;
+    font-size: 14px;
+    position: relative;
+}
   .owl-carousel .owl-nav button.owl-prev {
     left: 35px;
     transform: translate(-50%, -50%);
@@ -164,6 +171,11 @@ div#google_translate_element{
   .hr{
     display: none;
   }
+}
+.nav>li {
+    position: inherit;
+    display: inline-block;
+    padding: 0px 8px !important;
 }
 </style>
 <!-- //================ START BODY ============================= -->
@@ -336,9 +348,9 @@ if (!empty($this->session->userdata('user_data'))) {
                 <li class="level">
                   <a href="<?= base_url() ?>" class="nav-link">Home</a>
                 </li>
-                <li class="level">
+                <!-- <li class="level">
                 <a href="<?= base_url() ?>Home/about_us">About Us</a>
-                </li>
+                </li> -->
                 <?php $i = 1;
                 $this->db->select('*');
                 $this->db->from('tbl_category');
@@ -397,7 +409,7 @@ if (!empty($this->session->userdata('user_data'))) {
                 <?php $i++;
                 } ?>
 
-<li><a href="<?= base_url() ?>Home/reseller_register">Partner With Us</a></li>
+                <li><a href="<?= base_url() ?>Home/reseller_register">Partner With Us</a></li>
                 <li class="level "><a href="<?= base_url() ?>Home/contact" class="nav-link">Contact</a></li>
 
               </ul>
