@@ -53,8 +53,9 @@
   .megamenu .sub-menu-level2 li.level3>a {
     display: inline-block;
     padding: 4px 0;
-    font-size: 15px;
+    font-size: 13px;
 }
+
 
 
   i.bi.bi-chevron-down {
