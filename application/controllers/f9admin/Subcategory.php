@@ -74,6 +74,8 @@ class Subcategory extends CI_finecontrol
 
                     $sub = explode(" ", $name);
                     $url = implode("-", $sub);
+                    $url=str_replace("&","and",$url);
+                    $url=str_replace("'","",$url);
                     $typ=base64_decode($t);
                     if ($typ==1) {
                         $data_insert = array('name'=>$name,

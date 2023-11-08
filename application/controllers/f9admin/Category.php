@@ -134,6 +134,7 @@ class Category extends CI_finecontrol
                     $cat = explode(" ", $name);
                     $url = implode("-", $cat);
                     $url=str_replace("&","and",$url);
+                    $url=str_replace("'","",$url);
 
                     $typ=base64_decode($t);
                     if ($typ==1) {

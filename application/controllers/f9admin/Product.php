@@ -656,6 +656,8 @@ class Product extends CI_finecontrol
                 }
                 $pro = explode(" ", $value['C']);
                 $url = implode("-", $pro);
+                $url = str_replace("&", "and", $url);
+                $url = str_replace("'", "", $url);
                 $data_insert = array(
                     'category_id' => $value['A'],
                     'subcategory_id' => $value['B'],
