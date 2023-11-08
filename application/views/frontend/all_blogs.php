@@ -25,17 +25,30 @@
                 <div class=" m-3 item  ">
                   <div class="blog-item">
                     <div class="blog-image blog-image1">
-                      <a href="<?= base_url() ?>Home/blog_details/<?= base64_encode($blog->id) ?>">
+                      <a href="<?= base_url() ?>blog?q=<?= urlencode($blog->heading) ?>">
                         <img src="<?= base_url() . $blog->image ?>" alt="<?= $blog->heading ?>" alt="broken image">
                       </a>
                     </div>
                     <div class="blog-detail">
                       <span class="bloger-date"><? $newdate = new DateTime($blog->date);
 																		echo $newdate->format('d-M-Y'); ?></span>
-                      <h3 class="head-three mb-10"><a href="<?= base_url() ?>Home/blog_details/<?= base64_encode($blog->id) ?>"><?= $blog->heading ?></a>
+                      <h3 class="head-three mb-10"><a href="<?= base_url() ?>blog?q=<?= urlencode($blog->heading) ?>"><?= $blog->heading ?></a>
                       </h3>
-                      <p><?= $blog->description ?></p>
-                      <a href="<?= base_url() ?>Home/blog_details/<?= base64_encode($blog->id) ?>" class="readmore-btn re">Read More</a>
+                      <p class="text-justify">
+  												<?
+													$string = strip_tags($blog->description);
+													if (strlen($string) > 230) {
+
+														// truncate string
+														$stringCut = substr($string, 0, 230);
+														$endPoint = strrpos($stringCut, ' ');
+
+														//if the string doesn't contain any space then it will cut without word basis.
+														$string = $endPoint ? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+														$string .= '...';
+													}
+													echo $string; ?></p>
+                      <a href="<?= base_url() ?>blog?q=<?= urlencode($blog->heading) ?>" class="readmore-btn re">Read More</a>
                     </div>
                   </div>
                 </div>

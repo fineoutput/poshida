@@ -75,6 +75,8 @@ class Home extends CI_Controller
         } else {
             $data['cart_data'] = $this->cart->ViewCartOffline();
         }
+        $data['title'] = 'Buy Kurta Online | Designer Kurta For Women | Poshida';
+        $data['dsc'] = 'Buy Designer Kurta Online For Women. Buy Cotton Embroidery Kurta Online , floor length gown , a line kurta , casual kurti & printed kurti At Poshida';
         $this->load->view('frontend/common/header', $data);
         $this->load->view('frontend/index');
         $this->load->view('frontend/common/footer');
@@ -120,6 +122,22 @@ class Home extends CI_Controller
                 }
             }
             $data['filter_size'] = array_merge(array_unique($size));
+            if($url=='Womens-and-Girls'){
+                $data['title'] = 'Buy Stylish Kurti For Women | Kurtis Online Shopping in India | Poshida';
+                $data['dsc'] = 'Designer Kurti: Buy Stylish Kurtis For Women. Explore the latest kurti designs & Kurtis online shopping At Poshida. Upgrade your wardrobe with our fashionable collection';
+            }else if($url=='A--LINE-KURTA'){
+                $data['title'] = 'Buy Festival Kurta For Women | A Line Kurti | Poshida';
+                $data['dsc'] = "Get ready for the festivities with Poshida's A-line kurtis – the perfect festival kurtas for women. Elevate your style with Poshida. Shop now!";
+            }else if($url=='EMBROIDERY-KURTA'){
+                $data['title'] = 'Buy Cotton Embroidery Kurta For Women Online in India - Poshida';
+                $data['dsc'] = "Elevate your style with Poshida's Cotton Embroidery Kurtas for women online in India. Discover the perfect blend of comfort and elegance. Shop now for a fashionable twist on traditional attire";
+            }else if($url=='FLOOR-LENGTH-GOWN'){
+                $data['title'] = 'Buy Floor Length Gown For Women Online in India - Poshida';
+                $data['dsc'] = "Explore our website today and witness the perfect blend of fashion and charm! Visit Poshida and buy floor length gowns for women online in India - because you deserve to look and feel your absolute best!";
+            }else if($url=='SKD-SETS'){
+                $data['title'] = 'Buy Latest Kurti Designs For Women & Kurti Sets Online';
+                $data['dsc'] = "Shop high-quality and stylish designer kurtis online. Our latest kurti designs for women will empower you to embrace your own unique style with our wide selection of the latest kurti designs. Don't let this exciting opportunity pass you by!";
+            }
             $this->load->view('frontend/common/header2', $data);
             $this->load->view('frontend/all_products');
             $this->load->view('frontend/common/footer2');
@@ -630,13 +648,12 @@ class Home extends CI_Controller
         $this->load->view('frontend/common/footer2');
     }
     //==================================================== BLOG DETAILS ====================================================
-    public function blog_details($idd)
+    public function blog_details()
     {
-        $id = base64_decode($idd);
-        $data['id'] = $idd;
+        $id = urldecode($_GET['q']);
         $this->db->select('*');
         $this->db->from('tbl_blog');
-        $this->db->where('id', $id);
+        $this->db->where('heading', $id);
         $this->db->where('is_active', 1);
         $data['blog_data'] = $this->db->get()->row();
         $data['title'] = $data['blog_data']->title;
@@ -644,7 +661,7 @@ class Home extends CI_Controller
         $data['dsc'] = $data['blog_data']->dsc;
         $this->db->select('*');
         $this->db->from('tbl_blog');
-        $this->db->where('id !=', $id);
+        $this->db->where('heading !=', $id);
         $this->db->where('is_active', 1);
         $this->db->limit(10);
         $data['related_data'] = $this->db->get();

@@ -6,7 +6,20 @@
 <head>
   <!-- Basic Page Needs -->
   <meta charset="utf-8">
-  <title>Poshida</title>
+  <!-- PAGE TITLE -->
+  <? if (!empty($title)) { ?>
+    <title><?= $title ?></title>
+  <? } else { ?>
+    <title>Poshida</title>
+  <? } ?>
+  <!-- //-------- PAGE KEYWORDS ------ -->
+  <? if (!empty($keyword)) { ?>
+    <meta name="keywords" content="<?= $keyword ?>">
+  <? } ?>
+  <!-- -------- PAGE DESCRIPTION ---------- -->
+  <? if (!empty($dsc)) { ?>
+    <meta name="description" content="<?= $dsc ?>">
+  <? } ?>
 
   <!-- Mobile Specific Metas -->
 

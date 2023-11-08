@@ -225,10 +225,10 @@
   	</div>
   </section>
   <!-- ======================= END SHOP BY CATEGORIES  ======================== -->
-<div style="width: 70%; margin: auto;">
-<img alt=" " src="<?= base_url() ?>assets/frontend/img/bannnerrr.png" >
-</div>
-<!-- ======================== START TRENDING PRODUCTS ====================== -->
+  <div style="width: 70%; margin: auto;">
+  	<img alt=" " src="<?= base_url() ?>assets/frontend/img/bannnerrr.png">
+  </div>
+  <!-- ======================== START TRENDING PRODUCTS ====================== -->
   <section class="product-section pb-100">
   	<div class="container">
   		<div class="row">
@@ -360,13 +360,13 @@
 
 
   <!-- ======================= START SECOND BIG BANNER SECTION  ======================== -->
-  <?if(!empty($banner_data[$numItems - 1]) && $numItems>1){?>
-  <section class="pb-100 " data-aos="fade-right"> 
-  	<div>
-  		<img src="<?= base_url() . $banner_data[$numItems - 1]->image ?>" alt="">
-  	</div>
-  </section>
-  <?}?>
+  <? if (!empty($banner_data[$numItems - 1]) && $numItems > 1) { ?>
+  	<section class="pb-100 " data-aos="fade-right">
+  		<div>
+  			<img src="<?= base_url() . $banner_data[$numItems - 1]->image ?>" alt="">
+  		</div>
+  	</section>
+  <? } ?>
   <!-- ======================= END SECOND BIG BANNER SECTION  ======================== -->
   <!-- ======================= START  BANNER SECTION  ======================== -->
 
@@ -450,21 +450,34 @@
   				<div class="col-lg-12">
   					<div class="row">
   						<div class="fvsx owl-carousel">
-						  <?php $i = 1;
+  							<?php $i = 1;
 								foreach ($blog_data->result() as $blog) { ?>
   								<div class=" m-3 item">
   									<div class="blog-item">
   										<div class="blog-image blog-image1">
-  											<a href="<?= base_url() ?>Home/blog_details/<?= base64_encode($blog->id) ?>">
+  											<a href="<?= base_url() ?>blog?q=<?= urlencode($blog->heading) ?>">
   												<img src="<?= base_url() . $blog->image ?>" alt="Broken Image">
   											</a>
   										</div>
   										<div class="blog-detail">
   											<span class="bloger-date mt-1"><? $newdate = new DateTime($blog->date);
 																				echo $newdate->format('d-M-Y'); ?></span>
-  											<h3 class="head-three mb-10"><a href="<?= base_url() ?>Home/blog_details/<?= base64_encode($blog->id) ?>"><?= $blog->heading ?></a>
+  											<h3 class="head-three mb-10"><a href="<?= base_url() ?>blog?q=<?= urlencode($blog->heading) ?>"><?= $blog->heading ?></a>
   											</h3>
-  											<p> <?= $blog->description ?></p>
+  											<p class="text-justify">
+  												<?
+													$string = strip_tags($blog->description);
+													if (strlen($string) > 230) {
+
+														// truncate string
+														$stringCut = substr($string, 0, 230);
+														$endPoint = strrpos($stringCut, ' ');
+
+														//if the string doesn't contain any space then it will cut without word basis.
+														$string = $endPoint ? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+														$string .= '...';
+													}
+													echo $string; ?></p>
   										</div>
   									</div>
   								</div>
@@ -472,7 +485,7 @@
 								} ?>
   						</div>
   						<div class="w-100 text-center">
-  							<a href="<?= base_url() ?>Home/all_blogs" class="readmore-btn">View All Blogs</a>
+  							<a href="<?= base_url() ?>blogs" class="readmore-btn">View All Blogs</a>
   						</div>
   					</div>
   				</div>

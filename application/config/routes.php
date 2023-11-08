@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -66,4 +66,7 @@ $route['dcadmin/(:any)/(:any)/(:any)/(:any)/(:any)'] = 'f9admin/$1/$2/$3/$5';
 
 
 $route['404_override'] = 'Home/error404';
+$route['blogs'] = 'Home/all_blogs';
+$route['blog'] = 'Home/blog_details';
+
 $route['translate_uri_dashes'] = FALSE;

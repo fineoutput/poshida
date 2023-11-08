@@ -116,7 +116,7 @@
 									<li><a href="<?= base_url() ?>Home/career">Career</a></li>
 							
 									
-									<li class="level "><a href="<?= base_url() ?>Home/all_blogs" class="nav-link">Blog</a></li>
+									<li class="level "><a href="<?= base_url() ?>blogs" class="nav-link">Blog</a></li>
 								</ul>
 							</div>
 						</div>

@@ -15,14 +15,14 @@
 <div id="banner-part  " class="banner inner-banner inner-banner mb-3">
     <div class="container">
       <div class="bread-crumb-main">
-        <h1 class="banner-title">Blog</h1>
+        <!-- <h1 class="banner-title">Blog</h1> -->
         <div class="breadcrumb">
-          <ul class="inline">
+          <!-- <ul class="inline">
             <li><a href="<?= base_url() ?>">Home</a>
             </li>
             <li>Blog Details</li>
 
-          </ul>
+          </ul> -->
         </div>
       </div>
     </div>
@@ -69,13 +69,13 @@
                     <div class="item">
                       <div class="blog_post blog_style2 box_shadow1">
                         <div class="blog_img">
-                          <a href="<?=base_url()?>Home/blog_details/<?=base64_encode($related->id)?>">
+                          <a href="<?=base_url()?>blogs/<?=base64_encode($related->id)?>">
                             <img src="<?=base_url().$related->image?>" alt="<?=$related->heading?>">
                           </a>
                         </div>
                         <div class="blog_content bg-white">
                           <div class="blog_text">
-                            <h5 class="blog_title text-2"><a href="<?=base_url()?>Home/blog_details/<?=base64_encode($related->id)?>"><?=$related->heading?></a></h5>
+                            <h5 class="blog_title text-2"><a href="<?=base_url()?>blogs/<?=base64_encode($related->id)?>"><?=$related->heading?></a></h5>
                             <p class="text-4"><?=$blog_data->description?></p>
                           </div>
                         </div>
