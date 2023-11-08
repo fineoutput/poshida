@@ -3,18 +3,27 @@
   .blog-detail{
     text-align: start;
   }
+
+  .breadcrumb_section.page-title-mini{
+    margin-top: 10px;
+  }
 </style>
+
+<div class="banner-21">
 <!--  ============================ START SECTION BREADCRUMB ======================================================-->
 <div class="breadcrumb_section page-title-mini">
-  <div class="container">
-    <div class="row align-items-center">
+<div id="banner-part  " class="banner inner-banner inner-banner mb-3">
+    <div class="container">
+      <div class="bread-crumb-main">
+        <h1 class="banner-title">Blog</h1>
+        <div class="breadcrumb">
+          <ul class="inline">
+            <li><a href="<?= base_url() ?>">Home</a>
+            </li>
+            <li>Blog Details</li>
 
-      <div class="col-md-6">
-        <ol class="breadcrumb justify-content-md-start">
-          <li class="breadcrumb-item"><a href="<?=base_url()?>">Home</a></li>
-          <li class="breadcrumb-item"><a href="<?=base_url()?>Home/all_blogs">All Blogs</a></li>
-          <li class="breadcrumb-item active"><?=$blog_data->heading?></li>
-        </ol>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -24,15 +33,17 @@
 <!-- ========================================== START MAIN CONTENT ===================================================== -->
 <div class="main_content">
 
+
+
   <!-- ==========================================  START SECTION BLOG  =================================================== -->
   <div class="section">
     <div class="container">
       <div class="row">
         <div class="col-xl-12">
           <div class="single_post text-center">
-            <h2 class="blog_title"><?=$blog_data->heading?></h2>
-            <div class="blog_img">
-              <img src="<?=base_url().$blog_data->image?>" alt="blog_img1">
+            <h4 class="blog_title" style="text-align: start;"><?=$blog_data->heading?></h4>
+            <div class="blog_img " >
+              <img style="width: 100%;" src="<?=base_url().$blog_data->image?>" alt="blog_img1">
             </div>
             <div class="blog_content">
               <div class="blog_text text-justify">
@@ -81,5 +92,7 @@
       </div>
     </div>
   </div>
+</div>
+</div>
 
   <!-- END SECTION BLOG -->

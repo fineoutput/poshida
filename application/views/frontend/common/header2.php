@@ -54,10 +54,19 @@
       justify-content: center;
     }
 
+    .megamenu .sub-menu-level2 li.level3>a {
+    display: inline-block;
+    padding: 4px 0;
+    font-size: 15px;
+}
+
     .modal-content {
       border: 0px;
     }
-
+    i.bi.bi-chevron-down {
+    color: black !important;
+    font-size: 15px;
+}
     .sidebar .sidebar-default {
       background: transparent;
       padding: 10px;

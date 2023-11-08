@@ -16,7 +16,7 @@
     </div>
     <!-- ========================================= END SECTION BREADCRUMB ======================================= -->
     <!-- START LOGIN SECTION -->
-    <div class="login_register_wrap section">
+    <div class="login_register_wrap section mb-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-12 col-md-12">

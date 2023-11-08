@@ -49,6 +49,18 @@
     font-size: 20px;
   }
 
+
+  .megamenu .sub-menu-level2 li.level3>a {
+    display: inline-block;
+    padding: 4px 0;
+    font-size: 15px;
+}
+
+
+  i.bi.bi-chevron-down {
+    color: black !important;
+    font-size: 15px;
+}
   .product-details-btn ul {
     display: flex;
     align-items: center;
