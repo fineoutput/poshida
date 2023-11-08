@@ -53,6 +53,12 @@
       align-items: center;
       justify-content: center;
     }
+    .nav>li {
+    position: inherit;
+    display: inline-block;
+    padding: 0px 8px !important;
+    font-size: 9px!important;
+}
 
     .megamenu .sub-menu-level2 li.level3>a {
     display: inline-block;
