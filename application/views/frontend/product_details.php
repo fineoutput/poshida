@@ -571,6 +571,7 @@
                   <? } ?>
                 </ul>
               </div>
+              <h5>About</h5>
               <p class="text-justify"><?= $product_data[0]->short_description ?></p>
               <ul class="product-list mt-20">
                 <li><i class="fa fa-check"> </i> Cash On Delivery Available</li>
@@ -594,7 +595,7 @@
         <div class="col-12">
           <div id="tabs">
             <ul class="nav nav-tabs">
-              <li><a class="tab-Description selected" style="padding: 10px 0px;" title="Description">Description</a></li>
+              <li><a class="tab-Description selected" style="padding: 10px 0px;" title="Description">Product Details</a></li>
             </ul>
           </div>
           <div id="items">
