@@ -124,7 +124,7 @@ class Product extends CI_finecontrol
                 // $this->form_validation->set_rules('image1', 'image1', 'required|xss_clean|trim');
                 $this->form_validation->set_rules('sku', 'sku', 'required|xss_clean|trim');
                 $this->form_validation->set_rules('vendor_code', 'vendor_code', 'required|xss_clean|trim');
-                $this->form_validation->set_rules('short_description', 'short_description', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('short_description', 'short_description', 'xss_clean|trim');
                 $this->form_validation->set_rules('description', 'description', 'required|xss_clean|trim');
                 $this->form_validation->set_rules('exclusive', 'exclusive', 'xss_clean|trim');
                 $this->form_validation->set_rules('tags', 'tags', 'required|xss_clean|trim');

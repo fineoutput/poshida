@@ -16,9 +16,15 @@
     float: right;
   }
 
-  .showContent{height:auto;}
-  .hideContent{height:30px;
-  overflow: hidden;}
+  .showContent {
+    height: auto;
+  }
+
+  .hideContent {
+    height: 30px;
+    overflow: hidden;
+  }
+
   .product-details-btn ul {
     display: flex;
     align-items: center;
@@ -569,7 +575,7 @@
                       <a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel"><i class="fa fa-he=art-o wsws" style="font-size: 23px; margin-left: 24px; color: #686868;; ">
                           <div class="tooltip">Add to wishlist</div>
                         </i>
-                        </a>
+                      </a>
                     </li>
                   <? } ?>
                 </ul>
@@ -578,519 +584,520 @@
 
 
 
-            
-             <div>
-              <h5>About </h5>
-              <div  class="content hideContent">
-              <p class="text-justify " ><?= $product_data[0]->short_description ?></p>
-            </div>
-            <div class="show-more">
-              <a href="javascript:void(0);" style="color:#f36727">Show more</a>
-            </div>
-           
-
-              <ul class="product-list mt-20">
-                <li><i class="fa fa-check"> </i> Cash On Delivery Available</li>
-                <li><i class="fa fa-truck"></i> Free shipping on orders over ₹<?= FREESHIPPING ?></li>
-                <li><i class="fa fa-repeat"></i> Return And Exchange</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- ========= START DESCRIPTION ============= -->
-<section class="product-tab-part position-r pb-100" style="padding-bottom: 20px;">
-  <div class="container">
-    <div class="product-tab-inner">
-      <div class="row">
-        <div class="col-12">
-          <div id="tabs">
-            <ul class="nav nav-tabs">
-              <li><a class="tab-Description selected" style="padding: 10px 0px;" title="Description">Product Details</a></li>
-            </ul>
-          </div>
-          <div id="items">
-            <div class="tab_content">
-              <ul>
-                <li>
-                  <div class="items-Description selected" style=" text-align: justify;">
-                    <table class="table table-bordered">
-                      <? $description = explode(',', $product_data[0]->description); ?>
-                      <tr>
-                        <? $i = 1;
-                        foreach ($description as $desc) { ?>
-                          <td><?= $desc ?></td>
-                          <? if ($i % 2 == 0) { ?>
-                      </tr>
-                      <tr>
-                      <? } ?>
-                    <? $i++;
-                        } ?>
-                      </tr>
-                    </table>
+              <? if (!empty($product_data[0]->short_description)) { ?>
+                <div>
+                  <h5>About </h5>
+                  <div class="content hideContent">
+                    <p class="text-justify "><?= $product_data[0]->short_description ?></p>
                   </div>
-                </li>
-              </ul>
+                  <div class="show-more">
+                    <a href="javascript:void(0);" style="color:#f36727">Show more</a>
+                  </div>
+
+
+                  <ul class="product-list mt-20">
+                    <li><i class="fa fa-check"> </i> Cash On Delivery Available</li>
+                    <li><i class="fa fa-truck"></i> Free shipping on orders over ₹<?= FREESHIPPING ?></li>
+                    <li><i class="fa fa-repeat"></i> Return And Exchange</li>
+                  </ul>
+                </div>
+              <? } ?>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
-<!-- ========= END DESCRIPTION ============= -->
 
-<section class="product-tab-part position-r pb-100 renpos-icon-desigin">
-  <div class="container">
-    <div class="product-tab-inner">
-      <div class="row">
-        <div class="col-12">
-          <!-- ========= START LIST REVIEW ============= -->
-          <? if (!empty($product_reviews->row())) { ?>
+
+  <!-- ========= START DESCRIPTION ============= -->
+  <section class="product-tab-part position-r pb-100" style="padding-bottom: 20px;">
+    <div class="container">
+      <div class="product-tab-inner">
+        <div class="row">
+          <div class="col-12">
             <div id="tabs">
-
-              <ul class="nav nav-tabs" style="display: flex; justify-content: space-between;">
-                <a class="tab-Description selected" style="padding: 10px 0px; color: #c68fa6;       font-weight: bold;" title="Description">Review</a>
-                <a href="Review.html" class="tab-Description selected" title="Description" style="color: #c68fa6;  font-weight: bold; "> View All</a>
+              <ul class="nav nav-tabs">
+                <li><a class="tab-Description selected" style="padding: 10px 0px;" title="Description">Product Details</a></li>
               </ul>
             </div>
-            <? foreach ($product_reviews->result() as $reviews) { ?>
-              <div class="comment_block" style="border-bottom:  1px solid rgb(215, 214, 214);">
-                <div class="rating_wrap d-flex" style="justify-content: space-between; ">
-                  <div>
-                    <p class="customer_meta">
-                      <span class="review_author"><?= $reviews->name ?></span> <br>
-                      <span class="comment-date"> <i><? $newdate = new DateTime($reviews->date);
-                                                      echo $newdate->format('F j, Y'); ?></i> </span>
-                    </p>
-                  </div>
-                  <div>
-                    <div class="star_rating">
-                      <? for ($r = 1; $r <= $reviews->star_rating; $r++) { ?>
-                        <i class="fa fa-star" style="color: #f68a03;;"></i>
-                      <? } ?>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="description" style=" text-align: justify;">
-                  <p> <?= $reviews->review ?></p>
-                </div>
-              </div>
-          <? }
-          } ?>
-          <!-- ========= END LIST REVIEW ============= -->
-
-          <!-- ========= START ADD REVIEW ============= -->
-
-          <div class="items-Description selected" id="scrollHere">
-            <form class="row mt-3" method="POST" action="<?= base_url() ?>Home/product_review" enctype="multipart/form-data">
-              <div class="leave-comment-part " style="padding-top: 20px;">
-                <h3 class="head-three">Leave A Comment</h3>
-                <div class="comment-part">
-                  <div class="course-overview-card pt-4">
-                    <div class="leave-rating-wrap pb-4">
-                      <div class="leave-rating leave--rating">
-                        <input type="radio" name="star_rating" value="5" id="star5">
-                        <label for="star5"></label>
-                        <input type="radio" name="star_rating" value="4" id="star4" data-gtm-form-interact-field-id="0">
-                        <label for="star4"></label>
-                        <input type="radio" name="star_rating" value="3" id="star3">
-                        <label for="star3"></label>
-                        <input type="radio" name="star_rating" value="2" id="star2">
-                        <label for="star2"></label>
-                        <input type="radio" name="star_rating" value="1" id="star1">
-                        <label for="star1"></label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="main-form">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="form-group mb-30">
-                        <input type="text" placeholder="Name" name="name" required="">
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group mb-30">
-                        <input name="email" type="email" placeholder="Email" required="">
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-group mb-30">
-                        <textarea rows="5" required="" placeholder="Your review *" name="message"></textarea>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <button type="submit" class="btn-color">Post
-                        Comment</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-          <!-- ========= END ADD REVIEW ============= -->
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ========= START BUY WITH US ============= -->
-<? if (!empty($buy_with_it)) { ?>
-  <section class="product-section pb-100">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="heading-part text-center mb-30 mb-sm-20">
-            <h2 class="main_title">Buy With Us</h2>
-          </div>
-        </div>
-      </div>
-      <div class="position-r">
-        <div class="row">
-          <div class="product-slider owl-carousel position-initial">
-            <? foreach ($buy_with_it as $buy_with) {
-              $type_mrp = 0;
-              $type_spgst = 0;
-              $type_datas = $this->db->get_where('tbl_type', array('product_id = ' => $buy_with->id, 'is_active' => 1));
-              $type_data = $type_datas->result();
-              if (!empty($type_data)) {
-                if ($buy_with->product_view == 3) {
-                  if (!empty($this->session->userdata('user_type'))) {
-                    if ($this->session->userdata('user_type') == 2) {
-                      $type_mrp = $type_data[0]->reseller_mrp;
-                      $type_spgst = $type_data[0]->reseller_spgst;
-                    } else {
-                      $type_mrp = $type_data[0]->retailer_mrp;
-                      $type_spgst = $type_data[0]->retailer_spgst;
-                    }
-                  } else {
-                    $type_mrp = $type_data[0]->retailer_mrp;
-                    $type_spgst = $type_data[0]->retailer_spgst;
-                  }
-                } elseif ($buy_with->product_view == 2) {
-                  $type_mrp = $type_data[0]->reseller_mrp;
-                  $type_spgst = $type_data[0]->reseller_spgst;
-                } else {
-                  $type_mrp = $type_data[0]->retailer_mrp;
-                  $type_spgst = $type_data[0]->retailer_spgst;
-                }
-                $discount = $type_mrp - $type_spgst;
-                $percent = 0;
-                if ($discount > 0) {
-                  $percent = $discount / $type_mrp * 100;
-                  $percent  = round($percent, 2);
-                }
-                if (!empty($type_data[0]->image2)) {
-                  $image1 = $type_data[0]->image2;
-                } else {
-                  $image1 = $type_data[0]->image;
-                }
-            ?>
-
-                <div class="item">
-                  <div class="product-item">
-                    <div class="product-image">
-                      <? if ($buy_with->exclusive == 1) { ?> <div class="sale-label"><span>Sale</span></div> <? } ?>
-                      <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
-                        <img src="<?= base_url() . $type_data[0]->image ?>" alt=" ">
-                      </a>
-                    </div>
-                    <div class="product-details-outer">
-                      <div class="product-details">
-                        <div class="product-title">
-                          <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $buy_with->name ?></a>
-                        </div>
-                        <div class="price-box">
-                          <span class="price">₹<?= $type_spgst ?></span>
-                          <? if ($type_mrp > $type_spgst) { ?><del class="price old-price">₹<?= $type_mrp ?></del> <? } ?>
-                          <? if ($percent > 0) { ?><span class="on-sic"> <?= round($percent) ?>% off </span> <? } ?>
-
-                        </div>
-                      </div>
-                      <div class="product-details-btn">
-                        <ul>
-                          <?php $i = 1;
-                          $size_arr = [];
-                          $more = 0;
-                          foreach ($type_datas->result() as $type_size) {
-                            $status = 0;
-                            if ($i < 5) {
-                              $this->db->select('*');
-                              $this->db->from('tbl_size');
-                              $this->db->where('id', $type_size->size_id);
-                              $this->db->where('is_active', 1);
-                              $size_data = $this->db->get()->row();
-                              if (!empty($size_data)) {
-                                if ($i == 1) {
-                                  array_push($size_arr, $size_data->id);
-                                  $status = 0;
-                                } else {
-                                  foreach ($size_arr as $key) {
-                                    if ($key == $size_data->id) {
-                                      $status = 1;
-                                      break;
-                                    }
-                                  }
-                                }
-                                if ($status == 0) {
-                                  array_push($size_arr, $size_data->id);
-                          ?>
-                                  <li class="icon  cart-icon">
-                                    <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?><p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
-                                  </li>
-                              <?php
-                                }
-                              }
-                            } else {
-                              $more++;
-                            }
-                            $i++;
-                          }
-                          if ($more > 0) {
-                            if (!empty($size_data)) {
-                              ?>
-                              <li class="icon ivo-ho compare-icon">
-                                <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
-                              </li>
-                          <? }
+            <div id="items">
+              <div class="tab_content">
+                <ul>
+                  <li>
+                    <div class="items-Description selected" style=" text-align: justify;">
+                      <table class="table table-bordered">
+                        <? $description = explode(',', $product_data[0]->description); ?>
+                        <tr>
+                          <? $i = 1;
+                          foreach ($description as $desc) { ?>
+                            <td><?= $desc ?></td>
+                            <? if ($i % 2 == 0) { ?>
+                        </tr>
+                        <tr>
+                        <? } ?>
+                      <? $i++;
                           } ?>
-                        </ul>
-                      </div>
+                        </tr>
+                      </table>
                     </div>
-                  </div>
-                </div>
-            <?php }
-            }  ?>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-<? } ?>
-<!-- ========= END BUY WITH US ============= -->
+  <!-- ========= END DESCRIPTION ============= -->
 
-
-<!-- ========= START RELATED PRODUCTS ============= -->
-<? if (!empty($related_data->row())) { ?>
-  <section class="product-section pb-100">
+  <section class="product-tab-part position-r pb-100 renpos-icon-desigin">
     <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="heading-part text-center mb-30 mb-sm-20">
-            <h2 class="main_title">Related Product</h2>
-          </div>
-        </div>
-      </div>
-      <div class="position-r">
+      <div class="product-tab-inner">
         <div class="row">
-          <div class="product-slider owl-carousel position-initial">
-            <? foreach ($related_data->result() as $buy_with) {
-              $type_mrp = 0;
-              $type_spgst = 0;
-              $type_datas = $this->db->get_where('tbl_type', array('product_id = ' => $buy_with->id, 'is_active' => 1));
-              $type_data = $type_datas->result();
-              if (!empty($type_data)) {
-                if ($buy_with->product_view == 3) {
-                  if (!empty($this->session->userdata('user_type'))) {
-                    if ($this->session->userdata('user_type') == 2) {
-                      $type_mrp = $type_data[0]->reseller_mrp;
-                      $type_spgst = $type_data[0]->reseller_spgst;
-                    } else {
-                      $type_mrp = $type_data[0]->retailer_mrp;
-                      $type_spgst = $type_data[0]->retailer_spgst;
-                    }
-                  } else {
-                    $type_mrp = $type_data[0]->retailer_mrp;
-                    $type_spgst = $type_data[0]->retailer_spgst;
-                  }
-                } elseif ($buy_with->product_view == 2) {
-                  $type_mrp = $type_data[0]->reseller_mrp;
-                  $type_spgst = $type_data[0]->reseller_spgst;
-                } else {
-                  $type_mrp = $type_data[0]->retailer_mrp;
-                  $type_spgst = $type_data[0]->retailer_spgst;
-                }
-                $discount = $type_mrp - $type_spgst;
-                $percent = 0;
-                if ($discount > 0) {
-                  $percent = $discount / $type_mrp * 100;
-                  $percent  = round($percent, 2);
-                }
-                if (!empty($type_data[0]->image2)) {
-                  $image1 = $type_data[0]->image2;
-                } else {
-                  $image1 = $type_data[0]->image;
-                }
-            ?>
+          <div class="col-12">
+            <!-- ========= START LIST REVIEW ============= -->
+            <? if (!empty($product_reviews->row())) { ?>
+              <div id="tabs">
 
-                <div class="item">
-                  <div class="product-item">
-                    <div class="product-image">
-                      <? if ($buy_with->exclusive == 1) { ?> <div class="sale-label"><span>Sale</span></div> <? } ?>
-                      <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
-                        <img src="<?= base_url() . $type_data[0]->image ?>" alt=" ">
-                      </a>
+                <ul class="nav nav-tabs" style="display: flex; justify-content: space-between;">
+                  <a class="tab-Description selected" style="padding: 10px 0px; color: #c68fa6;       font-weight: bold;" title="Description">Review</a>
+                  <a href="Review.html" class="tab-Description selected" title="Description" style="color: #c68fa6;  font-weight: bold; "> View All</a>
+                </ul>
+              </div>
+              <? foreach ($product_reviews->result() as $reviews) { ?>
+                <div class="comment_block" style="border-bottom:  1px solid rgb(215, 214, 214);">
+                  <div class="rating_wrap d-flex" style="justify-content: space-between; ">
+                    <div>
+                      <p class="customer_meta">
+                        <span class="review_author"><?= $reviews->name ?></span> <br>
+                        <span class="comment-date"> <i><? $newdate = new DateTime($reviews->date);
+                                                        echo $newdate->format('F j, Y'); ?></i> </span>
+                      </p>
                     </div>
-                    <div class="product-details-outer">
-                      <div class="product-details">
-                        <div class="product-title">
-                          <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $buy_with->name ?></a>
-                        </div>
-                        <div class="price-box">
-                          <span class="price">₹<?= $type_spgst ?></span>
-                          <? if ($type_mrp > $type_spgst) { ?><del class="price old-price">₹<?= $type_mrp ?></del> <? } ?>
-                          <? if ($percent > 0) { ?><span class="on-sic"> <?= round($percent) ?>% off </span> <? } ?>
+                    <div>
+                      <div class="star_rating">
+                        <? for ($r = 1; $r <= $reviews->star_rating; $r++) { ?>
+                          <i class="fa fa-star" style="color: #f68a03;;"></i>
+                        <? } ?>
+                      </div>
+                    </div>
+                  </div>
 
+                  <div class="description" style=" text-align: justify;">
+                    <p> <?= $reviews->review ?></p>
+                  </div>
+                </div>
+            <? }
+            } ?>
+            <!-- ========= END LIST REVIEW ============= -->
+
+            <!-- ========= START ADD REVIEW ============= -->
+
+            <div class="items-Description selected" id="scrollHere">
+              <form class="row mt-3" method="POST" action="<?= base_url() ?>Home/product_review" enctype="multipart/form-data">
+                <div class="leave-comment-part " style="padding-top: 20px;">
+                  <h3 class="head-three">Leave A Comment</h3>
+                  <div class="comment-part">
+                    <div class="course-overview-card pt-4">
+                      <div class="leave-rating-wrap pb-4">
+                        <div class="leave-rating leave--rating">
+                          <input type="radio" name="star_rating" value="5" id="star5">
+                          <label for="star5"></label>
+                          <input type="radio" name="star_rating" value="4" id="star4" data-gtm-form-interact-field-id="0">
+                          <label for="star4"></label>
+                          <input type="radio" name="star_rating" value="3" id="star3">
+                          <label for="star3"></label>
+                          <input type="radio" name="star_rating" value="2" id="star2">
+                          <label for="star2"></label>
+                          <input type="radio" name="star_rating" value="1" id="star1">
+                          <label for="star1"></label>
                         </div>
                       </div>
-                      <div class="product-details-btn">
-                        <ul>
-                          <?php $i = 1;
-                          $size_arr = [];
-                          $more = 0;
-                          foreach ($type_datas->result() as $type_size) {
-                            $status = 0;
-                            if ($i < 5) {
-                              $this->db->select('*');
-                              $this->db->from('tbl_size');
-                              $this->db->where('id', $type_size->size_id);
-                              $this->db->where('is_active', 1);
-                              $size_data = $this->db->get()->row();
-                              if (!empty($size_data)) {
-                                if ($i == 1) {
-                                  array_push($size_arr, $size_data->id);
-                                  $status = 0;
-                                } else {
-                                  foreach ($size_arr as $key) {
-                                    if ($key == $size_data->id) {
-                                      $status = 1;
-                                      break;
-                                    }
-                                  }
-                                }
-                                if ($status == 0) {
-                                  array_push($size_arr, $size_data->id);
-                          ?>
-                                  <li class="icon  cart-icon">
-                                    <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?><p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
-                                  </li>
-                              <?php
-                                }
-                              }
-                            } else {
-                              $more++;
-                            }
-                            $i++;
-                          }
-                          if ($more > 0) {
-                            if (!empty($size_data)) {
-                              ?>
-                              <li class="icon ivo-ho compare-icon">
-                                <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
-                              </li>
-                          <? }
-                          } ?>
-                        </ul>
+                    </div>
+                  </div>
+                  <div class="main-form">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group mb-30">
+                          <input type="text" placeholder="Name" name="name" required="">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group mb-30">
+                          <input name="email" type="email" placeholder="Email" required="">
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-group mb-30">
+                          <textarea rows="5" required="" placeholder="Your review *" name="message"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <button type="submit" class="btn-color">Post
+                          Comment</button>
                       </div>
                     </div>
                   </div>
                 </div>
-            <?php }
-            }  ?>
+              </form>
+            </div>
+            <!-- ========= END ADD REVIEW ============= -->
+
           </div>
         </div>
       </div>
     </div>
   </section>
-<? } ?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
-<script>
-  function scrollMe() {
-    $('html,body').animate({
-        scrollTop: $("#scrollHere").offset().top - 100
-      },
-      'slow');
-  };
-</script>
-<script>
-  /*--------------*/
 
 
+  <!-- ========= START BUY WITH US ============= -->
+  <? if (!empty($buy_with_it)) { ?>
+    <section class="product-section pb-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="heading-part text-center mb-30 mb-sm-20">
+              <h2 class="main_title">Buy With Us</h2>
+            </div>
+          </div>
+        </div>
+        <div class="position-r">
+          <div class="row">
+            <div class="product-slider owl-carousel position-initial">
+              <? foreach ($buy_with_it as $buy_with) {
+                $type_mrp = 0;
+                $type_spgst = 0;
+                $type_datas = $this->db->get_where('tbl_type', array('product_id = ' => $buy_with->id, 'is_active' => 1));
+                $type_data = $type_datas->result();
+                if (!empty($type_data)) {
+                  if ($buy_with->product_view == 3) {
+                    if (!empty($this->session->userdata('user_type'))) {
+                      if ($this->session->userdata('user_type') == 2) {
+                        $type_mrp = $type_data[0]->reseller_mrp;
+                        $type_spgst = $type_data[0]->reseller_spgst;
+                      } else {
+                        $type_mrp = $type_data[0]->retailer_mrp;
+                        $type_spgst = $type_data[0]->retailer_spgst;
+                      }
+                    } else {
+                      $type_mrp = $type_data[0]->retailer_mrp;
+                      $type_spgst = $type_data[0]->retailer_spgst;
+                    }
+                  } elseif ($buy_with->product_view == 2) {
+                    $type_mrp = $type_data[0]->reseller_mrp;
+                    $type_spgst = $type_data[0]->reseller_spgst;
+                  } else {
+                    $type_mrp = $type_data[0]->retailer_mrp;
+                    $type_spgst = $type_data[0]->retailer_spgst;
+                  }
+                  $discount = $type_mrp - $type_spgst;
+                  $percent = 0;
+                  if ($discount > 0) {
+                    $percent = $discount / $type_mrp * 100;
+                    $percent  = round($percent, 2);
+                  }
+                  if (!empty($type_data[0]->image2)) {
+                    $image1 = $type_data[0]->image2;
+                  } else {
+                    $image1 = $type_data[0]->image;
+                  }
+              ?>
 
-  // Main/Product image slider for product page
-  $('#detail .main-img-slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    infinite: true,
-    arrows: true,
-    fade: true,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    speed: 300,
-    lazyLoad: 'ondemand',
-    asNavFor: '.thumb-nav',
-    prevArrow: '<div class="slick-prev"><i class="i-prev"></i><span class="sr-only sr-only-focusable">Previous</span></div>',
-    nextArrow: '<div class="slick-next"><i class="i-next"></i><span class="sr-only sr-only-focusable">Next</span></div>'
-  });
-  // Thumbnail/alternates slider for product page
-  $('.thumb-nav').slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    infinite: true,
-    centerPadding: '0px',
-    asNavFor: '.main-img-slider',
-    dots: false,
-    centerMode: false,
-    draggable: true,
-    speed: 200,
-    focusOnSelect: true,
-    prevArrow: '<div class="slick-prev"><i class="i-prev"></i><span class="sr-only sr-only-focusable">Previous</span></div>',
-    nextArrow: '<div class="slick-next"><i class="i-next"></i><span class="sr-only sr-only-focusable">Next</span></div>'
-  });
+                  <div class="item">
+                    <div class="product-item">
+                      <div class="product-image">
+                        <? if ($buy_with->exclusive == 1) { ?> <div class="sale-label"><span>Sale</span></div> <? } ?>
+                        <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
+                          <img src="<?= base_url() . $type_data[0]->image ?>" alt=" ">
+                        </a>
+                      </div>
+                      <div class="product-details-outer">
+                        <div class="product-details">
+                          <div class="product-title">
+                            <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $buy_with->name ?></a>
+                          </div>
+                          <div class="price-box">
+                            <span class="price">₹<?= $type_spgst ?></span>
+                            <? if ($type_mrp > $type_spgst) { ?><del class="price old-price">₹<?= $type_mrp ?></del> <? } ?>
+                            <? if ($percent > 0) { ?><span class="on-sic"> <?= round($percent) ?>% off </span> <? } ?>
+
+                          </div>
+                        </div>
+                        <div class="product-details-btn">
+                          <ul>
+                            <?php $i = 1;
+                            $size_arr = [];
+                            $more = 0;
+                            foreach ($type_datas->result() as $type_size) {
+                              $status = 0;
+                              if ($i < 5) {
+                                $this->db->select('*');
+                                $this->db->from('tbl_size');
+                                $this->db->where('id', $type_size->size_id);
+                                $this->db->where('is_active', 1);
+                                $size_data = $this->db->get()->row();
+                                if (!empty($size_data)) {
+                                  if ($i == 1) {
+                                    array_push($size_arr, $size_data->id);
+                                    $status = 0;
+                                  } else {
+                                    foreach ($size_arr as $key) {
+                                      if ($key == $size_data->id) {
+                                        $status = 1;
+                                        break;
+                                      }
+                                    }
+                                  }
+                                  if ($status == 0) {
+                                    array_push($size_arr, $size_data->id);
+                            ?>
+                                    <li class="icon  cart-icon">
+                                      <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?><p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
+                                    </li>
+                                <?php
+                                  }
+                                }
+                              } else {
+                                $more++;
+                              }
+                              $i++;
+                            }
+                            if ($more > 0) {
+                              if (!empty($size_data)) {
+                                ?>
+                                <li class="icon ivo-ho compare-icon">
+                                  <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
+                                </li>
+                            <? }
+                            } ?>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              <?php }
+              }  ?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <? } ?>
+  <!-- ========= END BUY WITH US ============= -->
 
 
-  //keeps thumbnails active when changing main image, via mouse/touch drag/swipe
-  $('.main-img-slider').on('afterChange', function(event, slick, currentSlide, nextSlide) {
-    //remove all active class
-    $('.thumb-nav .slick-slide').removeClass('slick-current');
-    //set active class for current slide
-    $('.thumb-nav .slick-slide:not(.slick-cloned)').eq(currentSlide).addClass('slick-current');
-  });
-</script>
+  <!-- ========= START RELATED PRODUCTS ============= -->
+  <? if (!empty($related_data->row())) { ?>
+    <section class="product-section pb-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="heading-part text-center mb-30 mb-sm-20">
+              <h2 class="main_title">Related Product</h2>
+            </div>
+          </div>
+        </div>
+        <div class="position-r">
+          <div class="row">
+            <div class="product-slider owl-carousel position-initial">
+              <? foreach ($related_data->result() as $buy_with) {
+                $type_mrp = 0;
+                $type_spgst = 0;
+                $type_datas = $this->db->get_where('tbl_type', array('product_id = ' => $buy_with->id, 'is_active' => 1));
+                $type_data = $type_datas->result();
+                if (!empty($type_data)) {
+                  if ($buy_with->product_view == 3) {
+                    if (!empty($this->session->userdata('user_type'))) {
+                      if ($this->session->userdata('user_type') == 2) {
+                        $type_mrp = $type_data[0]->reseller_mrp;
+                        $type_spgst = $type_data[0]->reseller_spgst;
+                      } else {
+                        $type_mrp = $type_data[0]->retailer_mrp;
+                        $type_spgst = $type_data[0]->retailer_spgst;
+                      }
+                    } else {
+                      $type_mrp = $type_data[0]->retailer_mrp;
+                      $type_spgst = $type_data[0]->retailer_spgst;
+                    }
+                  } elseif ($buy_with->product_view == 2) {
+                    $type_mrp = $type_data[0]->reseller_mrp;
+                    $type_spgst = $type_data[0]->reseller_spgst;
+                  } else {
+                    $type_mrp = $type_data[0]->retailer_mrp;
+                    $type_spgst = $type_data[0]->retailer_spgst;
+                  }
+                  $discount = $type_mrp - $type_spgst;
+                  $percent = 0;
+                  if ($discount > 0) {
+                    $percent = $discount / $type_mrp * 100;
+                    $percent  = round($percent, 2);
+                  }
+                  if (!empty($type_data[0]->image2)) {
+                    $image1 = $type_data[0]->image2;
+                  } else {
+                    $image1 = $type_data[0]->image;
+                  }
+              ?>
 
+                  <div class="item">
+                    <div class="product-item">
+                      <div class="product-image">
+                        <? if ($buy_with->exclusive == 1) { ?> <div class="sale-label"><span>Sale</span></div> <? } ?>
+                        <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
+                          <img src="<?= base_url() . $type_data[0]->image ?>" alt=" ">
+                        </a>
+                      </div>
+                      <div class="product-details-outer">
+                        <div class="product-details">
+                          <div class="product-title">
+                            <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $buy_with->name ?></a>
+                          </div>
+                          <div class="price-box">
+                            <span class="price">₹<?= $type_spgst ?></span>
+                            <? if ($type_mrp > $type_spgst) { ?><del class="price old-price">₹<?= $type_mrp ?></del> <? } ?>
+                            <? if ($percent > 0) { ?><span class="on-sic"> <?= round($percent) ?>% off </span> <? } ?>
 
-<script>
-  $(".show-more a").on("click", function() {
-    var $this = $(this);
-    var $content = $this.parent().prev("div.content");
-    var linkText = $this.text().toUpperCase();
-
-    if (linkText === "SHOW MORE") {
-      linkText = "Show less";
-      $content.switchClass("hideContent", "showContent", 400);
-    } else {
-      linkText = "Show more";
-      $content.switchClass("showContent", "hideContent", 400);
+                          </div>
+                        </div>
+                        <div class="product-details-btn">
+                          <ul>
+                            <?php $i = 1;
+                            $size_arr = [];
+                            $more = 0;
+                            foreach ($type_datas->result() as $type_size) {
+                              $status = 0;
+                              if ($i < 5) {
+                                $this->db->select('*');
+                                $this->db->from('tbl_size');
+                                $this->db->where('id', $type_size->size_id);
+                                $this->db->where('is_active', 1);
+                                $size_data = $this->db->get()->row();
+                                if (!empty($size_data)) {
+                                  if ($i == 1) {
+                                    array_push($size_arr, $size_data->id);
+                                    $status = 0;
+                                  } else {
+                                    foreach ($size_arr as $key) {
+                                      if ($key == $size_data->id) {
+                                        $status = 1;
+                                        break;
+                                      }
+                                    }
+                                  }
+                                  if ($status == 0) {
+                                    array_push($size_arr, $size_data->id);
+                            ?>
+                                    <li class="icon  cart-icon">
+                                      <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?><p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
+                                    </li>
+                                <?php
+                                  }
+                                }
+                              } else {
+                                $more++;
+                              }
+                              $i++;
+                            }
+                            if ($more > 0) {
+                              if (!empty($size_data)) {
+                                ?>
+                                <li class="icon ivo-ho compare-icon">
+                                  <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
+                                </li>
+                            <? }
+                            } ?>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              <?php }
+              }  ?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <? } ?>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script>
+    function scrollMe() {
+      $('html,body').animate({
+          scrollTop: $("#scrollHere").offset().top - 100
+        },
+        'slow');
     };
+  </script>
+  <script>
+    /*--------------*/
 
-    $this.text(linkText);
-  });
-</script>
 
-<!-- ========= START RELATED PRODUCTS ============= -->
+
+    // Main/Product image slider for product page
+    $('#detail .main-img-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      arrows: true,
+      fade: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      speed: 300,
+      lazyLoad: 'ondemand',
+      asNavFor: '.thumb-nav',
+      prevArrow: '<div class="slick-prev"><i class="i-prev"></i><span class="sr-only sr-only-focusable">Previous</span></div>',
+      nextArrow: '<div class="slick-next"><i class="i-next"></i><span class="sr-only sr-only-focusable">Next</span></div>'
+    });
+    // Thumbnail/alternates slider for product page
+    $('.thumb-nav').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      infinite: true,
+      centerPadding: '0px',
+      asNavFor: '.main-img-slider',
+      dots: false,
+      centerMode: false,
+      draggable: true,
+      speed: 200,
+      focusOnSelect: true,
+      prevArrow: '<div class="slick-prev"><i class="i-prev"></i><span class="sr-only sr-only-focusable">Previous</span></div>',
+      nextArrow: '<div class="slick-next"><i class="i-next"></i><span class="sr-only sr-only-focusable">Next</span></div>'
+    });
+
+
+    //keeps thumbnails active when changing main image, via mouse/touch drag/swipe
+    $('.main-img-slider').on('afterChange', function(event, slick, currentSlide, nextSlide) {
+      //remove all active class
+      $('.thumb-nav .slick-slide').removeClass('slick-current');
+      //set active class for current slide
+      $('.thumb-nav .slick-slide:not(.slick-cloned)').eq(currentSlide).addClass('slick-current');
+    });
+  </script>
+
+
+  <script>
+    $(".show-more a").on("click", function() {
+      var $this = $(this);
+      var $content = $this.parent().prev("div.content");
+      var linkText = $this.text().toUpperCase();
+
+      if (linkText === "SHOW MORE") {
+        linkText = "Show less";
+        $content.switchClass("hideContent", "showContent", 400);
+      } else {
+        linkText = "Show more";
+        $content.switchClass("showContent", "hideContent", 400);
+      };
+
+      $this.text(linkText);
+    });
+  </script>
+
+  <!-- ========= START RELATED PRODUCTS ============= -->

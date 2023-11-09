@@ -136,7 +136,7 @@
                     <tr>
                       <td> <strong>Short Description</strong> <span style="color:red;">*</span></strong> </td>
                       <td>
-                        <textarea name="short_description" cols="20" rows="5" class="form-control" required value=""><?=$product->short_description?></textarea>
+                        <textarea name="short_description" cols="20" rows="5" class="form-control" value=""><?=$product->short_description?></textarea>
                       </td>
                     </tr>
                     <tr>
