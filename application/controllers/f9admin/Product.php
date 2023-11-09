@@ -124,6 +124,7 @@ class Product extends CI_finecontrol
                 // $this->form_validation->set_rules('image1', 'image1', 'required|xss_clean|trim');
                 $this->form_validation->set_rules('sku', 'sku', 'required|xss_clean|trim');
                 $this->form_validation->set_rules('vendor_code', 'vendor_code', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('short_description', 'short_description', 'required|xss_clean|trim');
                 $this->form_validation->set_rules('description', 'description', 'required|xss_clean|trim');
                 $this->form_validation->set_rules('exclusive', 'exclusive', 'xss_clean|trim');
                 $this->form_validation->set_rules('tags', 'tags', 'required|xss_clean|trim');
@@ -142,6 +143,7 @@ class Product extends CI_finecontrol
                     $category_id = $this->input->post('category_id');
                     $subcategory_id = $this->input->post('subcategory_id');
                     $image1 = $this->input->post('image1');
+                    $short_description = $this->input->post('short_description');
                     $description = $this->input->post('description');
                     $sku = $this->input->post('sku');
                     $exclusive = $this->input->post('exclusive');
@@ -233,6 +235,7 @@ class Product extends CI_finecontrol
                             'name' => $name,
                             'image1' => $image1,
                             'exclusive' => $exclusive,
+                            'short_description' => $short_description,
                             'description' => $description,
                             'sku' => $sku,
                             'vendor_code' => $vendor_code,
@@ -277,6 +280,8 @@ class Product extends CI_finecontrol
                         $data_insert = array(
                             'category_id' => $category_id,
                             'subcategory_id' => $subcategory_id,
+                            'short_description' => $short_description,
+
                             'name' => $name,
                             'image1' => $image1,
                             'exclusive' => $exclusive,

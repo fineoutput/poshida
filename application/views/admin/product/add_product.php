@@ -112,6 +112,12 @@
                       </td>
                     </tr>
                     <tr>
+                      <td> <strong>Short Description</strong> <span style="color:red;">*</span></strong> </td>
+                      <td>
+                        <textarea name="short_description" cols="20" rows="5" class="form-control" required value=""></textarea>
+                      </td>
+                    </tr>
+                    <tr>
                       <td> <strong>Description</strong> <span style="color:red;">*</span></strong> </td>
                       <td>
                         <textarea name="description" id="editor1" required value=""></textarea>
@@ -162,14 +168,14 @@
 
                     <tr>
                       <td> <strong>Keywords</strong> <span style="color:red;">*</span></strong> </td>
-                      <td><textarea name="keyword" cols="20" rows="5" class="form-control" placeholder="" required id="editor1"></textarea>
+                      <td><textarea name="keyword" cols="20" rows="5" class="form-control" placeholder="" required ></textarea>
 
                     </tr>
                     <tr>
 
                     <tr>
                       <td> <strong>Meta Discription</strong> <span style="color:red;">*</span></strong> </td>
-                      <td><textarea name="dsc" cols="20" rows="5" class="form-control" placeholder="" required id="editor1"></textarea>
+                      <td><textarea name="dsc" cols="20" rows="5" class="form-control" placeholder="" required ></textarea>
                     </tr>
                     <tr>
 

@@ -345,7 +345,9 @@
                           <a data-fancybox="gallery" href="<?= base_url() . $type_data[0]->image6 ?>"> <img src="<?= base_url() . $type_data[0]->image6 ?>" class="img-fluid "></a>
                         <? }
                         if (!empty($type_data[0]->video)) { ?>
-                          <a data-fancybox="gallery" href="<?= base_url() . $type_data[0]->video ?>"> <video><source type="video/mp4" autoplay controls src="<?= base_url() . $type_data[0]->video ?>" class="img-fluid gc-zoom"></video></a>
+                          <a data-fancybox="gallery" href="<?= base_url() . $type_data[0]->video ?>"> <video>
+                              <source type="video/mp4" autoplay controls src="<?= base_url() . $type_data[0]->video ?>" class="img-fluid gc-zoom">
+                            </video></a>
                         <? } ?>
                       </div>
 
@@ -364,7 +366,7 @@
                           <li><img src="<?= base_url() .  $type_data[0]->image6 ?>" alt=" "></li> <? }
                                                                                                                                         if (!empty($type_data[0]->video)) { ?>
                           <li><img src="<?= base_url() ?>assets/frontend/img/play.jpg"></li> <? }
-                                                                                          ?>
+                                                                                              ?>
 
                       </ul>
                     </div>
@@ -564,11 +566,12 @@
                       <a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel"><i class="fa fa-he=art-o wsws" style="font-size: 23px; margin-left: 24px; color: #686868;; ">
                           <div class="tooltip">Add to wishlist</div>
                         </i>
+                        </a>
                     </li>
                   <? } ?>
                 </ul>
               </div>
-
+              <p class="text-justify"><?= $product_data[0]->short_description ?></p>
               <ul class="product-list mt-20">
                 <li><i class="fa fa-check"> </i> Cash On Delivery Available</li>
                 <li><i class="fa fa-truck"></i> Free shipping on orders over ₹<?= FREESHIPPING ?></li>

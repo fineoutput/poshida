@@ -63,6 +63,7 @@
                       <th>Vendor Code</th>
                       <!-- <th>Product Type</th> -->
                       <th>Product View</th>
+                      <th>Short Description</th>
                       <th>Description</th>
                       <th>Exclusive Product</th>
                       <!-- <th>Inventory</th> -->
@@ -127,7 +128,33 @@ if ($data->product_view==1) {
     echo"Both";
 }
 ?></td>
-                      <td><?php echo $data->description ?></td>
+
+                      <td><?php
+                       $string = strip_tags($data->short_description);
+                       if (strlen($string) > 100) {
+                      
+                           // truncate string
+                           $stringCut = substr($string, 0, 100);
+                           $endPoint = strrpos($stringCut, ' ');
+                      
+                           //if the string doesn't contain any space then it will cut without word basis.
+                           $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                           $string .= '...';
+                       }
+                       echo $string; ?></td>
+                      <td><?php
+                       $string = strip_tags($data->description);
+                       if (strlen($string) > 100) {
+                      
+                           // truncate string
+                           $stringCut = substr($string, 0, 100);
+                           $endPoint = strrpos($stringCut, ' ');
+                      
+                           //if the string doesn't contain any space then it will cut without word basis.
+                           $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                           $string .= '...';
+                       }
+                       echo $string; ?></td>
                       <td><?php
 if ($data->exclusive==1) {
     echo"yes";
@@ -146,8 +173,32 @@ if ($data->trending==1) {
 }
 ?></td>
         <td><?php echo $data->title ?></td>
-        <td><?php echo $data->keyword ?></td>
-        <td><?php echo $data->dsc ?></td>  
+        <td><?php
+                       $string = strip_tags($data->keyword);
+                       if (strlen($string) > 100) {
+                      
+                           // truncate string
+                           $stringCut = substr($string, 0, 100);
+                           $endPoint = strrpos($stringCut, ' ');
+                      
+                           //if the string doesn't contain any space then it will cut without word basis.
+                           $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                           $string .= '...';
+                       }
+                       echo $string; ?></td>
+                       <td><?php
+                       $string = strip_tags($data->dsc);
+                       if (strlen($string) > 100) {
+                      
+                           // truncate string
+                           $stringCut = substr($string, 0, 100);
+                           $endPoint = strrpos($stringCut, ' ');
+                      
+                           //if the string doesn't contain any space then it will cut without word basis.
+                           $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                           $string .= '...';
+                       }
+                       echo $string; ?></td>
 
                       <td><?php if ($data->is_active==1) { ?>
                         <p class="label bg-green">Active</p>
