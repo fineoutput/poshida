@@ -16,7 +16,9 @@
     float: right;
   }
 
-
+  .showContent{height:auto;}
+  .hideContent{height:30px;
+  overflow: hidden;}
   .product-details-btn ul {
     display: flex;
     align-items: center;
@@ -347,7 +349,8 @@
                         if (!empty($type_data[0]->video)) { ?>
                           <a data-fancybox="gallery" href="<?= base_url() . $type_data[0]->video ?>"> <video>
                               <source type="video/mp4" autoplay controls src="<?= base_url() . $type_data[0]->video ?>" class="img-fluid gc-zoom">
-                            </video></a>
+                            </video> </a>
+
                         <? } ?>
                       </div>
 
@@ -571,8 +574,21 @@
                   <? } ?>
                 </ul>
               </div>
-              <h5>About</h5>
-              <p class="text-justify"><?= $product_data[0]->short_description ?></p>
+
+
+
+
+            
+             <div>
+              <h5>About </h5>
+              <div  class="content hideContent">
+              <p class="text-justify " ><?= $product_data[0]->short_description ?></p>
+            </div>
+            <div class="show-more">
+              <a href="javascript:void(0);" style="color:#f36727">Show more</a>
+            </div>
+           
+
               <ul class="product-list mt-20">
                 <li><i class="fa fa-check"> </i> Cash On Delivery Available</li>
                 <li><i class="fa fa-truck"></i> Free shipping on orders over ₹<?= FREESHIPPING ?></li>
@@ -1058,5 +1074,23 @@
   });
 </script>
 
+
+<script>
+  $(".show-more a").on("click", function() {
+    var $this = $(this);
+    var $content = $this.parent().prev("div.content");
+    var linkText = $this.text().toUpperCase();
+
+    if (linkText === "SHOW MORE") {
+      linkText = "Show less";
+      $content.switchClass("hideContent", "showContent", 400);
+    } else {
+      linkText = "Show more";
+      $content.switchClass("showContent", "hideContent", 400);
+    };
+
+    $this.text(linkText);
+  });
+</script>
 
 <!-- ========= START RELATED PRODUCTS ============= -->
