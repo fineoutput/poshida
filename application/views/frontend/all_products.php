@@ -40,8 +40,18 @@
 </style>
 <!-- Product list contant start -->
 <div class="contant" style="margin-top: 162px;">
+<!--========================================== START SECTION gif image ============================================-->
+<div class="container banner">
+  <div class="row">
+    <div class="col-12 mb-3 mt-2 d-flex justify-content-center">
+      <img src="<?= base_url() ?>assets/frontend/img/add.gif" alt="" class="img-fluid">
+    </div>
+  </div>
+</div>
+
+<!--========================================== end SECTION gif image ============================================-->
   <!--========================= START SECTION BREADCRUMB ==============================-->
-  <div id="banner-part" class="banner inner-banner">
+  <div id="banner-part" class=" inner-banner">
     <div class="container">
       <div class="bread-crumb-main">
         <h1 class="banner-title"><?= $subcategory_name ?></h1>

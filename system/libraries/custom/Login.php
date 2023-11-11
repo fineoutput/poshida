@@ -510,18 +510,17 @@ class CI_Login
                         $this->CI->session->set_flashdata('smessage', 'Login Successfully');
                         return json_encode($respone);
                     } else {
-                        //------ wrong password--------
+                        //------ user is inactive --------
                         $respone['status'] = false;
-                        $respone['message'] = 'Wrong Password';
-                        $this->CI->session->set_flashdata('emessage', 'Wrong Password');
+                        $respone['message'] = 'Your Account is blocked! Please contact to admin';
+                        $this->CI->session->set_flashdata('emessage', 'Your Account is blocked! Please contact to admin');
                         return json_encode($respone);
                     }
-
-                    //------ user is inactive --------
                 } else {
+                    //------ wrong password--------
                     $respone['status'] = false;
-                    $respone['message'] = 'Your Account is blocked! Please contact to admin';
-                    $this->CI->session->set_flashdata('emessage', 'Your Account is blocked! Please contact to admin');
+                    $respone['message'] = 'Wrong Password!';
+                    $this->CI->session->set_flashdata('emessage', 'Wrong Password');
                     return json_encode($respone);
                 }
             }

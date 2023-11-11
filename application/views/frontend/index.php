@@ -1,3 +1,4 @@
+
   <!-- ===================== Start Mobile Category =================================== -->
   <div style="margin-top: 79px;" class="product-sliders owl-carousel position-initial d-scs">
   	<?php $i = 1;
@@ -155,6 +156,12 @@
   </section>
 
   <!-- =========================== END WHATS NEW  =================================== -->
+
+  <div class="container mb-2">
+  	<div class="row" style="justify-content: center;">
+  		<img src="<?= base_url() ?>assets/frontend/img/add.gif" alt="">
+  	</div>
+  </div>
 
   <!-- ======================= START FIRST BIG BANNER SECTION  ======================== -->
   <? if (!empty($banner_data[0])) { ?>
@@ -358,6 +365,16 @@
   </section>
   <!-- ======================== END TRENDING PRODUCTS ====================== -->
 
+ <!--========================================== START SECTION gif image ============================================-->
+ <!-- <div class="container">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center">
+        <img src="<?= base_url() ?>assets/frontend/img/about.gif" alt="" class="img-fluid">
+      </div>
+    </div>
+  </div> -->
+
+  <!--========================================== end SECTION gif image ============================================-->
 
   <!-- ======================= START SECOND BIG BANNER SECTION  ======================== -->
   <? if (!empty($banner_data[$numItems - 1]) && $numItems > 1) { ?>

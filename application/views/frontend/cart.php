@@ -212,9 +212,9 @@
                   <td class="margin-respon rger">
                     <div class="col-xl-12 col-md-12 col-sm-12 " style="padding: 0px !important;">
                       <div class="custom-qty">
-                        <button type="button" value="-" product_id="<?= base64_encode($cart['product_id']) ?>" type_id="<?= base64_encode($cart['type_id']) ?>" change="<?= $cart['type_id'] ?>"class="reduced items paa-ews minus"> <i class="fa fa-minus "></i> </button>
+                        <button type="button" value="-" product_id="<?= base64_encode($cart['product_id']) ?>" type_id="<?= base64_encode($cart['type_id']) ?>" change="<?= $cart['type_id'] ?>" class="reduced items paa-ews minus"> <i class="fa fa-minus "></i> </button>
                         <input class="input-text qty voain-re" type="text" name="quantity" readonly id="quantity<?= $cart['type_id'] ?>" product_id="<?= base64_encode($cart['product_id']) ?>" type_id="<?= base64_encode($cart['type_id']) ?>" value="<?= $cart['quantity'] ?>" title="Qty" class="qty" size="4">
-                        <button type="button" value="+" product_id="<?= base64_encode($cart['product_id']) ?>" type_id="<?= base64_encode($cart['type_id']) ?>" change="<?= $cart['type_id'] ?>"  class="increase items paa-ews plus" > <i class="fa fa-plus "></i> </button>
+                        <button type="button" value="+" product_id="<?= base64_encode($cart['product_id']) ?>" type_id="<?= base64_encode($cart['type_id']) ?>" change="<?= $cart['type_id'] ?>" class="increase items paa-ews plus"> <i class="fa fa-plus "></i> </button>
                       </div>
                     </div>
                   </td>
@@ -253,6 +253,14 @@
         <img src="<?= base_url() ?>assets/frontend/images/cart_empty.jpg" alt="Empty Cart" class="img-fluid">
       </div>
     <? } ?>
+    <!-- <div class="container mt-5">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+          <img src="<?= base_url() ?>assets/frontend/img/about.gif" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div> -->
+
   </div>
 
 </div>

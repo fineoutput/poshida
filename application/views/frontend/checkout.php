@@ -24,6 +24,11 @@
             <div class="mb-md-30">
               <div class="mb-60">
                 <div class="col-md-12  p-0">
+                  <div class="row">
+                    <div class="col-12 mb-3 mt-2 d-flex justify-content-center">
+                      <img src="<?= base_url() ?>assets/frontend/img/add.gif" alt="" class="img-fluid">
+                    </div>
+                  </div>
                   <!------ start address section ------ -->
                   <div class="heading_s1 border-input ">
                     <div style="display: flex; justify-content: space-between;">
