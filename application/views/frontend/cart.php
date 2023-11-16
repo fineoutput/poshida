@@ -253,13 +253,13 @@
         <img src="<?= base_url() ?>assets/frontend/images/cart_empty.jpg" alt="Empty Cart" class="img-fluid">
       </div>
     <? } ?>
-    <!-- <div class="container mt-5">
+    <div class="container mt-5">
       <div class="row">
         <div class="col-12 d-flex justify-content-center">
           <img src="<?= base_url() ?>assets/frontend/img/about.gif" alt="" class="img-fluid">
         </div>
       </div>
-    </div> -->
+    </div>
 
   </div>
 
