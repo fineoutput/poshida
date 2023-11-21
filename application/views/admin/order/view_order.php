@@ -73,7 +73,6 @@
                         <th>Waybill Number</th>
                         <th>Shipment Mode</th>
                         <th>DL Label</th>
-                        <th>Pickup Scheduled Date</th>
                       <? } ?>
                       <th>Date</th>
                       <? if ($order_type == 1) { ?>
@@ -219,7 +218,6 @@
                           <td><?php echo $data->waybill_number ?></td>
                           <td><?php echo $data->shipment_mode ?></td>
                           <td><?php if (!empty($data->delhivery_label)) { ?><a href="<?= $data->delhivery_label ?>">Download Label</a><? } ?></td>
-                          <td><?php echo $data->pickup_scheduled_date ?></td>
                         <? } ?>
 
                         <td>

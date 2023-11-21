@@ -298,9 +298,9 @@
                                             echo "";
                                           } ?></th>
                 <th class="product_table" colspan="<? if ($order_type == 2) {
-                                                      echo '10';
+                                                      echo '11';
                                                     } else {
-                                                      echo '9';
+                                                      echo '10';
                                                     } ?>"><?php if (!empty($order1_data)) {
                                                             echo "";
                                                           } ?></th>
@@ -321,7 +321,7 @@
                   $promocode_name = "";
                 } ?>
                 <tr>
-                  <th colspan="10">Promocode: <?= $promocode_name; ?> </th>
+                  <th colspan="11">Promocode: <?= $promocode_name; ?> </th>
                   <th class="product_table"><?php if (!empty($order1_data)) {
                                               echo " ";
                                             } ?></th>
@@ -350,9 +350,9 @@
                                               echo "";
                                             } ?></th>
                   <th class="product_table" colspan="<? if ($order_type == 2) {
-                                                        echo '10';
+                                                        echo '11';
                                                       } else {
-                                                        echo '9';
+                                                        echo '10';
                                                       } ?>"><?php if (!empty($order1_data)) {
                                                               echo "";
                                                             } ?></th>
@@ -369,9 +369,9 @@
                                               echo "";
                                             } ?></th>
                   <th class="product_table" colspan="<? if ($order_type == 2) {
-                                                        echo '10';
+                                                        echo '11';
                                                       } else {
-                                                        echo '9';
+                                                        echo '10';
                                                       } ?>"><?php if (!empty($order1_data)) {
                                                               echo "";
                                                             } ?></th>
@@ -384,9 +384,9 @@
               <? } ?>
               <tr>
                 <th colspan="<? if ($order_type == 2) {
-                                echo '12';
+                                echo '13';
                               } else {
-                                echo '11';
+                                echo '12';
                               } ?>">SubTotal</th>
                 <th class="product_table"><?php if (!empty($order1_data)) {
                                             echo "₹" . $order1_data->final_amount;

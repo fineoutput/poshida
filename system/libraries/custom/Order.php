@@ -104,7 +104,6 @@ class CI_Order
                 'payment_status' => 0,
                 'order_status' => 0,
                 'shipping' => $shipping,
-                'courier_id' => '',
                 'weight' => $total_weight,
                 'ip' => $ip,
                 'date' => $cur_date
@@ -755,9 +754,8 @@ class CI_Order
             return json_encode($respone);
         }
         $shipping_charge = $shipping->data->shipping;
-        $courier_id = '';
         $data_update = array(
-            'shipping' => $shipping_charge, 'courier_id' => $courier_id,
+            'shipping' => $shipping_charge, 
             'final_amount' => $order1_data->total_amount - $order1_data->promo_discount + $shipping_charge, 'address_id' => $address_data->id
         );
         $this->CI->db->where('id', $order_id);
