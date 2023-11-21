@@ -305,7 +305,6 @@ class Order extends CI_finecontrol
             //----- get courier serviceability ---
             $shipping = $this->delhivery->GetCourierServiceability($address_data->pincode, $order1_data[0]->weight, $order1_data[0]->total_amount, 1);
             $decoded = json_decode($shipping);
-            $data['courier_id'] = $order1_data[0]->courier_id;
             $data['list'] = [];
             $this->load->view('admin/common/header_view', $data);
             $this->load->view('admin/order/create_order');

@@ -102,7 +102,11 @@ define('REFERAL_POINTS',100);
 //=============== Minimum redeem points =======
 define('MINREDEEM_POINTS',100);
 //=============== SHIPROCKET  =======
-define('SHIPROCKET_PICKUP','302020');
+define('DELIVERY_PICKUP','302025');
+define('DELIVERY_TOKEN','213d2fa2e824f912efb21c4dd460f6b70c4ba05a');//----test
+// define('DELIVERY_TOKEN','287a9b08f9e831244b3b11447a544327ed937c26');//----production
+define('DELIVERY_URL','staging-express.delhivery.com');//---test
+// define('DELIVERY_URL','track.delhivery.com');//---production
 define('WHATSAPP_NUMBERS3','');
 define('TOKEN','');
 define('FREESHIPPING','2499');
