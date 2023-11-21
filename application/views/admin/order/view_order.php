@@ -70,11 +70,9 @@
                         <th>Model</th>
                         <th>Referral Code</th>
                         <th>Referral Points</th>
-                        <th>SR Order ID</th>
-                        <th>SR Shipping ID</th>
-                        <th>Courier Name</th>
-                        <th>AWB Code</th>
-                        <th>SR Label</th>
+                        <th>Waybill Number</th>
+                        <th>Shipment Mode</th>
+                        <th>DL Label</th>
                         <th>Pickup Scheduled Date</th>
                       <? } ?>
                       <th>Date</th>
@@ -218,11 +216,9 @@
                                 echo "NA";
                               } ?></td>
                           <td><?php echo $data->ref_points ?></td>
-                          <td><?php echo $data->sr_order_id ?></td>
-                          <td><?php echo $data->sr_shipping_id ?></td>
-                          <td><?php echo $data->courier_name ?></td>
-                          <td><?php echo $data->awb_code ?></td>
-                          <td><?php if (!empty($data->shiprocket_label)) { ?><a href="<?= $data->shiprocket_label ?>">Download Label</a><? } ?></td>
+                          <td><?php echo $data->waybill_number ?></td>
+                          <td><?php echo $data->shipment_mode ?></td>
+                          <td><?php if (!empty($data->delhivery_label)) { ?><a href="<?= $data->delhivery_label ?>">Download Label</a><? } ?></td>
                           <td><?php echo $data->pickup_scheduled_date ?></td>
                         <? } ?>
 
@@ -270,11 +266,11 @@
                                     <li><a href="<?php echo base_url() ?>dcadmin/order/view_bill/<?php echo base64_encode($data->id) ?>">view bill</a></li>
 
                                     <?php } elseif ($data->order_status == 2) {
-                                    if (empty($data->shiprocket_label)) {
+                                    if (empty($data->delhivery_label)) {
                                     ?>
-                                      <!-- <li><a href="<?php echo base_url() ?>dcadmin/order/viewCreateOrder/<?php echo base64_encode($data->id) ?>">Create Order</a></li> -->
+                                      <li><a href="<?php echo base_url() ?>dcadmin/order/viewCreateOrder/<?php echo base64_encode($data->id) ?>">Create Shipping</a></li>
                                     <? }
-                                    if (!empty($data->shiprocket_label)) {
+                                    if (!empty($data->delhivery_label)) {
                                     ?>
                                       <!-- <li><a href="<?php echo base_url() ?>dcadmin/order/viewPickupReq/<?php echo base64_encode($data->id) ?>">Scheduled Pickup Request</a></li> -->
                                     <? } ?>

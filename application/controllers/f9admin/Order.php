@@ -11,7 +11,7 @@ class Order extends CI_finecontrol
         $this->load->model("login_model");
         $this->load->model("admin/base_model");
         $this->load->library('user_agent');
-        $this->load->library("custom/Shiprocket");
+        $this->load->library("custom/Delhivery");
     }
     //==============================view_orders=========================\\
     public function view_order()
@@ -176,7 +176,7 @@ class Order extends CI_finecontrol
                     $this->session->set_flashdata('smessage', 'Status updated successfully');
                     redirect($_SERVER['HTTP_REFERER']);
                 } else {
-                    $this->session->set_flashdata('emessage', $upload_error);
+                    $this->session->set_flashdata('emessage', 'Some error occurred');
                     exit;
                 }
             }
@@ -190,7 +190,7 @@ class Order extends CI_finecontrol
                     $this->session->set_flashdata('smessage', 'Status updated successfully');
                     redirect($_SERVER['HTTP_REFERER']);
                 } else {
-                    $this->session->set_flashdata('emessage', $upload_error);
+                    $this->session->set_flashdata('emessage', 'Some error occurred');
                     exit;
                 }
             }
@@ -205,7 +205,7 @@ class Order extends CI_finecontrol
                     $this->session->set_flashdata('smessage', 'Status updated successfully');
                     redirect($_SERVER['HTTP_REFERER']);
                 } else {
-                    $this->session->set_flashdata('emessage', $upload_error);
+                    $this->session->set_flashdata('emessage', 'Some error occurred');
                     exit;
                 }
             }
@@ -301,11 +301,12 @@ class Order extends CI_finecontrol
             $id = base64_decode($idd);
             $data['id'] = $idd;
             $order1_data = $this->db->get_where('tbl_order1', array('id' => $id))->result();
+            $address_data = $this->db->get_where('tbl_user_address', array('id' => $order1_data[0]->address_id))->row();
             //----- get courier serviceability ---
-            $shipping = $this->shiprocket->GetCourierServiceability($order1_data[0]->pincode, $order1_data[0]->weight, $order1_data[0]->total_amount, 1);
+            $shipping = $this->delhivery->GetCourierServiceability($address_data->pincode, $order1_data[0]->weight, $order1_data[0]->total_amount, 1);
             $decoded = json_decode($shipping);
             $data['courier_id'] = $order1_data[0]->courier_id;
-            $data['list'] = $decoded->list;
+            $data['list'] = [];
             $this->load->view('admin/common/header_view', $data);
             $this->load->view('admin/order/create_order');
             $this->load->view('admin/common/footer_view');
@@ -313,7 +314,7 @@ class Order extends CI_finecontrol
             redirect("login/admin_login", "refresh");
         }
     }
-    //===================== create shiprocket order =========
+    //===================== create delhivery order =========
     public function createOrder()
     {
         if (!empty($this->session->userdata('admin_data'))) {
@@ -322,22 +323,26 @@ class Order extends CI_finecontrol
             $this->load->helper('security');
             if ($this->input->post()) {
                 $this->form_validation->set_rules('id', 'id', 'required|xss_clean|trim');
-                $this->form_validation->set_rules('length', 'length', 'required|xss_clean|trim');
-                $this->form_validation->set_rules('breadth', 'breadth', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('width', 'width', 'required|xss_clean|trim');
                 $this->form_validation->set_rules('height', 'height', 'required|xss_clean|trim');
-                $this->form_validation->set_rules('courier_id', 'courier_id', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('shipment_mode', 'shipment_mode', 'required|xss_clean|trim');
                 if ($this->form_validation->run() == true) {
                     $id = base64_decode($this->input->post('id'));
-                    $length = $this->input->post('length');
-                    $breadth = $this->input->post('breadth');
+                    $width = $this->input->post('width');
                     $height = $this->input->post('height');
-                    $courier_id = $this->input->post('courier_id');
+                    $shipment_mode = $this->input->post('shipment_mode');
+                    $waybill_number = $this->delhivery->FetchWaybill();
+                    if (empty($waybill_number)) {
+                        $this->session->set_flashdata('emessage', 'Error in creating waybill number');
+                        redirect($_SERVER['HTTP_REFERER']);
+                    }
+                    $curl = curl_init();
                     //--- update data -----
                     $data_update = array(
-                        'length' => $length,
-                        'breadth' => $breadth,
+                        'width' => $width,
                         'height' => $height,
-                        'courier_id' => $courier_id,
+                        'shipment_mode' => $shipment_mode,
+                        'waybill_number' => $waybill_number,
                     );
                     $this->db->where('id', $id);
                     $zapak = $this->db->update('tbl_order1', $data_update);
@@ -358,7 +363,7 @@ class Order extends CI_finecontrol
                         }
                         $order_items[] = array(
                             'name' => $pro_data[0]->name,
-                            'sku' => 'Tia-' . $order2->type_id,
+                            'sku' => 'Poshida-' . $order2->type_id,
                             'selling_price' => $price,
                             'units' => $order2->quantity,
                             'hsn' => $pro_data[0]->hsn_code,
@@ -367,43 +372,36 @@ class Order extends CI_finecontrol
                         $sub_total = $sub_total + $total; //--calculate sub total
                     }
                     //---- create order  --------
-                    $create_order_res = $this->shiprocket->createOrder($order1_data, $order_items, $order1_data[0]->final_amount);
-                    if ($create_order_res->status_code == 1) {
+                    $create_order_res = $this->delhivery->createOrder($order1_data, $order_items, $order1_data[0]->final_amount);
+                    if ($create_order_res->packages[0]->status == 'Success') {
                         //---- update order ---
                         $data_update = array(
-                            'sr_order_id' => $create_order_res->order_id,
-                            'sr_shipping_id' => $create_order_res->shipment_id,
+                            'shipping_response' => json_encode($create_order_res),
                         );
                         $this->db->where('id', $id);
                         $zapak = $this->db->update('tbl_order1', $data_update);
-                        //---- generate AWB  --------
-                        $create_awb_res = $this->shiprocket->generateAWB($create_order_res->shipment_id, $courier_id);
-                        //---- generate AWB  --------
-                        $create_label_res = $this->shiprocket->generateLabel($create_order_res->shipment_id);
-                        if (!empty($create_awb_res->awb_assign_status)) {
-                            if ($create_awb_res->awb_assign_status == 1) {
-                                $awb_res = $create_awb_res->response->data;
+                        $create_label_res = $this->delhivery->generateLabel($create_order_res->packages[0]->waybill);
+                        if (!empty($create_label_res->packages)) {
+                            if ($create_label_res->packages[0]->pdf_download_link) {
                                 $data_update2 = array(
-                                    'awb_code' => $awb_res->awb_code,
-                                    'courier_name' => $awb_res->courier_name,
-                                    'shiprocket_label' => $create_label_res->label_url,
-                                    'message' => json_encode($create_awb_res),
+                                    'delhivery_label' => $create_label_res->packages[0]->pdf_download_link,
+                                    'label_response' => json_encode($create_label_res),
                                 );
                                 $this->db->where('id', $id);
                                 $zapak2 = $this->db->update('tbl_order1', $data_update2);
                                 $this->session->set_flashdata('smessage', 'Order Created Successfully');
                                 redirect("dcadmin/Order/accepted_order", "refresh");
                             } else {
-                                $this->session->set_flashdata('emessage', $create_awb_res->message);
+                                $this->session->set_flashdata('emessage', $create_order_res->packages[0]->remarks);
                                 redirect($_SERVER['HTTP_REFERER']);
                             }
                         } else {
-                            $this->session->set_flashdata('emessage', $create_awb_res->message);
+                            $this->session->set_flashdata('emessage', $create_order_res->packages[0]->remarks);
                             redirect($_SERVER['HTTP_REFERER']);
                         }
                     } else {
-                        log_message('error', json_encode($create_order_res));
-                        $this->session->set_flashdata('emessage', json_encode($create_order_res));
+                        log_message('error', json_encode($create_order_res->packages[0]->remarks));
+                        $this->session->set_flashdata('emessage', json_encode($create_order_res->packages[0]->remarks));
                         redirect($_SERVER['HTTP_REFERER']);
                     }
                 } else {
@@ -419,22 +417,34 @@ class Order extends CI_finecontrol
         }
     }
     //===================== view order pickup request =========
-    public function viewPickupReq($idd)
+    public function viewPickupReq()
     {
         if (!empty($this->session->userdata('admin_data'))) {
-            $data['id'] = $idd;
+
+            $this->db->select('*');
+            $this->db->from('tbl_delhivery_pickup_req');
+            $this->db->order_by('id', 'desc');
+            $data['req_data'] = $this->db->get();
             $this->load->view('admin/common/header_view', $data);
-            $this->load->view('admin/order/pickup_request');
+            $this->load->view('admin/order/view_pickup_req');
             $this->load->view('admin/common/footer_view');
         } else {
             redirect("login/admin_login", "refresh");
         }
     }
-    public function check()
+    //===================== view addPickupReq =========
+    public function addPickupReq()
     {
-        $create_pickup_res = $this->shiprocket->generatePickupReq('4525644', '23-7-6');
+        if (!empty($this->session->userdata('admin_data'))) {
+
+            $this->load->view('admin/common/header_view');
+            $this->load->view('admin/order/add_pickup_request');
+            $this->load->view('admin/common/footer_view');
+        } else {
+            redirect("login/admin_login", "refresh");
+        }
     }
-    //===================== create shiprocket pickup request =========
+    //===================== create delhivery pickup request =========
     public function createPickup_req()
     {
         if (!empty($this->session->userdata('admin_data'))) {
@@ -442,33 +452,45 @@ class Order extends CI_finecontrol
             $this->load->library('form_validation');
             $this->load->helper('security');
             if ($this->input->post()) {
-                $this->form_validation->set_rules('id', 'id', 'required|xss_clean|trim');
-                $this->form_validation->set_rules('pickupdate', 'pickupdate', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('package_count', 'package_count', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('pickup_date', 'pickup_date', 'required|xss_clean|trim');
+                $this->form_validation->set_rules('pickup_time', 'pickup_time', 'required|xss_clean|trim');
                 if ($this->form_validation->run() == true) {
-                    $id = base64_decode($this->input->post('id'));
-                    $pickupdate = $this->input->post('pickupdate');
-                    $order1_data = $this->db->get_where('tbl_order1', array('id' => $id))->result();
-                    $shipping_id = $order1_data[0]->sr_shipping_id;
+                    $package_count = $this->input->post('package_count');
+                    $pickup_date = $this->input->post('pickup_date');
+                    $pickup_time = $this->input->post('pickup_time');
+                    $ip = $this->input->ip_address();
+                    date_default_timezone_set("Asia/Calcutta");
+                    $cur_date = date("Y-m-d H:i:s");
+                    $addedby = $this->session->userdata('admin_id');
                     //---- generate label --------
-                    $create_pickup_res = $this->shiprocket->generatePickupReq($shipping_id, $pickupdate);
-                    print_r($create_pickup_res);
-                    die();
-                    if ($create_pickup_res->Status == true) {
+                    $create_pickup_res = $this->delhivery->generatePickupReq($package_count, $pickup_date, $pickup_time);
+
+                    if (!$create_pickup_res->error) {
                         //--- update data -----
-                        $data_update = array(
-                            'pickup_scheduled_date' => $create_pickup_res->Booked_date,
+                        $data_insert = array(
+                            'package_count' => $package_count,
+                            'pickup_date' => $pickup_date,
+                            'pickup_time' => $pickup_time,
+                            'response' => json_encode($create_pickup_res),
+                            'ip' => $ip,
+                            'added_by' => $addedby,
+                            'date' => $cur_date
                         );
-                        $this->db->where('id', $id);
-                        $zapak = $this->db->update('tbl_order1', $data_update);
-                        if (!empty($zapak)) {
-                            $this->session->set_flashdata('smessage', $create_pickup_res->Message);
+                        $last_id = $this->base_model->insert_table("tbl_delhivery_pickup_req", $data_insert, 1);
+                        if (!empty($last_id)) {
+                            $this->session->set_flashdata('smessage', 'Request created successfully');
+                            // die();
+
                             redirect("dcadmin/Order/accepted_order", "refresh");
                         } else {
-                            $this->session->set_flashdata('emessage', 'Some error occured!');
+                            $this->session->set_flashdata('emessage', 'Some error occurred!');
                             redirect($_SERVER['HTTP_REFERER']);
                         }
                     } else {
-                        $this->session->set_flashdata('emessage', $create_pickup_res->Message);
+                        $this->session->set_flashdata('emessage', $create_pickup_res->error->message);
+                        // die();
+
                         redirect($_SERVER['HTTP_REFERER']);
                     }
                 } else {

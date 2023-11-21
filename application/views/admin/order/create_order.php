@@ -1,11 +1,11 @@
 <div class="content-wrapper">
   <section class="content-header">
     <h1>
-      Create Order
+      Create Shipping
     </h1>
     <ol class="breadcrumb">
       <li><a href="<?php echo base_url() ?>dcadmin/Home"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-      <li><a href="<?php echo base_url() ?>dcadmin/Percentage_off/view_percentage_off"><i class="fa fa-undo" aria-hidden="true"></i> View Orders </a></li>
+      <li><a href="<?php echo base_url() ?>dcadmin/Percentage_off/view_percentage_off"><i class="fa fa-undo" aria-hidden="true"></i> View Shipping </a></li>
     </ol>
   </section>
   <section class="content">
@@ -13,7 +13,7 @@
       <div class="col-lg-12">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Create Order</h3>
+            <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Create Shipping</h3>
           </div>
           <?php if (!empty($this->session->flashdata('smessage'))) { ?>
           <div class="alert alert-success alert-dismissible">
@@ -36,32 +36,24 @@
                   <table class="table table-hover">
                     <input type="hidden" name="id" value="<?=$id?>"/>
                     <tr>
-                      <td> <strong>Courier Provider</strong> <span style="color:red;">*</span></strong> </td>
+                      <td> <strong>Shipment Mode</strong> <span style="color:red;">*</span></strong> </td>
                       <td>
-                        <select name="courier_id" id="courier_id" class="form-control">
-                          <option value="">----Select Courier Provider------</option>
-                          <?php $i=1; foreach ($list as $courier) {
-                             ?>
-                          <option value="<?=$courier->courier_company_id?>" <?if($courier_id==$courier->courier_company_id){echo 'selected';}?>><?=$courier->courier_name?> (₹<?=$courier->freight_charge?>)</option>
-                          <?php $i++; } ?>
+                        <select name="shipment_mode" id="shipment_mode" class="form-control" required>
+                          <option value="">----Select Shipment Mode------</option>
+                          <option value="Surface">Surface</option>
+                          <option value="Express">Express</option>
                         </select>
 
                       </td>
                     </tr>
                     <tr>
-                      <td> <strong>Length(in cm)</strong> <span style="color:red;">*</span></strong> </td>
+                      <td> <strong>Width(in gm)</strong> <span style="color:red;">*</span></strong> </td>
                       <td>
-                        <input type="text" name="length" class="form-control" placeholder="" required value="" onkeypress="return isNumberKey(event)" />
+                        <input type="text" name="width" class="form-control" placeholder="" required value="" onkeypress="return isNumberKey(event)" />
                       </td>
                     </tr>
                     <tr>
-                      <td> <strong>Breadth(in cm)</strong> <span style="color:red;">*</span></strong> </td>
-                      <td>
-                        <input type="text" name="breadth" class="form-control" placeholder="" required value="" onkeypress="return isNumberKey(event)" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td> <strong>Height(in cm)</strong> <span style="color:red;">*</span></strong> </td>
+                      <td> <strong>Height(in gm)</strong> <span style="color:red;">*</span></strong> </td>
                       <td>
                         <input type="text" name="height" class="form-control" placeholder="" required value="" onkeypress="return isNumberKey(event)" />
                       </td>

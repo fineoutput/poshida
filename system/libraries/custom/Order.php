@@ -17,7 +17,7 @@ class CI_Order
         $this->CI->load->helper('form');
         $this->CI->load->model("admin/login_model");
         $this->CI->load->model("admin/base_model");
-        $this->CI->load->library("custom/Shiprocket");
+        $this->CI->load->library("custom/Delhivery");
     }
 
     //===================================== CALCULATE ========================================================
@@ -79,22 +79,20 @@ class CI_Order
 
             // echo $total; die();
             $pincode = '';
-            // if (!empty($address_data)) {
-            //     $pincode = $address_data->pincode;
-            //     $shipping = $this->CI->shiprocket->GetCourierServiceability($pincode, $total_weight, $final_amount);
-            //     $shipping = json_decode($shipping);
-            //     if ($shipping->status == false) {
-            //         $this->CI->session->set_flashdata('emessage', $shipping->message);
-            //         return 0;
-            //         exit;
-            //     }
-            //     $shipping = $shipping->data->shipping;
-            //     $courier_id = $shipping->data->courier_id;
-            // } else {
-            //     $shipping = 0;
-            //     $courier_id = '';
-            // }
-            $shipping = 0;
+            if (!empty($address_data)) {
+                $pincode = $address_data->pincode;
+                $shipping = $this->CI->delhivery->GetCourierServiceability($pincode, $total_weight, $final_amount);
+                $shipping = json_decode($shipping);
+                if ($shipping->status == false) {
+                    $this->CI->session->set_flashdata('emessage', $shipping->message);
+                    return 0;
+                    exit;
+                }
+                $shipping = $shipping->data->shipping;
+            } else {
+                $shipping = 0;
+                $courier_id = '';
+            }
             $courier_id = '';
             $final_amount = $final_amount + $shipping;
             //------order1 entry-------------
@@ -106,7 +104,7 @@ class CI_Order
                 'payment_status' => 0,
                 'order_status' => 0,
                 'shipping' => $shipping,
-                'courier_id' => $courier_id,
+                'courier_id' => '',
                 'weight' => $total_weight,
                 'ip' => $ip,
                 'date' => $cur_date
@@ -436,7 +434,7 @@ class CI_Order
     }
 
     // =============================== PLACE ONLINE  AFTER CONFIRMATION FROM CCAVENUE ====================================
-    public function PlacePrePaidOrder($order_id,$decryptValues)
+    public function PlacePrePaidOrder($order_id, $decryptValues)
     {
         $ip = $this->CI->input->ip_address();
         date_default_timezone_set("Asia/Calcutta");
@@ -757,7 +755,7 @@ class CI_Order
             return json_encode($respone);
         }
         $shipping_charge = $shipping->data->shipping;
-        $courier_id = $shipping->data->courier_id;
+        $courier_id = '';
         $data_update = array(
             'shipping' => $shipping_charge, 'courier_id' => $courier_id,
             'final_amount' => $order1_data->total_amount - $order1_data->promo_discount + $shipping_charge, 'address_id' => $address_data->id

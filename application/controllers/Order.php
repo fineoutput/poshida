@@ -15,7 +15,7 @@ class Order extends CI_Controller
         $this->load->library("custom/Cart");
         $this->load->library("custom/Order");
         $this->load->library("custom/Promocode");
-        // $this->load->library("custom/Delhivery");
+        $this->load->library("custom/Delhivery");
     }
 
     //-------------calculate--------------
@@ -757,8 +757,4 @@ class Order extends CI_Controller
         }
         return $binString;
     }
-    // public function delivery_pincode_check()
-    // {
-    //     $cart_fetch = $this->delhivery->GetCourierServiceability(302020);
-    // }
 }
