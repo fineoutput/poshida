@@ -54,9 +54,9 @@ function SetSize(obj) {
         var data = response.data;
         $.each(data, function(i) {
           if (data[i]['stock'] == 0) {
-            opton += '<a href="'+base_url+'Home/product_detail/' + data[i]['product_url'] + '?type=' + btoa(data[i]['type_id']) + '" ><span class="spananim mr-1">' + data[i]['size_name'] + '</span></a>';
+            opton += '<a href="'+base_url+'product_detail/' + data[i]['product_url'] + '?type=' + btoa(data[i]['type_id']) + '" ><span class="spananim mr-1">' + data[i]['size_name'] + '</span></a>';
           } else {
-            opton += '<a href="'+base_url+'Home/product_detail/' + data[i]['product_url'] + '?type=' + btoa(data[i]['type_id']) + '" ><span class="mr-1">' + data[i]['size_name'] + '</span></a>';
+            opton += '<a href="'+base_url+'product_detail/' + data[i]['product_url'] + '?type=' + btoa(data[i]['type_id']) + '" ><span class="mr-1">' + data[i]['size_name'] + '</span></a>';
           }
         });
         console.log(opton)

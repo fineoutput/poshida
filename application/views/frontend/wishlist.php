@@ -209,7 +209,7 @@
                       <i class="fa fa-times" style="color: #bf6d6d;
 										font-size: 13px;"></i></a>
                   </div>
-                  <a href="<?= base_url() ?>Home/product_detail/<?= $wishlist['url'] ?>?type=<?= base64_encode($wishlist['type_id']) ?>">
+                  <a href="<?= base_url() ?>product_detail/<?= $wishlist['url'] ?>?type=<?= base64_encode($wishlist['type_id']) ?>">
                     <img src="<?= $wishlist['image'] ?>" alt="broken image">
                   </a>
                 </div>

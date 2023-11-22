@@ -4,7 +4,7 @@
   	<?php $i = 1;
 		foreach ($category_data->result() as $category) { ?>
   		<div class="item">
-  			<a href="<?= base_url() ?>Home/all_products/<?= $category->url ?>/1"><img src="<?= base_url() . $category->image2 ?>" alt=""> </a>
+  			<a href="<?= base_url() ?>products/<?= $category->url ?>/1"><img src="<?= base_url() . $category->image2 ?>" alt=""> </a>
   		</div>
   	<? } ?>
   </div>
@@ -80,7 +80,7 @@
   								<div class="product-item">
   									<div class="product-image">
   										<? if ($whats->exclusive == 1) { ?><div class="sale-label"><span>Exclusive</span></div><? } ?>
-  										<a href="<?= base_url() ?>Home/product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
+  										<a href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
   											<img src="<?= base_url() . $type_data[0]->image ?>" alt=" ">
   										</a>
   									</div>
@@ -125,7 +125,7 @@
 																	array_push($size_arr, $size_data->id);
 													?>
   																<li class="icon  cart-icon">
-  																	<a href="<?= base_url() ?>Home/product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_size->id) ?>"> <?= $size_data->name ?> <p style="margin-bottom:0; padding: 0px 10px;">|</p> </a>
+  																	<a href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_size->id) ?>"> <?= $size_data->name ?> <p style="margin-bottom:0; padding: 0px 10px;">|</p> </a>
   																</li>
   													<?php }
 															}
@@ -137,7 +137,7 @@
 													if ($more > 0) {
 														?>
   													<li class="icon ivo-ho compare-icon">
-  														<a href="<?= base_url() ?>Home/product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
+  														<a href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
   													</li>
   												<? } ?>
   											</ul>
@@ -290,7 +290,7 @@
   								<div class="product-item">
   									<div class="product-image">
   										<? if ($whats->exclusive == 1) { ?><div class="sale-label"><span>Exclusive</span></div><? } ?>
-  										<a href="<?= base_url() ?>Home/product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
+  										<a href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
   											<img src="<?= base_url() . $type_data[0]->image ?>" alt=" ">
   										</a>
   									</div>
@@ -335,7 +335,7 @@
 																	array_push($size_arr, $size_data->id);
 													?>
   																<li class="icon  cart-icon">
-  																	<a href="<?= base_url() ?>Home/product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_size->id) ?>"> <?= $size_data->name ?> <p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
+  																	<a href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_size->id) ?>"> <?= $size_data->name ?> <p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
   																</li>
   													<?php }
 															}
@@ -347,7 +347,7 @@
 													if ($more > 0) {
 														?>
   													<li class="icon ivo-ho compare-icon">
-  														<a href="<?= base_url() ?>Home/product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
+  														<a href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
   													</li>
   												<? } ?>
   											</ul>

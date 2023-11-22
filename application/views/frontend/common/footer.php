@@ -86,10 +86,10 @@
 							<span class="opener plus"></span>
 							<h3 class="head-three">Quick Help</h3>
 							<ul class="footer-menu footer-block-contant">
-								<li><a href="<?= base_url() ?>Home/privacy_policy">Privacy & Policy</a></li>
-								<li><a href="<?= base_url() ?>Home/return_and_replace">Returns, Replace & Exchanges</a></li>
-								<li><a href="<?= base_url() ?>Home/shipping_and_delivery">Shipping & Delivery</a></li>
-								<li><a href="<?= base_url() ?>Home/terms_and_conditions">Terms & Conditions</a></li>
+								<li><a href="<?= base_url() ?>privacy_policy">Privacy & Policy</a></li>
+								<li><a href="<?= base_url() ?>return_and_replace">Returns, Replace & Exchanges</a></li>
+								<li><a href="<?= base_url() ?>shipping_and_delivery">Shipping & Delivery</a></li>
+								<li><a href="<?= base_url() ?>terms_and_conditions">Terms & Conditions</a></li>
 							</ul>
 						</div>
 					</div>
@@ -99,8 +99,8 @@
 								<span class="opener plus"></span>
 								<h3 class="head-three">My Account</h3>
 								<ul class="footer-menu footer-block-contant">
-									<li><a href="<?= base_url() ?>Home/my_profile/order">Orders & Returns</a></li>
-									<li><a href="<?= base_url() ?>Home/my_profile">Account Details</a></li>
+									<li><a href="<?= base_url() ?>my_profile/order">Orders & Returns</a></li>
+									<li><a href="<?= base_url() ?>my_profile">Account Details</a></li>
 
 								</ul>
 							</div>
@@ -112,8 +112,8 @@
 								<h3 class="head-three">My Account</h3>
 								<ul class="footer-menu footer-block-contant">
 									<li><a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel">Login</a></li>
-									<li><a href="<?= base_url() ?>Home/about_us">About Us</a></li>
-									<li><a href="<?= base_url() ?>Home/career">Career</a></li>
+									<li><a href="<?= base_url() ?>about_us">About Us</a></li>
+									<li><a href="<?= base_url() ?>career">Career</a></li>
 							
 									
 									<li class="level "><a href="<?= base_url() ?>blogs" class="nav-link">Blog</a></li>
@@ -241,10 +241,10 @@
 		</div>
 		<? if (!empty($this->session->userdata('user_data'))) {
 			$wishCount = $this->db->get_where('tbl_wishlist', array('user_id = ' => $this->session->userdata('user_id'), 'user_type', $this->session->userdata('user_type')))->num_rows(); ?>
-			<div class="col-2 text-center mt-2 p-0"><a href="<?= base_url() ?>Home/my_profile"><img src="<?= base_url() ?>assets/frontend/img/user(3).png"></a>
+			<div class="col-2 text-center mt-2 p-0"><a href="<?= base_url() ?>my_profile"><img src="<?= base_url() ?>assets/frontend/img/user(3).png"></a>
 				<h6>Account</h6>
 			</div>
-			<div class="col-2 text-center mt-2 p-0"><a href="<?= base_url() ?>Home/my_wishlist"><img src="<?= base_url() ?>assets/frontend/img/heart (6).png" class="width-custem"></a><span class="wishlist_count"><?= $wishCount; ?></span></a>
+			<div class="col-2 text-center mt-2 p-0"><a href="<?= base_url() ?>my_wishlist"><img src="<?= base_url() ?>assets/frontend/img/heart (6).png" class="width-custem"></a><span class="wishlist_count"><?= $wishCount; ?></span></a>
 				<h6 class="coko-mar">Wishlist</h6>
 			</div>
 		<?
@@ -265,7 +265,7 @@
 			}
 		}
 		?>
-		<div class="col-2 text-center mt-2 p-0"><a href="<?= base_url() ?>Home/my_bag">&nbsp;<img src="<?= base_url() ?>assets/frontend/img/bag.png" class=""></i><span class="cart_count" style="    top: -6px;
+		<div class="col-2 text-center mt-2 p-0"><a href="<?= base_url() ?>my_bag">&nbsp;<img src="<?= base_url() ?>assets/frontend/img/bag.png" class=""></i><span class="cart_count" style="    top: -6px;
     left: -3px;"><?= $cartCount; ?></span></a>
 			<h6>Bag</h6>
 		</div>
@@ -313,8 +313,8 @@
 					<div class="container">
 						<div class="row">
 							<div class="col">
-								<p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="<?= base_url() ?>Home/terms_and_conditions" style="color: #c68fa6;">Terms of use</a>
-									&amp; <a href="<?= base_url() ?>Home/privacy_policy" style="color: #c68fa6;">Privacy
+								<p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="<?= base_url() ?>terms_and_conditions" style="color: #c68fa6;">Terms of use</a>
+									&amp; <a href="<?= base_url() ?>privacy_policy" style="color: #c68fa6;">Privacy
 										Policy</a></p>
 							</div>
 						</div>
@@ -390,7 +390,7 @@
 								<div class="text-center"><span class="mt-3">Already have an Account?<a href="#" data-target="#onload-popup1" data-toggle="modal" data-dismiss="modal" style="color:#ed6f36;">&nbsp;Log In</a></span>
 								</div>
 								<p class="text-center" style="margin-bottom: 0px;">Or</p>
-								<div class="text-center"><span class="mt-3"><a href="<?= base_url() ?>Home/reseller_register" style="color:#ed6f36;">Partner With Us</a></span>
+								<div class="text-center"><span class="mt-3"><a href="<?= base_url() ?>reseller_register" style="color:#ed6f36;">Partner With Us</a></span>
 								</div>
 
 							</form>

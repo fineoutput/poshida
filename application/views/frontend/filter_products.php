@@ -50,7 +50,7 @@
             <? $cat = explode(" ", $category_name);
             $caturl = implode("-", $cat); ?>
             <li><a href="<?= base_url() ?>">Home</a></li>
-            <li><a href="<?= base_url() ?>Home/all_products/<?= $caturl ?>/1"><?= $category_name ?></a></li>
+            <li><a href="<?= base_url() ?>products/<?= $caturl ?>/1"><?= $category_name ?></a></li>
             <li><?= $subcategory_name ?></li>
           </ul>
         </div>
@@ -62,9 +62,9 @@
     <div class="container-fulide " style="margin:  0px 20px;">
       <div class="row">
         <div class="col-12 col-lg-4 col-xl-3 gbgb ">
-          <form action="<?= base_url() ?>Home/apply_filter" id="applyFilter" method="get" enctype="multipart/form-data">
+          <form action="<?= base_url() ?>filter_products" id="applyFilter" method="get" enctype="multipart/form-data">
             <div class=" d-flex justify-content-end p-2 mb-2 " style="gap: 10px ;">
-              <span style="cursor: pointer;" onclick="location.href='<?= base_url() ?>Home/all_products/<?= $url ?>/1'"> Clear All </span> |
+              <span style="cursor: pointer;" onclick="location.href='<?= base_url() ?>products/<?= $url ?>/1'"> Clear All </span> |
               <span style="cursor: pointer;" onclick="submitFilters()">Apply</span>
             </div>
             <div class="sidebar mb-md-30">
@@ -310,14 +310,14 @@
                     <div class="product-item">
                       <div class="product-image">
                         <? if ($data->exclusive == 1) { ?> <div class="sale-label"><span>Exclusive</span></div><? } ?>
-                        <a href="<?= base_url() ?>Home/product_detail/<?= $data->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
+                        <a href="<?= base_url() ?>product_detail/<?= $data->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
                           <img src="<?= base_url() . $type_data[0]->image ?>" alt=" ">
                         </a>
                       </div>
                       <div class="product-details-outer">
                         <div class="product-details">
                           <div class="product-title">
-                            <a href="<?= base_url() ?>Home/product_detail/<?= $data->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $data->name ?></a>
+                            <a href="<?= base_url() ?>product_detail/<?= $data->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $data->name ?></a>
                           </div>
                           <div class="price-box">
                             <span class="price">₹<?= $type_spgst ?></span>
@@ -355,7 +355,7 @@
                                   if ($status == 0) {
                                     array_push($size_arr, $size_data->id); ?>
                                     <li class="icon  cart-icon">
-                                      <a href="<?= base_url() ?>Home/product_detail/<?= $data->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?><p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
+                                      <a href="<?= base_url() ?>product_detail/<?= $data->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?><p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
                                     </li>
                                 <?php
                                   }
@@ -369,7 +369,7 @@
                               if (!empty($size_data)) {
                                 ?>
                                 <li class="icon ivo-ho compare-icon">
-                                  <a href="<?= base_url() ?>Home/product_detail/<?= $data->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
+                                  <a href="<?= base_url() ?>product_detail/<?= $data->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
                                 </li>
                             <? }
                             } ?>
@@ -448,13 +448,13 @@
               <div class="row mt-2" style="margin-right: 0px; 
 								margin-left: 0px;">
                 <div class="col-6 fdghddf">
-                  <a href="<?= base_url() ?>Home/all_products/<?= $url ?>/1" class="btn df">CLEAR ALL</a>
+                  <a href="<?= base_url() ?>products/<?= $url ?>/1" class="btn df">CLEAR ALL</a>
                 </div>
                 <div class="col-6 fdghddf">
                   <a href="javascript:;" class="btn df" onclick="submitMOB()">APPLY</a>
                 </div>
               </div>
-              <form action="<?= base_url() ?>Home/apply_filter" id="applyFilteronMobile" method="get" enctype="multipart/form-data">
+              <form action="<?= base_url() ?>filter_products" id="applyFilteronMobile" method="get" enctype="multipart/form-data">
                 <div class="row">
                   <div class="col-4" style="border-right: 2px solid rgb(240, 238, 238); min-height: 100vh;">
                     <ul class="nav nav-tabs visitedcolor" role="tablist" style="display: block; border-bottom: 0px;">

@@ -71,7 +71,7 @@ class CI_Products
         $this->CI->db->where('subcat_active', 1);
         $count = $this->CI->db->count_all_results();
         //--------- pagination config ----------------------
-        $config['base_url'] = base_url() . 'Home/all_products/' . $url . '/' . $sort;
+        $config['base_url'] = base_url() . 'products/' . $url . '/' . $sort;
         $per_page = 16;
         $config['total_rows'] = $count;
         $config['per_page'] = $per_page;
@@ -309,7 +309,7 @@ class CI_Products
         // $this->CI->db->where('subcat_active', 1);
         // $count = $this->CI->db->count_all_results();
         //--------- pagination config ----------------------
-        // $config['base_url'] = base_url() . 'Home/search?search=' . $string;
+        // $config['base_url'] = base_url() . 'find?search=' . $string;
         // $per_page = 15;
         // $config['total_rows'] = $count;
         // $config['per_page'] = $per_page;

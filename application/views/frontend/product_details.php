@@ -258,8 +258,8 @@
         <div class="breadcrumb">
           <ul class="inline">
             <li><a href="<?= base_url() ?>">Home</a></li>
-            <li><a href="<?= base_url() ?>Home/all_products/<?= $cat_name[0]->url ?>/1"><?= $cat_name[0]->name ?></a></li>
-            <li><a href="<?= base_url() ?>Home/all_products/<?= $subcat_name[0]->url ?>/1"><?= $subcat_name[0]->name ?></a></li>
+            <li><a href="<?= base_url() ?>products/<?= $cat_name[0]->url ?>/1"><?= $cat_name[0]->name ?></a></li>
+            <li><a href="<?= base_url() ?>products/<?= $subcat_name[0]->url ?>/1"><?= $subcat_name[0]->name ?></a></li>
             <!-- <li><?= $product_data[0]->name ?></li> -->
           </ul>
         </div>
@@ -448,7 +448,7 @@
                             ?>
                               <div>
                                 <div class="m-2 " style="margin-bottom: 0px !important;">
-                                  <a href="<?= base_url() ?>Home/product_detail/<?= $product_data[0]->url ?>?type=<?= base64_encode($size['type_id']) ?>"><span class="<? if ($size['id'] == $type_data[0]->size_id) { ?> active<? } ?> <? if ($size['stock'] == 0) { ?> spananim <? } ?>"><?= $size['size_name']; ?></span></a>
+                                  <a href="<?= base_url() ?>product_detail/<?= $product_data[0]->url ?>?type=<?= base64_encode($size['type_id']) ?>"><span class="<? if ($size['id'] == $type_data[0]->size_id) { ?> active<? } ?> <? if ($size['stock'] == 0) { ?> spananim <? } ?>"><?= $size['size_name']; ?></span></a>
                                 </div>
                                 <div class="text-center" style="font-size: 11px ;">
                                   <? if ($size['id'] == $type_data[0]->size_id && $type_data[0]->inventory < 15) {
@@ -495,7 +495,7 @@
                           <? foreach ($color_arr as $type) {
                             $color = $this->db->get_where('tbl_colour', array('id = ' => $type->colour_id, 'is_active = ' => 1))->result();
                           ?>
-                            <span <? if ($type_data[0]->colour_id == $type->colour_id) { ?> class="active" <? } ?> data-color="<?= $color[0]->name ?>" color_id="<?= $color[0]->id ?>" product_id="<?= $product_data[0]->id ?>" onclick="location.href='<?= base_url() ?>Home/product_detail/<?= $product_data[0]->url ?>?type=<?= base64_encode($type->id) ?>'">
+                            <span <? if ($type_data[0]->colour_id == $type->colour_id) { ?> class="active" <? } ?> data-color="<?= $color[0]->name ?>" color_id="<?= $color[0]->id ?>" product_id="<?= $product_data[0]->id ?>" onclick="location.href='<?= base_url() ?>product_detail/<?= $product_data[0]->url ?>?type=<?= base64_encode($type->id) ?>'">
                               <div class="tooltip"><?= $color[0]->name ?></div>
                             </span>
                           <? } ?>
@@ -809,14 +809,14 @@
                     <div class="product-item">
                       <div class="product-image">
                         <? if ($buy_with->exclusive == 1) { ?> <div class="sale-label"><span>Sale</span></div> <? } ?>
-                        <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
+                        <a href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
                           <img src="<?= base_url() . $type_data[0]->image ?>" alt=" ">
                         </a>
                       </div>
                       <div class="product-details-outer">
                         <div class="product-details">
                           <div class="product-title">
-                            <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $buy_with->name ?></a>
+                            <a href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $buy_with->name ?></a>
                           </div>
                           <div class="price-box">
                             <span class="price">₹<?= $type_spgst ?></span>
@@ -854,7 +854,7 @@
                                     array_push($size_arr, $size_data->id);
                             ?>
                                     <li class="icon  cart-icon">
-                                      <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?><p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
+                                      <a href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?><p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
                                     </li>
                                 <?php
                                   }
@@ -868,7 +868,7 @@
                               if (!empty($size_data)) {
                                 ?>
                                 <li class="icon ivo-ho compare-icon">
-                                  <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
+                                  <a href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
                                 </li>
                             <? }
                             } ?>
@@ -951,14 +951,14 @@
                     <div class="product-item">
                       <div class="product-image">
                         <? if ($buy_with->exclusive == 1) { ?> <div class="sale-label"><span>Sale</span></div> <? } ?>
-                        <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
+                        <a href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
                           <img src="<?= base_url() . $type_data[0]->image ?>" alt=" ">
                         </a>
                       </div>
                       <div class="product-details-outer">
                         <div class="product-details">
                           <div class="product-title">
-                            <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $buy_with->name ?></a>
+                            <a href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $buy_with->name ?></a>
                           </div>
                           <div class="price-box">
                             <span class="price">₹<?= $type_spgst ?></span>
@@ -996,7 +996,7 @@
                                     array_push($size_arr, $size_data->id);
                             ?>
                                     <li class="icon  cart-icon">
-                                      <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?><p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
+                                      <a href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?><p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
                                     </li>
                                 <?php
                                   }
@@ -1010,7 +1010,7 @@
                               if (!empty($size_data)) {
                                 ?>
                                 <li class="icon ivo-ho compare-icon">
-                                  <a href="<?= base_url() ?>Home/product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
+                                  <a href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
                                 </li>
                             <? }
                             } ?>

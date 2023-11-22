@@ -253,7 +253,7 @@ if (!empty($this->session->userdata('user_data'))) {
 						align-items: center;">
             <div id="google_translate_element" class="hr"></div>
             <div class="newsletter-input-1 newsletter-input mob  " style="width: 70%;">
-              <form action="<?= base_url() ?>Home/search" method="GET" enctype="multipart/form-data">
+              <form action="<?= base_url() ?>find" method="GET" enctype="multipart/form-data">
                 <div class="form-group m-0">
                   <input type="searc" placeholder="Search Products... " name="search" required="">
                 </div>
@@ -291,8 +291,8 @@ if (!empty($this->session->userdata('user_data'))) {
                           <li><a href="#" class="p-1" data-toggle="modal" data-target="#LoginModel">Log In </a></li>
                           <li><a href="#" class="p-1" data-toggle="modal" data-target="#SignUpModel"> Register </a></li>
                         <? } else { ?>
-                          <li><a href="<?= base_url() ?>Home/my_profile" class="p-1">My Account </a></li>
-                          <li><a href="<?= base_url() ?>Home/my_profile/order" class="p-1">My Orders </a></li>
+                          <li><a href="<?= base_url() ?>my_profile" class="p-1">My Account </a></li>
+                          <li><a href="<?= base_url() ?>my_profile/order" class="p-1">My Orders </a></li>
                           <li><a href="<?= base_url() ?>User/logout" class="p-1">Log Out </a></li>
                         <? } ?>
                       </ul>
@@ -342,7 +342,7 @@ if (!empty($this->session->userdata('user_data'))) {
                     </ul>
                     <p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">₹<?= $headerMiniCart['sub_total'] ?></strong></span> </p>
                     <div class="clearfix"></div>
-                    <div class="mt-20 d-flex justify-content-center"> <a href="<?= base_url() ?>Home/my_bag" class="btn-color btn"> View Cart</a>
+                    <div class="mt-20 d-flex justify-content-center"> <a href="<?= base_url() ?>my_bag" class="btn-color btn"> View Cart</a>
                       <!-- <a href="checkout.html"
 										class="btn-color btn right-side">Checkout</a> -->
                     </div>
@@ -356,7 +356,7 @@ if (!empty($this->session->userdata('user_data'))) {
               $wishCount = $this->db->get_where('tbl_wishlist', array('user_id = ' => $this->session->userdata('user_id'), 'user_type', $this->session->userdata('user_type')))->num_rows();
             ?>
               <li class="cart-icon  heig show-icon dx">
-                <a href="<?= base_url() ?>Home/my_wishlist"> <span> <small class="cart-notification"><?= $wishCount; ?></small> </span> </a>
+                <a href="<?= base_url() ?>my_wishlist"> <span> <small class="cart-notification"><?= $wishCount; ?></small> </span> </a>
               </li>
             <? } else { ?>
               <li class="cart-icon  heig show-icon dx">
@@ -373,7 +373,7 @@ if (!empty($this->session->userdata('user_data'))) {
 
 
       <div id="toggle" class="no ">
-        <form action="<?= base_url() ?>Home/search" method="GET" enctype="multipart/form-data">
+        <form action="<?= base_url() ?>find" method="GET" enctype="multipart/form-data">
           <div class="form-group m-0 sty">
             <input type="searc" placeholder="Search Products... " required="" name="search">
           </div>
@@ -401,7 +401,7 @@ if (!empty($this->session->userdata('user_data'))) {
                 </li>
 
                 <!-- <li class="level">
-                <a href="<?= base_url() ?>Home/about_us">About Us</a>
+                <a href="<?= base_url() ?>about_us">About Us</a>
                 </li> -->
 
                 <?php $i = 1;
@@ -417,7 +417,7 @@ if (!empty($this->session->userdata('user_data'))) {
                   $this->db->where('is_active', 1);
                   $subcategory_data = $this->db->get(); ?>
                   <li class="level dropdown" style="    position: relative;">
-                    <a href="<?= base_url() ?>Home/all_products/<?= $category->url ?>/1" class=" nav-link"><?= $category->name ?></a>
+                    <a href="<?= base_url() ?>products/<?= $category->url ?>/1" class=" nav-link"><?= $category->name ?></a>
                     <span class="opener plus"><i class="bi bi-chevron-down" style="color:white"></i></span>
                     <div class="megamenu full mobile-sub-menu">
                       <div class="megamenu-inner-top">
@@ -428,7 +428,7 @@ if (!empty($this->session->userdata('user_data'))) {
                               foreach ($subcategory_data->result() as $subcat) {
                                 // if ($i % 2 == 0) {
                               ?>
-                                <li class="level3"><a href="<?= base_url() ?>Home/all_products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
+                                <li class="level3"><a href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
                               <?php
                                 // }
                                 $i++;
@@ -441,7 +441,7 @@ if (!empty($this->session->userdata('user_data'))) {
                               foreach ($subcategory_data->result() as $subcat) {
                                 if ($i  % 2 != 0) {
                               ?>
-                                  <li class="level3"><a href="<?= base_url() ?>Home/all_products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
+                                  <li class="level3"><a href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
                               <?php }
                                 $i++;
                               } ?>
@@ -450,7 +450,7 @@ if (!empty($this->session->userdata('user_data'))) {
                           <!-- <div class="col-lg-3 mt-30 d-none d-lg-block matgin-image" style="display: flex !important;
 												justify-content: center;">
                             <div class="sub-menu-img" style="width: 80%;">
-                              <a href="<?= base_url() ?>Home/all_products/<?= $category->url ?>/1">
+                              <a href="<?= base_url() ?>products/<?= $category->url ?>/1">
                                 <img src="<?= base_url() . $category->image ?>" alt=" " style="width: 100%;">
                               </a>
                             </div>
@@ -462,8 +462,8 @@ if (!empty($this->session->userdata('user_data'))) {
                 <?php $i++;
                 } ?>
 
-                <li><a href="<?= base_url() ?>Home/reseller_register">Partner With Us</a></li>
-                <li class="level "><a href="<?= base_url() ?>Home/contact" class="nav-link">Contact</a></li>
+                <li><a href="<?= base_url() ?>reseller_register">Partner With Us</a></li>
+                <li class="level "><a href="<?= base_url() ?>contact" class="nav-link">Contact</a></li>
 
               </ul>
 

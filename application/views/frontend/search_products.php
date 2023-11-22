@@ -44,13 +44,13 @@
   <div id="banner-part" class="banner inner-banner">
     <div class="container">
       <div class="bread-crumb-main">
-        <h1 class="banner-title"><?= $subcategory_name ?></h1>
+        <h1 class="banner-title">Search results for <?= $string ?></h1>
         <div class="breadcrumb">
           <ul class="inline">
             <? $cat = explode(" ", $category_name);
             $caturl = implode("-", $cat); ?>
             <li><a href="<?= base_url() ?>">Home</a></li>
-            <li><a href="<?= base_url() ?>Home/all_products/<?= $caturl ?>/1"><?= $category_name ?></a></li>
+            <li><a href="<?= base_url() ?>products/<?= $caturl ?>/1"><?= $category_name ?></a></li>
             <li><?= $subcategory_name ?></li>
           </ul>
         </div>
@@ -107,14 +107,14 @@
                     <div class="product-item">
                       <div class="product-image">
                         <? if ($data->exclusive == 1) { ?> <div class="sale-label"><span>Exclusive</span></div><? } ?>
-                        <a href="<?= base_url() ?>Home/product_detail/<?= $data->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
+                        <a href="<?= base_url() ?>product_detail/<?= $data->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
                           <img src="<?= base_url() . $type_data[0]->image ?>" alt=" ">
                         </a>
                       </div>
                       <div class="product-details-outer">
                         <div class="product-details">
                           <div class="product-title">
-                            <a href="<?= base_url() ?>Home/product_detail/<?= $data->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $data->name ?></a>
+                            <a href="<?= base_url() ?>product_detail/<?= $data->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $data->name ?></a>
                           </div>
                           <div class="price-box">
                             <span class="price">₹<?= $type_spgst ?></span>
@@ -152,7 +152,7 @@
                                   if ($status == 0) {
                                     array_push($size_arr, $size_data->id); ?>
                                     <li class="icon  cart-icon">
-                                      <a href="<?= base_url() ?>Home/product_detail/<?= $data->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?><p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
+                                      <a href="<?= base_url() ?>product_detail/<?= $data->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?><p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
                                     </li>
                                 <?php
                                   }
@@ -166,7 +166,7 @@
                               if (!empty($size_data)) {
                                 ?>
                                 <li class="icon ivo-ho compare-icon">
-                                  <a href="<?= base_url() ?>Home/product_detail/<?= $data->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
+                                  <a href="<?= base_url() ?>product_detail/<?= $data->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
                                 </li>
                             <? }
                             } ?>

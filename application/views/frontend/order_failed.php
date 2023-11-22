@@ -28,7 +28,7 @@
               <h2 style="font-size:35px;">Order Failed</h2>
               <h4 style="color:grey;">Something must've happened from our end. Please try again.</h4>
               <div class="btn-wrapper">
-                  <a href="<?=base_url()?>Home/my_bag" class="theme-btn-1 btn btn-effect-1">Checkout</a>
+                  <a href="<?=base_url()?>my_bag" class="theme-btn-1 btn btn-effect-1">Checkout</a>
                   <a href="<?=base_url()?>Home" class="theme-btn-1 btn btn-effect-1">Add More Products</a>
               </div>
       </div>

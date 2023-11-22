@@ -66,7 +66,28 @@ $route['dcadmin/(:any)/(:any)/(:any)/(:any)/(:any)'] = 'f9admin/$1/$2/$3/$5';
 
 
 $route['404_override'] = 'Home/error404';
+$route['about_us'] = 'Home/about_us';
+$route['career'] = 'Home/career';
+$route['privacy_policy'] = 'Home/privacy_policy';
+$route['return_and_replace'] = 'Home/return_and_replace';
+$route['shipping_and_delivery'] = 'Home/shipping_and_delivery';
+$route['terms_and_conditions'] = 'Home/terms_and_conditions';
+$route['contact'] = 'Home/contact';
+$route['reseller_register'] = 'Home/reseller_register';
+$route['my_profile'] = 'Home/my_profile';
+$route['my_profile/(:any)'] = 'Home/my_profile/$1';
+$route['add_address'] = 'Home/add_address';
+$route['edit_address/(:any)'] = 'Home/edit_address/$1';
+$route['my_wishlist'] = 'Home/my_wishlist';
+$route['my_bag'] = 'Home/my_bag';
 $route['blogs'] = 'Home/all_blogs';
 $route['blog'] = 'Home/blog_details';
+$route['products/(:any)/(:any)'] = 'Home/all_products/$1/$2';
+$route['product_detail/(:any)'] = 'Home/product_detail/$1';
+$route['filter_products'] = 'Home/apply_filter';
+$route['view_checkout'] = 'Order/view_checkout';
+$route['order_success'] = 'Order/order_success';
+$route['find'] = 'Home/search';
+
 
 $route['translate_uri_dashes'] = FALSE;

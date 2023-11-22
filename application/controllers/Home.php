@@ -492,6 +492,7 @@ class Home extends CI_Controller
         $data['category_name'] = $search_results['category_name'];
         $data['subcategory_name'] = $search_results['subcategory_name'];
         $data['url'] = 'search';
+        $data['string'] = $string;
         $data['filter_category'] = $this->db->get_where('tbl_category', array('is_active = ' => 1));
         $this->load->view('frontend/common/header2', $data);
         $this->load->view('frontend/search_products');
@@ -831,7 +832,7 @@ class Home extends CI_Controller
                         if ($t == 1) {
                             redirect('Order/add_address', 'refresh');
                         } else {
-                            redirect('Home/my_profile/ordes', 'refresh');
+                            redirect('my_profile/ordes', 'refresh');
                         }
                     } else {
                         $this->session->set_flashdata('emessage', 'Some error occurred!');
@@ -875,7 +876,7 @@ class Home extends CI_Controller
                 $zapak = $this->db->update('tbl_user_address', $data_update);
                 if ($zapak != 0) {
                     $this->session->set_flashdata('smessage', 'Address successfully deleted!');
-                    redirect('Home/my_profile/ordes', 'refresh');
+                    redirect('my_profile/ordes', 'refresh');
                 } else {
                     $this->session->set_flashdata('emessage', 'Sorry error occured');
                     redirect($_SERVER['HTTP_REFERER']);
@@ -937,7 +938,7 @@ class Home extends CI_Controller
                     $last_id = $this->base_model->insert_table("tbl_user_address", $data_insert, 1);
                     if (!empty($last_id)) {
                         $this->session->set_flashdata('smessage', 'Address added successfully!');
-                        redirect('Home/my_profile/ordes', 'refresh');
+                        redirect('my_profile/ordes', 'refresh');
                     } else {
                         $this->session->set_flashdata('emessage', 'Some error occurred!');
                         redirect($_SERVER['HTTP_REFERER']);

@@ -150,12 +150,6 @@ class CI_Delhivery
       "phone": "' . $address_data->phone . '",
       "order": "' . $order1_data[0]->id . '",
       "payment_mode": "' . $p_status . '",
-      "return_pin": "' . $address_data->pincode . '",
-      "return_city": "' . $address_data->city . '",
-      "return_phone": "' . $address_data->phone . '",
-      "return_add": "' . $address_data->address . '",
-      "return_state": "' . $address_data->state . '",
-      "return_country": "India",
       "hsn_code": "",
       "cod_amount": "' . $sub_total . '",
       "order_date": "' . $date . '",
@@ -175,11 +169,11 @@ class CI_Delhivery
   ],
   "pickup_location": {
     "name": "Poshida",
-    "add": "South Delhi",
-    "city": "to1",
-    "pin_code": 110017,
+    "add": "Plot No. 81, Nandpuri-B, Near Mahima Panache , Jagatpura, Jaipur",
+    "city": "Jaipur",
+    "pin_code": 302025,
     "country": "India",
-    "phone": "5412546857"
+    "phone": "9828099885"
   }
 }',
       CURLOPT_HTTPHEADER => array(
@@ -241,7 +235,7 @@ class CI_Delhivery
       CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
       CURLOPT_CUSTOMREQUEST => 'POST',
       CURLOPT_POSTFIELDS => '{
-      "pickup_location": "Poshida2",
+      "pickup_location": "Poshida",
       "expected_package_count":  "' . $package_count . '",
       "pickup_date": "' . $pickup_date . '",
       "pickup_time":  "' . $pickup_time . '"

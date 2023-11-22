@@ -828,7 +828,7 @@
                                       ?>
                                         <tr>
                                           <? if (!empty($type_data)) { ?>
-                                            <td class="product-thumbnail"><a href="<?= base_url() ?>Home/product_detail/<?= $product_data[0]->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><img src="<?= base_url() . $type_data[0]->image ?>" alt="<?= $product_data[0]->name ?>"></a></td>
+                                            <td class="product-thumbnail"><a href="<?= base_url() ?>product_detail/<?= $product_data[0]->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><img src="<?= base_url() . $type_data[0]->image ?>" alt="<?= $product_data[0]->name ?>"></a></td>
                                           <? } else { ?>
                                             <td class="product-thumbnail">Type not found</td>
                                           <? } ?>
@@ -852,7 +852,7 @@
                             <h3>Address</h3>
                             <div>
                               <a class="btn btn-fill-out btn-block  " style="width: 100% ; 
-                     padding: 8px 15px" href="<?= base_url() ?>Home/add_address">
+                     padding: 8px 15px" href="<?= base_url() ?>add_address">
                                 Add Address </a>
                             </div>
                           </div>
@@ -873,7 +873,7 @@
                                         <p><b>Pincode:</b> <a><?= $address->pincode ?></a></p>
                                         <div style=" display: flex;
                                         justify-content: end;">
-                                          <a href="<?= base_url() ?>Home/edit_address/<?= base64_encode($address->id) ?>" class="mr-2"><button class="btn btn-fill-out"> <i class="bi bi-pencil"></i></button></a>
+                                          <a href="<?= base_url() ?>edit_address/<?= base64_encode($address->id) ?>" class="mr-2"><button class="btn btn-fill-out"> <i class="bi bi-pencil"></i></button></a>
                                           <a href="<?= base_url() ?>Home/delete_address/<?= base64_encode($address->id) ?>"><button class="btn btn-fill-out"> <i class="bi bi-trash"></i></button></a>
                                         </div>
                                       </div>

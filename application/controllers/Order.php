@@ -25,9 +25,9 @@ class Order extends CI_Controller
     //     if (!empty($this->session->userdata('user_data'))) {
     //         $calculate = $this->order->calculate($pincode, $courier_id);
     //         if ($calculate == 1) {
-    //             redirect("Order/view_checkout");
+    //             redirect("view_checkout");
     //         } else {
-    //             redirect("Home/my_bag");
+    //             redirect("my_bag");
     //         }
     //     } else {
     //         redirect("/", "refresh");
@@ -38,9 +38,9 @@ class Order extends CI_Controller
         if (!empty($this->session->userdata('user_data'))) {
             $calculate = $this->order->calculate();
             if ($calculate == 1) {
-                redirect("Order/view_checkout");
+                redirect("view_checkout");
             } else {
-                redirect("Home/my_bag");
+                redirect("my_bag");
             }
         } else {
             redirect("/", "refresh");
@@ -189,7 +189,7 @@ class Order extends CI_Controller
                 if (!empty($data['address_data'])) {
                     // $update = $this->order->updateShipping($data['address_data'], $this->session->userdata('order_id'));
                 }
-                redirect("Order/view_checkout");
+                redirect("view_checkout");
             } else {
                 $respone['status'] = false;
                 $respone['message'] = "Please insert some data, No data available";
@@ -390,7 +390,7 @@ class Order extends CI_Controller
         if ($order_status === "Success") {
             $placeOrder = json_decode($this->order->PlacePrePaidOrder($order_id, json_encode($decryptValues)));
             if ($placeOrder == true) {
-                redirect("Order/order_success");
+                redirect("order_success");
             } else {
                 redirect("Order/order_failed");
             }
@@ -477,7 +477,7 @@ class Order extends CI_Controller
         $cancel_order = $this->order->cancelOrder($id);
         if ($cancel_order == true) {
             $this->session->set_flashdata('smessage', 'Order cancelled successfully');
-            redirect("Home/my_profile/order");
+            redirect("my_profile/order");
         } else {
             $this->session->set_flashdata('emessage', 'Some error occurred');
             redirect($_SERVER['HTTP_REFERER']);

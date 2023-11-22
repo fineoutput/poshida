@@ -634,7 +634,7 @@
 					<div class="breadcrumb">
 						<ul class="inline">
 							<li><a href="<?= base_url() ?>">Home</a></li>
-							<li><a href="<?= base_url() ?>Home/my_profile/order">My Orders</a></li>
+							<li><a href="<?= base_url() ?>my_profile/order">My Orders</a></li>
 							<li><a href="#"> Orders Detail </a>
 							</li>
 						</ul>

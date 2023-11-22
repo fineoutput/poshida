@@ -10,7 +10,7 @@
       <div class="col-md-6">
         <ol class="breadcrumb justify-content-md-end">
           <li class="breadcrumb-item"><a href="<?=base_url()?>">Home</a></li>
-          <li class="breadcrumb-item"><a href="<?=base_url()?>Home/my_profile/order">My Orders</a></li>
+          <li class="breadcrumb-item"><a href="<?=base_url()?>my_profile/order">My Orders</a></li>
           <li class="breadcrumb-item active">Track Order</li>
         </ol>
       </div>

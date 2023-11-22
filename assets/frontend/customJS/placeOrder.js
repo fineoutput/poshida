@@ -18,7 +18,7 @@ $('#placeOrderForm').on('submit', function (e) {
       if (payment_method == 1) {
         // ------ COD Order Placed -----------------------
         if (response.status == true) {
-          window.location.replace(base_url + "Order/order_success");
+          window.location.replace(base_url + "order_success");
         } else if (response.status == false) {
           notifyError(response.message)
           $("#loader").css("display", 'none');

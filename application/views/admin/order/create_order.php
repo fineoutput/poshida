@@ -47,13 +47,13 @@
                       </td>
                     </tr>
                     <tr>
-                      <td> <strong>Width(in gm)</strong> <span style="color:red;">*</span></strong> </td>
+                      <td> <strong>Width(in cm)</strong> <span style="color:red;">*</span></strong> </td>
                       <td>
                         <input type="text" name="width" class="form-control" placeholder="" required value="" onkeypress="return isNumberKey(event)" />
                       </td>
                     </tr>
                     <tr>
-                      <td> <strong>Height(in gm)</strong> <span style="color:red;">*</span></strong> </td>
+                      <td> <strong>Height(in cm)</strong> <span style="color:red;">*</span></strong> </td>
                       <td>
                         <input type="text" name="height" class="form-control" placeholder="" required value="" onkeypress="return isNumberKey(event)" />
                       </td>

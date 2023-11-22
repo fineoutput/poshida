@@ -464,8 +464,8 @@ class Order extends CI_finecontrol
                     $addedby = $this->session->userdata('admin_id');
                     //---- generate label --------
                     $create_pickup_res = $this->delhivery->generatePickupReq($package_count, $pickup_date, $pickup_time);
-
-                    if (!$create_pickup_res->error) {
+// print_r($create_pickup_res);die();
+                    if (!isset($create_pickup_res->error)) {
                         //--- update data -----
                         $data_insert = array(
                             'package_count' => $package_count,
@@ -481,7 +481,7 @@ class Order extends CI_finecontrol
                             $this->session->set_flashdata('smessage', 'Request created successfully');
                             // die();
 
-                            redirect("dcadmin/Order/accepted_order", "refresh");
+                            redirect("dcadmin/Order/viewPickupReq", "refresh");
                         } else {
                             $this->session->set_flashdata('emessage', 'Some error occurred!');
                             redirect($_SERVER['HTTP_REFERER']);
