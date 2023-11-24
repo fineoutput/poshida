@@ -122,21 +122,24 @@ class Home extends CI_Controller
                 }
             }
             $data['filter_size'] = array_merge(array_unique($size));
-            if($url=='Womens-and-Girls'){
+            if ($url == 'Womens-and-Girls') {
                 $data['title'] = 'Buy Stylish Kurti For Women | Kurtis Online Shopping in India | Poshida';
                 $data['dsc'] = 'Designer Kurti: Buy Stylish Kurtis For Women. Explore the latest kurti designs & Kurtis online shopping At Poshida. Upgrade your wardrobe with our fashionable collection';
-            }else if($url=='A--LINE-KURTA'){
+            } else if ($url == 'A--LINE-KURTA') {
                 $data['title'] = 'Buy Festival Kurta For Women | A Line Kurti | Poshida';
                 $data['dsc'] = "Get ready for the festivities with Poshida's A-line kurtis – the perfect festival kurtas for women. Elevate your style with Poshida. Shop now!";
-            }else if($url=='EMBROIDERY-KURTA'){
+            } else if ($url == 'EMBROIDERY-KURTA') {
                 $data['title'] = 'Buy Cotton Embroidery Kurta For Women Online in India - Poshida';
                 $data['dsc'] = "Elevate your style with Poshida's Cotton Embroidery Kurtas for women online in India. Discover the perfect blend of comfort and elegance. Shop now for a fashionable twist on traditional attire";
-            }else if($url=='FLOOR-LENGTH-GOWN'){
+            } else if ($url == 'FLOOR-LENGTH-GOWN') {
                 $data['title'] = 'Buy Floor Length Gown For Women Online in India - Poshida';
                 $data['dsc'] = "Explore our website today and witness the perfect blend of fashion and charm! Visit Poshida and buy floor length gowns for women online in India - because you deserve to look and feel your absolute best!";
-            }else if($url=='SKD-SETS'){
+            } else if ($url == 'SKD-SETS') {
                 $data['title'] = 'Buy Latest Kurti Designs For Women & Kurti Sets Online';
                 $data['dsc'] = "Shop high-quality and stylish designer kurtis online. Our latest kurti designs for women will empower you to embrace your own unique style with our wide selection of the latest kurti designs. Don't let this exciting opportunity pass you by!";
+            } else if ($url == 'ALIYA-CUT-KURTI') {
+                $data['title'] = 'Designer Kurtis For Women Online | Aliya Cut Kurtis | Poshida';
+                $data['dsc'] = "Elevate your style with the exclusive Aliya Cut Kurtis collection for women by Poshida. Discover elegant and contemporary designs that blend tradition and modernity seamlessly. Shop online and embrace sophistication with Poshida's Aliya Cut Kurtis";
             }
             $this->load->view('frontend/common/header2', $data);
             $this->load->view('frontend/all_products');
@@ -153,6 +156,8 @@ class Home extends CI_Controller
         $this->db->from('tbl_testimonials');
         $this->db->where('is_active', 1);
         $data['testimonials_data'] = $this->db->get();
+        $data['title'] = 'About Us - Poshida';
+        $data['dsc'] = "We proudly stand as one of India's foremost fashion retailers, offering an extensive array of high-quality products that cater to diverse tastes. With a strong presence both online and in our brick-and-mortar stores, we have firmly established ourselves as an industry leader";
         $this->load->view('frontend/common/header2', $data);
         $this->load->view('frontend/about');
         $this->load->view('frontend/common/footer2');
@@ -644,6 +649,8 @@ class Home extends CI_Controller
         $this->db->limit($config["per_page"], $start);
         $data['blog_data'] = $this->db->get();
         $data['links'] = $this->pagination->create_links();
+        $data['title'] = 'Explore Fashion and Style Tips | Poshida Blogs';
+        $data['dsc'] = "Dive into the world of fashion and style with Poshida's blogs. Discover expert tips, trend insights, and inspiration to elevate your wardrobe and express your unique style. Explore our collection of engaging and informative blogs to stay ahead in the fashion game";
         $this->load->view('frontend/common/header2', $data);
         $this->load->view('frontend/all_blogs');
         $this->load->view('frontend/common/footer2');
@@ -701,7 +708,9 @@ class Home extends CI_Controller
     }
     public function contact()
     {
-        $this->load->view('frontend/common/header2');
+        $data['title'] = 'Contact Us - Poshida';
+        $data['dsc'] = "Get in touch with Poshida through our Contact Us page. Whether you have inquiries about our products, need assistance with orders, or wish to explore partnership opportunities, our team is here to assist you. Experience exceptional customer service and seamless communication with Poshida";
+        $this->load->view('frontend/common/header2', $data);
         $this->load->view('frontend/contact');
         $this->load->view('frontend/common/footer2');
     }
