@@ -227,6 +227,10 @@
                 </div>
               </div>
             </div>
+
+            <div class="col-12 mb-3 mt-2 d-flex justify-content-center">
+                      <img src="<?= base_url() ?>assets/frontend/img/Qrcode.jpg" alt="" class="img-fluid">
+                    </div>
           </div>
         </div>
       </div>
