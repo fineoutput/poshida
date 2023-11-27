@@ -219,6 +219,10 @@
                         </div>
                       </div>
 
+                      <div class="col-12 mb-3 mt-2 d-flex justify-content-center">
+                      <img src="<?= base_url() ?>assets/frontend/img/Qrcode.jpg" alt="" class="img-fluid">
+                    </div>
+
                       <div class="col-12 col-md-12  dsgsdcvsd trasition-csm" id="sticks" style="padding: 10px;  border-top:  1px solid gainsboro;">
                         <button class="btn full btn-color" type="submit" id="place">Place Order</button>
                       </div>
@@ -227,6 +231,8 @@
                 </div>
               </div>
             </div>
+
+         
           </div>
         </div>
       </div>
