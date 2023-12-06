@@ -733,6 +733,27 @@ div#google_translate_element{
 
 }
 
+
+
+@media (max-width: 598px){
+.header-right-link {
+    float: left;
+    position: relative;
+    left: -113px;
+}}
+@media (max-width: 542px){
+.header-right-link {
+    float: left;
+    position: relative;
+    left: -58px;
+}}
+@media (max-width: 426px){
+.header-right-link {
+    float: left;
+    position: relative;
+    left: -77px;
+}}
+
 @media (max-width: 338px){
 .header-right-link {
     float: left;
