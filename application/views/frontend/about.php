@@ -136,24 +136,24 @@
       </div>
       <div class="row">
         <div class="col-lg-12 text-center" style="    margin-bottom: 16px;">
-          <span style="font-size:30px; margin-bottom:10px; "> <b>Evolution of Poshida </b></span>
+          <span style="font-size:30px; margin-bottom:10px; "> <b>Evolution of Poshida Fashions LLP </b></span>
           <hr>
         </div>
       </div>
 
-      <p>  As Poshida began to flourish, the co-founders, Usha Singh, Rekha Rohilla, and  Pawan Rohilla, found themselves immersed in the dynamic world of fashion and entrepreneurship.  Usha Singh, armed with her BBA degree, skillfully managed the business operations, ensuring that Poshida not only created beautiful clothing but also ran efficiently as a brand.</p>
+      <p>  As Poshida Fashions LLP began to flourish, the co-founders, Usha Singh, Rekha Rohilla, and  Pawan Rohilla, found themselves immersed in the dynamic world of fashion and entrepreneurship.  Usha Singh, armed with her BBA degree, skillfully managed the business operations, ensuring that Poshida Fashions LLP not only created beautiful clothing but also ran efficiently as a brand.</p>
 
 
 
-      <p> Rekha Rohilla, with her BA degree and innate creativity, played a pivotal role in shaping Poshida's unique aesthetic. Her passion for fashion and design fueled the brand's innovation, introducing styles that resonated with customers looking for something beyond the ordinary.</p>
+      <p> Rekha Rohilla, with her BA degree and innate creativity, played a pivotal role in shaping Poshida Fashions LLP's unique aesthetic. Her passion for fashion and design fueled the brand's innovation, introducing styles that resonated with customers looking for something beyond the ordinary.</p>
 
 
-      <p> Pawan Rohilla, the seasoned fashion designer, brought his wealth of experience to the table. With 18 years in fashion design, apparel manufacturing, and development,  Pawan Rohilla's expertise ensured that every Poshida creation was a masterpiece. His designs seamlessly blended tradition and modernity, captivating the hearts of fashion enthusiasts.</p>
+      <p> Pawan Rohilla, the seasoned fashion designer, brought his wealth of experience to the table. With 18 years in fashion design, apparel manufacturing, and development,  Pawan Rohilla's expertise ensured that every Poshida Fashions LLP creation was a masterpiece. His designs seamlessly blended tradition and modernity, captivating the hearts of fashion enthusiasts.</p>
 
-      <p> Together, Usha Singh,Rekha Rohilla, and  Pawan Rohilla navigated challenges, celebrated successes, and transformed Poshida into a household name. Their commitment to quality, creativity, and customer satisfaction propelled the brand to new heights, making Poshida a symbol of elegance and style.</p>
+      <p> Together, Usha Singh,Rekha Rohilla, and  Pawan Rohilla navigated challenges, celebrated successes, and transformed Poshida Fashions LLP into a household name. Their commitment to quality, creativity, and customer satisfaction propelled the brand to new heights, making Poshida Fashions LLP a symbol of elegance and style.</p>
 
 
-      <p>In the grand tapestry of Poshida's journey,Usha Singh, Rekha Rohilla, and  Pawan Rohilla stood as the pillars of success, showcasing that a blend of business acumen, creativity, and experience could create a fashion empire that not only adorned bodies but also celebrated the spirit of individuality.</p>
+      <p>In the grand tapestry of Poshida Fashions LLP's journey,Usha Singh, Rekha Rohilla, and  Pawan Rohilla stood as the pillars of success, showcasing that a blend of business acumen, creativity, and experience could create a fashion empire that not only adorned bodies but also celebrated the spirit of individuality.</p>
      
       <p style="color: black;"> <b>Established in Jaipur, this ready-to-wear brand has come to be synonymous with versatile yet powerful casual-wear.</b> </p>
     <p style="color: black;"> <b>We have been constantly evolving and expanding the product line and ruling the hearts of loyal customers since 2019.</b> </p>
