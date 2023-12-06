@@ -381,7 +381,7 @@ if (!empty($this->session->userdata('user_data'))) {
               </ul>
             </div>
           </div>
-
+           
           <div class="col-lg-4 col-md-3 col-3 p-0 icon-bar  dgsfgdfg" style="display: flex;
 						align-items: center;">
             <!-- <div id="google_translate_element"></div> -->
