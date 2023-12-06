@@ -188,6 +188,8 @@ class Product extends CI_finecontrol
                     $addedby = $this->session->userdata('admin_id');
                     $pro = explode(" ", $name);
                     $url = implode("-", $pro);
+                    $url = str_replace("/","-",$url);
+                    $url = str_replace("&","-",$url);
                     //========================image_1 upload========================\\
                     $this->load->library('upload');
                     $image1 = "";
