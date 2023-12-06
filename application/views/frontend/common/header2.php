@@ -649,7 +649,97 @@ div#google_translate_element{
       }
     }
 
-  </style>
+
+  @media (max-width: 768px){
+.vkmmkj {
+    display: block !important;
+    align-self: center;
+    position: relative;
+    left: -77px;
+}
+.header-right-link {
+    float: left;
+    position: relative;
+    left: -61px;
+}
+
+}
+
+  @media (max-width: 578px){
+.vkmmkj {
+    display: block !important;
+    align-self: center;
+    position: relative;
+    left: -77px;
+}
+.dgsfgdfg {
+    /* display: block !important; */
+    align-self: center;
+    position: relative;
+    right: -77px;
+}
+
+}
+@media (max-width: 436px){
+.vkmmkj {
+    display: block !important;
+    align-self: center;
+    position: relative;
+    left: -50px;
+}
+
+
+}
+@media (max-width: 425px){
+  .header-right-link {
+    float: left;
+    position: relative;
+    left: -61px;
+}
+.vkmmkj {
+    display: block !important;
+    align-self: center;
+    position: relative;
+    left: -29px;
+}
+
+}
+@media (max-width: 375px){
+  .header-right-link {
+    float: left;
+    position: relative;
+    left: -75px;
+}
+.vkmmkj {
+    display: block !important;
+    align-self: center;
+    position: relative;
+    left: -29px;
+}
+
+}
+@media (max-width: 338px){
+  .header-right-link {
+    float: left;
+    position: relative;
+    left: -61px;
+}
+.vkmmkj {
+    display: block !important;
+    align-self: center;
+    position: relative;
+    left: -29px;
+}
+
+}
+
+@media (max-width: 338px){
+.header-right-link {
+    float: left;
+    position: relative;
+    left: -87px;
+}}
+</style>
 </head>
 
 <body>

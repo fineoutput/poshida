@@ -242,6 +242,55 @@ if (!empty($this->session->userdata('user_data'))) {
 }
 ?>
 
+<style>
+  @media (max-width: 578px){
+.vkmmkj {
+    display: block !important;
+    align-self: center;
+    position: relative;
+    left: -77px;
+}
+.dgsfgdfg {
+    /* display: block !important; */
+    align-self: center;
+    position: relative;
+    right: -77px;
+}
+
+}
+@media (max-width: 436px){
+.vkmmkj {
+    display: block !important;
+    align-self: center;
+    position: relative;
+    left: -50px;
+}
+.dgsfgdfg {
+    /* display: block !important; */
+    align-self: center;
+    position: relative;
+    right: -51px;
+}
+
+}
+@media (max-width: 338px){
+.vkmmkj {
+    display: block !important;
+    align-self: center;
+    position: relative;
+    left: -30px;
+}
+.dgsfgdfg {
+    /* display: block !important; */
+    align-self: center;
+    position: relative;
+    right: -30px;
+}
+
+
+}
+</style>
+
 <body>
   <!-- Start preloader -->
   <div id="preloader"></div>
