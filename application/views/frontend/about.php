@@ -26,48 +26,47 @@
   <div class="ltn__about-us-area pt-120 pb-120 " style="background:white;">
     <div class="container mt-3">
       <div class="row">
-        <div class="col-lg-12 text-center">
-          <span style="font-size:30px; margin-bottom:10px; "> <b> Who We Are </b></span>
+        <div class="col-lg-12 text-center" style="    margin-bottom: 16px;">
+          <span style="font-size:30px; margin-bottom:10px; "> <b>Evolution of Poshida </b></span>
           <hr>
         </div>
       </div>
 
-      <p>We proudly stand as one of India's foremost fashion retailers, offering an extensive
-        array of high-quality products that cater to diverse tastes. With a strong presence
-        both online and in our brick-and-mortar stores, we have firmly established ourselves
-        as an industry leader.</p>
-      <p>Founded in Jaipur, our journey began as a ready-to-wear brand that has since
-        become synonymous with versatile and empowering casual attire. Since our
-        inception in 2018, we have continuously evolved and expanded our product range,
-        endearing ourselves to a devoted customer base.</p>
-      <p>Throughout our growth, we have remained steadfast in our commitment to a core
-        principle: the customer always takes center stage in everything we undertake. Our
-        familial approach to working closely together has allowed us to excel across all
-        facets of fashion production, encompassing design, manufacturing, distribution, and
-        retail. This approach, underpinned by three key pillars—flexibility, digital integration,
-        and sustainability—has brought us closer than ever to our customers, delivering the
-        products they desire at affordable prices..</p>
+      <p>  As Poshida began to flourish, the co-founders, Usha Singh, Rekha Rohilla, and  Pawan Rohilla, found themselves immersed in the dynamic world of fashion and entrepreneurship.  Usha Singh, armed with her BBA degree, skillfully managed the business operations, ensuring that Poshida not only created beautiful clothing but also ran efficiently as a brand.</p>
+
+
+
+      <p> Rekha Rohilla, with her BA degree and innate creativity, played a pivotal role in shaping Poshida's unique aesthetic. Her passion for fashion and design fueled the brand's innovation, introducing styles that resonated with customers looking for something beyond the ordinary.</p>
+
+
+      <p> Pawan Rohilla, the seasoned fashion designer, brought his wealth of experience to the table. With 18 years in fashion design, apparel manufacturing, and development,  Pawan Rohilla's expertise ensured that every Poshida creation was a masterpiece. His designs seamlessly blended tradition and modernity, captivating the hearts of fashion enthusiasts.</p>
+
+      <p> Together, Usha Singh,Rekha Rohilla, and  Pawan Rohilla navigated challenges, celebrated successes, and transformed Poshida into a household name. Their commitment to quality, creativity, and customer satisfaction propelled the brand to new heights, making Poshida a symbol of elegance and style.</p>
+
+
+      <p>In the grand tapestry of Poshida's journey,Usha Singh, Rekha Rohilla, and  Pawan Rohilla stood as the pillars of success, showcasing that a blend of business acumen, creativity, and experience could create a fashion empire that not only adorned bodies but also celebrated the spirit of individuality.</p>
+     
       <!-- <p style="color: black;"> <b>Established in Jaipur, this ready-to-wear brand has come to be synonymous with versatile yet powerful casual-wear.</b> </p>
     <p style="color: black;"> <b>We have been constantly evolving and expanding the product line and ruling the hearts of loyal customers since 2019.</b> </p>
     <p>Over the years, our size may have changed, but one underlying idea has stayed the same – the customer is at the centre of everything we do.</p>
     <p>By working closely together as a family, WE focused on the key elements of fashion production –design, manufacture, distribution and retail– with three pillars -flexibility, digital integration and sustainability- we brought our customers
       closer than ever to the products they wanted at affordable prices.</p> -->
-      <h4>Value beyond profit</h4>
+      <!-- <h4>Value beyond profit</h4> -->
       <!-- <p style="color: black;"> <u>poshida brand is an Exclusive Collection for more meaningful buying.</u> </p> -->
-      <p>Our brand represents more than just fashion; it embodies an exclusive collection that
+      <!-- <p>Our brand represents more than just fashion; it embodies an exclusive collection that
         promotes meaningful consumption. Our dedicated workforce consistently prioritizes
         the customer's needs and values, transcending mere profitability. We strive to create
         value that extends beyond financial gain, emphasizing both people and the
         environment in our decision-making processes. At the core of our business
         philosophy, we believe in providing fashion that is not only stylish but also ethical
         and sustainable—fashion that is truly "Right to Wear."
-      </p>
-      <div class="container">
-        <div class="row text-center">
+      </p> -->
+      <!-- <div class="container">
+        <div class="row text-center"> -->
           <!-- <div class="col-md-6 mt-2">
             <img src="<?= base_url() ?>assets/frontend/images/Picture1.png" alt="Our Bussiness Model" class="img-fluid">
           </div> -->
-          <div class="col-md-12 mt-2" style="border:10px solid #d65555;border-bottom:50px solid #d65555;">
+          <!-- <div class="col-md-12 mt-2" style="border:10px solid #d65555;border-bottom:50px solid #d65555;">
             <h4>OUR BUSINESS MODEL</h4>
             <p style="text-align: justify;">Design: We craft stylish clothing that reflects the latest trends and your
               personal style.
@@ -95,7 +94,7 @@
             <p style="text-align: justify;">Digital Integration: We leverage technology to enhance efficiency and
               customer experience in every aspect of our work.
             </p>
-          </div>
+          </div> -->
         </div>
       </div>
       <!-- <div class="container-fluid mt-3">
@@ -105,10 +104,9 @@
     </div> -->
 
 
-      <div class=" mt-3">
+      <!-- <div class=" mt-3">
         <h4>Key Attributes:
         </h4>
-        <!-- <p style="color: black;"> <u>poshida brand is an Exclusive Collection for more meaningful buying.</u> </p> -->
         <p>ISO Certified: We're all about quality and excellence. Our ISO certification
           shows that we're really serious about meeting international standards and
           making fashion that lasts.
@@ -135,7 +133,7 @@
           with a rich heritage of expertise.
 
         </p>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>

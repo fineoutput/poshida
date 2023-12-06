@@ -9,6 +9,8 @@
 
 /* - Google Fonts //---------------- */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/geometr415-blk-bt');
+@import url('https://db.onlinewebfonts.com/c/1ba82d324736a8a9d4327d482c4627c4?family=Ebrima');
 
 ::-webkit-scrollbar {
 	display: none;
@@ -75,7 +77,7 @@ body {
 	line-height: 24px;
 	color: #464646;
 	font-size: 14px;
-	font-family: 'Montserrat', sans-serif !important;
+	font-family: "Ebrima";
 	font-weight: 400;
 	letter-spacing: 0px;
 	position: relative;
@@ -90,6 +92,13 @@ body {
 	display: none;
 }
 
+
+.product-title{
+	font-family: 'Geometr415 Blk BT', sans-serif !important;
+}
+h4{
+	font-family: 'Geometr415 Blk BT', sans-serif !important;
+}
 
 /* a:hover {
 	color: 
@@ -686,6 +695,7 @@ h2.main_title {
 	line-height: 50px;
 	letter-spacing: 0px;
 	position: relative;
+	font-family: 'Geometr415 Blk BT', sans-serif !important;
 }
 
 h3 {
@@ -3925,6 +3935,12 @@ h2.main_title {
 .no {
 	display: none;
 	transition: all 0.5s ease-in-out !important;
+	-webkit-transition: all 2s ease;  
+  -moz-transition: all 2s ease;  
+  -o-transition: all 2s ease;  
+  -ms-transition: all 2s ease;  
+  transition: all 2s ease;
+
 }
 
 .toggil_form {
@@ -4720,8 +4736,122 @@ footer.footer-part .container .footer-top.ptb-100 .mb_-30 .row .col-12.col-lg-3.
 .position-r.mb-5 {
     margin-bottom: 9px !important;
 }
+
+
 @media(max-width:622px){
 	.image-respo{
 		width: 37%;
 	}
+}
+.sty {
+    width: 100%;
+    text-align: end;
+    position: relative;
+    top: -51px;
+    left: -194px;
+}
+
+
+.class-reeeee{
+	display: none;
+}
+.classssss-lo{
+	display: none !important;
+}
+.vkmmkj{
+	display: none !important;
+}
+.dgsfgdfg{
+	display: none  !important;
+}
+.ser{
+	display: none !important;
+}
+form.toggil_form{
+	height: 0px;
+}
+.jkj{
+	display: block !important;
+}
+
+.gsdfg{
+	display: none;
+}
+.col-lg-4.col-md-6.col-6.p-0.position-initial.icon-bar-center {
+    text-align: start;
+}
+@media(max-width:991px){
+	.classssss-lo{
+		display: block !important;
+	}
+	.col-lg-4.col-md-6.col-6.p-0.position-initial.icon-bar-center {
+		text-align: center;
+	}
+	.classssss-lo22{
+		display: none;
+	}
+	.vkmmkj{
+		display: block !important;
+		align-self: center;
+	}
+	.fgdfdghfh{
+		display: none !important;
+	}
+	.dgsfgdfg{
+		display: block !important;
+		align-self: center;
+	}
+
+	.sty {
+		width: 100%;
+		text-align: end;
+		position: unset ;
+		top: -51px;
+		left: -194px;
+	}
+	form.toggil_form{
+		height: auto;
+	}
+	.jkj{
+		display: none !important;
+	}
+	
+input[type="searc"] {
+    width: 100% !important;
+}
+
+.ser{
+	display: block !important;
+}
+
+}
+
+
+
+
+
+
+
+
+  .search_box {
+    display: block;
+}
+
+.sty {
+    width: 100%;
+    text-align: end;
+}
+
+input[type="searc"] {
+    width: 21%;
+}
+
+.header-right-link ul li.search-box>a span {
+    background-position: -13px -92px !important;
+}
+
+input[type="searc"] {
+    width: 21%;
+    border: 1px solid #f9e8ee;
+    padding: 2px 7px;
 }
