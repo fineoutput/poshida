@@ -773,6 +773,23 @@ div#google_translate_element{
     position: relative;
     left: -87px;
 }}
+
+
+@media (max-width: 320px){
+
+
+.header-right-link {
+    float: left;
+    position: relative;
+    left: 6px !important;
+}
+.vkmmkj {
+    display: block !important;
+    align-self: center;
+    position: relative;
+    left: -32px !important;
+}
+}
 </style>
 </head>
 

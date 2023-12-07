@@ -336,7 +336,7 @@ if (!empty($this->session->userdata('user_data'))) {
               </div>
             </div>
           </div>
-          <div class="col-lg-8 col-md-6 col-3 p-0 icon-bar fgdfdghfh" style="display: flex;
+          <div class="col-lg-8 col-md-3 col-3 p-0 icon-bar fgdfdghfh" style="display: flex;
 						align-items: center;">
             <div id="google_translate_element"></div>
             <div class="header-right-link">
