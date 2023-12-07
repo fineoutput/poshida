@@ -544,6 +544,10 @@ if (!empty($popup_data)) {
     let element = document.getElementById("toggle");
     element.classList.toggle("no");
   }
+  function hello2() {
+		let element = document.getElementById("toggle2");
+		element.classList.toggle("no");
+	}
 </script>
 <!-- scripts js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
