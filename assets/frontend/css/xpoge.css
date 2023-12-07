@@ -4305,11 +4305,7 @@ figure figcaption h2 {
 
 	}
 
-	.header-right-link ul {
-
-		display: inline-flex !important;
-
-	}
+	
 
 	.header-right-link ul li:nth-child(2) {
 
