@@ -4277,14 +4277,7 @@ figure figcaption h2 {
 	.mob {
 		display: none !important;
 	}
-	.sty {
-		width: 100%;
-		text-align: end;
-		position: relative;
-		top: 6px !important;
-		left: 0px !important;
-		padding: 10px;
-	}
+
 	.search_box {
 		display: block !important;
 	}
@@ -4312,7 +4305,11 @@ figure figcaption h2 {
 
 	}
 
-	
+	.header-right-link ul {
+
+		display: flex !important;
+
+	}
 
 	.header-right-link ul li:nth-child(2) {
 
@@ -4797,7 +4794,9 @@ form.toggil_form{
 		display: block !important;
 		align-self: center;
 	}
-	
+	.fgdfdghfh{
+		display: none !important;
+	}
 	.dgsfgdfg{
 		display: block !important;
 		align-self: center;
@@ -4855,46 +4854,4 @@ input[type="searc"] {
     width: 21%;
     border: 1px solid #f9e8ee;
     padding: 2px 7px;
-}
-
-
-
-@media (max-width: 991px){
-.vkmmkj {
-    display: block !important;
-    align-self: center;
-    position: relative;
-    left: -115px;
-}
-.dgsfgdfg {
-    /* display: block !important; */
-    align-self: center;
-    position: relative;
-    right: -107px;
-}
-
-}
-
-
-@media(max-width:762px){
-	button.btn.btn-resp.ser.sdfdfsdf1{
-		top: 95px !important;
-	}
-}
-@media(max-width:420px){
-	button.btn.btn-resp.ser.sdfdfsdf1 {
-		top: 103px !important;
-	}}
-@media(max-width:384px){
-	button.btn.btn-resp.ser.sdfdfsdf1 {
-		top: 99px !important;
-	}}
-@media(max-width:342px){
-	button.btn.btn-resp.ser.sdfdfsdf1 {
-		top: 88px !important;
-	}
-}
-
-ul#headerCount{
-	display: flex;
 }
