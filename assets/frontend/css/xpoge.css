@@ -4442,9 +4442,9 @@ figure figcaption h2 {
 
 	}
 
-	div#toggle form.toggil_form button.btn {
+	/* div#toggle form.toggil_form button.btn {
 		right: 29px !important;
-	}
+	} */
 
 	.owl-carousel .owl-nav button[class*="owl-"],
 	.owl-carousel .owl-nav button[class*="owl-"].disabled:hover {

@@ -943,7 +943,7 @@
 						align-items: center;">
             <div id="google_translate_element"></div>
             <div class="header-right-link">
-              <ul id="headerCount">
+              <ul id="headerCount1" class="d-flex">
                 <li class="search-box  search_box " onclick="hello()">
                   <a href="#"><span></span></a>
                 </li>
@@ -1038,7 +1038,7 @@
 
 
 
-        <div id="toggle" class="no " style="	-webkit-transition: all 2s ease;  
+        <div id="toggle" class="no mt-2" style="	-webkit-transition: all 2s ease;  
   -moz-transition: all 2s ease;  
   -o-transition: all 2s ease;  
   -ms-transition: all 2s ease;  
@@ -1047,7 +1047,8 @@
             <div class="form-group m-0 sty">
               <input type="searc" placeholder="Search Products... " required="" name="search">
             </div>
-            <button type="submit" class="btn btn-resp ser" style="position: absolute; right: 23px; padding: 3px 3px; top :66px;"> <i class="bi bi-search"></i></button>
+            <button type="submit" class="btn" style="position: absolute; right: 0px;
+    bottom: -13px;"> <i class="bi bi-search"></i></button>
           </form>
         </div>
 

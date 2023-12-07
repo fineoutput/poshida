@@ -337,7 +337,7 @@ if (!empty($this->session->userdata('user_data'))) {
                   <div class="cart-dropdown header-link-dropdown scc">
                     <ul class="cart-list link-dropdown-list sdfsZ">
                       <? if (!empty($headerMiniCart['cart_data'])) { ?>
-                        <ul class="cart_list"  style="display: inline-block;">
+                        <ul class="cart_list" style="display: inline-block;">
                           <? foreach ($headerMiniCart['cart_data'] as $miniCart) {
                           ?>
                             <li> <a href="javascript:void(0);" product_id="<?= base64_encode($miniCart['product_id']) ?>" type_id="<?= base64_encode($miniCart['type_id']) ?>" onclick="deleteCart(this)" class="close-cart"><i class="fa fa-times-circle"></i></a>
@@ -388,7 +388,7 @@ if (!empty($this->session->userdata('user_data'))) {
 						align-items: center;">
             <!-- <div id="google_translate_element"></div> -->
             <div class="header-right-link">
-              <ul id="headerCount">
+              <ul id="headerCount1">
                 <li class="search-box  search_box " onclick="hello()">
                   <a href="#"><span></span></a>
                 </li>
@@ -483,7 +483,7 @@ if (!empty($this->session->userdata('user_data'))) {
 
 
 
-      <div id="toggle" class="no " style="	-webkit-transition: all 2s ease;  
+      <div id="toggle" class="no mt-2" style="	-webkit-transition: all 2s ease;  
   -moz-transition: all 2s ease;  
   -o-transition: all 2s ease;  
   -ms-transition: all 2s ease;  
@@ -492,8 +492,9 @@ if (!empty($this->session->userdata('user_data'))) {
           <div class="form-group m-0 sty">
             <input type="searc" placeholder="Search Products... " required="" name="search">
           </div>
-          <button type="submit" class="btn  btn-resp ser" style="position: absolute;
-						right: 23px;padding: 3px 3px; top :66px;"> <i class="bi bi-search"></i></button>
+          <button type="submit" class="btn" style="position: absolute;
+						right: 0px;
+    bottom: -13px;"> <i class="bi bi-search"></i></button>
         </form>
       </div>
 

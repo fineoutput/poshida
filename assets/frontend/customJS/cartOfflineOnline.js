@@ -15,6 +15,7 @@ function addToCart(obj) {
     success: function(response) {
       if (response.status == true) {
         $("#headerCount").load(window.location.href + " #headerCount > *");   //cart count
+        $("#headerCount1").load(window.location.href + " #headerCount1 > *");   //cart count
         $("#footerCount").load(window.location.href + " #footerCount > *");   //cart count
         $(".refreshing").load(window.location.href + " .refreshing > *");
         // var element = document.getElementById("minicart");
@@ -54,6 +55,7 @@ function deleteCart(obj) {
       if (response.status == true) {
         notifySuccess(response.message)
         $("#headerCount").load(window.location.href + " #headerCount > *");   // cart count
+        $("#headerCount1").load(window.location.href + " #headerCount1 > *");   // cart count
         $("#footerCount").load(window.location.href + " #footerCount > *");   // cart count
         $(".refreshing").load(window.location.href + " .refreshing > *");
       } else if (response.status == false) {
