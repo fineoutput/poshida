@@ -4277,7 +4277,14 @@ figure figcaption h2 {
 	.mob {
 		display: none !important;
 	}
-
+	.sty {
+		width: 100%;
+		text-align: end;
+		position: relative;
+		top: 6px !important;
+		left: 0px !important;
+		padding: 10px;
+	}
 	.search_box {
 		display: block !important;
 	}
@@ -4305,11 +4312,7 @@ figure figcaption h2 {
 
 	}
 
-	.header-right-link ul {
-
-		display: flex !important;
-
-	}
+	
 
 	.header-right-link ul li:nth-child(2) {
 
@@ -4870,4 +4873,28 @@ input[type="searc"] {
     right: -107px;
 }
 
+}
+
+
+@media(max-width:762px){
+	button.btn.btn-resp.ser.sdfdfsdf1{
+		top: 95px !important;
+	}
+}
+@media(max-width:420px){
+	button.btn.btn-resp.ser.sdfdfsdf1 {
+		top: 103px !important;
+	}}
+@media(max-width:384px){
+	button.btn.btn-resp.ser.sdfdfsdf1 {
+		top: 99px !important;
+	}}
+@media(max-width:342px){
+	button.btn.btn-resp.ser.sdfdfsdf1 {
+		top: 88px !important;
+	}
+}
+
+ul#headerCount{
+	display: flex;
 }

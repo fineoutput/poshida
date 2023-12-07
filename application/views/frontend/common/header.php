@@ -71,7 +71,37 @@
     font-size: 9px!important;
 }
 
+.sty {
+    width: 100%;
+    text-align: end;
+    position: relative;
+    top: -51px;
+    left: -287px;
+}
+@media (max-width: 425px){
+button.btn.btn-resp.ser.sdfdfsdf1 {
+    top: 105px !important;
+}
+}
+@media (max-width: 362px){
+button.btn.btn-resp.ser.sdfdfsdf1 {
+    top: 92px !important;
+}
+}
+@media (max-width: 334px){
+button.btn.btn-resp.ser.sdfdfsdf1 {
+    top: 88px !important;
+}
+}
 
+@media (max-width: 392px){
+button.btn.btn-resp.ser.sdfdfsdf1 {
+    top: 99px !important;
+}}
+@media (max-width: 320px){
+button.btn.btn-resp.ser.sdfdfsdf1 {
+    top: 88px !important;
+}}
   .megamenu .sub-menu-level2 li.level3>a {
     display: inline-block;
     padding: 4px 0;
@@ -448,8 +478,8 @@ if (!empty($this->session->userdata('user_data'))) {
           <div class="form-group m-0 sty">
             <input type="searc" placeholder="Search Products... " required="" name="search">
           </div>
-          <button type="submit" class="btn  btn-resp ser" style="position: absolute;
-						right: 23px;padding: 3px 3px; top :66px;"> </button>
+          <button type="submit" class="btn  btn-resp ser sdfdfsdf1" style="position: absolute;
+						right: 23px;padding: 3px 3px; top :97px; "> <i class="bi bi-search"></i> </button>
         </form>
       </div>
 

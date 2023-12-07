@@ -66,6 +66,36 @@
     padding: 0px 8px !important;
     font-size: 9px!important;
 }
+@media(max-width:762px){
+	button.btn.btn-resp.ser.sdfdfsdf1{
+		top: 75px !important;
+	}
+}
+@media(max-width:420px){
+	button.btn.btn-resp.ser.sdfdfsdf1 {
+		top: 85px !important;
+	}}
+@media(max-width:384px){
+	button.btn.btn-resp.ser.sdfdfsdf1 {
+		top: 74px !important;
+	}}
+@media(max-width:342px){
+	button.btn.btn-resp.ser.sdfdfsdf1 {
+		top: 88px !important;
+	}
+
+
+  
+}
+@media(max-width:339px){
+	button.btn.btn-resp.ser.sdfdfsdf1 {
+		top: 68px !important;
+	}
+
+
+  
+}
+
 
     .megamenu .sub-menu-level2 li.level3>a {
     display: inline-block;
@@ -658,7 +688,7 @@ div#google_translate_element{
     display: block !important;
     align-self: center;
     position: relative;
-    left: -62px !important;
+    left: -50px !important;
 }
 
 }
@@ -729,7 +759,12 @@ div#google_translate_element{
     position: relative;
     left: -29px;
 }
-
+}
+@media (max-width: 352px){
+  .col-lg-8.col-md-3.col-3.p-0.icon-bar.fgdfdghfh {
+    position: relative;
+    left: 18px !important;
+}
 }
 @media (max-width: 338px){
   .header-right-link {
@@ -743,7 +778,6 @@ div#google_translate_element{
     position: relative;
     left: -29px;
 }
-
 }
 
 
@@ -755,11 +789,12 @@ div#google_translate_element{
     left: -113px;
 }}
 @media (max-width: 542px){
-.header-right-link {
+  .header-right-link {
     float: left;
     position: relative;
-    left: -15px !important;
-}}
+    left: -3px !important;
+}
+}
 @media (max-width: 426px){
 .header-right-link {
     float: left;
@@ -777,7 +812,6 @@ div#google_translate_element{
 
 @media (max-width: 320px){
 
-
 .header-right-link {
     float: left;
     position: relative;
@@ -787,7 +821,12 @@ div#google_translate_element{
     display: block !important;
     align-self: center;
     position: relative;
-    left: -32px !important;
+    left: -50px !important;
+}
+
+.col-lg-8.col-md-3.col-3.p-0.icon-bar.fgdfdghfh {
+    position: relative;
+    left: 6px !important;
 }
 }
 </style>
@@ -958,7 +997,8 @@ div#google_translate_element{
             <div class="form-group m-0 sty">
               <input type="searc" placeholder="Search Products... " required="" name="search">
             </div>
-            <button type="submit" class="btn btn-resp ser" style="position: absolute; right: 23px; padding: 3px 3px; top :66px;"> </button>
+            <button type="submit" class="btn  btn-resp ser sdfdfsdf1" style="position: absolute;
+						right: 23px;padding: 3px 3px; top :97px; "> <i class="bi bi-search"></i> </button>
           </form>
         </div>
 
