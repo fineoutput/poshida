@@ -892,7 +892,7 @@
                   <div class="cart-dropdown header-link-dropdown scc">
                     <ul class="cart-list link-dropdown-list sdfsZ">
                       <? if (!empty($headerMiniCart['cart_data'])) { ?>
-                        <ul class="cart_list">
+                        <ul class="cart_list"  style="display: inline-block;">
                           <? foreach ($headerMiniCart['cart_data'] as $miniCart) {
                           ?>
                             <li> <a href="javascript:void(0);" product_id="<?= base64_encode($miniCart['product_id']) ?>" type_id="<?= base64_encode($miniCart['type_id']) ?>" onclick="deleteCart(this)" class="close-cart"><i class="fa fa-times-circle"></i></a>
@@ -986,7 +986,7 @@
                   <div class="cart-dropdown header-link-dropdown scc">
                     <ul class="cart-list link-dropdown-list sdfsZ">
                       <? if (!empty($headerMiniCart['cart_data'])) { ?>
-                        <ul class="cart_list">
+                        <ul class="cart_list "  style="display: inline-block;">
                           <? foreach ($headerMiniCart['cart_data'] as $miniCart) {
                           ?>
                             <li> <a href="javascript:void(0);" product_id="<?= base64_encode($miniCart['product_id']) ?>" type_id="<?= base64_encode($miniCart['type_id']) ?>" onclick="deleteCart(this)" class="close-cart"><i class="fa fa-times-circle"></i></a>

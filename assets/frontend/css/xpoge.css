@@ -4307,7 +4307,7 @@ figure figcaption h2 {
 
 	.header-right-link ul {
 
-		display: flex !important;
+		display: inline-flex !important;
 
 	}
 

@@ -284,11 +284,11 @@ if (!empty($this->session->userdata('user_data'))) {
             <div id="google_translate_element"></div>
             <div class="header-right-link">
               <div class="newsletter-input-1 newsletter-input mob no" id="toggle2" style="position: absolute;
-    right: 200px;top:15px;-webkit-transition: all 2s ease;  
-  -moz-transition: all 2s ease;  
-  -o-transition: all 2s ease;  
-  -ms-transition: all 2s ease;  
-  transition: all 2s ease;">
+                      right: 200px;top:15px;-webkit-transition: all 2s ease;  
+                    -moz-transition: all 2s ease;  
+                    -o-transition: all 2s ease;  
+                    -ms-transition: all 2s ease;  
+                    transition: all 2s ease;">
                 <form action="<?= base_url() ?>find" method="GET" enctype="multipart/form-data">
                   <div class="form-group m-0">
                     <input type="text" style="width:100%" placeholder="Search Products... " name="search" required="">
@@ -337,7 +337,7 @@ if (!empty($this->session->userdata('user_data'))) {
                   <div class="cart-dropdown header-link-dropdown scc">
                     <ul class="cart-list link-dropdown-list sdfsZ">
                       <? if (!empty($headerMiniCart['cart_data'])) { ?>
-                        <ul class="cart_list">
+                        <ul class="cart_list"  style="display: inline-block;">
                           <? foreach ($headerMiniCart['cart_data'] as $miniCart) {
                           ?>
                             <li> <a href="javascript:void(0);" product_id="<?= base64_encode($miniCart['product_id']) ?>" type_id="<?= base64_encode($miniCart['type_id']) ?>" onclick="deleteCart(this)" class="close-cart"><i class="fa fa-times-circle"></i></a>
@@ -432,7 +432,7 @@ if (!empty($this->session->userdata('user_data'))) {
               <div class="cart-dropdown header-link-dropdown scc">
                 <ul class="cart-list link-dropdown-list sdfsZ">
                   <? if (!empty($headerMiniCart['cart_data'])) { ?>
-                    <ul class="cart_list">
+                    <ul class="cart_list" style="display: inline-block;">
                       <? foreach ($headerMiniCart['cart_data'] as $miniCart) { ?>
                         <li> <a href="javascript:void(0);" product_id="<?= base64_encode($miniCart['product_id']) ?>" type_id="<?= base64_encode($miniCart['type_id']) ?>" onclick="deleteCart(this)" class="close-cart"><i class="fa fa-times-circle"></i></a>
                           <figure> <a href="javascript:void(0);" class="pull-left"> <img alt=" " src="<?= $miniCart['image'] ?>"></a>
