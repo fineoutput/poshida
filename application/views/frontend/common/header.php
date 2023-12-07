@@ -72,37 +72,7 @@
     font-size: 9px !important;
   }
 
-.sty {
-    width: 100%;
-    text-align: end;
-    position: relative;
-    top: -51px;
-    left: -287px;
-}
-@media (max-width: 425px){
-button.btn.btn-resp.ser.sdfdfsdf1 {
-    top: 105px !important;
-}
-}
-@media (max-width: 362px){
-button.btn.btn-resp.ser.sdfdfsdf1 {
-    top: 92px !important;
-}
-}
-@media (max-width: 334px){
-button.btn.btn-resp.ser.sdfdfsdf1 {
-    top: 88px !important;
-}
-}
 
-@media (max-width: 392px){
-button.btn.btn-resp.ser.sdfdfsdf1 {
-    top: 99px !important;
-}}
-@media (max-width: 320px){
-button.btn.btn-resp.ser.sdfdfsdf1 {
-    top: 88px !important;
-}}
   .megamenu .sub-menu-level2 li.level3>a {
     display: inline-block;
     padding: 4px 0;
@@ -274,55 +244,6 @@ if (!empty($this->session->userdata('user_data'))) {
 }
 ?>
 
-<style>
-  @media (max-width: 578px){
-.vkmmkj {
-    display: block !important;
-    align-self: center;
-    position: relative;
-    left: -77px;
-}
-.dgsfgdfg {
-    /* display: block !important; */
-    align-self: center;
-    position: relative;
-    right: -77px;
-}
-
-}
-@media (max-width: 436px){
-.vkmmkj {
-    display: block !important;
-    align-self: center;
-    position: relative;
-    left: -50px;
-}
-.dgsfgdfg {
-    /* display: block !important; */
-    align-self: center;
-    position: relative;
-    right: -51px;
-}
-
-}
-@media (max-width: 338px){
-.vkmmkj {
-    display: block !important;
-    align-self: center;
-    position: relative;
-    left: -30px;
-}
-.dgsfgdfg {
-    /* display: block !important; */
-    align-self: center;
-    position: relative;
-    right: -30px;
-}
-
-
-}
-</style>
-
 <body>
   <!-- Start preloader -->
   <div id="preloader"></div>
@@ -358,7 +279,7 @@ if (!empty($this->session->userdata('user_data'))) {
               </div>
             </div>
           </div>
-          <div class="col-lg-8 col-md-3 col-3 p-0 icon-bar fgdfdghfh" style="display: flex;
+          <div class="col-lg-8 col-md-6 col-3 p-0 icon-bar fgdfdghfh" style="display: flex;
 						align-items: center;">
             <div id="google_translate_element"></div>
             <div class="header-right-link">
@@ -462,8 +383,99 @@ if (!empty($this->session->userdata('user_data'))) {
               </ul>
             </div>
           </div>
-           
-         
+
+          <div class="col-lg-4 col-md-3 col-3 p-0 icon-bar  dgsfgdfg" style="display: flex;
+						align-items: center;">
+            <!-- <div id="google_translate_element"></div> -->
+            <div class="header-right-link">
+              <ul id="headerCount">
+                <li class="search-box  search_box " onclick="hello()">
+                  <a href="#"><span></span></a>
+                </li>
+                <li class="account-icon heig show-icon">
+                  <a href="#"><span></span></a>
+                  <div class="header-link-dropdown account-link-dropdown hrlllll">
+                    <ul class="link-dropdown-list">
+                      <!-- <li> <span class="dropdown-title">Default welcome msg!</span> -->
+                      <ul class="hrb">
+                        <? if (empty($this->session->userdata('user_data'))) { ?>
+                          <li><a href="#" class="p-1" data-toggle="modal" data-target="#LoginModel">Log In </a></li>
+                          <li><a href="#" class="p-1" data-toggle="modal" data-target="#SignUpModel"> Register </a></li>
+                        <? } else { ?>
+                          <li><a href="<?= base_url() ?>my_profile" class="p-1">My Account </a></li>
+                          <li><a href="<?= base_url() ?>my_profile/order" class="p-1">My Orders </a></li>
+                          <li><a href="<?= base_url() ?>User/logout" class="p-1">Log Out </a></li>
+                        <? } ?>
+                      </ul>
+                </li>
+              </ul>
+            </div>
+            </li>
+            <?
+            $cartCount = 0;
+            $wishCount = 0;
+            if (!empty($this->session->userdata('user_data'))) {
+              $cartCount = $this->db->get_where('tbl_cart', array('user_id = ' => $this->session->userdata('user_id'), 'user_type' => $this->session->userdata('user_type')))->num_rows();
+            } else {
+              if (!empty($this->session->userdata('cart_data'))) {
+                $cartCount = count($this->session->userdata('cart_data'));
+              }
+            }
+            ?>
+
+            <li class="cart-icon heig show-icon ">
+              <? if (!empty($this->session->userdata('user_data'))) { ?>
+                <a href="#"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
+              <? } else { ?>
+                <a href="#"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
+              <? } ?>
+              <div class="cart-dropdown header-link-dropdown scc">
+                <ul class="cart-list link-dropdown-list sdfsZ">
+                  <? if (!empty($headerMiniCart['cart_data'])) { ?>
+                    <ul class="cart_list">
+                      <? foreach ($headerMiniCart['cart_data'] as $miniCart) { ?>
+                        <li> <a href="javascript:void(0);" product_id="<?= base64_encode($miniCart['product_id']) ?>" type_id="<?= base64_encode($miniCart['type_id']) ?>" onclick="deleteCart(this)" class="close-cart"><i class="fa fa-times-circle"></i></a>
+                          <figure> <a href="javascript:void(0);" class="pull-left"> <img alt=" " src="<?= $miniCart['image'] ?>"></a>
+                            <figcaption> <span><a href="#"><?= $miniCart['product_name'] ?></a></span>
+                              <p class="cart-price m-0">₹<?= $miniCart['price'] ?></p>
+                              <!-- <p class="m-0"> Color : Red</p>
+                              <p class="m-0">Size : XXL</p> -->
+                              <div class="product-qty">
+                                <label>Qty:</label>
+                                <div class="custom-qty">
+                                  <p class="m-0"><?= $miniCart['quantity'] ?></p>
+                                </div>
+                              </div>
+                            </figcaption>
+                          </figure>
+                        </li>
+                      <? } ?>
+                    </ul>
+                    <p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">₹<?= $headerMiniCart['sub_total'] ?></strong></span> </p>
+                    <div class="clearfix"></div>
+                    <div class="mt-20 d-flex justify-content-center"> <a href="<?= base_url() ?>my_bag" class="btn-color btn"> View Cart</a>
+                      <!-- <a href="checkout.html"
+										class="btn-color btn right-side">Checkout</a> -->
+                    </div>
+                  <? } else { ?>
+                    <img src="<?= base_url() ?>assets/frontend/img/cart_empty.jpg" alt="Empty Cart" class="img-fluid" style="width:70%">
+                  <? } ?>
+                </ul>
+              </div>
+            </li>
+            <? if (!empty($this->session->userdata('user_data'))) {
+              $wishCount = $this->db->get_where('tbl_wishlist', array('user_id = ' => $this->session->userdata('user_id'), 'user_type', $this->session->userdata('user_type')))->num_rows();
+            ?>
+              <li class="cart-icon  heig show-icon dx">
+                <a href="<?= base_url() ?>my_wishlist"> <span> <small class="cart-notification"><?= $wishCount; ?></small> </span> </a>
+              </li>
+            <? } else { ?>
+              <li class="cart-icon  heig show-icon dx">
+                <a href="javascript:void(0);"> <span> <small class="cart-notification"><?= $wishCount; ?></small> </span> </a>
+              </li>
+            <? } ?>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -480,8 +492,8 @@ if (!empty($this->session->userdata('user_data'))) {
           <div class="form-group m-0 sty">
             <input type="searc" placeholder="Search Products... " required="" name="search">
           </div>
-          <button type="submit" class="btn  btn-resp ser sdfdfsdf1" style="position: absolute;
-						right: 23px;padding: 3px 3px; top :97px; "> <i class="bi bi-search"></i> </button>
+          <button type="submit" class="btn  btn-resp ser" style="position: absolute;
+						right: 23px;padding: 3px 3px; top :66px;"> <i class="bi bi-search"></i></button>
         </form>
       </div>
 
