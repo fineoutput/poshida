@@ -114,8 +114,8 @@
 									<li><a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel">Login</a></li>
 									<li><a href="<?= base_url() ?>about_us">About Us</a></li>
 									<li><a href="<?= base_url() ?>career">Career</a></li>
-							
-									
+
+
 									<li class="level "><a href="<?= base_url() ?>blogs" class="nav-link">Blog</a></li>
 								</ul>
 							</div>
@@ -577,6 +577,11 @@ if (!empty($popup_data)) {
 <script>
 	function hello() {
 		let element = document.getElementById("toggle");
+		element.classList.toggle("no");
+	}
+
+	function hello2() {
+		let element = document.getElementById("toggle2");
 		element.classList.toggle("no");
 	}
 </script>

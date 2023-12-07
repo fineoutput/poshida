@@ -31,7 +31,7 @@
   <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/xpoge.css">
   <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/responsive.css">
   <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/animate.css">
-  
+
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -64,26 +64,28 @@
     height: 50px;
     font-size: 20px;
   }
+
   .nav>li {
     position: inherit;
     display: inline-block;
     padding: 0px 8px !important;
-    font-size: 9px!important;
-}
+    font-size: 9px !important;
+  }
 
 
   .megamenu .sub-menu-level2 li.level3>a {
     display: inline-block;
     padding: 4px 0;
     font-size: 13px;
-}
+  }
 
 
 
   i.bi.bi-chevron-down {
     color: black !important;
     font-size: 15px;
-}
+  }
+
   .product-details-btn ul {
     display: flex;
     align-items: center;
@@ -101,7 +103,8 @@
     color: #333;
     font-size: 14px;
     position: relative;
-}
+  }
+
   .owl-carousel .owl-nav button.owl-prev {
     left: 35px;
     transform: translate(-50%, -50%);
@@ -214,11 +217,11 @@
   }
 
 
-.nav>li {
+  .nav>li {
     position: inherit;
     display: inline-block;
     padding: 0px 8px !important;
-}
+  }
 
 
   div#google_translate_element {
@@ -230,7 +233,6 @@
       display: none;
     }
   }
-
 </style>
 <!-- //================ START BODY ============================= -->
 <? $headerMiniCart = [];
@@ -252,9 +254,7 @@ if (!empty($this->session->userdata('user_data'))) {
     <header id="header ">
       <div class="container position-r header-class  ">
         <div class="row m-0">
-
-
-        <div class="col-lg-4 col-md-6 col-6 p-0 position-initial icon-bar-center classssss-lo22">
+          <div class="col-lg-4 col-md-6 col-6 p-0 position-initial icon-bar-center classssss-lo22">
             <div class="right-side">
               <div class="navbar-header">
                 <a class="navbar-brand page-scroll" href="<?= base_url() ?>">
@@ -262,18 +262,10 @@ if (!empty($this->session->userdata('user_data'))) {
                 </a>
               </div>
             </div>
-        </div>
+          </div>
           <div class="col-lg-4 col-md-3 col-3 p-0  vkmmkj" style="display: flex;
 						align-items: center;">
             <div id="google_translate_element" class="hr"></div>
-            <div class="newsletter-input-1 newsletter-input mob  " style="width: 70%;">
-              <form action="<?= base_url() ?>find" method="GET" enctype="multipart/form-data">
-                <div class="form-group m-0">
-                  <input type="searc" placeholder="Search Products... " name="search" required="">
-                </div>
-                <button type="submit" class="btn  btn--1"> <i class="bi bi-search" style="color: #c68fa6;"></i></button>
-              </form>
-            </div>
 
             <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle d-block d-lg-none d-xl-none" type="button"><i class="fa fa-bars"></i>
             </button>
@@ -291,9 +283,22 @@ if (!empty($this->session->userdata('user_data'))) {
 						align-items: center;">
             <div id="google_translate_element"></div>
             <div class="header-right-link">
+              <div class="newsletter-input-1 newsletter-input mob no" id="toggle2" style="position: absolute;
+    right: 200px;top:15px;-webkit-transition: all 2s ease;  
+  -moz-transition: all 2s ease;  
+  -o-transition: all 2s ease;  
+  -ms-transition: all 2s ease;  
+  transition: all 2s ease;">
+                <form action="<?= base_url() ?>find" method="GET" enctype="multipart/form-data">
+                  <div class="form-group m-0">
+                    <input type="text" style="width:100%" placeholder="Search Products... " name="search" required="">
+                  </div>
+                  <button type="submit" class="btn  btn--1"> <i class="bi bi-search" style="color: #c68fa6;"></i></button>
+                </form>
+              </div>
               <ul id="headerCount">
-                
-                <li class="search-box  search_box " onclick="hello()">
+
+                <li class="search-box  search_box " onclick="hello2()">
                   <a href="#"><span></span></a>
                 </li>
                 <li class="account-icon heig show-icon">
@@ -322,9 +327,6 @@ if (!empty($this->session->userdata('user_data'))) {
                   }
                 }
                 ?>
-
-
-
 
                 <li class="cart-icon heig show-icon ">
                   <? if (!empty($this->session->userdata('user_data'))) { ?>
@@ -501,7 +503,7 @@ if (!empty($this->session->userdata('user_data'))) {
 
 
 
-      
+
       <div class="container position-r animate__animated animate__bounce">
         <div class="row m-0">
         </div>
