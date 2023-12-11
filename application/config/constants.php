@@ -94,9 +94,9 @@ define('SMSID','TIAOTP');
 define('SIGNUP_DLT','1207166444129174674');
 define('LOGIN_DLT','1207166444113966752');
 // ----ccavenue -------------
-define('MERCHANT_ID', '2298208');
-define('WORKING_KEY', '85B6635B4774DED2F398A2E939894DBA'); //live 
-define('ACCESS_CODE', 'AVVP48KD41AU85PVUA');//live
+define('MERCHANT_ID', '3084959');
+define('WORKING_KEY', '1EB7CC3390AE12F5B99EAACF157F1497'); //live 
+define('ACCESS_CODE', 'AVIP38KL96AQ97PIQA');//live
 //=============== Minimum redeem points =======
 define('REFERAL_POINTS',100);
 //=============== Minimum redeem points =======

@@ -10,7 +10,7 @@
   <!-- Css file include -->
   <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/style.css">
   <link rel="shortcut icon" href="<?= base_url() ?>assets/frontend/img/Poshida.jpg" type="image/x-icon" />
-  <title>Poshida Invoice</title>
+  <title>POSHIDA FASHIONS LLP Invoice</title>
 </head>
 
 <body style="padding-top:75px;">
@@ -26,7 +26,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6"><span class="font-weight-bold ">Sold By</span><br>
-          <span class="seller_details">Poshida <br>
+          <span class="seller_details">POSHIDA FASHIONS LLP <br>
           Plot No. 81, Nandpuri-B, Near,
           <br>
             Mahima Panache , Jagatpura,
@@ -113,7 +113,7 @@
         <div class="col-sm-6">
           <br />
           <br />
-          <span class="font-weight-bold">GST Registration Number : </span> <br> 08AIFPR8500F2Z8
+          <span class="font-weight-bold">GST Registration Number : </span> <br> 08ABEFP6182H1ZY
         </div>
         <div class="col-sm-6 shipping_content"><span class="font-weight-bold ">Shipping Address:</span> <br>
           Name:<?php
