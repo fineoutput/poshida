@@ -126,11 +126,11 @@ class Home extends CI_Controller
                 $data['title'] = 'Buy Stylish Kurti For Women | Kurtis Online Shopping in India | Poshida';
                 $data['dsc'] = 'Designer Kurti: Buy Stylish Kurtis For Women. Explore the latest kurti designs & Kurtis online shopping At Poshida. Upgrade your wardrobe with our fashionable collection';
             } else if ($url == 'A--LINE-KURTA') {
-                $data['title'] = 'Buy Festival Kurta For Women | A Line Kurti | Poshida';
-                $data['dsc'] = "Get ready for the festivities with Poshida's A-line kurtis – the perfect festival kurtas for women. Elevate your style with Poshida. Shop now!";
+                $data['title'] = 'Buy Festival Kurta For Women | A Line Kurta | Poshida';
+                $data['dsc'] = "Get ready for the festivities with Poshida A-line kurta – the perfect festival kurtas for women. Elevate your style with Poshida. Shop now!";
             } else if ($url == 'EMBROIDERY-KURTA') {
-                $data['title'] = 'Buy Cotton Embroidery Kurta For Women Online in India - Poshida';
-                $data['dsc'] = "Elevate your style with Poshida's Cotton Embroidery Kurtas for women online in India. Discover the perfect blend of comfort and elegance. Shop now for a fashionable twist on traditional attire";
+                $data['title'] = 'Buy Embroidery Kurta for Women Online | Designer Kurta | Poshida';
+                $data['dsc'] = "Elevate your style with Poshida Embroidery Kurta for women online in India. Discover the perfect blend of comfort and elegance. Shop now for a fashionable twist on traditional attire";
             } else if ($url == 'FLOOR-LENGTH-GOWN') {
                 $data['title'] = 'Buy Floor Length Gown For Women Online in India - Poshida';
                 $data['dsc'] = "Explore our website today and witness the perfect blend of fashion and charm! Visit Poshida and buy floor length gowns for women online in India - because you deserve to look and feel your absolute best!";
@@ -140,6 +140,9 @@ class Home extends CI_Controller
             } else if ($url == 'ALIYA-CUT-KURTI') {
                 $data['title'] = 'Designer Kurtis For Women Online | Aliya Cut Kurtis | Poshida';
                 $data['dsc'] = "Elevate your style with the exclusive Aliya Cut Kurtis collection for women by Poshida. Discover elegant and contemporary designs that blend tradition and modernity seamlessly. Shop online and embrace sophistication with Poshida's Aliya Cut Kurtis";
+            } else if ($url == 'KURTA-PANT-DUPATTA-SETS') {
+                $data['title'] = 'Buy Latest Kurti Designs For Women & Kurti Sets Online';
+                $data['dsc'] = "Shop high-quality and stylish designer kurtis online. Our latest kurti designs for women will empower you to embrace your own unique style with our wide selection of the latest kurti designs. Don't let this exciting opportunity pass you by!";
             }
             $this->load->view('frontend/common/header2', $data);
             $this->load->view('frontend/all_products');
@@ -165,7 +168,9 @@ class Home extends CI_Controller
     // ============================================ career =================================================
     public function career()
     {
-        $this->load->view('frontend/common/header2');
+        $data['title'] = 'Career - Poshida';
+        $data['dsc'] = 'Explore exciting career opportunities at Poshida, where innovation meets passion. Join our dynamic team and be part of a workplace that fosters growth, creativity, and collaboration';
+        $this->load->view('frontend/common/header2', $data);
         $this->load->view('frontend/career');
         $this->load->view('frontend/common/footer2');
     }
@@ -473,6 +478,8 @@ class Home extends CI_Controller
     public function reseller_register()
     {
         if (empty($this->session->userdata('user_data'))) {
+            $data['title'] = 'Register As Reseller - Poshida';
+            $data['dsc'] = 'Unlock a world of possibilities by becoming a Poshida Reseller. Join our network and enjoy exclusive benefits, lucrative opportunities, and the support to thrive in the fashion industry. Register today and embark on a rewarding journey as a valued partner in style and success with Poshida';
             $data['state_data'] = $this->db->from('all_states')->get();
             $this->load->view('frontend/common/header2', $data);
             $this->load->view('frontend/register');
@@ -585,19 +592,25 @@ class Home extends CI_Controller
     }
     public function privacy_policy()
     {
-        $this->load->view('frontend/common/header2');
+        $data['title'] = 'Privacy Policy - Poshida';
+        $data['dsc'] = "We take privacy and security concerns seriously. At the same time, we would like to give you the best possible experience when visiting our websites. Please read the following policy to understand how your personal information will be treated as you make full use of our Site. If you visit us at https://poshida.co.in (Website) you accept these terms and conditions";
+        $this->load->view('frontend/common/header2', $data);
         $this->load->view('frontend/privacy_policy');
         $this->load->view('frontend/common/footer2');
     }
     public function return_and_replace()
     {
-        $this->load->view('frontend/common/header2');
+        $data['title'] = 'Poshida - Replacement or Exchange Policy';
+        $data['dsc'] = "Products can be replaced within 7 days from the date of delivery. Payment Refunds are applicable only in case of damaged products. In all other cases, replacement or e-voucher (3 months validity) is available";
+        $this->load->view('frontend/common/header2', $data);
         $this->load->view('frontend/return_and_replace');
         $this->load->view('frontend/common/footer2');
     }
     public function shipping_and_delivery()
     {
-        $this->load->view('frontend/common/header2');
+        $data['title'] = 'Shipping & Delivery Policy - Poshida';
+        $data['dsc'] = "We offer free shipping on all our products throughout India! Free bags are sent on all orders above Rs. 2499.Usually, orders are dispatched within 2-4 working days of the customer after placing the order";
+        $this->load->view('frontend/common/header2', $data);
         $this->load->view('frontend/shipping_and_delivery');
         $this->load->view('frontend/common/footer2');
     }
@@ -717,12 +730,16 @@ class Home extends CI_Controller
     public function terms_and_conditions()
     {
 
-        $this->load->view('frontend/common/header2',);
+        $data['title'] = 'Terms & Conditions - Poshida';
+        $data['dsc'] = 'Please read the following terms and conditions very carefully as your use of the service is subject to your acceptance of and compliance with the following terms and conditions ("Terms"). By subscribing to or using any of our services you agree that you have read, understood, and are bound by the Terms, regardless of how you subscribe to or use the services. If you do not want to be bound by the Terms, you must not subscribe to or use our services';
+        $this->load->view('frontend/common/header2', $data);
         $this->load->view('frontend/terms_and_conditions');
         $this->load->view('frontend/common/footer2');
     }
     public function terms_and_conditions2()
     {
+        $data['title'] = 'Terms & Conditions - Poshida';
+        $data['dsc'] = 'Please read the following terms and conditions very carefully as your use of the service is subject to your acceptance of and compliance with the following terms and conditions ("Terms"). By subscribing to or using any of our services you agree that you have read, understood, and are bound by the Terms, regardless of how you subscribe to or use the services. If you do not want to be bound by the Terms, you must not subscribe to or use our services';
         $data['hide'] = 1;
         $this->load->view('frontend/common/header2', $data);
         $this->load->view('frontend/terms_and_conditions');
