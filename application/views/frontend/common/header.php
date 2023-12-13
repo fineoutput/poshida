@@ -643,9 +643,9 @@ if (!empty($this->session->userdata('user_data'))) {
                       <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
                     </a>
                   </div>
-                  <li class="level">
+                  <!-- <li class="level">
                     <a href="<?= base_url() ?>" class="nav-link">Home</a>
-                  </li>
+                  </li> -->
                   <!-- <li class="level">
                 <a href="<?= base_url() ?>about_us">About Us</a>
                 </li> -->
@@ -709,8 +709,8 @@ if (!empty($this->session->userdata('user_data'))) {
                   <?php $i++;
                   } ?>
 
-                  <li><a href="<?= base_url() ?>reseller_register">Partner With Us</a></li>
-                  <li class="level "><a href="<?= base_url() ?>contact" class="nav-link">Contact</a></li>
+                  <!-- <li><a href="<?= base_url() ?>reseller_register">Partner With Us</a></li>
+                  <li class="level "><a href="<?= base_url() ?>contact" class="nav-link">Contact</a></li> -->
 
                 </ul>
               </div>

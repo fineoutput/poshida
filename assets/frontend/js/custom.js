@@ -122,7 +122,7 @@ $(function () {
       return false;
     });
     /* ---- For Navbar JS End ---- */
-
+    
     $('li.search-box').on('click', function () {
       $('.sidebar-search-wrap').addClass('open').siblings().removeClass('open');
       return false;
