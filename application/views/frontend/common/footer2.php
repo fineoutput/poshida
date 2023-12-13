@@ -180,7 +180,7 @@
         </div>
       </div>
    
-			<div class="mt-50">
+			<div class="mt-50" style="text-align: justify;">
 				<p style="color: #c68fa6 !important; font-size: 16px;"><b> Popular Pages </b></p>
 				<p>
 				<a href="<?= base_url() ?>" class="">Home</a> 
@@ -208,7 +208,7 @@
 				</p>
 
 			</div>
-			<div class="mt-30">
+			<div class="mt-30" style="text-align: justify;">
 				<p style="color: #c68fa6 !important; font-size: 16px;"><b> Popular Searches  </b></p>
 				<p>
 				<a href="<?= base_url() ?>" class="">Designer Kurta for Women</a> 
@@ -237,7 +237,7 @@
 				</p>
 
 			</div>
-			<div class="mt-10">
+			<div class="mt-10" style="text-align: justify;">
 				<p style="color: #c68fa6 !important; font-size: 16px;"><b> Popular Products  </b></p>
 				<p>
 				<a href="<?= base_url() ?>products/A--LINE-KURTA/1" class=""><b> A Line Kurta </b></a> 
@@ -250,7 +250,7 @@
 				</p>
 
 			</div>
-			<div class="mt-10">
+			<div class="mt-10" style="text-align: justify;">
 				
 				<a href="<?= base_url() ?>products/ALIYA-CUT-KURTI/1" class=""><b> Aliya Cut Kurtis </b></a> 
 				 <br>
@@ -264,7 +264,7 @@
 				</p>
 
 			</div>
-			<div class="mt-10">
+			<div class="mt-10" style="text-align: justify;">
 				
 				<a href="<?= base_url() ?>products/EMBROIDERY-KURTA/1" class=""><b>Embroidery Kurta</b></a> 
 				 <br>
@@ -275,10 +275,10 @@
 				</p>
 
 			</div>
-			<div class="mt-20">
+			<div class="mt-20" style="text-align: justify;">
 				<p style="color: #c68fa6 !important; font-size: 20px;"><b> Best Online Kurti Shopping Site in India  </b></p>
 				<p style="display: flex;
-    text-align: justify;">
+              text-align: justify;">
 				Welcome to     Poshida Fashions LLP – Your Premier Destination for the Best Online Kurti 
 				Shopping Experience in India! At Poshida Fashions, we blend tradition and style seamlessly, 
 				offering a diverse collection of kurtis designed for the modern woman who appreciates 
@@ -286,10 +286,10 @@
 				</p>
 
 			</div>
-			<div class="mt-20">
+			<div class="mt-20" style="text-align: justify;">
 				<p style="color: #c68fa6 !important; font-size: 16px;"><b>Embrace Tradition with Poshida Fashions LLP Kurtis:</b></p>
         <p style="display: flex;
-    text-align: justify;">
+             text-align: justify;">
 				Immerse yourself in the rich tapestry of Indian tradition with Poshida Fashions LLP. Our 
 				curated kurtis collection pays homage to India's cultural heritage, featuring exquisite designs 
 				that reflect the timeless beauty of traditional craftsmanship. Embrace the essence of tradition 
@@ -297,11 +297,11 @@
 				</p>
 
 			</div>
-			<div class="mt-20">
+			<div class="mt-20" style="text-align: justify;">
 				<p style="color: #c68fa6 !important; font-size: 16px;"><b>
 				Elevate Your Wardrobe with Exclusive Designs:</b></p>
         <p style="display: flex;
-    text-align: justify;">
+           text-align: justify;">
 				Discover a world of exclusive designs that elevate your wardrobe to new heights. At Poshida 
 				Fashions LLP, we take pride in offering kurtis that are not just pieces of clothing but 
 				expressions of individuality. From Jaipur kurtis to   stylish kurtis for women  , each design is 
@@ -309,11 +309,11 @@
 				</p>
 
 			</div>
-			<div class="mt-20">
+			<div class="mt-20" style="text-align: justify;">
 				<p style="color: #c68fa6 !important; font-size: 16px;"><b>
 				Seamless Shopping at Your Fingertips:</b></p>
         <p style="display: flex;
-    text-align: justify;">
+                text-align: justify;">
 				xperience the convenience of seamless shopping with Poshida Fashions LLP. Our user-friendly website ensures that exploring our extensive collection, featuring    kurti designs for 
 				women , cotton kurtis for daily wear, and the latest kurti designs, is a breeze. With just a few 
 				clicks, you can have your favourite kurtis delivered to your doorstep, making fashion 
@@ -321,11 +321,11 @@
 				</p>
 
 			</div>
-			<div class="mt-20">
+			<div class="mt-20" style="text-align: justify;">
 				<p style="color: #c68fa6 !important; font-size: 16px;"><b>
 			    Quality Assurance for Your Style:</b></p>
           <p style="display: flex;
-    text-align: justify;">
+             text-align: justify;">
 				Poshida Fashions LLP is synonymous with quality assurance. Our kurtis are crafted with 
 				precision and attention to detail because your style deserves the best. From the selection of 
 				fabrics to the final stitch, our commitment to quality ensures that each piece you choose is a 
@@ -333,11 +333,11 @@
 				</p>
 
 			</div>
-			<div class="mt-20">
+			<div class="mt-20" style="text-align: justify;">
 				<p style="color: #c68fa6 !important; font-size: 16px;"><b>
 				Support Creativity and Get Rewarded:</b></p>
         <p style="display: flex;
-    text-align: justify;">
+            text-align: justify;">
 				At Poshida Fashions LLP, we believe in supporting creativity. When you choose our kurtis, 
 				you not only enhance your style but also contribute to the promotion of traditional 
 				craftsmanship. As a token of appreciation, we offer rewards that reflect our gratitude for 
