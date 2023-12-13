@@ -15,14 +15,17 @@
     margin: 0;
     float: right;
   }
-.itme-responsiv{
-  width: 70%;
-}
-@media (max-width:971px) {
-  .itme-responsiv{
-  width: 100%;
-}
-}
+  .owl-dots{
+    display: none;
+  }
+    .itme-responsiv{
+      width: 70%;
+    }
+    @media (max-width:971px) {
+      .itme-responsiv{
+      width: 100%;
+    }
+    }
   .showContent {
     height: auto;
   }
@@ -250,18 +253,15 @@
     background: white;
     padding: 7px 0px;
   }
+  @media (max-width: 980px){
+.contant {
+    margin-top: 111px !important;
+}}
 
-  @media (max-width: 980px) {
-    .contant {
-      margin-top: 111px !important;
-    }
-  }
-
-  @media (max-width: 747px) {
-    .contant {
-      margin-top: 97px !important;
-    }
-  }
+@media (max-width: 747px){
+.contant {
+    margin-top: 97px !important;
+}}
 </style>
 
 
@@ -621,22 +621,22 @@
                   </ul>
                 </div>
               <? } ?>
-              <div class="carousel_slider owl-carousel owl-theme" data-margin="20" data-responsive='{"0":{"items": "1"}, "481":{"items": "1"}, "768":{"items": "1"}, "992":{"items": "1"}, "1199":{"items": "1"}}'  data-loop="true">
+              <div class="carousel_slider owl-carousel owl-theme" data-margin="20" data-responsive='{"0":{"items": "1"}, "481":{"items": "1"}, "768":{"items": "1"}, "992":{"items": "1"}, "1199":{"items": "1"}}' data-autoplay="true" data-loop="true">
                 <? $promocode_data = $this->db->get_where('tbl_promocode', array('is_active = ' => 1));
                 foreach ($promocode_data->result() as $promocode) { ?>
-                  <div class="item itme-responsiv">
-                    <div class="product table-bordered">
+                  <div class="item table-bordered itme-responsiv" >
+                    <div class="product">
                       <div class="product_img pt-2 pb-2">
-                        <div class="ml-3 d-flex"> <img src="<?= base_url() ?>assets\frontend\img\discount.png" alt="" style="important;height: auto!important;width:auto"><span class="mt-1 ml-2"> Offers For You </span> </div>
+                        <div class="ml-3 d-flex"> <img src="<?= base_url() ?>assets\frontend\img\discount.png" alt="" style="max-width: 100%!important;height: auto!important;width:auto"><span class="mt-1 ml-2"> Offers For You </span> </div>
                         <div class="row">
                           <div class="col-md-12 ml-3">
                             <p class="mb-0">COUPON: <b><?= $promocode->promocode; ?></b> </p>
                           </div>
                           <div class="col-md-12 ml-3" style=""><span>Congratulation! You are eligible for <? if ($promocode->type == 1) {
-                                                                                                            echo $promocode->percentage_amount . "%";
-                                                                                                          } else {
-                                                                                                            echo $promocode->percentage_amount;
-                                                                                                          } ?> extra discount</span></div>
+                                                                                                                              echo $promocode->percentage_amount . "%";
+                                                                                                                            } else {
+                                                                                                                              echo $symbol . round($promocode->percentage_amount * $multiplier, 2);
+                                                                                                                            } ?> extra discount</span></div>
                         </div>
                       </div>
                     </div>
