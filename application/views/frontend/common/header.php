@@ -624,6 +624,7 @@ if (!empty($this->session->userdata('user_data'))) {
       <div class="container position-r animate__animated animate__bounce class-mawwwl">
         <div class="row m-0">
         </div>
+        <!-- old code remove class centar-list remove -->
         <div class="col-lg-12 col-md-8 col-8 p-0 position-initial centar-list" style="justify-content: center;
 					display: flex;">
             <div class="right-side">

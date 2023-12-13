@@ -243,6 +243,15 @@
     background: white;
     padding: 7px 0px;
   }
+  @media (max-width: 980px){
+.contant {
+    margin-top: 111px !important;
+}}
+
+@media (max-width: 747px){
+.contant {
+    margin-top: 97px !important;
+}}
 </style>
 
 

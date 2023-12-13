@@ -4029,9 +4029,11 @@ a.btn.btn-color.small.btn-filter.me-3.mb-20 {
 }
 
 .contant {
-	margin-top: 170px;
+    margin-top: 101px ;
 }
-
+.bhbh {
+    margin-top: 0px !important;
+}
 .product-irme-m {
 	padding-top: 60px;
 }
@@ -4851,3 +4853,18 @@ input[type="searc"] {
     border: 1px solid #f9e8ee;
     padding: 2px 7px;
 }
+
+@media(max-width:1153px){
+	.contant {
+		margin-top: 88px !important;
+	}
+}
+@media (max-width: 989px){
+.contant {
+    margin-top: 112px !important;
+}}
+
+@media (max-width: 980px){
+.contant {
+    margin-top: 113px !important;
+}}
