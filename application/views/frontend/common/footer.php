@@ -265,9 +265,9 @@
 			</div>
 			<div class="mt-20" style="text-align: justify;">
 				<p style="color: #c68fa6 !important; font-size: 20px;"><b> Best Online Kurti Shopping Site in India  </b></p>
-				<p style="display: flex;
+				<p style="
 					text-align: justify;">
-								Welcome to     Poshida Fashions LLP – Your Premier Destination for the Best Online Kurti 
+								Welcome to<a href="<?= base_url() ?>" class="" style="color: #c68fa6 !important; " > Poshida Fashions LLP </a>  – Your Premier Destination for the Best Online Kurti 
 								Shopping Experience in India! At Poshida Fashions, we blend tradition and style seamlessly, 
 								offering a diverse collection of kurtis designed for the modern woman who appreciates 
 								elegance and comfort.
@@ -288,11 +288,11 @@
 			<div class="mt-20" style="text-align: justify;">
 				<p style="color: #c68fa6 !important; font-size: 16px;"><b>
 				Elevate Your Wardrobe with Exclusive Designs:</b></p>
-				<p style="display: flex;
+				<p style="
 						text-align: justify;">
 									Discover a world of exclusive designs that elevate your wardrobe to new heights. At Poshida 
 									Fashions LLP, we take pride in offering kurtis that are not just pieces of clothing but 
-									expressions of individuality. From Jaipur kurtis to   stylish kurtis for women  , each design is 
+									expressions of individuality. From Jaipur kurtis to  <a href="<?= base_url() ?>" class="" style="color: #c68fa6 !important; " > Stylish kurtis for women</a>     , each design is 
 									crafted to make you stand out, ensuring your wardrobe is a testament to your unique style.
 									</p>
 
@@ -300,10 +300,10 @@
 			<div class="mt-20" style="text-align: justify;">
 				<p style="color: #c68fa6 !important; font-size: 16px;"><b>
 				Seamless Shopping at Your Fingertips:</b></p>
-								<p style="display: flex;
+								<p style="
 					text-align: justify;">
-				xperience the convenience of seamless shopping with Poshida Fashions LLP. Our user-friendly website ensures that exploring our extensive collection, featuring   kurti designs for 
-				women , cotton kurtis for daily wear, and the latest kurti designs, is a breeze. With just a few 
+				Experience the convenience of seamless shopping with Poshida Fashions LLP. Our user-friendly website ensures that exploring our extensive collection, featuring  <a href="<?= base_url() ?>" class="" style="color: #c68fa6 !important; " > kurti designs for 
+				women </a>    , cotton kurtis for daily wear, and the latest kurti designs, is a breeze. With just a few 
 				clicks, you can have your favourite kurtis delivered to your doorstep, making fashion 
 				effortlessly accessible.
 				</p>
@@ -324,13 +324,13 @@
 			<div class="mt-20" style="text-align: justify;">
 				<p style="color: #c68fa6 !important; font-size: 16px;"><b>
 				Support Creativity and Get Rewarded:</b></p>
-									<p style="display: flex;
+									<p style="
 						text-align: justify;">
 				At Poshida Fashions LLP, we believe in supporting creativity. When you choose our kurtis, 
 				you not only enhance your style but also contribute to the promotion of traditional 
 				craftsmanship. As a token of appreciation, we offer rewards that reflect our gratitude for 
 				supporting the creative spirit behind each meticulously designed kurti in our collection.
-				Poshida Fashions LLP invites you to explore the world of kurtis online, where tradition 
+				Poshida Fashions LLP invites you to explore the world of <a href="<?= base_url() ?>" class="" style="color: #c68fa6 !important; " > kurtis online </a>  , where tradition 
 				meets contemporary style, and every piece tells a story. Elevate your wardrobe with our 
 				exclusive designs, experience the ease of seamless shopping, and support creativity with 
 				every purchase. Embrace tradition and elevate your style – choose Poshida Fashions LLP for 

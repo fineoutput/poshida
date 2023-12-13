@@ -4029,7 +4029,7 @@ a.btn.btn-color.small.btn-filter.me-3.mb-20 {
 }
 
 .contant {
-    margin-top: 101px ;
+    margin-top: 101px !important ;
 }
 .bhbh {
     margin-top: 0px !important;
@@ -4067,10 +4067,6 @@ a.btn.btn-color.small.btn-filter.me-3.mb-20 {
 	-o-transition: all 0.2s ease 0s;
 	transition: all 0.2s ease 0s;
 }
-
-
-
-
 
 /* KUNAL SONI new css */
 
