@@ -608,7 +608,7 @@
                   <div class="item table-bordered" style="box-shadow: 4px 0px 3px rgb(175, 174, 174);">
                     <div class="product">
                       <div class="product_img pt-2 pb-2">
-                        <div class="ml-3 d-flex"> <img src="<?= base_url() ?>assets\frontend\img\discount.png" alt="" style="max-width: 100%!important;height: auto!important;width:auto"><span class="mt-1 ml-2"> Offers for you </span> </div>
+                        <div class="ml-3 d-flex"> <img src="<?= base_url() ?>assets\frontend\img\discount.png" alt="" style="max-width: 100%!important;height: auto!important;width:auto"><span class="mt-1 ml-2"> Offers For You </span> </div>
                         <div class="row">
                           <div class="col-md-12 ml-3">
                             <p class="mb-0">COUPON: <b><?= $promocode->promocode; ?></b> </p>
