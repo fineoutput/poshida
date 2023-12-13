@@ -591,7 +591,7 @@
                     <p class="text-justify "><?= $product_data[0]->short_description ?></p>
                   </div>
                   <div class="show-more">
-                    <a href="javascript:void(0);" style="color:#f36727">Show more</a>
+                    <a href="javascript:void(0);" style="color:#c68fa6">Show more</a>
                   </div>
 
 
