@@ -57,6 +57,18 @@ $(function () {
       }
       return false;
     });
+    $('#menu2 span.opener').on("click", function () {
+      if ($(this).hasClass("plus")) {
+        $(this).parent().find('.mobile-sub-menu2').slideDown();
+        $(this).removeClass('plus');
+        $(this).addClass('minus');
+      } else {
+        $(this).parent().find('.mobile-sub-menu2').slideUp();
+        $(this).removeClass('minus');
+        $(this).addClass('plus');
+      }
+      return false;
+    });
     /* ---- For Mobile Menu Dropdown JS End ---- */
     /* ---- For Footer JS Start ---- */
     $('.footer-static-block .head-three, .footer-static-block span.opener').on("click", function () {
@@ -82,6 +94,21 @@ $(function () {
     /* ---- For Navbar JS Start ---- */
     $('.navbar-toggle').on("click", function () {
       var menu_id = $('#menu');
+      var nav_icon = $('.navbar-toggle i');
+      if (menu_id.hasClass('menu-open')) {
+        menu_id.removeClass('menu-open');
+        nav_icon.removeClass('fa-close');
+        nav_icon.addClass('fa-bars');
+      } else {
+        menu_id.addClass('menu-open');
+        nav_icon.addClass('fa-close');
+        nav_icon.removeClass('fa-bars');
+      }
+      return false;
+    });
+
+    $('.navbar-toggle').on("click", function () {
+      var menu_id = $('#menu2');
       var nav_icon = $('.navbar-toggle i');
       if (menu_id.hasClass('menu-open')) {
         menu_id.removeClass('menu-open');
@@ -120,6 +147,8 @@ $(function () {
 
   }
 
+
+  
   /* owl slider */
   if ($(".brand-slider").length > 0) {
     $(".brand-slider").owlCarousel({

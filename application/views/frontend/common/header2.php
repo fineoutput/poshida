@@ -869,7 +869,7 @@
             ">
             <div class="right-side">
               <div class="overlay"></div>
-              <div id="menu" class="navbar-collapse collapse">
+              <div id="menu2" class="navbar-collapse collapse">
 
                 <ul class="nav navbar-nav">
                   <div class="navbar-header dfghddgd">
