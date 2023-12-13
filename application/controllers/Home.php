@@ -59,6 +59,7 @@ class Home extends CI_Controller
         $data['testimonials_data'] = $this->db->get();
         $this->db->select('*');
         $this->db->from('tbl_blog');
+        $this->db->order_by('id', 'desc');
         $this->db->where('is_active', 1);
         $this->db->limit(4);
         $data['blog_data'] = $this->db->get();

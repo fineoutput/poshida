@@ -602,6 +602,28 @@
                   </ul>
                 </div>
               <? } ?>
+              <div class="carousel_slider owl-carousel owl-theme" data-margin="20" data-responsive='{"0":{"items": "1"}, "481":{"items": "1"}, "768":{"items": "1"}, "992":{"items": "1"}, "1199":{"items": "1"}}' data-autoplay="true" data-loop="true">
+                <? $promocode_data = $this->db->get_where('tbl_promocode', array('is_active = ' => 1));
+                foreach ($promocode_data->result() as $promocode) { ?>
+                  <div class="item table-bordered" style="box-shadow: 4px 0px 3px rgb(175, 174, 174);">
+                    <div class="product">
+                      <div class="product_img pt-2 pb-2">
+                        <div class="ml-3 d-flex"> <img src="<?= base_url() ?>assets\frontend\img\discount.png" alt="" style="max-width: 100%!important;height: auto!important;width:auto"><span class="mt-1 ml-2"> Offers for you </span> </div>
+                        <div class="row">
+                          <div class="col-md-12 ml-3">
+                            <p class="mb-0">COUPON: <b><?= $promocode->promocode; ?></b> </p>
+                          </div>
+                          <div class="col-md-12 ml-3" style=""><span>Congratulation! You are eligible for <? if ($promocode->type == 1) {
+                                                                                                                              echo $promocode->percentage_amount . "%";
+                                                                                                                            } else {
+                                                                                                                              echo $symbol . round($promocode->percentage_amount * $multiplier, 2);
+                                                                                                                            } ?> extra discount</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <? } ?>
+              </div>
             </div>
           </div>
         </div>
@@ -887,12 +909,12 @@
   <? } ?>
   <!-- ========= END BUY WITH US ============= -->
   <div class="container banner">
-  <div class="row">
-    <div class="col-12 mb-3 mt-2 d-flex justify-content-center">
-      <img src="<?= base_url() ?>assets/frontend/img/add.gif" alt="" class="img-fluid">
+    <div class="row">
+      <div class="col-12 mb-3 mt-2 d-flex justify-content-center">
+        <img src="<?= base_url() ?>assets/frontend/img/add.gif" alt="" class="img-fluid">
+      </div>
     </div>
   </div>
-</div>
 
   <!-- ========= START RELATED PRODUCTS ============= -->
   <? if (!empty($related_data->row())) { ?>
