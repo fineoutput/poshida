@@ -603,11 +603,7 @@ if (!empty($this->session->userdata('user_data'))) {
 
 
 
-      <div id="toggle" class="no mt-2" style="	-webkit-transition: all 2s ease;  
-  -moz-transition: all 2s ease;  
-  -o-transition: all 2s ease;  
-  -ms-transition: all 2s ease;  
-  transition: all 2s ease;">
+      <div id="toggle" class="no mt-2" >
         <form action="<?= base_url() ?>find" method="GET" enctype="multipart/form-data" class="toggil_form">
           <div class="form-group m-0 sty">
             <input type="searc" placeholder="Search Products... " required="" name="search">
