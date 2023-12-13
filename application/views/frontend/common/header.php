@@ -233,6 +233,37 @@
       display: none;
     }
   }
+
+  .centar-list{
+    display: none !important;
+  }
+  @media(max-width:991px) {
+    .centar-list{
+    display: block !important;
+  }
+  .responice-list-menu{
+    display: none !important;
+  }
+  }
+  @media(max-width:1199px) {
+    .dcdsss{
+      top: 8px !important;
+    }
+  }
+
+  @media(max-width:1098px) {
+    .dcdsss{
+      top: 5px !important;
+    }
+  }
+
+
+  .logo-imah-1 {
+    width: 60%;
+}
+
+
+  
 </style>
 <!-- //================ START BODY ============================= -->
 <? $headerMiniCart = [];
@@ -254,7 +285,7 @@ if (!empty($this->session->userdata('user_data'))) {
     <header id="header ">
       <div class="container position-r header-class  ">
         <div class="row m-0">
-          <div class="col-lg-4 col-md-6 col-6 p-0 position-initial icon-bar-center classssss-lo22">
+          <div class="col-lg-2 col-md-6 col-6 p-0 position-initial icon-bar-center classssss-lo22">
             <div class="right-side">
               <div class="navbar-header">
                 <a class="navbar-brand page-scroll" href="<?= base_url() ?>">
@@ -279,12 +310,102 @@ if (!empty($this->session->userdata('user_data'))) {
               </div>
             </div>
           </div>
-          <div class="col-lg-8 col-md-6 col-3 p-0 icon-bar fgdfdghfh" style="display: flex;
+          <div class="col-lg-6 col-md-8 col-8 p-0 position-initial responice-list-menu "        style="justify-content: center;
+            display: flex;
+            align-items: center; 
+            ">
+            <div class="right-side">
+              <div class="overlay"></div>
+              <div id="menu" class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav">
+                  <div class="navbar-header dfghddgd">
+                    <a class="navbar-brand page-scroll" href="<?= base_url() ?>">
+                      <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
+                    </a>
+                  </div>
+                  <!-- <li class="level">
+                    <a href="<?= base_url() ?>" class="nav-link">Home</a>
+                  </li> -->
+
+                  <!-- <li class="level">
+                  <a href="<?= base_url() ?>about_us">About Us</a>
+                  </li> -->
+
+                  <?php $i = 1;
+                  $this->db->select('*');
+                  $this->db->from('tbl_category');
+                  $this->db->where('is_active', 1);
+                  $this->db->order_by('seq', 'asc');
+                  $category_data = $this->db->get();
+                  foreach ($category_data->result() as $category) {
+                    $this->db->select('*');
+                    $this->db->from('tbl_subcategory');
+                    $this->db->where('category_id', $category->id);
+                    $this->db->where('is_active', 1);
+                    $subcategory_data = $this->db->get(); ?>
+                    <li class="level dropdown" style="    position: relative;">
+                      <a href="<?= base_url() ?>products/<?= $category->url ?>/1" class=" nav-link"><?= $category->name ?></a>
+                      <span class="opener plus"><i class="bi bi-chevron-down" style="color:white"></i></span>
+                      <div class="megamenu full mobile-sub-menu">
+                        <div class="megamenu-inner-top">
+                          <div class="row sub-menu-level1" style="display: block;">
+                            <div class="col-l level2 ">
+                              <ul class="sub-menu-level2">
+                                <?php $i = 2;
+                                foreach ($subcategory_data->result() as $subcat) {
+                                  // if ($i % 2 == 0) {
+                                ?>
+                                  <li class="level3"><a href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
+                                <?php
+                                  // }
+                                  $i++;
+                                } ?>
+                              </ul>
+                            </div>
+                            <!-- <div class="col-lg-4 level2">
+                              <ul class="sub-menu-level2">
+                                <?php $i = 2;
+                                foreach ($subcategory_data->result() as $subcat) {
+                                  if ($i  % 2 != 0) {
+                                ?>
+                                    <li class="level3"><a href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
+                                <?php }
+                                  $i++;
+                                } ?>
+                              </ul>
+                            </div> -->
+                            <!-- <div class="col-lg-3 mt-30 d-none d-lg-block matgin-image" style="display: flex !important;
+                          justify-content: center;">
+                              <div class="sub-menu-img" style="width: 80%;">
+                                <a href="<?= base_url() ?>products/<?= $category->url ?>/1">
+                                  <img src="<?= base_url() . $category->image ?>" alt=" " style="width: 100%;">
+                                </a>
+                              </div>
+                            </div> -->
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  <?php $i++;
+                  } ?>
+
+                  <!-- <li><a href="<?= base_url() ?>reseller_register">Partner With Us</a></li>
+                  <li class="level "><a href="<?= base_url() ?>contact" class="nav-link">Contact</a></li> -->
+
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 col-3 p-0 icon-bar fgdfdghfh" style="display: flex;
 						align-items: center;">
             <div id="google_translate_element"></div>
             <div class="header-right-link">
-              <div class="newsletter-input-1 newsletter-input mob no" id="toggle2" style="position: absolute;
-                      right: 200px;top:15px;-webkit-transition: all 2s ease;  
+              <div class="newsletter-input-1 dcdsss newsletter-input mob no" id="toggle2" style="position: absolute;
+                      right: 200px;top: 14px;-webkit-transition: all 2s ease;  
                     -moz-transition: all 2s ease;  
                     -o-transition: all 2s ease;  
                     -ms-transition: all 2s ease;  
@@ -384,6 +505,8 @@ if (!empty($this->session->userdata('user_data'))) {
             </div>
           </div>
 
+          
+
           <div class="col-lg-4 col-md-3 col-3 p-0 icon-bar  dgsfgdfg" style="display: flex;
 						align-items: center;">
             <!-- <div id="google_translate_element"></div> -->
@@ -481,120 +604,121 @@ if (!empty($this->session->userdata('user_data'))) {
 
 
 
+    
 
 
-      <div id="toggle" class="no mt-2" style="	-webkit-transition: all 2s ease;  
-  -moz-transition: all 2s ease;  
-  -o-transition: all 2s ease;  
-  -ms-transition: all 2s ease;  
-  transition: all 2s ease;">
-        <form action="<?= base_url() ?>find" method="GET" enctype="multipart/form-data" class="toggil_form">
+
+
+
+      <div class="col-lg-5 col-md-8 col-8 p-0 position-initial centar-list" style="justify-content: center;
+            display: flex;">
+            <div class="right-side">
+              <div class="overlay"></div>
+              <div id="menu" class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav">
+                  <div class="navbar-header dfghddgd">
+                    <a class="navbar-brand page-scroll" href="<?= base_url() ?>">
+                      <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
+                    </a>
+                  </div>
+                  <li class="level">
+                    <a href="<?= base_url() ?>" class="nav-link">Home</a>
+                  </li>
+
+                  <!-- <li class="level">
+                  <a href="<?= base_url() ?>about_us">About Us</a>
+                  </li> -->
+
+                  <?php $i = 1;
+                  $this->db->select('*');
+                  $this->db->from('tbl_category');
+                  $this->db->where('is_active', 1);
+                  $this->db->order_by('seq', 'asc');
+                  $category_data = $this->db->get();
+                  foreach ($category_data->result() as $category) {
+                    $this->db->select('*');
+                    $this->db->from('tbl_subcategory');
+                    $this->db->where('category_id', $category->id);
+                    $this->db->where('is_active', 1);
+                    $subcategory_data = $this->db->get(); ?>
+                    <li class="level dropdown" style="    position: relative;">
+                      <a href="<?= base_url() ?>products/<?= $category->url ?>/1" class=" nav-link"><?= $category->name ?></a>
+                      <span class="opener plus"><i class="bi bi-chevron-down" style="color:white"></i></span>
+                      <div class="megamenu full mobile-sub-menu">
+                        <div class="megamenu-inner-top">
+                          <div class="row sub-menu-level1" style="display: block;">
+                            <div class="col-l level2 ">
+                              <ul class="sub-menu-level2">
+                                <?php $i = 2;
+                                foreach ($subcategory_data->result() as $subcat) {
+                                  // if ($i % 2 == 0) {
+                                ?>
+                                  <li class="level3"><a href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
+                                <?php
+                                  // }
+                                  $i++;
+                                } ?>
+                              </ul>
+                            </div>
+                            <!-- <div class="col-lg-4 level2">
+                              <ul class="sub-menu-level2">
+                                <?php $i = 2;
+                                foreach ($subcategory_data->result() as $subcat) {
+                                  if ($i  % 2 != 0) {
+                                ?>
+                                    <li class="level3"><a href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
+                                <?php }
+                                  $i++;
+                                } ?>
+                              </ul>
+                            </div> -->
+                            <!-- <div class="col-lg-3 mt-30 d-none d-lg-block matgin-image" style="display: flex !important;
+                          justify-content: center;">
+                              <div class="sub-menu-img" style="width: 80%;">
+                                <a href="<?= base_url() ?>products/<?= $category->url ?>/1">
+                                  <img src="<?= base_url() . $category->image ?>" alt=" " style="width: 100%;">
+                                </a>
+                              </div>
+                            </div> -->
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  <?php $i++;
+                  } ?>
+
+                  <li><a href="<?= base_url() ?>reseller_register">Partner With Us</a></li>
+                  <li class="level "><a href="<?= base_url() ?>contact" class="nav-link">Contact</a></li>
+
+                </ul>
+
+              </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="toggle" class="no mt-2" style="	-webkit-transition: all 2s ease;  
+                        -moz-transition: all 2s ease;  
+                        -o-transition: all 2s ease;  
+                        -ms-transition: all 2s ease;  
+                        transition: all 2s ease;">
+          <form action="<?= base_url() ?>find" method="GET" enctype="multipart/form-data" class="toggil_form">
           <div class="form-group m-0 sty">
             <input type="searc" placeholder="Search Products... " required="" name="search">
           </div>
           <button type="submit" class="btn" style="position: absolute;
 						right: 0px;
-    bottom: -13px;"> <i class="bi bi-search"></i></button>
+              bottom: -13px;"> <i class="bi bi-search"></i></button>
         </form>
       </div>
 
 
+      
+        
 
-
-
-
-
-
-      <div class="container position-r animate__animated animate__bounce">
-        <div class="row m-0">
-        </div>
-        <div class="col-lg-12 col-md-8 col-8 p-0 position-initial" style="justify-content: center;
-					display: flex;">
-          <div class="right-side">
-            <div class="overlay"></div>
-            <div id="menu" class="navbar-collapse collapse">
-
-              <ul class="nav navbar-nav">
-                <div class="navbar-header dfghddgd">
-                  <a class="navbar-brand page-scroll" href="<?= base_url() ?>">
-                    <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
-                  </a>
-                </div>
-                <li class="level">
-                  <a href="<?= base_url() ?>" class="nav-link">Home</a>
-                </li>
-
-                <!-- <li class="level">
-                <a href="<?= base_url() ?>about_us">About Us</a>
-                </li> -->
-
-                <?php $i = 1;
-                $this->db->select('*');
-                $this->db->from('tbl_category');
-                $this->db->where('is_active', 1);
-                $this->db->order_by('seq', 'asc');
-                $category_data = $this->db->get();
-                foreach ($category_data->result() as $category) {
-                  $this->db->select('*');
-                  $this->db->from('tbl_subcategory');
-                  $this->db->where('category_id', $category->id);
-                  $this->db->where('is_active', 1);
-                  $subcategory_data = $this->db->get(); ?>
-                  <li class="level dropdown" style="    position: relative;">
-                    <a href="<?= base_url() ?>products/<?= $category->url ?>/1" class=" nav-link"><?= $category->name ?></a>
-                    <span class="opener plus"><i class="bi bi-chevron-down" style="color:white"></i></span>
-                    <div class="megamenu full mobile-sub-menu">
-                      <div class="megamenu-inner-top">
-                        <div class="row sub-menu-level1" style="display: block;">
-                          <div class="col-l level2 ">
-                            <ul class="sub-menu-level2">
-                              <?php $i = 2;
-                              foreach ($subcategory_data->result() as $subcat) {
-                                // if ($i % 2 == 0) {
-                              ?>
-                                <li class="level3"><a href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
-                              <?php
-                                // }
-                                $i++;
-                              } ?>
-                            </ul>
-                          </div>
-                          <!-- <div class="col-lg-4 level2">
-                            <ul class="sub-menu-level2">
-                              <?php $i = 2;
-                              foreach ($subcategory_data->result() as $subcat) {
-                                if ($i  % 2 != 0) {
-                              ?>
-                                  <li class="level3"><a href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
-                              <?php }
-                                $i++;
-                              } ?>
-                            </ul>
-                          </div> -->
-                          <!-- <div class="col-lg-3 mt-30 d-none d-lg-block matgin-image" style="display: flex !important;
-												justify-content: center;">
-                            <div class="sub-menu-img" style="width: 80%;">
-                              <a href="<?= base_url() ?>products/<?= $category->url ?>/1">
-                                <img src="<?= base_url() . $category->image ?>" alt=" " style="width: 100%;">
-                              </a>
-                            </div>
-                          </div> -->
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                <?php $i++;
-                } ?>
-
-                <li><a href="<?= base_url() ?>reseller_register">Partner With Us</a></li>
-                <li class="level "><a href="<?= base_url() ?>contact" class="nav-link">Contact</a></li>
-
-              </ul>
-
-            </div>
-          </div>
-        </div>
-      </div>
     </header>
   </div>
   <!-- Header end -->

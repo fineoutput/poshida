@@ -350,6 +350,7 @@ i.bi.bi-chevron-down{
 
 	.navbar-brand img {
 		height: 100%;
+		width: 40%;
 	}
 
 	.header-right-link > ul > li {
@@ -1178,6 +1179,12 @@ button#addtoCartButton{
 }
 }
 
+@media (max-width: 425px){
+.navbar-brand img {
+    height: 100%;
+    width: 54%;
+}
+}
 @media (max-width: 336px){
 	button#addtoCartButton {
 		font-size: 13px;

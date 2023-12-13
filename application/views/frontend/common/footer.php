@@ -61,7 +61,7 @@
 
 <footer class="footer-part">
 	<div class="container">
-		<div class="footer-top ptb-100">
+		<div class="footer-top ptb-60">
 			<div class="mb_-30">
 				<div class="row" style="align-items: baseline;">
 					<div class="col-12 col-lg-3 col-md-6">
@@ -114,8 +114,8 @@
 									<li><a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel">Login</a></li>
 									<li><a href="<?= base_url() ?>about_us">About Us</a></li>
 									<li><a href="<?= base_url() ?>career">Career</a></li>
-
-
+									<li><a href="<?= base_url() ?>reseller_register">Partner With Us</a></li>
+                                    <li class="level "><a href="<?= base_url() ?>contact" class="nav-link">Contact</a></li>
 									<li class="level "><a href="<?= base_url() ?>blogs" class="nav-link">Blog</a></li>
 								</ul>
 							</div>
@@ -166,7 +166,197 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="mt-50">
+				<p style="color: #c68fa6 !important; font-size: 16px;"><b> Popular Pages </b></p>
+				<p>
+				<a href="<?= base_url() ?>" class="">Home</a> 
+				| <a href="<?= base_url() ?>" class=""> Women and Girls</a> 
+				| <a href="<?= base_url() ?>" class=""> A-Line Kurta </a> 
+				|<a href="<?= base_url() ?>" class="">Aliya Cut Kurtis</a> 
+				| <a href="<?= base_url() ?>" class=""> Women and Girls</a> 
+				|<a href="<?= base_url() ?>" class="">Embroidery </a> 
+				| <a href="<?= base_url() ?>" class="">Kurta For Women </a> 
+				|  <a href="<?= base_url() ?>" class=""> Floor Length Gown For Women </a> 
+				|  <a href="<?= base_url() ?>" class="">  Kurta Pant Dupatta </a> 
+				|  <a href="<?= base_url() ?>" class="">  Sets </a> 
+				|  <a href="<?= base_url() ?>" class="">  Regular Kurti </a>
+				|  <a href="<?= base_url() ?>" class=""> Plazo</a> 
+				|  <a href="<?= base_url() ?>" class="">   Accessories  </a> 
+				|  <a href="<?= base_url() ?>" class="">  Kids</a> 
+				|  <a href="<?= base_url() ?>" class="">   Mens </a> 
+				|  <a href="<?= base_url() ?>" class="">     Dresses </a> 
+				|  <a href="<?= base_url() ?>" class=""> Partner With Us </a> 
+				|  <a href="<?= base_url() ?>" class="">  Contact </a> 
+				|  <a href="<?= base_url() ?>" class="">  Return & Replace Shipping & Delivery </a> 
+				|  <a href="<?= base_url() ?>" class="">  Terms & Conditions </a> 
+				|  <a href="<?= base_url() ?>" class="">   About Us</a> 
+				|  <a href="<?= base_url() ?>" class="">  Career </a> 
+				|  <a href="<?= base_url() ?>" class="">    Blog</a>
+				</p>
+
+			</div>
+			<div class="mt-30">
+				<p style="color: #c68fa6 !important; font-size: 16px;"><b> Popular Searches  </b></p>
+				<p>
+				<a href="<?= base_url() ?>" class="">Designer Kurta for Women</a> 
+				| <a href="<?= base_url() ?>" class=""> Kurti Designs for Women </a> 
+				| <a href="<?= base_url() ?>" class=""> jaipur kurti A Line Kurta for Women </a> 
+				|<a href="<?= base_url() ?>" class="">Stylish Kurti for Women</a>
+				| <a href="<?= base_url() ?>" class="">loor Length Gown for Women</a>
+				| <a href="<?= base_url() ?>" class="">Cotton Kurtis for Women </a>
+				| <a href="<?= base_url() ?>" class=""> Cotton Kurtis for Daily Wear </a>
+				| <a href="<?= base_url() ?>" class="">  Latest Kurti design </a>
+				| <a href="<?= base_url() ?>" class="">  Festival Kurta for Women </a>
+				| <a href="<?= base_url() ?>" class=""> Casual Kurti for Women</a>
+				| <a href="<?= base_url() ?>" class="">Cotton Embroidery Kurta</a>
+				| <a href="<?= base_url() ?>" class=""> Stylish Gown for Women</a>
+				| <a href="<?= base_url() ?>" class=""> Kurtis Online Designer   Kurta</a>
+				| <a href="<?= base_url() ?>" class=""> A Line Kurta</a>
+				| <a href="<?= base_url() ?>" class="">   Buy Kurta Online</a>
+				| <a href="<?= base_url() ?>" class="">   Floor Length Gown</a>
+				| <a href="<?= base_url() ?>" class="">   Printed Kurti</a>
+				| <a href="<?= base_url() ?>" class="">   Embroidery Kurta for Women</a>
+				| <a href="<?= base_url() ?>" class="">   Latest Gown Design</a>
+				| <a href="<?= base_url() ?>" class="">  Festival Wear Gown</a>
+				| <a href="<?= base_url() ?>" class=""> Designer Gown for Women</a>
+				| <a href="<?= base_url() ?>" class="">  Aliya Cut Kurtis</a>
+				</p>
+
+			</div>
+			<div class="mt-10">
+				<p style="color: #c68fa6 !important; font-size: 16px;"><b> Popular Products  </b></p>
+				<p>
+				<a href="<?= base_url() ?>" class=""><b> A Line Kurta </b></a> 
+				 <br>
+			
+				<a href="<?= base_url() ?>" class="">AQUA FESTIVAL WEAR KURTA</a> 
+				| <a href="<?= base_url() ?>" class="">  MUSTARD FESTIVAL WEAR KURTA </a> 
+				| <a href="<?= base_url() ?>" class=""> PEACH FESTIVAL WEAR KURTA </a> 
+				| <a href="<?= base_url() ?>" class=""> FUSCHIA AMIRA EMBROIDERY KURTA </a> 
+				</p>
+
+			</div>
+			<div class="mt-10">
+				
+				<a href="<?= base_url() ?>" class=""><b> Aliya Cut Kurtis </b></a> 
+				 <br>
+				 
+				<a href="<?= base_url() ?>" class="">BLACK ALIYA KURTI</a> 
+				| <a href="<?= base_url() ?>" class="">   RED ALIYA KURTI </a> 
+				| <a href="<?= base_url() ?>" class=""> AQUA ALIYA CUT KURTI</a> 
+				| <a href="<?= base_url() ?>" class=""> PEACH ALIYA CUT KURTI </a> 
+				| <a href="<?= base_url() ?>" class=""> NAVY BLUE ALIYA CUT KURTI</a> 
+				| <a href="<?= base_url() ?>" class=""> LEMON ALIYA CUT KURTI </a> 
+				</p>
+
+			</div>
+			<div class="mt-10">
+				
+				<a href="<?= base_url() ?>" class=""><b>Embroidery Kurta</b></a> 
+				 <br>
+				<a href="<?= base_url() ?>" class="">GREEN ELEGANT KURTA</a> 
+				| <a href="<?= base_url() ?>" class="">   MUSTARD ELEGANT KURTA</a> 
+				| <a href="<?= base_url() ?>" class="">   PEACH ELEGANT KURTA</a> 
+				
+				</p>
+
+			</div>
+			<div class="mt-20">
+				<p style="color: #c68fa6 !important; font-size: 20px;"><b> Best Online Kurti Shopping Site in India  </b></p>
+				<p>
+				Welcome to  <a href="<?= base_url() ?>"  style="color: #c68fa6 !important;">   Poshida Fashions LLP</a> – Your Premier Destination for the Best Online Kurti 
+				Shopping Experience in India! At Poshida Fashions, we blend tradition and style seamlessly, 
+				offering a diverse collection of kurtis designed for the modern woman who appreciates 
+				elegance and comfort.
+				</p>
+
+			</div>
+			<div class="mt-20">
+				<p style="color: #c68fa6 !important; font-size: 16px;"><b>Embrace Tradition with Poshida Fashions LLP Kurtis:</b></p>
+				<p>
+				Immerse yourself in the rich tapestry of Indian tradition with Poshida Fashions LLP. Our 
+				curated kurtis collection pays homage to India's cultural heritage, featuring exquisite designs 
+				that reflect the timeless beauty of traditional craftsmanship. Embrace the essence of tradition 
+				with every kurti from Poshida Fashions LLP.
+				</p>
+
+			</div>
+			<div class="mt-20">
+				<p style="color: #c68fa6 !important; font-size: 16px;"><b>
+				Elevate Your Wardrobe with Exclusive Designs:</b></p>
+				<p>
+				Discover a world of exclusive designs that elevate your wardrobe to new heights. At Poshida 
+				Fashions LLP, we take pride in offering kurtis that are not just pieces of clothing but 
+				expressions of individuality. From Jaipur kurtis to  <a href="<?= base_url() ?>"  style="color: #c68fa6 !important;"> stylish kurtis for women </a> , each design is 
+				crafted to make you stand out, ensuring your wardrobe is a testament to your unique style.
+				</p>
+
+			</div>
+			<div class="mt-20">
+				<p style="color: #c68fa6 !important; font-size: 16px;"><b>
+				Seamless Shopping at Your Fingertips:</b></p>
+				<p>
+				xperience the convenience of seamless shopping with Poshida Fashions LLP. Our user-friendly website ensures that exploring our extensive collection, featuring   <a href="<?= base_url() ?>"  style="color: #c68fa6 !important;"> kurti designs for 
+				women </a>, cotton kurtis for daily wear, and the latest kurti designs, is a breeze. With just a few 
+				clicks, you can have your favourite kurtis delivered to your doorstep, making fashion 
+				effortlessly accessible.
+				</p>
+
+			</div>
+			<div class="mt-20">
+				<p style="color: #c68fa6 !important; font-size: 16px;"><b>
+			    Quality Assurance for Your Style:</b></p>
+				<p>
+				Poshida Fashions LLP is synonymous with quality assurance. Our kurtis are crafted with 
+				precision and attention to detail because your style deserves the best. From the selection of 
+				fabrics to the final stitch, our commitment to quality ensures that each piece you choose is a 
+				testament to enduring style and comfort.
+				</p>
+
+			</div>
+			<div class="mt-20">
+				<p style="color: #c68fa6 !important; font-size: 16px;"><b>
+				Support Creativity and Get Rewarded:</b></p>
+				<p>
+				At Poshida Fashions LLP, we believe in supporting creativity. When you choose our kurtis, 
+				you not only enhance your style but also contribute to the promotion of traditional 
+				craftsmanship. As a token of appreciation, we offer rewards that reflect our gratitude for 
+				supporting the creative spirit behind each meticulously designed kurti in our collection.
+				Poshida Fashions LLP invites you to explore the world of kurtis online, where tradition 
+				meets contemporary style, and every piece tells a story. Elevate your wardrobe with our 
+				exclusive designs, experience the ease of seamless shopping, and support creativity with 
+				every purchase. Embrace tradition and elevate your style – choose Poshida Fashions LLP for 
+				a genuinely exceptional kurti shopping experience.
+				</p>
+
+			</div>
+
+
+
+			 
+
+
+
+
+
+			  
+
+ 
+
+		
+
+ 
+
+
+
+
+
+
+
+			
 		</div>
+		
 		<div class="footer-bottom align-center">
 			<div class="row">
 				<div class="col-12">
