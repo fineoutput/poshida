@@ -179,32 +179,32 @@
           </div>
         </div>
       </div>
-      <div class="mt-50">
+   
+			<div class="mt-50">
 				<p style="color: #c68fa6 !important; font-size: 16px;"><b> Popular Pages </b></p>
 				<p>
 				<a href="<?= base_url() ?>" class="">Home</a> 
 				| <a href="<?= base_url() ?>products/Womens-and-Girls/1" class=""> Women and Girls</a> 
-				| <a href="<?= base_url() ?>" class=""> A-Line Kurta </a> 
-				|<a href="<?= base_url() ?>" class="">Aliya Cut Kurtis</a> 
-				| <a href="<?= base_url() ?>" class=""> Women and Girls</a> 
-				|<a href="<?= base_url() ?>" class="">Embroidery </a> 
-				| <a href="<?= base_url() ?>" class="">Kurta For Women </a> 
-				|  <a href="<?= base_url() ?>" class=""> Floor Length Gown For Women </a> 
-				|  <a href="<?= base_url() ?>" class="">  Kurta Pant Dupatta </a> 
-				|  <a href="<?= base_url() ?>" class="">  Sets </a> 
-				|  <a href="<?= base_url() ?>" class="">  Regular Kurti </a>
-				|  <a href="<?= base_url() ?>" class=""> Plazo</a> 
-				|  <a href="<?= base_url() ?>" class="">   Accessories  </a> 
-				|  <a href="<?= base_url() ?>" class="">  Kids</a> 
-				|  <a href="<?= base_url() ?>" class="">   Mens </a> 
-				|  <a href="<?= base_url() ?>" class="">     Dresses </a> 
-				|  <a href="<?= base_url() ?>" class=""> Partner With Us </a> 
-				|  <a href="<?= base_url() ?>" class="">  Contact </a> 
-				|  <a href="<?= base_url() ?>" class="">  Return & Replace Shipping & Delivery </a> 
-				|  <a href="<?= base_url() ?>" class="">  Terms & Conditions </a> 
-				|  <a href="<?= base_url() ?>" class="">   About Us</a> 
-				|  <a href="<?= base_url() ?>" class="">  Career </a> 
-				|  <a href="<?= base_url() ?>" class="">    Blog</a>
+				| <a href="<?= base_url() ?>products/A--LINE-KURTA/1" class=""> A-Line Kurta </a> 
+				|<a href="<?= base_url() ?>products/ALIYA-CUT-KURTI/1" class="">Aliya Cut Kurtis</a> 
+				|<a href="<?= base_url() ?>products/EMBROIDERY-KURTA/1" class="">Embroidery </a> 
+				| <a href="<?= base_url() ?>products/EMBROIDERY-KURTA/1" class="">Kurta For Women </a> 
+				|  <a href="<?= base_url() ?>products/FLOOR-LENGTH-GOWN/1" class=""> Floor Length Gown For Women </a> 
+				|  <a href="<?= base_url() ?>products/KURTA-PANT-DUPATTA-SETS/1" class="">  Kurta Pant Dupatta </a> 
+				|  <a href="<?= base_url() ?>products/KURTA-PANT-DUPATTA-SETS/1" class="">  Sets </a> 
+				|  <a href="<?= base_url() ?>products/REGULAR-KURTI/1" class="">  Regular Kurti </a>
+				|  <a href="<?= base_url() ?>products/Plazo/1" class=""> Plazo</a> 
+				|  <a href="<?= base_url() ?>products/Accessories/1" class="">   Accessories  </a> 
+				|  <a href="<?= base_url() ?>products/Kids/1" class="">  Kids</a> 
+				|  <a href="<?= base_url() ?>products/Mens/1" class="">   Mens </a> 
+				|  <a href="<?= base_url() ?>products/Dresses/1" class="">     Dresses </a> 
+				|  <a href="<?= base_url() ?>reseller_register" class=""> Partner With Us </a> 
+				|  <a href="<?= base_url() ?>contact" class="">  Contact </a> 
+				|  <a href="<?= base_url() ?>return_and_replace" class="">  Return & Replace Shipping & Delivery </a> 
+				|  <a href="<?= base_url() ?>terms_and_conditions" class="">  Terms & Conditions </a> 
+				|  <a href="<?= base_url() ?>about_us" class="">   About Us</a> 
+				|  <a href="<?= base_url() ?>career" class="">  Career </a> 
+				|  <a href="<?= base_url() ?>blogs" class="">    Blog</a>
 				</p>
 
 			</div>
@@ -212,64 +212,65 @@
 				<p style="color: #c68fa6 !important; font-size: 16px;"><b> Popular Searches  </b></p>
 				<p>
 				<a href="<?= base_url() ?>" class="">Designer Kurta for Women</a> 
-				| <a href="<?= base_url() ?>" class=""> Kurti Designs for Women </a> 
-				| <a href="<?= base_url() ?>" class=""> jaipur kurti A Line Kurta for Women </a> 
-				|<a href="<?= base_url() ?>" class="">Stylish Kurti for Women</a>
-				| <a href="<?= base_url() ?>" class="">loor Length Gown for Women</a>
-				| <a href="<?= base_url() ?>" class="">Cotton Kurtis for Women </a>
-				| <a href="<?= base_url() ?>" class=""> Cotton Kurtis for Daily Wear </a>
-				| <a href="<?= base_url() ?>" class="">  Latest Kurti design </a>
-				| <a href="<?= base_url() ?>" class="">  Festival Kurta for Women </a>
-				| <a href="<?= base_url() ?>" class=""> Casual Kurti for Women</a>
-				| <a href="<?= base_url() ?>" class="">Cotton Embroidery Kurta</a>
-				| <a href="<?= base_url() ?>" class=""> Stylish Gown for Women</a>
-				| <a href="<?= base_url() ?>" class=""> Kurtis Online Designer   Kurta</a>
-				| <a href="<?= base_url() ?>" class=""> A Line Kurta</a>
-				| <a href="<?= base_url() ?>" class="">   Buy Kurta Online</a>
-				| <a href="<?= base_url() ?>" class="">   Floor Length Gown</a>
-				| <a href="<?= base_url() ?>" class="">   Printed Kurti</a>
-				| <a href="<?= base_url() ?>" class="">   Embroidery Kurta for Women</a>
-				| <a href="<?= base_url() ?>" class="">   Latest Gown Design</a>
-				| <a href="<?= base_url() ?>" class="">  Festival Wear Gown</a>
+				| <a href="<?= base_url() ?>products/Womens-and-Girls/1" class=""> Kurti Designs for Women </a> 
+				| <a href="<?= base_url() ?>products/Womens-and-Girls/1" class=""> jaipur kurti A Line Kurta for Women </a> 
+				| <a href="<?= base_url() ?>products/A--LINE-KURTA/1" class="">  A Line Kurta for Women </a> 
+				|<a href="<?= base_url() ?>products/Womens-and-Girls/1" class="">Stylish Kurti for Women</a>
+				| <a href="<?= base_url() ?>products/FLOOR-LENGTH-GOWN/1" class="">Foor Length Gown for Women</a>
+				| <a href="<?= base_url() ?>blogs" class="">Cotton Kurtis for Women </a>
+				| <a href="<?= base_url() ?>blogs" class=""> Cotton Kurtis for Daily Wear </a>
+				| <a href="<?= base_url() ?>products/KURTA-PANT-DUPATTA-SETS/1" class="">  Latest Kurti design </a>
+				| <a href="<?= base_url() ?>products/A--LINE-KURTA/1" class="">  Festival Kurta for Women </a>
+				| <a href="<?= base_url() ?>blogs" class=""> Casual Kurti for Women</a>
+				| <a href="<?= base_url() ?>products/EMBROIDERY-KURTA/1" class="">Cotton Embroidery Kurta</a>
+				| <a href="<?= base_url() ?>products/FLOOR-LENGTH-GOWN/1" class=""> Stylish Gown for Women</a>
+				| <a href="<?= base_url() ?>products/Womens-and-Girls/1" class=""> Kurtis Online Designer   Kurta</a>
+				| <a href="<?= base_url() ?>products/A--LINE-KURTA/1" class=""> A Line Kurta</a>
+				| <a href="<?= base_url() ?>products/A--LINE-KURTA/1" class="">   Buy Kurta Online</a>
+				| <a href="<?= base_url() ?>products/FLOOR-LENGTH-GOWN/1" class="">   Floor Length Gown</a>
+				| <a href="<?= base_url() ?>products/FLOOR-LENGTH-GOWN/1" class="">   Printed Kurti</a>
+				| <a href="<?= base_url() ?>products/EMBROIDERY-KURTA/1" class="">   Embroidery Kurta for Women</a>
+				| <a href="<?= base_url() ?>products/FLOOR-LENGTH-GOWN/1" class="">   Latest Gown Design</a>
+				| <a href="<?= base_url() ?>products/FLOOR-LENGTH-GOWN/1" class="">  Festival Wear Gown</a>
 				| <a href="<?= base_url() ?>" class=""> Designer Gown for Women</a>
-				| <a href="<?= base_url() ?>" class="">  Aliya Cut Kurtis</a>
+				| <a href="<?= base_url() ?>products/ALIYA-CUT-KURTI/1" class="">  Aliya Cut Kurtis</a>
 				</p>
 
 			</div>
 			<div class="mt-10">
 				<p style="color: #c68fa6 !important; font-size: 16px;"><b> Popular Products  </b></p>
 				<p>
-				<a href="<?= base_url() ?>" class=""><b> A Line Kurta </b></a> 
+				<a href="<?= base_url() ?>products/A--LINE-KURTA/1" class=""><b> A Line Kurta </b></a> 
 				 <br>
 			
-				<a href="<?= base_url() ?>" class="">AQUA FESTIVAL WEAR KURTA</a> 
-				| <a href="<?= base_url() ?>" class="">  MUSTARD FESTIVAL WEAR KURTA </a> 
-				| <a href="<?= base_url() ?>" class=""> PEACH FESTIVAL WEAR KURTA </a> 
-				| <a href="<?= base_url() ?>" class=""> FUSCHIA AMIRA EMBROIDERY KURTA </a> 
+				<a href="<?= base_url() ?>products/A--LINE-KURTA/1" class="">AQUA FESTIVAL WEAR KURTA</a> 
+				| <a href="<?= base_url() ?>products/A--LINE-KURTA/1" class="">  MUSTARD FESTIVAL WEAR KURTA </a> 
+				| <a href="<?= base_url() ?>product_detail/PEACH-FESTIVAL-WEAR-KURTA?type=NjUw" class=""> PEACH FESTIVAL WEAR KURTA </a> 
+				| <a href="<?= base_url() ?>product_detail/FUSCHIA-AMIRA--EMBROIDERY-KURTA?type=NjU1" class=""> FUSCHIA AMIRA EMBROIDERY KURTA </a> 
 				</p>
 
 			</div>
 			<div class="mt-10">
 				
-				<a href="<?= base_url() ?>" class=""><b> Aliya Cut Kurtis </b></a> 
+				<a href="<?= base_url() ?>products/ALIYA-CUT-KURTI/1" class=""><b> Aliya Cut Kurtis </b></a> 
 				 <br>
 				 
-				<a href="<?= base_url() ?>" class="">BLACK ALIYA KURTI</a> 
-				| <a href="<?= base_url() ?>" class="">   RED ALIYA KURTI </a> 
-				| <a href="<?= base_url() ?>" class=""> AQUA ALIYA CUT KURTI</a> 
-				| <a href="<?= base_url() ?>" class=""> PEACH ALIYA CUT KURTI </a> 
-				| <a href="<?= base_url() ?>" class=""> NAVY BLUE ALIYA CUT KURTI</a> 
-				| <a href="<?= base_url() ?>" class=""> LEMON ALIYA CUT KURTI </a> 
+				<a href="<?= base_url() ?>product_detail/BLACK-ALIYA-KURTI?type=NTc1" class="">BLACK ALIYA KURTI</a> 
+				| <a href="<?= base_url() ?>product_detail/RED-ALIYA-KURTI?type=NTgw" class="">   RED ALIYA KURTI </a> 
+				| <a href="<?= base_url() ?>product_detail/AQUA-ALIYA-KURTI?type=NTg1" class=""> AQUA ALIYA CUT KURTI</a> 
+				| <a href="<?= base_url() ?>product_detail/PEACH-ALIYA-KURTI?type=NTkw" class=""> PEACH ALIYA CUT KURTI </a> 
+				| <a href="<?= base_url() ?>product_detail/NAVY-BLUE-ALIYA-KURTI?type=NTk1" class=""> NAVY BLUE ALIYA CUT KURTI</a> 
+				| <a href="<?= base_url() ?>product_detail/TEAL-BLUE-ALIYA-KURTI?type=NjAw" class=""> LEMON ALIYA CUT KURTI </a> 
 				</p>
 
 			</div>
 			<div class="mt-10">
 				
-				<a href="<?= base_url() ?>" class=""><b>Embroidery Kurta</b></a> 
+				<a href="<?= base_url() ?>products/EMBROIDERY-KURTA/1" class=""><b>Embroidery Kurta</b></a> 
 				 <br>
-				<a href="<?= base_url() ?>" class="">GREEN ELEGANT KURTA</a> 
-				| <a href="<?= base_url() ?>" class="">   MUSTARD ELEGANT KURTA</a> 
-				| <a href="<?= base_url() ?>" class="">   PEACH ELEGANT KURTA</a> 
+				<a href="<?= base_url() ?>product_detail/GREEN-ELEGANT-KURTA?type=NTUw" class="">GREEN ELEGANT KURTA</a> 
+				| <a href="<?= base_url() ?>product_detail/MUSTARD-ELEGANT-KURTA?type=NTU1" class="">   MUSTARD ELEGANT KURTA</a> 
+				| <a href="<?= base_url() ?>product_detail/PEACH-ELEGANT-KURTA?type=NTYw" class="">   PEACH ELEGANT KURTA</a> 
 				
 				</p>
 
@@ -343,6 +344,8 @@
 				</p>
 
 			</div>
+
+
 
     </div>
 
