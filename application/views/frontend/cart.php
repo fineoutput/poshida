@@ -160,7 +160,7 @@
 
   <!-- ================================== END SECTION BREADCRUMB =================== -->
 
-  <div class="ptb-100">
+  <div class="ptb-60">
     <?
     if (!empty($cart_data)) { ?>
       <div class="container">
