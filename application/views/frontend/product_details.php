@@ -635,7 +635,7 @@
                           <div class="col-md-12 ml-3" style=""><span>Congratulation! You are eligible for <? if ($promocode->type == 1) {
                                                                                                                               echo $promocode->percentage_amount . "%";
                                                                                                                             } else {
-                                                                                                                              echo $symbol . round($promocode->percentage_amount * $multiplier, 2);
+                                                                                                                              echo '₹' . $promocode->percentage_amount;
                                                                                                                             } ?> extra discount</span></div>
                         </div>
                       </div>
