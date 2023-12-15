@@ -1026,7 +1026,7 @@
 
 
 
-                <li class="cart-icon heig show-icon ">
+                <li class="cart-icon heig show-icon bag--1 ">
                   <? if (!empty($this->session->userdata('user_data'))) { ?>
                     <a href="#"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
                   <? } else { ?>
@@ -1067,6 +1067,10 @@
                     </ul>
                   </div>
                 </li>
+              
+
+
+                
                 <? if (!empty($this->session->userdata('user_data'))) {
                   $wishCount = $this->db->get_where('tbl_wishlist', array('user_id = ' => $this->session->userdata('user_id'), 'user_type', $this->session->userdata('user_type')))->num_rows();
                 ?>
@@ -1119,46 +1123,13 @@
 
 
 
-                <li class="cart-icon heig show-icon ">
+<li class="cart-icon heig show-icon   ">
                   <? if (!empty($this->session->userdata('user_data'))) { ?>
-                    <a href="#"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
+                    <a href="<?= base_url() ?>my_bag"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
                   <? } else { ?>
-                    <a href="#"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
+                    <a href="<?= base_url() ?>my_bag"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
                   <? } ?>
-                  <div class="cart-dropdown header-link-dropdown scc">
-                    <ul class="cart-list link-dropdown-list sdfsZ">
-                      <? if (!empty($headerMiniCart['cart_data'])) { ?>
-                        <ul class="cart_list " style="display: inline-block;">
-                          <? foreach ($headerMiniCart['cart_data'] as $miniCart) {
-                          ?>
-                            <li> <a href="javascript:void(0);" product_id="<?= base64_encode($miniCart['product_id']) ?>" type_id="<?= base64_encode($miniCart['type_id']) ?>" onclick="deleteCart(this)" class="close-cart"><i class="fa fa-times-circle"></i></a>
-                              <figure> <a href="javascript:;" class="pull-left"> <img alt=" " src="<?= $miniCart['image'] ?>"></a>
-                                <figcaption> <span><a href="#"><?= $miniCart['product_name'] ?></a></span>
-                                  <p class="cart-price m-0">₹<?= $miniCart['price'] ?></p>
-                                  <!-- <p class="m-0"> Color : Red</p>
-                                  <p class="m-0">Size : XXL</p> -->
-                                  <div class="product-qty">
-                                    <label>Qty:</label>
-                                    <div class="custom-qty">
-                                      <p class="m-0"><?= $miniCart['quantity'] ?></p>
-                                    </div>
-                                  </div>
-                                </figcaption>
-                              </figure>
-                            </li>
-                          <? } ?>
-                        </ul>
-                        <p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">₹<?= $headerMiniCart['sub_total'] ?></strong></span> </p>
-                        <div class="clearfix"></div>
-                        <div class="mt-20 d-flex justify-content-center"> <a href="<?= base_url() ?>my_bag" class="btn-color btn"> View Cart</a>
-                          <!-- <a href="checkout.html"
-										class="btn-color btn right-side">Checkout</a> -->
-                        </div>
-                      <? } else { ?>
-                        <img src="<?= base_url() ?>assets/frontend/img/cart_empty.jpg" alt="Empty Cart" class="img-fluid" style="width:70%">
-                      <? } ?>
-                    </ul>
-                  </div>
+                 
                 </li>
                 <? if (!empty($this->session->userdata('user_data'))) {
                   $wishCount = $this->db->get_where('tbl_wishlist', array('user_id = ' => $this->session->userdata('user_id'), 'user_type', $this->session->userdata('user_type')))->num_rows();
