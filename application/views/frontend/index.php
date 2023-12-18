@@ -233,7 +233,7 @@
   </section>
   <!-- ======================= END SHOP BY CATEGORIES  ======================== -->
   <div style="width: 70%; margin: auto;">
-  	<img alt=" " src="<?= base_url() ?>assets/frontend/img/bannnerrr.png">
+  	<img alt=" " src="<?= base_url() ?>assets/frontend/img/bannnerrr-compressed.jpg">
   </div>
   <!-- ======================== START TRENDING PRODUCTS ====================== -->
   <section class="product-section pb-100">
