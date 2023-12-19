@@ -787,6 +787,7 @@ if (!empty($popup_data)) {
 <script>
 	new WOW().init();
 </script>
+<script type="text/javascript" id="zsiqchat">var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode: "siq5343e55130ae0e3fdad07478dd8ae4afb9394aa9a93c6a25ea9bb16bce3c9011", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zohopublic.in/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);</script>
 </body>
 
 

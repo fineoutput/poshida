@@ -123,7 +123,7 @@ class Home extends CI_Controller
                 }
             }
             $data['filter_size'] = array_merge(array_unique($size));
-            if ($url == 'Womens-and-Girls') {
+            if ($url == 'Womens') {
                 $data['title'] = 'Buy Stylish Kurti For Women | Kurtis Online Shopping in India | Poshida';
                 $data['dsc'] = 'Designer Kurti: Buy Stylish Kurtis For Women. Explore the latest kurti designs & Kurtis online shopping At Poshida. Upgrade your wardrobe with our fashionable collection';
             } else if ($url == 'A--LINE-KURTA') {

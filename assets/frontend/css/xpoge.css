@@ -273,7 +273,7 @@ a:focus {
 .button-fixed-right {
 	position: fixed;
 	bottom: 20px;
-	right: 10px;
+	left: 10px;
 	border-radius: 50% !important;
 	padding: 7px 9px !important;
 	z-index: 999;
@@ -282,7 +282,7 @@ a:focus {
 .button-fixed-right {
 	position: fixed;
 	bottom: 20px;
-	right: 28px;
+	left: 28px;
 	border-radius: 50% !important;
 	padding: 7px 9px !important;
 	z-index: 999;
@@ -464,7 +464,7 @@ a:focus {
 .button-fixed-right {
 	position: fixed;
 	bottom: 20px;
-	right: 10px;
+	left: 10px;
 	border-radius: 50% !important;
 	padding: 7px 9px !important;
 	z-index: 999;
@@ -473,7 +473,7 @@ a:focus {
 .button-fixed-right {
 	position: fixed;
 	bottom: 20px;
-	right: 28px;
+	left: 28px;
 	border-radius: 50% !important;
 	padding: 7px 9px !important;
 	z-index: 999;
