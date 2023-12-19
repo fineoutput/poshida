@@ -1028,9 +1028,9 @@
 
                 <li class="cart-icon heig show-icon bag--1 ">
                   <? if (!empty($this->session->userdata('user_data'))) { ?>
-                    <a href="#"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
+                    <a href="<?= base_url() ?>my_bag"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
                   <? } else { ?>
-                    <a href="#"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
+                    <a href="<?= base_url() ?>my_bag"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
                   <? } ?>
                   <div class="cart-dropdown header-link-dropdown scc">
                     <ul class="cart-list link-dropdown-list sdfsZ">
@@ -1119,11 +1119,8 @@
                   }
                 }
                 ?>
-
-
-
-
-<li class="cart-icon heig show-icon   ">
+                
+                <li class="cart-icon heig show-icon   ">
                   <? if (!empty($this->session->userdata('user_data'))) { ?>
                     <a href="<?= base_url() ?>my_bag"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
                   <? } else { ?>
