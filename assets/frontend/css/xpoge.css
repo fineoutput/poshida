@@ -4869,3 +4869,10 @@ input[type="searc"] {
 li.account-icon.heig.show-icon {
     position: unset !important;
 }
+
+.form-style{
+	padding: 46px;
+    border: 1px solid #d5d0d0;
+    border-radius: 10px;
+	box-shadow: 0px 0px 3px 1px rgba(214,214,214,1);
+}

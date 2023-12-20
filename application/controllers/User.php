@@ -485,9 +485,9 @@ class User extends CI_Controller
             $st = $u1->status;
 
             if ($st == 0) {
-                // $data_update = array('status' => 1);
-                // $this->db->where('status', $u1->status);
-                // $zapak = $this->db->update('tbl_forgot_pass', $data_update);
+                $data_update = array('status' => 1);
+                $this->db->where('status', $u1->status);
+                $zapak = $this->db->update('tbl_forgot_pass', $data_update);
                 $data['auth'] = $id;
 
                 $this->load->view('frontend/common/header', $data);
