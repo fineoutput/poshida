@@ -38,7 +38,7 @@ class CI_Promocode
                                 // will get max amount
                                 $discount =  $promocode_data[0]->max;
                             } else {
-                                $discount =  number_format($discount_amt,2);
+                                $discount =  round($discount_amt,2);
                             }
                         } else {    //-- Discount in ₹
                             $discount = $promocode_data[0]->percentage_amount;
@@ -73,7 +73,7 @@ class CI_Promocode
                         // will get max amount
                         $discount =  $promocode_data[0]->max;
                     } else {
-                        $discount =   number_format($discount_amt,2);
+                        $discount =   round($discount_amt,2);
                     }
                 } else {    //-- Discount in ₹
                     $discount = $promocode_data[0]->percentage_amount;
