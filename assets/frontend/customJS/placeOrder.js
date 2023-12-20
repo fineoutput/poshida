@@ -23,6 +23,9 @@ $('#placeOrderForm').on('submit', function (e) {
           notifyError(response.message)
           $("#loader").css("display", 'none');
           $("#place").css("display", 'block');
+          if (response.message == "Please add address before checkout") {
+            window.location.replace(base_url + "Order/add_address");
+          }
         }
       } else {
         // ------ open ccavenue -----------------
@@ -33,6 +36,9 @@ $('#placeOrderForm').on('submit', function (e) {
           notifyError(response.message)
           $("#loader").css("display", 'none');
           $("#place").css("display", 'block');
+          if (response.message == "Please add address before checkout") {
+            window.location.replace(base_url + "Order/add_address");
+          }
         }
       }
     }
