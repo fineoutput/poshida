@@ -13,6 +13,8 @@ class User extends CI_Controller
         $this->load->library('user_agent');
         $this->load->library('custom/Login');
         $this->load->library('custom/Forms');
+        $this->load->library('custom/Cart');
+
     }
     //=============================================== USER REGISTER =============================================================
     public function register_process()
@@ -332,7 +334,7 @@ class User extends CI_Controller
                 $city = $this->input->post('city');
                 $address = $this->input->post('address');
                 //-------------- register user  with otp ------------
-                $Register = $this->login->ResellerEmailRegister($fname, $Email, $gstnumber, $state, $shopname,$password,$phonenumber,$city,$address);
+                $Register = $this->login->ResellerEmailRegister($fname, $Email, $gstnumber, $state, $shopname, $password, $phonenumber, $city, $address);
                 redirect($_SERVER['HTTP_REFERER']);
             } else {
                 $this->session->set_flashdata('emessage', validation_errors());
@@ -348,5 +350,221 @@ class User extends CI_Controller
     {
         $Logout = $this->login->UserOtpLogout();
         redirect("/", "refresh");
+    }
+    //------form forgot password submit-----
+
+    public function generateRandomString($length = 20)
+    {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
+
+    //========================forgot password email submit===================================
+    public function form_submit_forgot_password()
+    {
+        if (empty($this->session->userdata('user_data'))) {
+            $this->load->helper(array('form', 'url'));
+            $this->load->library('form_validation');
+            $this->load->helper('security');
+            if ($this->input->post()) {
+                $this->form_validation->set_rules('reset_email', 'reset_email', 'required|valid_email|xss_clean|trim');
+
+                if ($this->form_validation->run() == true) {
+                    $email = $this->input->post('reset_email');
+
+
+                    $this->db->select('*');
+                    $this->db->from('tbl_users');
+                    $this->db->where('email', $email);
+                    $user_data = $this->db->get()->row();
+                    $user_name = '';
+                    $user_type = '';
+                    if (empty($user_data)) {
+                        $user_data = $this->db->get_where('tbl_reseller', array('email' => $email))->row();
+                        $user_name = $user_data->name;
+                        $user_type = 2;
+                    } else {
+                        $user_name = $user_data->f_name . ' ' . $user_data->l_name;
+                        $user_type = 1;
+                    }
+                    // print_r($user_data);
+                    // exit;
+                    if (!empty($user_data)) {
+
+                        if ($user_data->is_active == 1) {
+                            $user_id = $user_data->id;
+                            $user_email = $user_data->email;
+                            $ip = $this->input->ip_address();
+                            date_default_timezone_set("Asia/Calcutta");
+                            $cur_date = date("Y-m-d H:i:s");
+
+                            //generate unique string number for txn_id
+
+                            $txn_id =  $this->generateRandomString(6);
+
+                            $data_insert = array(
+                                'user_id' => $user_id,
+                                'user_type' => $user_type,
+                                'txn_id' => $txn_id,
+                                'status' => 0,
+                                'ip' => $ip,
+                                'date' => $cur_date
+                            );
+
+                            $last_id = $this->base_model->insert_table("tbl_forgot_pass", $data_insert, 1);
+                            $link = base_url() . "User/forget_password_reset/" . $txn_id;
+                            $forgot_password_data = array(
+                                'user_name' => $user_name,
+                                'link' => $link
+
+                            );
+
+                            $config = array(
+                                'protocol' => 'smtp',
+                                'smtp_host' => SMTP_HOST,
+                                'smtp_port' => SMTP_PORT,
+                                'smtp_user' => USER_NAME, // change it to yours
+                                'smtp_pass' => PASSWORD, // change it to yours
+                                'mailtype' => 'html',
+                                'charset' => 'iso-8859-1',
+                                'wordwrap' => true
+                            );
+                            $to = $user_email;
+
+                            $message =     $this->load->view('email/forgetpassword', $forgot_password_data, true);
+
+                            $this->load->library('email', $config);
+                            $this->email->set_newline("");
+                            $this->email->from(EMAIL); // change it to yours
+                            $this->email->to($to); // change it to yours
+                            $this->email->subject('Reset Your Password');
+                            $this->email->message($message);
+                            if ($this->email->send()) {
+                                // echo 'Email sent.';
+                            } else {
+                                show_error($this->email->print_debugger());
+                            }
+
+                            $this->session->set_flashdata('smessage', 'Password reset link has been sent successfully');
+                            redirect('/');
+                        } else {
+                            $this->session->set_flashdata('emessage', 'Your account is inactive. Please contact admin.');
+                            redirect($_SERVER['HTTP_REFERER']);
+                        }
+                    } else {
+                        $this->session->set_flashdata('emessage', 'User does not exists');
+                        redirect($_SERVER['HTTP_REFERER']);
+                    }
+                } else {
+                    $this->session->set_flashdata('emessage', validation_errors());
+                    redirect($_SERVER['HTTP_REFERER']);
+                }
+            } else {
+                $this->session->set_flashdata('emessage', 'Please insert some data, No data available');
+                redirect($_SERVER['HTTP_REFERER']);
+            }
+        } else {
+            redirect("/", "refresh");
+        }
+    }
+
+    //---forget-password-reset-----
+    public function forget_password_reset($t)
+    {
+        if (empty($this->session->userdata('user_data'))) {
+            $id = $t;
+            $this->db->select('*');
+            $this->db->from('tbl_forgot_pass');
+            $this->db->where('txn_id', $id);
+            $u1 = $this->db->get()->row();
+            $st = $u1->status;
+
+            if ($st == 0) {
+                // $data_update = array('status' => 1);
+                // $this->db->where('status', $u1->status);
+                // $zapak = $this->db->update('tbl_forgot_pass', $data_update);
+                $data['auth'] = $id;
+
+                $this->load->view('frontend/common/header', $data);
+                $this->load->view('frontend/forgot_pass');
+                $this->load->view('frontend/common/footer', $data);
+            } else {
+                $this->session->set_flashdata('emessage', 'Link already used');
+                redirect("/");
+            }
+        } else {
+            redirect("/", "refresh");
+        }
+    }
+    ////-------update password------
+    public function update_password($t)
+    {
+        if (empty($this->session->userdata('user_data'))) {
+            $txn_id = $t;
+
+            $this->db->select('*');
+            $this->db->from('tbl_forgot_pass');
+            $this->db->where('txn_id', $txn_id);
+            $u2 = $this->db->get()->row();
+            $ui = $u2->user_id;
+            $user_type = $u2->user_type;
+            $data['auth'] = $txn_id;
+            $this->load->helper(array('form', 'url'));
+            $this->load->library('form_validation');
+            $this->load->helper('security');
+            if ($this->input->post()) {
+                $this->form_validation->set_rules('reset_password', 'reset_password', 'required|xss_clean|trim');
+
+                if ($this->form_validation->run() == true) {
+                    $reset_password = $this->input->post('reset_password');
+
+                    if ($user_type == 1) {
+                        $this->db->select('*');
+                        $this->db->from('tbl_users');
+                        $this->db->where('id', $ui);
+                        $this->db->where('is_active', 1);
+                        $user = $this->db->get()->row();
+                    } else {
+                        $this->db->select('*');
+                        $this->db->from('tbl_reseller');
+                        $this->db->where('id', $ui);
+                        $this->db->where('is_active', 1);
+                        $user = $this->db->get()->row();
+                    }
+
+                    if (!empty($user)) {
+                        $rs = md5($reset_password);
+                        $data_update = array('password' => $rs);
+                        $this->db->where('id', $user->id);
+                        if ($user_type == 1) {
+                            $zapak = $this->db->update('tbl_users', $data_update);
+                        } else {
+                            $zapak = $this->db->update('tbl_reseller', $data_update);
+                        }
+
+                        if ($zapak != 0) {
+                            $this->session->set_flashdata('smessage', 'Password reset successfully');
+                            redirect("/", "refresh");
+                        }
+                    } else {
+                        $this->session->set_flashdata('emessage', 'User not found');
+                        redirect($_SERVER['HTTP_REFERER']);
+                    }
+                } else {
+                    $this->session->set_flashdata('emessage', validation_errors());
+                    redirect($_SERVER['HTTP_REFERER']);
+                }
+            } else {
+                $this->session->set_flashdata('emessage', 'Please insert some data, No data available');
+                redirect($_SERVER['HTTP_REFERER']);
+            }
+        } else {
+            redirect("/", "refresh");
+        }
     }
 }
