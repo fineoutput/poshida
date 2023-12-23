@@ -277,9 +277,9 @@ class Fineoutput extends CI_Controller
 
     $tmt = $tlamount - $tprev_dayamount;
 
-    
 
-   
+
+
 
 
     $curl = curl_init();

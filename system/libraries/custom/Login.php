@@ -549,7 +549,7 @@ class CI_Login
                         }
                         //---------- set login session -------------------
                         $this->CI->session->set_userdata('user_data', 1);
-                        $this->CI->session->set_userdata('name', $resellerCheck[0]->f_name);
+                        $this->CI->session->set_userdata('name', $resellerCheck[0]->name);
                         $this->CI->session->set_userdata('phone', $resellerCheck[0]->phone);
                         $this->CI->session->set_userdata('user_type', $type);
                         $this->CI->session->set_userdata('user_id', $resellerCheck[0]->id);
