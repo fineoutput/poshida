@@ -303,7 +303,7 @@ if (!empty($this->session->userdata('user_data'))) {
 
 <body>
   <!-- Start preloader -->
-  <div id="preloader"></div>
+  <!-- <div id="preloader"></div> -->
 
   <div class="main">
     <!-- //================ START HEADER ============================= -->

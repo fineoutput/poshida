@@ -853,7 +853,7 @@
   }
   ?>
   <!-- Start preloader -->
-  <div id="preloader"></div>
+  <!-- <div id="preloader"></div> -->
 
 
   <div class="main">
