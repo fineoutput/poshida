@@ -396,10 +396,10 @@
 <div class="container-fluid mobilebottom" style="position:sticky; bottom: 0;background:#f2f2f2;" id="footerCount">
   <div class="row text-center">
     <div class="col-6 p-2" style="border-right: 2px solid #dee2e6 ;">
-      <a href="#" data-target="#sortby" data-toggle="modal" data-bs-dismiss="modal"> <img  href="<?= base_url() ?>assets/frontend/img/sort.png" rel="icon">> SORT BY</a>
+      <a href="#" data-target="#sortby" data-toggle="modal" data-bs-dismiss="modal"> <img src="<?= base_url() ?>assets/frontend/img/sort.png"> SORT BY</a>
     </div>
     <div class="col-6 p-2">
-      <a href="#" data-target="#filter" data-toggle="modal" data-bs-dismiss="modal"> <img href="<?= base_url() ?>assets/frontend/img/filter.png" rel="icon">> FILTER</a>
+      <a href="#" data-target="#filter" data-toggle="modal" data-bs-dismiss="modal"> <img src="<?= base_url() ?>assets/frontend/img/filter.png" rel="icon"> FILTER</a>
     </div>
   </div>
 
@@ -410,7 +410,7 @@
     <div class="modal-content">
       <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><i class="ion-ios-close-empty"></i></span>
+          <span aria-hidden="true">×</span>
         </button>
         <div class="row no-gutters">
           <div class="col-sm-12">
@@ -438,7 +438,7 @@
     <div class="modal-content" style="top: 0;">
       <div class="modal-body text-center">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><i class="ion-ios-close-empty"></i></span>
+          <span aria-hidden="true">×</span>
         </button>
         <h6 style="padding-top: 10px;font-size: 12px;">
           FILTER</h6>

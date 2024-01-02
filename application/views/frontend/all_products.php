@@ -413,7 +413,7 @@
     <div class="modal-content">
       <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><i class="ion-ios-close-empty"></i></span>
+          <span aria-hidden="true">×</span>
         </button>
         <div class="row no-gutters">
           <div class="col-sm-12">
@@ -443,7 +443,7 @@
     <div class="modal-content" style="top: 0;">
       <div class="modal-body text-center">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><i class="ion-ios-close-empty"></i></span>
+          <span aria-hidden="true">×</span>
         </button>
         <h6 style="padding-top: 10px;font-size: 12px;">
           FILTER</h6>
