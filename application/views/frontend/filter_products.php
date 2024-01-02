@@ -265,10 +265,10 @@
           <!-- ============= END SORT BY ================== -->
 
 
-          <? if (!empty($product_data)) { ?>
+          <? if (!empty($product)) { ?>
             <div class="row">
               <!-- ============= START PRODUCT CARD ================== -->
-              <? foreach ($product_data as $data) {
+              <? foreach ($product as $data) {
                 $type_mrp = 0;
                 $type_spgst = 0;
                 $type_datas = $this->db->get_where('tbl_type', array('product_id = ' => $data->id, 'is_active' => 1, 'color_active' => 1, 'size_active' => 1));

@@ -707,11 +707,11 @@ class CI_Products
         }
          //-------fetch data by category
          if ($t == 1) {
-            $this->CI->db->like('category_id', '"category_id":' . $id);
+            $this->CI->db->where('category_id', $id);
         }
         //-------fetch data by subcategory
         else {
-            $this->CI->db->like('subcategory_id', '"subcategory_id":' . $id);
+            $this->CI->db->where('subcategory_id', $id);
         }
         $this->CI->db->order_by('id', 'desc');
         // ------------------- FITERS -------------------
@@ -726,8 +726,8 @@ class CI_Products
         // print_r($product_data);die();
         $final_filter = $this->filterProducts($size_arr, $color_arr, $attribute_arr, $product_data, $minprice, $maxprice, $sort);
         // $links = $this->CI->pagination->create_links();
-        // print_r($final_filter);die();
-        $sendArray = array("product_data" => $final_filter, "category_name" => $category_name, "subcategory_name" => $subcategory_name, "id" => $id, 't' => $t);
+
+        $sendArray = array("product_data" => json_decode(json_encode($final_filter)), "category_name" => $category_name, "subcategory_name" => $subcategory_name, "id" => $id, 't' => $t);
         // print_r($sendArray);
         // die();
         return $sendArray;
