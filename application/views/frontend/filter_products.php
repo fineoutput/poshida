@@ -536,8 +536,8 @@
                               Select all</span></a>
                         </div>
                         <ul class="list_brand mt-4" style="text-align: left;max-height:87vh;overflow:auto;">
-                          <? foreach ($filter_color as $color) {
-                            $olor_filter = $this->db->get_where('tbl_colour', array('is_active' => 1, 'id' => $color))->result();
+                          <? foreach ($filter_color as $colors) {
+                            $olor_filter = $this->db->get_where('tbl_colour', array('is_active' => 1, 'id' => $colors))->result();
                             if (!empty($olor_filter)) {
                           ?>
 
