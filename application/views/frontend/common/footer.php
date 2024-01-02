@@ -268,7 +268,7 @@
 				<p style="
 					text-align: justify;">
 					Welcome to<a href="<?= base_url() ?>" class="" style="color: #c68fa6 !important; "> Poshida Fashions LLP </a> – Your Premier Destination for the Best Online Kurti
-					Shopping Experience in India! At Poshida Fashions, we blend tradition and style seamlessly,
+					Shopping Experience in India! At Poshida Fashions LLP, we blend tradition and style seamlessly,
 					offering a diverse collection of kurtis designed for the modern woman who appreciates
 					elegance and comfort.
 				</p>
