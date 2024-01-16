@@ -48,20 +48,22 @@
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=711896680882468&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="canonical" type="image/x-icon" href="<?= base_url() ?>assets/frontend/img/Poshida.jpg" rel="icon">
-  <link rel="canonical" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link type="image/x-icon" href="<?= base_url() ?>assets/frontend/img/Poshida.jpg" rel="icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="google-site-verification" content="CuMy5Mu3gGOC41M6wxypzrV2jXpos0v_BD8NYcP0mAQ" />
   <!-- CSS -->
-  <link rel="canonical" rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/xpoge.css">
-  <link rel="canonical" rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/responsive.css">
-  <link rel="canonical" rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/xpoge.css">
+  <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/responsive.css">
+  <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/animate.css">
 
 
-  <link rel="canonical" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- icon -->
-  <link rel="canonical" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="canonical" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="<?= base_url() ?>assets/frontend/js/jquery-3.4.1.min.js"></script>
+
   <script src="<?= base_url() ?>assets/frontend/js/bootstrap-notify.min.js"></script>
 
   <!-- Google tag (gtag.js) -->

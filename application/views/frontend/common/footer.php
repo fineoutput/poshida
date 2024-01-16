@@ -681,7 +681,6 @@ if (!empty($popup_data)) {
 
 <!-- Footer section end -->
 </div>
-<script src="<?= base_url() ?>assets/frontend/js/jquery-3.4.1.min.js"></script>
 <script src="<?= base_url() ?>assets/frontend/js/bootstrap.min.js"></script>
 <script src="<?= base_url() ?>assets/frontend/js/owl.carousel.min.js"></script>
 <script src="<?= base_url() ?>assets/frontend/js/jquery.magnific-popup.min.js"></script>

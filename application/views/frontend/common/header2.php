@@ -47,26 +47,26 @@
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=711896680882468&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="canonical" type="image/x-icon" href="<?= base_url() ?>assets/frontend/img/Poshida.jpg" rel="icon">
-  <link rel="canonical" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link  type="image/x-icon" href="<?= base_url() ?>assets/frontend/img/Poshida.jpg" rel="icon">
+  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- CSS -->
-  <link rel="canonical" rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/xpoge.css">
-  <link rel="canonical" rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/responsive.css">
-  <link rel="canonical" rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/ionicons.min.css">
-  <link rel="canonical" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="canonical" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="canonical" rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/responsive-addcartbtn.css">
-  <link rel="canonical" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-  <link rel="canonical" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link  rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/xpoge.css">
+  <link  rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/responsive.css">
+  <link  rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/ionicons.min.css">
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link  href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link  rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/responsive-addcartbtn.css">
+  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NY9GDLVWKY"></script>
 
 
 
   <!-- <=======google font=====> -->
-  <link rel="canonical" href="https://fonts.cdnfonts.com/css/geometr415-blk-bt" rel="stylesheet">
-  <link rel="canonical" href="https://db.onlinewebfonts.com/c/1ba82d324736a8a9d4327d482c4627c4?family=Ebrima" rel="stylesheet">
+  <link  href="https://fonts.cdnfonts.com/css/geometr415-blk-bt" rel="stylesheet">
+  <link  href="https://db.onlinewebfonts.com/c/1ba82d324736a8a9d4327d482c4627c4?family=Ebrima" rel="stylesheet">
 
   <script>
     window.dataLayer = window.dataLayer || [];
