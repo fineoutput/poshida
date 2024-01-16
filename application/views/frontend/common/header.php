@@ -20,7 +20,7 @@
   <? if (!empty($dsc)) { ?>
     <meta name="description" content="<?= $dsc ?>">
   <? } ?>
-
+  <link rel="canonical" href="https://www.poshida.in/">
   <!-- Mobile Specific Metas -->
   <!-- Meta Pixel Code -->
   <script>

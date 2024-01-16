@@ -19,6 +19,8 @@
   <? if (!empty($dsc)) { ?>
     <meta name="description" content="<?= $dsc ?>">
   <? } ?>
+  <link rel="canonical" href="https://www.poshida.in/">
+
   <meta name="google-site-verification" content="CuMy5Mu3gGOC41M6wxypzrV2jXpos0v_BD8NYcP0mAQ" />
   <!-- Mobile Specific Metas -->
   <!-- Meta Pixel Code -->
