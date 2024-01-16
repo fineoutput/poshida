@@ -76,8 +76,13 @@ class Home extends CI_Controller
         } else {
             $data['cart_data'] = $this->cart->ViewCartOffline();
         }
-        $data['title'] = 'Buy Kurta Online | Designer Kurta For Women | Poshida';
-        $data['dsc'] = 'Buy Designer Kurta Online For Women. Buy Cotton Embroidery Kurta Online , floor length gown , a line kurta , casual kurti & printed kurti At Poshida';
+        $data['title'] = 'Buy Kurta Online | Designer Kurta & Kurti For Women | Poshida';
+        $data['dsc'] = 'Buy Designer Kurta & Kurti for Women Online in India at
+        Best Price. Shop for Latest Designer Kurta & Kurti Online✔️Free
+        Shipping✔️Cash On Delivery.';
+        $data['keyword'] = 'Designer Kurta & Kurti for Women, Latest Designer Kurta,
+        Poshida Fashions LLP';
+
         $this->load->view('frontend/common/header', $data);
         $this->load->view('frontend/index');
         $this->load->view('frontend/common/footer');
@@ -124,26 +129,69 @@ class Home extends CI_Controller
             }
             $data['filter_size'] = array_merge(array_unique($size));
             if ($url == 'Womens') {
-                $data['title'] = 'Buy Stylish Kurti For Women | Kurtis Online Shopping in India | Poshida';
-                $data['dsc'] = 'Designer Kurti: Buy Stylish Kurtis For Women. Explore the latest kurti designs & Kurtis online shopping At Poshida. Upgrade your wardrobe with our fashionable collection';
+                $data['title'] = 'Buy Stylish Kurti For Women | Kurtis Online Shopping in India';
+                $data['dsc'] = 'Buy Stylish Kurtis For Women. Explore the latest kurti
+                designs & Kurtis online shopping in India At Poshida. Order today
+                ✔️Great Deals✔️Best Collection';
+                $data['keyword'] = 'Stylish Kurtis For Women, Jaipur Kurti, Latest Kurti
+                Designs, Poshida Fashions LLP';
             } else if ($url == 'A--LINE-KURTA') {
-                $data['title'] = 'Buy Festival Kurta For Women | A Line Kurta | Poshida';
-                $data['dsc'] = "Get ready for the festivities with Poshida A-line kurta – the perfect festival kurtas for women. Elevate your style with Poshida. Shop now!";
+                $data['title'] = 'Buy A- Line Kurtas | Festival Kurta For Women | Poshida';
+                $data['dsc'] = "Get ready for the festivities with Poshida A-line kurtas –
+                the perfect festival kurtas for women. Elevate your style with
+                Poshida.✔️COD✔️Free Shipping.";
+                $data['keyword'] = 'A- Line Kurta, A-Line Kurta for Women, Festival Kurta For
+                Women, Poshida Fashions LLP';
             } else if ($url == 'EMBROIDERY-KURTA') {
-                $data['title'] = 'Buy Embroidery Kurta for Women Online | Designer Kurta | Poshida';
-                $data['dsc'] = "Elevate your style with Poshida Embroidery Kurta for women online in India. Discover the perfect blend of comfort and elegance. Shop now for a fashionable twist on traditional attire";
+                $data['title'] = 'Buy Embroidery Kurta & Kurti for Women Online | Ethnic Kurta';
+                $data['dsc'] = "Stand out from the crowd with our Ethnic Embroidery
+                Kurta & Kurti for women online.✔️Free Shipping✔️Premium Quality
+                ✔️COD Available.";
+                $data['keyword'] = 'Embroidery Kurta, Embroidery Kurta for Women, Ethnic
+                Kurta, Poshida Fashions LLP';
             } else if ($url == 'FLOOR-LENGTH-GOWN') {
-                $data['title'] = 'Buy Floor Length Gown For Women Online in India - Poshida';
-                $data['dsc'] = "Explore our website today and witness the perfect blend of fashion and charm! Visit Poshida and buy floor length gowns for women online in India - because you deserve to look and feel your absolute best!";
+                $data['title'] = 'Buy Floor Length Gown | Stylish Gown for Women Online |
+                Poshida';
+                $data['dsc'] = "Explore our collection of stylish floor length gowns for
+                women online and find the perfect style to make a great
+                impression.✔️Premium Quality✔️COD.";
+                $data['keyword'] = 'Floor Length Gown, Stylish Gown for Women, Festival
+                Wear Gown, Latest Gown Design, Poshida Fashions LLP';
             } else if ($url == 'SKD-SETS') {
                 $data['title'] = 'Buy Latest Kurti Designs For Women & Kurti Sets Online';
                 $data['dsc'] = "Shop high-quality and stylish designer kurtis online. Our latest kurti designs for women will empower you to embrace your own unique style with our wide selection of the latest kurti designs. Don't let this exciting opportunity pass you by!";
             } else if ($url == 'ALIYA-CUT-KURTI') {
-                $data['title'] = 'Designer Kurtis For Women Online | Aliya Cut Kurtis | Poshida';
-                $data['dsc'] = "Elevate your style with the exclusive Aliya Cut Kurtis collection for women by Poshida. Discover elegant and contemporary designs that blend tradition and modernity seamlessly. Shop online and embrace sophistication with Poshida's Aliya Cut Kurtis";
+                $data['title'] = 'Buy Aliya Cut Kurtis | Stylish Designer Kurtis | Poshida';
+                $data['dsc'] = "Explore the great selection of Stylish Designer Aliya Cut
+                Kurtis from Poshida.✔️Great Deals✔️Free Shipping✔️Premium
+                Quality✔️COD Available.";
+                $data['keyword'] = 'Aliya Cut Kurtis, Jaipur Kurtis, Stylish Designer Kurtis,
+                Poshida Fashions LLP';
             } else if ($url == 'KURTA-PANT-DUPATTA-SETS') {
                 $data['title'] = 'Buy Latest Kurti Designs For Women & Kurti Sets Online';
                 $data['dsc'] = "Shop high-quality and stylish designer kurtis online. Our latest kurti designs for women will empower you to embrace your own unique style with our wide selection of the latest kurti designs. Don't let this exciting opportunity pass you by!";
+            } else if ($url == 'WOMEN-ETHNIC-KURTAS-SETS') {
+                $data['title'] = 'Buy Women Ethnic Kurtas Sets | Kurta Set with Dupatta for
+                Women';
+                $data['dsc'] = "Shop now and explore our remarkable collection of
+                women ethnic kurtas sets with dupatta for women.✔️Great
+                Deals✔️Premium Quality✔️COD.";
+                $data['keyword'] = 'Women Ethnic Kurtas Sets, Kurta Set with Dupatta for
+                Women';
+            } else if ($url == 'WOMEN-STRAIGHT-KURTI-and-KURTAS') {
+                $data['title'] = 'Buy Women Straight Kurti & Kurtas | Straight Kurta & Kurti
+                Designs';
+                $data['dsc'] = "Are you looking for stylish and trendy women's straight
+                kurti & kurtas? Explore our irresistible collection.✔️Great
+                Deals✔️Premium Quality✔️COD.";
+                $data['keyword'] = 'Women Straight Kurti & Kurtas, Straight Kurta & Kurti
+                Designs';
+            } else if ($url == 'WOMEN-PLAZO-PANTS') {
+                $data['title'] = 'Buy Women Plazo Pants Online | Palazzo Pants for Women';
+                $data['dsc'] = "Fuel your fashion obsession with our wide range of
+                palazzo pants for women. Step out in confidence and style with
+                Poshida.✔️Premium Quality✔️COD.";
+                $data['keyword'] = 'Women Plazo Pants Online, Palazzo Pants for Women';
             }
             $this->load->view('frontend/common/header2', $data);
             $this->load->view('frontend/all_products');
