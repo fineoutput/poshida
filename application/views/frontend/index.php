@@ -4,7 +4,7 @@
   	<?php $i = 1;
 		foreach ($category_data->result() as $category) { ?>
   		<div class="item">
-  			<a href="<?= base_url() ?>products/<?= $category->url ?>/1"><img src="<?= base_url() . $category->image2 ?>" alt=""> </a>
+  			<a rel="canonical" href="<?= base_url() ?>products/<?= $category->url ?>/1"><img src="<?= base_url() . $category->image2 ?>" alt=""> </a>
   		</div>
   	<? } ?>
   </div>
@@ -15,8 +15,8 @@
   		<?php $a = 0;
 			foreach ($slider_data->result() as $slider) { ?>
   			<div class="banner-1 bhbh">
-  				<a href="<?= $slider->link; ?>"><img class="d-none d-md-block " src="<?= base_url() . $slider->image ?>" alt="Image not found"></a>
-  				<a href="<?= $slider->link; ?>"><img class="d-block d-md-none fb" src="<?= base_url() . $slider->image2 ?>" alt="Image not found"></a>
+  				<a rel="canonical" href="<?= $slider->link; ?>"><img class="d-none d-md-block " src="<?= base_url() . $slider->image ?>" alt="Image not found"></a>
+  				<a rel="canonical" href="<?= $slider->link; ?>"><img class="d-block d-md-none fb" src="<?= base_url() . $slider->image2 ?>" alt="Image not found"></a>
   			</div>
   		<?php $a++;
 			} ?>
@@ -80,14 +80,14 @@
   								<div class="product-item">
   									<div class="product-image">
   										<? if ($whats->exclusive == 1) { ?><div class="sale-label"><span>Exclusive</span></div><? } ?>
-  										<a href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
+  										<a rel="canonical" href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
   											<img src="<?= base_url() . $type_data[0]->image ?>" alt=" ">
   										</a>
   									</div>
   									<div class="product-details-outer">
   										<div class="product-details">
   											<div class="product-title">
-  												<a href="#"><?= $whats->name ?></a>
+  												<a rel="canonical" href="#"><?= $whats->name ?></a>
   											</div>
   											<div class="price-box">
   												<span class="price">₹<?= $type_spgst ?></span>
@@ -125,7 +125,7 @@
 																	array_push($size_arr, $size_data->id);
 													?>
   																<li class="icon  cart-icon">
-  																	<a href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_size->id) ?>"> <?= $size_data->name ?> <p style="margin-bottom:0; padding: 0px 10px;">|</p> </a>
+  																	<a rel="canonical" href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_size->id) ?>"> <?= $size_data->name ?> <p style="margin-bottom:0; padding: 0px 10px;">|</p> </a>
   																</li>
   													<?php }
 															}
@@ -137,7 +137,7 @@
 													if ($more > 0) {
 														?>
   													<li class="icon ivo-ho compare-icon">
-  														<a href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
+  														<a rel="canonical" href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
   													</li>
   												<? } ?>
   											</ul>
@@ -185,7 +185,7 @@
 				?>
   					<div class="col-lg-3 col-4 col-md-4 p-0">
   						<div class="sub-banner-box wow bounceInLeft mb-0">
-  							<a href="<?= $banner->link ?>">
+  							<a rel="canonical" href="<?= $banner->link ?>">
   								<img class=" witbgt" src="<?= base_url() . $banner->image ?>" alt="Broken Image">
   							</a>
   						</div>
@@ -218,7 +218,7 @@
   					<?php $i = 1;
 						foreach ($shop_by_category_data->result() as $category) { ?>
   						<div class=" item">
-  							<a href="<?= $category->link ?>"><img src="<?= base_url() . $category->image ?>" alt="<?= $category->name ?>" alt="Broken Image">
+  							<a rel="canonical" href="<?= $category->link ?>"><img src="<?= base_url() . $category->image ?>" alt="<?= $category->name ?>" alt="Broken Image">
   								<!-- <div class="product-title hellooo">
   									<?= $category->name ?>
   								</div> -->
@@ -290,14 +290,14 @@
   								<div class="product-item">
   									<div class="product-image">
   										<? if ($whats->exclusive == 1) { ?><div class="sale-label"><span>Exclusive</span></div><? } ?>
-  										<a href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
+  										<a rel="canonical" href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
   											<img src="<?= base_url() . $type_data[0]->image ?>" alt=" ">
   										</a>
   									</div>
   									<div class="product-details-outer">
   										<div class="product-details">
   											<div class="product-title">
-  												<a href="#"><?= $whats->name ?></a>
+  												<a rel="canonical" href="#"><?= $whats->name ?></a>
   											</div>
   											<div class="price-box">
   												<span class="price">₹<?= $type_spgst ?></span>
@@ -335,7 +335,7 @@
 																	array_push($size_arr, $size_data->id);
 													?>
   																<li class="icon  cart-icon">
-  																	<a href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_size->id) ?>"> <?= $size_data->name ?> <p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
+  																	<a rel="canonical" href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_size->id) ?>"> <?= $size_data->name ?> <p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
   																</li>
   													<?php }
 															}
@@ -347,7 +347,7 @@
 													if ($more > 0) {
 														?>
   													<li class="icon ivo-ho compare-icon">
-  														<a href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
+  														<a rel="canonical" href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
   													</li>
   												<? } ?>
   											</ul>
@@ -398,7 +398,7 @@
 				?>
   					<div class="col-lg-3 col-4 col-md-4 p-0">
   						<div class="sub-banner-box wow bounceInLeft mb-0">
-  							<a href="<?= $banner->link ?>">
+  							<a rel="canonical" href="<?= $banner->link ?>">
   								<img class=" witbgt" src="<?= base_url() . $banner->image ?>" alt="Broken Image">
   							</a>
   						</div>
@@ -472,14 +472,14 @@
   								<div class=" m-3 item">
   									<div class="blog-item">
   										<div class="blog-image blog-image1">
-  											<a href="<?= base_url() ?>blog?q=<?= urlencode($blog->heading) ?>">
+  											<a rel="canonical" href="<?= base_url() ?>blog?q=<?= urlencode($blog->heading) ?>">
   												<img src="<?= base_url() . $blog->image ?>" alt="Broken Image">
   											</a>
   										</div>
   										<div class="blog-detail">
   											<span class="bloger-date mt-1"><? $newdate = new DateTime($blog->date);
 																				echo $newdate->format('d-M-Y'); ?></span>
-  											<h3 class="head-three mb-10"><a href="<?= base_url() ?>blog?q=<?= urlencode($blog->heading) ?>"><?= $blog->heading ?></a>
+  											<h3 class="head-three mb-10"><a rel="canonical" href="<?= base_url() ?>blog?q=<?= urlencode($blog->heading) ?>"><?= $blog->heading ?></a>
   											</h3>
   											<p class="text-justify">
   												<?
@@ -502,7 +502,7 @@
 								} ?>
   						</div>
   						<div class="w-100 text-center">
-  							<a href="<?= base_url() ?>blogs" class="readmore-btn">View All Blogs</a>
+  							<a rel="canonical" href="<?= base_url() ?>blogs" class="readmore-btn">View All Blogs</a>
   						</div>
   					</div>
   				</div>

@@ -316,7 +316,7 @@ if (!empty($this->session->userdata('user_data'))) {
           <div class="col-lg-2 col-md-6 col-6 p-0 position-initial icon-bar-center classssss-lo22">
             <div class="right-side">
               <div class="navbar-header">
-                <a class="navbar-brand page-scroll" href="<?= base_url() ?>">
+                <a rel="canonical" class="navbar-brand page-scroll" href="<?= base_url() ?>">
                   <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
                 </a>
               </div>
@@ -332,7 +332,7 @@ if (!empty($this->session->userdata('user_data'))) {
           <div class="col-lg-4 col-md-6 col-6 p-0 position-initial icon-bar-center classssss-lo">
             <div class="right-side">
               <div class="navbar-header">
-                <a class="navbar-brand page-scroll" href="<?= base_url() ?>">
+                <a rel="canonical" class="navbar-brand page-scroll" href="<?= base_url() ?>">
                   <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
                 </a>
               </div>
@@ -348,16 +348,16 @@ if (!empty($this->session->userdata('user_data'))) {
 
                 <ul class="nav navbar-nav">
                   <div class="navbar-header dfghddgd">
-                    <a class="navbar-brand page-scroll" href="<?= base_url() ?>">
+                    <a rel="canonical" class="navbar-brand page-scroll" href="<?= base_url() ?>">
                       <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
                     </a>
                   </div>
                   <!-- <li class="level">
-                    <a href="<?= base_url() ?>" class="nav-link">Home</a>
+                    <a rel="canonical" href="<?= base_url() ?>" class="nav-link">Home</a>
                   </li> -->
 
                   <!-- <li class="level">
-                  <a href="<?= base_url() ?>about_us">About Us</a>
+                  <a rel="canonical" href="<?= base_url() ?>about_us">About Us</a>
                   </li> -->
 
                   <?php $i = 1;
@@ -373,7 +373,7 @@ if (!empty($this->session->userdata('user_data'))) {
                     $this->db->where('is_active', 1);
                     $subcategory_data = $this->db->get(); ?>
                     <li class="level dropdown" style="    position: relative;">
-                      <a href="<?= base_url() ?>products/<?= $category->url ?>/1" class=" nav-link"><?= $category->name ?></a>
+                      <a rel="canonical" href="<?= base_url() ?>products/<?= $category->url ?>/1" class=" nav-link"><?= $category->name ?></a>
                       <span class="opener plus"><i class="bi bi-chevron-down" style="color:white"></i></span>
                       <div class="megamenu full mobile-sub-menu">
                         <div class="megamenu-inner-top">
@@ -384,7 +384,7 @@ if (!empty($this->session->userdata('user_data'))) {
                                 foreach ($subcategory_data->result() as $subcat) {
                                   // if ($i % 2 == 0) {
                                 ?>
-                                  <li class="level3"><a href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
+                                  <li class="level3"><a rel="canonical" href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
                                 <?php
                                   // }
                                   $i++;
@@ -397,7 +397,7 @@ if (!empty($this->session->userdata('user_data'))) {
                                 foreach ($subcategory_data->result() as $subcat) {
                                   if ($i  % 2 != 0) {
                                 ?>
-                                    <li class="level3"><a href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
+                                    <li class="level3"><a rel="canonical" href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
                                 <?php }
                                   $i++;
                                 } ?>
@@ -406,7 +406,7 @@ if (!empty($this->session->userdata('user_data'))) {
                             <!-- <div class="col-lg-3 mt-30 d-none d-lg-block matgin-image" style="display: flex !important;
                           justify-content: center;">
                               <div class="sub-menu-img" style="width: 80%;">
-                                <a href="<?= base_url() ?>products/<?= $category->url ?>/1">
+                                <a rel="canonical" href="<?= base_url() ?>products/<?= $category->url ?>/1">
                                   <img src="<?= base_url() . $category->image ?>" alt=" " style="width: 100%;">
                                 </a>
                               </div>
@@ -445,19 +445,19 @@ if (!empty($this->session->userdata('user_data'))) {
               <ul id="headerCount">
 
                 <li class="search-box  search_box " onclick="hello2()">
-                  <a href="#"><span></span></a>
+                  <a rel="canonical" href="#"><span></span></a>
                 </li>
                 <li class="account-icon heig show-icon">
-                  <a href="#"><span></span></a>
+                  <a rel="canonical" href="#"><span></span></a>
                   <div class="header-link-dropdown account-link-dropdown hrlllll">
                     <ul class="hrb">
                       <? if (empty($this->session->userdata('user_data'))) { ?>
-                        <li><a href="#" class="p-1" data-toggle="modal" data-target="#LoginModel">Log In </a></li>
-                        <li><a href="#" class="p-1" data-toggle="modal" data-target="#SignUpModel"> Register </a></li>
+                        <li><a rel="canonical" href="#" class="p-1" data-toggle="modal" data-target="#LoginModel">Log In </a></li>
+                        <li><a rel="canonical" href="#" class="p-1" data-toggle="modal" data-target="#SignUpModel"> Register </a></li>
                       <? } else { ?>
-                        <li><a href="<?= base_url() ?>my_profile" class="p-1">My Account </a></li>
-                        <li><a href="<?= base_url() ?>my_profile/order" class="p-1">My Orders </a></li>
-                        <li><a href="<?= base_url() ?>User/logout" class="p-1">Log Out </a></li>
+                        <li><a rel="canonical" href="<?= base_url() ?>my_profile" class="p-1">My Account </a></li>
+                        <li><a rel="canonical" href="<?= base_url() ?>my_profile/order" class="p-1">My Orders </a></li>
+                        <li><a rel="canonical" href="<?= base_url() ?>User/logout" class="p-1">Log Out </a></li>
                       <? } ?>
                     </ul>
                   </div>
@@ -476,9 +476,9 @@ if (!empty($this->session->userdata('user_data'))) {
 
                 <li class="cart-icon heig show-icon ">
                   <? if (!empty($this->session->userdata('user_data'))) { ?>
-                    <a href="<?= base_url() ?>my_bag"><span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
+                    <a rel="canonical" href="<?= base_url() ?>my_bag"><span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
                   <? } else { ?>
-                    <a href="<?= base_url() ?>my_bag"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
+                    <a rel="canonical" href="<?= base_url() ?>my_bag"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
                   <? } ?>
                   <div class="cart-dropdown header-link-dropdown scc">
                     <ul class="cart-list link-dropdown-list sdfsZ">
@@ -486,9 +486,9 @@ if (!empty($this->session->userdata('user_data'))) {
                         <ul class="cart_list" style="display: inline-block;">
                           <? foreach ($headerMiniCart['cart_data'] as $miniCart) {
                           ?>
-                            <li> <a href="javascript:void(0);" product_id="<?= base64_encode($miniCart['product_id']) ?>" type_id="<?= base64_encode($miniCart['type_id']) ?>" onclick="deleteCart(this)" class="close-cart"><i class="fa fa-times-circle"></i></a>
-                              <figure> <a href="javascript:;" class="pull-left"> <img alt=" " src="<?= $miniCart['image'] ?>"></a>
-                                <figcaption> <span><a href="#"><?= $miniCart['product_name'] ?></a></span>
+                            <li> <a rel="canonical" href="javascript:void(0);" product_id="<?= base64_encode($miniCart['product_id']) ?>" type_id="<?= base64_encode($miniCart['type_id']) ?>" onclick="deleteCart(this)" class="close-cart"><i class="fa fa-times-circle"></i></a>
+                              <figure> <a rel="canonical" href="javascript:;" class="pull-left"> <img alt=" " src="<?= $miniCart['image'] ?>"></a>
+                                <figcaption> <span><a rel="canonical" href="#"><?= $miniCart['product_name'] ?></a></span>
                                   <p class="cart-price m-0">₹<?= $miniCart['price'] ?></p>
                                   <!-- <p class="m-0"> Color : Red</p>
                                   <p class="m-0">Size : XXL</p> -->
@@ -505,8 +505,8 @@ if (!empty($this->session->userdata('user_data'))) {
                         </ul>
                         <p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">₹<?= $headerMiniCart['sub_total'] ?></strong></span> </p>
                         <div class="clearfix"></div>
-                        <div class="mt-20 d-flex justify-content-center"> <a href="<?= base_url() ?>my_bag" class="btn-color btn"> View Cart</a>
-                          <!-- <a href="checkout.html"
+                        <div class="mt-20 d-flex justify-content-center"> <a rel="canonical" href="<?= base_url() ?>my_bag" class="btn-color btn"> View Cart</a>
+                          <!-- <a rel="canonical" href="checkout.html"
 										class="btn-color btn right-side">Checkout</a> -->
                         </div>
                       <? } else { ?>
@@ -519,11 +519,11 @@ if (!empty($this->session->userdata('user_data'))) {
                   $wishCount = $this->db->get_where('tbl_wishlist', array('user_id = ' => $this->session->userdata('user_id'), 'user_type', $this->session->userdata('user_type')))->num_rows();
                 ?>
                   <li class="cart-icon  heig show-icon dx">
-                    <a href="<?= base_url() ?>my_wishlist"> <span> <small class="cart-notification"><?= $wishCount; ?></small> </span> </a>
+                    <a rel="canonical" href="<?= base_url() ?>my_wishlist"> <span> <small class="cart-notification"><?= $wishCount; ?></small> </span> </a>
                   </li>
                 <? } else { ?>
                   <li class="cart-icon  heig show-icon dx">
-                    <a href="javascript:void(0);"> <span> <small class="cart-notification"><?= $wishCount; ?></small> </span> </a>
+                    <a rel="canonical" href="javascript:void(0);"> <span> <small class="cart-notification"><?= $wishCount; ?></small> </span> </a>
                   </li>
                 <? } ?>
               </ul>
@@ -536,21 +536,21 @@ if (!empty($this->session->userdata('user_data'))) {
             <div class="header-right-link">
               <ul id="headerCount1">
                 <li class="search-box  search_box " onclick="hello()">
-                  <a href="#"><span></span></a>
+                  <a rel="canonical" href="#"><span></span></a>
                 </li>
                 <li class="account-icon heig show-icon">
-                  <a href="#"><span></span></a>
+                  <a rel="canonical" href="#"><span></span></a>
                   <div class="header-link-dropdown account-link-dropdown hrlllll">
                     <ul class="link-dropdown-list">
                       <!-- <li> <span class="dropdown-title">Default welcome msg!</span> -->
                       <ul class="hrb">
                         <? if (empty($this->session->userdata('user_data'))) { ?>
-                          <li><a href="#" class="p-1" data-toggle="modal" data-target="#LoginModel">Log In </a></li>
-                          <li><a href="#" class="p-1" data-toggle="modal" data-target="#SignUpModel"> Register </a></li>
+                          <li><a rel="canonical" href="#" class="p-1" data-toggle="modal" data-target="#LoginModel">Log In </a></li>
+                          <li><a rel="canonical" href="#" class="p-1" data-toggle="modal" data-target="#SignUpModel"> Register </a></li>
                         <? } else { ?>
-                          <li><a href="<?= base_url() ?>my_profile" class="p-1">My Account </a></li>
-                          <li><a href="<?= base_url() ?>my_profile/order" class="p-1">My Orders </a></li>
-                          <li><a href="<?= base_url() ?>User/logout" class="p-1">Log Out </a></li>
+                          <li><a rel="canonical" href="<?= base_url() ?>my_profile" class="p-1">My Account </a></li>
+                          <li><a rel="canonical" href="<?= base_url() ?>my_profile/order" class="p-1">My Orders </a></li>
+                          <li><a rel="canonical" href="<?= base_url() ?>User/logout" class="p-1">Log Out </a></li>
                         <? } ?>
                       </ul>
                 </li>
@@ -571,18 +571,18 @@ if (!empty($this->session->userdata('user_data'))) {
 
             <li class="cart-icon heig show-icon ">
               <? if (!empty($this->session->userdata('user_data'))) { ?>
-                <a href="<?= base_url() ?>my_bag"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
+                <a rel="canonical" href="<?= base_url() ?>my_bag"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
               <? } else { ?>
-                <a href="<?= base_url() ?>my_bag"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
+                <a rel="canonical" href="<?= base_url() ?>my_bag"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
               <? } ?>
               <div class="cart-dropdown header-link-dropdown scc">
                 <ul class="cart-list link-dropdown-list sdfsZ">
                   <? if (!empty($headerMiniCart['cart_data'])) { ?>
                     <ul class="cart_list" style="display: inline-block;">
                       <? foreach ($headerMiniCart['cart_data'] as $miniCart) { ?>
-                        <li> <a href="javascript:void(0);" product_id="<?= base64_encode($miniCart['product_id']) ?>" type_id="<?= base64_encode($miniCart['type_id']) ?>" onclick="deleteCart(this)" class="close-cart"><i class="fa fa-times-circle"></i></a>
-                          <figure> <a href="javascript:void(0);" class="pull-left"> <img alt=" " src="<?= $miniCart['image'] ?>"></a>
-                            <figcaption> <span><a href="#"><?= $miniCart['product_name'] ?></a></span>
+                        <li> <a rel="canonical" href="javascript:void(0);" product_id="<?= base64_encode($miniCart['product_id']) ?>" type_id="<?= base64_encode($miniCart['type_id']) ?>" onclick="deleteCart(this)" class="close-cart"><i class="fa fa-times-circle"></i></a>
+                          <figure> <a rel="canonical" href="javascript:void(0);" class="pull-left"> <img alt=" " src="<?= $miniCart['image'] ?>"></a>
+                            <figcaption> <span><a rel="canonical" href="#"><?= $miniCart['product_name'] ?></a></span>
                               <p class="cart-price m-0">₹<?= $miniCart['price'] ?></p>
                               <!-- <p class="m-0"> Color : Red</p>
                               <p class="m-0">Size : XXL</p> -->
@@ -599,8 +599,8 @@ if (!empty($this->session->userdata('user_data'))) {
                     </ul>
                     <p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">₹<?= $headerMiniCart['sub_total'] ?></strong></span> </p>
                     <div class="clearfix"></div>
-                    <div class="mt-20 d-flex justify-content-center"> <a href="<?= base_url() ?>my_bag" class="btn-color btn"> View Cart</a>
-                      <!-- <a href="checkout.html"
+                    <div class="mt-20 d-flex justify-content-center"> <a rel="canonical" href="<?= base_url() ?>my_bag" class="btn-color btn"> View Cart</a>
+                      <!-- <a rel="canonical" href="checkout.html"
 										class="btn-color btn right-side">Checkout</a> -->
                     </div>
                   <? } else { ?>
@@ -613,11 +613,11 @@ if (!empty($this->session->userdata('user_data'))) {
               $wishCount = $this->db->get_where('tbl_wishlist', array('user_id = ' => $this->session->userdata('user_id'), 'user_type', $this->session->userdata('user_type')))->num_rows();
             ?>
               <li class="cart-icon  heig show-icon dx">
-                <a href="<?= base_url() ?>my_wishlist"> <span> <small class="cart-notification"><?= $wishCount; ?></small> </span> </a>
+                <a rel="canonical" href="<?= base_url() ?>my_wishlist"> <span> <small class="cart-notification"><?= $wishCount; ?></small> </span> </a>
               </li>
             <? } else { ?>
               <li class="cart-icon  heig show-icon dx">
-                <a href="javascript:void(0);"> <span> <small class="cart-notification"><?= $wishCount; ?></small> </span> </a>
+                <a rel="canonical" href="javascript:void(0);"> <span> <small class="cart-notification"><?= $wishCount; ?></small> </span> </a>
               </li>
             <? } ?>
             </ul>
@@ -662,15 +662,15 @@ if (!empty($this->session->userdata('user_data'))) {
               <!-- <div id="google_translate_element" class="hr"></div> -->
               <ul class="nav navbar-nav">
                 <div class="navbar-header dfghddgd">
-                  <a class="navbar-brand page-scroll" href="<?= base_url() ?>">
+                  <a rel="canonical" class="navbar-brand page-scroll" href="<?= base_url() ?>">
                     <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
                   </a>
                 </div>
                 <!-- <li class="level">
-                    <a href="<?= base_url() ?>" class="nav-link">Home</a>
+                    <a rel="canonical" href="<?= base_url() ?>" class="nav-link">Home</a>
                   </li> -->
                 <!-- <li class="level">
-                <a href="<?= base_url() ?>about_us">About Us</a>
+                <a rel="canonical" href="<?= base_url() ?>about_us">About Us</a>
                 </li> -->
                 <?php $i = 1;
                 $this->db->select('*');
@@ -685,7 +685,7 @@ if (!empty($this->session->userdata('user_data'))) {
                   $this->db->where('is_active', 1);
                   $subcategory_data = $this->db->get(); ?>
                   <li class="level dropdown" style="position: relative;">
-                    <a href="<?= base_url() ?>products/<?= $category->url ?>/1"" class=" nav-link"><?= $category->name ?></a>
+                    <a rel="canonical" href="<?= base_url() ?>products/<?= $category->url ?>/1"" class=" nav-link"><?= $category->name ?></a>
                     <span class="opener plus"><i class="bi bi-chevron-down" style="color:white"></i></span>
                     <div class="megamenu full mobile-sub-menu">
                       <div class="megamenu-inner-top">
@@ -696,7 +696,7 @@ if (!empty($this->session->userdata('user_data'))) {
                               foreach ($subcategory_data->result() as $subcat) {
                                 // if ($i % 2 == 0) {
                               ?>
-                                <li class="level3"><a href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
+                                <li class="level3"><a rel="canonical" href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
 
                               <?php
                                 // }
@@ -711,7 +711,7 @@ if (!empty($this->session->userdata('user_data'))) {
                                 foreach ($subcategory_data->result() as $subcat) {
                                   if ($i  % 2 != 0) {
                                 ?>
-                                    <li class="level3"><a href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
+                                    <li class="level3"><a rel="canonical" href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
                                 <?php }
                                   $i++;
                                 } ?>
@@ -720,7 +720,7 @@ if (!empty($this->session->userdata('user_data'))) {
                           <!-- <div class="col-lg-3 mt-30 d-none d-lg-block matgin-image" style="display: flex !important;
 												justify-content: center;">
                               <div class="sub-menu-img" style="width: 80%;">
-                                <a href="<?= base_url() ?>products/<?= $category->url ?>/1">
+                                <a rel="canonical" href="<?= base_url() ?>products/<?= $category->url ?>/1">
                                   <img src="<?= base_url() . $category->image ?>" alt=" " style="width: 100%;">
                                 </a>
                               </div>
@@ -732,8 +732,8 @@ if (!empty($this->session->userdata('user_data'))) {
                 <?php $i++;
                 } ?>
 
-                <!-- <li><a href="<?= base_url() ?>reseller_register">Partner With Us</a></li>
-                  <li class="level "><a href="<?= base_url() ?>contact" class="nav-link">Contact</a></li> -->
+                <!-- <li><a rel="canonical" href="<?= base_url() ?>reseller_register">Partner With Us</a></li>
+                  <li class="level "><a rel="canonical" href="<?= base_url() ?>contact" class="nav-link">Contact</a></li> -->
 
               </ul>
             </div>
