@@ -167,10 +167,9 @@
 				</div>
 			</div>
 
-			<div class="mt-50" style="text-align: justify;">
+			<!-- <div class="mt-50" style="text-align: justify;">
 				<p style="color: #c68fa6 !important; font-size: 16px;"><b> Popular Pages </b></p>
 				<p>
-
 					<a rel="canonical" href="<?= base_url() ?>" class="">Home</a>
 					| <a rel="canonical" href="<?= base_url() ?>products/Womens-and-Girls/1" class=""> Women and Girls</a>
 					| <a rel="canonical" href="<?= base_url() ?>products/A--LINE-KURTA/1" class=""> A-Line Kurta </a>
@@ -337,31 +336,7 @@
 					a genuinely exceptional kurti shopping experience.
 				</p>
 
-			</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+			</div> -->
 		</div>
 
 		<div class="footer-bottom align-center">

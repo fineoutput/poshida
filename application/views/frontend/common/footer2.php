@@ -180,7 +180,7 @@
         </div>
       </div>
 
-      <div class="mt-30" style="text-align: justify;">
+      <!-- <div class="mt-30" style="text-align: justify;">
         <p style="color: #c68fa6 !important; font-size: 16px;"><b> Popular Searches </b></p>
         <p>
           <a href="<?= base_url() ?>" class="">Designer Kurta for Women</a>
@@ -321,9 +321,7 @@
           a genuinely exceptional kurti shopping experience.
         </p>
 
-      </div>
-
-
+      </div> -->
 
     </div>
 
