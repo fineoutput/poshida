@@ -185,7 +185,7 @@
         <h1 class="banner-title">Wishlist</h1>
         <div class="breadcrumb">
           <ul class="inline">
-            <li><a href="<?= base_url() ?>">Home</a>
+            <li><a rel="canonical" href="<?= base_url() ?>">Home</a>
             </li>
             <li>Wishlist</li>
           </ul>
@@ -209,7 +209,7 @@
                       <i class="fa fa-times" style="color: #bf6d6d;
 										font-size: 13px;"></i></a>
                   </div>
-                  <a href="<?= base_url() ?>product_detail/<?= $wishlist['url'] ?>?type=<?= base64_encode($wishlist['type_id']) ?>">
+                  <a rel="canonical" href="<?= base_url() ?>product_detail/<?= $wishlist['url'] ?>?type=<?= base64_encode($wishlist['type_id']) ?>">
                     <img src="<?= $wishlist['image'] ?>" alt="broken image">
                   </a>
                 </div>

@@ -69,7 +69,24 @@
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NY9GDLVWKY"></script>
 
-
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Poshida",
+      "alternateName": "Poshida Fashions LLP",
+      "url": "https://www.poshida.in/",
+      "logo": "https://www.poshida.in/assets/frontend/img/Poshida.jpg",
+      "sameAs": [
+        "https://www.facebook.com/people/Poshida/61551728737337/",
+        "https://www.instagram.com/poshi.da/",
+        "https://www.linkedin.com/company/poshida/?viewAsMember=true",
+        "https://www.youtube.com/@Poshida_",
+        "https://www.poshida.in/",
+        "https://in.pinterest.com/Poshida01/"
+      ]
+    }
+  </script>
   <script>
     window.dataLayer = window.dataLayer || [];
 

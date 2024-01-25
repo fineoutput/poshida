@@ -46,29 +46,47 @@
     fbq('init', '711896680882468');
     fbq('track', 'PageView');
   </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Poshida",
+      "alternateName": "Poshida Fashions LLP",
+      "url": "https://www.poshida.in/",
+      "logo": "https://www.poshida.in/assets/frontend/img/Poshida.jpg",
+      "sameAs": [
+        "https://www.facebook.com/people/Poshida/61551728737337/",
+        "https://www.instagram.com/poshi.da/",
+        "https://www.linkedin.com/company/poshida/?viewAsMember=true",
+        "https://www.youtube.com/@Poshida_",
+        "https://www.poshida.in/",
+        "https://in.pinterest.com/Poshida01/"
+      ]
+    }
+  </script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=711896680882468&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link  type="image/x-icon" href="<?= base_url() ?>assets/frontend/img/Poshida.jpg" rel="icon">
-  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link type="image/x-icon" href="<?= base_url() ?>assets/frontend/img/Poshida.jpg" rel="icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- CSS -->
-  <link  rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/xpoge.css">
-  <link  rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/responsive.css">
-  <link  rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/ionicons.min.css">
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link  href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link  rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/responsive-addcartbtn.css">
-  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/xpoge.css">
+  <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/responsive.css">
+  <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/responsive-addcartbtn.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NY9GDLVWKY"></script>
 
 
 
   <!-- <=======google font=====> -->
-  <link  href="https://fonts.cdnfonts.com/css/geometr415-blk-bt" rel="stylesheet">
-  <link  href="https://db.onlinewebfonts.com/c/1ba82d324736a8a9d4327d482c4627c4?family=Ebrima" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/geometr415-blk-bt" rel="stylesheet">
+  <link href="https://db.onlinewebfonts.com/c/1ba82d324736a8a9d4327d482c4627c4?family=Ebrima" rel="stylesheet">
 
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -867,7 +885,7 @@
           <div class="col-lg-2 col-md-6 col-6 p-0 position-initial icon-bar-center  classssss-lo22">
             <div class="right-side">
               <div class="navbar-header">
-                <a class="navbar-brand page-scroll" href="<?= base_url() ?>">
+                <a rel="canonical" class="navbar-brand page-scroll" href="<?= base_url() ?>">
                   <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
                 </a>
               </div>
@@ -883,7 +901,7 @@
           <div class="col-lg-4 col-md-6 col-6 p-0 position-initial icon-bar-center  classssss-lo">
             <div class="right-side">
               <div class="navbar-header">
-                <a class="navbar-brand page-scroll" href="<?= base_url() ?>">
+                <a rel="canonical" class="navbar-brand page-scroll" href="<?= base_url() ?>">
                   <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
                 </a>
               </div>
@@ -899,16 +917,16 @@
 
                 <ul class="nav navbar-nav">
                   <div class="navbar-header dfghddgd">
-                    <a class="navbar-brand page-scroll" href="<?= base_url() ?>">
+                    <a rel="canonical" class="navbar-brand page-scroll" href="<?= base_url() ?>">
                       <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
                     </a>
                   </div>
                   <!-- <li class="level">
-                    <a href="<?= base_url() ?>" class="nav-link">Home</a>
+                    <a rel="canonical" href="<?= base_url() ?>" class="nav-link">Home</a>
                   </li> -->
 
                   <!-- <li class="level">
-                  <a href="<?= base_url() ?>about_us">About Us</a>
+                  <a rel="canonical" href="<?= base_url() ?>about_us">About Us</a>
                   </li> -->
 
                   <?php $i = 1;
@@ -924,7 +942,7 @@
                     $this->db->where('is_active', 1);
                     $subcategory_data = $this->db->get(); ?>
                     <li class="level dropdown" style="    position: relative;">
-                      <a href="<?= base_url() ?>products/<?= $category->url ?>/1" class=" nav-link"><?= $category->name ?></a>
+                      <a rel="canonical" href="<?= base_url() ?>products/<?= $category->url ?>/1" class=" nav-link"><?= $category->name ?></a>
                       <span class="opener plus"><i class="bi bi-chevron-down" style="color:white"></i></span>
                       <div class="megamenu full mobile-sub-menu">
                         <div class="megamenu-inner-top">
@@ -935,7 +953,7 @@
                                 foreach ($subcategory_data->result() as $subcat) {
                                   // if ($i % 2 == 0) {
                                 ?>
-                                  <li class="level3"><a href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
+                                  <li class="level3"><a rel="canonical" href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
                                 <?php
                                   // }
                                   $i++;
@@ -948,7 +966,7 @@
                                 foreach ($subcategory_data->result() as $subcat) {
                                   if ($i  % 2 != 0) {
                                 ?>
-                                    <li class="level3"><a href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
+                                    <li class="level3"><a rel="canonical" href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
                                 <?php }
                                   $i++;
                                 } ?>
@@ -957,7 +975,7 @@
                             <!-- <div class="col-lg-3 mt-30 d-none d-lg-block matgin-image" style="display: flex !important;
                           justify-content: center;">
                               <div class="sub-menu-img" style="width: 80%;">
-                                <a href="<?= base_url() ?>products/<?= $category->url ?>/1">
+                                <a rel="canonical" href="<?= base_url() ?>products/<?= $category->url ?>/1">
                                   <img src="<?= base_url() . $category->image ?>" alt=" " style="width: 100%;">
                                 </a>
                               </div>
@@ -996,19 +1014,19 @@
               <ul id="headerCount">
 
                 <li class="search-box  search_box " onclick="hello2()">
-                  <a href="#"><span></span></a>
+                  <a rel="canonical" href="#"><span></span></a>
                 </li>
                 <li class="account-icon heig show-icon">
-                  <a href="#"><span></span></a>
+                  <a rel="canonical" href="#"><span></span></a>
                   <div class="header-link-dropdown account-link-dropdown hrlllll">
                     <ul class="hrb">
                       <? if (empty($this->session->userdata('user_data'))) { ?>
-                        <li><a href="#" class="p-1" data-toggle="modal" data-target="#LoginModel">Log In </a></li>
-                        <li><a href="#" class="p-1" data-toggle="modal" data-target="#SignUpModel"> Register </a></li>
+                        <li><a rel="canonical" href="#" class="p-1" data-toggle="modal" data-target="#LoginModel">Log In </a></li>
+                        <li><a rel="canonical" href="#" class="p-1" data-toggle="modal" data-target="#SignUpModel"> Register </a></li>
                       <? } else { ?>
-                        <li><a href="<?= base_url() ?>my_profile" class="p-1">My Account </a></li>
-                        <li><a href="<?= base_url() ?>my_profile/order" class="p-1">My Orders </a></li>
-                        <li><a href="<?= base_url() ?>User/logout" class="p-1">Log Out </a></li>
+                        <li><a rel="canonical" href="<?= base_url() ?>my_profile" class="p-1">My Account </a></li>
+                        <li><a rel="canonical" href="<?= base_url() ?>my_profile/order" class="p-1">My Orders </a></li>
+                        <li><a rel="canonical" href="<?= base_url() ?>User/logout" class="p-1">Log Out </a></li>
                       <? } ?>
                     </ul>
                   </div>
@@ -1030,9 +1048,9 @@
 
                 <li class="cart-icon heig show-icon bag--1 ">
                   <? if (!empty($this->session->userdata('user_data'))) { ?>
-                    <a href="<?= base_url() ?>my_bag"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
+                    <a rel="canonical" href="<?= base_url() ?>my_bag"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
                   <? } else { ?>
-                    <a href="<?= base_url() ?>my_bag"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
+                    <a rel="canonical" href="<?= base_url() ?>my_bag"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
                   <? } ?>
                   <div class="cart-dropdown header-link-dropdown scc">
                     <ul class="cart-list link-dropdown-list sdfsZ">
@@ -1040,9 +1058,9 @@
                         <ul class="cart_list" style="display: inline-block;">
                           <? foreach ($headerMiniCart['cart_data'] as $miniCart) {
                           ?>
-                            <li> <a href="javascript:void(0);" product_id="<?= base64_encode($miniCart['product_id']) ?>" type_id="<?= base64_encode($miniCart['type_id']) ?>" onclick="deleteCart(this)" class="close-cart"><i class="fa fa-times-circle"></i></a>
-                              <figure> <a href="javascript:;" class="pull-left"> <img alt=" " src="<?= $miniCart['image'] ?>"></a>
-                                <figcaption> <span><a href="#"><?= $miniCart['product_name'] ?></a></span>
+                            <li> <a rel="canonical" href="javascript:void(0);" product_id="<?= base64_encode($miniCart['product_id']) ?>" type_id="<?= base64_encode($miniCart['type_id']) ?>" onclick="deleteCart(this)" class="close-cart"><i class="fa fa-times-circle"></i></a>
+                              <figure> <a rel="canonical" href="javascript:;" class="pull-left"> <img alt=" " src="<?= $miniCart['image'] ?>"></a>
+                                <figcaption> <span><a rel="canonical" href="#"><?= $miniCart['product_name'] ?></a></span>
                                   <p class="cart-price m-0">₹<?= $miniCart['price'] ?></p>
                                   <!-- <p class="m-0"> Color : Red</p>
                                   <p class="m-0">Size : XXL</p> -->
@@ -1059,8 +1077,8 @@
                         </ul>
                         <p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">₹<?= $headerMiniCart['sub_total'] ?></strong></span> </p>
                         <div class="clearfix"></div>
-                        <div class="mt-20 d-flex justify-content-center"> <a href="<?= base_url() ?>my_bag" class="btn-color btn"> View Cart</a>
-                          <!-- <a href="checkout.html"
+                        <div class="mt-20 d-flex justify-content-center"> <a rel="canonical" href="<?= base_url() ?>my_bag" class="btn-color btn"> View Cart</a>
+                          <!-- <a rel="canonical" href="checkout.html"
 										class="btn-color btn right-side">Checkout</a> -->
                         </div>
                       <? } else { ?>
@@ -1069,19 +1087,19 @@
                     </ul>
                   </div>
                 </li>
-              
 
 
-                
+
+
                 <? if (!empty($this->session->userdata('user_data'))) {
                   $wishCount = $this->db->get_where('tbl_wishlist', array('user_id = ' => $this->session->userdata('user_id'), 'user_type', $this->session->userdata('user_type')))->num_rows();
                 ?>
                   <li class="cart-icon  heig show-icon dx">
-                    <a href="<?= base_url() ?>my_wishlist"> <span> <small class="cart-notification"><?= $wishCount; ?></small> </span> </a>
+                    <a rel="canonical" href="<?= base_url() ?>my_wishlist"> <span> <small class="cart-notification"><?= $wishCount; ?></small> </span> </a>
                   </li>
                 <? } else { ?>
                   <li class="cart-icon  heig show-icon dx">
-                    <a href="javascript:void(0);"> <span> <small class="cart-notification"><?= $wishCount; ?></small> </span> </a>
+                    <a rel="canonical" href="javascript:void(0);"> <span> <small class="cart-notification"><?= $wishCount; ?></small> </span> </a>
                   </li>
                 <? } ?>
               </ul>
@@ -1093,19 +1111,19 @@
             <div class="header-right-link">
               <ul id="headerCount1" class="d-flex">
                 <li class="search-box  search_box " onclick="hello()">
-                  <a href="#"><span></span></a>
+                  <a rel="canonical" href="#"><span></span></a>
                 </li>
                 <li class="account-icon heig show-icon">
-                  <a href="#"><span></span></a>
+                  <a rel="canonical" href="#"><span></span></a>
                   <div class="header-link-dropdown account-link-dropdown hrlllll">
                     <ul class="hrb">
                       <? if (empty($this->session->userdata('user_data'))) { ?>
-                        <li><a href="#" class="p-1" data-toggle="modal" data-target="#LoginModel">Log In </a></li>
-                        <li><a href="#" class="p-1" data-toggle="modal" data-target="#SignUpModel"> Register </a></li>
+                        <li><a rel="canonical" href="#" class="p-1" data-toggle="modal" data-target="#LoginModel">Log In </a></li>
+                        <li><a rel="canonical" href="#" class="p-1" data-toggle="modal" data-target="#SignUpModel"> Register </a></li>
                       <? } else { ?>
-                        <li><a href="<?= base_url() ?>my_profile" class="p-1">My Account </a></li>
-                        <li><a href="<?= base_url() ?>my_profile/order" class="p-1">My Orders </a></li>
-                        <li><a href="<?= base_url() ?>User/logout" class="p-1">Log Out </a></li>
+                        <li><a rel="canonical" href="<?= base_url() ?>my_profile" class="p-1">My Account </a></li>
+                        <li><a rel="canonical" href="<?= base_url() ?>my_profile/order" class="p-1">My Orders </a></li>
+                        <li><a rel="canonical" href="<?= base_url() ?>User/logout" class="p-1">Log Out </a></li>
                       <? } ?>
                     </ul>
                   </div>
@@ -1121,24 +1139,24 @@
                   }
                 }
                 ?>
-                
+
                 <li class="cart-icon heig show-icon   ">
                   <? if (!empty($this->session->userdata('user_data'))) { ?>
-                    <a href="<?= base_url() ?>my_bag"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
+                    <a rel="canonical" href="<?= base_url() ?>my_bag"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
                   <? } else { ?>
-                    <a href="<?= base_url() ?>my_bag"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
+                    <a rel="canonical" href="<?= base_url() ?>my_bag"> <span> <small class="cart-notification"><?= $cartCount ?></small> </span> </a>
                   <? } ?>
-                 
+
                 </li>
                 <? if (!empty($this->session->userdata('user_data'))) {
                   $wishCount = $this->db->get_where('tbl_wishlist', array('user_id = ' => $this->session->userdata('user_id'), 'user_type', $this->session->userdata('user_type')))->num_rows();
                 ?>
                   <li class="cart-icon  heig show-icon dx">
-                    <a href="<?= base_url() ?>my_wishlist"> <span> <small class="cart-notification"><?= $wishCount; ?></small> </span> </a>
+                    <a rel="canonical" href="<?= base_url() ?>my_wishlist"> <span> <small class="cart-notification"><?= $wishCount; ?></small> </span> </a>
                   </li>
                 <? } else { ?>
                   <li class="cart-icon  heig show-icon dx">
-                    <a href="javascript:void(0);"> <span> <small class="cart-notification"><?= $wishCount; ?></small> </span> </a>
+                    <a rel="canonical" href="javascript:void(0);"> <span> <small class="cart-notification"><?= $wishCount; ?></small> </span> </a>
                   </li>
                 <? } ?>
               </ul>
@@ -1168,15 +1186,15 @@
                 <!-- <div id="google_translate_element" class="hr"></div> -->
                 <ul class="nav navbar-nav">
                   <div class="navbar-header dfghddgd">
-                    <a class="navbar-brand page-scroll" href="<?= base_url() ?>">
+                    <a rel="canonical" class="navbar-brand page-scroll" href="<?= base_url() ?>">
                       <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
                     </a>
                   </div>
                   <li class="level">
-                    <a href="<?= base_url() ?>" class="nav-link">Home</a>
+                    <a rel="canonical" href="<?= base_url() ?>" class="nav-link">Home</a>
                   </li>
                   <!-- <li class="level">
-                  <a href="<?= base_url() ?>about_us">About Us</a>
+                  <a rel="canonical" href="<?= base_url() ?>about_us">About Us</a>
                   </li> -->
                   <?php $i = 1;
                   $this->db->select('*');
@@ -1191,7 +1209,7 @@
                     $this->db->where('is_active', 1);
                     $subcategory_data = $this->db->get(); ?>
                     <li class="level dropdown" style="position: relative;">
-                      <a href="<?= base_url() ?>products/<?= $category->url ?>/1"" class=" nav-link"><?= $category->name ?></a>
+                      <a rel="canonical" href="<?= base_url() ?>products/<?= $category->url ?>/1"" class=" nav-link"><?= $category->name ?></a>
                       <span class="opener plus"><i class="bi bi-chevron-down" style="color:white"></i></span>
                       <div class="megamenu full mobile-sub-menu">
                         <div class="megamenu-inner-top">
@@ -1202,7 +1220,7 @@
                                 foreach ($subcategory_data->result() as $subcat) {
                                   // if ($i % 2 == 0) {
                                 ?>
-                                  <li class="level3"><a href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
+                                  <li class="level3"><a rel="canonical" href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
 
                                 <?php
                                   // }
@@ -1217,7 +1235,7 @@
                                   foreach ($subcategory_data->result() as $subcat) {
                                     if ($i  % 2 != 0) {
                                   ?>
-                                      <li class="level3"><a href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
+                                      <li class="level3"><a rel="canonical" href="<?= base_url() ?>products/<?= $subcat->url ?>/1"><?= $subcat->name ?></a></li>
                                   <?php }
                                     $i++;
                                   } ?>
@@ -1226,7 +1244,7 @@
                             <!-- <div class="col-lg-3 mt-30 d-none d-lg-block matgin-image" style="display: flex !important;
                           justify-content: center;">
                                 <div class="sub-menu-img" style="width: 80%;">
-                                  <a href="<?= base_url() ?>products/<?= $category->url ?>/1">
+                                  <a rel="canonical" href="<?= base_url() ?>products/<?= $category->url ?>/1">
                                     <img src="<?= base_url() . $category->image ?>" alt=" " style="width: 100%;">
                                   </a>
                                 </div>
@@ -1238,8 +1256,8 @@
                   <?php $i++;
                   } ?>
 
-                  <li><a href="<?= base_url() ?>reseller_register">Partner With Us</a></li>
-                  <li class="level "><a href="<?= base_url() ?>contact" class="nav-link">Contact</a></li>
+                  <li><a rel="canonical" href="<?= base_url() ?>reseller_register">Partner With Us</a></li>
+                  <li class="level "><a rel="canonical" href="<?= base_url() ?>contact" class="nav-link">Contact</a></li>
 
                 </ul>
               </div>

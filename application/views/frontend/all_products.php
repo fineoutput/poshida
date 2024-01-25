@@ -59,8 +59,8 @@
           <ul class="inline">
             <? $cat = explode(" ", $category_name);
             $caturl = implode("-", $cat); ?>
-            <li><a href="<?= base_url() ?>">Home</a></li>
-            <li><a href="<?= base_url() ?>products/<?= $caturl ?>/1"><?= $category_name ?></a></li>
+            <li><a rel="canonical" href="<?= base_url() ?>">Home</a></li>
+            <li><a rel="canonical" href="<?= base_url() ?>products/<?= $caturl ?>/1"><?= $category_name ?></a></li>
             <li><?= $subcategory_name ?></li>
           </ul>
         </div>
@@ -83,13 +83,13 @@
               <div class="accordion accordion_style1 mt-0 sidebar-default ">
                 <div class="card ">
                   <div class="card-header" id="headingThre">
-                    <h6 class="mb-0"> <a class="collapsed fontweidth cat-title " data-toggle="collapse" href="#collapseThr" aria-expanded="false" aria-controls="collapseSec">Price</a>
+                    <h6 class="mb-0"> <a rel="canonical" class="collapsed fontweidth cat-title " data-toggle="collapse" href="#collapseThr" aria-expanded="false" aria-controls="collapseSec">Price</a>
                     </h6>
                   </div>
 
                   <div id="accordion">
                     <div id="collapseThr" class="collapse scrollbarr " aria-labelledby="headingThre" data-parent="#accordion" style="max-height:11rem;overflow-y: scroll;">
-                      <a class="btn btn-color small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="priceReset()"><i class="fa fa-close"></i><span>Reset</span></a>
+                      <a rel="canonical" class="btn btn-color small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="priceReset()"><i class="fa fa-close"></i><span>Reset</span></a>
                       <ul>
                         <div class="filter_price" style="padding: 0px 25px;">
                           <div id="price_filter" data-min="0" data-max="5000" data-min-value="0" data-max-value="2000" data-price-sign="₹"></div>
@@ -110,14 +110,14 @@
               <div class="accordion accordion_style1 mt-0 sidebar-default ">
                 <div class="card ">
                   <div class="card-header" id="Wsize">
-                    <h6 class="mb-0"> <a class="collapsed fontweidth cat-title " data-toggle="collapse" href="#collapseWsize" aria-expanded="false" aria-controls="collapseSec">Size</a>
+                    <h6 class="mb-0"> <a rel="canonical" class="collapsed fontweidth cat-title " data-toggle="collapse" href="#collapseWsize" aria-expanded="false" aria-controls="collapseSec">Size</a>
                     </h6>
                   </div>
 
                   <div id="accordion">
                     <div id="collapseWsize" class="collapse scrollbarr " aria-labelledby="Wsize" data-parent="#accordion" style="max-height:11rem;overflow-y: scroll;">
-                      <a class="btn btn-color small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="clearSize()"><i class="fa fa-close"></i><span>Clear all</span></a>
-                      <a class="btn btn-color small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="selectSize()"><i class="fa-solid fa-check" style="font-family: 'FontAwesome';"></i><span> Select
+                      <a rel="canonical" class="btn btn-color small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="clearSize()"><i class="fa fa-close"></i><span>Clear all</span></a>
+                      <a rel="canonical" class="btn btn-color small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="selectSize()"><i class="fa-solid fa-check" style="font-family: 'FontAwesome';"></i><span> Select
                           all</span></a>
                       <ul>
 
@@ -145,15 +145,15 @@
               <div class="accordion accordion_style1 mt-0 sidebar-default ">
                 <div class="card ">
                   <div class="card-header" id="Wcolor">
-                    <h6 class="mb-0"> <a class="collapsed fontweidth cat-title " data-toggle="collapse" href="#collapseWcolor" aria-expanded="false" aria-controls="collapseSec">Color</a>
+                    <h6 class="mb-0"> <a rel="canonical" class="collapsed fontweidth cat-title " data-toggle="collapse" href="#collapseWcolor" aria-expanded="false" aria-controls="collapseSec">Color</a>
                     </h6>
                   </div>
 
                   <div id="accordion">
                     <div id="collapseWcolor" class="collapse scrollbarr " aria-labelledby="Wcolor" data-parent="#accordion" style="max-height:11rem;overflow-y: scroll;">
-                      <a class="btn btn-color small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="clearColor()"><i class="fa fa-close"></i><span>Clear all</span></a>
+                      <a rel="canonical" class="btn btn-color small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="clearColor()"><i class="fa fa-close"></i><span>Clear all</span></a>
 
-                      <a class="btn btn-color small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="selectColor()"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span> Select
+                      <a rel="canonical" class="btn btn-color small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="selectColor()"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span> Select
                           all</span></a>
                       <ul>
 
@@ -192,15 +192,15 @@
                   <div class="accordion accordion_style1 mt-0 sidebar-default ">
                     <div class="card ">
                       <div class="card-header" id="Wfilter<?= $filter->id ?>">
-                        <h6 class="mb-0"> <a class="collapsed fontweidth cat-title " data-toggle="collapse" href="#collapse<?= $filter->id ?>" aria-expanded="false" aria-controls="collapseSec"><?= $filter->name ?></a>
+                        <h6 class="mb-0"> <a rel="canonical" class="collapsed fontweidth cat-title " data-toggle="collapse" href="#collapse<?= $filter->id ?>" aria-expanded="false" aria-controls="collapseSec"><?= $filter->name ?></a>
                         </h6>
                       </div>
 
                       <div id="accordion">
                         <div id="collapse<?= $filter->id ?>" class="collapse scrollbarr " aria-labelledby="Wfilter<?= $filter->id ?>" data-parent=" #accordion" style="max-height:11rem;overflow-y: scroll;">
-                          <a class="btn btn-color small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="removeAttributes(<?= $filter->id ?>)"><i class="fa fa-close"></i><span>Clear all</span></a>
+                          <a rel="canonical" class="btn btn-color small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="removeAttributes(<?= $filter->id ?>)"><i class="fa fa-close"></i><span>Clear all</span></a>
 
-                          <a class="btn btn-color small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="selectAttribute(<?= $filter->id ?>)"><i class="fa-solid fa-check" style="font-family: 'FontAwesome';"></i><span> Select
+                          <a rel="canonical" class="btn btn-color small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="selectAttribute(<?= $filter->id ?>)"><i class="fa-solid fa-check" style="font-family: 'FontAwesome';"></i><span> Select
                               all</span></a>
                           <ul>
                             <? $attributes = $this->db->get_where('tbl_attribute', array('filter_id = ' => $filter->id));
@@ -300,14 +300,14 @@
                     <div class="product-item">
                       <div class="product-image">
                         <? if ($data->exclusive == 1) { ?> <div class="sale-label"><span>Exclusive</span></div><? } ?>
-                        <a href="<?= base_url() ?>product_detail/<?= $data->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
+                        <a rel="canonical" href="<?= base_url() ?>product_detail/<?= $data->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
                           <img src="<?= base_url() . $type_data[0]->image ?>" alt=" ">
                         </a>
                       </div>
                       <div class="product-details-outer">
                         <div class="product-details">
                           <div class="product-title">
-                            <a href="<?= base_url() ?>product_detail/<?= $data->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $data->name ?></a>
+                            <a rel="canonical" href="<?= base_url() ?>product_detail/<?= $data->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $data->name ?></a>
                           </div>
                           <div class="price-box">
                             <span class="price">₹<?= $type_spgst ?></span>
@@ -345,7 +345,7 @@
                                   if ($status == 0) {
                                     array_push($size_arr, $size_data->id); ?>
                                     <li class="icon  cart-icon">
-                                      <a href="<?= base_url() ?>product_detail/<?= $data->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?><p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
+                                      <a rel="canonical" href="<?= base_url() ?>product_detail/<?= $data->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?><p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
                                     </li>
                                 <?php
                                   }
@@ -359,7 +359,7 @@
                               if (!empty($size_data)) {
                                 ?>
                                 <li class="icon ivo-ho compare-icon">
-                                  <a href="<?= base_url() ?>product_detail/<?= $data->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
+                                  <a rel="canonical" href="<?= base_url() ?>product_detail/<?= $data->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
                                 </li>
                             <? }
                             } ?>
@@ -398,10 +398,10 @@
 <div class="container-fluid mobilebottom" style="position:sticky; bottom: 0;background:#f2f2f2;" id="footerCount">
   <div class="row text-center">
     <div class="col-6 p-2" style="border-right: 2px solid #dee2e6 ;">
-      <a href="#" data-target="#sortby" data-toggle="modal" data-bs-dismiss="modal"> <img src="<?= base_url() ?>assets/frontend/img/sort.png"> SORT BY</a>
+      <a rel="canonical" href="#" data-target="#sortby" data-toggle="modal" data-bs-dismiss="modal"> <img src="<?= base_url() ?>assets/frontend/img/sort.png"> SORT BY</a>
     </div>
     <div class="col-6 p-2">
-      <a href="#" data-target="#filter" data-toggle="modal" data-bs-dismiss="modal"> <img src="<?= base_url() ?>assets/frontend/img/filter.png">
+      <a rel="canonical" href="#" data-target="#filter" data-toggle="modal" data-bs-dismiss="modal"> <img src="<?= base_url() ?>assets/frontend/img/filter.png">
  FILTER</a>
     </div>
   </div>
@@ -424,9 +424,9 @@
                 </div>
               </div>
               <ul style="list-style-type: none;">
-                <li style="padding:15px 0px; border-bottom: 2px solid rgb(235, 232, 232);"> <a href="javascript:;" onclick="soryBy('ASC')">Sort by price: Low to High</a>
+                <li style="padding:15px 0px; border-bottom: 2px solid rgb(235, 232, 232);"> <a rel="canonical" href="javascript:;" onclick="soryBy('ASC')">Sort by price: Low to High</a>
                 </li>
-                <li style="padding:15px 0px; border-bottom: 2px solid rgb(235, 232, 232);"> <a href="javascript:;" onclick="soryBy('DESC')">Sort by price: High to Low</a>
+                <li style="padding:15px 0px; border-bottom: 2px solid rgb(235, 232, 232);"> <a rel="canonical" href="javascript:;" onclick="soryBy('DESC')">Sort by price: High to Low</a>
                 </li>
               </ul>
             </div>
@@ -453,10 +453,10 @@
               <div class="row mt-2" style="margin-right: 0px; 
 								margin-left: 0px;">
                 <div class="col-6 fdghddf">
-                  <a href="javascript:void(0);" onclick="clearAllFilters()" class="btn df">CLEAR ALL</a>
+                  <a rel="canonical" href="javascript:void(0);" onclick="clearAllFilters()" class="btn df">CLEAR ALL</a>
                 </div>
                 <div class="col-6 fdghddf">
-                  <a href="javascript:;" class="btn df" onclick="submitMOB()">APPLY</a>
+                  <a rel="canonical" href="javascript:;" class="btn df" onclick="submitMOB()">APPLY</a>
                 </div>
               </div>
               <form action="<?= base_url() ?>filter_products" id="applyFilteronMobile" method="get" enctype="multipart/form-data">
@@ -465,11 +465,11 @@
                     <ul class="nav nav-tabs visitedcolor" role="tablist" style="display: block; border-bottom: 0px;">
                       <input type="hidden" value="<?= $url ?>" name="url" />
                       <div class="list-group" id="list-tab" role="tablist">
-                        <a class="active" id="price-tab" data-toggle="tab" href="#price" role="tab" aria-controls="price" aria-selected="true">Price</a>
-                        <a id="list-profile-list" id="size-tab" data-toggle="tab" href="#size" role="tab" aria-controls="size" aria-selected="false">Size</a>
-                        <a id="color-tab" data-toggle="tab" href="#color" role="tab" aria-controls="color" aria-selected="false">Color</a>
+                        <a rel="canonical" class="active" id="price-tab" data-toggle="tab" href="#price" role="tab" aria-controls="price" aria-selected="true">Price</a>
+                        <a rel="canonical" id="list-profile-list" id="size-tab" data-toggle="tab" href="#size" role="tab" aria-controls="size" aria-selected="false">Size</a>
+                        <a rel="canonical" id="color-tab" data-toggle="tab" href="#color" role="tab" aria-controls="color" aria-selected="false">Color</a>
                         <? foreach ($filter_main->result() as $filter) { ?>
-                          <a id="tab<?= $filter->id ?>" data-toggle="tab" href="#tog<?= $filter->id ?>" role="tab" aria-controls="tog<?= $filter->id ?>" aria-selected="false"><?= $filter->name ?></a>
+                          <a rel="canonical" id="tab<?= $filter->id ?>" data-toggle="tab" href="#tog<?= $filter->id ?>" role="tab" aria-controls="tog<?= $filter->id ?>" aria-selected="false"><?= $filter->name ?></a>
                         <? } ?>
                       </div>
 
@@ -479,7 +479,7 @@
                     <div class="tab-content shop_info_tab" style="margin-top:5px;">
                       <div class="tab-pane show active" id="price" role="tabpanel" aria-labelledby="price-tab">
                         <div class="row float-right mr-2 classk" style="margin-top:20px;">
-                          <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="priceReset()"><i class="fa fa-close"></i><span class="hn">Reset</span></a>
+                          <a rel="canonical" class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="priceReset()"><i class="fa fa-close"></i><span class="hn">Reset</span></a>
                         </div>
 
                         <div class="filter_price hrtf   " style="    position: absolute;
@@ -497,10 +497,10 @@
 
                       <div class="tab-pane fade" id="size" role="tabpanel" aria-labelledby="size-tab">
                         <div class="row float-right mr-2 classk" style="margin-top:20px;">
-                          <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="clearSize()"><i class="fa fa-close"></i><span class="hn">Clear
+                          <a rel="canonical" class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="clearSize()"><i class="fa fa-close"></i><span class="hn">Clear
                               all</span></a>
 
-                          <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="selectSize()"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span class="hn">
+                          <a rel="canonical" class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="selectSize()"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span class="hn">
                               Select all</span></a>
                         </div>
                         <ul class="list_brand " style="text-align: left;max-height:87vh;overflow:auto; width: 100%;">
@@ -520,10 +520,10 @@
                       </div>
                       <div class="tab-pane fade" id="color" role="tabpanel" aria-labelledby="color-tab">
                         <div class="row float-right mr-2 classk" style="margin-top:20px;">
-                          <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="javascript:void(0)"onclick="clearColor()"><i class="fa fa-close"></i><span class="hn">Clear
+                          <a rel="canonical" class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="javascript:void(0)"onclick="clearColor()"><i class="fa fa-close"></i><span class="hn">Clear
                               all</span></a>
 
-                          <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="selectColor()"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span class="hn">
+                          <a rel="canonical" class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="selectColor()"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span class="hn">
                               Select all</span></a>
                         </div>
                         <ul class="list_brand mt-4" style="text-align: left;max-height:87vh;overflow:auto;">
@@ -556,10 +556,10 @@
                       ?>
                           <div class="tab-pane fade" id="tog<?= $filter->id ?>" role="tabpanel" aria-labelledby="<?= $filter->id ?>-tab">
                             <div class="row float-right mr-2 classk" style="margin-top:20px;">
-                              <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="removeAttributes(<?= $filter->id ?>)"><i class="fa fa-close"></i><span class="hn">Clear
+                              <a rel="canonical" class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="removeAttributes(<?= $filter->id ?>)"><i class="fa fa-close"></i><span class="hn">Clear
                                   all</span></a>
 
-                              <a class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="selectAttribute(<?= $filter->id ?>)"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span class="hn">
+                              <a rel="canonical" class="btn btn-color dcxc small btn-filter  me-3  mb-20" href="javascript:void(0)" onclick="selectAttribute(<?= $filter->id ?>)"><i class="fa-solid fa-check" style="    font-family: 'FontAwesome';"></i><span class="hn">
                                   Select all</span></a>
                             </div>
                             <ul class="list_brand product_color_switch mt-4" style="text-align: left;max-height:65vh;overflow:auto; width: 100%;">

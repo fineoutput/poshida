@@ -5,7 +5,7 @@
         <h1 class="banner-title">Blog</h1>
         <div class="breadcrumb">
           <ul class="inline">
-            <li><a href="<?= base_url() ?>">Home</a>
+            <li><a rel="canonical" rel="canonical" href="<?= base_url() ?>">Home</a>
             </li>
             <li>Blog</li>
 
@@ -25,14 +25,14 @@
                 <div class=" m-3 item  ">
                   <div class="blog-item">
                     <div class="blog-image blog-image1">
-                      <a href="<?= base_url() ?>blog?q=<?= urlencode($blog->heading) ?>">
+                      <a rel="canonical" rel="canonical" href="<?= base_url() ?>blog?q=<?= urlencode($blog->heading) ?>">
                         <img src="<?= base_url() . $blog->image ?>" alt="<?= $blog->heading ?>" alt="broken image">
                       </a>
                     </div>
                     <div class="blog-detail">
                       <span class="bloger-date"><? $newdate = new DateTime($blog->date);
 																		echo $newdate->format('d-M-Y'); ?></span>
-                      <h3 class="head-three mb-10"><a href="<?= base_url() ?>blog?q=<?= urlencode($blog->heading) ?>"><?= $blog->heading ?></a>
+                      <h3 class="head-three mb-10"><a rel="canonical" rel="canonical" href="<?= base_url() ?>blog?q=<?= urlencode($blog->heading) ?>"><?= $blog->heading ?></a>
                       </h3>
                       <p class="text-justify">
   												<?
@@ -48,7 +48,7 @@
 														$string .= '...';
 													}
 													echo $string; ?></p>
-                      <a href="<?= base_url() ?>blog?q=<?= urlencode($blog->heading) ?>" class="readmore-btn re">Read More</a>
+                      <a rel="canonical" rel="canonical" href="<?= base_url() ?>blog?q=<?= urlencode($blog->heading) ?>" class="readmore-btn re">Read More</a>
                     </div>
                   </div>
                 </div>

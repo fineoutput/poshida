@@ -6,7 +6,7 @@
                 <h1 class="banner-title">Contact us</h1>
                 <div class="breadcrumb">
                     <ul class="inline">
-                        <li><a href="<?= base_url() ?>">Home</a></li>
+                        <li><a rel="canonical" href="<?= base_url() ?>">Home</a></li>
                         <li>Contact us</li>
                     </ul>
                 </div>

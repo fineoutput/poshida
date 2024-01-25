@@ -15,7 +15,7 @@
    
                 <div class="breadcrumb">
                     <ul class="inline">
-                        <li><a href="<?= base_url() ?>">Home</a>
+                        <li><a rel="canonical" href="<?= base_url() ?>">Home</a>
                         </li>
                         <li>Reset Password</li>
                     </ul>

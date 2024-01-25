@@ -276,9 +276,9 @@
         $subcat_name = $this->db->get_where('tbl_subcategory', array('id = ' => $product_data[0]->subcategory_id))->result(); ?>
         <div class="breadcrumb">
           <ul class="inline">
-            <li><a href="<?= base_url() ?>">Home</a></li>
-            <li><a href="<?= base_url() ?>products/<?= $cat_name[0]->url ?>/1"><?= $cat_name[0]->name ?></a></li>
-            <li><a href="<?= base_url() ?>products/<?= $subcat_name[0]->url ?>/1"><?= $subcat_name[0]->name ?></a></li>
+            <li><a rel="canonical" href="<?= base_url() ?>">Home</a></li>
+            <li><a rel="canonical" href="<?= base_url() ?>products/<?= $cat_name[0]->url ?>/1"><?= $cat_name[0]->name ?></a></li>
+            <li><a rel="canonical" href="<?= base_url() ?>products/<?= $subcat_name[0]->url ?>/1"><?= $subcat_name[0]->name ?></a></li>
             <!-- <li><?= $product_data[0]->name ?></li> -->
           </ul>
         </div>
@@ -355,24 +355,24 @@
                     <div class="product-images demo-gallery">
                       <div class="main-img-slider">
 
-                        <a data-fancybox="gallery" href="<?= base_url() . $type_data[0]->image ?>"> <img src="<?= base_url() . $type_data[0]->image ?>" class="img-fluid"></a>
+                        <a rel="canonical" data-fancybox="gallery" href="<?= base_url() . $type_data[0]->image ?>"> <img src="<?= base_url() . $type_data[0]->image ?>" class="img-fluid"></a>
                         <? if (!empty($type_data[0]->image2)) { ?>
-                          <a data-fancybox="gallery" href="<?= base_url() . $type_data[0]->image2 ?>"> <img src="<?= base_url() . $type_data[0]->image2 ?>" class="img-fluid"></a>
+                          <a rel="canonical" data-fancybox="gallery" href="<?= base_url() . $type_data[0]->image2 ?>"> <img src="<?= base_url() . $type_data[0]->image2 ?>" class="img-fluid"></a>
                         <? }
                         if (!empty($type_data[0]->image3)) { ?>
-                          <a data-fancybox="gallery" href="<?= base_url() . $type_data[0]->image3 ?>"> <img src="<?= base_url() . $type_data[0]->image3 ?>" class="img-fluid "></a>
+                          <a rel="canonical" data-fancybox="gallery" href="<?= base_url() . $type_data[0]->image3 ?>"> <img src="<?= base_url() . $type_data[0]->image3 ?>" class="img-fluid "></a>
                         <? }
                         if (!empty($type_data[0]->image4)) { ?>
-                          <a data-fancybox="gallery" href="<?= base_url() . $type_data[0]->image4 ?>"> <img src="<?= base_url() . $type_data[0]->image4 ?>" class="img-fluid"></a>
+                          <a rel="canonical" data-fancybox="gallery" href="<?= base_url() . $type_data[0]->image4 ?>"> <img src="<?= base_url() . $type_data[0]->image4 ?>" class="img-fluid"></a>
                         <? }
                         if (!empty($type_data[0]->image5)) { ?>
-                          <a data-fancybox="gallery" href="<?= base_url() . $type_data[0]->image5 ?>"> <img src="<?= base_url() . $type_data[0]->image5 ?>" class="img-fluid"></a>
+                          <a rel="canonical" data-fancybox="gallery" href="<?= base_url() . $type_data[0]->image5 ?>"> <img src="<?= base_url() . $type_data[0]->image5 ?>" class="img-fluid"></a>
                         <? }
                         if (!empty($type_data[0]->image6)) { ?>
-                          <a data-fancybox="gallery" href="<?= base_url() . $type_data[0]->image6 ?>"> <img src="<?= base_url() . $type_data[0]->image6 ?>" class="img-fluid "></a>
+                          <a rel="canonical" data-fancybox="gallery" href="<?= base_url() . $type_data[0]->image6 ?>"> <img src="<?= base_url() . $type_data[0]->image6 ?>" class="img-fluid "></a>
                         <? }
                         if (!empty($type_data[0]->video)) { ?>
-                          <a data-fancybox="gallery" href="<?= base_url() . $type_data[0]->video ?>"> <video>
+                          <a rel="canonical" data-fancybox="gallery" href="<?= base_url() . $type_data[0]->video ?>"> <video>
                               <source type="video/mp4" autoplay controls src="<?= base_url() . $type_data[0]->video ?>" class="img-fluid gc-zoom">
                             </video> </a>
 
@@ -428,7 +428,7 @@
                 }
                 $rating = ($totalStars / $review_countdiv) * 100;
                 ?>
-                <a href="javascript:void(0)" onclick="scrollMe()">
+                <a rel="canonical" href="javascript:void(0)" onclick="scrollMe()">
                   <div class="rating-summary-block">
                     <div title="<?= $rating ?>%" class="rating-result"> <span style="width:<?= $rating ?>%"></span>
                     </div>
@@ -467,7 +467,7 @@
                             ?>
                               <div>
                                 <div class="m-2 " style="margin-bottom: 0px !important;">
-                                  <a href="<?= base_url() ?>product_detail/<?= $product_data[0]->url ?>?type=<?= base64_encode($size['type_id']) ?>"><span class="<? if ($size['id'] == $type_data[0]->size_id) { ?> active<? } ?> <? if ($size['stock'] == 0) { ?> spananim <? } ?>"><?= $size['size_name']; ?></span></a>
+                                  <a rel="canonical" href="<?= base_url() ?>product_detail/<?= $product_data[0]->url ?>?type=<?= base64_encode($size['type_id']) ?>"><span class="<? if ($size['id'] == $type_data[0]->size_id) { ?> active<? } ?> <? if ($size['stock'] == 0) { ?> spananim <? } ?>"><?= $size['size_name']; ?></span></a>
                                 </div>
                                 <div class="text-center" style="font-size: 11px ;">
                                   <? if ($size['id'] == $type_data[0]->size_id && $type_data[0]->inventory < 15) {
@@ -567,20 +567,20 @@
                     if (!empty($wihslist)) {
                   ?>
                       <li class="icon cart-icon wishlist-heart">
-                        <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="remove" onclick="wishlist(this)" class="btn btn-color sice"> <i class="fa fa-hart wsws" style="font-size: 23px; color: #fff; "></i>Remove Wishlist</a>
+                        <a rel="canonical" href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="remove" onclick="wishlist(this)" class="btn btn-color sice"> <i class="fa fa-hart wsws" style="font-size: 23px; color: #fff; "></i>Remove Wishlist</a>
                       </li>
                       <li class="icon fav-icon-heart ">
-                        <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="remove" onclick="wishlist(this)"><i class="fa fa-hert wsws" style="font-size: 23px; margin-left: 24px; color: #c68fa6; ">
+                        <a rel="canonical" href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="remove" onclick="wishlist(this)"><i class="fa fa-hert wsws" style="font-size: 23px; margin-left: 24px; color: #c68fa6; ">
                             <div class="tooltip">Remove to wishlist</div>
                           </i>
                         </a>
                       </li>
                     <? } else { ?>
                       <li class="icon cart-icon wishlist-heart">
-                        <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="add" onclick="wishlist(this)" class="btn btn-color sice"> <i class="fa fa-hart wsws" style="font-size: 23px; color: #fff; "></i>Add Wishlist</a>
+                        <a rel="canonical" href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="add" onclick="wishlist(this)" class="btn btn-color sice"> <i class="fa fa-hart wsws" style="font-size: 23px; color: #fff; "></i>Add Wishlist</a>
                       </li>
                       <li class="icon fav-icon-heart ">
-                        <a href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="add" onclick="wishlist(this)"><i class="fa fa-heart-o wsws" style="font-size: 23px; margin-left: 24px; color: #686868;; ">
+                        <a rel="canonical" href="javascript:void(0)" product_id="<?= base64_encode($product_data[0]->id) ?>" type_id="<?= base64_encode($type_data[0]->id) ?>" status="add" onclick="wishlist(this)"><i class="fa fa-heart-o wsws" style="font-size: 23px; margin-left: 24px; color: #686868;; ">
                             <div class="tooltip">Add to wishlist</div>
                           </i></a>
                       </li>
@@ -588,10 +588,10 @@
                   <? } else { ?>
                     <!-- //-----LOGIN ----- -->
                     <li class="icon cart-icon wishlist-heart">
-                      <a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel" class="btn btn-color sice"> <i class="fa fa wsws" style="font-size: 23px; color: #fff; "></i>Add to wishlist</a>
+                      <a rel="canonical" href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel" class="btn btn-color sice"> <i class="fa fa wsws" style="font-size: 23px; color: #fff; "></i>Add to wishlist</a>
                     </li>
                     <li class="icon fav-icon-heart ">
-                      <a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel"><i class="fa fa-he=art-o wsws" style="font-size: 23px; margin-left: 24px; color: #686868;; ">
+                      <a rel="canonical" href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel"><i class="fa fa-he=art-o wsws" style="font-size: 23px; margin-left: 24px; color: #686868;; ">
                           <div class="tooltip">Add to wishlist</div>
                         </i>
                       </a>
@@ -610,7 +610,7 @@
                     <p class="text-justify "><?= $product_data[0]->short_description ?></p>
                   </div>
                   <div class="show-more">
-                    <a href="javascript:void(0);" style="color:#c68fa6">Show more</a>
+                    <a rel="canonical" href="javascript:void(0);" style="color:#c68fa6">Show more</a>
                   </div>
 
 
@@ -659,7 +659,7 @@
           <div class="col-12">
             <div id="tabs">
               <ul class="nav nav-tabs">
-                <li><a class="tab-Description selected" style="padding: 10px 0px;" title="Description">Product Details</a></li>
+                <li><a rel="canonical" class="tab-Description selected" style="padding: 10px 0px;" title="Description">Product Details</a></li>
               </ul>
             </div>
             <div id="items">
@@ -703,8 +703,8 @@
               <div id="tabs">
 
                 <ul class="nav nav-tabs" style="display: flex; justify-content: space-between;">
-                  <a class="tab-Description selected" style="padding: 10px 0px; color: #c68fa6;       font-weight: bold;" title="Description">Review</a>
-                  <a href="Review.html" class="tab-Description selected" title="Description" style="color: #c68fa6;  font-weight: bold; "> View All</a>
+                  <a rel="canonical" class="tab-Description selected" style="padding: 10px 0px; color: #c68fa6;       font-weight: bold;" title="Description">Review</a>
+                  <a rel="canonical" href="Review.html" class="tab-Description selected" title="Description" style="color: #c68fa6;  font-weight: bold; "> View All</a>
                 </ul>
               </div>
               <? foreach ($product_reviews->result() as $reviews) { ?>
@@ -850,14 +850,14 @@
                     <div class="product-item">
                       <div class="product-image">
                         <? if ($buy_with->exclusive == 1) { ?> <div class="sale-label"><span>Sale</span></div> <? } ?>
-                        <a href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
+                        <a rel="canonical" href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
                           <img src="<?= base_url() . $type_data[0]->image ?>" alt=" ">
                         </a>
                       </div>
                       <div class="product-details-outer">
                         <div class="product-details">
                           <div class="product-title">
-                            <a href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $buy_with->name ?></a>
+                            <a rel="canonical" href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $buy_with->name ?></a>
                           </div>
                           <div class="price-box">
                             <span class="price">₹<?= $type_spgst ?></span>
@@ -895,7 +895,7 @@
                                     array_push($size_arr, $size_data->id);
                             ?>
                                     <li class="icon  cart-icon">
-                                      <a href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?><p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
+                                      <a rel="canonical" href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?><p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
                                     </li>
                                 <?php
                                   }
@@ -909,7 +909,7 @@
                               if (!empty($size_data)) {
                                 ?>
                                 <li class="icon ivo-ho compare-icon">
-                                  <a href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
+                                  <a rel="canonical" href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
                                 </li>
                             <? }
                             } ?>
@@ -992,14 +992,14 @@
                     <div class="product-item">
                       <div class="product-image">
                         <? if ($buy_with->exclusive == 1) { ?> <div class="sale-label"><span>Sale</span></div> <? } ?>
-                        <a href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
+                        <a rel="canonical" href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
                           <img src="<?= base_url() . $type_data[0]->image ?>" alt=" ">
                         </a>
                       </div>
                       <div class="product-details-outer">
                         <div class="product-details">
                           <div class="product-title">
-                            <a href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $buy_with->name ?></a>
+                            <a rel="canonical" href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><?= $buy_with->name ?></a>
                           </div>
                           <div class="price-box">
                             <span class="price">₹<?= $type_spgst ?></span>
@@ -1037,7 +1037,7 @@
                                     array_push($size_arr, $size_data->id);
                             ?>
                                     <li class="icon  cart-icon">
-                                      <a href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?><p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
+                                      <a rel="canonical" href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_size->id) ?>"><?= $size_data->name ?><p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
                                     </li>
                                 <?php
                                   }
@@ -1051,7 +1051,7 @@
                               if (!empty($size_data)) {
                                 ?>
                                 <li class="icon ivo-ho compare-icon">
-                                  <a href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
+                                  <a rel="canonical" href="<?= base_url() ?>product_detail/<?= $buy_with->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
                                 </li>
                             <? }
                             } ?>

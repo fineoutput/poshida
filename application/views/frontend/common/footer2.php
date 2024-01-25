@@ -79,7 +79,7 @@
           <div class="col-12 col-lg-3 col-md-6">
             <div class="footer-about mb-sm-30">
               <div class="footer-logo">
-                <a href="<?= base_url() ?>">
+                <a rel="canonical" href="<?= base_url() ?>">
                   <img src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" alt="logo">
                 </a>
               </div>
@@ -99,10 +99,10 @@
               <span class="opener plus"></span>
               <h3 class="head-three">Quick Help</h3>
               <ul class="footer-menu footer-block-contant">
-                <li><a href="<?= base_url() ?>privacy_policy">Privacy & Policy</a></li>
-                <li><a href="<?= base_url() ?>return_and_replace">Returns, Replace & Exchanges</a></li>
-                <li><a href="<?= base_url() ?>shipping_and_delivery">Shipping & Delivery</a></li>
-                <li><a href="<?= base_url() ?>terms_and_conditions">Terms & Conditions</a></li>
+                <li><a rel="canonical" href="<?= base_url() ?>privacy_policy">Privacy & Policy</a></li>
+                <li><a rel="canonical" href="<?= base_url() ?>return_and_replace">Returns, Replace & Exchanges</a></li>
+                <li><a rel="canonical" href="<?= base_url() ?>shipping_and_delivery">Shipping & Delivery</a></li>
+                <li><a rel="canonical" href="<?= base_url() ?>terms_and_conditions">Terms & Conditions</a></li>
 
               </ul>
             </div>
@@ -113,8 +113,8 @@
                 <span class="opener plus"></span>
                 <h3 class="head-three">My Account</h3>
                 <ul class="footer-menu footer-block-contant">
-                  <li><a href="<?= base_url() ?>my_profile/order">Orders & Returns</a></li>
-                  <li><a href="<?= base_url() ?>my_profile">Account Details</a></li>
+                  <li><a rel="canonical" href="<?= base_url() ?>my_profile/order">Orders & Returns</a></li>
+                  <li><a rel="canonical" href="<?= base_url() ?>my_profile">Account Details</a></li>
                 </ul>
               </div>
             </div>
@@ -124,12 +124,12 @@
                 <span class="opener plus"></span>
                 <h3 class="head-three">My Account</h3>
                 <ul class="footer-menu footer-block-contant">
-                  <li><a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel">Login</a></li>
-                  <li><a href="<?= base_url() ?>about_us">About Us</a></li>
-                  <li><a href="<?= base_url() ?>career">Career</a></li>
-                  <li><a href="<?= base_url() ?>reseller_register">Partner With Us</a></li>
-                  <li class="level "><a href="<?= base_url() ?>contact" class="nav-link">Contact</a></li>
-                  <li class="level "><a href="<?= base_url() ?>blogs" class="nav-link">Blog</a></li>
+                  <li><a rel="canonical" href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel">Login</a></li>
+                  <li><a rel="canonical" href="<?= base_url() ?>about_us">About Us</a></li>
+                  <li><a rel="canonical" href="<?= base_url() ?>career">Career</a></li>
+                  <li><a rel="canonical" href="<?= base_url() ?>reseller_register">Partner With Us</a></li>
+                  <li class="level "><a rel="canonical" href="<?= base_url() ?>contact" class="nav-link">Contact</a></li>
+                  <li class="level "><a rel="canonical" href="<?= base_url() ?>blogs" class="nav-link">Blog</a></li>
                 </ul>
               </div>
             </div>
@@ -154,11 +154,11 @@
                     </div>
                     <div class="contact-box-detail" style="cursor: pointer;">
                       <p>
-                        <a href="tel:+91-6377898988">+91-6377898988</a>
+                        <a rel="canonical" href="tel:+91-6377898988">+91-6377898988</a>
                       </p>
 
                       <p>
-                        <a href="tel:+0141-2988751">0141-2988751</a>
+                        <a rel="canonical" href="tel:+0141-2988751">0141-2988751</a>
                       </p>
 
 
@@ -170,7 +170,7 @@
                       <img src="<?= base_url() ?>assets/frontend/img/mail-icon.svg" alt=" ">
                     </div>
                     <div class="contact-box-detail" style="cursor: pointer;">
-                      <p> <a href="mailto:info@poshida.in">info@poshida.in</a></p>
+                      <p> <a rel="canonical" href="mailto:info@poshida.in">info@poshida.in</a></p>
                     </div>
                   </li>
                 </ul>
@@ -183,66 +183,66 @@
       <!-- <div class="mt-30" style="text-align: justify;">
         <p style="color: #c68fa6 !important; font-size: 16px;"><b> Popular Searches </b></p>
         <p>
-          <a href="<?= base_url() ?>" class="">Designer Kurta for Women</a>
-          | <a href="<?= base_url() ?>products/Womens-and-Girls/1" class=""> Kurti Designs for Women </a>
-          | <a href="<?= base_url() ?>products/Womens-and-Girls/1" class=""> jaipur kurti A Line Kurta for Women </a>
-          | <a href="<?= base_url() ?>products/A--LINE-KURTA/1" class=""> A Line Kurta for Women </a>
-          |<a href="<?= base_url() ?>products/Womens-and-Girls/1" class="">Stylish Kurti for Women</a>
-          | <a href="<?= base_url() ?>products/FLOOR-LENGTH-GOWN/1" class="">Foor Length Gown for Women</a>
-          | <a href="<?= base_url() ?>blogs" class="">Cotton Kurtis for Women </a>
-          | <a href="<?= base_url() ?>blogs" class=""> Cotton Kurtis for Daily Wear </a>
-          | <a href="<?= base_url() ?>products/KURTA-PANT-DUPATTA-SETS/1" class=""> Latest Kurti design </a>
-          | <a href="<?= base_url() ?>products/A--LINE-KURTA/1" class=""> Festival Kurta for Women </a>
-          | <a href="<?= base_url() ?>blogs" class=""> Casual Kurti for Women</a>
-          | <a href="<?= base_url() ?>products/EMBROIDERY-KURTA/1" class="">Cotton Embroidery Kurta</a>
-          | <a href="<?= base_url() ?>products/FLOOR-LENGTH-GOWN/1" class=""> Stylish Gown for Women</a>
-          | <a href="<?= base_url() ?>products/Womens-and-Girls/1" class=""> Kurtis Online Designer Kurta</a>
-          | <a href="<?= base_url() ?>products/A--LINE-KURTA/1" class=""> A Line Kurta</a>
-          | <a href="<?= base_url() ?>products/A--LINE-KURTA/1" class=""> Buy Kurta Online</a>
-          | <a href="<?= base_url() ?>products/FLOOR-LENGTH-GOWN/1" class=""> Floor Length Gown</a>
-          | <a href="<?= base_url() ?>products/FLOOR-LENGTH-GOWN/1" class=""> Printed Kurti</a>
-          | <a href="<?= base_url() ?>products/EMBROIDERY-KURTA/1" class=""> Embroidery Kurta for Women</a>
-          | <a href="<?= base_url() ?>products/FLOOR-LENGTH-GOWN/1" class=""> Latest Gown Design</a>
-          | <a href="<?= base_url() ?>products/FLOOR-LENGTH-GOWN/1" class=""> Festival Wear Gown</a>
-          | <a href="<?= base_url() ?>" class=""> Designer Gown for Women</a>
-          | <a href="<?= base_url() ?>products/ALIYA-CUT-KURTI/1" class=""> Aliya Cut Kurtis</a>
+          <a rel="canonical" href="<?= base_url() ?>" class="">Designer Kurta for Women</a>
+          | <a rel="canonical" href="<?= base_url() ?>products/Womens-and-Girls/1" class=""> Kurti Designs for Women </a>
+          | <a rel="canonical" href="<?= base_url() ?>products/Womens-and-Girls/1" class=""> jaipur kurti A Line Kurta for Women </a>
+          | <a rel="canonical" href="<?= base_url() ?>products/A--LINE-KURTA/1" class=""> A Line Kurta for Women </a>
+          |<a rel="canonical" href="<?= base_url() ?>products/Womens-and-Girls/1" class="">Stylish Kurti for Women</a>
+          | <a rel="canonical" href="<?= base_url() ?>products/FLOOR-LENGTH-GOWN/1" class="">Foor Length Gown for Women</a>
+          | <a rel="canonical" href="<?= base_url() ?>blogs" class="">Cotton Kurtis for Women </a>
+          | <a rel="canonical" href="<?= base_url() ?>blogs" class=""> Cotton Kurtis for Daily Wear </a>
+          | <a rel="canonical" href="<?= base_url() ?>products/KURTA-PANT-DUPATTA-SETS/1" class=""> Latest Kurti design </a>
+          | <a rel="canonical" href="<?= base_url() ?>products/A--LINE-KURTA/1" class=""> Festival Kurta for Women </a>
+          | <a rel="canonical" href="<?= base_url() ?>blogs" class=""> Casual Kurti for Women</a>
+          | <a rel="canonical" href="<?= base_url() ?>products/EMBROIDERY-KURTA/1" class="">Cotton Embroidery Kurta</a>
+          | <a rel="canonical" href="<?= base_url() ?>products/FLOOR-LENGTH-GOWN/1" class=""> Stylish Gown for Women</a>
+          | <a rel="canonical" href="<?= base_url() ?>products/Womens-and-Girls/1" class=""> Kurtis Online Designer Kurta</a>
+          | <a rel="canonical" href="<?= base_url() ?>products/A--LINE-KURTA/1" class=""> A Line Kurta</a>
+          | <a rel="canonical" href="<?= base_url() ?>products/A--LINE-KURTA/1" class=""> Buy Kurta Online</a>
+          | <a rel="canonical" href="<?= base_url() ?>products/FLOOR-LENGTH-GOWN/1" class=""> Floor Length Gown</a>
+          | <a rel="canonical" href="<?= base_url() ?>products/FLOOR-LENGTH-GOWN/1" class=""> Printed Kurti</a>
+          | <a rel="canonical" href="<?= base_url() ?>products/EMBROIDERY-KURTA/1" class=""> Embroidery Kurta for Women</a>
+          | <a rel="canonical" href="<?= base_url() ?>products/FLOOR-LENGTH-GOWN/1" class=""> Latest Gown Design</a>
+          | <a rel="canonical" href="<?= base_url() ?>products/FLOOR-LENGTH-GOWN/1" class=""> Festival Wear Gown</a>
+          | <a rel="canonical" href="<?= base_url() ?>" class=""> Designer Gown for Women</a>
+          | <a rel="canonical" href="<?= base_url() ?>products/ALIYA-CUT-KURTI/1" class=""> Aliya Cut Kurtis</a>
         </p>
 
       </div>
       <div class="mt-10" style="text-align: justify;">
         <p style="color: #c68fa6 !important; font-size: 16px;"><b> Popular Products </b></p>
         <p>
-          <a href="<?= base_url() ?>products/A--LINE-KURTA/1" class=""><b> A Line Kurta </b></a>
+          <a rel="canonical" href="<?= base_url() ?>products/A--LINE-KURTA/1" class=""><b> A Line Kurta </b></a>
           <br>
 
-          <a href="<?= base_url() ?>products/A--LINE-KURTA/1" class="">AQUA FESTIVAL WEAR KURTA</a>
-          | <a href="<?= base_url() ?>products/A--LINE-KURTA/1" class=""> MUSTARD FESTIVAL WEAR KURTA </a>
-          | <a href="<?= base_url() ?>product_detail/PEACH-FESTIVAL-WEAR-KURTA?type=NjUw" class=""> PEACH FESTIVAL WEAR KURTA </a>
-          | <a href="<?= base_url() ?>product_detail/FUSCHIA-AMIRA--EMBROIDERY-KURTA?type=NjU1" class=""> FUSCHIA AMIRA EMBROIDERY KURTA </a>
+          <a rel="canonical" href="<?= base_url() ?>products/A--LINE-KURTA/1" class="">AQUA FESTIVAL WEAR KURTA</a>
+          | <a rel="canonical" href="<?= base_url() ?>products/A--LINE-KURTA/1" class=""> MUSTARD FESTIVAL WEAR KURTA </a>
+          | <a rel="canonical" href="<?= base_url() ?>product_detail/PEACH-FESTIVAL-WEAR-KURTA?type=NjUw" class=""> PEACH FESTIVAL WEAR KURTA </a>
+          | <a rel="canonical" href="<?= base_url() ?>product_detail/FUSCHIA-AMIRA--EMBROIDERY-KURTA?type=NjU1" class=""> FUSCHIA AMIRA EMBROIDERY KURTA </a>
         </p>
 
       </div>
       <div class="mt-10" style="text-align: justify;">
 
-        <a href="<?= base_url() ?>products/ALIYA-CUT-KURTI/1" class=""><b> Aliya Cut Kurtis </b></a>
+        <a rel="canonical" href="<?= base_url() ?>products/ALIYA-CUT-KURTI/1" class=""><b> Aliya Cut Kurtis </b></a>
         <br>
 
-        <a href="<?= base_url() ?>product_detail/BLACK-ALIYA-KURTI?type=NTc1" class="">BLACK ALIYA KURTI</a>
-        | <a href="<?= base_url() ?>product_detail/RED-ALIYA-KURTI?type=NTgw" class=""> RED ALIYA KURTI </a>
-        | <a href="<?= base_url() ?>product_detail/AQUA-ALIYA-KURTI?type=NTg1" class=""> AQUA ALIYA CUT KURTI</a>
-        | <a href="<?= base_url() ?>product_detail/PEACH-ALIYA-KURTI?type=NTkw" class=""> PEACH ALIYA CUT KURTI </a>
-        | <a href="<?= base_url() ?>product_detail/NAVY-BLUE-ALIYA-KURTI?type=NTk1" class=""> NAVY BLUE ALIYA CUT KURTI</a>
-        | <a href="<?= base_url() ?>product_detail/TEAL-BLUE-ALIYA-KURTI?type=NjAw" class=""> LEMON ALIYA CUT KURTI </a>
+        <a rel="canonical" href="<?= base_url() ?>product_detail/BLACK-ALIYA-KURTI?type=NTc1" class="">BLACK ALIYA KURTI</a>
+        | <a rel="canonical" href="<?= base_url() ?>product_detail/RED-ALIYA-KURTI?type=NTgw" class=""> RED ALIYA KURTI </a>
+        | <a rel="canonical" href="<?= base_url() ?>product_detail/AQUA-ALIYA-KURTI?type=NTg1" class=""> AQUA ALIYA CUT KURTI</a>
+        | <a rel="canonical" href="<?= base_url() ?>product_detail/PEACH-ALIYA-KURTI?type=NTkw" class=""> PEACH ALIYA CUT KURTI </a>
+        | <a rel="canonical" href="<?= base_url() ?>product_detail/NAVY-BLUE-ALIYA-KURTI?type=NTk1" class=""> NAVY BLUE ALIYA CUT KURTI</a>
+        | <a rel="canonical" href="<?= base_url() ?>product_detail/TEAL-BLUE-ALIYA-KURTI?type=NjAw" class=""> LEMON ALIYA CUT KURTI </a>
         </p>
 
       </div>
       <div class="mt-10" style="text-align: justify;">
 
-        <a href="<?= base_url() ?>products/EMBROIDERY-KURTA/1" class=""><b>Embroidery Kurta</b></a>
+        <a rel="canonical" href="<?= base_url() ?>products/EMBROIDERY-KURTA/1" class=""><b>Embroidery Kurta</b></a>
         <br>
-        <a href="<?= base_url() ?>product_detail/GREEN-ELEGANT-KURTA?type=NTUw" class="">GREEN ELEGANT KURTA</a>
-        | <a href="<?= base_url() ?>product_detail/MUSTARD-ELEGANT-KURTA?type=NTU1" class=""> MUSTARD ELEGANT KURTA</a>
-        | <a href="<?= base_url() ?>product_detail/PEACH-ELEGANT-KURTA?type=NTYw" class=""> PEACH ELEGANT KURTA</a>
+        <a rel="canonical" href="<?= base_url() ?>product_detail/GREEN-ELEGANT-KURTA?type=NTUw" class="">GREEN ELEGANT KURTA</a>
+        | <a rel="canonical" href="<?= base_url() ?>product_detail/MUSTARD-ELEGANT-KURTA?type=NTU1" class=""> MUSTARD ELEGANT KURTA</a>
+        | <a rel="canonical" href="<?= base_url() ?>product_detail/PEACH-ELEGANT-KURTA?type=NTYw" class=""> PEACH ELEGANT KURTA</a>
 
         </p>
 
@@ -251,7 +251,7 @@
         <p style="color: #c68fa6 !important; font-size: 20px;"><b> Best Online Kurti Shopping Site in India </b></p>
         <p style="
 					text-align: justify;">
-          Welcome to<a href="<?= base_url() ?>" class="" style="color: #c68fa6 !important; "> Poshida Fashions LLP </a> – Your Premier Destination for the Best Online Kurti
+          Welcome to<a rel="canonical" href="<?= base_url() ?>" class="" style="color: #c68fa6 !important; "> Poshida Fashions LLP </a> – Your Premier Destination for the Best Online Kurti
           Shopping Experience in India! At Poshida Fashions LLP, we blend tradition and style seamlessly,
           offering a diverse collection of kurtis designed for the modern woman who appreciates
           elegance and comfort.
@@ -276,7 +276,7 @@
 						text-align: justify;">
           Discover a world of exclusive designs that elevate your wardrobe to new heights. At Poshida
           Fashions LLP, we take pride in offering kurtis that are not just pieces of clothing but
-          expressions of individuality. From Jaipur kurtis to <a href="<?= base_url() ?>" class="" style="color: #c68fa6 !important; "> Stylish kurtis for women</a> , each design is
+          expressions of individuality. From Jaipur kurtis to <a rel="canonical" href="<?= base_url() ?>" class="" style="color: #c68fa6 !important; "> Stylish kurtis for women</a> , each design is
           crafted to make you stand out, ensuring your wardrobe is a testament to your unique style.
         </p>
 
@@ -286,7 +286,7 @@
             Seamless Shopping at Your Fingertips:</b></p>
         <p style="
 					text-align: justify;">
-          Experience the convenience of seamless shopping with Poshida Fashions LLP. Our user-friendly website ensures that exploring our extensive collection, featuring <a href="<?= base_url() ?>" class="" style="color: #c68fa6 !important; "> kurti designs for
+          Experience the convenience of seamless shopping with Poshida Fashions LLP. Our user-friendly website ensures that exploring our extensive collection, featuring <a rel="canonical" href="<?= base_url() ?>" class="" style="color: #c68fa6 !important; "> kurti designs for
             women </a> , cotton kurtis for daily wear, and the latest kurti designs, is a breeze. With just a few
           clicks, you can have your favourite kurtis delivered to your doorstep, making fashion
           effortlessly accessible.
@@ -314,7 +314,7 @@
           you not only enhance your style but also contribute to the promotion of traditional
           craftsmanship. As a token of appreciation, we offer rewards that reflect our gratitude for
           supporting the creative spirit behind each meticulously designed kurti in our collection.
-          Poshida Fashions LLP invites you to explore the world of <a href="<?= base_url() ?>" class="" style="color: #c68fa6 !important; "> kurtis online </a> , where tradition
+          Poshida Fashions LLP invites you to explore the world of <a rel="canonical" href="<?= base_url() ?>" class="" style="color: #c68fa6 !important; "> kurtis online </a> , where tradition
           meets contemporary style, and every piece tells a story. Elevate your wardrobe with our
           exclusive designs, experience the ease of seamless shopping, and support creativity with
           every purchase. Embrace tradition and elevate your style – choose Poshida Fashions LLP for
@@ -336,11 +336,11 @@
         <div class="col-12">
           <div class="social-media mt-3">
             <ul class="iconn">
-              <li><a href="https://www.facebook.com/profile.php?id=61551728737337" target="_blank"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="https://www.pinterest.com/Poshida_/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-              <li><a href="https://www.instagram.com/poshi.da/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-              <li><a href="https://www.linkedin.com/company/poshida/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="https://www.youtube.com/@Poshida_" target="_blank"><i class="fa fa-youtube"></i></a></li>
+              <li><a rel="canonical" href="https://www.facebook.com/profile.php?id=61551728737337" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a rel="canonical" href="https://www.pinterest.com/Poshida_/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+              <li><a rel="canonical" href="https://www.instagram.com/poshi.da/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <li><a rel="canonical" href="https://www.linkedin.com/company/poshida/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+              <li><a rel="canonical" href="https://www.youtube.com/@Poshida_" target="_blank"><i class="fa fa-youtube"></i></a></li>
             </ul>
           </div>
         </div>
@@ -359,14 +359,14 @@
         <p class="mt-2 mset">
           Copyright © <script>
             document.write(new Date().getFullYear())
-          </script> <a href="poshida.in" style="text-transform: lowercase;"> POSHIDA.IN.ALL RIGHTS RESERVED.</a>
+          </script> <a rel="canonical" href="poshida.in" style="text-transform: lowercase;"> POSHIDA.IN.ALL RIGHTS RESERVED.</a>
         </p>
       </div>
       <!-- <div class="col-md-4" style="text-align: center;
     align-items: center;
     display: flex;
     justify-content: center;">
-        <p class="mb-0" style="margin-right: 5px;">Design & Developed by </p><a href="https://www.fineoutput.com"><b>
+        <p class="mb-0" style="margin-right: 5px;">Design & Developed by </p><a rel="canonical" href="https://www.fineoutput.com"><b>
             Fineoutput
           </b> </a>
       </div>
@@ -376,7 +376,7 @@
     align-items: center;
     display: flex;
     justify-content: center;">
-        <p class="mb-0" style="margin-right: 5px;">Marketing by </p><a href="https://digitaldukandaari.com/"><b>
+        <p class="mb-0" style="margin-right: 5px;">Marketing by </p><a rel="canonical" href="https://digitaldukandaari.com/"><b>
             Digitaldukandaari
           </b> </a> -->
     </div>
@@ -385,7 +385,7 @@
 
   </div>
 
-  <a href="https://wa.me/+916377898988/" target="_blank" rel="noopener noreferrer" class="btn btn-success white fgdfdfgdf btn-lg mt-3 button-fixed-right green  desktopwhatsapp ">
+  <a rel="canonical" href="https://wa.me/+916377898988/" target="_blank" rel="noopener noreferrer" class="btn btn-success white fgdfdfgdf btn-lg mt-3 button-fixed-right green  desktopwhatsapp ">
     <i class="bi bi-whatsapp" style="font-size:30px;"></i>
   </a>
 
@@ -428,8 +428,8 @@
           <div class="container">
             <div class="row">
               <div class="col">
-                <p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="<?= base_url() ?>terms_and_conditions" style="color: #c68fa6;">Terms of use</a>
-                  &amp; <a href="<?= base_url() ?>privacy_policy" style="color: #c68fa6;">Privacy
+                <p style="margin-bottom: 3px;">By Continuing, I agree to the <a rel="canonical" href="<?= base_url() ?>terms_and_conditions" style="color: #c68fa6;">Terms of use</a>
+                  &amp; <a rel="canonical" href="<?= base_url() ?>privacy_policy" style="color: #c68fa6;">Privacy
                     Policy</a></p>
               </div>
             </div>
@@ -437,7 +437,7 @@
           <div class="form-group">
             <button class="btn btn-fill-out btn-block text-uppercase mt-2 rounded-0 btn-color " style="padding: 14px 18px;" type="submit">Submit</button>
           </div>
-          <div class="text-center mb-3"><span class="mt-3 ">New Here?<a href="javascript:;" data-toggle="modal" data-target="#SignUpModel" style="color:#c68fa6;">&nbsp;Sign Up</a></span>
+          <div class="text-center mb-3"><span class="mt-3 ">New Here?<a rel="canonical" href="javascript:;" data-toggle="modal" data-target="#SignUpModel" style="color:#c68fa6;">&nbsp;Sign Up</a></span>
           </div>
         </form>
       </div>
@@ -495,17 +495,17 @@
                 <div class="container">
                   <div class="row">
                     <div class="col">
-                      <p style="margin-bottom: 3px;">By Continuing, I agree to the <a href="#" style="color: #c68fa6;">Terms of use</a> &amp; <a href="#" style="color: #c68fa6;">Privacy Policy</a></p>
+                      <p style="margin-bottom: 3px;">By Continuing, I agree to the <a rel="canonical" href="#" style="color: #c68fa6;">Terms of use</a> &amp; <a rel="canonical" href="#" style="color: #c68fa6;">Privacy Policy</a></p>
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
                   <button class="btn btn-fill-out btn-block  btn-color  mt-2 text-uppercase rounded-0" style="padding: 14px 18px; " type="submit">Submit</button>
                 </div>
-                <div class="text-center"><span class="mt-3">Already have an Account?<a href="#" data-target="#onload-popup1" data-toggle="modal" data-dismiss="modal" style="color:#ed6f36;">&nbsp;Log In</a></span>
+                <div class="text-center"><span class="mt-3">Already have an Account?<a rel="canonical" href="#" data-target="#onload-popup1" data-toggle="modal" data-dismiss="modal" style="color:#ed6f36;">&nbsp;Log In</a></span>
                 </div>
                 <p class="text-center" style="margin-bottom: 0px;">Or</p>
-                <div class="text-center"><span class="mt-3"><a href="<?= base_url() ?>reseller_register" style="color:#ed6f36;">Partner With Us</a></span>
+                <div class="text-center"><span class="mt-3"><a rel="canonical" href="<?= base_url() ?>reseller_register" style="color:#ed6f36;">Partner With Us</a></span>
                 </div>
 
               </form>

@@ -6,7 +6,7 @@
         <!-- <h1 class="banner-title">Privacy Policy</h1> -->
         <div class="breadcrumb">
           <ul class="inline">
-            <li><a href="<?= base_url() ?>">Home</a>
+            <li><a rel="canonical" href="<?= base_url() ?>">Home</a>
             </li>
             <li>Terms & Conditions</li>
           </ul>

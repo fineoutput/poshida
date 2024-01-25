@@ -9,7 +9,7 @@
                   </div>
                   <div class="ltn__breadcrumb-list">
                       <ul>
-                          <li><a href="<?=base_url()?>Home">Home</a></li>
+                          <li><a rel="canonical" rel="canonical" href="<?=base_url()?>Home">Home</a></li>
                           <li>Order Failed </li>
                       </ul>
                   </div>
@@ -28,8 +28,8 @@
               <h2 style="font-size:35px;">Order Failed</h2>
               <h4 style="color:grey;">Something must've happened from our end. Please try again.</h4>
               <div class="btn-wrapper">
-                  <a href="<?=base_url()?>my_bag" class="theme-btn-1 btn btn-effect-1">Checkout</a>
-                  <a href="<?=base_url()?>Home" class="theme-btn-1 btn btn-effect-1">Add More Products</a>
+                  <a rel="canonical" href="<?=base_url()?>my_bag" class="theme-btn-1 btn btn-effect-1">Checkout</a>
+                  <a rel="canonical" href="<?=base_url()?>Home" class="theme-btn-1 btn btn-effect-1">Add More Products</a>
               </div>
       </div>
       </div>

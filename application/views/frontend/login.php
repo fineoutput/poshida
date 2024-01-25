@@ -9,7 +9,7 @@
                     </div>
                     <div class="ltn__breadcrumb-list">
                         <ul>
-                            <li><a href="<?=base_url()?>Home">Home</a></li>
+                            <li><a rel="canonical" href="<?=base_url()?>Home">Home</a></li>
                             <li>Login</li>
                         </ul>
                     </div>

@@ -277,7 +277,7 @@
 
         <div class="col-md-12">
           <ol class="breadcrumb justify-content-md-start">
-            <li class="breadcrumb-item"><a href="<?= base_url() ?>">Home</a></li>
+            <li class="breadcrumb-item"><a rel="canonical" href="<?= base_url() ?>">Home</a></li>
             <li class="breadcrumb-item active">Replace</li>
           </ol>
         </div>

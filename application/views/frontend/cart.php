@@ -149,7 +149,7 @@
         <h1 class="banner-title">Shopping Cart</h1>
         <div class="breadcrumb">
           <ul class="inline">
-            <li><a href="<?= base_url() ?>">Home</a>
+            <li><a rel="canonical" href="<?= base_url() ?>">Home</a>
             </li>
             <li>Shopping Cart</li>
           </ul>
@@ -181,7 +181,7 @@
               foreach ($cart_data as $cart) { ?>
                 <tr>
                   <td class="align-left">
-                    <a href="javascript:void();">
+                    <a rel="canonical" href="javascript:void();">
                       <div class="product-image eab_inmad">
                         <img alt="Broken Image" src="<?= $cart['image'] ?>">
                       </div>
@@ -189,7 +189,7 @@
                   </td>
                   <td class="align-left margin-respon fgvsdg" style="max-width: 120px;">
                     <div class="product-title ">
-                      <a href="javascript:void();"> <b><?= $cart['product_name'] ?></b></a>
+                      <a rel="canonical" href="javascript:void();"> <b><?= $cart['product_name'] ?></b></a>
                       <div class="d-flex">
                         <p style="margin-bottom: 5px !important;">Color</p>
                         <p style="margin-bottom: 5px !important;">: <?= $cart['color'] ?></p>
@@ -219,7 +219,7 @@
                     </div>
                   </td>
                   <td class="margin-respon icone-red text-center">
-                    <a href="javascript:void(0);" product_id="<?= base64_encode($cart['product_id']) ?>" type_id="<?= base64_encode($cart['type_id']) ?>" onclick="deleteCart(this)" class="btn small btn-color">
+                    <a rel="canonical" href="javascript:void(0);" product_id="<?= base64_encode($cart['product_id']) ?>" type_id="<?= base64_encode($cart['type_id']) ?>" onclick="deleteCart(this)" class="btn small btn-color">
                       <i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i>
                     </a>
                   </td>
@@ -235,11 +235,11 @@
               <div class="right-side float-none-xs">
                 <h5>Total : ₹<?= $sub_total ?></h5>
                 <? if (!empty($this->session->userdata('user_data'))) { ?>
-                  <a href="javascript:void(0)" onclick="call_calculate()" class="btn btn-color">Proceed to checkout
+                  <a rel="canonical" href="javascript:void(0)" onclick="call_calculate()" class="btn btn-color">Proceed to checkout
                     <span><i class="fa fa-angle-right"></i></span>
                   </a>
                 <? } else { ?>
-                  <a href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel" class="btn btn-color">Proceed to checkout
+                  <a rel="canonical" href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel" class="btn btn-color">Proceed to checkout
                     <span><i class="fa fa-angle-right"></i></span>
                   </a>
                 <? } ?>

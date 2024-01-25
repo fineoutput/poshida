@@ -6,7 +6,7 @@
                 <h1 class="banner-title">Career</h1>
                 <div class="breadcrumb">
                     <ul class="inline">
-                        <li><a href="<?= base_url() ?>">Home</a></li>
+                        <li><a rel="canonical" href="<?= base_url() ?>">Home</a></li>
                         <li>Career</li>
                     </ul>
                 </div>
@@ -56,10 +56,10 @@
                                                 <h4 class="contact-title">Call Us</h4>
                                                 <div class="d-flex">
                                                     <p>
-                                                        <a href="tel:+91-6377898988">+91-6377898988 , </a>
+                                                        <a rel="canonical" href="tel:+91-6377898988">+91-6377898988 , </a>
                                                     </p>
                                                     <p>
-                                                        <a href="tel:+0141-2988751"> 0141-2988751</a>
+                                                        <a rel="canonical" href="tel:+0141-2988751"> 0141-2988751</a>
                                                     </p>
                                                 </div>
                                             </div>

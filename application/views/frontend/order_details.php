@@ -633,9 +633,9 @@
 					<h1 class="banner-title">Orders Detail </h1>
 					<div class="breadcrumb">
 						<ul class="inline">
-							<li><a href="<?= base_url() ?>">Home</a></li>
-							<li><a href="<?= base_url() ?>my_profile/order">My Orders</a></li>
-							<li><a href="#"> Orders Detail </a>
+							<li><a rel="canonical" href="<?= base_url() ?>">Home</a></li>
+							<li><a rel="canonical" href="<?= base_url() ?>my_profile/order">My Orders</a></li>
+							<li><a rel="canonical" href="#"> Orders Detail </a>
 							</li>
 						</ul>
 					</div>
@@ -721,7 +721,7 @@
 										$interval = $current_datetime->diff($given_datetime);
 										$days_difference = $interval->days;
 										if (empty($return_data) && $order_data[0]->order_status == 4 && $days_difference <= 7) { ?>
-											<a href="<?= base_url() ?>Order/return_replace/<?= base64_encode($details->id) ?>"> <button type="submit" class="btn btn-fill-out" name="submit" value="Submit" style="padding:5px 10px;"><span>Return</span></button></a>
+											<a rel="canonical" href="<?= base_url() ?>Order/return_replace/<?= base64_encode($details->id) ?>"> <button type="submit" class="btn btn-fill-out" name="submit" value="Submit" style="padding:5px 10px;"><span>Return</span></button></a>
 											<? } else if (!empty($return_data)) {
 											if ($return_data[0]->replace_status == 0) {
 											?>

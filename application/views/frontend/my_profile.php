@@ -649,9 +649,9 @@
           <h1 class="banner-title">My Account</h1>
           <div class="breadcrumb">
             <ul class="inline">
-              <li><a href="<?= base_url() ?>">Home</a>
+              <li><a rel="canonical" href="<?= base_url() ?>">Home</a>
               </li>
-              <li><a href="#">My Account</a>
+              <li><a rel="canonical" href="#">My Account</a>
               </li>
             </ul>
           </div>
@@ -669,16 +669,16 @@
                   <div class="col-lg-3 col-md-4 list-group-tabs" style="border-right: 2px solid rgb(240, 238, 238);">
                     <ul class="nav nav-tabs visitedcolor" role="tablist" style="display: block; border-bottom: 0px;">
                       <div class="list-group" id="list-tab" role="tablist">
-                        <a class="active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home" aria-selected="true"><i class="bi bi-cart"></i>Orders</a>
-                        <a id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile" class="" aria-selected="false"><i class="bi bi-geo-alt"></i>Address</a>
+                        <a rel="canonical" class="active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home" aria-selected="true"><i class="bi bi-cart"></i>Orders</a>
+                        <a rel="canonical" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile" class="" aria-selected="false"><i class="bi bi-geo-alt"></i>Address</a>
                         <? if ($this->session->userdata('user_type') == 1) {
                           if ($user_data[0]->is_model == 1) { ?>
-                            <a id="account-detail-tab" data-toggle="tab" href="#modalproduct" role="tab" aria-controls="account-detail" aria-selected="true"><i class="bi bi-person-vcard"></i>Model Product</a>
-                            <a id="address-tab" data-toggle="tab" href="#pointstransaction" role="tab" aria-controls="address" aria-selected="true"><i class="bi bi-person-vcard"></i>Points Redeem Requests</a>
+                            <a rel="canonical" id="account-detail-tab" data-toggle="tab" href="#modalproduct" role="tab" aria-controls="account-detail" aria-selected="true"><i class="bi bi-person-vcard"></i>Model Product</a>
+                            <a rel="canonical" id="address-tab" data-toggle="tab" href="#pointstransaction" role="tab" aria-controls="address" aria-selected="true"><i class="bi bi-person-vcard"></i>Points Redeem Requests</a>
                         <? }
                         } ?>
-                        <a id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages" aria-selected="false"><i class="bi bi-person-vcard"></i>Account details</a>
-                        <a href="<?= base_url() ?>User/logout"><i class="bi bi-box-arrow-right"></i>Logout</a>
+                        <a rel="canonical" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages" aria-selected="false"><i class="bi bi-person-vcard"></i>Account details</a>
+                        <a rel="canonical" href="<?= base_url() ?>User/logout"><i class="bi bi-box-arrow-right"></i>Logout</a>
                       </div>
                     </ul>
                   </div>
@@ -741,16 +741,16 @@
                                           <span class="badge badge-pill badge-danger">Cancelled</span>
                                         <? } ?>
                                       </td>
-                                      <td> <a style="padding:6px 20px;" class="btn btn-fill-out checkout" href="<?= base_url() ?>Home/order_details/<?= base64_encode($orderOne->id) ?>">View</a></td>
+                                      <td> <a rel="canonical" style="padding:6px 20px;" class="btn btn-fill-out checkout" href="<?= base_url() ?>Home/order_details/<?= base64_encode($orderOne->id) ?>">View</a></td>
                                       <td>
                                         <!-- <? if ($orderOne->order_status == 3) { ?> -->
-                                        <a href="<?= base_url() ?>Home/track_order/<?= base64_encode($orderOne->id) ?>" class="btn btn-fill-out checkout" style="padding:6px 20px;"><i class="linearicons-truck" style="vertical-align:text-top;"></i>Track</a>
+                                        <a rel="canonical" href="<?= base_url() ?>Home/track_order/<?= base64_encode($orderOne->id) ?>" class="btn btn-fill-out checkout" style="padding:6px 20px;"><i class="linearicons-truck" style="vertical-align:text-top;"></i>Track</a>
                                         <!-- <? } ?> -->
                                       </td>
                                       </td>
                                       <td>
                                         <? if ($orderOne->order_status == 1) { ?>
-                                          <a style="padding:6px 20px;" class="btn btn-fill-out checkout" href="<?= base_url() ?>Order/cancel_order/<?= base64_encode($orderOne->id) ?>">X</a>
+                                          <a rel="canonical" style="padding:6px 20px;" class="btn btn-fill-out checkout" href="<?= base_url() ?>Order/cancel_order/<?= base64_encode($orderOne->id) ?>">X</a>
                                         <? } ?>
                                       </td>
                                     </tr>
@@ -828,11 +828,11 @@
                                       ?>
                                         <tr>
                                           <? if (!empty($type_data)) { ?>
-                                            <td class="product-thumbnail"><a href="<?= base_url() ?>product_detail/<?= $product_data[0]->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><img src="<?= base_url() . $type_data[0]->image ?>" alt="<?= $product_data[0]->name ?>"></a></td>
+                                            <td class="product-thumbnail"><a rel="canonical" href="<?= base_url() ?>product_detail/<?= $product_data[0]->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"><img src="<?= base_url() . $type_data[0]->image ?>" alt="<?= $product_data[0]->name ?>"></a></td>
                                           <? } else { ?>
                                             <td class="product-thumbnail">Type not found</td>
                                           <? } ?>
-                                          <td class="product-name" data-title="Product"><a href="javascript:;"><?= $product_data[0]->name ?></a></td>
+                                          <td class="product-name" data-title="Product"><a rel="canonical" href="javascript:;"><?= $product_data[0]->name ?></a></td>
                                           <td class="product-price" data-title="Price"><?= $product_data[0]->sku ?></td>
                                         </tr>
                                       <?
@@ -851,7 +851,7 @@
                         align-items: center;     justify-content: space-between;">
                             <h3>Address</h3>
                             <div>
-                              <a class="btn btn-fill-out btn-block  " style="width: 100% ; 
+                              <a rel="canonical" class="btn btn-fill-out btn-block  " style="width: 100% ; 
                      padding: 8px 15px" href="<?= base_url() ?>add_address">
                                 Add Address </a>
                             </div>
@@ -873,8 +873,8 @@
                                         <p><b>Pincode:</b> <a><?= $address->pincode ?></a></p>
                                         <div style=" display: flex;
                                         justify-content: end;">
-                                          <a href="<?= base_url() ?>edit_address/<?= base64_encode($address->id) ?>" class="mr-2"><button class="btn btn-fill-out"> <i class="bi bi-pencil"></i></button></a>
-                                          <a href="<?= base_url() ?>Home/delete_address/<?= base64_encode($address->id) ?>"><button class="btn btn-fill-out"> <i class="bi bi-trash"></i></button></a>
+                                          <a rel="canonical" href="<?= base_url() ?>edit_address/<?= base64_encode($address->id) ?>" class="mr-2"><button class="btn btn-fill-out"> <i class="bi bi-pencil"></i></button></a>
+                                          <a rel="canonical" href="<?= base_url() ?>Home/delete_address/<?= base64_encode($address->id) ?>"><button class="btn btn-fill-out"> <i class="bi bi-trash"></i></button></a>
                                         </div>
                                       </div>
                                     </div>
