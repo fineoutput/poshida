@@ -434,7 +434,7 @@
   							<img alt=" " src="<?= base_url() . $testimonials->image ?>">
   						</div>
   						<div class="quote-img">
-  							<img src="https://themes.templatescoder.com/xpoge/html/demo/1-0/01_FASHION/images/quote-img.png" alt=" ">
+  							<img src="<?=base_url()?>assets/frontend/img/quote-img.png" alt=" ">
   						</div>
   					</div>
   					<div class="clear-fix"></div>
