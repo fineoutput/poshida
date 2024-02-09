@@ -20,7 +20,7 @@
                     <div class="add-ma pb-100">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3560.687782231552!2d75.8283773!3d26.8180683!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dc9034cbdf60b%3A0x706185398ba5ee81!2sPoshida%20-%20Clothing%20Brand!5e0!3m2!1sen!2sin!4v1698230809773!5m2!1sen!2sin" height="585" style="border:0;width:100%;" allowfullscreen></iframe>
 
-                          
+
                     </div>
 
                     <div class="pb-100">
@@ -34,7 +34,7 @@
                                             </div>
                                             <div class="contact-box-detail">
                                                 <h4 class="contact-title">Visit Office</h4>
-                                                <p>Plot No. 81, near Mahima Panache, Nandpuri B, Sheopur, Jagatpura, Jaipur, Rajasthan 302025</p>
+                                                <p>Plot no. 4/219, 2nd Floor, SFS, Shipra Path, Agarwal Farm, Mansarovar, Jaipur</p>
                                             </div>
                                         </li>
 
@@ -55,10 +55,10 @@
                                                 <h4 class="contact-title">Call Us</h4>
                                                 <div class="d-flex">
                                                     <p>
-                                                        <a href="tel:+91-6377898988">+91-6377898988 , </a>
+                                                        <a href="tel:+916377898988">+91-6377898988 , </a>
                                                     </p>
                                                     <p>
-                                                        <a href="tel:+0141-2988751"> 0141-2988751</a>
+                                                        <a href="tel:+919828099805">+91-9828099805</a>
                                                     </p>
                                                 </div>
                                             </div>
