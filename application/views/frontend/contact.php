@@ -18,7 +18,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="add-ma pb-100">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d113873.48985092605!2d75.7694464!3d26.886143999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1707722446377!5m2!1sen!2sin" height="585" style="border:0;width:100%;" allowfullscreen></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.055048251228!2d75.77483437443958!3d26.838201376691636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5918ededfb9%3A0xbaa9c10236eec525!2sUmmed%20Mills%20India%20(Reg)!5e0!3m2!1sen!2sin!4v1707723906243!5m2!1sen!2sin" height="585" style="border:0;width:100%;" allowfullscreen></iframe>
+
+
                     </div>
                     <div class="pb-100">
                         <div class="row">
