@@ -2,6 +2,7 @@
 <style>
   p {
     text-align: justify;
+    font-size: 16px;
   }
 </style>
 
