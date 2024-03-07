@@ -42,10 +42,10 @@
       s.parentNode.insertBefore(t, s)
     }(window, document, 'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '711896680882468');
+    fbq('init', '2244723279195274');
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=711896680882468&ev=PageView&noscript=1" /></noscript>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2244723279195274&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link type="image/x-icon" href="<?= base_url() ?>assets/frontend/img/Poshida.jpg" rel="icon">
@@ -67,8 +67,7 @@
   <script src="<?= base_url() ?>assets/frontend/js/bootstrap-notify.min.js"></script>
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NY9GDLVWKY"></script>
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J79RWNFJXV"></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -95,8 +94,7 @@
     }
     gtag('js', new Date());
 
-
-    gtag('config', 'G-NY9GDLVWKY');
+    gtag('config', 'G-J79RWNFJXV');
   </script>
 </head>
 <!-- //================ END HEAD ============================= -->
