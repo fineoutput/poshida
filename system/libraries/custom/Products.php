@@ -535,9 +535,11 @@ class CI_Products
             $final_filter2 = $final_filter;
         }
         // print_r($final_filter);die();
-        if (!empty($attribute)) {
+        if (!empty($attribute) && $attribute !== null && $attribute !== 'null') {
             foreach ($final_filter2 as $product) {
                 // $type_data = $this->CI->db->get_where('tbl_type', array('product_id = ' => $product['id']));
+                // print_r($product['all_attributes']);
+                if($product['all_attributes'] !== 'null'){
                 foreach ($attribute as  $attr) {
                     if (in_array($attr, json_decode($product['all_attributes']))) {
                         // if ($this->CI->session->userdata('user_type')==2) {
@@ -547,7 +549,9 @@ class CI_Products
                         // }
                         $final_filter3[] = array('id' => $product['id'], 'product_view' => $product['product_view'], 'type_id' => $product['type_id'], 'spgst' => $product['spgst'], 'exclusive' => $product['exclusive'], 'url' => $product['url'], 'name' => $product['name'], 'all_attributes' => $product['all_attributes']);
                     }
+                
                 }
+            }
             }
         } else {
             $final_filter3 = $final_filter2;
