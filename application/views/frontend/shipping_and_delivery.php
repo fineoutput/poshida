@@ -25,8 +25,9 @@
           <div class="col-12">
             <div class="term_conditions">
               <h4>Shipping & Delivery Policy</h4>
-              <p>We offer <b>free shipping</b> on all our products throughout India!</p>
-              <p>Free bag is sent on all orders above <b>Rs. 2499.</b></p>
+              <p>We offer <b>free shipping</b>on all orders above Rs.999/- 
+throughout India!
+</p>
               <p>Usually, orders are dispatched within <b>2-4 working days</b> of the customer after placing the order.</p>
               <p>However, unusual circumstances may lead to delays beyond the specified period. In case of delay (product not dispatched within the estimated time period), you may write us at contactus@poshida.co.in or connect us through <b>WhatsApp</b> link given on website.</p>
               <p>To ensure that the order reaches you in a good condition, in the shortest span of time, we ship through reputed logistics companies.</p>

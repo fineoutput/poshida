@@ -23,29 +23,29 @@
         <div class="row">
           <div class="col-12">
             <div class="term_conditions">
-              <h4>Terms & Conditions</h4>
+              <h4>TERMS & CONDITIONS</h4>
               <p>Please read the following terms and conditions very carefully as your use of the service is subject to your acceptance of and compliance with the following terms and conditions ("Terms"). By subscribing to or using any of our services you agree that you have read, understood, and are bound by the Terms, regardless of how you subscribe to or use the services. If you do not want to be bound by the Terms, you must not subscribe to or use our services. 
-                YOUR USE OF THE WEBSITE IMPLIES THAT YOU AGREE WITH THE TERMS OF USE.  </span>
+              YOUR USE OF THE WEBSITE IMPLIES THAT YOU AGREE WITH THE TERMS OF USE.  </span>
               </p>
               <hr>
-              <h4>Introduction</h4>
-              <p>Company Name is one of the most loved ready-to-wear brands in the country. We want to make women more beautiful, by offering a huge range of Indian wear that only we can give. Company Name is an idea that goes beyond just what you see. New ranges were added with time and Company Name started a very stylish range which was added as various categories. All with the goal of providing you with a truly unique ready to wear wow-inspiring experience </p>
+              <h4>INTRODUCTION</h4>
+              <p>Poshida Fashions is one of the most loved ready-to-wear brands in the country. We want to make women more beautiful, by offering a huge range of Indian wear that only we can give. Poshida Fashions is an idea that goes beyond just what you see. New ranges were added with time and Poshida Fashions started a very stylish range which was added as various categories. All with the goal of providing you with a truly unique ready to wear wow-inspiring experience </p>
               <ol style="list-style-type:lower-alpha;">
-                <li>&nbsp; ("Website") is an Internet-based content and e-commerce portal licensed by Company Name, a company incorporated under the laws of India. </li>
+                <li>&nbsp; a.	  ("Website") is an Internet-based content and e-commerce portal licensed by Poshida Fashions, a company incorporated under the laws of India. </li>
                 <li>&nbsp; Use of the Website is offered to you conditioned on acceptance without modification of all the terms, conditions, and notices contained in these Terms, as may be posted on the Website from time to time. The Website at its sole discretion reserves the right not to accept a User from registering on the Website without assigning any reason thereof.</li>
               </ol>
               <hr>
-              <h4>User Account, Password, and Security</h4>
+              <h4>USER ACCOUNT, PASSWORD, AND SECURITY</h4>
               <p>You will receive a password and account ID upon completing the Website's registration process. The Website requires you to register as a user by creating an Account in order to avail of the Services provided by the Website. You will be responsible for maintaining the confidentiality of the Account Information and are fully responsible for all activities that occur under Your Account. You agree to:</p>
               <ol style="list-style-type: lower-alpha;">
                 <li>immediately notify the Website of any unauthorized use of Your Account Information or any other breach of security, and </li>
                 <li> ensure that You exit from Your Account at the end of each session. Website cannot and will not be liable for any loss or damage arising from Your failure to comply with this Section. You may be held liable for losses incurred by the Website or any other user of or visitor to the Website due to authorized or unauthorized use of Your Account as a result of Your failure to keep Your Account Information secure and confidential. </li>
                 </ul>
                 <hr>
-                <h4>Services provided</h4>
+                <h4>SERVICES PROVIDED</h4>
                 <p>The website provides a number of Internet-based services (all such services, collectively, the "Service"). One such online service that permits users to purchase by offering a huge range of ready-to-Indian wear. The Products can be purchased through the Website through various methods of payment offered. The purchase of Products shall be additionally governed by specific policies of sale, like cancellation policy, return policy, etc. (which are found on the following website and all of which are incorporated here by reference. In addition, these terms and policies may be further supplemented by Product-specific conditions, which may be displayed on the webpage of that Product. </p>
                 <hr>
-                <h4>Privacy Policy</h4>
+                <h4>PRIVACY POLICY</h4>
 
 
 

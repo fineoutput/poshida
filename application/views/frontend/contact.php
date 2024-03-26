@@ -17,8 +17,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
+                <h4 class="contact-title">Visit Office</h4>
                     <div class="add-ma pb-100">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.05727021786!2d75.77740639999999!3d26.8381307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5911266f1cf%3A0x1189ecb28f545112!2sPoshida%20clothing%20store%20-%20mansrover!5e0!3m2!1sen!2sin!4v1710997495589!5m2!1sen!2sin"height="585" style="border:0;width:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+                    </div>
+                    <h4 class="contact-title">Visit Store</h4>
+                    <div class="add-ma pb-100">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d113869.84257235152!2d75.7175489!3d26.8897632!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db7c41a4e58ab%3A0xea26d793bbeabf4f!2sPoshida%20Factory%20outlet%20-%20malviya%20nagar!5e0!3m2!1sen!2sin!4v1711452551609!5m2!1sen!2sin" height="585" style="border:0;width:100%;" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
                     </div>
@@ -36,6 +43,16 @@
                                                 <p>Plot no. 4/219, 2nd Floor, SFS, Shipra Path, Agarwal Farm, Mansarovar, Jaipur</p>
                                             </div>
                                         </li>
+                                        <li>
+                                            <div class="contact-thumb">
+                                                <img src="<?= base_url() ?>assets/frontend/img/address-icon.svg" alt=" ">
+                                            </div>
+                                            <div class="contact-box-detail">
+                                                <h4 class="contact-title">Visit Store</h4>
+                                                <p>Malviya Nagar Store 6/1 Sector 6 Malviya Nagar, Jaipur</p>
+                                            </div>
+                                        </li>
+                                        
 
                                         <li>
                                             <div class="contact-thumb">
