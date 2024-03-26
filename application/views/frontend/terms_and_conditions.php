@@ -1,3 +1,8 @@
+<style>
+  p,li{
+    font-size: 18px;
+  }
+</style>
 <!-- ============================================= START SECTION BREADCRUMB  ========================================-->
 <div class="banner-21">
   <div id="banner-part  " class="banner inner-banner inner-banner mb-3">
