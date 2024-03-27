@@ -31,7 +31,7 @@
           <div class="col-12">
             <div class="term_conditions">
               <h4>Shipping & Delivery Policy</h4>
-              <p>We offer <b>free shipping</b>on all orders above Rs.999/- 
+              <p>We offer <b>free shipping</b> on all orders above Rs.999/- 
 throughout India!
 </p>
               <p>Usually, orders are dispatched within <b>2-4 working days</b> of the customer after placing the order.</p>
