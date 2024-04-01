@@ -4900,3 +4900,56 @@ input[type="searc"] {
     -o-transition: all 0.4s ease-in-out 0s;
     z-index: 3;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.accordion-item {
+	border-bottom: 1px solid #ccc;
+  }
+  
+  .accordion-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	padding: 10px;
+	cursor: pointer;
+  }
+  
+  .accordion-content {
+	display: none;
+	padding: 10px;
+  }
+  
+  .accordion-toggle {
+	font-size: 40px;
+  }
+  
+  .accordion-item.active .accordion-content {
+	display: block;
+  }
+  .main-title{
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 50px;
+		letter-spacing: 0px;
+		position: relative;
+		font-family: 'Geometr415 Blk BT', sans-serif !important;
+
+  }
+  .inner-links {
+    display: flex;
+    gap: 50px;
+}

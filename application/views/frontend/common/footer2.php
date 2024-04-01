@@ -53,7 +53,7 @@
     <div class="row justify-content-center">
       <div class="col-xl-7 col-lg-9 col-12">
         <div class="newsletter-title">
-          <h2 class="main_title">Sign up for Newsletter </h2>
+          <h2 class="main_title">Sig up for Newsletter </h2>
           <p>Wants to get latest updates! sign up for Free </p>
         </div>
         <div class="newsletter-input">
@@ -70,6 +70,7 @@
   </div>
 </section>
 <!-- Newslatter section end -->
+
 <!-- Footer section start -->
 <footer class="footer-part">
   <div class="container">
@@ -715,6 +716,30 @@ if (!empty($popup_data)) {
   s.src = "https://salesiq.zohopublic.in/widget";
   t = d.getElementsByTagName("script")[0];
   t.parentNode.insertBefore(s, t);
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const accordions = document.querySelectorAll(".accordion-item");
+
+  accordions.forEach((accordion) => {
+    const header = accordion.querySelector(".accordion-header");
+    const content = accordion.querySelector(".accordion-content");
+    const toggle = header.querySelector(".accordion-toggle");
+
+    header.addEventListener("click", () => {
+      accordion.classList.toggle("active");
+      if (accordion.classList.contains("active")) {
+        content.style.display = "block";
+        toggle.textContent = "-";
+      } else {
+        content.style.display = "none";
+        toggle.textContent = "+";
+      }
+    });
+  });
+});
+
 </script>
 </body>
 

@@ -536,3 +536,165 @@
   	</div>
   </section>
   <!-- =================== END SECTION SUBSCRIBE NEWSLETTER ==================== -->
+  <section class="accordian-sect ">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12 col-sm-12">
+      <div class="accordion">
+  <div class="accordion-item">
+  <div class="accordion-header"><h4 class="main-title">Poshida: One-Stop Destination of Ethnic & Western Wear for 
+Women</h4><span class="accordion-toggle">+</span></div>
+    <div class="accordion-content">
+      <p>
+	  Welcome to Poshida, your premier destination for exquisite ethnic and western 
+wear designed exclusively for women. With a commitment to quality, style, and 
+innovation, Poshida offers a diverse range of clothing options to suit every 
+occasion, taste, and preference. From traditional ethnic wear to chic western 
+outfits, Poshida is your one-stop shop for all your fashion needs. 
+	  </p>
+	  <h4>Discover Our Wide Range of Ethnic Wear Options for Women </h4>
+	  <p>
+	  At Poshida, we take pride in curating a stunning collection of ethnic wear for 
+women that celebrates the rich heritage and cultural diversity of India. Our range 
+of ethnic attire is meticulously designed to blend traditional craftsmanship with 
+contemporary aesthetics, resulting in pieces that are both timeless and trendy. 
+Whether you're looking for stylish kurtis, designer kurtas, festival wear, or 
+embroidered masterpieces, Poshida has something for every discerning woman.
+	  </p>
+	  <h4>
+	  Stylish Kurtis for Women:
+	  </h4>
+	  <p>Elevate your everyday look with our trendy kurtis 
+crafted from high-quality fabrics and adorned with exquisite embellishments. Our 
+kurtis come in a variety of designs, patterns, and colors to suit your individual 
+style and preference. Whether you prefer classic solids or vibrant prints, you'll 
+find the perfect kurti to complement your wardrobe at Poshida. </p>
+<h4>Designer Kurtas for Women:</h4>
+<p>Make a statement with our designer kurtas that 
+blend traditional elegance with contemporary flair. Our collection features a 
+range of silhouettes, from flowy Anarkalis to sleek straight-cut kurtas, all 
+meticulously crafted to enhance your natural beauty. Whether you're attending a 
+wedding, a festive celebration, or a formal event, our designer kurtas are sure to 
+turn heads wherever you go. </p>
+<h4>Festival Wear for Women:</h4>
+<p> Embrace the spirit of celebration with our festive 
+wear collection, featuring vibrant colors, intricate embroidery, and impeccable 
+detailing. From elegant salwar suits to opulent lehengas, our festival wear is 
+designed to make you feel like royalty on special occasions. With Poshida, you 
+can make a lasting impression at every event with our exquisite festival wear for 
+women.</p>
+<h4>Embroidered Masterpieces: </h4>
+<p>Add a touch of elegance to your wardrobe with our 
+intricately embroidered masterpieces that exude timeless charm and 
+sophistication. Our collection includes a variety of embroidered garments, from 
+delicate chikankari to bold zardozi work, all meticulously crafted by skilled 
+artisans. Whether you're looking for a statement piece for a formal event or an 
+everyday outfit with a touch of elegance, you'll find it at Poshida. </p>
+<h4>Discover Our Trendsetting Western Wear for Women</h4>
+<p>In addition to our stunning collection of ethnic wear, Poshida also offers a wide 
+range of trendsetting western wear for women. From casual tops and dresses to 
+stylish cord sets and palazzo pants, our western wear collection is designed to 
+cater to the modern woman's dynamic lifestyle. Whether you're heading to the 
+office, meeting friends for brunch, or hitting the town for a night out, Poshida has 
+the perfect outfit for every occasion. </p>
+<h4>Trending Dresses for Women:</h4>
+<p> Stay ahead of the fashion curve with our 
+collection of trendy dresses that range from casual daywear to elegant evening 
+attire. Whether you prefer classic silhouettes or contemporary designs, our 
+dresses are crafted from high-quality fabrics and tailored to perfection to ensure a 
+flattering fit.</p>
+<h4>Designer Tops for Women: </h4>
+<p> Elevate your everyday wardrobe with our collection 
+of designer tops crafted from premium fabrics and featuring contemporary 
+designs. From sleek blouses to flowy tunics, our tops are versatile enough to take 
+you from day to night with ease.</p>
+<h4>Floral Tops for Women:</h4>
+<p>Embrace your feminine side with our selection of 
+floral tops that exude charm and grace. Perfect for any casual outing or social 
+gathering, our floral tops are designed to add a touch of romance to your look.</p>
+<h4>Palazzo Pants for Women: </h4>
+<p>Experience comfort and style with our chic palazzo 
+pants that offer effortless elegance and versatility for any occasion. Whether you 
+pair them with a crop top for a boho-chic look or a fitted blouse for a more 
+polished ensemble, our palazzo pants are sure to become a staple in your 
+wardrobe. </p>
+<h4>Stylish Floor Length Gowns for Women:</h4>
+<p> Make a glamorous statement with 
+our collection of floor-length gowns that are perfect for special occasions and 
+formal events. Whether you prefer classic black or bold colors, our gowns are 
+designed to make you look and feel like a million bucks. </p>
+<h4>Elevate Your Wardrobe with Poshida: Your Trusted Destination for 
+Women's Fashion </h4>
+<p>At Poshida, we understand that fashion is more than just clothing – it's a form of 
+self-expression and empowerment. That's why we're committed to providing 
+exceptional quality, unparalleled style, and unmatched customer service to 
+women everywhere. With a dedication to craftsmanship and attention to detail, 
+we strive to create clothing that not only looks beautiful but also feels luxurious 
+to wear. Whether you're shopping for ethnic wear or western wear, our extensive 
+collection ensures that you find the perfect pieces to complement your wardrobe 
+and elevate your style. 
+As your trusted destination for women's fashion, Poshida is here to help you look 
+and feel your best, every day. From the moment you step into our store or visit 
+our website, you'll experience the ultimate in shopping convenience, with a wide 
+range of styles, sizes, and colors to choose from. Whether you're shopping for 
+yourself or looking for the perfect gift for a loved one, Poshida has everything 
+you need to elevate your wardrobe and express your unique sense of style. 
+Experience the difference with Poshida and discover a world of timeless 
+elegance, modern sophistication, and effortless glamour. Shop with us today and 
+experience the magic of Poshida for yourself! </p>
+<h4>Popular Searches –  
+</h4>
+<p>
+	<div class="inner-links">
+		<div class="inner-cnt">
+	<a href="https://www.poshida.in/products/A--LINE-KURTA/1">A Line Kurta</a><br>
+<a href="https://www.poshida.in/products/FLOOR-LENGTH-GOWN/1">Aliya Cut Kurtis</a><br>
+<a href="https://www.poshida.in/products/EMBROIDERY-KURTA/1">Embroidery Kurta for Women</a><br>
+<a href="https://www.poshida.in/products/FLOOR-LENGTH-GOWN/1">Floor Length Gown for Women</a><br>
+<a href="https://www.poshida.in/products/WOMEN-ETHNIC-KURTAS-SETS/1">Ethnic Kurti for Women</a><br>
+<a href="https://www.poshida.in/products/WOMEN-STRAIGHT-KURTI-and-KURTAS/1">Women Straight Kurti</a><br>
+</div>
+<div class="inner-anchrs">
+<a href="https://www.poshida.in/products/Women-Westerns/1">Western Wear for Women</a><br>
+<a href="https://www.poshida.in/products/Women-Ethnics/1">Ethnic Wear for Women</a><br>
+<a href="https://www.poshida.in/products/Tops/1">Designer Tops for Women</a><br>
+<a href="https://www.poshida.in/products/Dresses/1">Trending Dresses for Women</a><br>
+<a href="https://www.poshida.in/products/Coord-Sets/1">Western Cord Sets</a><br>
+<a href="https://www.poshida.in/products/Bottoms/1">Bottom Wear for Women</a><br>
+</div>
+
+
+	</div>
+</p>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+  const accordions = document.querySelectorAll(".accordion-item");
+
+  accordions.forEach((accordion) => {
+    const header = accordion.querySelector(".accordion-header");
+    const content = accordion.querySelector(".accordion-content");
+    const toggle = header.querySelector(".accordion-toggle");
+
+    header.addEventListener("click", () => {
+      accordion.classList.toggle("active");
+      if (accordion.classList.contains("active")) {
+        content.style.display = "block";
+        toggle.textContent = "-";
+      } else {
+        content.style.display = "none";
+        toggle.textContent = "+";
+      }
+    });
+  });
+});
+
+</script>
