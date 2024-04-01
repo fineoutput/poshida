@@ -580,7 +580,8 @@ class Home extends CI_Controller
             if (!empty($type_datass[0])) {
                 $size_arr = $this->products->getColorSize($type_datass[0]->product_id, $type_datass[0]->colour_id);
             } else {
-                $size_arr = [];
+                $this->session->set_flashdata('emessage', 'Product not found');
+            redirect("/");
             }
             $data['buy_with_it'] = $buy_with_it;
             $data['related_data'] = $related_products;
