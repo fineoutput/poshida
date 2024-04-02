@@ -511,31 +511,6 @@
   	</div>
   </section>
   <!-- ========================= END OUR BLOGS ========================= -->
-
-
-  <!-- ==================== START SECTION SUBSCRIBE NEWSLETTER ================== -->
-  <section class="newsletter-section align-center " style="padding-top: 44px; padding-bottom: 50px;">
-  	<div class="container">
-  		<div class="row justify-content-center">
-  			<div class="col-xl-7 col-lg-9 col-12">
-  				<div class="newsletter-title">
-  					<h2 class="main_title">Sign up for Newsletter </h2>
-  					<p>Wants to get latest updates! sign up for Free </p>
-  				</div>
-  				<div class="newsletter-input">
-  					<form action="<?= base_url() ?>Home/subscribe_data" method="POST" enctype="multipart/form-data">
-  						<div class="form-group m-0">
-  							<input type="email" name="email" placeholder="Your email address" required="">
-  						</div>
-  						<button type="submit" class="btn btn-color"><span class="d-none d-sm-block">Subscribe</span>
-  							<i class="fa fa-send d-block d-sm-none"></i></button>
-  					</form>
-  				</div>
-  			</div>
-  		</div>
-  	</div>
-  </section>
-  <!-- =================== END SECTION SUBSCRIBE NEWSLETTER ==================== -->
   <section class="accordian-sect ">
   <div class="container">
     <div class="row justify-content-center">
@@ -645,22 +620,19 @@ experience the magic of Poshida for yourself! </p>
 <h4>Popular Searches –  
 </h4>
 <p>
-	<div class="inner-links">
-		<div class="inner-cnt">
-	<a href="https://www.poshida.in/products/A--LINE-KURTA/1">A Line Kurta</a><br>
-<a href="https://www.poshida.in/products/FLOOR-LENGTH-GOWN/1">Aliya Cut Kurtis</a><br>
-<a href="https://www.poshida.in/products/EMBROIDERY-KURTA/1">Embroidery Kurta for Women</a><br>
-<a href="https://www.poshida.in/products/FLOOR-LENGTH-GOWN/1">Floor Length Gown for Women</a><br>
-<a href="https://www.poshida.in/products/WOMEN-ETHNIC-KURTAS-SETS/1">Ethnic Kurti for Women</a><br>
-<a href="https://www.poshida.in/products/WOMEN-STRAIGHT-KURTI-and-KURTAS/1">Women Straight Kurti</a><br>
-</div>
-<div class="inner-anchrs">
-<a href="https://www.poshida.in/products/Women-Westerns/1">Western Wear for Women</a><br>
-<a href="https://www.poshida.in/products/Women-Ethnics/1">Ethnic Wear for Women</a><br>
-<a href="https://www.poshida.in/products/Tops/1">Designer Tops for Women</a><br>
-<a href="https://www.poshida.in/products/Dresses/1">Trending Dresses for Women</a><br>
-<a href="https://www.poshida.in/products/Coord-Sets/1">Western Cord Sets</a><br>
-<a href="https://www.poshida.in/products/Bottoms/1">Bottom Wear for Women</a><br>
+	<a href="https://www.poshida.in/products/A--LINE-KURTA/1">A Line Kurta</a> |
+<a href="https://www.poshida.in/products/FLOOR-LENGTH-GOWN/1">Aliya Cut Kurtis</a> |
+<a href="https://www.poshida.in/products/EMBROIDERY-KURTA/1">Embroidery Kurta for Women</a> |
+<a href="https://www.poshida.in/products/FLOOR-LENGTH-GOWN/1">Floor Length Gown for Women</a> |
+<a href="https://www.poshida.in/products/WOMEN-ETHNIC-KURTAS-SETS/1">Ethnic Kurti for Women</a> |
+<a href="https://www.poshida.in/products/WOMEN-STRAIGHT-KURTI-and-KURTAS/1">Women Straight Kurti</a> |
+
+<a href="https://www.poshida.in/products/Women-Westerns/1">Western Wear for Women</a> |
+<a href="https://www.poshida.in/products/Women-Ethnics/1">Ethnic Wear for Women</a> |
+<a href="https://www.poshida.in/products/Tops/1">Designer Tops for Women</a> |
+<a href="https://www.poshida.in/products/Dresses/1">Trending Dresses for Women</a> |
+<a href="https://www.poshida.in/products/Coord-Sets/1">Western Cord Sets</a> |
+<a href="https://www.poshida.in/products/Bottoms/1">Bottom Wear for Women</a> |
 </div>
 
 
@@ -674,6 +646,31 @@ experience the magic of Poshida for yourself! </p>
   </div>
 </section>
 
+
+  <!-- ==================== START SECTION SUBSCRIBE NEWSLETTER ================== -->
+  <section class="newsletter-section align-center " style="padding-top: 44px; padding-bottom: 50px;">
+  	<div class="container">
+  		<div class="row justify-content-center">
+  			<div class="col-xl-7 col-lg-9 col-12">
+  				<div class="newsletter-title">
+  					<h2 class="main_title">Sign up for Newsletter </h2>
+  					<p>Wants to get latest updates! sign up for Free </p>
+  				</div>
+  				<div class="newsletter-input">
+  					<form action="<?= base_url() ?>Home/subscribe_data" method="POST" enctype="multipart/form-data">
+  						<div class="form-group m-0">
+  							<input type="email" name="email" placeholder="Your email address" required="">
+  						</div>
+  						<button type="submit" class="btn btn-color"><span class="d-none d-sm-block">Subscribe</span>
+  							<i class="fa fa-send d-block d-sm-none"></i></button>
+  					</form>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </section>
+  <!-- =================== END SECTION SUBSCRIBE NEWSLETTER ==================== -->
+  
 
 <script>
 	document.addEventListener("DOMContentLoaded", function() {

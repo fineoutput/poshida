@@ -4916,9 +4916,6 @@ input[type="searc"] {
 
 
 
-.accordion-item {
-	border-bottom: 1px solid #ccc;
-  }
   
   .accordion-header {
 	display: flex;
@@ -4952,4 +4949,8 @@ input[type="searc"] {
   .inner-links {
     display: flex;
     gap: 50px;
+}
+section.accordian-sect {
+    border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
 }
