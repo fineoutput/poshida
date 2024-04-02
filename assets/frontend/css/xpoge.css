@@ -4917,13 +4917,13 @@ input[type="searc"] {
 
 
   
-  .accordion-header {
+.accordion-header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px;
 	cursor: pointer;
-  }
+	padding: 28px 0px 0px;
+	}
   
   .accordion-content {
 	display: none;
@@ -4952,5 +4952,6 @@ input[type="searc"] {
 }
 section.accordian-sect {
     border-top: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-top: 50px;
 }
