@@ -202,70 +202,7 @@
 
   <!-- ======================= START SHOP BY CATEGORIES  ======================== -->
 
-  <section class="product-section pb-100">
-  	<div class="container">
-  		<div class="row">
-  			<div class="col-12">
-
-  				<div class="heading-part text-center mb-30 mb-sm-20">
-  					<h2 class="main_title">Shop By Categories</h2>
-  				</div>
-  			</div>
-  		</div>
-  		<div class="position-r mb-5">
-		<!-- <div class="row">
-			<div class="product-slider owl-carousel position-initial" id ="myslider" data-items="3"> <!-- Change data-items to 3 -->
-				<!-- <?php $i = 1;
-				foreach ($shop_by_category_data->result() as $category) { ?>
-					<div class="item">
-						<a rel="canonical" href="<?= $category->link ?>">
-							<img src="<?= base_url() . $category->image ?>" alt="<?= $category->name ?>">
-						</a>
-					</div>
-				<?php $i++;
-				} ?> -->
-			
-		</div> 
-		<div class="row catrty owl-carousel creeps">
-		<?php $i = 1;
-				foreach ($shop_by_category_data->result() as $category) { ?>
-    <div class="item needs">
-        <a rel="canonical" href="<?= $category->link ?>">
-		<img src="<?= base_url() . $category->image ?>" alt="<?= $category->name ?>">
-        </a>
-    </div>
-	<?php $i++;
-				} ?>
-    <!-- <div class="item">
-        <a rel="canonical" href="#">
-		<img src="<?= base_url() ?>assets/uploads/shop_by_category/shop_by_category20231002133132.jpg" alt="logo">
-        </a>
-    </div> -->
-    <!-- <div class="item">
-        <a rel="canonical" href="#">
-		<img src="<?= base_url() ?>assets/uploads/shop_by_category/shop_by_category20231002133132.jpg" alt="logo">
-        </a>
-    </div>
-    <div class="item">
-        <a rel="canonical" href="#">
-		<img src="<?= base_url() ?>assets/uploads/shop_by_category/shop_by_category20231002133132.jpg" alt="logo">
-        </a>
-    </div>
-    <div class="item">
-        <a rel="canonical" href="#">
-		<img src="<?= base_url() ?>assets/uploads/shop_by_category/shop_by_category20231002133132.jpg" alt="logo">
-        </a>
-    </div>
-    <div class="item">
-        <a rel="canonical" href="#">
-		<img src="<?= base_url() ?>assets/uploads/shop_by_category/shop_by_category20231002133132.jpg" alt="logo">
-        </a>
-    </div> -->
-</div>
-</div>
-</div>
-  	</div>
-  </section>
+  
   <!-- ======================= END SHOP BY CATEGORIES  ======================== -->
   
   <!-- ======================== START TRENDING PRODUCTS ====================== -->
@@ -732,7 +669,7 @@ experience the magic of Poshida for yourself! </p>
 });
 
 </script>
-
+<!-- 
 <script>
     $(document).ready(function(){
         $('.owl-carousel').owlCarousel({
@@ -758,4 +695,4 @@ experience the magic of Poshida for yourself! </p>
             }
         });
     });
-</script>
+</script> -->
