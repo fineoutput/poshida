@@ -157,11 +157,11 @@
 
   <!-- =========================== END WHATS NEW  =================================== -->
 
-  <div class="container mb-2">
+  <!-- <div class="container mb-2">
   	<div class="row" style="justify-content: center;">
   		<img src="<?= base_url() ?>assets/frontend/img/add.gif" alt="">
   	</div>
-  </div>
+  </div> -->
 
   <!-- ======================= START FIRST BIG BANNER SECTION  ======================== -->
   <? if (!empty($banner_data[0])) { ?>
@@ -232,9 +232,7 @@
   	</div>
   </section>
   <!-- ======================= END SHOP BY CATEGORIES  ======================== -->
-  <div style="width: 70%; margin: auto;">
-  	<img alt=" " src="<?= base_url() ?>assets/frontend/img/bannnerrr-compressed.jpg">
-  </div>
+  
   <!-- ======================== START TRENDING PRODUCTS ====================== -->
   <section class="product-section pb-100">
   	<div class="container">
@@ -511,6 +509,10 @@
   	</div>
   </section>
   <!-- ========================= END OUR BLOGS ========================= -->
+  <div style="width: 70%; margin: auto;">
+  	<img alt=" " src="<?= base_url() ?>assets/frontend/img/bannnerrr-compressed.jpg">
+  </div>
+
   <section class="accordian-sect ">
   <div class="container">
     <div class="row justify-content-center">

@@ -24,7 +24,7 @@
           <div class="col-12">
             <div class="term_conditions">
               <h4>Replacement or Exchange Policy</h4>
-              <ol style="list-style-type:disc;">
+              <ol style="list-style-type:disc !important;">
                 <li>Products can be replaced within 7 days from the date of delivery. Payment Refunds are applicable only in case of damaged products. In all other cases, replacement or e-voucher (3 months validity) is available.  </li>
                 <li>Exchange or Replacements are done free of cost if wrong products (incomplete sets or incorrect style), wrong sizes (sizes other than that ordered), or damaged products are received by the customer. However, the Company reserves the right to levy shipping charges on cases that come under legal scrutiny.  </li>
 

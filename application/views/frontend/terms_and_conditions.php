@@ -49,28 +49,7 @@
                 <hr style=" margin-bottom: 20px; " >
                 <h4>SERVICES PROVIDED</h4>
                 <p>The website provides a number of Internet-based services (all such services, collectively, the "Service"). One such online service that permits users to purchase by offering a huge range of ready-to-Indian wear. The Products can be purchased through the Website through various methods of payment offered. The purchase of Products shall be additionally governed by specific policies of sale, like cancellation policy, return policy, etc. (which are found on the following website and all of which are incorporated here by reference. In addition, these terms and policies may be further supplemented by Product-specific conditions, which may be displayed on the webpage of that Product. </p>
-                <hr style=" margin-bottom: 20px; " >
-                <h4>PRIVACY POLICY</h4>
-
-
-
-                <p>The User hereby consents, expresses, and agrees that he has read and fully understands the Privacy Policy (link for privacy policy) of the website. The user further consents that the terms and contents of such Privacy Policy are acceptable to him. User Conduct and Rules You agree and undertake to use the Website and the Service only to post and upload messages and material that are proper. By way of example, and not as a limitation, you agree and undertake that when using a Service, you will not: :</p>
-                <ol style="list-style-type:lower-alpha;">
-                  <li>defame, abuse, harass, stalk, threaten, or otherwise violate the legal rights of others; </li>
-                  <li>publish, post, upload, distribute, or disseminate any inappropriate, profane, defamatory, infringing, obscene, indecent, or unlawful topic, name, material or information; </li>
-
-
-                  <li>upload files that contain software or other material protected by intellectual property laws unless you own or control the rights thereto or have received all necessary consents; </li>
-
-                  <li>upload or distribute files that contain viruses, corrupted files, or any other similar software or programs that may damage the operation of the Website or another's computer;</li>
-                  <li>conduct or forward surveys, contests, pyramid schemes or chain letters;</li>
-
-                  <li>download any file posted by another user of a Service that you know, or reasonably should know, cannot be legally distributed in such manner;</li>
-                  <li>falsify or delete any author attributions, legal or other proper notices or proprietary designations or labels of the origin or source of software or other material contained in a file that is uploaded;</li>
-                  <li>violate any code of conduct or other guidelines, which may be applicable for or to any particular Service;</li>
-                  <li>violate any applicable laws or regulations for the time being in force in or outside India; and</li>
-                  <li>violate, abuse, unethically manipulate or exploit, any of the terms and conditions of this Agreement or any other terms and conditions for the use of the Website contained elsewhere.</li>
-                </ol>
+              
                 <hr style=" margin-bottom: 20px; " >
 
 

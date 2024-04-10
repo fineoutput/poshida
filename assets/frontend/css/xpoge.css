@@ -4955,3 +4955,6 @@ section.accordian-sect {
     border-bottom: 1px solid #ccc;
     margin-top: 50px;
 }
+.term_conditions ol li{
+    list-style: disc !important;
+}
