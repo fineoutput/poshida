@@ -110,3 +110,4 @@ define('DELIVERY_URL','track.delhivery.com');//---production
 define('WHATSAPP_NUMBERS3','');
 define('TOKEN','');
 define('FREESHIPPING','2499');
+define('SMTP_PORT', 587);
