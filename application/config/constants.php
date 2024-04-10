@@ -109,4 +109,4 @@ define('DELIVERY_TOKEN','73f7528563cba0b45db118e16c60973e32fca276');//----produc
 define('DELIVERY_URL','track.delhivery.com');//---production
 define('WHATSAPP_NUMBERS3','');
 define('TOKEN','');
-define('FREESHIPPING','2499');
+define('FREESHIPPING','999');
