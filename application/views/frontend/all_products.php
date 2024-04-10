@@ -44,7 +44,7 @@
 <div class="container banner">
   <div class="row">
     <div class="col-12 mb-3 mt-2 d-flex justify-content-center">
-      <img src="<?= base_url() ?>assets/frontend/img/add.gif" alt="" class="img-fluid">
+      <!-- <img src="<?= base_url() ?>assets/frontend/img/add.gif" alt="" class="img-fluid"> -->
     </div>
   </div>
 </div>
