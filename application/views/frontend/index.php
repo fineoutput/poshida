@@ -1,12 +1,12 @@
 
   <!-- ===================== Start Mobile Category =================================== -->
   <div style="margin-top: 79px;" class="product-sliders owl-carousel position-initial d-scs">
-  	<?php $i = 1;
+  	<!-- <?php $i = 1;
 		foreach ($category_data->result() as $category) { ?>
   		<div class="item">
   			<a rel="canonical" href="<?= base_url() ?>products/<?= $category->url ?>/1"><img src="<?= base_url() . $category->image2 ?>" alt=""> </a>
   		</div>
-  	<? } ?>
+  	<? } ?> -->
   </div>
   <!-- ================== End Mobile Category ===================================== -->
   <!-- ============================= START SLIDER  =================================== -->
