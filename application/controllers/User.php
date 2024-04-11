@@ -386,8 +386,10 @@ class User extends CI_Controller
                     $user_type = '';
                     if (empty($user_data)) {
                         $user_data = $this->db->get_where('tbl_reseller', array('email' => $email))->row();
+                         if(!empty($user_data)){
                         $user_name = $user_data->name;
                         $user_type = 2;
+                        }
                     } else {
                         $user_name = $user_data->f_name . ' ' . $user_data->l_name;
                         $user_type = 1;
