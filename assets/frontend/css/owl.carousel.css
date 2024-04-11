@@ -185,3 +185,10 @@
   height: 100%;
   width: 100%; }
 
+  .creeps .needs img {
+    max-height: 398px;
+    width: auto;
+}
+#shops{
+  
+}
