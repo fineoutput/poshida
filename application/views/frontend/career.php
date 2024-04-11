@@ -36,7 +36,7 @@
                                             </div>
                                             <div class="contact-box-detail">
                                                 <h4 class="contact-title">Visit Office</h4>
-                                                <p>Plot No. 81, near Mahima Panache, Nandpuri B, Sheopur, Jagatpura, Jaipur, Rajasthan 302025</p>
+                                                <p>SFS, Plot no. 4/219, 2nd, Shipra Path, SFS Manasarovar, Agarwal farm, Mansarovar, Jaipur, Rajasthan 302017</p>
                                             </div>
                                         </li>
 

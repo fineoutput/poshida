@@ -70,34 +70,43 @@
               <hr>
               <h4>Guidelines for a valid return for replacement or exchange:</h4>
 
-
-              <p>Product & Accessories, if any, should be in original condition.</p>
-              <p>Tags should be retained and returned.</p>
-              <p>Jewelry, Mask & Fragrances are non-returnable.</p>
-              <p>Returns and Replacements are done free of cost if wrong products (incomplete sets or incorrect style), wrong sizes (size other than that ordered) or damaged products are received by the customer.</p>
+              <ol style="list-style-type: disc;">
+              <li>Product & Accessories, if any, should be in original condition.</li>
+              <li>Tags should be retained and returned.</li>
+              <li>Jewelry, Mask & Fragrances are non-returnable.</li>
+              <li>Returns and Replacements are done free of cost if wrong products (incomplete sets or incorrect style), wrong sizes (size other than that ordered) or damaged products are received by the customer.</li>
+              </ol>
               <hr>
               <h4>Cancellation Policy</h4>
-              <p>An easy cancellation process is available for all our esteemed customers. You can cancel your online order before the product has been shipped. Your entire order amount will be refunded.</p>
-              <p style="color:red">Prepaid orders are not eligible for cancellation.</p>
-              <p>You can cancel an order in an easy step:</p>
-              <p>Email us on <b>customercare@poshida.in</b></p>
-              <p>Please note that the complete order needs to be canceled. We do not accept Partial order cancellation requests. </p>
-              <p>The customer agrees not to dispute the decision made by poshida and accept The poshida STORE’s decision regarding the cancellation.</p>
+              <ol style="list-style-type: disc;">
+              <li>An easy cancellation process is available for all our esteemed customers. You can cancel your online order before the product has been shipped. Your entire order amount will be refunded.</li>
+              <li style="color:red">Prepaid orders are not eligible for cancellation.</li>
+              <li>You can cancel an order in an easy step:</li>
+              <li>Email us on <b>customercare@poshida.in</b></li>
+              <li>Please note that the complete order needs to be canceled. We do not accept Partial order cancellation requests. </li>
+              <li>The customer agrees not to dispute the decision made by poshida and accept The poshida STORE’s decision regarding the cancellation.</li>
+              </ol>
               <hr>
               <h4>Refund Policy</h4>
-              <p>Your refund will be initiated by us within 2 business days of receiving the refund request and authorization of the refund.</p>
-              <p>Your refund is estimated to be credited in the account, used for order payment, between 4-8 days after initiating the refund. Please note that the timing of the actual account credit is dependent on multiple external agencies such as banks, payment gateways and external couriers (for cheques).</p>
+              <ol style="list-style-type: disc;">
+              <li>Your refund will be initiated by us within 2 business days of receiving the refund request and authorization of the refund.</li>
+              <li>Your refund is estimated to be credited in the account, used for order payment, between 4-8 days after initiating the refund. Please note that the timing of the actual account credit is dependent on multiple external agencies such as banks, payment gateways and external couriers (for cheques).</li>
+              </ol>
               <hr>
               <h4>Mode of Refund</h4>
-              <p>For both cancelled orders & returned products (due to incomplete sets, incorrect style, wrong sizes, or defective products delivered), the refund amount will be credited back into the same account (online banking, credit card, debit card) that was used to make the purchase. In case of Cash On Delivery (COD) orders, refund will be done through NEFT.</p>
+              <ol style="list-style-type: disc;">
+              <li>For both cancelled orders & returned products (due to incomplete sets, incorrect style, wrong sizes, or defective products delivered), the refund amount will be credited back into the same account (online banking, credit card, debit card) that was used to make the purchase. In case of Cash On Delivery (COD) orders, refund will be done through NEFT.</li>
+              </ol>
               <p><b>We require product images and tags in the below mentioned cases:</b></p>
               <p><b>Refunds are applicable for following cases:</b></p>
+              
               <ol style="list-style-type: lower-roman;">
                 <li>Defective product received <b>– Only product 6 images are required & Tag Image required.</b></li>
                 <li>Wrong product received <b>– Both product & Tag images required.</b></li>
+              
+              <li>Your refund will be initiated by us within 2 business days of receiving the refund request and authorization of the refund.</li>
+              <li>Your refund is estimated to be credited in the account, used for order payment, between 4-8 days after initiating the refund. Please note that the timing of the actual account credit is dependent on multiple external agencies such as banks, payment gateways and external couriers (for cheques).</li>
               </ol>
-              <p>Your refund will be initiated by us within 2 business days of receiving the refund request and authorization of the refund.</p>
-              <p>Your refund is estimated to be credited in the account, used for order payment, between 4-8 days after initiating the refund. Please note that the timing of the actual account credit is dependent on multiple external agencies such as banks, payment gateways and external couriers (for cheques).</p>
               <hr>
               <h5 style="color:red">Please Note:</h5>
               <p>Purchase made from <b>SALE</b> section are not eligible for any kind of return or exchange. All the sale, discounted, brought with a coupon and gift voucher purchases are non returnable, non refundable & non exchangeable.</p>
