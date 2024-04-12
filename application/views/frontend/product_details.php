@@ -591,7 +591,7 @@
                       <a rel="canonical" href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel" class="btn btn-color sice"> <i class="fa fa wsws" style="font-size: 23px; color: #fff; "></i>Add to wishlist</a>
                     </li>
                     <li class="icon fav-icon-heart ">
-                      <a rel="canonical" href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel"><i class="fa fa-he=art-o wsws" style="font-size: 23px; margin-left: 24px; color: #686868;; ">
+                      <a rel="canonical" href="javascript:void(0)" data-toggle="modal" data-target="#LoginModel"><i class="fa fa-heart-o wsws" style="font-size: 23px; margin-left: 24px; color: #686868;; ">
                           <div class="tooltip">Add to wishlist</div>
                         </i>
                       </a>
