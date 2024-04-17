@@ -353,7 +353,7 @@ if (!empty($this->session->userdata('user_data'))) {
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-8 col-8 p-0 position-initial responice-list-menu " style="justify-content: center;
+          <div class="col-lg-7 col-md-8 col-8 p-0 position-initial responice-list-menu " style="justify-content: center;
             display: flex;
             align-items: center; 
             ">
@@ -440,7 +440,7 @@ if (!empty($this->session->userdata('user_data'))) {
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-3 p-0 icon-bar fgdfdghfh" style="display: flex;
+          <div class="col-lg-3 col-md-6 col-3 p-0 icon-bar fgdfdghfh" style="display: flex;
 						align-items: center;">
             <div id="google_translate_element"></div>
             <div class="header-right-link">
