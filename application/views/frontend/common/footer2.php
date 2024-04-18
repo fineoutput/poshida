@@ -53,7 +53,7 @@
     <div class="row justify-content-center">
       <div class="col-xl-7 col-lg-9 col-12">
         <div class="newsletter-title">
-          <h2 class="main_title">Sig up for Newsletter </h2>
+          <h2 class="main_title">Sign up for Newsletter </h2>
           <p>Wants to get latest updates! sign up for Free </p>
         </div>
         <div class="newsletter-input">
