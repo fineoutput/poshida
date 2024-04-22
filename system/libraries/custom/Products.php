@@ -22,11 +22,13 @@ class CI_Products
         $this->CI->db->select('*');
         $this->CI->db->from('tbl_category');
         $this->CI->db->where('url', $url);
+        $this->CI->db->where('is_active', 1);
         $cat_data = $this->CI->db->get()->row();
         //------ checks for subcategory wise data -------------
         $this->CI->db->select('*');
         $this->CI->db->from('tbl_subcategory');
         $this->CI->db->where('url', $url);
+        $this->CI->db->where('is_active', 1);
         $sub_data = $this->CI->db->get()->row();
         $category_name = '';
         $subcategory_name = '';
@@ -50,6 +52,7 @@ class CI_Products
         //--------- Count to total number of rows ---------------
         $this->CI->db->select('*');
         $this->CI->db->from($tbl_pro);
+        $this->CI->db->where('is_active', 1);
         if (!empty($this->CI->session->userdata('user_type'))) {
             if ($this->CI->session->userdata('user_type') == 2) { //reseller
                 $this->CI->db->where('product_view != ', 1);
