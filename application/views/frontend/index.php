@@ -37,119 +37,118 @@
   		</div>
   		<div class="position-r mb-5">
   			<div class="row">
-  				<div class="product-slider owl-carousel position-initial">
+			  <div class="product-slider owl-carousel position-initial">
 
-  					<?php $i = 1;
-						foreach ($whats_data->result() as $whats) {
-							$type_datas = $this->db->get_where('tbl_type', array('product_id = ' => $whats->id, 'is_active' => 1, 'color_active' => 1, 'size_active' => 1));
-							$type_data = $type_datas->result();
-							if (!empty($type_data)) {
-								if ($whats->product_view == 3) {
-									if (!empty($this->session->userdata('user_type'))) {
-										if ($this->session->userdata('user_type') == 2) {
-											$type_mrp = $type_data[0]->reseller_mrp;
-											$type_spgst = $type_data[0]->reseller_spgst;
-										} else {
-											$type_mrp = $type_data[0]->retailer_mrp;
-											$type_spgst = $type_data[0]->retailer_spgst;
-										}
-									} else {
-										$type_mrp = $type_data[0]->retailer_mrp;
-										$type_spgst = $type_data[0]->retailer_spgst;
-									}
-								} elseif ($whats->product_view == 2) {
-									$type_mrp = $type_data[0]->reseller_mrp;
-									$type_spgst = $type_data[0]->reseller_spgst;
-								} else {
-									$type_mrp = $type_data[0]->retailer_mrp;
-									$type_spgst = $type_data[0]->retailer_spgst;
-								}
-								$discount = $type_mrp - $type_spgst;
-								$percent = 0;
-								if ($discount > 0) {
-									$percent = $discount / $type_mrp * 100;
-									$percent  = round($percent, 2);
-								}
-								if (!empty($type_data[0]->image2)) {
-									$image1 = $type_data[0]->image2;
-								} else {
-									$image1 = $type_data[0]->image;
-								}
-						?>
-  							<div class="item">
-  								<div class="product-item">
-  									<div class="product-image">
-  										<? if ($whats->exclusive == 1) { ?><div class="sale-label"><span>Exclusive</span></div><? } ?>
-  										<a rel="canonical" href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
-  											<img src="<?= base_url() . $type_data[0]->image ?>" alt=" ">
-  										</a>
-  									</div>
-  									<div class="product-details-outer">
-  										<div class="product-details">
-  											<div class="product-title">
-  												<a rel="canonical" href="#"><?= $whats->name ?></a>
-  											</div>
-  											<div class="price-box">
-  												<span class="price">₹<?= $type_spgst ?></span>
-  												<? if ($type_mrp > $type_spgst) { ?><del class="price old-price">₹<?= $type_mrp ?></del> <? } ?>
-  												<? if ($percent > 0) { ?><span class="on-sic"> <?= round($percent) ?>% off </span> <? } ?>
+<?php $i = 1;
+  foreach ($trending_data->result() as $whats) {
+	  $type_datas = $this->db->get_where('tbl_type', array('product_id = ' => $whats->id, 'is_active' => 1, 'color_active' => 1, 'size_active' => 1));
+	  $type_data = $type_datas->result();
+	  if (!empty($type_data)) {
+		  if ($whats->product_view == 3) {
+			  if (!empty($this->session->userdata('user_type'))) {
+				  if ($this->session->userdata('user_type') == 2) {
+					  $type_mrp = $type_data[0]->reseller_mrp;
+					  $type_spgst = $type_data[0]->reseller_spgst;
+				  } else {
+					  $type_mrp = $type_data[0]->retailer_mrp;
+					  $type_spgst = $type_data[0]->retailer_spgst;
+				  }
+			  } else {
+				  $type_mrp = $type_data[0]->retailer_mrp;
+				  $type_spgst = $type_data[0]->retailer_spgst;
+			  }
+		  } elseif ($whats->product_view == 2) {
+			  $type_mrp = $type_data[0]->reseller_mrp;
+			  $type_spgst = $type_data[0]->reseller_spgst;
+		  } else {
+			  $type_mrp = $type_data[0]->retailer_mrp;
+			  $type_spgst = $type_data[0]->retailer_spgst;
+		  }
+		  $discount = $type_mrp - $type_spgst;
+		  $percent = 0;
+		  if ($discount > 0) {
+			  $percent = $discount / $type_mrp * 100;
+			  $percent  = round($percent, 2);
+		  }
+		  if (!empty($type_data[0]->image2)) {
+			  $image1 = $type_data[0]->image2;
+		  } else {
+			  $image1 = $type_data[0]->image;
+		  }
+  ?>
+		<div class="item">
+			<div class="product-item">
+				<div class="product-image">
+					<? if ($whats->exclusive == 1) { ?><div class="sale-label"><span>Exclusive</span></div><? } ?>
+					<a rel="canonical" href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
+						<img src="<?= base_url() . $type_data[0]->image ?>" alt=" ">
+					</a>
+				</div>
+				<div class="product-details-outer">
+					<div class="product-details">
+						<div class="product-title">
+							<a rel="canonical" href="#"><?= $whats->name ?></a>
+						</div>
+						<div class="price-box">
+							<span class="price">₹<?= $type_spgst ?></span>
+							<? if ($type_mrp > $type_spgst) { ?><del class="price old-price">₹<?= $type_mrp ?></del> <? } ?>
+							<? if ($percent > 0) { ?><span class="on-sic"> <?= round($percent) ?>% off </span> <? } ?>
 
-  											</div>
-  										</div>
-  										<div class="product-details-btn">
-  											<ul>
-  												<?php $i = 1;
-													$more = 0;
-													$size_arr = [];
-													foreach ($type_datas->result() as $type_size) {
-														$status = 0;
-														if ($i < 5) {
-															$this->db->select('*');
-															$this->db->from('tbl_size');
-															$this->db->where('id', $type_size->size_id);
-															$this->db->where('is_active', 1);
-															$size_data = $this->db->get()->row();
-															if (!empty($size_data)) {
-																if ($i == 1) {
-																	array_push($size_arr, $size_data->id);
-																	$status = 0;
-																} else {
-																	foreach ($size_arr as $key) {
-																		if ($key == $size_data->id) {
-																			$status = 1;
-																			break;
-																		}
-																	}
-																}
-																if ($status == 0) {
-																	array_push($size_arr, $size_data->id);
-													?>
-  																<li class="icon  cart-icon">
-  																	<a rel="canonical" href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_size->id) ?>"> <?= $size_data->name ?> <p style="margin-bottom:0; padding: 0px 10px;">|</p> </a>
-  																</li>
-  													<?php }
-															}
-														} else {
-															$more++;
-														}
-														$i++;
-													}
-													if ($more > 0) {
-														?>
-  													<li class="icon ivo-ho compare-icon">
-  														<a rel="canonical" href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
-  													</li>
-  												<? } ?>
-  											</ul>
-  										</div>
-  									</div>
-  								</div>
-  							</div>
-  					<?php }
-							$i++;
-						}  ?>
-
-  				</div>
+						</div>
+					</div>
+					<div class="product-details-btn">
+						<ul>
+							<?php $i = 1;
+							  $more = 0;
+							  $size_arr = [];
+							  foreach ($type_datas->result() as $type_size) {
+								  $status = 0;
+								  if ($i < 5) {
+									  $this->db->select('*');
+									  $this->db->from('tbl_size');
+									  $this->db->where('id', $type_size->size_id);
+									  $this->db->where('is_active', 1);
+									  $size_data = $this->db->get()->row();
+									  if (!empty($size_data)) {
+										  if ($i == 1) {
+											  array_push($size_arr, $size_data->id);
+											  $status = 0;
+										  } else {
+											  foreach ($size_arr as $key) {
+												  if ($key == $size_data->id) {
+													  $status = 1;
+													  break;
+												  }
+											  }
+										  }
+										  if ($status == 0) {
+											  array_push($size_arr, $size_data->id);
+							  ?>
+											<li class="icon  cart-icon">
+												<a rel="canonical" href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_size->id) ?>"> <?= $size_data->name ?> <p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
+											</li>
+								<?php }
+									  }
+								  } else {
+									  $more++;
+								  }
+								  $i++;
+							  }
+							  if ($more > 0) {
+								  ?>
+								<li class="icon ivo-ho compare-icon">
+									<a rel="canonical" href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
+								</li>
+							<? } ?>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+<?php }
+	  $i++;
+  }  ?>
+</div>
   			</div>
   		</div>
   	</div>
@@ -282,118 +281,119 @@
   		</div>
   		<div class="position-r mb-5">
   			<div class="row">
-  				<div class="product-slider owl-carousel position-initial">
+			  <div class="product-slider owl-carousel position-initial">
 
-  					<?php $i = 1;
-						foreach ($trending_data->result() as $whats) {
-							$type_datas = $this->db->get_where('tbl_type', array('product_id = ' => $whats->id, 'is_active' => 1, 'color_active' => 1, 'size_active' => 1));
-							$type_data = $type_datas->result();
-							if (!empty($type_data)) {
-								if ($whats->product_view == 3) {
-									if (!empty($this->session->userdata('user_type'))) {
-										if ($this->session->userdata('user_type') == 2) {
-											$type_mrp = $type_data[0]->reseller_mrp;
-											$type_spgst = $type_data[0]->reseller_spgst;
-										} else {
-											$type_mrp = $type_data[0]->retailer_mrp;
-											$type_spgst = $type_data[0]->retailer_spgst;
-										}
-									} else {
-										$type_mrp = $type_data[0]->retailer_mrp;
-										$type_spgst = $type_data[0]->retailer_spgst;
-									}
-								} elseif ($whats->product_view == 2) {
-									$type_mrp = $type_data[0]->reseller_mrp;
-									$type_spgst = $type_data[0]->reseller_spgst;
-								} else {
-									$type_mrp = $type_data[0]->retailer_mrp;
-									$type_spgst = $type_data[0]->retailer_spgst;
-								}
-								$discount = $type_mrp - $type_spgst;
-								$percent = 0;
-								if ($discount > 0) {
-									$percent = $discount / $type_mrp * 100;
-									$percent  = round($percent, 2);
-								}
-								if (!empty($type_data[0]->image2)) {
-									$image1 = $type_data[0]->image2;
-								} else {
-									$image1 = $type_data[0]->image;
-								}
-						?>
-  							<div class="item">
-  								<div class="product-item">
-  									<div class="product-image">
-  										<? if ($whats->exclusive == 1) { ?><div class="sale-label"><span>Exclusive</span></div><? } ?>
-  										<a rel="canonical" href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
-  											<img src="<?= base_url() . $type_data[0]->image ?>" alt=" ">
-  										</a>
-  									</div>
-  									<div class="product-details-outer">
-  										<div class="product-details">
-  											<div class="product-title">
-  												<a rel="canonical" href="#"><?= $whats->name ?></a>
-  											</div>
-  											<div class="price-box">
-  												<span class="price">₹<?= $type_spgst ?></span>
-  												<? if ($type_mrp > $type_spgst) { ?><del class="price old-price">₹<?= $type_mrp ?></del> <? } ?>
-  												<? if ($percent > 0) { ?><span class="on-sic"> <?= round($percent) ?>% off </span> <? } ?>
+<?php $i = 1;
+  foreach ($whats_data->result() as $whats) {
+	  $type_datas = $this->db->get_where('tbl_type', array('product_id = ' => $whats->id, 'is_active' => 1, 'color_active' => 1, 'size_active' => 1));
+	  $type_data = $type_datas->result();
+	  if (!empty($type_data)) {
+		  if ($whats->product_view == 3) {
+			  if (!empty($this->session->userdata('user_type'))) {
+				  if ($this->session->userdata('user_type') == 2) {
+					  $type_mrp = $type_data[0]->reseller_mrp;
+					  $type_spgst = $type_data[0]->reseller_spgst;
+				  } else {
+					  $type_mrp = $type_data[0]->retailer_mrp;
+					  $type_spgst = $type_data[0]->retailer_spgst;
+				  }
+			  } else {
+				  $type_mrp = $type_data[0]->retailer_mrp;
+				  $type_spgst = $type_data[0]->retailer_spgst;
+			  }
+		  } elseif ($whats->product_view == 2) {
+			  $type_mrp = $type_data[0]->reseller_mrp;
+			  $type_spgst = $type_data[0]->reseller_spgst;
+		  } else {
+			  $type_mrp = $type_data[0]->retailer_mrp;
+			  $type_spgst = $type_data[0]->retailer_spgst;
+		  }
+		  $discount = $type_mrp - $type_spgst;
+		  $percent = 0;
+		  if ($discount > 0) {
+			  $percent = $discount / $type_mrp * 100;
+			  $percent  = round($percent, 2);
+		  }
+		  if (!empty($type_data[0]->image2)) {
+			  $image1 = $type_data[0]->image2;
+		  } else {
+			  $image1 = $type_data[0]->image;
+		  }
+  ?>
+		<div class="item">
+			<div class="product-item">
+				<div class="product-image">
+					<? if ($whats->exclusive == 1) { ?><div class="sale-label"><span>Exclusive</span></div><? } ?>
+					<a rel="canonical" href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>">
+						<img src="<?= base_url() . $type_data[0]->image ?>" alt=" ">
+					</a>
+				</div>
+				<div class="product-details-outer">
+					<div class="product-details">
+						<div class="product-title">
+							<a rel="canonical" href="#"><?= $whats->name ?></a>
+						</div>
+						<div class="price-box">
+							<span class="price">₹<?= $type_spgst ?></span>
+							<? if ($type_mrp > $type_spgst) { ?><del class="price old-price">₹<?= $type_mrp ?></del> <? } ?>
+							<? if ($percent > 0) { ?><span class="on-sic"> <?= round($percent) ?>% off </span> <? } ?>
 
-  											</div>
-  										</div>
-  										<div class="product-details-btn">
-  											<ul>
-  												<?php $i = 1;
-													$more = 0;
-													$size_arr = [];
-													foreach ($type_datas->result() as $type_size) {
-														$status = 0;
-														if ($i < 5) {
-															$this->db->select('*');
-															$this->db->from('tbl_size');
-															$this->db->where('id', $type_size->size_id);
-															$this->db->where('is_active', 1);
-															$size_data = $this->db->get()->row();
-															if (!empty($size_data)) {
-																if ($i == 1) {
-																	array_push($size_arr, $size_data->id);
-																	$status = 0;
-																} else {
-																	foreach ($size_arr as $key) {
-																		if ($key == $size_data->id) {
-																			$status = 1;
-																			break;
-																		}
-																	}
-																}
-																if ($status == 0) {
-																	array_push($size_arr, $size_data->id);
-													?>
-  																<li class="icon  cart-icon">
-  																	<a rel="canonical" href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_size->id) ?>"> <?= $size_data->name ?> <p style="margin-bottom:0; padding: 0px 10px;">|</p></a>
-  																</li>
-  													<?php }
-															}
-														} else {
-															$more++;
-														}
-														$i++;
-													}
-													if ($more > 0) {
-														?>
-  													<li class="icon ivo-ho compare-icon">
-  														<a rel="canonical" href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
-  													</li>
-  												<? } ?>
-  											</ul>
-  										</div>
-  									</div>
-  								</div>
-  							</div>
-  					<?php }
-							$i++;
-						}  ?>
-  				</div>
+						</div>
+					</div>
+					<div class="product-details-btn">
+						<ul>
+							<?php $i = 1;
+							  $more = 0;
+							  $size_arr = [];
+							  foreach ($type_datas->result() as $type_size) {
+								  $status = 0;
+								  if ($i < 5) {
+									  $this->db->select('*');
+									  $this->db->from('tbl_size');
+									  $this->db->where('id', $type_size->size_id);
+									  $this->db->where('is_active', 1);
+									  $size_data = $this->db->get()->row();
+									  if (!empty($size_data)) {
+										  if ($i == 1) {
+											  array_push($size_arr, $size_data->id);
+											  $status = 0;
+										  } else {
+											  foreach ($size_arr as $key) {
+												  if ($key == $size_data->id) {
+													  $status = 1;
+													  break;
+												  }
+											  }
+										  }
+										  if ($status == 0) {
+											  array_push($size_arr, $size_data->id);
+							  ?>
+											<li class="icon  cart-icon">
+												<a rel="canonical" href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_size->id) ?>"> <?= $size_data->name ?> <p style="margin-bottom:0; padding: 0px 10px;">|</p> </a>
+											</li>
+								<?php }
+									  }
+								  } else {
+									  $more++;
+								  }
+								  $i++;
+							  }
+							  if ($more > 0) {
+								  ?>
+								<li class="icon ivo-ho compare-icon">
+									<a rel="canonical" href="<?= base_url() ?>product_detail/<?= $whats->url ?>?type=<?= base64_encode($type_data[0]->id) ?>"> +<?= $more ?></a>
+								</li>
+							<? } ?>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+<?php }
+	  $i++;
+  }  ?>
+
+</div>
   			</div>
   		</div>
   	</div>

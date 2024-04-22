@@ -77,7 +77,7 @@ class Shop_By_Category extends CI_finecontrol
                                 'upload_path'   => $image_upload_folder,
                                 'file_name' => $new_file_name,
                                 'allowed_types' => 'jpg|jpeg|png|webp',
-                                'max_size'      => 300
+                                'max_size'      => 500
                             );
                             $this->upload->initialize($this->upload_config);
                             if (!$this->upload->do_upload($img1)) {
@@ -127,7 +127,7 @@ class Shop_By_Category extends CI_finecontrol
                                     'upload_path'   => $image_upload_folder,
                                     'file_name' => $new_file_name,
                                     'allowed_types' => 'jpg|jpeg|png|webp',
-                                    'max_size'      => 300
+                                    'max_size'      => 500
                                 );
                                 $this->upload->initialize($this->upload_config);
                                 if (!$this->upload->do_upload($img1)) {
