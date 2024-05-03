@@ -206,16 +206,17 @@ class Home extends CI_Controller
                 $data['keyword'] = 'Shop Women Bottom Wear Online in India | Stylish Bottom Wear';
             }
             else if ($url == 'New-Arrivals') {
-                $data['title'] = 'Western Wear For Women - Buy Westernwear For Ladies Online';
-                $data['dsc'] = "Elevate your wardrobe with Poshida's Western Wear for women!
-                Shop online for a stunning collection of Tops, Dresses, and Coord Sets.";
-                $data['keyword'] = 'Western Wear For Women - Buy Westernwear For Ladies Online';
+                $data['title'] = 'New Arrivals | Buy Latest Ethnic & Western Wear Online in India';
+                $data['dsc'] = "Hurry and grab the best deals on new arrivals of ethnic & western
+                wear before they sell out. Shop today!";
+                $data['keyword'] = 'New Arrivals | Buy Latest Ethnic & Western Wear Online in India';
             }
             else if ($url == 'Tops') {
-                $data['title'] = 'Buy Latest Collection of Women Ethnic Wear Online at Poshida';
-                $data['dsc'] = "Shop online for women's ethnic wear at Poshida! We offer a wide
-                range of Kurtas, Kurtis, Straight Kurtis, Floor-length gowns, and more.";
-                $data['keyword'] = 'Buy Latest Collection of Women Ethnic Wear Online at Poshida';
+                $data['title'] = 'Buy Cotton Tops for Women | Floral Tops for Women | Poshida';
+                $data['dsc'] = "Be ready to turn heads with our eye-catching floral tops for
+                women. We guarantee the highest quality and unconditional satisfaction with
+                every purchase.";
+                $data['keyword'] = 'Buy Cotton Tops for Women | Floral Tops for Women | Poshida';
             }
             else if ($url == 'Dresses') {
                 $data['title'] = 'Buy Women Dresses Online | Cotton Maxi Dress | Poshida';
