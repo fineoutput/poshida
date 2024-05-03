@@ -83,6 +83,7 @@ $route['my_bag'] = 'Home/my_bag';
 $route['blogs'] = 'Home/all_blogs';
 $route['blog'] = 'Home/blog_details';
 $route['products/(:any)/(:any)'] = 'Home/all_products/$1/$2';
+$route['products/(:any)/(:any)/(:any)'] = 'Home/all_products/$1/$2/$3';
 $route['product_detail/(:any)'] = 'Home/product_detail/$1';
 $route['filter_products'] = 'Home/apply_filter';
 $route['view_checkout'] = 'Order/view_checkout';

@@ -62,11 +62,11 @@ class CI_Products
         }
         //-------fetch data by category
         if ($t == 1) {
-            $this->CI->db->like('category_id', '"category_id":' . $id);
+            $this->CI->db->like('category_id',$id);
         }
         //-------fetch data by subcategory
         else {
-            $this->CI->db->like('subcategory_id', '"subcategory_id":' . $id);
+            $this->CI->db->like('subcategory_id',$id);
         }
         $this->CI->db->where('product_type !=', 2);
         $this->CI->db->where('is_active', 1);

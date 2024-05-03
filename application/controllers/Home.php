@@ -193,6 +193,60 @@ class Home extends CI_Controller
                 Poshida.✔️Premium Quality✔️COD.";
                 $data['keyword'] = 'Women Plazo Pants Online, Palazzo Pants for Women';
             }
+            else if ($url == 'Women-Ethnics') {
+                $data['title'] = 'Buy Latest Collection of Women Ethnic Wear Online at Poshida';
+                $data['dsc'] = "Shop online for women's ethnic wear at Poshida! We offer a wide
+                range of Kurtas, Kurtis, Straight Kurtis, Floor-length gowns, and more.";
+                $data['keyword'] = 'Buy Latest Collection of Women Ethnic Wear Online at Poshida';
+            }
+            else if ($url == 'Bottoms') {
+                $data['title'] = 'Shop Women Bottom Wear Online in India | Stylish Bottom Wear';
+                $data['dsc'] = "Explore our stylish women's bottom wear collection online.
+                Elevate your wardrobe with Poshida trendy designs. Shop now!";
+                $data['keyword'] = 'Shop Women Bottom Wear Online in India | Stylish Bottom Wear';
+            }
+            else if ($url == 'New-Arrivals') {
+                $data['title'] = 'Western Wear For Women - Buy Westernwear For Ladies Online';
+                $data['dsc'] = "Elevate your wardrobe with Poshida's Western Wear for women!
+                Shop online for a stunning collection of Tops, Dresses, and Coord Sets.";
+                $data['keyword'] = 'Western Wear For Women - Buy Westernwear For Ladies Online';
+            }
+            else if ($url == 'Tops') {
+                $data['title'] = 'Buy Latest Collection of Women Ethnic Wear Online at Poshida';
+                $data['dsc'] = "Shop online for women's ethnic wear at Poshida! We offer a wide
+                range of Kurtas, Kurtis, Straight Kurtis, Floor-length gowns, and more.";
+                $data['keyword'] = 'Buy Latest Collection of Women Ethnic Wear Online at Poshida';
+            }
+            else if ($url == 'Dresses') {
+                $data['title'] = 'Buy Women Dresses Online | Cotton Maxi Dress | Poshida';
+                $data['dsc'] = "Elevate your wardrobe with trendy women dresses online and
+                enjoy the convenience of free shipping. Upgrade your style effortlessly.";
+                $data['keyword'] = 'Buy Women Dresses Online | Cotton Maxi Dress | Poshida';
+            }
+            else if ($url == 'Coord-Sets') {
+                $data['title'] = 'Buy Trendy Co-ord Sets for Women Online in India | Poshida';
+                $data['dsc'] = "Experience the remarkable transformation with our trendy Co-ord
+                Sets made for women. Shop Now at Poshida and make a fashion statement!";
+                $data['keyword'] = 'Buy Trendy Co-ord Sets for Women Online in India | Poshida';
+            }
+            else if ($url == 'Palazzo') {
+                $data['title'] = 'Buy Palazzo Pants for Women Online - Poshida';
+                $data['dsc'] = "Uncover the secrets of comfortable and stylish Palazzo Pants for
+                women available exclusively online at Poshida. Upgrade your wardrobe with confidence!";
+                $data['keyword'] = 'Buy Palazzo Pants for Women Online - Poshida';
+            }
+            else if ($url == 'Straight-Pants') {
+                $data['title'] = "Shop Women's Straight Pants Online In India";
+                $data['dsc'] = "Step into a world of confidence and style with our exclusive range of
+                women's straight pants. Don't miss this opportunity to enhance your look effortlessly.";
+                $data['keyword'] = "Shop Women's Straight Pants Online In India";
+            }
+            else if ($url == 'Kurta-set-of-2') {
+                $data['title'] = 'Buy Two Piece Kurta Set For Women Online in India';
+                $data['dsc'] = "Explore the incredible selection of two piece kurta sets online in India,
+                designed to make you stand out. Take advantage of the special promotions!";
+                $data['keyword'] = 'Buy Two Piece Kurta Set For Women Online in India';
+            }
             $this->load->view('frontend/common/header2', $data);
             $this->load->view('frontend/all_products');
             $this->load->view('frontend/common/footer2');
