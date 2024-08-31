@@ -132,7 +132,8 @@
 											<img src="<?= base_url() ?>assets/frontend/img/address-icon.svg" alt=" ">
 										</div>
 										<div class="contact-box-detail">
-											<p>Plot no. 4/219, 2nd Floor, SFS, Shipra Path, Agarwal Farm, Mansarovar, Jaipur</p>
+											<p>Plot No. 81, Nandpuri- B, Near Mahima Panschap, Jagatpura, Jaipur,
+Rajasthan, 302017</p>
 										</div>
 									</li>
 									<li>
@@ -141,10 +142,10 @@
 										</div>
 										<div class="contact-box-detail" style="cursor: pointer;">
 											<p>
-												<a rel="canonical" href="tel:+916377898988">+91-6377898988</a>
+												<a rel="canonical" href="tel:+916377898988">+91-8107013627</a>
 											</p>
 											<p>
-												<a rel="canonical" href="tel:+919828099805">+91-9828099805</a>
+												<a rel="canonical" href="tel:+919828099805">01412988751</a>
 											</p>
 										</div>
 									</li>

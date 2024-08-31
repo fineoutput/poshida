@@ -19,7 +19,7 @@
                 <div class="col-12">
                     <div class="add-ma pb-100">
 
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3560.0572607863323!2d75.777406!3d26.838131!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5911266f1cf%3A0x1189ecb28f545112!2sPoshida%20clothing%20store%20-%20mansrover!5e0!3m2!1sen!2sin!4v1712733432299!5m2!1sen!2sin" height="585" style="border:0; width:100%;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2517.8287406280815!2d75.82915268223849!3d26.816165728335356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dc9b3015c7dff%3A0x16ece7b3f04f16f0!2sRONAK%20TEXTILES!5e0!3m2!1sen!2sin!4v1725108327070!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
 
@@ -36,7 +36,8 @@
                                             </div>
                                             <div class="contact-box-detail">
                                                 <h4 class="contact-title">Visit Office</h4>
-                                                <p>SFS, Plot no. 4/219, 2nd, Shipra Path, SFS Manasarovar, Agarwal farm, Mansarovar, Jaipur, Rajasthan 302017</p>
+                                                <p>Plot No. 81, Nandpuri- B, Near Mahima Panschap, Jagatpura, Jaipur,
+                                                Rajasthan, 302017</p>
                                             </div>
                                         </li>
 
@@ -57,7 +58,7 @@
                                                 <h4 class="contact-title">Call Us</h4>
                                                 <div class="d-flex">
                                                     <p>
-                                                        <a rel="canonical" href="tel:+91-6377898988">+91-6377898988 , </a>
+                                                        <a rel="canonical" href="tel:+91-8107013627">+91-8107013627 , </a>
                                                     </p>
                                                     <p>
                                                         <a rel="canonical" href="tel:+0141-2988751"> 0141-2988751</a>
