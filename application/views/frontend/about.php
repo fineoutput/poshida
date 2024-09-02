@@ -30,7 +30,10 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <span style="font-size:30px; margin-bottom:10px; "> <b>Welcome to Poshida By Ronak Textiles - Crafting Elegance Since 2015</b></span>
+          
           <hr>
+          <br>
+          
         </div>
       </div>
       <!-- <p>In the vibrant tapestry of Indian fashion, <b> Poshida, Grace In Every Stitch </b> stands out as a beacon of style and tradition. Established in 2018 by the visionary <b> Usha Singh, </b> our brand has become synonymous with quality, affordability, and timeless fashion. From the heart of India, we bring you an exquisite range of Women's wear, Men's wear, Kids wear, and Accessories, ensuring that every family member can indulge in the joy of fashionable clothing.
