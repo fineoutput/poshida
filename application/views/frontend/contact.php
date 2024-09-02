@@ -61,7 +61,7 @@ Rajasthan, 302017</p>
                                             </div>
                                             <div class="contact-box-detail">
                                                 <h4 class="contact-title">Email</h4>
-                                                <p>info@poshida.in</p>
+                                                <p>merchandiser.ronaktextiles@gmail.com</p>
                                             </div>
                                         </li>
                                         <li>

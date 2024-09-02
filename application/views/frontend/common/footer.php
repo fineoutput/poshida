@@ -154,7 +154,7 @@ Rajasthan, 302017</p>
 											<img src="<?= base_url() ?>assets/frontend/img/mail-icon.svg" alt=" ">
 										</div>
 										<div class="contact-box-detail" style="cursor: pointer;">
-											<p> <a rel="canonical" href="mailto:info@poshida.in">info@poshida.in</a></p>
+											<p> <a rel="canonical" href="mailto:merchandiser.ronaktextiles@gmail.com">merchandiser.ronaktextiles@gmail.com</a></p>
 										</div>
 									</li>
 								</ul>
