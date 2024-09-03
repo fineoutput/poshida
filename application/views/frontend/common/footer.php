@@ -145,7 +145,7 @@ Rajasthan, 302017</p>
 												<a rel="canonical" href="tel:+916377898988">+91-8107013627</a>
 											</p>
 											<p>
-												<a rel="canonical" href="tel:+919828099805">01412988751</a>
+												<a rel="canonical" href="tel:014129887521">014129887521</a>
 											</p>
 										</div>
 									</li>
@@ -397,7 +397,7 @@ Rajasthan, 302017</p>
 
 	</div>
 
-	<a rel="canonical" href="https://wa.me/+916377898988/" target="_blank" rel="noopener noreferrer" class="btn btn-success white fgdfdfgdf btn-lg mt-3 button-fixed-right green  desktopwhatsapp ">
+	<a rel="canonical" href="https://wa.me/+918107013627/" target="_blank" rel="noopener noreferrer" class="btn btn-success white fgdfdfgdf btn-lg mt-3 button-fixed-right green  desktopwhatsapp ">
 		<i class="bi bi-whatsapp" style="font-size:30px;"></i>
 	</a>
 </footer>
