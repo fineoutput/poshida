@@ -10,7 +10,7 @@
   <!-- Css file include -->
   <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/style.css">
   <link rel="shortcut icon" href="<?= base_url() ?>assets/frontend/img/Poshida.jpg" type="image/x-icon" />
-  <title>POSHIDA FASHIONS LLP Invoice</title>
+  <title>Poshida By Ronak Textiles Invoice</title>
 </head>
 
 <body style="padding-top:75px;">
@@ -26,7 +26,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6"><span class="font-weight-bold ">Sold By</span><br>
-          <span class="seller_details">POSHIDA FASHIONS LLP <br>
+          <span class="seller_details">Poshida By Ronak Textiles <br>
           Plot No. 81, Nandpuri-B, Near,
           <br>
             Mahima Panache , Jagatpura,

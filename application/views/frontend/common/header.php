@@ -73,7 +73,7 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Poshida",
-      "alternateName": "Poshida Fashions LLP",
+      "alternateName": "Poshida By Ronak Textiles",
       "url": "https://www.poshida.in/",
       "logo": "https://www.poshida.in/assets/frontend/img/Poshida.jpg",
       "sameAs": [

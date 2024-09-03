@@ -81,7 +81,7 @@ class Home extends CI_Controller
         Best Price. Shop for Latest Designer Kurta & Kurti Online✔️Free
         Shipping✔️Cash On Delivery.';
         $data['keyword'] = 'Designer Kurta & Kurti for Women, Latest Designer Kurta,
-        Poshida Fashions LLP';
+        Poshida By Ronak Textiles';
 
         $this->load->view('frontend/common/header', $data);
         $this->load->view('frontend/index');
@@ -134,21 +134,21 @@ class Home extends CI_Controller
                 designs & Kurtis online shopping in India At Poshida. Order today
                 ✔️Great Deals✔️Best Collection';
                 $data['keyword'] = 'Stylish Kurtis For Women, Jaipur Kurti, Latest Kurti
-                Designs, Poshida Fashions LLP';
+                Designs, Poshida By Ronak Textiles';
             } else if ($url == 'A--LINE-KURTA') {
                 $data['title'] = 'Buy A- Line Kurtas | Festival Kurta For Women | Poshida';
                 $data['dsc'] = "Get ready for the festivities with Poshida A-line kurtas –
                 the perfect festival kurtas for women. Elevate your style with
                 Poshida.✔️COD✔️Free Shipping.";
                 $data['keyword'] = 'A- Line Kurta, A-Line Kurta for Women, Festival Kurta For
-                Women, Poshida Fashions LLP';
+                Women, Poshida By Ronak Textiles';
             } else if ($url == 'EMBROIDERY-KURTA') {
                 $data['title'] = 'Buy Embroidery Kurta & Kurti for Women Online | Ethnic Kurta';
                 $data['dsc'] = "Stand out from the crowd with our Ethnic Embroidery
                 Kurta & Kurti for women online.✔️Free Shipping✔️Premium Quality
                 ✔️COD Available.";
                 $data['keyword'] = 'Embroidery Kurta, Embroidery Kurta for Women, Ethnic
-                Kurta, Poshida Fashions LLP';
+                Kurta, Poshida By Ronak Textiles';
             } else if ($url == 'FLOOR-LENGTH-GOWN') {
                 $data['title'] = 'Buy Floor Length Gown | Stylish Gown for Women Online |
                 Poshida';
@@ -156,7 +156,7 @@ class Home extends CI_Controller
                 women online and find the perfect style to make a great
                 impression.✔️Premium Quality✔️COD.";
                 $data['keyword'] = 'Floor Length Gown, Stylish Gown for Women, Festival
-                Wear Gown, Latest Gown Design, Poshida Fashions LLP';
+                Wear Gown, Latest Gown Design, Poshida By Ronak Textiles';
             } else if ($url == 'SKD-SETS') {
                 $data['title'] = 'Buy Latest Kurti Designs For Women & Kurti Sets Online';
                 $data['dsc'] = "Shop high-quality and stylish designer kurtis online. Our latest kurti designs for women will empower you to embrace your own unique style with our wide selection of the latest kurti designs. Don't let this exciting opportunity pass you by!";
@@ -166,7 +166,7 @@ class Home extends CI_Controller
                 Kurtis from Poshida.✔️Great Deals✔️Free Shipping✔️Premium
                 Quality✔️COD Available.";
                 $data['keyword'] = 'Aliya Cut Kurtis, Jaipur Kurtis, Stylish Designer Kurtis,
-                Poshida Fashions LLP';
+                Poshida By Ronak Textiles';
             } else if ($url == 'KURTA-PANT-DUPATTA-SETS') {
                 $data['title'] = 'Buy Latest Kurti Designs For Women & Kurti Sets Online';
                 $data['dsc'] = "Shop high-quality and stylish designer kurtis online. Our latest kurti designs for women will empower you to embrace your own unique style with our wide selection of the latest kurti designs. Don't let this exciting opportunity pass you by!";

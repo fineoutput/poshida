@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>POSHIDA FASHIONS LLP</title>
+    <title>Poshida By Ronak Textiles</title>
 </head>
 
 <body>

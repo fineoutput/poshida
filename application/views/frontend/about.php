@@ -110,7 +110,7 @@ can indulge in the joy of fashionable clothing.</p>
       </div>
       <div class="row">
         <div class="col-lg-12 text-center" style="    margin-bottom: 16px;">
-          <span style="font-size:30px; margin-bottom:10px; "> <b>Evolution of Poshida Fashions LLP </b></span>
+          <span style="font-size:30px; margin-bottom:10px; "> <b>Evolution of Poshida By Ronak Textiles </b></span>
           <hr>
         </div>
       </div>
@@ -130,7 +130,7 @@ empire that not only adorns bodies but also celebrates the spirit of individuali
       <p> <b> Poshida by Ronak Textiles </b> is not just a brand; it's a testament to perseverance, innovation, and the enduring connection between a fashion label and its patrons. With simplicity and style at our core, we continue to write new chapters in our story, always putting our customers first.</p>
 
 
-      <!-- <p>In the grand tapestry of Poshida Fashions LLP's journey,Usha Singh, Rekha Rohilla, and  Pawan Rohilla stood as the pillars of success, showcasing that a blend of business acumen, creativity, and experience could create a fashion empire that not only adorned bodies but also celebrated the spirit of individuality.</p>
+      <!-- <p>In the grand tapestry of Poshida By Ronak Textiles's journey,Usha Singh, Rekha Rohilla, and  Pawan Rohilla stood as the pillars of success, showcasing that a blend of business acumen, creativity, and experience could create a fashion empire that not only adorned bodies but also celebrated the spirit of individuality.</p>
       -->
       <!-- <p style="color: black;"> <b>Established in Jaipur, this ready-to-wear brand has come to be synonymous with versatile yet powerful casual-wear.</b> </p>
     <p style="color: black;"> <b>We have been constantly evolving and expanding the product line and ruling the hearts of loyal customers since 2019.</b> </p>

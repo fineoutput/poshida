@@ -263,21 +263,21 @@ Rajasthan, 302017</p>
 				<p style="color: #c68fa6 !important; font-size: 20px;"><b> Best Online Kurti Shopping Site in India </b></p>
 				<p style="
 					text-align: justify;">
-					Welcome to<a rel="canonical" href="<?= base_url() ?>" class="" style="color: #c68fa6 !important; "> Poshida Fashions LLP </a> – Your Premier Destination for the Best Online Kurti
-					Shopping Experience in India! At Poshida Fashions LLP, we blend tradition and style seamlessly,
+					Welcome to<a rel="canonical" href="<?= base_url() ?>" class="" style="color: #c68fa6 !important; "> Poshida By Ronak Textiles </a> – Your Premier Destination for the Best Online Kurti
+					Shopping Experience in India! At Poshida By Ronak Textiles, we blend tradition and style seamlessly,
 					offering a diverse collection of kurtis designed for the modern woman who appreciates
 					elegance and comfort.
 				</p>
 
 			</div>
 			<div class="mt-20" style="text-align: justify;">
-				<p style="color: #c68fa6 !important; font-size: 16px;"><b>Embrace Tradition with Poshida Fashions LLP Kurtis:</b></p>
+				<p style="color: #c68fa6 !important; font-size: 16px;"><b>Embrace Tradition with Poshida By Ronak Textiles Kurtis:</b></p>
 				<p style="display: flex;
 				text-align: justify;">
-					Immerse yourself in the rich tapestry of Indian tradition with Poshida Fashions LLP. Our
+					Immerse yourself in the rich tapestry of Indian tradition with Poshida By Ronak Textiles. Our
 					curated kurtis collection pays homage to India's cultural heritage, featuring exquisite designs
 					that reflect the timeless beauty of traditional craftsmanship. Embrace the essence of tradition
-					with every kurti from Poshida Fashions LLP.
+					with every kurti from Poshida By Ronak Textiles.
 				</p>
 
 			</div>
@@ -298,7 +298,7 @@ Rajasthan, 302017</p>
 						Seamless Shopping at Your Fingertips:</b></p>
 				<p style="
 					text-align: justify;">
-					Experience the convenience of seamless shopping with Poshida Fashions LLP. Our user-friendly website ensures that exploring our extensive collection, featuring <a rel="canonical" href="<?= base_url() ?>" class="" style="color: #c68fa6 !important; "> kurti designs for
+					Experience the convenience of seamless shopping with Poshida By Ronak Textiles. Our user-friendly website ensures that exploring our extensive collection, featuring <a rel="canonical" href="<?= base_url() ?>" class="" style="color: #c68fa6 !important; "> kurti designs for
 						women </a> , cotton kurtis for daily wear, and the latest kurti designs, is a breeze. With just a few
 					clicks, you can have your favourite kurtis delivered to your doorstep, making fashion
 					effortlessly accessible.
@@ -310,7 +310,7 @@ Rajasthan, 302017</p>
 						Quality Assurance for Your Style:</b></p>
 				<p style="display: flex;
 						text-align: justify;">
-					Poshida Fashions LLP is synonymous with quality assurance. Our kurtis are crafted with
+					Poshida By Ronak Textiles is synonymous with quality assurance. Our kurtis are crafted with
 					precision and attention to detail because your style deserves the best. From the selection of
 					fabrics to the final stitch, our commitment to quality ensures that each piece you choose is a
 					testament to enduring style and comfort.
@@ -322,14 +322,14 @@ Rajasthan, 302017</p>
 						Support Creativity and Get Rewarded:</b></p>
 				<p style="
 						text-align: justify;">
-					At Poshida Fashions LLP, we believe in supporting creativity. When you choose our kurtis,
+					At Poshida By Ronak Textiles, we believe in supporting creativity. When you choose our kurtis,
 					you not only enhance your style but also contribute to the promotion of traditional
 					craftsmanship. As a token of appreciation, we offer rewards that reflect our gratitude for
 					supporting the creative spirit behind each meticulously designed kurti in our collection.
-					Poshida Fashions LLP invites you to explore the world of <a rel="canonical" href="<?= base_url() ?>" class="" style="color: #c68fa6 !important; "> kurtis online </a> , where tradition
+					Poshida By Ronak Textiles invites you to explore the world of <a rel="canonical" href="<?= base_url() ?>" class="" style="color: #c68fa6 !important; "> kurtis online </a> , where tradition
 					meets contemporary style, and every piece tells a story. Elevate your wardrobe with our
 					exclusive designs, experience the ease of seamless shopping, and support creativity with
-					every purchase. Embrace tradition and elevate your style – choose Poshida Fashions LLP for
+					every purchase. Embrace tradition and elevate your style – choose Poshida By Ronak Textiles for
 					a genuinely exceptional kurti shopping experience.
 				</p>
 
