@@ -146,7 +146,7 @@
                       <img src="<?= base_url() ?>assets/frontend/img/address-icon.svg" alt="">
                     </div>
                     <div class="contact-box-detail">
-                    <p>Plot No. 81, Nandpuri- B, Near Mahima Panschap, Jagatpura, Jaipur,
+                    <p>Plot No. 81, Nandpuri- B, Near Mahima Panache, Jagatpura, Jaipur,
 Rajasthan, 302017</p>
                     </div>
                   </li>
