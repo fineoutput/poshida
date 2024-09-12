@@ -338,7 +338,7 @@ Rajasthan, 302017</p>
             <ul class="iconn">
               <li><a rel="canonical" href="https://www.facebook.com/profile.php?id=61551728737337" target="_blank"><i class="fa fa-facebook"></i></a></li>
               <li><a rel="canonical" href="https://www.pinterest.com/Poshida_/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-              <li><a rel="canonical" href="https://www.instagram.com/poshi.da/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <li><a rel="canonical" href="https://www.instagram.com/poshida_in/?igsh=enBlZ3U0eWI5amRp" target="_blank"><i class="fa fa-instagram"></i></a></li>
               <li><a rel="canonical" href="https://www.linkedin.com/company/poshida/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
               <li><a rel="canonical" href="https://www.youtube.com/@Poshida_" target="_blank"><i class="fa fa-youtube"></i></a></li>
             </ul>
