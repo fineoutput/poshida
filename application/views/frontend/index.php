@@ -764,7 +764,7 @@ yourself or looking for the perfect gift for a loved one, Poshida has everything
 you need to elevate your wardrobe and express your unique sense of style. 
 Experience the difference with Poshida and discover a world of timeless 
 elegance, modern sophistication, and effortless glamour. Shop with us today and 
-experience the magic of Poshida for yourself! </p> --> -->
+experience the magic of Poshida for yourself! </p> --> 
 <h4>Popular Searches –  
 </h4>
 <p>
