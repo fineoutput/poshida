@@ -556,26 +556,44 @@
       <div class="col-lg-12 col-sm-12">
       <div class="accordion">
   <div class="accordion-item">
-  <div class="accordion-header"><h4 class="main-title">Poshida: One-Stop Destination of Ethnic & Western Wear for 
-Women</h4><span class="accordion-toggle">+</span></div>
+  <div class="accordion-header"><h4 class="main-title">Poshida: One-Stop Destination For Men, Women &
+  Kids Wear</h4><span class="accordion-toggle">+</span></div>
     <div class="accordion-content">
       <p>
-	  Welcome to Poshida, your premier destination for exquisite ethnic and western 
-wear designed exclusively for women. With a commitment to quality, style, and 
-innovation, Poshida offers a diverse range of clothing options to suit every 
-occasion, taste, and preference. From traditional ethnic wear to chic western 
-outfits, Poshida is your one-stop shop for all your fashion needs. 
+	  In the current and rather busy world, it is rather difficult to stumble
+upon one online store that offers a variety of fashionable clothes for
+every member of the family. Stand Forward Poshida is a
+groundbreaking online fashion store that is set to revolutionize the way
+families shop for apparel. The company has an impressive range of
+clothing in various categories, mainly Menswear, womenswear, and
+Kids's wear, making Poshida the one-stop shop for all fashionable
+clothing. 
 	  </p>
-	  <h4>Discover Our Wide Range of Ethnic Wear Options for Women </h4>
+	  <h4>Elevate Your Style with Women's Wear</h4>
 	  <p>
-	  At Poshida, we take pride in curating a stunning collection of ethnic wear for 
-women that celebrates the rich heritage and cultural diversity of India. Our range 
-of ethnic attire is meticulously designed to blend traditional craftsmanship with 
-contemporary aesthetics, resulting in pieces that are both timeless and trendy. 
-Whether you're looking for stylish kurtis, designer kurtas, festival wear, or 
-embroidered masterpieces, Poshida has something for every discerning woman.
+	  Fashion-aware women are always in search of the latest fashion
+clothes with more style statements that reveal their personalities.
+Poshida women’s wear online store consists of a classy compilation of
+beautiful apparel and accessories for women of all types of occasions.
+From business casual to sleepwear, our website provides an assortment
+of styles that will address the varying needs of today’s working ladies.
+<br><br>
+We offer stylish gowns for occasions such as weddings, birthdays, and
+other events, trendy tops to adorn during informal occasions, flattering
+fitted bottoms that include jeans, skirts to suit any occasion, and
+comfortable wear to wear during informal occasions such as the
+weekends. Every single piece is chosen with a lot of attention to detail
+so that one can bet that they will find something that suits them.
+<br><br>
+Currently, when it comes to the purchase of ladies’ fashion, there is no
+better place to shop than the Internet. The main page of Poshida’s
+user-friendly website enables visitors to search through the store’s vast
+offerings with no difficulty. It consists of simple-to-use filters by size,
+color, style, and occasion, so when it comes to choosing your outfit for
+the day, week, month, or any other event, it is a few clicks away. We
+agree that well-elaborated product descriptions and high-quality
 	  </p>
-	  <h4>
+	  <!-- <h4>
 	  Stylish Kurtis for Women:
 	  </h4>
 	  <p>Elevate your everyday look with our trendy kurtis 
@@ -655,7 +673,7 @@ yourself or looking for the perfect gift for a loved one, Poshida has everything
 you need to elevate your wardrobe and express your unique sense of style. 
 Experience the difference with Poshida and discover a world of timeless 
 elegance, modern sophistication, and effortless glamour. Shop with us today and 
-experience the magic of Poshida for yourself! </p>
+experience the magic of Poshida for yourself! </p> -->
 <h4>Popular Searches –  
 </h4>
 <p>
