@@ -48,7 +48,7 @@
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2244723279195274&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link type="image/x-icon" href="<?= base_url() ?>assets/frontend/img/Poshida.jpg" rel="icon">
+  <link type="image/x-icon" href="<?= base_url() ?>assets/frontend/img/logo_update.jpg" rel="icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="google-site-verification" content="CuMy5Mu3gGOC41M6wxypzrV2jXpos0v_BD8NYcP0mAQ" />
   <!-- CSS -->
@@ -75,7 +75,7 @@
       "name": "Poshida",
       "alternateName": "Poshida By Ronak Textiles",
       "url": "https://www.poshida.in/",
-      "logo": "https://www.poshida.in/assets/frontend/img/Poshida.jpg",
+      "logo": "https://www.poshida.in/assets/frontend/img/logo_update.jpg",
       "sameAs": [
         "https://www.facebook.com/people/Poshida/61551728737337/",
         "https://www.instagram.com/poshi.da/",
@@ -332,7 +332,7 @@ if (!empty($this->session->userdata('user_data'))) {
             <div class="right-side">
               <div class="navbar-header">
                 <a rel="canonical" class="navbar-brand page-scroll" href="<?= base_url() ?>">
-                  <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
+                  <img alt=" " src="<?= base_url() ?>assets/frontend/img/logo_update.jpg" class="logo-imah-1">
                 </a>
               </div>
             </div>
@@ -348,7 +348,7 @@ if (!empty($this->session->userdata('user_data'))) {
             <div class="right-side">
               <div class="navbar-header">
                 <a rel="canonical" class="navbar-brand page-scroll" href="<?= base_url() ?>">
-                  <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
+                  <img alt=" " src="<?= base_url() ?>assets/frontend/img/logo_update.jpg" class="logo-imah-1">
                 </a>
               </div>
             </div>
@@ -364,7 +364,7 @@ if (!empty($this->session->userdata('user_data'))) {
                 <ul class="nav navbar-nav">
                   <div class="navbar-header dfghddgd">
                     <a rel="canonical" class="navbar-brand page-scroll" href="<?= base_url() ?>">
-                      <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
+                      <img alt=" " src="<?= base_url() ?>assets/frontend/img/logo_update.jpg" class="logo-imah-1">
                     </a>
                   </div>
                   <!-- <li class="level">
@@ -678,7 +678,7 @@ if (!empty($this->session->userdata('user_data'))) {
               <ul class="nav navbar-nav">
                 <div class="navbar-header dfghddgd">
                   <a rel="canonical" class="navbar-brand page-scroll" href="<?= base_url() ?>">
-                    <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
+                    <img alt=" " src="<?= base_url() ?>assets/frontend/img/logo_update.jpg" class="logo-imah-1">
                   </a>
                 </div>
                 <!-- <li class="level">

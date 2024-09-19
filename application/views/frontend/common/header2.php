@@ -55,7 +55,7 @@
       "name": "Poshida",
       "alternateName": "Poshida By Ronak Textiles",
       "url": "https://www.poshida.in/",
-      "logo": "https://www.poshida.in/assets/frontend/img/Poshida.jpg",
+      "logo": "https://www.poshida.in/assets/frontend/img/logo_update.jpg",
       "sameAs": [
         "https://www.facebook.com/people/Poshida/61551728737337/",
         "https://www.instagram.com/poshi.da/",
@@ -67,7 +67,7 @@
     }
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link type="image/x-icon" href="<?= base_url() ?>assets/frontend/img/Poshida.jpg" rel="icon">
+  <link type="image/x-icon" href="<?= base_url() ?>assets/frontend/img/logo_update.jpg" rel="icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- CSS -->
@@ -883,7 +883,7 @@
             <div class="right-side">
               <div class="navbar-header">
                 <a rel="canonical" class="navbar-brand page-scroll" href="<?= base_url() ?>">
-                  <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
+                  <img alt=" " src="<?= base_url() ?>assets/frontend/img/logo_update.jpg" class="logo-imah-1">
                 </a>
               </div>
             </div>
@@ -899,7 +899,7 @@
             <div class="right-side">
               <div class="navbar-header">
                 <a rel="canonical" class="navbar-brand page-scroll" href="<?= base_url() ?>">
-                  <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
+                  <img alt=" " src="<?= base_url() ?>assets/frontend/img/logo_update.jpg" class="logo-imah-1">
                 </a>
               </div>
             </div>
@@ -915,7 +915,7 @@
                 <ul class="nav navbar-nav">
                   <div class="navbar-header dfghddgd">
                     <a rel="canonical" class="navbar-brand page-scroll" href="<?= base_url() ?>">
-                      <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
+                      <img alt=" " src="<?= base_url() ?>assets/frontend/img/logo_update.jpg" class="logo-imah-1">
                     </a>
                   </div>
                   <!-- <li class="level">
@@ -1184,7 +1184,7 @@
                 <ul class="nav navbar-nav">
                   <div class="navbar-header dfghddgd">
                     <a rel="canonical" class="navbar-brand page-scroll" href="<?= base_url() ?>">
-                      <img alt=" " src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1">
+                      <img alt=" " src="<?= base_url() ?>assets/frontend/img/logo_update.jpg" class="logo-imah-1">
                     </a>
                   </div>
                   <li class="level">

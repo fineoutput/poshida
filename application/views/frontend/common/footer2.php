@@ -81,7 +81,7 @@
             <div class="footer-about mb-sm-30">
               <div class="footer-logo">
                 <a rel="canonical" href="<?= base_url() ?>">
-                  <img src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" alt="logo">
+                  <img src="<?= base_url() ?>assets/frontend/img/logo_update.jpg" alt="logo">
                 </a>
               </div>
 
@@ -402,7 +402,7 @@ Rajasthan, 302017</p>
         </button>
         <div class="row text-left">
           <div class="col-sm-12 text-center mb-2">
-            <img alt="Broken Image" src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1 qwd">
+            <img alt="Broken Image" src="<?= base_url() ?>assets/frontend/img/logo_update.jpg" class="logo-imah-1 qwd">
 
           </div>
         </div>
@@ -460,7 +460,7 @@ Rajasthan, 302017</p>
 
               <div class="row text-left">
                 <div class="col-sm-12 text-center mb-2">
-                  <img alt="Broken Image" src="<?= base_url() ?>assets/frontend/img/Poshida.jpg" class="logo-imah-1 qwd">
+                  <img alt="Broken Image" src="<?= base_url() ?>assets/frontend/img/logo_update.jpg" class="logo-imah-1 qwd">
                 </div>
               </div>
               <div class="popup-text" style="padding-left: 20px;padding-right: 20px;">
