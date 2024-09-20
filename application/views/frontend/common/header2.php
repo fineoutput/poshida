@@ -855,7 +855,7 @@
 
 
     .logo-imah-1 {
-      width: 60%;
+      width: 80%;
     }
   </style>
 </head>
