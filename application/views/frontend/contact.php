@@ -72,7 +72,7 @@ Rajasthan, 302017</p>
                                                 <h4 class="contact-title">Call Us</h4>
                                                 <div class="d-flex">
                                                     <p>
-                                                        <a href="tel:+916377898988">+91-8107013627 , </a>
+                                                        <a href="tel:+916377898988">+91-6377898988 , </a>
                                                     </p>
                                                     <p>
                                                         <a href="tel:01412988751">01412988751</a>

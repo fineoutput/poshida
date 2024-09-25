@@ -58,7 +58,7 @@
                                                 <h4 class="contact-title">Call Us</h4>
                                                 <div class="d-flex">
                                                     <p>
-                                                        <a rel="canonical" href="tel:+91-8107013627">+91-8107013627 , </a>
+                                                        <a rel="canonical" href="tel:+91-6377898988">+91-6377898988 , </a>
                                                     </p>
                                                     <p>
                                                         <a rel="canonical" href="tel:+0141-2988751"> 0141-2988751</a>
