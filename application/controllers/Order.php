@@ -424,6 +424,8 @@ class Order extends CI_Controller
                     }
                 }
 
+                $this->session->set_userdata('order_id', $information['order_id']);
+
                 $placeOrder = $this->order->PlaceHdfcPaidOrder($information['order_id'] , $response);
                 
                 if ($placeOrder == true) {
