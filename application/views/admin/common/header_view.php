@@ -303,7 +303,7 @@
 
     <header class="main-header custom_header">
       <!-- Logo -->
-      <a href="<?= base_url() ?>dcadmin/home" class="logo custom_header" style=" background: white !important;"><img src="<? echo base_url() ?>assets/admin/team/logo.jpg"  style="width:37%;
+      <a href="<?= base_url() ?>dcadmin/home" class="logo custom_header" style=" background: white !important;"><img src="<? echo base_url() ?>assets/frontend/img/logo_update.jpg"  style="width:37%;
       " alt="User Image" /></a>
       <!-- <h4 class="logo custom_header" style="background-color:white !important;  color: #e3c4c5 !important;
 ">Poshida</h4> -->
