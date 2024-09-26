@@ -215,11 +215,16 @@ class CI_Products
         $buy_with_it_array = [];
         $product_result = "";
         $productviewnotequal = 0;
-        if (!empty($product_data[0])) {
-            $product_json = json_decode($product_data[0]->buy_with);
+        if (!empty($product_data)) {
+            // Decode the 'buy_with' JSON, and handle invalid JSON gracefully
+            $product_json = json_decode($product_data[0]->buy_with, true);
+            if (json_last_error() !== JSON_ERROR_NONE) {
+                $product_json = []; // reset if JSON is invalid
+            }
         } else {
             $product_json = [];
         }
+
         if (!empty($this->CI->session->userdata('user_type'))) {
             if ($this->CI->session->userdata('user_type') == 2) { //reseller
                 $productviewnotequal = 1;
