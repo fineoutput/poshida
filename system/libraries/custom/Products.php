@@ -215,9 +215,10 @@ class CI_Products
         $buy_with_it_array = [];
         $product_result = "";
         $productviewnotequal = 0;
-        if (!empty($product_data)) {
-            // Decode the 'buy_with' JSON, and handle invalid JSON gracefully
+        if (!empty($product_data) && !empty($product_data[0]->buy_with)) {
+           
             $product_json = json_decode($product_data[0]->buy_with, true);
+
             if (json_last_error() !== JSON_ERROR_NONE) {
                 $product_json = []; // reset if JSON is invalid
             }
