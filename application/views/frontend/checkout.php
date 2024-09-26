@@ -209,13 +209,13 @@
                             </span>
                           </div>
 
-                          <!-- <div class="check-box">
+                          <div class="check-box">
                             <span>
                               <input type="radio" class="checkbox payment_method" value="2" id="online" name="payment_option">
                               <label for="online" class="mb-0">Online
                                 Payment</label>
                             </span>
-                          </div> -->
+                          </div>
                         </div>
                       </div>
 
@@ -232,7 +232,7 @@
               </div>
             </div>
 
-         
+
           </div>
         </div>
       </div>

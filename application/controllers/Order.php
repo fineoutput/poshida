@@ -301,6 +301,180 @@ class Order extends CI_Controller
             echo json_encode($respone);
         }
     }
+
+    public function open_hdfc_getway() {
+
+        $order_id = base64_decode($this->session->userdata('order_id'));
+
+        $order_data = $this->db->get_where('tbl_order1', array('id' => $order_id))->row();
+
+        $address_data = $this->db->get_where('tbl_user_address', array('id' => $order_data->address_id))->row();
+
+        $success = base_url() . 'Order/hdfc_callback_url';
+       
+        $customerId = "cus_" . uniqid();
+
+        $data = [
+            "order_id" => $this->HdfcOrderId($order_id, $address_data->user_id, $this->session->userdata('user_type')),
+            "amount" => $order_data->final_amount,
+            "customer_id" => $customerId,
+            "payment_page_client_id" => HDFC_CLIENT_ID,
+            "action" => "paymentPage",
+            "currency" => "INR",
+            "customer_email" => "",
+            "customer_phone" => $address_data->phone,
+            "return_url" =>  $success,
+        ];
+    
+     
+        $headers = [
+            'Authorization: Basic ' . base64_encode(HDFC_API_KEY),
+            'Content-Type: application/json',
+            'x-merchantid: '.HDFC_MERCHANT_ID,
+            'x-customerid: '.$customerId
+        ];
+    
+        $curl = curl_init();
+    
+        curl_setopt_array($curl, [
+            CURLOPT_URL => HDFC_URL,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30, // Set a reasonable timeout
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS =>  json_encode($data),
+            CURLOPT_HTTPHEADER => $headers,
+        ]);
+    
+        $response = curl_exec($curl);
+  
+        if (curl_errno($curl)) {
+            $error_msg = curl_error($curl);
+            curl_close($curl);
+    
+            $this->output
+                ->set_content_type('application/json')
+                ->set_output(json_encode(['error' => $error_msg]));
+            return;
+        }
+    
+        curl_close($curl);
+    
+        $res = json_decode($response, true); 
+
+        if (isset($res['error'])) {
+           
+            $this->output
+                ->set_content_type('application/json')
+                ->set_output(json_encode(['error' => $res['error']]));
+        } else {
+        
+            $payment_link = $res['payment_links']['web'];
+    
+            redirect( $payment_link);
+        }
+
+    } 
+
+    public function hdfc_callback_url()  {
+
+        try {
+            
+            if($_POST['status'] == 'CHARGED' && $_POST['status_id'] == 21) {
+
+                $response = $_POST;
+
+                $information = $this->parseHdfcOrderId($_POST['order_id']);
+
+                if($information && $this->session->userdata('user_type') == null) {
+
+                    if ($information['role_type'] == 1) {
+
+                        $userCheck = $this->db->get_where('tbl_users', array('id' => $information['user_id']))->result();
+
+                        $this->session->set_userdata('user_data', 1);
+
+                        $this->session->set_userdata('name', $userCheck[0]->f_name);
+
+                        $this->session->set_userdata('phone', $userCheck[0]->phone);
+
+                        $this->session->set_userdata('user_type', $information['role_type']);
+
+                        $this->session->set_userdata('user_id', $userCheck[0]->id);
+
+                    }elseif ($information['role_type'] == 2) {
+
+                        $resellerCheck = $this->db->get_where('tbl_reseller', array('id' => $information['user_id']))->result();
+
+                        $this->session->set_userdata('user_data', 1);
+
+                        $this->session->set_userdata('name', $resellerCheck[0]->name);
+
+                        $this->session->set_userdata('phone', $resellerCheck[0]->phone);
+
+                        $this->session->set_userdata('user_type',$information['role_type']);
+
+                        $this->session->set_userdata('user_id', $resellerCheck[0]->id);
+
+                    }else{
+                        echo "Somthing gone wrong please contact admin";
+                    }
+                }
+
+                $placeOrder = $this->order->PlaceHdfcPaidOrder($information['order_id'] , $response);
+                
+                if ($placeOrder == true) {
+                    redirect("order_success");
+                } else {
+                    redirect("Order/order_failed");
+                }
+            }else{
+
+                echo 'Aborted';
+            }
+
+        } catch (Exception $e) {
+
+           echo "Error processing payment: " . $e->getMessage();
+
+        }
+
+    }
+
+    private function HdfcOrderId($order_id, $user_id, $role_type) {
+
+        $current_year = date('Y');
+    
+        $orderId = "ORD" . $current_year 
+                        . str_pad($order_id, 3, "0", STR_PAD_LEFT) 
+                        . str_pad($user_id, 5, "0", STR_PAD_LEFT)
+                        . str_pad($role_type, 5, "0", STR_PAD_LEFT);
+                        
+        return $orderId;
+    }
+
+    private function parseHdfcOrderId($OrderId) {
+
+        $year = substr($OrderId, 3, 4); 
+        $order_id = substr($OrderId, 7, 3); 
+        $user_id = substr($OrderId, 10, 5);
+        $role_type = substr($OrderId, 15, 5);
+    
+        $order_id = ltrim($order_id, "0");
+        $user_id = ltrim($user_id, "0");
+        $role_type = ltrim($role_type, "0");
+    
+        return [
+            'year' => $year,
+            'order_id' => $order_id,
+            'user_id' => $user_id,
+            'role_type' => $role_type
+        ];
+    }
+
     public function  open_cc_avenue()
     {
         $order_id = base64_decode($this->session->userdata('order_id'));
@@ -362,6 +536,7 @@ class Order extends CI_Controller
         );
         $this->load->view('frontend/cc_avenue', $send);
     }
+
     public function  prepaid_payment_success()
     {
         $encResponse = $this->input->post('encResp'); //This is the response sent by the CCAvenue Server
@@ -401,7 +576,6 @@ class Order extends CI_Controller
             echo 'Aborted';
         }
     }
-
 
 
     //-----------order success---------
