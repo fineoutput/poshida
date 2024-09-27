@@ -480,40 +480,62 @@ class Order extends CI_Controller
             'role_type' => $role_type
         ];
     }
+
+    // public function fetch_hdfc_order($orderId) {
+
+    //     $url = "https://smartgatewayuat.hdfcbank.com/orders/$orderId";
+
+    //     // $url = "https://smartgateway.hdfcbank.com/orders/$orderId";
+    //     $customerId = "cus_" . uniqid();
+
+    //     $curl = curl_init();
+
+    //     curl_setopt_array($curl, array(
+    //         CURLOPT_URL => $url,
+    //         CURLOPT_RETURNTRANSFER => false,
+    //         CURLOPT_ENCODING => '',
+    //         CURLOPT_MAXREDIRS => 10,
+    //         CURLOPT_TIMEOUT => 0,
+    //         CURLOPT_FOLLOWLOCATION => true,
+    //         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    //         CURLOPT_CUSTOMREQUEST => 'GET',
+    //         CURLOPT_HTTPHEADER => array(
+    //             'Authorization: Basic ' . base64_encode('HDFC_API_KEY:'),
+    //             'Content-Type: application/json',
+    //             'x-merchantid: '.HDFC_MERCHANT_ID,
+    //             'x-customerid: '.$customerId,
+    //         ),
+    //     ));
+
+    //     $response = curl_exec($curl);
+
+    //     curl_close($curl);
+
+    //     echo $response;exit;
+
+    // }
+
     public function fetch_hdfc_order($orderId) {
 
-        $url = "https://smartgatewayuat.hdfcbank.com/orders/$orderId";
+       $command = "curl --location 'https://smartgatewayuat.hdfcbank.com/orders/'$orderId " .
+               "--header 'Authorization: Basic '".base64_encode(HDFC_API_KEY).
+               "--header 'Content-Type: application/json' " .
+               "--header 'x-merchantid: SG1127' " .
+               "--header 'x-customerid: cus_66f67e21c4122'";
 
-        // $url = "https://smartgateway.hdfcbank.com/orders/$orderId";
-        $customerId = "cus_" . uniqid();
-
-        $curl = curl_init();
-
-        curl_setopt_array($curl, array(
-            CURLOPT_URL => $url,
-            CURLOPT_RETURNTRANSFER => false,
-            CURLOPT_ENCODING => '',
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 0,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => 'GET',
-            CURLOPT_HTTPHEADER => array(
-                'Authorization: Basic ' . base64_encode('HDFC_API_KEY:'),
-                'Content-Type: application/json',
-                'x-merchantid: '.HDFC_MERCHANT_ID,
-                'x-customerid: '.$customerId,
-            ),
-        ));
-
-        $response = curl_exec($curl);
-
-        curl_close($curl);
+        $response = shell_exec($command);
 
         echo $response;exit;
 
-    }
+        if ($response === null) {
+            return ['error' => true, 'message' => 'Failed to execute cURL command.'];
+        }
 
+        $decoded_response = json_decode($response, true);
+
+        return $decoded_response; 
+
+    }
     public function  open_cc_avenue()
     {
         $order_id = base64_decode($this->session->userdata('order_id'));
