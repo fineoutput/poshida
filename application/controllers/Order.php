@@ -517,11 +517,12 @@ class Order extends CI_Controller
 
     public function fetch_hdfc_order($orderId) {
 
-       $command = "curl --location 'https://smartgatewayuat.hdfcbank.com/orders/'$orderId " .
-               "--header 'Authorization: Basic '".base64_encode(HDFC_API_KEY).
-               "--header 'Content-Type: application/json' " .
-               "--header 'x-merchantid: SG1127' " .
-               "--header 'x-customerid: cus_66f67e21c4122'";
+        $command = "curl --location 'https://smartgatewayuat.hdfcbank.com/orders/$orderId' " .
+                   "--header 'Authorization: Basic " . base64_encode(HDFC_API_KEY) . "' " .
+                   "--header 'Content-Type: application/json' " .
+                   "--header 'x-merchantid: SG1127' " .
+                   "--header 'x-customerid: cus_66f67e21c4122'";
+        
 
         $response = shell_exec($command);
 
