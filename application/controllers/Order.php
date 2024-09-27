@@ -510,7 +510,7 @@ class Order extends CI_Controller
 
         curl_close($curl);
 
-        print_r($response);exit;
+        echo $response;exit;
 
     }
 
