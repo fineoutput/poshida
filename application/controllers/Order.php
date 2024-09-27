@@ -384,68 +384,69 @@ class Order extends CI_Controller
     public function hdfc_callback_url()  {
 
         $orderStatus = $this->fetch_hdfc_order($_POST['order_id']);
-        
-        try {
-            
-            if($_POST['status'] == 'CHARGED' && $_POST['status_id'] == 21) {
 
-                $response = $_POST;
+        if($orderStatus['error'] != 1){
 
+            if($orderStatus['status'] == 'CHARGED' && $orderStatus['status_id'] == 21) {
+    
                 $information = $this->parseHdfcOrderId($_POST['order_id']);
-
+    
                 if($information && $this->session->userdata('user_type') == null) {
-
+    
                     if ($information['role_type'] == 1) {
-
+    
                         $userCheck = $this->db->get_where('tbl_users', array('id' => $information['user_id']))->result();
-
+    
                         $this->session->set_userdata('user_data', 1);
-
+    
                         $this->session->set_userdata('name', $userCheck[0]->f_name);
-
+    
                         $this->session->set_userdata('phone', $userCheck[0]->phone);
-
+    
                         $this->session->set_userdata('user_type', $information['role_type']);
-
+    
                         $this->session->set_userdata('user_id', $userCheck[0]->id);
-
+    
                     }elseif ($information['role_type'] == 2) {
-
+    
                         $resellerCheck = $this->db->get_where('tbl_reseller', array('id' => $information['user_id']))->result();
-
+    
                         $this->session->set_userdata('user_data', 1);
-
+    
                         $this->session->set_userdata('name', $resellerCheck[0]->name);
-
+    
                         $this->session->set_userdata('phone', $resellerCheck[0]->phone);
-
+    
                         $this->session->set_userdata('user_type',$information['role_type']);
-
+    
                         $this->session->set_userdata('user_id', $resellerCheck[0]->id);
-
+    
                     }else{
                         echo "Somthing gone wrong please contact admin";
                     }
                 }
-
+    
                 $this->session->set_userdata('order_id', base64_encode($information['order_id']));
-
-                $placeOrder = $this->order->PlaceHdfcPaidOrder($information['order_id'] , $response);
+    
+                $placeOrder = $this->order->PlaceHdfcPaidOrder($information['order_id'] , $orderStatus);
                 
                 if ($placeOrder == true) {
+    
                     redirect("order_success");
+    
                 } else {
+    
                     redirect("Order/order_failed");
                 }
+    
             }else{
-
+    
                 echo 'Aborted';
             }
 
-        } catch (Exception $e) {
-
-           echo "Error processing payment: " . $e->getMessage();
-
+        }else{
+            log_message('error', 'hdfc payment url response:'. $orderStatus['message']);
+            redirect("Order/order_failed");
         }
 
     }
@@ -527,16 +528,18 @@ class Order extends CI_Controller
 
         $response = shell_exec($command);
 
+        log_message('error','order status response'.$response);
+
         if ($response === null) {
             return ['error' => true, 'message' => 'Failed to execute cURL command.'];
         }
 
         $decoded_response = json_decode($response, true);
 
-        print_r($decoded_response);exit; 
+        return $decoded_response; 
 
     }
-    
+
     public function  open_cc_avenue()
     {
         $order_id = base64_decode($this->session->userdata('order_id'));
