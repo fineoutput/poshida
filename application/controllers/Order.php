@@ -517,16 +517,15 @@ class Order extends CI_Controller
 
     public function fetch_hdfc_order($orderId) {
 
+        $customerId = "cus_" . uniqid();
+
         $command = "curl --location 'https://smartgatewayuat.hdfcbank.com/orders/$orderId' " .
-                   "--header 'Authorization: Basic " . base64_encode(HDFC_API_KEY) . "' " .
-                   "--header 'Content-Type: application/json' " .
-                   "--header 'x-merchantid: SG1127' " .
-                   "--header 'x-customerid: cus_66f67e21c4122'";
-        
+                "--header 'Authorization: Basic " . base64_encode(HDFC_API_KEY) . "' " .
+                "--header 'Content-Type: application/json' " .
+                "--header 'x-merchantid: " . HDFC_MERCHANT_ID . "' " .
+                "--header 'x-customerid: $customerId'";
 
         $response = shell_exec($command);
-
-        echo $response;exit;
 
         if ($response === null) {
             return ['error' => true, 'message' => 'Failed to execute cURL command.'];
@@ -534,9 +533,10 @@ class Order extends CI_Controller
 
         $decoded_response = json_decode($response, true);
 
-        return $decoded_response; 
+        print_r($decoded_response);exit; 
 
     }
+    
     public function  open_cc_avenue()
     {
         $order_id = base64_decode($this->session->userdata('order_id'));
