@@ -488,9 +488,10 @@ class Order extends CI_Controller
         $customerId = "cus_" . uniqid();
 
         $curl = curl_init();
+
         curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
-            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_RETURNTRANSFER => false,
             CURLOPT_ENCODING => '',
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_TIMEOUT => 0,
@@ -509,7 +510,7 @@ class Order extends CI_Controller
 
         curl_close($curl);
 
-        print_r($response);exit;
+        echo $response;exit;
 
     }
 
