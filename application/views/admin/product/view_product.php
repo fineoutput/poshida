@@ -88,7 +88,14 @@
                             $this->db->from('tbl_category');
                             $this->db->where('id', $data->category_id);
                             $category_data= $this->db->get()->row();
-                            echo $category_data->name;?></td>
+
+                            if ($category_data !== null) {
+                                echo $category_data->name;
+                            } else {
+                                echo 'Category not found'; 
+                            }
+                            
+                            ?></td>
                       <td><?php
                $this->db->select('*');
                             $this->db->from('tbl_subcategory');
