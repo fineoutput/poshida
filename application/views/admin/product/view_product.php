@@ -187,7 +187,7 @@ if ($data->trending==1) {
                        }
                        echo $string; ?></td>
                        <td><?php
-                       $string = strip_tags($data->dsc);
+                       $string = $data->dsc !== null ? strip_tags($data->dsc) : '';
                        if (strlen($string) > 100) {
                       
                            // truncate string
