@@ -30,7 +30,8 @@ $('#placeOrderForm').on('submit', function (e) {
       } else {
         // ------ open ccavenue -----------------
         if (response.status == true) {
-          window.location.replace(base_url + "Order/open_cc_avenue");
+          // window.location.replace(base_url + "Order/open_cc_avenue");
+          window.location.replace(base_url + "Order/open_hdfc_getway");
 
         } else {
           notifyError(response.message)

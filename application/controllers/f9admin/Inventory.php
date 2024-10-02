@@ -60,6 +60,7 @@ class Inventory extends CI_finecontrol
             if ($this->input->post()) {
                 // print_r($this->input->post());
                 // exit;
+                $last_id = 0;
                 $this->form_validation->set_rules('type_id', 'type_id', 'required');
                 $this->form_validation->set_rules('inventory', 'inventory', 'required');
                 if ($this->form_validation->run() == true) {

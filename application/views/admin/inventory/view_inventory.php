@@ -12,6 +12,21 @@
                   <div class="panel-heading">
                     <h3 class="panel-title">View inventory</h3>
                   </div>
+
+                  <div class="panel-heading">
+                    <div style="margin-bottom:1rem;display:flex;justify-content: space-between;">
+                      <?php date_default_timezone_set("Asia/Calcutta");
+                        $cur_date=date("d-m-Y");?>
+                      <a href="<?=base_url()?>assets/admin/type_dummy.xlsx" download="Type Dummy (<?=$cur_date?>)"><button type="button" class="btn custom_btn">Download Type Excel</button></a>
+                      <div style="display:flex;border:1px solid grey;padding:2px">
+                        <form method="post" action="<?=base_url()?>dcadmin/Type/import_type_data" enctype="multipart/form-data" style="display:flex">
+                          <input type="file" name="uploadFile" class="form-control" required />
+                          <button type="submit" class="btn custom_btn">Upload Types</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  
                   <div class="panel panel-default">
                     <? if (!empty($this->session->flashdata('smessage'))) { ?>
                       <div class="alert alert-success alert-dismissible">

@@ -67,11 +67,11 @@
                       <td><?=$data->id?></td>
                       <td><?php echo $data->name ?></td>
                       <!-- <td><?php
-                       if ($data->our_product==1) {
-                           echo"yes";
-                       } else {
-                           echo"No";
-                       }
+                      //  if ($data->our_product==1) {
+                      //      echo"yes";
+                      //  } else {
+                      //      echo"No";
+                      //  }
                        ?></td> -->
 
                       <td><?php if ($data->is_active==1) { ?>

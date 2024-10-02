@@ -479,6 +479,150 @@ class CI_Order
         }
     }
 
+    //
+
+    public function PlaceHdfcPaidOrder($order_id, $decryptValues)
+    {
+        $ip = $this->CI->input->ip_address();
+        date_default_timezone_set("Asia/Calcutta");
+        $cur_date = date("Y-m-d H:i:s");
+        $user_type = $this->CI->session->userdata('user_type');
+        if ($this->CI->session->userdata('user_type') == 2) {
+            $user_id = $this->CI->session->userdata('user_id');
+            $user_data = $this->CI->db->get_where('tbl_reseller', array('id = ' => $user_id))->result();
+            $user_name = $user_data[0]->name;
+        } else {
+            $user_id = $this->CI->session->userdata('user_id');
+            $user_data = $this->CI->db->get_where('tbl_users', array('id = ' => $user_id))->result();
+            $user_name = $user_data[0]->f_name . ' ' . $user_data[0]->l_name;
+
+        }
+        if (!empty($user_data)) {
+            if ($user_data[0]->is_active == 1) {
+                $order_data = $this->CI->db->get_where('tbl_order1', array('id = ' => $order_id))->result();
+                if ($order_data[0]->payment_status == 1) {
+                    $respone['status'] = true;
+                    return json_encode($respone);
+                }
+                // $final_amount = $order_data[0]->total_amount - $order_data[0]->promo_discount +  $order_data[0]->shipping;
+                $user_id = $order_data[0]->user_id;
+                $final_amount = $order_data[0]->final_amount - $order_data[0]->promo_discount;
+                $referpoints['model_id'] = '';
+                $referpoints['refer_points'] = 0;
+                if (!empty($order_data[0]->refererral_code)) {
+                    $referpoints = $this->checkModelReferal($order_data[0]->refererral_code, $order_id, $user_id);
+                }
+                //--- generate invoice no ------
+                $order1 = $this->CI->db->order_by('id', 'desc')->get_where('tbl_order1', array('payment_status' => 1))->result();
+                if (empty($order1[0]->invoice_no)) {
+                    $invoice_no = 1;
+                } else {
+                    $invoice_no = $order1[0]->invoice_no + 1;
+                }
+                //----------order1 entry-------------
+                $order1_update = array(
+                    'cc_response' =>json_encode($decryptValues),
+                    'payment_status' => 1,
+                    'payment_type' => 2,
+                    'order_status' => 1,
+                    'order_type' => 1,
+                    'invoice_no' => $invoice_no,
+                    'date' => $cur_date,
+                    'ip' => $ip,
+                );
+                $this->CI->db->where('id', $order_id);
+                $zapak2 = $this->CI->db->update('tbl_order1', $order1_update);
+
+                if ($zapak2 == 1) {
+                    $order2_data = $this->CI->db->get_where('tbl_order2', array('main_id = ' => $order_id));
+                    //--------------inventory update and cart delete--------
+                    foreach ($order2_data->result() as $odr2) {
+                        //---------- inventory update ------------------------
+                        $type_data = $this->CI->db->get_where('tbl_type', array('id = ' => $odr2->type_id))->result();
+                        if ((int)$type_data[0]->inventory >= (int)$odr2->quantity) {
+                            $new_inventory = (int)$type_data[0]->inventory - (int)$odr2->quantity;
+                            //--------- inventory transaction --------
+                            $data_insert = array(
+                                'order1_id' => $odr2->main_id,
+                                'order2_id' => $odr2->id,
+                                'type_id' => $odr2->type_id,
+                                'qty' => $odr2->quantity,
+                                'old_inventory' => $type_data[0]->inventory,
+                                'new_inventory' => $new_inventory,
+                                'date' => $cur_date,
+                            );
+                            $last_id = $this->CI->base_model->insert_table("tbl_inventory_transaction", $data_insert, 1);
+
+                            $this->CI->db->where('id', $odr2->type_id);
+                            $zapak2 = $this->CI->db->update('tbl_type', array('inventory' => $new_inventory));
+                            //-------cart delete---------
+                            $delete = $this->CI->db->delete('tbl_cart', array('user_id' => $user_id, 'product_id' => $odr2->product_id, 'type_id' => $odr2->type_id, 'user_type' => $user_type));
+                            $this->CI->session->unset_userdata('cart_data');
+                        }
+                    }
+                    //--- start send whatsapp msg -----
+                    $this->send_whatsapp_msg_admin($order_data[0], $user_name);
+                    // $config = Array(
+                    // 'protocol' => 'smtp',
+                    // 'smtp_host' => SMTP_HOST,
+                    // 'smtp_port' => SMTP_PORT,
+                    // 'smtp_user' => USER_NAME, // change it to yours
+                    // 'smtp_pass' => PASSWORD, // change it to yours
+                    // 'mailtype' => 'html',
+                    // 'charset' => 'iso-8859-1',
+                    // 'wordwrap' => true
+                    // );
+                    // $to=$email;
+                    // $data['name']= $name;
+                    // $data['email']= $email;
+                    // $data['phone']= $phone;
+                    // $data['order1_id']= $order_id;
+                    // $data['date']= $cur_date;
+                    // $message =$this->load->view('email/ordersuccess',$data,TRUE);
+                    // // echo $to;
+                    // // print_r($message);
+                    // // exit;
+                    // $this->load->library('email', $config);
+                    // $this->email->set_newline("");
+                    // $this->email->from(EMAIL); // change it to yours
+                    // $this->email->to($to);// change it to yours
+                    // $this->email->subject('Order Placed');
+                    // $this->email->message($message);
+                    // if($this->email->send()){
+                    // // echo 'Email sent.';
+                    // }else{
+                    // show_error($this->email->print_debugger());
+                    // }
+                    // die();
+
+
+                    $respone['status'] = true;
+                    return json_encode($respone);
+                } else {
+                    $respone['status'] = false;
+                    $respone['message'] = "Some error occurred";
+                    return json_encode($respone);
+                }
+            } else {
+                $this->CI->session->unset_userdata('user_data');
+                $this->CI->session->unset_userdata('user_id');
+                $this->CI->session->unset_userdata('user_name');
+                $this->CI->session->unset_userdata('user_email');
+                $respone['status'] = false;
+                $respone['message'] = "Your account is inactive! Contact Admin";
+                return json_encode($respone);
+            }
+        } else {
+            $this->CI->session->unset_userdata('user_data');
+            $this->CI->session->unset_userdata('user_id');
+            $this->CI->session->unset_userdata('user_name');
+            $this->CI->session->unset_userdata('user_email');
+            $respone['status'] = false;
+            $respone['message'] = "User Not Found!";
+            return json_encode($respone);
+        }
+    }
+
     // ===================================== CHECK FOR MODEL REFERAL CODE ============================================
     public function checkModelReferal($referal, $order_id, $user_id)
     {

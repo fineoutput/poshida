@@ -37,6 +37,7 @@
 			display: none;
 		}
 	}
+
 	.card {
 		position: relative;
 		display: -ms-flexbox;
@@ -52,32 +53,39 @@
 		border-left: none;
 		border-right: none;
 	}
+
 	.card-body {
 		-ms-flex: 1 1 auto;
 		flex: 1 1 auto;
 		min-height: 1px;
 		padding: 0px !important;
 	}
+
 	.card-header {
 		padding: .75rem 1.25rem;
 		margin-bottom: 0;
 		background: none !important;
 		border-bottom: 1px solid rgba(0, 0, 0, .125);
 	}
+
 	.card-header:first-child {
 		border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
 	}
+
 	.accordion {
 		overflow-anchor: none;
 	}
+
 	.accordion>.card {
 		overflow: hidden;
 	}
+
 	.accordion>.card:not(:last-of-type) {
 		border-bottom: 0;
 		border-bottom-right-radius: 0;
 		border-bottom-left-radius: 0;
 	}
+
 	.accordion>.card:not(:first-of-type) {
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
@@ -223,7 +231,7 @@
 	}
 
 	.accordion .card-header a {
-		
+
 		display: block;
 		line-height: normal;
 	}
@@ -675,7 +683,8 @@
 										} else {
 											echo "NA";
 										}
-										?></td>
+										?>
+									</td>
 									<? $type_data = $this->db->get_where('tbl_type', array('id = ' => $details->type_id))->result();
 									if (!empty($type_data)) {
 										$sizeOfType = $this->db->get_where('tbl_size', array('id = ' => $type_data[0]->size_id))->result();
@@ -712,28 +721,42 @@
 									</td>
 									</td>
 									<td>
-										<?
-										// Convert the given date to a timestamp
-										// $given_timestamp = strtotime($order_data[0]->date);
-										// Convert the given date and current date to DateTime objects
-										$given_datetime = new DateTime($order_data[0]->delivered_date);
-										$current_datetime = new DateTime();
-										$interval = $current_datetime->diff($given_datetime);
-										$days_difference = $interval->days;
-										if (empty($return_data) && $order_data[0]->order_status == 4 && $days_difference <= 7) { ?>
-											<a rel="canonical" href="<?= base_url() ?>Order/return_replace/<?= base64_encode($details->id) ?>"> <button type="submit" class="btn btn-fill-out" name="submit" value="Submit" style="padding:5px 10px;"><span>Return</span></button></a>
-											<? } else if (!empty($return_data)) {
-											if ($return_data[0]->replace_status == 0) {
-											?>
-												<span class="bg-warning" style="padding:5px 10px;color:white">Request Submitted</span>
-											<? } else if ($return_data[0]->replace_status == 1) { ?><span class="bg-primary" style="padding:5px 10px;color:white">Request Accepted</span>
-											<? } else if ($return_data[0]->replace_status == 2) { ?><span class="bg-success" style="padding:5px 10px;color:white">Request Completed</span>
-											<? } else { ?>
-												<span class="bg-danger" style="padding:5px 10px;color:white">Request Rejected</span>
-										<? }
-										} else {
-											echo "NA";
-										} ?>
+										<?php
+										
+											if (!empty($order_data[0]->delivered_date)) {
+												// Convert the given date and current date to DateTime objects
+												$given_datetime = new DateTime($order_data[0]->delivered_date);
+												$current_datetime = new DateTime();
+
+												$interval = $current_datetime->diff($given_datetime);
+												$days_difference = $interval->days;
+
+												if (empty($return_data) && $order_data[0]->order_status == 4 && $days_difference <= 7) { ?>
+													<a rel="canonical" href="<?= base_url() ?>Order/return_replace/<?= base64_encode($details->id) ?>"> 
+														<button type="submit" class="btn btn-fill-out" name="submit" value="Submit" style="padding:5px 10px;">
+															<span>Return</span>
+														</button>
+													</a>
+												<?php } else if (!empty($return_data)) {
+													if ($return_data[0]->replace_status == 0) {
+														?>
+														<span class="bg-warning" style="padding:5px 10px;color:white">Request Submitted</span>
+													<?php } else if ($return_data[0]->replace_status == 1) { ?>
+														<span class="bg-primary" style="padding:5px 10px;color:white">Request Accepted</span>
+													<?php } else if ($return_data[0]->replace_status == 2) { ?>
+														<span class="bg-success" style="padding:5px 10px;color:white">Request Completed</span>
+													<?php } else { ?>
+														<span class="bg-danger" style="padding:5px 10px;color:white">Request Rejected</span>
+													<?php }
+												} else {
+													echo "NA";
+												}
+											} else {
+												// Handle the case when delivered_date is null
+												echo "No delivery date available.";
+											}
+										?>
+
 									</td>
 								</tr>
 							<? $i++;

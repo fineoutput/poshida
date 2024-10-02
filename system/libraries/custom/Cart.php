@@ -191,7 +191,7 @@ class CI_Cart
                 );
                 $total = $spgst * (int)$cart['quantity'];
                 $sub_total = $sub_total + $total; //--calculate sub total
-                $weight = $pro_data[0]->weight * (int)$cart['quantity'];
+                $weight = (float)$pro_data[0]->weight * (int)$cart['quantity'];
                 $total_weight = $total_weight + $weight; //--calculate total weight
             }
         }
@@ -396,7 +396,7 @@ class CI_Cart
                 );
                 $total = $price * (int)$cart->quantity;
                 $sub_total = $sub_total + $total; //--calculate sub total
-                $weight = $pro_data[0]->weight * (int)$cart->quantity;
+                $weight = (float)$pro_data[0]->weight * (int)$cart->quantity;
                 $total_weight = $total_weight + $weight; //--calculate total weight
             }
             $respone['status'] = true;

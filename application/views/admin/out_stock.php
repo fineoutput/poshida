@@ -58,7 +58,10 @@ View Out of Stock Products
                                       $this->db->from('tbl_product');
                                       $this->db->where('id', $data->product_id);
                                       $type_data= $this->db->get()->row();
-                                      echo $type_data->name;?></td>
+                                      if ($type_data) {
+                                        echo $type_data->name;
+                                      } 
+                                      ?></td>
 
 <td><?php  $this->db->select('*');
 $this->db->from('tbl_size');

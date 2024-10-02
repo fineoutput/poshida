@@ -88,7 +88,14 @@
                             $this->db->from('tbl_category');
                             $this->db->where('id', $data->category_id);
                             $category_data= $this->db->get()->row();
-                            echo $category_data->name;?></td>
+
+                            if ($category_data !== null) {
+                                echo $category_data->name;
+                            } else {
+                                echo 'Category not found'; 
+                            }
+                            
+                            ?></td>
                       <td><?php
                $this->db->select('*');
                             $this->db->from('tbl_subcategory');
@@ -130,7 +137,7 @@ if ($data->product_view==1) {
 ?></td>
 
                       <td><?php
-                       $string = strip_tags($data->short_description);
+                         $string = $data->short_description !== null ? strip_tags($data->short_description) : '';
                        if (strlen($string) > 100) {
                       
                            // truncate string
@@ -143,7 +150,7 @@ if ($data->product_view==1) {
                        }
                        echo $string; ?></td>
                       <td><?php
-                       $string = strip_tags($data->description);
+                         $string = $data->description !== null ? strip_tags($data->description) : '';
                        if (strlen($string) > 100) {
                       
                            // truncate string
@@ -174,7 +181,7 @@ if ($data->trending==1) {
 ?></td>
         <td><?php echo $data->title ?></td>
         <td><?php
-                       $string = strip_tags($data->keyword);
+                       $string = $data->keyword !== null ?strip_tags($data->keyword) : '';
                        if (strlen($string) > 100) {
                       
                            // truncate string
@@ -187,7 +194,7 @@ if ($data->trending==1) {
                        }
                        echo $string; ?></td>
                        <td><?php
-                       $string = strip_tags($data->dsc);
+                       $string = $data->dsc !== null ? strip_tags($data->dsc) : '';
                        if (strlen($string) > 100) {
                       
                            // truncate string
